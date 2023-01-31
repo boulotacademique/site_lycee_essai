@@ -1,0 +1,31 @@
+
+@media print {
+    h1{
+        font-size:20pt!important;
+        color:black!important;
+        background-color:white!important;
+        border: 1px solid black;
+        border-radius: 0px;
+        text-align:center;
+        font-weight:bold;
+    }
+    
+    h2{
+        font-size:12pt!important;
+        color:black!important;
+        background-color:white;
+        border: 1px dashed #aaa;
+        border-radius:3pt;
+        text-align:center;
+    }
+
+
+    .solution{
+        display: none!important;
+    }
+	
+	.SautDePage{
+		display: block;
+		page-break-before: always; 
+	}
+}

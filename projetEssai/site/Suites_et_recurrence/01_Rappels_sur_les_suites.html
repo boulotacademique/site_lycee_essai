@@ -1,0 +1,839 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Lycée Mimard">
+      
+      
+      
+        <link rel="prev" href="../Limite_de_suite/03_Theoremes_d_operation.html">
+      
+      
+        <link rel="next" href="02_Suites_et_python.html">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.8">
+    
+    
+      
+        <title>Rappels sur les suites - Spé Math</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0d440cfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../Style/extra.css">
+    
+      <link rel="stylesheet" href="../Style/print.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="amber">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rappels_sur_les_suites" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../index.html" title="Spé Math" class="md-header__button md-logo" aria-label="Spé Math" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Spé Math
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Rappels sur les suites
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Spé Math" class="md-nav__button md-logo" aria-label="Spé Math" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Spé Math
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Mathématiques - Terminale Spécialité Math
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Derivation et convexite
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Derivation et convexite
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Derivation_et_convexite/01_Fonction_derivable.html" class="md-nav__link">
+        Fonction dérivable
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Limite de suite
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Limite de suite
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Limite_de_suite/01_Limite_d_une_suite.html" class="md-nav__link">
+        Limites d'une suite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Limite_de_suite/02_Limite_de_la_suite_qn.html" class="md-nav__link">
+        Limite de la suite $q^n$
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Limite_de_suite/03_Theoremes_d_operation.html" class="md-nav__link">
+        Théorèmes d'opérations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Suites et recurrence
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Suites et recurrence
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Rappels sur les suites
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="01_Rappels_sur_les_suites.html" class="md-nav__link md-nav__link--active">
+        Rappels sur les suites
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modes_de_generation_dune_suite" class="md-nav__link">
+    Modes de génération d'une suite
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#representation_graphique_dune_suite" class="md-nav__link">
+    Représentation graphique d'une suite
+  </a>
+  
+    <nav class="md-nav" aria-label="Représentation graphique d'une suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la_suite_est_definie_de_facon_explicite" class="md-nav__link">
+    La suite est définie de façon explicite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la_suite_est_definie_a_laide_dune_relation_de_recurrence" class="md-nav__link">
+    La suite est définie à l'aide d'une relation de récurrence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02_Suites_et_python.html" class="md-nav__link">
+        Suites et python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03_Suite_et_sens_de_variations.html" class="md-nav__link">
+        Suite et sens de variations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04_Suites_aritmetiques.html" class="md-nav__link">
+        Suites arithmétiques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05_Suites_geometrique.html" class="md-nav__link">
+        Suites géométriques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06_Raisonnement_par_recurrence.html" class="md-nav__link">
+        Raisonnement par récurrence
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07_majoree_minoree_bornee.html" class="md-nav__link">
+        Suite majorée, minorée , bornée
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modes_de_generation_dune_suite" class="md-nav__link">
+    Modes de génération d'une suite
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#representation_graphique_dune_suite" class="md-nav__link">
+    Représentation graphique d'une suite
+  </a>
+  
+    <nav class="md-nav" aria-label="Représentation graphique d'une suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la_suite_est_definie_de_facon_explicite" class="md-nav__link">
+    La suite est définie de façon explicite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la_suite_est_definie_a_laide_dune_relation_de_recurrence" class="md-nav__link">
+    La suite est définie à l'aide d'une relation de récurrence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="rappels_sur_les_suites">Rappels sur les suites<a class="headerlink" href="#rappels_sur_les_suites" title="Permanent link"></a></h1>
+<h2 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link"></a></h2>
+<div class="admonition définition">
+<p class="admonition-title">Définition</p>
+<p>Une suite notée <span class="arithmatex"><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> ou (<span class="arithmatex"><span class="MathJax_Preview">u_n</span><script type="math/tex">u_n</script></span>) est une fonction  dans laquelle  la variable <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> ne prend que des valeurs entières positives.
+A chaque entier naturel <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> on associe un nombre réel <span class="arithmatex"><span class="MathJax_Preview">u(n)</span><script type="math/tex">u(n)</script></span> image de l'entier <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> par <span class="arithmatex"><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>, notée <span class="arithmatex"><span class="MathJax_Preview">u_n</span><script type="math/tex">u_n</script></span>, appelée terme d'indice <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> ou  terme général de la suite <span class="arithmatex"><span class="MathJax_Preview">(u_n)</span><script type="math/tex">(u_n)</script></span>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Attention bien faire la différence entre le terme général <span class="arithmatex"><span class="MathJax_Preview">u_n</span><script type="math/tex">u_n</script></span> et la suite (<span class="arithmatex"><span class="MathJax_Preview">u_n</span><script type="math/tex">u_n</script></span>).</strong></p>
+</div>
+<h2 id="modes_de_generation_dune_suite">Modes de génération d'une suite<a class="headerlink" href="#modes_de_generation_dune_suite" title="Permanent link"></a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Méthode</p>
+<p>On peut définir une suite de <strong>façon explicite</strong>  en fonction de <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> : <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u_n=f(n)}</span><script type="math/tex">\mathbf{u_n=f(n)}</script></span></p>
+</div>
+<details class="question">
+<summary>Exercice</summary>
+<p>Soit <span class="arithmatex"><span class="MathJax_Preview">(u_n)</span><script type="math/tex">(u_n)</script></span> la suite définie par <span class="arithmatex"><span class="MathJax_Preview">u_n=-5+7n</span><script type="math/tex">u_n=-5+7n</script></span> pour <span class="arithmatex"><span class="MathJax_Preview">n \geqslant0</span><script type="math/tex">n \geqslant0</script></span>.</br>
+Ici <span class="arithmatex"><span class="MathJax_Preview">u_n=f(n)</span><script type="math/tex">u_n=f(n)</script></span>.</p>
+<ol>
+<li>Déterminer <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span>.</li>
+<li>Calculer <span class="arithmatex"><span class="MathJax_Preview">u_0</span><script type="math/tex">u_0</script></span>, <span class="arithmatex"><span class="MathJax_Preview">u_1</span><script type="math/tex">u_1</script></span>, <span class="arithmatex"><span class="MathJax_Preview">u_2</span><script type="math/tex">u_2</script></span>, <span class="arithmatex"><span class="MathJax_Preview">u_6</span><script type="math/tex">u_6</script></span></li>
+</ol>
+<details class="done">
+<summary>Solution</summary>
+<ol>
+<li><span class="arithmatex"><span class="MathJax_Preview">f(x)=-5+7x</span><script type="math/tex">f(x)=-5+7x</script></span> </li>
+<li>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">u_0=-5+7\times0=-5</span><script type="math/tex">u_0=-5+7\times0=-5</script></span>      </li>
+<li><span class="arithmatex"><span class="MathJax_Preview">u_1=-5+7\times1=2</span><script type="math/tex">u_1=-5+7\times1=2</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">u_2=-5+7\times2=9</span><script type="math/tex">u_2=-5+7\times2=9</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">u_6=-5+7\times6=37</span><script type="math/tex">u_6=-5+7\times6=37</script></span></li>
+</ul>
+</li>
+</ol>
+</details>
+</details>
+<div class="SautDePage"></div>
+
+<div class="admonition tip">
+<p class="admonition-title">Méthode</p>
+<p>On peut définir une suite de <strong>façon récurrente</strong>  du type</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">\begin{array}{lcl}
+  u_{0} &amp; = &amp; a \\
+  u_{n+1}  &amp; = &amp;  f(u_n)
+\end{array}</div>
+<script type="math/tex; mode=display">\begin{array}{lcl}
+  u_{0} & = & a \\
+  u_{n+1}  & = &  f(u_n)
+\end{array}</script>
+</div>
+<p>La suite est définie par la donnée de son premier terme et d'une relation de récurrence entre un terme et 
+le terme suivant )</p>
+</div>
+<details class="question">
+<summary>Exercice</summary>
+<p>Soit <span class="arithmatex"><span class="MathJax_Preview">(u_n)_{n \in \mathbb{N}}</span><script type="math/tex">(u_n)_{n \in \mathbb{N}}</script></span> la suite définie par :</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\left\{
+\begin{array}{lcl}
+  u_{0} &amp; = &amp; 4 \\
+  u_{n+1}  &amp; = &amp;  0.75 u_n+2
+\end{array}
+\right.
+</div>
+<script type="math/tex; mode=display">
+\left\{
+\begin{array}{lcl}
+  u_{0} & = & 4 \\
+  u_{n+1}  & = &  0.75 u_n+2
+\end{array}
+\right.
+</script>
+</div>
+<ol>
+<li>Déterminer <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> telle que <span class="arithmatex"><span class="MathJax_Preview">u_{n+1}=f(u_n)</span><script type="math/tex">u_{n+1}=f(u_n)</script></span></li>
+<li>Calculer <span class="arithmatex"><span class="MathJax_Preview">u_1</span><script type="math/tex">u_1</script></span>, <span class="arithmatex"><span class="MathJax_Preview">u_2</span><script type="math/tex">u_2</script></span>, <span class="arithmatex"><span class="MathJax_Preview">u_3</span><script type="math/tex">u_3</script></span>. Et pour <span class="arithmatex"><span class="MathJax_Preview">u_{100}</span><script type="math/tex">u_{100}</script></span>, qu'en pensez-vous ?</li>
+</ol>
+<details class="done">
+<summary>Solution</summary>
+<ol>
+<li>Ici <span class="arithmatex"><span class="MathJax_Preview">u_{n+1} =f(u_n)</span><script type="math/tex">u_{n+1} =f(u_n)</script></span> avec <span class="arithmatex"><span class="MathJax_Preview">f(x)=-2x+1</span><script type="math/tex">f(x)=-2x+1</script></span></li>
+<li>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">u_1=0.75u_0+2=0.75\times4+2=5</span><script type="math/tex">u_1=0.75u_0+2=0.75\times4+2=5</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">u_2=0.75u_1+2=0.75\times(5)+2=5.75</span><script type="math/tex">u_2=0.75u_1+2=0.75\times(5)+2=5.75</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">u_3=0.75u_2+2=0.75\times5.75+2=6,3125</span><script type="math/tex">u_3=0.75u_2+2=0.75\times5.75+2=6,3125</script></span></li>
+</ul>
+</li>
+</ol>
+<p>L'inconvénient est que des termes "éloignés" du début de la suite sont difficiles d'accès: pour calculer
+<span class="arithmatex"><span class="MathJax_Preview">u_{100}</span><script type="math/tex">u_{100}</script></span> il faut, a priori, calculer tous les termes précédents, jusqu'à <span class="arithmatex"><span class="MathJax_Preview">u_{99}</span><script type="math/tex">u_{99}</script></span> !!</p>
+</details>
+</details>
+<p>Il sera parfois nécessaire d'utiliser un programme afin de calculer des termes éloignées.</p>
+<div class="SautDePage"></div>
+
+<div class="admonition tip">
+<p class="admonition-title">Méthode</p>
+<p>On peut encore définir une suite par l’intermédiaire d’une autre suite ou par une somme de termes, etc. . .</p>
+<p>Par exemple :</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">(u_n)</span><script type="math/tex">(u_n)</script></span> étant définie, on définit la suite (<span class="arithmatex"><span class="MathJax_Preview">v_n</span><script type="math/tex">v_n</script></span>) par : <span class="arithmatex"><span class="MathJax_Preview">v_n = u_n- 4</span><script type="math/tex">v_n = u_n- 4</script></span></li>
+<li>On définit la suite (<span class="arithmatex"><span class="MathJax_Preview">w_n</span><script type="math/tex">w_n</script></span>) pour tout <span class="arithmatex"><span class="MathJax_Preview">n\in \mathbb{N}^*</span><script type="math/tex">n\in \mathbb{N}^*</script></span> par : </li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+w_n =  \sum_{i=1}^n \dfrac{1}{i} =1+\dfrac12+\dfrac13+\cdots+\dfrac{1}{n}
+</div>
+<script type="math/tex; mode=display">
+w_n =  \sum_{i=1}^n \dfrac{1}{i} =1+\dfrac12+\dfrac13+\cdots+\dfrac{1}{n}
+</script>
+</div>
+</div>
+<h2 id="representation_graphique_dune_suite">Représentation graphique d'une suite<a class="headerlink" href="#representation_graphique_dune_suite" title="Permanent link"></a></h2>
+<h3 id="la_suite_est_definie_de_facon_explicite">La suite est définie de façon explicite<a class="headerlink" href="#la_suite_est_definie_de_facon_explicite" title="Permanent link"></a></h3>
+<p>On peut representer une telle suite sur une droite (avec donc des points de coordonnées <span class="arithmatex"><span class="MathJax_Preview">(u_n;0)</span><script type="math/tex">(u_n;0)</script></span>) ou dans 
+un plan avec des points de coordonnées <span class="arithmatex"><span class="MathJax_Preview">(n;u_n)</span><script type="math/tex">(n;u_n)</script></span>.</p>
+<p>Suite <span class="arithmatex"><span class="MathJax_Preview">u_n=\sqrt{n}</span><script type="math/tex">u_n=\sqrt{n}</script></span> sur une droite : <a href="Image/Cours_001.png"><img alt="Suite sur une droite" class="VCenter Vignette" src="Image/Cours_001.png" /></a></p>
+<p>Suite <span class="arithmatex"><span class="MathJax_Preview">u_n=\sqrt{n}</span><script type="math/tex">u_n=\sqrt{n}</script></span> dans un plan : <a href="Image/Cours_002.png"><img alt="Suite dans un plan" class="VCenter Vignette" src="Image/Cours_002.png" /></a></p>
+<h3 id="la_suite_est_definie_a_laide_dune_relation_de_recurrence">La suite est définie à l'aide d'une relation de récurrence<a class="headerlink" href="#la_suite_est_definie_a_laide_dune_relation_de_recurrence" title="Permanent link"></a></h3>
+<p>Le plan est muni d'un repère , on peut représenter graphiquement les premiers termes de la suite sans 
+les calculer à l'aide de la courbe <span class="arithmatex"><span class="MathJax_Preview">C_f</span><script type="math/tex">C_f</script></span> représentant la fonction <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> et la droite <span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span> d'équation <span class="arithmatex"><span class="MathJax_Preview">y=x</span><script type="math/tex">y=x</script></span></p>
+<div class="admonition tip">
+<p class="admonition-title">Méthode : Programme de construction</p>
+<ul>
+<li>Placer <span class="arithmatex"><span class="MathJax_Preview">u_0</span><script type="math/tex">u_0</script></span> sur l'axe des abscisses </li>
+<li>Placer le point <span class="arithmatex"><span class="MathJax_Preview">A_0</span><script type="math/tex">A_0</script></span> de <span class="arithmatex"><span class="MathJax_Preview">C_f</span><script type="math/tex">C_f</script></span>  d'abscisse de <span class="arithmatex"><span class="MathJax_Preview">u_0</span><script type="math/tex">u_0</script></span>, son ordonnée est <span class="arithmatex"><span class="MathJax_Preview">u_1=f(u_0)</span><script type="math/tex">u_1=f(u_0)</script></span>.</li>
+<li>Placer le point <span class="arithmatex"><span class="MathJax_Preview">B_0</span><script type="math/tex">B_0</script></span> de <span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span> de même ordonnée que <span class="arithmatex"><span class="MathJax_Preview">A_0</span><script type="math/tex">A_0</script></span> c'est-à-dire d'ordonnée <span class="arithmatex"><span class="MathJax_Preview">u_1</span><script type="math/tex">u_1</script></span>, son abscisse est aussi <span class="arithmatex"><span class="MathJax_Preview">u_1</span><script type="math/tex">u_1</script></span> </li>
+<li>Placer <span class="arithmatex"><span class="MathJax_Preview">u_1</span><script type="math/tex">u_1</script></span> l'abscisse de <span class="arithmatex"><span class="MathJax_Preview">B_0</span><script type="math/tex">B_0</script></span> sur l'axe des abscisses .</li>
+<li>Recommencer à partir de <span class="arithmatex"><span class="MathJax_Preview">u_1</span><script type="math/tex">u_1</script></span> les mêmes étapes et placer <span class="arithmatex"><span class="MathJax_Preview">u_2</span><script type="math/tex">u_2</script></span>, etc...</li>
+</ul>
+</div>
+<p><a href="Image/Cours_003.png"><img alt="Suite récurrente dans un plan" class="Center VignetteMed" src="Image/Cours_003.png" /></a></p>
+<p>La lecture graphique donne des valeurs approchées des <span class="arithmatex"><span class="MathJax_Preview">u_n</span><script type="math/tex">u_n</script></span>, 
+et elle permet d'émettre des conjectures concernant le comportement global et asymptotique de la suite. Elle semble :</p>
+<ul>
+<li>croissante, décroissante ou stationnaire (parfois périodique);</li>
+<li>converger vers l'abscisse du point d'intersection de <span class="arithmatex"><span class="MathJax_Preview">C_f</span><script type="math/tex">C_f</script></span> et de <span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span>, ou diverger.</li>
+</ul>
+<details class="question">
+<summary>Exercice</summary>
+<p>On considère la suite <span class="arithmatex"><span class="MathJax_Preview">(u_n)</span><script type="math/tex">(u_n)</script></span> définie par </p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\left\{
+\begin{array}{lcl}
+  u_{0} &amp; = &amp; 1.8 \\
+  u_{n+1}  &amp; = &amp;  f(u_n)
+\end{array}
+\right.
+</div>
+<script type="math/tex; mode=display">
+\left\{
+\begin{array}{lcl}
+  u_{0} & = & 1.8 \\
+  u_{n+1}  & = &  f(u_n)
+\end{array}
+\right.
+</script>
+</div>
+<p>avec <span class="arithmatex"><span class="MathJax_Preview">f(x) =\dfrac{2}{3-x}</span><script type="math/tex">f(x) =\dfrac{2}{3-x}</script></span>.</p>
+<p>On admet que <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> est croissante sur <span class="arithmatex"><span class="MathJax_Preview">[0,3[</span><script type="math/tex">[0,3[</script></span>.<!-- ]--></p>
+<ol>
+<li>Construire les premiers termes de la suite en utilisant le programme de construction. </li>
+<li>Conjecturer les variations de la suite <span class="arithmatex"><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>. Par quelles valeurs semble-t-elle bornée?</li>
+</ol>
+</details>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a00a7c5e.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
