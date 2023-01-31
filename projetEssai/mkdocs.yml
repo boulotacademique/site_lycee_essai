@@ -41,7 +41,10 @@ extra_css:
     - 'Style/print.css'
     
 extra_javascript:
-  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+  #- 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+    - javascripts/mathjax.js
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     
     
 #https://python-markdown.github.io/extensions/
@@ -50,7 +53,8 @@ extra_javascript:
 
 markdown_extensions:
     - attr_list #https://python-markdown.github.io/extensions/attr_list/
-    - pymdownx.arithmatex #https://squidfunk.github.io/mkdocs-material/extensions/pymdown/
+    - pymdownx.arithmatex: #https://squidfunk.github.io/mkdocs-material/extensions/pymdown/
+        generic: true
     - pymdownx.tasklist:
         custom_checkbox: true
         clickable_checkbox: true
