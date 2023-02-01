@@ -1,8 +1,8 @@
 @media screen {
 
-	body{
-		/*border : 5px solid black;*/
-	}
+	/*body{
+		/*border : 5px solid black;
+	}*/
 
 	/*nav{
 		border : 1px solid blue;
@@ -13,14 +13,14 @@
 		width : 12.1rem;
 	}
 	*/
-	.md-content{
+	/*.md-content{
 		/*max-width : none;
 		width : 100%;
 		margin-right : 0;
-		margin-left :0;*/
+		margin-left :0;
 	}
 
-	/*article{
+	article{
 		font-size : 5em;
 		color : red;
 		

@@ -114,7 +114,7 @@ I
 \end{array}
 \]
 
-Quant à la dernière formule du tableau précédent, elle peut s'appliquer aux cas particuliers les plus rencontrés :
+Quant à la dernière formule du tableau précédent, elle peut s'appliquer aux cas particuliers les plus rencontrés :<span id="Tab_cas_part"></span>
 
 
 \[

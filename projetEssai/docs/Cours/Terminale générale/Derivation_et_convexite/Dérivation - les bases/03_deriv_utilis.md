@@ -38,3 +38,15 @@ Rappel : tableau de signe (*lien AFAIRE*), etude de signe et maximum et/ou minim
 !!! note "Exemple"
 
 	Soit $f$ une fonction dérivable sur $I$ et $f'$ sa dérivée. Si $f'$ est dérivable sur $I$, alors on dit que $f$ est deux fois dérivable. La dérivée de $f'$ est appelée la dérivée seconde de $f$ est est notée $f''$.
+
+Naturellement, il est possible de définir de façon analogue la dérivée troisième, quatrième, $\ldots$ n-ième.
+
+En physique, on utilise parfois la notation différentielle : si la variable est $x$, $f'$ se note $\dfrac{\text{d}f}{\text{d}x}$ et $f''$ se note alors $\dfrac{\text{d}^2 f}{\text{d}x^2}$. Cette notion de dérivée seconde peut se rencontrer avec les calculs de vitesse et d'accélération.
+
+???- example "Exemple"
+
+	Calculer la dérivée seconde des fonctions suivantes :
+
+	1. $f(x)=x^3-5x^2+3x-1$
+	2. $g(x)=5x-\text{e}^x$
+	

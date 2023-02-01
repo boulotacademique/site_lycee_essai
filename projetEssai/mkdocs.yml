@@ -88,6 +88,7 @@ nav:
                     - Dérivation et tangente: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/01_deriv_base_tgte.md"
                     - Dérivation et formule: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/02_deriv_base_formule.md"
                     - Utilisation de la dérivée: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/03_deriv_utilis.md"
+                    - Composée de fonctions: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/04_deriv_composee.md"
             - "Suite et récurrence":
                 - Rappel sur les suites: "Cours/Terminale générale/Suites_et_recurrence/01_Rappels_sur_les_suites.md"
                 - Suites et python: "Cours/Terminale générale/Suites_et_recurrence/02_Suites_et_python.md"
