@@ -1,5 +1,27 @@
 
 @media print {
+
+    @page {margin: 10%;}
+    body{
+        /*border : 7px red solid;*/
+        width : 97%;
+        margin : 2%;
+    }
+
+    /*.md-main_inner{
+        border : 5px blue solid;
+        /*width : 90%;
+    }*/
+
+    /*.md-content{
+        /*border : 3px black solid;*/
+        /*width : 90%;
+    }*/
+
+    .md-sidebar{
+        display: none;
+    }
+
     h1{
         font-size:20pt!important;
         color:black!important;
