@@ -36,7 +36,7 @@
 !!! warning
 	**Attention la réciproque est fausse :**
 
-	il existe des fonctions qui possèdent une tangente horizontale et pourtant il n'y a pas de maximum local. C'est le cas de la $f(x) = x^3$ au point d'abscisse $0$.
+	Il existe des fonctions qui possèdent une tangente horizontale et pourtant il n'y a pas de maximum local. C'est le cas de la $f(x) = x^3$ au point d'abscisse $0$.
 
 	IMAGE A FAIRE
 

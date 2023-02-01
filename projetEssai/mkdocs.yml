@@ -1,4 +1,4 @@
-site_name: Spé Math
+site_name: Les maths à Mimard
 site_author: Lycée Mimard
 
 # Repository
@@ -72,3 +72,32 @@ markdown_extensions:
         permalink: '' #'🔗'
         baselevel: 1
         separator: "_"
+
+nav:
+    - Accueil: "index.md"
+    - Cours:
+        - Seconde: "Cours/Seconde/c01.md"
+        - Première NSI: "Cours/Première NSI/c01.md"
+        - Première STI2D: "Cours/Première STI2D/c01.md"
+        - Terminale STI2D: "Cours/Terminale STI2D/c01.md"
+        - Première générale: "Cours/Première générale/c01.md"
+        - Terminale générale:
+            - Accueil TGEN: "Cours/Terminale générale/index_term_G.md"
+            - Dérivation, convexité et primitive:
+                - "Dérivation : les bases":
+                    - Dérivation et tangente: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/01_deriv_base_tgte.md"
+                    - Dérivation et formule: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/02_deriv_base_formule.md"
+                    - Utilisation de la dérivée: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/03_deriv_utilis.md"
+            - "Suite et récurrence":
+                - Rappel sur les suites: "Cours/Terminale générale/Suites_et_recurrence/01_Rappels_sur_les_suites.md"
+                - Suites et python: "Cours/Terminale générale/Suites_et_recurrence/02_Suites_et_python.md"
+                - Suites et sens de variations: "Cours/Terminale générale/Suites_et_recurrence/03_Suite_et_sens_de_variations.md"
+                - Suites arithmétiques: "Cours/Terminale générale/Suites_et_recurrence/04_Suites_aritmetiques.md"
+                - Suites géométriques: "Cours/Terminale générale/Suites_et_recurrence/05_Suites_geometrique.md"
+                - Raisonnement par récurrence: "Cours/Terminale générale/Suites_et_recurrence/06_Raisonnement_par_recurrence.md"
+                - Suite majorée, minorée, bornée: "Cours/Terminale générale/Suites_et_recurrence/07_majoree_minoree_bornee.md"
+            - Limite de suite:
+                - Limite d'une suite: "Cours/Terminale générale/Limite_de_suite/01_Limite_d_une_suite.md"
+                - Limite de la suite $q^n$: "Cours/Terminale générale/Limite_de_suite/02_Limite_de_la_suite_qn.md"
+                - Limite et opérations: "Cours/Terminale générale/Limite_de_suite/03_Theoremes_d_operation.md"
+    - Labo de math: "Labo de math/c01.md"

@@ -1,6 +1,6 @@
 # Dérivation et formule
 
-Il est impératif de connaitre par c&#339;ur les formules suivantes :
+**Il est impératif de connaitre par c&#339;ur les formules suivantes :**
 
 \[
 \begin{array}{|c|c|c|c|}
@@ -75,7 +75,7 @@ Il est impératif de connaitre par c&#339;ur les formules suivantes :
 		A FAIRE
 
 
-Il est impératif de connaitre par c&#339;ur les formules suivantes :
+**Il est impératif de connaitre par c&#339;ur les formules suivantes :**
 
 <span class = "Boite"> Si $u$ et $v$ sont deux fonctions dérivables sur $I$ : </span>
 
@@ -90,7 +90,7 @@ Il est impératif de connaitre par c&#339;ur les formules suivantes :
 \hline
 \rule[-4pt]{0pt}{15pt} I & u \times v & u'\times v + u \times v' & I \\
 \hline
-\begin{array}{c} J \subset I \text{ tel que }\\ \text{pour tout } x \in J,\ v(x) \neq 0 \end{array}& \dfrac{1}{v}
+\begin{array}{c} J \subset I \text{ tel que }\\ \text{pour tout } x \in J,\ v(x) \neq 0 \end{array} & \dfrac{1}{v}
 & \dfrac{- v'}{v^2}
 &
 \begin{array}{c} J \subset I \text{ tel que }\\ \text{pour tout } x \in J,\ v(x) \neq 0 \end{array}\\
@@ -113,3 +113,54 @@ I
 \hline
 \end{array}
 \]
+
+Quant à la dernière formule du tableau précédent, elle peut s'appliquer aux cas particuliers les plus rencontrés :
+
+
+\[
+\begin{array}{|c|c|c|c|}
+\hline
+\rule[-4pt]{0pt}{15pt} \text{Fonction $f$ définie sur} & \text{Par :}& \text{a pour fonction dérivée}&\text{la fonction est dérivable sur}\\
+\hline
+I & \text{e}^{u}=\exp (u) & u' \text{e}^{u}=u' \exp (u) & I \\
+\hline
+\rule[-12pt]{0pt}{30pt}
+\begin{array}{c} J \subset I \text{ tel que }\\ \text{pour tout } x \in J,\ u(x) > 0 \end{array}& \ln (u) \ (u>0)
+& \dfrac{u'}{u}
+&
+\begin{array}{c} J \subset I \text{ tel que }\\ \text{pour tout } x \in J,\ u(x) > 0 \end{array}\\
+\hline
+\rule[-4pt]{0pt}{15pt} I & \cos(u) & -u' \times \sin (u) & I \\
+\hline
+\rule[-4pt]{0pt}{15pt} I & \sin(u) & u' \times \cos (u) & I \\
+\hline
+\rule[-12pt]{0pt}{30pt} mx+p>0 & \ln(mx+p) & \dfrac{m}{mx+p} & mx+p>0 \\
+\hline
+\rule[-4pt]{0pt}{15pt} \mathbf{R} & \exp(mx+p)=\text{e}^{mx+p} & m\exp(mx+p) = m \text{e}^{mx+p} & \mathbf{R} \\
+\hline
+\mathbf{R} & \cos(mx+p)  & -m\sin(mx+p) & \mathbf{R} \\
+\hline
+\mathbf{R} & \sin(mx+p)  & m\cos(mx+p) & \mathbf{R} \\
+\hline
+\end{array}
+\]
+
+???- example "Exemple"
+	A FAIRE
+	
+	???- done "Solution"
+		A FAIRE
+
+**Il est indispensable de savoir dériver les fonctions en utilisant les formules précédents !**
+
+!!! warning "Attention"
+
+	Il faut faire attention aux parenthèses, invisibles dans les formules précédentes ! Par exemple :
+
+	\[ \left(\dfrac{u}{v}\right)'(x) = \dfrac{(u'(x)) \times (v(x)) - (v'(x)) \times (u(x))}{(u(x))^2} \]
+
+???- example "Exemple"
+	Dériver $f(x) = \dfrac{2x^2-3}{x^3-4}$
+	
+	???- done "Solution"
+		A FAIRE
