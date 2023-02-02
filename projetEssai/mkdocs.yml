@@ -31,7 +31,7 @@ theme:
     palette:
         primary: 'light green'
         accent: 'amber'
-    feature:
+    features:
         tabs: false
         
         
@@ -52,7 +52,9 @@ extra_javascript:
 #https://github.com/Python-Markdown/markdown/wiki/Third-Party-Extensions
 
 markdown_extensions:
+    - pymdownx.critic
     - attr_list #https://python-markdown.github.io/extensions/attr_list/
+    - md_in_html
     - pymdownx.arithmatex: #https://squidfunk.github.io/mkdocs-material/extensions/pymdown/
         generic: true
     - pymdownx.tasklist:
@@ -77,7 +79,11 @@ nav:
     - Accueil: "index.md"
     - Cours:
         - Seconde: "Cours/Seconde/c01.md"
-        - Première NSI: "Cours/Première NSI/c01.md"
+        - Première NSI: 
+            - Présentation: "Cours/Première NSI/Présentation/c01.md"
+            - Les bases:
+                - "Bien écrire en python": "Cours/Première NSI/Python/Les bases/ortho.md"
+                - "Méthodes de base": "Cours/Première NSI/Python/Les bases/methode01.md"
         - Première STI2D: "Cours/Première STI2D/c01.md"
         - Terminale STI2D: "Cours/Terminale STI2D/c01.md"
         - Première générale: "Cours/Première générale/c01.md"

@@ -61,10 +61,10 @@
 	}
 
 	h1{
-		font-size:2rem!important;
-		color:white!important;
-		background-color:#145900;
-		border: 5px ridge #145900;
+		font-size:2rem !important;
+		color:rgb(255, 255, 255) !important;
+		background-color:#8bc34b;
+		border: 5px ridge #79aa42;
 		border-radius:10px;
 		text-align:center;
 		font-weight:bold;
@@ -73,9 +73,9 @@
 	h2{
 		font-size:1.5rem!important;
 		color:white!important;
-		background-image:linear-gradient(to right, #145900 , white);
+		background-image:linear-gradient(to right, #8bc34b , white);
 		/*background-color:#42bef6;*/
-		border: 5px ridge #145900;
+		border: 1px ridge #79aa42;
 		border-radius:10px;
 		/*text-align:center;*/
 	}
