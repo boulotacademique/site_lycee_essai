@@ -362,9 +362,42 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Méthodes de base : print/input
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="in_out.html" title="Méthodes de base : print/input" class="md-nav__link md-nav__link--active">
       Méthodes de base : print/input
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercices_a_maitriser" class="md-nav__link">
+    Exercices à maitriser
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -377,6 +410,30 @@
   <li class="md-nav__item">
     <a href="str.html" title="Méthodes de base : chaine de caractères" class="md-nav__link">
       Méthodes de base : chaine de caractères
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="if_for_while.html" title="If et les boucles" class="md-nav__link">
+      If et les boucles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="list.html" title="Les listes" class="md-nav__link">
+      Les listes
     </a>
   </li>
 
@@ -833,6 +890,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercices_a_maitriser" class="md-nav__link">
+    Exercices à maitriser
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -859,7 +933,7 @@
 
 <p>Cette fonction renvoie <code>None</code> : c'est-à-dire rien !</p>
 </div>
-<p>Il est préférable d'utiliser une chaine de caractère dans un <code>print</code>. Pour cela, il suffit d'utiliser <a href="methode01.md#concat">la concaténation</a> et <a href="AFAIRE">le transtypage</a> ou la <a href="AFAIRE">méthode <code>format</code></a>.</p>
+<p>Il est préférable d'utiliser une chaine de caractère dans un <code>print</code>. Pour cela, il suffit d'utiliser <a href="str.html#concat">la concaténation</a> et <a href="AFAIRE">le transtypage</a> ou la <a href="AFAIRE">méthode <code>format</code></a>.</p>
 <div class="admonition info">
 <p class="admonition-title">A retenir</p>
 <p>Pour récupérer ce qu'un utilisateur tape au clavier, il suffit d'utiliser la fonction <code>input</code> ! Elle peut prendre 0 argument mais aussi plusieurs ! En général, on utilisera un argument qui est une chaîne de caractères (c'est-à-dire un texte) qui explique à l'utilisateur ce qu'il doit faire !</p>
@@ -886,6 +960,16 @@
 </code></pre></div>
 
 </div>
+<h2 id="exercices_a_maitriser">Exercices à maitriser<a class="headerlink" href="#exercices_a_maitriser" title="Permanent link"></a></h2>
+<details class="- question"><summary>Exercice</summary><p>Demander à l'utilisateur son année de naissance et l'année en cours. Calculer et afficher alors son age.</p>
+<details class="- success"><summary>Réponse</summary><div class="highlight"><pre><span></span><code><span class="n">annee_nais</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Votre année de naissance ? &quot;</span><span class="p">))</span>
+<span class="n">annee</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quelle est l&#39;année ? &quot;</span><span class="p">))</span>
+<span class="n">age</span> <span class="o">=</span> <span class="n">annee</span> <span class="o">-</span> <span class="n">annee_nais</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+</code></pre></div>
+
+</details>
+</details>
                 
               
               
