@@ -1,8 +1,6 @@
-# Les méthodes de bases
+# Les méthodes de bases : Entrèe/sortie
 
-## Les entrées/sortie (input/output)
-
-!!! note "A retenir"
+!!! info "A retenir"
 
 	Pour afficher **en console** un résultat, il suffit d'utiliser la fonction ```print``` ! Elle peut prendre 0 argument mais aussi plusieurs !
 
@@ -15,11 +13,11 @@
 
 	Cette fonction renvoie ```None``` : c'est-à-dire rien !
 
-Il est préférable d'utiliser une chaine de caractère dans un ```print```. Pour cela, il suffit d'utiliser [la concaténation](AFAIRE) et [le transtypage](AFAIRE) ou la méthode ```format```.
+Il est préférable d'utiliser une chaine de caractère dans un ```print```. Pour cela, il suffit d'utiliser [la concaténation](methode01.md#concat) et [le transtypage](AFAIRE) ou la [méthode ```format```](AFAIRE).
 
 
 
-!!! note "A retenir"
+!!! info "A retenir"
 
 	Pour récupérer ce qu'un utilisateur tape au clavier, il suffit d'utiliser la fonction ```input``` ! Elle peut prendre 0 argument mais aussi plusieurs ! En général, on utilisera un argument qui est une chaîne de caractères (c'est-à-dire un texte) qui explique à l'utilisateur ce qu'il doit faire !
 
@@ -48,3 +46,4 @@ Il est préférable d'utiliser une chaine de caractère dans un ```print```. Pou
 	age = int(input("Votre age ? ")) # age est maintenant du type int
 	annee_naissance = 2023 - age # le calcul est bien effectué
 	```
+

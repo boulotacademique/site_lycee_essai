@@ -88,8 +88,10 @@
 		border-bottom: ridge #009d65;
 		border-left: ridge #009d65;
 		border-radius:10px;
+		line-height: 1.5em!important;
 		/*text-align:center;*/
-		margin:1rem auto!important;
+		/*margin:1rem auto!important;*/
+		width : 30%;
 	}
 
 	.ImCentre.InLine{
@@ -106,6 +108,12 @@
 		margin-right : auto;
 		margin-left : 35%;
 		border : 1px solid black;
+	}
+
+	.Center_seul {
+		margin-right : auto;
+		margin-left : auto;
+		width : 70%;
 	}
 
 	.Vignette{
@@ -131,7 +139,17 @@
 		min-width : 10%;
 		text-align : center;
 		vertical-align : middle;
-	} 
+	}
+
+	.Gras{
+		font-weight: bold ;
+	}
+
+	code{
+		margin-right: auto!important;
+		margin-left: auto!important;
+		width : 70%!important;
+	}
 }
 /*
 @media print {

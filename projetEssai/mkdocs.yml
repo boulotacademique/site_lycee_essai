@@ -32,7 +32,9 @@ theme:
         primary: 'light green'
         accent: 'amber'
     features:
-        tabs: false
+        tabs : false
+        #- navigation.tabs
+        #- navigation.tabs.sticky
         
         
         
@@ -52,6 +54,7 @@ extra_javascript:
 #https://github.com/Python-Markdown/markdown/wiki/Third-Party-Extensions
 
 markdown_extensions:
+    - tables
     - pymdownx.critic
     - attr_list #https://python-markdown.github.io/extensions/attr_list/
     - md_in_html
@@ -77,13 +80,15 @@ markdown_extensions:
 
 nav:
     - Accueil: "index.md"
-    - Cours:
+    - Cours: 
+        - Accueil: "Cours/c01.md"
         - Seconde: "Cours/Seconde/c01.md"
         - Première NSI: 
             - Présentation: "Cours/Première NSI/Présentation/c01.md"
             - Les bases:
                 - "Bien écrire en python": "Cours/Première NSI/Python/Les bases/ortho.md"
-                - "Méthodes de base": "Cours/Première NSI/Python/Les bases/methode01.md"
+                - "Méthodes de base : print/input": "Cours/Première NSI/Python/Les bases/in_out.md"                
+                - "Méthodes de base : chaine de caractères": "Cours/Première NSI/Python/Les bases/str.md"
         - Première STI2D: "Cours/Première STI2D/c01.md"
         - Terminale STI2D: "Cours/Terminale STI2D/c01.md"
         - Première générale: "Cours/Première générale/c01.md"
@@ -107,4 +112,6 @@ nav:
                 - Limite d'une suite: "Cours/Terminale générale/Limite_de_suite/01_Limite_d_une_suite.md"
                 - Limite de la suite $q^n$: "Cours/Terminale générale/Limite_de_suite/02_Limite_de_la_suite_qn.md"
                 - Limite et opérations: "Cours/Terminale générale/Limite_de_suite/03_Theoremes_d_operation.md"
-    - Labo de math: "Labo de math/c01.md"
+    - Labo de math: 
+        - Accueil: "Labo de math/c01.md"
+        - "Liaison lycée/supérieur": "/Labo de math/Liaison_lycée_sup/supérieur.md"
