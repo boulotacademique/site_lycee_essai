@@ -61,10 +61,10 @@
 	}
 
 	h1{
-		font-size:2rem!important;
-		color:white!important;
-		background-color:#145900;
-		border: 5px ridge #145900;
+		font-size:2rem !important;
+		color:rgb(255, 255, 255) !important;
+		background-color:#8bc34b;
+		border: 5px ridge #79aa42;
 		border-radius:10px;
 		text-align:center;
 		font-weight:bold;
@@ -73,9 +73,9 @@
 	h2{
 		font-size:1.5rem!important;
 		color:white!important;
-		background-image:linear-gradient(to right, #145900 , white);
+		background-image:linear-gradient(to right, #8bc34b , white);
 		/*background-color:#42bef6;*/
-		border: 5px ridge #145900;
+		border: 1px ridge #79aa42;
 		border-radius:10px;
 		/*text-align:center;*/
 	}
@@ -88,8 +88,10 @@
 		border-bottom: ridge #009d65;
 		border-left: ridge #009d65;
 		border-radius:10px;
+		line-height: 1.5em!important;
 		/*text-align:center;*/
-		margin:1rem auto!important;
+		/*margin:1rem auto!important;*/
+		width : 30%;
 	}
 
 	.ImCentre.InLine{
@@ -102,10 +104,20 @@
 		vertical-align : middle;
 	}
 
+	.Aligne_dte{
+		text-align: right;
+	}
+
 	.Center {
 		margin-right : auto;
 		margin-left : 35%;
 		border : 1px solid black;
+	}
+
+	.Center_seul {
+		margin-right : auto;
+		margin-left : auto;
+		width : 70%;
 	}
 
 	.Vignette{
@@ -131,7 +143,17 @@
 		min-width : 10%;
 		text-align : center;
 		vertical-align : middle;
-	} 
+	}
+
+	.Gras{
+		font-weight: bold ;
+	}
+
+	code{
+		margin-right: auto!important;
+		margin-left: auto!important;
+		width : 70%!important;
+	}
 }
 /*
 @media print {

@@ -104,6 +104,10 @@
 		vertical-align : middle;
 	}
 
+	.Aligne_dte{
+		text-align: right;
+	}
+
 	.Center {
 		margin-right : auto;
 		margin-left : 35%;

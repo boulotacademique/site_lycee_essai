@@ -13,7 +13,7 @@
 
 	Cette fonction renvoie ```None``` : c'est-à-dire rien !
 
-Il est préférable d'utiliser une chaine de caractère dans un ```print```. Pour cela, il suffit d'utiliser [la concaténation](methode01.md#concat) et [le transtypage](AFAIRE) ou la [méthode ```format```](AFAIRE).
+Il est préférable d'utiliser une chaine de caractère dans un ```print```. Pour cela, il suffit d'utiliser [la concaténation](str.md#concat) et [le transtypage](AFAIRE) ou la [méthode ```format```](AFAIRE).
 
 
 
@@ -46,4 +46,20 @@ Il est préférable d'utiliser une chaine de caractère dans un ```print```. Pou
 	age = int(input("Votre age ? ")) # age est maintenant du type int
 	annee_naissance = 2023 - age # le calcul est bien effectué
 	```
+
+## Exercices à maitriser
+
+???- question "Exercice"
+
+	Demander à l'utilisateur son année de naissance et l'année en cours. Calculer et afficher alors son age.
+
+	???- success "Réponse"
+
+
+		```python
+		annee_nais = int(input("Votre année de naissance ? "))
+		annee = int(input("Quelle est l'année ? "))
+		age = annee - annee_nais
+		print(age)
+		```
 

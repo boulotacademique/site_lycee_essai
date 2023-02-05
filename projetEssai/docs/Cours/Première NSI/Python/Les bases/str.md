@@ -15,9 +15,9 @@
 	
 	<div class = "Center_seul">
 	
-	|chaîne : |B|o|n|j|o|u|r| |!|
-	|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-	|Indice : |0|1|2|3|4|5|6|7|8|
+	```chaîne : ```B```o```n```j```o```u```r``` ```!```
+	```:-:```:-:```:-:```:-:```:-:```:-:```:-:```:-:```:-:```:-:```
+	```Indice : ```0```1```2```3```4```5```6```7```8```
 
 	</div>
 
@@ -75,6 +75,19 @@ print(mot[:-5]) # affiche Bonj
 
 	- La <span class = "Gras" id = "concat">concaténation</span> consiste à coller plusieurs chaines de caractères. Cela s'effectue à l'aide du symbole ```+```. Ainsi, ```mot + " " + mot_suiv``` correspond à ```Bonjour ! Tout le monde !```
 	- Pour répéter une chaine : ```mot*2``` correspond à ```'Bonjour !Bonjour !'``` et ```"a"*5``` correpsond à ```aaaaa```
+
+!!! warning "Attention"
+
+	Il faut avoir uniquement des ```str``` pour une concaténation ! Par exemple {-- ```"Bonjour```+1000 --} déclenche une erreur : ```TypeError: can only concatenate str (not "int") to str```
+
+???- tip "Transtypage"
+
+	Il est possible de transformer presque tous les type en ```str``` en utilisant la fonction ```str``` !
+
+	```python
+	mot = "Bonjour " + str(1000)
+	print(mot) # Affiche Bonjour 1000
+	```
 
 ## Manipulation des chaînes de caractères
 
@@ -150,7 +163,9 @@ for idx in range(len(mot)):
 
 	Une chaîne de caractères (type ```str```) est un [**non mutable**](AFAIRE) (ou **immuable**). Il est donc impossible de faire, par exemple, ```mot[2] = "r"``` !!
 
-Pour modifier une chaîne de caractères, il est possible d'utiliser les tranches. Lire et bien travailler les exemples suivants afin de bien les comprendre.
+### Insérer une chaîne
+
+Pour modifier une chaîne de caractères, il est possible d'utiliser les tranches. <!--Lire et bien travailler les exemples suivants afin de bien les comprendre.-->
 
 !!! note "Insérer une chaîne"
 
@@ -158,9 +173,9 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 
 	<div class = "Center_seul">
 	
-	|chaîne : |B|o|n| |!|
-	|:-:|:-:|:-:|:-:|:-:|:-:|
-	|Indice : |0|1|2|3|4|
+	```chaîne : ```B```o```n``` ```!```
+	```:-:```:-:```:-:```:-:```:-:```:-:```
+	```Indice : ```0```1```2```3```4```
 
 	</div>
 
@@ -178,15 +193,39 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 	print(mot2) # affiche Bonbon !
 	```
 
+???- tip "Ajouter une chaîne à la fin"
+
+	Il est inutile d'utiliser des tranches pour ajouter à la fin.
+
+	```python
+	mot = "Hello"
+	mot2 = " world !"
+	mot3 = mot + mot2
+	print(mot3) # affiche Hello world !
+	```
+
+???- tip "Ajouter une chaîne au début"
+
+	Il est inutile d'utiliser des tranches pour ajouter au début.
+
+	```python
+	mot = "Jedi"
+	mot2 = "Maitre "
+	mot3 = mot2 + mot
+	print(mot3) # affiche Maitre Jedi
+	```
+
+### Modifier un caractère
+
 !!! note "Modifier **un** caractère"
 
 	On souhaite modifier un caractère d'une chaîne. Par exemple, on souhaite corriger ```chebal```.
 
 	<div class = "Center_seul">
 	
-	|chaîne : |c|h|e|b|a|l|
-	|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-	|Indice : |0|1|2|3|4|5|
+	```chaîne : ```c```h```e```b```a```l```
+	```:-:```:-:```:-:```:-:```:-:```:-:```:-:```
+	```Indice : ```0```1```2```3```4```5```
 
 	</div>
 
@@ -202,7 +241,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 	print(mot2) # affiche cheval !
 	```
 
-
+### Créer une chaîne
 
 !!! note "Créer une chaîne de caractères"
 
@@ -217,7 +256,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 	print(mot) # affiche Secret
 	```
 
-???- "Accumuler au début"
+???- tip "Accumuler au début"
 
 	Il est possible d'accumuler au début (à gauche)
 
@@ -229,3 +268,151 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 			mot = mot_cache[idx] + mot	# On accumule les caractères à la fin (à droite)
 	print(mot) # affiche terceS
 	```
+
+## Diverses méthodes autour des str
+
+!!!- tip "A apprendre en faisant les exercices"
+
+	- ```''``` ou ```""``` (sans espace) : la chaîne vide.
+	- les caractères spéciaux : ```\n``` pour le retour à la ligne, ```\t``` pour une tabulation
+	- ```'rrr' in C``` : retourne ```True``` si ```'rrr'``` est dans ```C```, ```False``` sinon (cf [les booléens](AFFAIRE) ).
+	- ```C.index(x)``` : retourne l'indice de l'élément ```x``` (si il est dans ```C```, sinon il y a un message d'erreur)
+	- ```C.find(x)```: retourne l'indice de l'élément ```x``` (si il est dans ```C```, sinon il retourne -1)
+	- ```C.count(x)``` : retourne le nombre d’occurrences  de l'élément ```x```. 
+	- ```C1 == C2``` : retourne ```True``` si ```C1``` et ```C2``` sont identiques, ```False``` sinon. \textbf{Attention à la casse (majuscule, minuscule) !}
+
+## Exercice à maitriser
+
+???- question "Exercice"
+
+	Demander un prénom et un age et dire bonjour à l'utilisateur en lui donnantson age.
+
+	Pour une personne de 20 ans qui s'appelle Luke, l'affichage attendu est ```Bonjour Luke. Vous avez 20 ans.```
+
+	???- done "Réponse"
+
+		```python
+		nom = input("Votre nom ? ")
+		age = int(input("Votre age ? "))
+		reponse = "Bonjour " + nom + ". Vous avez " + str(age) + " ans."
+		print(reponse)
+		```
+
+???- question "Exercice"
+
+	A l'aide des taranches, compléter le programme suivant pour obtenir une chaîne où l'alphabet aura été remis dans le bonne ordre.
+
+	```python
+	melange = "QRSTABCDELMNUVFGHIJKWXYZOP"
+	alphabet = ... # compléter avec des tranches
+	print(alphabet) # affiche ABCEFGHIJKLMNOPQRSTUVWXYZ
+	```
+
+	???- done "Réponse"
+
+		```python
+		melange = "QRSTABCDELMNUVFGHIJKWXYZOP"
+		alphabet = melange[4:9] + melange[14:20] + melange[9:12] + melange[-2:] + melange[:4] + melange[12:14] + melange[20:24]
+		print(alphabet) # affiche ABCEFGHIJKLMNOPQRSTUVWXYZ
+		```
+
+
+???- question "Exercice"
+
+	```mots="La revolution informatique"```. En utilisant les méthodes précédentes :
+
+	1. Donner le code qui affiche :
+		
+		1. le nombre de caractère de ```mots```;
+		2. True si le mot ```"la"``` est dans ```mots```, ```False``` sinon.
+		3. la position de la première lettre ```r``` ; Et (plus difficile) la seconde ;
+
+	2. Donner le code :
+		
+		1. qui affiche les deux premiers caractères de ```mots```
+		2. qui extrait le mot "revolution" de ```mots```
+		3. qui teste le résultat précédent : c'est-à-dire qui renvoie ```'True'``` si le code a bien trouvé le mot ```revolution``` (```False``` sinon)
+		4. en utilisant des tranches de la chaîne de caractères \verb```mots```, affecter à la variable ```modif``` la chaîne de caractère ```"informatique revolution La"```.
+
+
+	???- done "Réponse"
+
+		```python
+		# Quesiton 1.a.
+		print(len(mots))
+		# Quesiton 1.b.
+		print('la' in mots)
+		# Question 1.c.
+		print(mots.find('r'))
+		premier = mots.find('r')
+		print(m[premier + 1:].find('r'))
+		# Question 2.a.
+		print(mots[0:2]) 
+		#ou
+		print(mots[:2])
+		# Question 2.b.
+		print(mots[3:13])
+		# Question 2.c.
+		essai = mots[3:13]
+		motCherche = "revolution"
+		print(essai == motCherche)
+		# Question 2.d.
+		modif = mots[14:] + mots[2:14] + mots[:2]
+		print(modif)
+		```
+
+???- question "Exercice"
+
+	Pour un spectacle, le tarif normal est de 25 &#8364; et le tarif réduit est de 18 &#8364;. Écrire un programme qui demande à l'utilisateur le nombre de place total, puis le nombre de place à tarif réduit. Afficher alors le prix à payer.
+
+	Par exemple, pour 10 places dont 3 au tarif réduit, il faut afficher :
+	
+	```Le coût total est de 229 euros.```
+
+	???- done "Réponse"
+
+		```python
+		nbPlace=int(input("Nombre de place ? "))
+		nbReduit=int(input("Nombre de tarif réduit ? "))
+		cout=nbReduit*18+(nbPlace-nbReduit)*25
+		print("Le coût total est de",cout,"euros")
+		print("Le coût total est de "+str(cout)+" euros")
+		print("Le coût total est de {} euros".format(cout))
+		```
+
+???- question "Exercice"
+
+	Pour cette exercice, **revoir le cours sur ```if``` et ```elif```**.
+
+	Écrire un programme qui compte le nombre de voyelles dans la phrase : 
+	
+	&laquo; Cela n'a aucun sens d'embaucher des gens intelligents et de leur dire quoi faire; Nous embauchons des gens intelligents pour qu'ils puissent nous dire quoi faire.&raquo; [^1]
+
+	```python
+	phrase = "Cela n'a aucun sens d'embaucher des gens intelligents et de leur dire quoi faire; Nous embauchons des gens intelligents pour qu'ils puissent nous dire quoi faire."
+	# A COMPLETER
+	```
+
+
+	???- done "Réponse"
+
+		```python
+		phrase = "Cela n'a aucun sens d'embaucher des gens intelligents et de leur dire quoi faire; Nous embauchons des gens intelligents pour qu'ils puissent nous dire quoi faire."
+		compt = 0
+		for elt in phrase:
+			if elt == 'a':
+				compt = compt + 1
+			if elt == 'e':
+				compt = compt + 1
+			if elt == 'i':
+				compt = compt + 1
+			if elt == 'o':
+				compt = compt + 1
+			if elt == 'u':
+				compt = compt + 1
+		print(compt)
+		```
+
+[^1]: Steve Jobs
+	
+

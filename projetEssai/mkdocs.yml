@@ -54,6 +54,7 @@ extra_javascript:
 #https://github.com/Python-Markdown/markdown/wiki/Third-Party-Extensions
 
 markdown_extensions:
+    - footnotes
     - tables
     - pymdownx.critic
     - attr_list #https://python-markdown.github.io/extensions/attr_list/
@@ -89,6 +90,8 @@ nav:
                 - "Bien écrire en python": "Cours/Première NSI/Python/Les bases/ortho.md"
                 - "Méthodes de base : print/input": "Cours/Première NSI/Python/Les bases/in_out.md"                
                 - "Méthodes de base : chaine de caractères": "Cours/Première NSI/Python/Les bases/str.md"
+                - "If et les boucles" : "Cours/Première NSI/Python/Les bases/if_for_while.md"
+                - "Les listes" : "Cours/Première NSI/Python/Les bases/list.md"
         - Première STI2D: "Cours/Première STI2D/c01.md"
         - Terminale STI2D: "Cours/Terminale STI2D/c01.md"
         - Première générale: "Cours/Première générale/c01.md"
@@ -114,4 +117,4 @@ nav:
                 - Limite et opérations: "Cours/Terminale générale/Limite_de_suite/03_Theoremes_d_operation.md"
     - Labo de math: 
         - Accueil: "Labo de math/c01.md"
-        - "Liaison lycée/supérieur": "/Labo de math/Liaison_lycée_sup/supérieur.md"
+        - "Liaison lycée/supérieur": "Labo de math/Liaison_lycée_sup/supérieur.md"

@@ -1,0 +1,1516 @@
+
+
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Lycée Mimard">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.1">
+    
+    
+      
+        <title>Méthodes de base : chaine de caractères - Les maths à Mimard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.71dfd922.min.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.616af814.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#8bc34a">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../Style/extra.css">
+    
+      <link rel="stylesheet" href="../../../../Style/print.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-green" data-md-color-accent="amber">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#les_chaines_de_caracteres_str" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Les maths à Mimard" class="md-header-nav__button md-logo" aria-label="Les maths à Mimard">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Les maths à Mimard
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Méthodes de base : chaine de caractères
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../../index.html" class="md-tabs__link">
+        Accueil
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../c01.html" class="md-tabs__link md-tabs__link--active">
+          Cours
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../Labo%20de%20math/c01.html" class="md-tabs__link">
+          Labo de math
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Les maths à Mimard" class="md-nav__button md-logo" aria-label="Les maths à Mimard">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Les maths à Mimard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../index.html" title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Cours
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Cours" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Cours
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../c01.html" title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Seconde/c01.html" title="Seconde" class="md-nav__link">
+      Seconde
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" checked>
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Première NSI
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Première NSI" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Première NSI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Pr%C3%A9sentation/c01.html" title="Présentation" class="md-nav__link">
+      Présentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3-2" type="checkbox" id="nav-2-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-2-3-2">
+      Les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ortho.html" title="Bien écrire en python" class="md-nav__link">
+      Bien écrire en python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="in_out.html" title="Méthodes de base : print/input" class="md-nav__link">
+      Méthodes de base : print/input
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Méthodes de base : chaine de caractères
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="str.html" title="Méthodes de base : chaine de caractères" class="md-nav__link md-nav__link--active">
+      Méthodes de base : chaine de caractères
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#les_indices" class="md-nav__link">
+    Les indices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concatenation_et_repetition" class="md-nav__link">
+    Concaténation et répétition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulation_des_chaines_de_caracteres" class="md-nav__link">
+    Manipulation des chaînes de caractères
+  </a>
+  
+    <nav class="md-nav" aria-label="Manipulation des chaînes de caractères">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parcourir_une_chaine_de_caracteres" class="md-nav__link">
+    Parcourir une chaîne de caractères
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifier_une_chaine_de_caracteres" class="md-nav__link">
+    Modifier une chaîne de caractères
+  </a>
+  
+    <nav class="md-nav" aria-label="Modifier une chaîne de caractères">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inserer_une_chaine" class="md-nav__link">
+    Insérer une chaîne
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifier_un_caractere" class="md-nav__link">
+    Modifier un caractère
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creer_une_chaine" class="md-nav__link">
+    Créer une chaîne
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diverses_methodes_autour_des_str" class="md-nav__link">
+    Diverses méthodes autour des str
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice_a_maitriser" class="md-nav__link">
+    Exercice à maitriser
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="if_for_while.html" title="If et les boucles" class="md-nav__link">
+      If et les boucles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="list.html" title="Les listes" class="md-nav__link">
+      Les listes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20STI2D/c01.html" title="Première STI2D" class="md-nav__link">
+      Première STI2D
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Terminale%20STI2D/c01.html" title="Terminale STI2D" class="md-nav__link">
+      Terminale STI2D
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20g%C3%A9n%C3%A9rale/c01.html" title="Première générale" class="md-nav__link">
+      Première générale
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
+    
+    <label class="md-nav__link" for="nav-2-7">
+      Terminale générale
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terminale générale" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terminale générale
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Terminale%20g%C3%A9n%C3%A9rale/index_term_G.html" title="Accueil TGEN" class="md-nav__link">
+      Accueil TGEN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-2" type="checkbox" id="nav-2-7-2">
+    
+    <label class="md-nav__link" for="nav-2-7-2">
+      Dérivation, convexité et primitive
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dérivation, convexité et primitive" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-7-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Dérivation, convexité et primitive
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-2-1" type="checkbox" id="nav-2-7-2-1">
+    
+    <label class="md-nav__link" for="nav-2-7-2-1">
+      Dérivation : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dérivation : les bases" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-7-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Dérivation : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/01_deriv_base_tgte.html" title="Dérivation et tangente" class="md-nav__link">
+      Dérivation et tangente
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/02_deriv_base_formule.html" title="Dérivation et formule" class="md-nav__link">
+      Dérivation et formule
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/03_deriv_utilis.html" title="Utilisation de la dérivée" class="md-nav__link">
+      Utilisation de la dérivée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/04_deriv_composee.html" title="Composée de fonctions" class="md-nav__link">
+      Composée de fonctions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-3" type="checkbox" id="nav-2-7-3">
+    
+    <label class="md-nav__link" for="nav-2-7-3">
+      Suite et récurrence
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Suite et récurrence" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-7-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Suite et récurrence
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Terminale%20g%C3%A9n%C3%A9rale/Suites_et_recurrence/01_Rappels_sur_les_suites.html" title="Rappel sur les suites" class="md-nav__link">
+      Rappel sur les suites
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Terminale%20g%C3%A9n%C3%A9rale/Suites_et_recurrence/02_Suites_et_python.html" title="Suites et python" class="md-nav__link">
+      Suites et python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Terminale%20g%C3%A9n%C3%A9rale/Suites_et_recurrence/03_Suite_et_sens_de_variations.html" title="Suites et sens de variations" class="md-nav__link">
+      Suites et sens de variations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Terminale%20g%C3%A9n%C3%A9rale/Suites_et_recurrence/04_Suites_aritmetiques.html" title="Suites arithmétiques" class="md-nav__link">
+      Suites arithmétiques
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Terminale%20g%C3%A9n%C3%A9rale/Suites_et_recurrence/05_Suites_geometrique.html" title="Suites géométriques" class="md-nav__link">
+      Suites géométriques
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Terminale%20g%C3%A9n%C3%A9rale/Suites_et_recurrence/06_Raisonnement_par_recurrence.html" title="Raisonnement par récurrence" class="md-nav__link">
+      Raisonnement par récurrence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Terminale%20g%C3%A9n%C3%A9rale/Suites_et_recurrence/07_majoree_minoree_bornee.html" title="Suite majorée, minorée, bornée" class="md-nav__link">
+      Suite majorée, minorée, bornée
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-4" type="checkbox" id="nav-2-7-4">
+    
+    <label class="md-nav__link" for="nav-2-7-4">
+      Limite de suite
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de suite" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-7-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de suite
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Terminale%20g%C3%A9n%C3%A9rale/Limite_de_suite/01_Limite_d_une_suite.html" title="Limite d'une suite" class="md-nav__link">
+      Limite d'une suite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Terminale%20g%C3%A9n%C3%A9rale/Limite_de_suite/02_Limite_de_la_suite_qn.html" title="Limite de la suite $q^n$" class="md-nav__link">
+      Limite de la suite $q^n$
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Terminale%20g%C3%A9n%C3%A9rale/Limite_de_suite/03_Theoremes_d_operation.html" title="Limite et opérations" class="md-nav__link">
+      Limite et opérations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Labo de math
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Labo de math" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Labo de math
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Labo%20de%20math/c01.html" title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Labo%20de%20math/Liaison_lyc%C3%A9e_sup/sup%C3%A9rieur.html" title="Liaison lycée/supérieur" class="md-nav__link">
+      Liaison lycée/supérieur
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#les_indices" class="md-nav__link">
+    Les indices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concatenation_et_repetition" class="md-nav__link">
+    Concaténation et répétition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulation_des_chaines_de_caracteres" class="md-nav__link">
+    Manipulation des chaînes de caractères
+  </a>
+  
+    <nav class="md-nav" aria-label="Manipulation des chaînes de caractères">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parcourir_une_chaine_de_caracteres" class="md-nav__link">
+    Parcourir une chaîne de caractères
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifier_une_chaine_de_caracteres" class="md-nav__link">
+    Modifier une chaîne de caractères
+  </a>
+  
+    <nav class="md-nav" aria-label="Modifier une chaîne de caractères">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inserer_une_chaine" class="md-nav__link">
+    Insérer une chaîne
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifier_un_caractere" class="md-nav__link">
+    Modifier un caractère
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creer_une_chaine" class="md-nav__link">
+    Créer une chaîne
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diverses_methodes_autour_des_str" class="md-nav__link">
+    Diverses méthodes autour des str
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice_a_maitriser" class="md-nav__link">
+    Exercice à maitriser
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="les_chaines_de_caracteres_str">Les chaînes de caractères : str<a class="headerlink" href="#les_chaines_de_caracteres_str" title="Permanent link"></a></h1>
+<h2 id="les_indices">Les indices<a class="headerlink" href="#les_indices" title="Permanent link"></a></h2>
+<div class="admonition info">
+<p class="admonition-title">A retenir</p>
+<p>Une chaîne de caractère est de type <code>str</code>. Elle peut être écrite </p>
+<ul>
+<li>entre des guillemets simples <code>'Bonjour !'</code></li>
+<li>entre des guillemets doubles <code>"Bonjour !"</code></li>
+<li>entre des guillemets doubles répétés trois fois <code>"""Bonjour !"""</code></li>
+</ul>
+<p>Dans une chaîne, chaque caractère est repéré par un indice !</p>
+<div class = "Center_seul">
+
+<p><code>chaîne :</code>B<code>o</code>n<code>j</code>o<code>u</code>r<code></code>!<code></code>:-:<code>:-:</code>:-:<code>:-:</code>:-:<code>:-:</code>:-:<code>:-:</code>:-:<code>:-:</code>
+<code>Indice :</code>0<code>1</code>2<code>3</code>4<code>5</code>6<code>7</code>8```</p>
+</div>
+
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>En python, les indices commencent toujours <strong>à 0 !</strong></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">A connaître</p>
+<p>Dans tout ce qui suit, on utilise l'exemple suivant :</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour !&quot;</span>
+</code></pre></div>
+
+<ul>
+<li>connaitre le nombre de caractères ou la longueur d'une chaîne : <code>len(mot)</code> correspond à <code>9</code></li>
+<li>accéder à un caractère à partir de son indice : <code>mot[2]</code> correspond à <code>n</code></li>
+<li>accéder aux derniers caractères : <code>mot[len(mot)-1]</code> correspond à <code>!</code>. On peut aussi écrire <code>mot[-1]</code></li>
+<li>accéder à une tranche : <code>mot[2:5]</code> correspond aux caractères dont les indices sont supérieurs ou égaux à 2 et <strong>strictement inférieur</strong> à 5. Ainsi, <code>mot[2:5]</code> correspond à <code>njo</code></li>
+<li>accéder à une tranche contenant les premiers caractères : <code>mot[0:5]</code> correspond aux 5 premiers caractères (dont les indices sont supérieurs ou égaux à 0 et <strong>strictement inférieur</strong> à 5). Ainsi, <code>mot[0:5]</code> correspond à <code>Bonjo</code>. On peut aussi écrire <code>mot[:5]</code></li>
+<li>accéder à une tranche depuis le dernier caractère : <code>mot[len(mot)-3:len(mot)]</code> correspond aux 3 derniers caractères. Ainsi, <code>mot[len(mot)-3:len(mot)]</code> correspond à <code>r !</code>. On peut aussi écrire <code>``mot[-3:]</code></li>
+<li>accéder à toute la chaîne sauf les derniers : <code>mot[0:len(mot)-5]</code> correspond à toute la chaîne <strong>sauf</strong> les 5 derniers caractères. Ainsi, <code>mot[0:len(mot) - 5]</code> correspond à <code>Bonj</code>. On peut aussi écrire <code>mot[:-5]</code></li>
+</ul>
+</div>
+<p>En résumé:</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour !&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">))</span> <span class="c1"># affiche 9</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># affiche n</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># affiche !</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># affiche !</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche njo</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche Bonjo</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche Bonjo</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)])</span> <span class="c1"># affiche r !</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:])</span> <span class="c1"># affiche r !</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche Bonj</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[:</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche Bonj</span>
+</code></pre></div>
+
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Le nombre de caractères <strong>ne correspond pas</strong> au dernier indice ! En effet, le dernier indice est toujours <code>len(...) - 1</code>.</p>
+</div>
+<h2 id="concatenation_et_repetition">Concaténation et répétition<a class="headerlink" href="#concatenation_et_repetition" title="Permanent link"></a></h2>
+<div class="admonition tip">
+<p class="admonition-title">A connaître</p>
+<p>Dans tout ce qui suit, on utilise l'exemple suivant :</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour !&quot;</span>
+<span class="n">mot_suiv</span> <span class="o">=</span> <span class="s2">&quot;Tout le monde !&quot;</span>
+</code></pre></div>
+
+<ul>
+<li>La <span class = "Gras" id = "concat">concaténation</span> consiste à coller plusieurs chaines de caractères. Cela s'effectue à l'aide du symbole <code>+</code>. Ainsi, <code>mot + " " + mot_suiv</code> correspond à <code>Bonjour ! Tout le monde !</code></li>
+<li>Pour répéter une chaine : <code>mot*2</code> correspond à <code>'Bonjour !Bonjour !'</code> et <code>"a"*5</code> correpsond à <code>aaaaa</code></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Il faut avoir uniquement des <code>str</code> pour une concaténation ! Par exemple <del class="critic"> <code>"Bonjour</code>+1000 </del> déclenche une erreur : <code>TypeError: can only concatenate str (not "int") to str</code></p>
+</div>
+<details class="- tip"><summary>Transtypage</summary><p>Il est possible de transformer presque tous les type en <code>str</code> en utilisant la fonction <code>str</code> !</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="c1"># Affiche Bonjour 1000</span>
+</code></pre></div>
+
+</details>
+<h2 id="manipulation_des_chaines_de_caracteres">Manipulation des chaînes de caractères<a class="headerlink" href="#manipulation_des_chaines_de_caracteres" title="Permanent link"></a></h2>
+<h3 id="parcourir_une_chaine_de_caracteres">Parcourir une chaîne de caractères<a class="headerlink" href="#parcourir_une_chaine_de_caracteres" title="Permanent link"></a></h3>
+<div class="admonition info">
+<p class="admonition-title">Parcourir une chaîne de caractères avec des indices</p>
+<p>POur récupérer les caractères d'une chaîne les uns après les autres <strong>avec les indices</strong>, il faut utiliser une boucle <code>for</code>, la fonction <code>range</code> et la longueur de la chaîne.</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour !&quot;</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)):</span>
+    <span class="n">car</span> <span class="o">=</span> <span class="n">mot</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
+</code></pre></div>
+affiche</p>
+<div class = "Center_seul" style="width:10%;">
+
+<div class="highlight"><pre><span></span><code><span class="n">B</span>
+<span class="n">o</span>
+<span class="n">n</span>
+<span class="n">j</span>
+<span class="n">o</span>
+<span class="n">u</span>
+<span class="n">r</span>
+
+<span class="err">!</span>
+</code></pre></div>
+
+</div>
+
+</div>
+<p>Il est aussi possible de ne pas passer par la variable <code>car</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour !&quot;</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+</code></pre></div>
+
+<details class="- tip"><summary>Parcourir une chaîne de caractères sans les indices</summary><p>POur récupérer les caractères d'une chaîne les uns après les autres <strong>sans les indices</strong>, il faut seulement utiliser une boucle <code>`for</code>. Il est alors plus difficile d'accéder aux indices !</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour !&quot;</span>
+<span class="k">for</span> <span class="n">car</span> <span class="ow">in</span> <span class="n">mot</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
+</code></pre></div>
+
+<p>affiche</p>
+<div class = "Center_seul" style="width:10%;">
+
+<div class="highlight"><pre><span></span><code><span class="n">B</span>
+<span class="n">o</span>
+<span class="n">n</span>
+<span class="n">j</span>
+<span class="n">o</span>
+<span class="n">u</span>
+<span class="n">r</span>
+
+<span class="err">!</span>
+</code></pre></div>
+
+</div>
+
+</details>
+<h2 id="modifier_une_chaine_de_caracteres">Modifier une chaîne de caractères<a class="headerlink" href="#modifier_une_chaine_de_caracteres" title="Permanent link"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Une chaîne de caractères (type <code>str</code>) est un <a href="AFAIRE"><strong>non mutable</strong></a> (ou <strong>immuable</strong>). Il est donc impossible de faire, par exemple, <code>mot[2] = "r"</code> !!</p>
+</div>
+<h3 id="inserer_une_chaine">Insérer une chaîne<a class="headerlink" href="#inserer_une_chaine" title="Permanent link"></a></h3>
+<p>Pour modifier une chaîne de caractères, il est possible d'utiliser les tranches. <!--Lire et bien travailler les exemples suivants afin de bien les comprendre.--></p>
+<div class="admonition note">
+<p class="admonition-title">Insérer une chaîne</p>
+<p>On souhaite insérer une chaîne de caractères (éventuellement un caractère seul) dans une chaîne. Par exemple, on souhaite insérer <code>bon</code> entre le <code>n</code> et l'espace dans la chaîne suivante.</p>
+<div class = "Center_seul">
+
+<p><code>chaîne :</code>B<code>o</code>n<code></code>!<code></code>:-:<code>:-:</code>:-:<code>:-:</code>:-:<code>:-:</code>
+<code>Indice :</code>0<code>1</code>2<code>3</code>4```</p>
+</div>
+
+<p>Il faut <a href="#concat">concaténer</a> les chaînes suivantes :</p>
+<ul>
+<li>la chaîne dont les indices commencent à 0 et sont <strong>strictement inférieur à 3</strong> (Faite attention à ce dernier point !!!)</li>
+<li>la chaîne que l'on souhaite insérer</li>
+<li>la chaîne dont les indices vont de l'indice 3 jusqu'au dernier</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bon !&quot;</span>
+<span class="n">a_inserer</span> <span class="o">=</span> <span class="s2">&quot;bon&quot;</span>
+<span class="n">mot2</span> <span class="o">=</span> <span class="n">mot</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">a_inserer</span> <span class="o">+</span> <span class="n">mot</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot2</span><span class="p">)</span> <span class="c1"># affiche Bonbon !</span>
+</code></pre></div>
+
+</div>
+<details class="- tip"><summary>Ajouter une chaîne à la fin</summary><p>Il est inutile d'utiliser des tranches pour ajouter à la fin.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="n">mot2</span> <span class="o">=</span> <span class="s2">&quot; world !&quot;</span>
+<span class="n">mot3</span> <span class="o">=</span> <span class="n">mot</span> <span class="o">+</span> <span class="n">mot2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot3</span><span class="p">)</span> <span class="c1"># affiche Hello world !</span>
+</code></pre></div>
+
+</details>
+<details class="- tip"><summary>Ajouter une chaîne au début</summary><p>Il est inutile d'utiliser des tranches pour ajouter au début.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Jedi&quot;</span>
+<span class="n">mot2</span> <span class="o">=</span> <span class="s2">&quot;Maitre &quot;</span>
+<span class="n">mot3</span> <span class="o">=</span> <span class="n">mot2</span> <span class="o">+</span> <span class="n">mot</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot3</span><span class="p">)</span> <span class="c1"># affiche Maitre Jedi</span>
+</code></pre></div>
+
+</details>
+<h3 id="modifier_un_caractere">Modifier un caractère<a class="headerlink" href="#modifier_un_caractere" title="Permanent link"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Modifier <strong>un</strong> caractère</p>
+<p>On souhaite modifier un caractère d'une chaîne. Par exemple, on souhaite corriger <code>chebal</code>.</p>
+<div class = "Center_seul">
+
+<p><code>chaîne :</code>c<code>h</code>e<code>b</code>a<code>l</code>
+<code>:-:</code>:-:<code>:-:</code>:-:<code>:-:</code>:-:<code>:-:</code>
+<code>Indice :</code>0<code>1</code>2<code>3</code>4<code>5</code></p>
+</div>
+
+<p>Il faut alors <a href="#concat">concaténer</a> les chaînes suivantes :</p>
+<ul>
+<li>la tranche du début jusqu'au caractère à remplacer</li>
+<li>le caractère de remplacement</li>
+<li>la tranche commençant <strong>après</strong> le caractère à remplacer</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;chebal&quot;</span>
+<span class="n">mot2</span> <span class="o">=</span> <span class="n">mot</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;v&quot;</span> <span class="o">+</span> <span class="n">mot</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span> <span class="c1"># voyez la différence avec l&#39;insertion de la méthode précédente</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot2</span><span class="p">)</span> <span class="c1"># affiche cheval !</span>
+</code></pre></div>
+
+</div>
+<h3 id="creer_une_chaine">Créer une chaîne<a class="headerlink" href="#creer_une_chaine" title="Permanent link"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Créer une chaîne de caractères</p>
+<p>Il suffit de commencer avec une chaîne vide <code>""</code> et d'accumuler les chaînes de caractères voulues.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot_cache</span><span class="o">=</span><span class="s2">&quot;Saebccrdeetf&quot;</span>
+<span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot_cache</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">idx</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># On ne prend ques les indices pairs</span>
+        <span class="n">mot</span> <span class="o">=</span> <span class="n">mot</span> <span class="o">+</span> <span class="n">mot_cache</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>  <span class="c1"># On accumule les caractères à la fin (à droite)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="c1"># affiche Secret</span>
+</code></pre></div>
+
+</div>
+<details class="- tip"><summary>Accumuler au début</summary><p>Il est possible d'accumuler au début (à gauche)</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot_cache</span><span class="o">=</span><span class="s2">&quot;Saebccrdeetf&quot;</span>
+<span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot_cache</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">idx</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># On ne prend ques les indices pairs</span>
+        <span class="n">mot</span> <span class="o">=</span> <span class="n">mot_cache</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">+</span> <span class="n">mot</span>  <span class="c1"># On accumule les caractères à la fin (à droite)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="c1"># affiche terceS</span>
+</code></pre></div>
+
+</details>
+<h2 id="diverses_methodes_autour_des_str">Diverses méthodes autour des str<a class="headerlink" href="#diverses_methodes_autour_des_str" title="Permanent link"></a></h2>
+<div class="admonition - tip">
+<p class="admonition-title">A apprendre en faisant les exercices</p>
+<ul>
+<li><code>''</code> ou <code>""</code> (sans espace) : la chaîne vide.</li>
+<li>les caractères spéciaux : <code>\n</code> pour le retour à la ligne, <code>\t</code> pour une tabulation</li>
+<li><code>'rrr' in C</code> : retourne <code>True</code> si <code>'rrr'</code> est dans <code>C</code>, <code>False</code> sinon (cf <a href="AFFAIRE">les booléens</a> ).</li>
+<li><code>C.index(x)</code> : retourne l'indice de l'élément <code>x</code> (si il est dans <code>C</code>, sinon il y a un message d'erreur)</li>
+<li><code>C.find(x)</code>: retourne l'indice de l'élément <code>x</code> (si il est dans <code>C</code>, sinon il retourne -1)</li>
+<li><code>C.count(x)</code> : retourne le nombre d’occurrences  de l'élément <code>x</code>. </li>
+<li><code>C1 == C2</code> : retourne <code>True</code> si <code>C1</code> et <code>C2</code> sont identiques, <code>False</code> sinon. \textbf{Attention à la casse (majuscule, minuscule) !}</li>
+</ul>
+</div>
+<h2 id="exercice_a_maitriser">Exercice à maitriser<a class="headerlink" href="#exercice_a_maitriser" title="Permanent link"></a></h2>
+<details class="- question"><summary>Exercice</summary><p>Demander un prénom et un age et dire bonjour à l'utilisateur en lui donnantson age.</p>
+<p>Pour une personne de 20 ans qui s'appelle Luke, l'affichage attendu est <code>Bonjour Luke. Vous avez 20 ans.</code></p>
+<details class="- done"><summary>Réponse</summary><div class="highlight"><pre><span></span><code><span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Votre nom ? &quot;</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Votre age ? &quot;</span><span class="p">))</span>
+<span class="n">reponse</span> <span class="o">=</span> <span class="s2">&quot;Bonjour &quot;</span> <span class="o">+</span> <span class="n">nom</span> <span class="o">+</span> <span class="s2">&quot;. Vous avez &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; ans.&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reponse</span><span class="p">)</span>
+</code></pre></div>
+
+</details>
+</details>
+<details class="- question"><summary>Exercice</summary><p>A l'aide des taranches, compléter le programme suivant pour obtenir une chaîne où l'alphabet aura été remis dans le bonne ordre.</p>
+<div class="highlight"><pre><span></span><code><span class="n">melange</span> <span class="o">=</span> <span class="s2">&quot;QRSTABCDELMNUVFGHIJKWXYZOP&quot;</span>
+<span class="n">alphabet</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># compléter avec des tranches</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alphabet</span><span class="p">)</span> <span class="c1"># affiche ABCEFGHIJKLMNOPQRSTUVWXYZ</span>
+</code></pre></div>
+
+<details class="- done"><summary>Réponse</summary><div class="highlight"><pre><span></span><code><span class="n">melange</span> <span class="o">=</span> <span class="s2">&quot;QRSTABCDELMNUVFGHIJKWXYZOP&quot;</span>
+<span class="n">alphabet</span> <span class="o">=</span> <span class="n">melange</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">9</span><span class="p">]</span> <span class="o">+</span> <span class="n">melange</span><span class="p">[</span><span class="mi">14</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span> <span class="o">+</span> <span class="n">melange</span><span class="p">[</span><span class="mi">9</span><span class="p">:</span><span class="mi">12</span><span class="p">]</span> <span class="o">+</span> <span class="n">melange</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="n">melange</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">melange</span><span class="p">[</span><span class="mi">12</span><span class="p">:</span><span class="mi">14</span><span class="p">]</span> <span class="o">+</span> <span class="n">melange</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">24</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alphabet</span><span class="p">)</span> <span class="c1"># affiche ABCEFGHIJKLMNOPQRSTUVWXYZ</span>
+</code></pre></div>
+
+</details>
+</details>
+<details class="- question"><summary>Exercice</summary><p><code>mots="La revolution informatique"</code>. En utilisant les méthodes précédentes :</p>
+<ol>
+<li>
+<p>Donner le code qui affiche :</p>
+<ol>
+<li>le nombre de caractère de <code>mots</code>;</li>
+<li>True si le mot <code>"la"</code> est dans <code>mots</code>, <code>False</code> sinon.</li>
+<li>la position de la première lettre <code>r</code> ; Et (plus difficile) la seconde ;</li>
+</ol>
+</li>
+<li>
+<p>Donner le code :</p>
+<ol>
+<li>qui affiche les deux premiers caractères de <code>mots</code></li>
+<li>qui extrait le mot "revolution" de <code>mots</code></li>
+<li>qui teste le résultat précédent : c'est-à-dire qui renvoie <code>'True'</code> si le code a bien trouvé le mot <code>revolution</code> (<code>False</code> sinon)</li>
+<li>en utilisant des tranches de la chaîne de caractères \verb<code>mots</code>, affecter à la variable <code>modif</code> la chaîne de caractère <code>"informatique revolution La"</code>.</li>
+</ol>
+</li>
+</ol>
+<details class="- done"><summary>Réponse</summary><div class="highlight"><pre><span></span><code><span class="c1"># Quesiton 1.a.</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mots</span><span class="p">))</span>
+<span class="c1"># Quesiton 1.b.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;la&#39;</span> <span class="ow">in</span> <span class="n">mots</span><span class="p">)</span>
+<span class="c1"># Question 1.c.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mots</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">))</span>
+<span class="n">premier</span> <span class="o">=</span> <span class="n">mots</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">premier</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">))</span>
+<span class="c1"># Question 2.a.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mots</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span> 
+<span class="c1">#ou</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mots</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1"># Question 2.b.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mots</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">13</span><span class="p">])</span>
+<span class="c1"># Question 2.c.</span>
+<span class="n">essai</span> <span class="o">=</span> <span class="n">mots</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">13</span><span class="p">]</span>
+<span class="n">motCherche</span> <span class="o">=</span> <span class="s2">&quot;revolution&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">essai</span> <span class="o">==</span> <span class="n">motCherche</span><span class="p">)</span>
+<span class="c1"># Question 2.d.</span>
+<span class="n">modif</span> <span class="o">=</span> <span class="n">mots</span><span class="p">[</span><span class="mi">14</span><span class="p">:]</span> <span class="o">+</span> <span class="n">mots</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">14</span><span class="p">]</span> <span class="o">+</span> <span class="n">mots</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">modif</span><span class="p">)</span>
+</code></pre></div>
+
+</details>
+</details>
+<details class="- question"><summary>Exercice</summary><p>Pour un spectacle, le tarif normal est de 25 &#8364; et le tarif réduit est de 18 &#8364;. Écrire un programme qui demande à l'utilisateur le nombre de place total, puis le nombre de place à tarif réduit. Afficher alors le prix à payer.</p>
+<p>Par exemple, pour 10 places dont 3 au tarif réduit, il faut afficher :</p>
+<p><code>Le coût total est de 229 euros.</code></p>
+<details class="- done"><summary>Réponse</summary><div class="highlight"><pre><span></span><code><span class="n">nbPlace</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Nombre de place ? &quot;</span><span class="p">))</span>
+<span class="n">nbReduit</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Nombre de tarif réduit ? &quot;</span><span class="p">))</span>
+<span class="n">cout</span><span class="o">=</span><span class="n">nbReduit</span><span class="o">*</span><span class="mi">18</span><span class="o">+</span><span class="p">(</span><span class="n">nbPlace</span><span class="o">-</span><span class="n">nbReduit</span><span class="p">)</span><span class="o">*</span><span class="mi">25</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le coût total est de&quot;</span><span class="p">,</span><span class="n">cout</span><span class="p">,</span><span class="s2">&quot;euros&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le coût total est de &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">cout</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; euros&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le coût total est de </span><span class="si">{}</span><span class="s2"> euros&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cout</span><span class="p">))</span>
+</code></pre></div>
+
+</details>
+</details>
+<details class="- question"><summary>Exercice</summary><p>Pour cette exercice, <strong>revoir le cours sur <code>if</code> et <code>elif</code></strong>.</p>
+<p>Écrire un programme qui compte le nombre de voyelles dans la phrase : </p>
+<p>&laquo; Cela n'a aucun sens d'embaucher des gens intelligents et de leur dire quoi faire; Nous embauchons des gens intelligents pour qu'ils puissent nous dire quoi faire.&raquo; <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<div class="highlight"><pre><span></span><code><span class="n">phrase</span> <span class="o">=</span> <span class="s2">&quot;Cela n&#39;a aucun sens d&#39;embaucher des gens intelligents et de leur dire quoi faire; Nous embauchons des gens intelligents pour qu&#39;ils puissent nous dire quoi faire.&quot;</span>
+<span class="c1"># A COMPLETER</span>
+</code></pre></div>
+
+<details class="- done"><summary>Réponse</summary><div class="highlight"><pre><span></span><code><span class="n">phrase</span> <span class="o">=</span> <span class="s2">&quot;Cela n&#39;a aucun sens d&#39;embaucher des gens intelligents et de leur dire quoi faire; Nous embauchons des gens intelligents pour qu&#39;ils puissent nous dire quoi faire.&quot;</span>
+<span class="n">compt</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">phrase</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">elt</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
+        <span class="n">compt</span> <span class="o">=</span> <span class="n">compt</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">elt</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span>
+        <span class="n">compt</span> <span class="o">=</span> <span class="n">compt</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">elt</span> <span class="o">==</span> <span class="s1">&#39;i&#39;</span><span class="p">:</span>
+        <span class="n">compt</span> <span class="o">=</span> <span class="n">compt</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">elt</span> <span class="o">==</span> <span class="s1">&#39;o&#39;</span><span class="p">:</span>
+        <span class="n">compt</span> <span class="o">=</span> <span class="n">compt</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">elt</span> <span class="o">==</span> <span class="s1">&#39;u&#39;</span><span class="p">:</span>
+        <span class="n">compt</span> <span class="o">=</span> <span class="n">compt</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">compt</span><span class="p">)</span>
+</code></pre></div>
+
+</details>
+</details>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Steve Jobs&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="in_out.html" title="Méthodes de base : print/input" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Précédent
+                </span>
+                Méthodes de base : print/input
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="if_for_while.html" title="If et les boucles" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Suivant
+                </span>
+                If et les boucles
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: {"tabs": false},
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
