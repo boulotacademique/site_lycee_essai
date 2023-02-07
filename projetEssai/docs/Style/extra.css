@@ -1,136 +1,177 @@
-body{
-	/*border : 5px solid black;*/
+@media screen {
+
+	/*body{
+		/*border : 5px solid black;
+	}*/
+
+	/*nav{
+		border : 1px solid blue;
+	}*/
+
+	/*.md-sidebar{
+		border : 1px solid red;
+		width : 12.1rem;
+	}
+	*/
+	/*.md-content{
+		/*max-width : none;
+		width : 100%;
+		margin-right : 0;
+		margin-left :0;
+	}
+
+	article{
+		font-size : 5em;
+		color : red;
+		
+	}*/
+
+	.md-typeset * {
+		font-size : 0.8rem;
+	}
+
+	p{
+		font-size : 0.8rem;
+	}
+
+	.md-grid{
+		/*border : 1px solid blue;*/
+		max-width : 95%;
+	}
+
+	.admonition.warning{
+		margin-left : 5%;
+		margin-right : 5%;
+	}
+
+	/*
+	main{
+		border : 1px solid orange;
+		width : 100%;
+	}*/
+
+	.Source a, .Source i {
+		font-size : 0.6rem;
+	}
+
+	.Source{
+		margin-left : 70%;
+		width : 30%;
+		text-align : right;
+	}
+
+	h1{
+		font-size:2rem !important;
+		color:rgb(255, 255, 255) !important;
+		background-color:#8bc34b;
+		border: 5px ridge #79aa42;
+		border-radius:10px;
+		text-align:center;
+		font-weight:bold;
+	}
+
+	h2{
+		font-size:1.5rem!important;
+		color:white!important;
+		background-image:linear-gradient(to right, #8bc34b , white);
+		/*background-color:#42bef6;*/
+		border: 1px ridge #79aa42;
+		border-radius:10px;
+		/*text-align:center;*/
+	}
+
+
+	h3{
+		font-size:1rem!important;
+		color:#009d65!important;
+		/*background-color:yellow;*/
+		border-bottom: ridge #009d65;
+		border-left: ridge #009d65;
+		border-radius:10px;
+		line-height: 1.5em!important;
+		/*text-align:center;*/
+		/*margin:1rem auto!important;*/
+		width : 30%;
+	}
+
+	.ImCentre.InLine{
+		vertical-align : middle;
+		display : inline;
+	}
+
+	.VCenter{
+		/*border : 2px solid black;*/
+		vertical-align : middle;
+	}
+
+	.Aligne_dte{
+		text-align: right;
+	}
+
+	.Center {
+		margin-right : auto;
+		margin-left : 35%;
+		border : 1px solid black;
+	}
+
+	.Center_seul {
+		margin-right : auto;
+		margin-left : auto;
+		width : 70%;
+	}
+
+	.Center_txt {
+		text-align: center;
+	}
+
+	.Cote_gauche{
+		display: inline-block;
+		width : 48%;
+		/*border: 2px blue dashed;*/
+	}
+
+	.Cote_droit{
+		display: inline-block;
+		width : 48%;
+		/*border: 2px red solid;*/
+	}
+
+
+	.Vignette{
+		/*border : 2px solid black;*/
+		width : 15%;
+	}
+
+	.VignetteMed{
+		/*border : 2px solid black;*/
+		/*margin-right : 35%;
+		margin-left : 35%;*/
+		width : 30%;
+	}
+
+	.AvecBordure{
+		border : 1px solid black;
+		border-collapse : collapse;
+		margin : auto;
+	}
+
+	.AvecBordure td{
+		border : 1px solid black;
+		min-width : 10%;
+		text-align : center;
+		vertical-align : middle;
+	}
+
+	.Gras{
+		font-weight: bold ;
+	}
+
+	code{
+		margin-right: auto!important;
+		margin-left: auto!important;
+		width : 70%!important;
+	}
 }
-
-/*nav{
-	border : 1px solid blue;
-}*/
-
-/*.md-sidebar{
-	border : 1px solid red;
-	width : 12.1rem;
-}
-*/
-.md-content{
-	/*max-width : none;
-	width : 100%;
-	margin-right : 0;
-	margin-left :0;*/
-}
-
-/*article{
-	font-size : 5em;
-	color : red;
-	
-}*/
-
-.md-typeset * {
-	font-size : 0.8rem;
-}
-
-p{
-	font-size : 0.8rem;
-}
-
-.md-grid{
-	/*border : 1px solid blue;*/
-	max-width : 95%;
-}
-
-.admonition.warning{
-	margin-left : 5%;
-	margin-right : 5%;
-}
-
-/*
-main{
-	border : 1px solid orange;
-	width : 100%;
-}*/
-
-.Source a, .Source i {
-	font-size : 0.6rem;
-}
-
-.Source{
-	margin-left : 70%;
-	width : 30%;
-	text-align : right;
-}
-
-h1{
-	font-size:2rem!important;
-	color:white!important;
-	background-color:#145900;
-	border: 5px ridge #145900;
-	border-radius:10px;
-	text-align:center;
-	font-weight:bold;
-}
-
-h2{
-	font-size:1.5rem!important;
-	color:white!important;
-	background-image:linear-gradient(to right, #145900 , white);
-	/*background-color:#42bef6;*/
-	border: 5px ridge #145900;
-	border-radius:10px;
-	/*text-align:center;*/
-}
-
-
-h3{
-	font-size:1rem!important;
-	color:#009d65!important;
-	/*background-color:yellow;*/
-	border-bottom: ridge #009d65;
-	border-left: ridge #009d65;
-	border-radius:10px;
-	/*text-align:center;*/
-    margin:1rem auto!important;
-}
-
-.ImCentre.InLine{
-	vertical-align : middle;
-	display : inline;
-}
-
-.VCenter{
-	/*border : 2px solid black;*/
-	vertical-align : middle;
-}
-
-.Center {
-	margin-right : auto;
-	margin-left : 35%;
-	border : 1px solid black;
-}
-
-.Vignette{
-	/*border : 2px solid black;*/
-	width : 15%;
-}
-
-.VignetteMed{
-	/*border : 2px solid black;*/
-	/*margin-right : 35%;
-	margin-left : 35%;*/
-	width : 30%;
-}
-
-.AvecBordure{
-	border : 1px solid black;
-	border-collapse : collapse;
-	margin : auto;
-}
-
-.AvecBordure td{
-	border : 1px solid black;
-	min-width : 10%;
-	text-align : center;
-	vertical-align : middle;
-} 
-
 /*
 @media print {
 

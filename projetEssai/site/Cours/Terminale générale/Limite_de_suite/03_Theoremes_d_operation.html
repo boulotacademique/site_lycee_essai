@@ -1,0 +1,1203 @@
+
+
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Lycée Mimard">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.1">
+    
+    
+      
+        <title>Limite et opérations - Les maths à Mimard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.71dfd922.min.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.616af814.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#8bc34a">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../Style/extra.css">
+    
+      <link rel="stylesheet" href="../../../Style/print.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-green" data-md-color-accent="amber">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#theoremes_doperations" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Les maths à Mimard" class="md-header-nav__button md-logo" aria-label="Les maths à Mimard">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Les maths à Mimard
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Limite et opérations
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../index.html" class="md-tabs__link">
+        Accueil
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Premi%C3%A8re%20NSI/Pr%C3%A9sentation/c01.html" class="md-tabs__link">
+          Première NSI
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../index_term_G.html" class="md-tabs__link md-tabs__link--active">
+          Terminale générale
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Labo%20de%20math/c01.html" class="md-tabs__link">
+          Labo de math
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Les maths à Mimard" class="md-nav__button md-logo" aria-label="Les maths à Mimard">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Les maths à Mimard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../index.html" title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Seconde/c01.html" title="Seconde" class="md-nav__link">
+      Seconde
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Première NSI
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Première NSI" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Première NSI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Premi%C3%A8re%20NSI/Pr%C3%A9sentation/c01.html" title="Présentation" class="md-nav__link">
+      Présentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Les bases" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Premi%C3%A8re%20NSI/Python/Les%20bases/ortho.html" title="Bien écrire en python" class="md-nav__link">
+      Bien écrire en python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Premi%C3%A8re%20NSI/Python/Les%20bases/in_out.html" title="Méthodes de base : print/input" class="md-nav__link">
+      Méthodes de base : print/input
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Premi%C3%A8re%20NSI/Python/Les%20bases/str.html" title="Méthodes de base : chaine de caractères" class="md-nav__link">
+      Méthodes de base : chaine de caractères
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Premi%C3%A8re%20NSI/Python/Les%20bases/for.html" title="La boucle for" class="md-nav__link">
+      La boucle for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Premi%C3%A8re%20NSI/Python/Les%20bases/if_for_while.html" title="If et les boucles" class="md-nav__link">
+      If et les boucles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Premi%C3%A8re%20NSI/Python/Les%20bases/list.html" title="Les listes" class="md-nav__link">
+      Les listes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Premi%C3%A8re%20STI2D/c01.html" title="Première STI2D" class="md-nav__link">
+      Première STI2D
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Terminale%20STI2D/c01.html" title="Terminale STI2D" class="md-nav__link">
+      Terminale STI2D
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Premi%C3%A8re%20g%C3%A9n%C3%A9rale/c01.html" title="Première générale" class="md-nav__link">
+      Première générale
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      Terminale générale
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terminale générale" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terminale générale
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../index_term_G.html" title="Accueil TGEN" class="md-nav__link">
+      Accueil TGEN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      Dérivation, convexité et primitive
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dérivation, convexité et primitive" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Dérivation, convexité et primitive
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-2-1" type="checkbox" id="nav-7-2-1">
+    
+    <label class="md-nav__link" for="nav-7-2-1">
+      Dérivation : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dérivation : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Dérivation : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/01_deriv_base_tgte.html" title="Dérivation et tangente" class="md-nav__link">
+      Dérivation et tangente
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/02_deriv_base_formule.html" title="Dérivation et formule" class="md-nav__link">
+      Dérivation et formule
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/03_deriv_utilis.html" title="Utilisation de la dérivée" class="md-nav__link">
+      Utilisation de la dérivée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/04_deriv_composee.html" title="Composée de fonctions" class="md-nav__link">
+      Composée de fonctions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Suite et récurrence
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Suite et récurrence" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Suite et récurrence
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Suites_et_recurrence/01_Rappels_sur_les_suites.html" title="Rappel sur les suites" class="md-nav__link">
+      Rappel sur les suites
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Suites_et_recurrence/02_Suites_et_python.html" title="Suites et python" class="md-nav__link">
+      Suites et python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Suites_et_recurrence/03_Suite_et_sens_de_variations.html" title="Suites et sens de variations" class="md-nav__link">
+      Suites et sens de variations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Suites_et_recurrence/04_Suites_aritmetiques.html" title="Suites arithmétiques" class="md-nav__link">
+      Suites arithmétiques
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Suites_et_recurrence/05_Suites_geometrique.html" title="Suites géométriques" class="md-nav__link">
+      Suites géométriques
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Suites_et_recurrence/06_Raisonnement_par_recurrence.html" title="Raisonnement par récurrence" class="md-nav__link">
+      Raisonnement par récurrence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Suites_et_recurrence/07_majoree_minoree_bornee.html" title="Suite majorée, minorée, bornée" class="md-nav__link">
+      Suite majorée, minorée, bornée
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-4" type="checkbox" id="nav-7-4" checked>
+    
+    <label class="md-nav__link" for="nav-7-4">
+      Limite de suite
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de suite" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de suite
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="01_Limite_d_une_suite.html" title="Limite d'une suite" class="md-nav__link">
+      Limite d'une suite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="02_Limite_de_la_suite_qn.html" title="Limite de la suite $q^n$" class="md-nav__link">
+      Limite de la suite $q^n$
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Limite et opérations
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="03_Theoremes_d_operation.html" title="Limite et opérations" class="md-nav__link md-nav__link--active">
+      Limite et opérations
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#limite_dune_somme" class="md-nav__link">
+    Limite d'une somme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limite_dun_produit" class="md-nav__link">
+    Limite d'un produit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limite_de_linverse" class="md-nav__link">
+    Limite de l'inverse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limite_dun_quotient" class="md-nav__link">
+    Limite d'un quotient
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Labo de math
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Labo de math" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Labo de math
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Labo%20de%20math/c01.html" title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Labo%20de%20math/Liaison_lyc%C3%A9e_sup/sup%C3%A9rieur.html" title="Liaison lycée/supérieur" class="md-nav__link">
+      Liaison lycée/supérieur
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#limite_dune_somme" class="md-nav__link">
+    Limite d'une somme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limite_dun_produit" class="md-nav__link">
+    Limite d'un produit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limite_de_linverse" class="md-nav__link">
+    Limite de l'inverse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limite_dun_quotient" class="md-nav__link">
+    Limite d'un quotient
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="theoremes_doperations">Théorèmes d'opérations<a class="headerlink" href="#theoremes_doperations" title="Permanent link"></a></h1>
+<p>Dans tout ce qui suit, <span class="arithmatex">\(\ell\)</span> et <span class="arithmatex">\(\ell'\)</span> désignent deux nombres réels.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>La notation "FI" désigne une Forme Indéterminée, c'est à dire qu'on ne sait pas calculer par une opération élémentaire.</p>
+</div>
+<h2 id="limite_dune_somme">Limite d'une somme<a class="headerlink" href="#limite_dune_somme" title="Permanent link"></a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Théorème</p>
+<p><table class="AvecBordure"> 
+<tr>
+ <td>Si <span class="arithmatex">\(\lim\limits_{n \to +\infty}~u_n=\cdots\)</span> </td><td> <span class="arithmatex">\(\ell\)</span> </td><td> <span class="arithmatex">\(\ell\)</span> </td><td> <span class="arithmatex">\(\ell\)</span> </td><td> <span class="arithmatex">\(+\infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span> </td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\text{et si }\lim\limits_{n \to +\infty} v_n=\cdots\)</span> </td><td> <span class="arithmatex">\(\ell'\)</span> </td><td> <span class="arithmatex">\(+\infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(+\infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span> </td><td> <span class="arithmatex">\(+\infty\)</span> </td>
+</tr>
+<tr>
+<td> alors <span class="arithmatex">\(\lim\limits_{n \to +\infty}~(u_n+v_n)=\cdots\)</span> </td><td> <span class="arithmatex">\(\ell+\ell'\)</span> </td><td> <span class="arithmatex">\(+\infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span> </td><td> <span class="arithmatex">\(+\infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span> </td><td> On ne peut pas conclure : <span class="arithmatex">\(FI\)</span> </td>
+</tr> 
+</table></p>
+</div>
+<details class="question"><summary>Exercice</summary><p>Calculer les  limites des suites <span class="arithmatex">\((a_n)\)</span> , <span class="arithmatex">\((b_n)\)</span> et <span class="arithmatex">\((c_n)\)</span> définies par <span class="arithmatex">\(a_n=n^2+4n+1\)</span> ,~<span class="arithmatex">\(b_n=\dfrac1n-n^2\)</span> et <span class="arithmatex">\(c_n=n^3-n^2\)</span> </p>
+<ol>
+<li><span class="arithmatex">\(a_n=n^2+4n+1\)</span></li>
+</ol>
+<details class="done"><summary>Solution</summary><div class="arithmatex">\[
+\left.
+\begin{array}{l}
+\lim\limits_{n \to +\infty}~n^2 = +\infty \\
+\lim\limits_{n\to +\infty}~n = +\infty \quad \text{et} \lim\limits_{n\to +\infty}~4n=+\infty \quad\text{et} \lim\limits_{n\to +\infty}~4n+1 &amp; = &amp; +\infty
+\end{array}
+\right\}
+\quad \text{par somme} \quad \lim\limits_{n \to +\infty}~\left(n^2+4n+1\right)=+\infty.
+\]</div>
+</details>
+<ol>
+<li><span class="arithmatex">\(b_n=\dfrac1n-n^2\)</span> </li>
+</ol>
+<details class="done"><summary>Solution</summary><div class="arithmatex">\[
+\left.
+\begin{array}{l}
+\lim\limits_{n \to +\infty}~\dfrac{1}{n}&amp;=&amp;0\\
+\lim\limits_{n \to +\infty}~-n^2&amp;=&amp;-\infty 
+\end{array}
+\right\}
+\quad \text{par somme} \quad \lim\limits_{n \to +\infty}\left(\dfrac{1}{n}-n^2\right)=-\infty
+\]</div>
+</details>
+<ol>
+<li><span class="arithmatex">\(c_n=n^3-n^2\)</span></li>
+</ol>
+<details class="done"><summary>Solution</summary><div class="arithmatex">\[
+\left.
+\begin{array}{l}
+\lim\limits_{n\to +\infty}~n^3&amp;=&amp;+\infty\\
+\lim\limits_{n \to +\infty}~-n^3&amp;=&amp;-\infty
+\end{array}
+\right\}
+\quad \lim\limits_{x \to -\infty}\left(n^3-n^2\right)$ \quad\text{ est une forme indeterminee du type }\infty-\infty.
+\]</div>
+</details>
+</details>
+<h2 id="limite_dun_produit">Limite d'un produit<a class="headerlink" href="#limite_dun_produit" title="Permanent link"></a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Théorème</p>
+<p><table class="AvecBordure"> 
+<tr>
+ <td>Si <span class="arithmatex">\(\lim\limits_{n \to +\infty}~u_n=\cdots\)</span> </td><td> <span class="arithmatex">\(\ell\)</span> </td><td> <span class="arithmatex">\(\ell&gt;0\)</span> </td><td> <span class="arithmatex">\(\ell&gt;0\)</span></td><td><span class="arithmatex">\(\ell&lt;0\)</span></td><td><span class="arithmatex">\(\ell&lt;0\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(0\)</span></td><td>0</td>
+</tr>
+<tr>
+<td> et si <span class="arithmatex">\(\lim\limits_{n \to +\infty}~v_n=\cdots\)</span></td><td><span class="arithmatex">\(\ell'\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td>
+</tr>
+<tr>
+<td>alors <span class="arithmatex">\(\lim\limits_{n \to +\infty}~(u_n\times v_n)=\cdots\)</span></td><td><span class="arithmatex">\(\ell\times\ell'\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(FI\)</span></td><td><span class="arithmatex">\(FI\)</span></td>
+</tr>
+<tr>
+<td colspan="2"> </td><td colspan="4"> Règle des signes </td><td colspan="3"> Règle des signes </td><td> </td>
+</tr>
+</table></p>
+</div>
+<details class="question"><summary>Exercice</summary><p>En utilisant les suites de l'exemple 3 , calculer les limites des suites </p>
+<ol>
+<li><span class="arithmatex">\(p_n=a_n \times b_n\)</span> </li>
+<li><span class="arithmatex">\(c_n\)</span>.</li>
+</ol>
+<details class="done"><summary>Solution</summary><ol>
+<li>
+<p>Pour <span class="arithmatex">\(p_n\)</span></p>
+<div class="arithmatex">\[
+\left.
+\begin{array}{l}
+\lim\limits_{n \to +\infty}~a_n&amp;=&amp;+\infty\\
+\lim\limits_{n \to +\infty}~b_n&amp;=&amp;-\infty
+\end{array}
+\right\}
+\quad \text{par produit } \quad \lim\limits_{n\to +\infty}p_n=-\infty
+\]</div>
+</li>
+<li>
+<p>On a une forme indéterminée <span class="arithmatex">\((\infty-\infty)\)</span>.</p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Méthode</p>
+<p>On factorise par le terme prépondérant c'est-à-dire celui qui tend le plus vite vers <span class="arithmatex">\(+\infty\)</span>.</p>
+</div>
+<p><span class="arithmatex">\(c_n=n^3-n^2=n^3(1-\dfrac1n)\)</span></p>
+<div class="arithmatex">\[
+\left.
+\begin{array}{l}
+\lim\limits_{n \to +\infty}~n^3 =  +\infty\\        
+\lim\limits_{n\to +\infty}~1=1 \quad \text{et} \lim\limits_{n\to +\infty}~-\dfrac1n=0 \quad\text{et par somme } \lim\limits_{n\to +\infty}~1-\dfrac1n &amp; =&amp; 1
+\end{array}
+\right\}
+\quad \text{par produit } \quad \lim\limits_{n \to +\infty}~c_n=+\infty.
+\]</div>
+</details>
+</details>
+<h2 id="limite_de_linverse">Limite de l'inverse<a class="headerlink" href="#limite_de_linverse" title="Permanent link"></a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Théorème</p>
+<p><table class="AvecBordure"> 
+<tr>
+ <td>Si  <span class="arithmatex">\(\lim\limits_{n \to +\infty}~v_n\)</span>  = </td><td> <span class="arithmatex">\(\ell\neq  0\)</span></td><td><span class="arithmatex">\(0\)</span>  avec <span class="arithmatex">\(v_n&gt;0\)</span> à partir d'un certain rang</td><td><span class="arithmatex">\(0\)</span>  avec <span class="arithmatex">\(v_n&lt;0\)</span> à partir d'un certain rang</td><td><span class="arithmatex">\(+\infty\)</span> ou <span class="arithmatex">\(-\infty\)</span></td>
+</tr>
+<tr>
+<td>alors  <span class="arithmatex">\(\lim\limits_{n \to +\infty }~\dfrac{1}{v_n}\)</span>=</td><td><span class="arithmatex">\(\dfrac{1}{\ell}\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(0\)</span></td>
+</tr>
+</table></p>
+</div>
+<h2 id="limite_dun_quotient">Limite d'un quotient<a class="headerlink" href="#limite_dun_quotient" title="Permanent link"></a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Méthode</p>
+<p>Pour chercher la limite d'un quotient <span class="arithmatex">\(\dfrac{u_n}{v_n}\)</span> , on l'écrit comme le produit <span class="arithmatex">\(u_n\times \dfrac{1}{v_n}\)</span></p>
+</div>
+<p>\begin{exo}
+  Déterminer les limites des suites <span class="arithmatex">\((u_n)\)</span> , <span class="arithmatex">\((v_n)\)</span> et <span class="arithmatex">\((w_n)\)</span> définies par $ u_n=\dfrac{2}{\left(1+\dfrac{1}{\sqrt{n}}\right)}$ , <span class="arithmatex">\(v_n=\dfrac{n^2+3n}{3n^2+4}\)</span> et <span class="arithmatex">\(w_n=\dfrac{n+3}{n^2-2}\)</span>
+   \begin{enumerate}
+  \item $ u_n=<span class="arithmatex">\(\textcolor{reponse}{\)</span>\dfrac{2}{\left(1+\dfrac{1}{\sqrt{n}}\right)}=2\times\dfrac{1}{\left(1+\dfrac{1}{\sqrt{n}}\right)}$\
+  <span class="arithmatex">\(\Lim{\lim\limits_{n \to +\infty}~2  =  2}{\lim\limits_{n\to +\infty}~\left(\dfrac{1}{\sqrt{n}}\right)=0 \quad \text{et} \lim\limits_{n\to +\infty}~\left(1+\dfrac{1}{\sqrt{n}}\right)=1\quad \text{d'où} \lim\limits_{n\to +\infty}~\dfrac{1}{\left(1+\dfrac{1}{\sqrt{n}}\right)}&amp; =&amp; 1 } \quad \text{par produit} \quad \lim\limits_{n \to +\infty}~u_n=2\)</span>.}
+    \vspace{2cm}  </p>
+<p>\item <span class="arithmatex">\(v_n=\)</span>\textcolor{reponse}{<span class="arithmatex">\(\dfrac{n^2+3n}{3n^2+4}=(n^2+3n)\times \dfrac{1}{3n^2+4}\)</span> \
+  <span class="arithmatex">\(\Lim{\lim\limits_{n \to +\infty}~n^2+3n = +\infty}{\lim\limits_{n\to +\infty}~3n^2+4=+\infty \quad \text{et}\lim\limits_{n\to +\infty}~\dfrac{1}{(3n^2+4)}&amp; =&amp; 0}\)</span> \quad \text{par produit}  on a  une forme indéterminée<br />
+ du type \og <span class="arithmatex">\(o\times \infty\)</span> \fg{}  \}</p>
+<p>\begin{methode}
+On factorise par le terme prépondérant au numérateur et le terme prépondérant au dénominateur
+\end{methode}
+\textcolor{reponse}{\ 
+<span class="arithmatex">\(v_n=\dfrac{n^2+3n}{3n^2+4}=\dfrac{n^2(1+\dfrac3n)}{n^2(3+\dfrac{4}{n^2})}=\dfrac{1+\dfrac3n}{3+\dfrac{4}{n^2}}=\left(1+\dfrac3n \right)\times \dfrac{1}{{3+\dfrac{4}{n^2}}}\)</span>\
+ <span class="arithmatex">\(\Lim{\lim\limits_{n \to +\infty}~1+\dfrac3n=1}{\lim\limits_{n\to +\infty}~3+\dfrac{4}{n^2}=3\quad \text{d'où} \lim\limits_{n\to +\infty}~\dfrac{1}{\left(3+\dfrac{4}{n^2}\right)}=\dfrac13} \quad \text{par produit} \quad \lim\limits_{n \to +\infty}~v_n=\dfrac13\)</span>.\
+\textbf{On ne peut pas conclure pour un quotient par les théorèmes d'opérations quand les suites (<span class="arithmatex">\(u_n\)</span>) et (<span class="arithmatex">\(v_n\)</span>) ont toutes les deux une limite infinie ou pour limite 0 } \cad si l'on a <span class="arithmatex">\(" \dfrac{\infty}{\infty}"\)</span> ou <span class="arithmatex">\(" \dfrac{0}{0}"\)</span>}
+  \item  <span class="arithmatex">\(w_n=\dfrac{n+3}{n^2-2}\)</span>\
+  <span class="arithmatex">\(\Lim{\lim\limits_{n \to +\infty}~n+3={\color{reponse}+\infty}}{\lim\limits_{n\to +\infty}~n^2-2={\color{reponse}+\infty} }\)</span> \quad \text{par quotient}  on a  une forme indéterminée<br />
+ du type \textcolor{reponse}{\og <span class="arithmatex">\(\dfrac{\infty}{\infty}\)</span> \fg{}  \
+ $w_n=\dfrac{n+3}{n^2-2}=\dfrac{n(1+\dfrac3n)}{n^2(1-\dfrac{2}{n^2})}=\dfrac{1}{n}\times \left(1+\dfrac3n\right)\times \dfrac{1}{1-\dfrac{2}{n^2}} $\
+ <span class="arithmatex">\({\lim\limits_{n \to +\infty}~\dfrac1n=0} {\Lim{\lim\limits_{n \to +\infty}~1+\dfrac3n=1}{\lim\limits_{n\to +\infty}~1-\dfrac{2}{n^2}=1 \quad \text{d'où} \lim\limits_{n\to +\infty}~\dfrac{1}{\left(1-\dfrac{2}{n^2}\right)}=1} \text{ par produit } \lim\limits_{n \to +\infty}~w_n=0}\)</span>.\}</p>
+<p>\end{enumerate}   <br />
+ \end{exo}</p>
+<div class="arithmatex">\[\begin{methode}[En résumé]
+En résumé , il y a 4 formes indéterminées:$"\infty-\infty "$ $"0\times \infty"$ ,$" \dfrac{\infty}{\infty}"$ et $" \dfrac{0}{0}"$
+\end{methode}\]</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="02_Limite_de_la_suite_qn.html" title="Limite de la suite $q^n$" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Précédent
+                </span>
+                Limite de la suite $q^n$
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../../Labo%20de%20math/c01.html" title="Accueil" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Suivant
+                </span>
+                Accueil
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: {"tabs": false},
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
