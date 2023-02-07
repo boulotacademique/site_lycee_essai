@@ -1,6 +1,3 @@
-mot_cache="SeehccraeCt"
-mot = ""
-for idx in range(len(mot_cache)):
-    if idx%2 == 1: # On ne prend ques les indices impairs
-        mot = mot_cache[idx] + mot	# On accumule les caractères à la fin (à droite)
-print(mot) # affiche terceS
+nb_ligne = int(input("Nombre de lignes ? "))
+for co in range(nb_ligne):
+    print(" "*(nb_ligne - (co+1)) + "^"*(2*co+1) + " "*(nb_ligne - (co+1)))

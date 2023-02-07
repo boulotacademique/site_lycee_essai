@@ -54,9 +54,9 @@ print(3+5,"hello") # affiche 8 hello (notez l'espace !!), puis effectue un retou
 
 	De plus, ces arguments sont **toujours** de type ```int``` ! Ainis, si la variable ```liste``` contient une liste, {--```range(liste)```--} déclenche une erreur !
 
-!!! info "Exemple à retenir"
+!!! info "Exemple à retenir" 
 
-	Rque : afin d'avoir une vue pour ```range``` (cf [iterable](AFAIRE)), on le transforme en une liste !
+	<span id = "range">Rque</span> : afin d'avoir une vue pour ```range``` (cf [iterable](AFAIRE)), on le transforme en une liste !
 
 	- La fonction ```range``` avec **un** argument :
 

@@ -125,7 +125,7 @@ elif ... :
     
     ma_note = int(input("Votre note ? "))
     if est_mention_TB(ma_note) == True:
-        print("Félicitation pour voter mention TB!")
+        print("Félicitation pour votre mention TB!")
     ```
 
     </div>
@@ -139,7 +139,7 @@ elif ... :
     
     ma_note = int(input("Votre note ? "))
     if est_mention_TB(ma_note):
-        print("Félicitation pour voter mention TB!")
+        print("Félicitation pour votre mention TB!")
     ```
     </div>
 
