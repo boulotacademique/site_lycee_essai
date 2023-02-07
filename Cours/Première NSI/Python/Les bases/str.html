@@ -1084,8 +1084,36 @@
 <p>Dans une chaîne, chaque caractère est repéré par un indice !</p>
 <div class = "Center_seul">
 
-<p><code>chaîne :</code>B<code>o</code>n<code>j</code>o<code>u</code>r<code></code>!<code></code>:-:<code>:-:</code>:-:<code>:-:</code>:-:<code>:-:</code>:-:<code>:-:</code>:-:<code>:-:</code>
-<code>Indice :</code>0<code>1</code>2<code>3</code>4<code>5</code>6<code>7</code>8```</p>
+<table>
+<thead>
+<tr>
+<th align="center">chaîne :</th>
+<th align="center">B</th>
+<th align="center">o</th>
+<th align="center">n</th>
+<th align="center">j</th>
+<th align="center">o</th>
+<th align="center">u</th>
+<th align="center">r</th>
+<th align="center"></th>
+<th align="center">!</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Indice :</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+<td align="center">6</td>
+<td align="center">7</td>
+<td align="center">8</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 </div>
@@ -1219,8 +1247,28 @@ affiche</p>
 <p>On souhaite insérer une chaîne de caractères (éventuellement un caractère seul) dans une chaîne. Par exemple, on souhaite insérer <code>bon</code> entre le <code>n</code> et l'espace dans la chaîne suivante.</p>
 <div class = "Center_seul">
 
-<p><code>chaîne :</code>B<code>o</code>n<code></code>!<code></code>:-:<code>:-:</code>:-:<code>:-:</code>:-:<code>:-:</code>
-<code>Indice :</code>0<code>1</code>2<code>3</code>4```</p>
+<table>
+<thead>
+<tr>
+<th align="center">chaîne :</th>
+<th align="center">B</th>
+<th align="center">o</th>
+<th align="center">n</th>
+<th align="center"></th>
+<th align="center">!</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Indice :</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 <p>Il faut <a href="#concat">concaténer</a> les chaînes suivantes :</p>
@@ -1236,7 +1284,7 @@ affiche</p>
 </code></pre></div>
 
 </div>
-<details class="- tip"><summary>Ajouter une chaîne à la fin</summary><p>Il est inutile d'utiliser des tranches pour ajouter à la fin.</p>
+<details class="- tip"><summary>Ajouter une chaîne à la fin</summary><p>Il est inutile d'utiliser des tranches ! Il suffit de <a href="#concat">concaténer</a> à droite.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
 <span class="n">mot2</span> <span class="o">=</span> <span class="s2">&quot; world !&quot;</span>
 <span class="n">mot3</span> <span class="o">=</span> <span class="n">mot</span> <span class="o">+</span> <span class="n">mot2</span>
@@ -1244,7 +1292,7 @@ affiche</p>
 </code></pre></div>
 
 </details>
-<details class="- tip"><summary>Ajouter une chaîne au début</summary><p>Il est inutile d'utiliser des tranches pour ajouter au début.</p>
+<details class="- tip"><summary>Ajouter une chaîne au début</summary><p>Il est inutile d'utiliser des tranches ! Il suffit de <a href="#concat">concaténer</a> à gauche.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Jedi&quot;</span>
 <span class="n">mot2</span> <span class="o">=</span> <span class="s2">&quot;Maitre &quot;</span>
 <span class="n">mot3</span> <span class="o">=</span> <span class="n">mot2</span> <span class="o">+</span> <span class="n">mot</span>
@@ -1258,9 +1306,30 @@ affiche</p>
 <p>On souhaite modifier un caractère d'une chaîne. Par exemple, on souhaite corriger <code>chebal</code>.</p>
 <div class = "Center_seul">
 
-<p><code>chaîne :</code>c<code>h</code>e<code>b</code>a<code>l</code>
-<code>:-:</code>:-:<code>:-:</code>:-:<code>:-:</code>:-:<code>:-:</code>
-<code>Indice :</code>0<code>1</code>2<code>3</code>4<code>5</code></p>
+<table>
+<thead>
+<tr>
+<th align="center">chaîne :</th>
+<th align="center">c</th>
+<th align="center">h</th>
+<th align="center">e</th>
+<th align="center">b</th>
+<th align="center">a</th>
+<th align="center">l</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Indice :</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 <p>Il faut alors <a href="#concat">concaténer</a> les chaînes suivantes :</p>
@@ -1279,7 +1348,7 @@ affiche</p>
 <div class="admonition note">
 <p class="admonition-title">Créer une chaîne de caractères</p>
 <p>Il suffit de commencer avec une chaîne vide <code>""</code> et d'accumuler les chaînes de caractères voulues.</p>
-<div class="highlight"><pre><span></span><code><span class="n">mot_cache</span><span class="o">=</span><span class="s2">&quot;Saebccrdeetf&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="n">mot_cache</span><span class="o">=</span><span class="s2">&quot;SeehccraeCt&quot;</span>
 <span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot_cache</span><span class="p">)):</span>
     <span class="k">if</span> <span class="n">idx</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># On ne prend ques les indices pairs</span>
@@ -1289,12 +1358,12 @@ affiche</p>
 
 </div>
 <details class="- tip"><summary>Accumuler au début</summary><p>Il est possible d'accumuler au début (à gauche)</p>
-<div class="highlight"><pre><span></span><code><span class="n">mot_cache</span><span class="o">=</span><span class="s2">&quot;Saebccrdeetf&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="n">mot_cache</span><span class="o">=</span><span class="s2">&quot;SeehccraeCt&quot;</span>
 <span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot_cache</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">idx</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># On ne prend ques les indices pairs</span>
+    <span class="k">if</span> <span class="n">idx</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># On ne prend ques les indices impairs</span>
         <span class="n">mot</span> <span class="o">=</span> <span class="n">mot_cache</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">+</span> <span class="n">mot</span>  <span class="c1"># On accumule les caractères à la fin (à droite)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="c1"># affiche terceS</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="c1"># affiche Cache</span>
 </code></pre></div>
 
 </details>
