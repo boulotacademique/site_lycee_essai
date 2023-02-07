@@ -120,6 +120,23 @@
 		width : 70%;
 	}
 
+	.Center_txt {
+		text-align: center;
+	}
+
+	.Cote_gauche{
+		display: inline-block;
+		width : 48%;
+		/*border: 2px blue dashed;*/
+	}
+
+	.Cote_droit{
+		display: inline-block;
+		width : 48%;
+		/*border: 2px red solid;*/
+	}
+
+
 	.Vignette{
 		/*border : 2px solid black;*/
 		width : 15%;
