@@ -15,9 +15,9 @@
 	
 	<div class = "Center_seul">
 	
-	```chaîne : ```B```o```n```j```o```u```r``` ```!```
-	```:-:```:-:```:-:```:-:```:-:```:-:```:-:```:-:```:-:```:-:```
-	```Indice : ```0```1```2```3```4```5```6```7```8```
+	|chaîne :|B|o|n|j|o|u|r| |!|
+	|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+	|Indice : |0|1|2|3|4|5|6|7|8|
 
 	</div>
 
@@ -173,9 +173,9 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 
 	<div class = "Center_seul">
 	
-	```chaîne : ```B```o```n``` ```!```
-	```:-:```:-:```:-:```:-:```:-:```:-:```
-	```Indice : ```0```1```2```3```4```
+	|chaîne : |B|o|n| |!|
+	|:-:|:-:|:-:|:-:|:-:|:-:|
+	|Indice :|0|1|2|3|4|
 
 	</div>
 
@@ -195,7 +195,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 
 ???- tip "Ajouter une chaîne à la fin"
 
-	Il est inutile d'utiliser des tranches pour ajouter à la fin.
+	Il est inutile d'utiliser des tranches ! Il suffit de [concaténer](#concat) à droite.
 
 	```python
 	mot = "Hello"
@@ -206,7 +206,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 
 ???- tip "Ajouter une chaîne au début"
 
-	Il est inutile d'utiliser des tranches pour ajouter au début.
+	Il est inutile d'utiliser des tranches ! Il suffit de [concaténer](#concat) à gauche.
 
 	```python
 	mot = "Jedi"
@@ -223,9 +223,9 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 
 	<div class = "Center_seul">
 	
-	```chaîne : ```c```h```e```b```a```l```
-	```:-:```:-:```:-:```:-:```:-:```:-:```:-:```
-	```Indice : ```0```1```2```3```4```5```
+	|chaîne : |c|h|e|b|a|l|
+	|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+	|Indice : |0|1|2|3|4|5|
 
 	</div>
 
@@ -248,7 +248,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 	Il suffit de commencer avec une chaîne vide ```""``` et d'accumuler les chaînes de caractères voulues.
 
 	```python
-	mot_cache="Saebccrdeetf"
+	mot_cache="SeehccraeCt"
 	mot = ""
 	for idx in range(len(mot_cache)):
 		if idx%2 == 0: # On ne prend ques les indices pairs
@@ -261,12 +261,12 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 	Il est possible d'accumuler au début (à gauche)
 
 	```python
-	mot_cache="Saebccrdeetf"
+	mot_cache="SeehccraeCt"
 	mot = ""
 	for idx in range(len(mot_cache)):
-		if idx%2 == 0: # On ne prend ques les indices pairs
+		if idx%2 == 1: # On ne prend ques les indices impairs
 			mot = mot_cache[idx] + mot	# On accumule les caractères à la fin (à droite)
-	print(mot) # affiche terceS
+	print(mot) # affiche Cache
 	```
 
 ## Diverses méthodes autour des str
