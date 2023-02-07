@@ -419,6 +419,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#les_conditions" class="md-nav__link">
+    Les conditions
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -905,6 +912,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#les_conditions" class="md-nav__link">
+    Les conditions
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -946,6 +960,137 @@
 </code></pre></div>
 
 </div>
+<p>Il est possible de remplacer un </p>
+<div class="highlight"><pre><span></span><code><span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="o">...</span> <span class="p">:</span>
+</code></pre></div>
+
+<p>par </p>
+<div class="highlight"><pre><span></span><code><span class="k">elif</span> <span class="o">...</span> <span class="p">:</span>
+</code></pre></div>
+
+<details class="- example"><summary>Exemple à bien comprendre</summary><p><div class = "Cote_gauche"><div class = "Center_txt">Programme 1</div></p>
+<div class="highlight"><pre><span></span><code><span class="n">un_nb</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Choisir un entier entre 0 et 99 (compris) &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">un_nb</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jeton bleu&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">un_nb</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jeton vert&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">un_nb</span> <span class="o">&lt;=</span> <span class="mi">75</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jeton rouge&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jeton jaune&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p></div>
+<div class = "Cote_droit"><div class = "Center_txt">Programme 2</div></p>
+<div class="highlight"><pre><span></span><code><span class="n">un_nb</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Choisir un entier entre 0 et 99 (compris) &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">un_nb</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jeton bleu&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">un_nb</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jeton vert&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">un_nb</span> <span class="o">&lt;=</span> <span class="mi">75</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jeton rouge&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jeton jaune&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+<ol>
+<li>Qu'affiche le programme 1 si :<ol>
+<li><code>un_nb</code> vaut 18</li>
+<li><code>un_nb</code> vaut 45</li>
+<li><code>un_nb</code> vaut 72</li>
+<li><code>un_nb</code> vaut 83</li>
+</ol>
+</li>
+<li>Qu'affiche le programme 2 si :<ol>
+<li><code>un_nb</code> vaut 18</li>
+<li><code>un_nb</code> vaut 45</li>
+<li><code>un_nb</code> vaut 72</li>
+<li><code>un_nb</code> vaut 83</li>
+</ol>
+</li>
+</ol>
+</details>
+<h2 id="les_conditions">Les conditions<a class="headerlink" href="#les_conditions" title="Permanent link"></a></h2>
+<div class="admonition info">
+<p class="admonition-title">A retenir</p>
+<p>Les conditions (dans un <code>if</code> ou un <code>while</code>) sont des <a href="AFAIRE"><strong>booléens</strong></a>. Elles ne peuvent donc prendre que deux valeurs : <code>True</code> ou <code>False</code></p>
+<p>Elles peuvent être obtenue de différentes façon :</p>
+<ul>
+<li>un test </li>
+<li>des booléens séparés par <code>or</code> ou <code>and</code></li>
+<li>un booléen retourné par une fonction</li>
+<li><code>True</code> ou <code>False</code> (A éviter si possible)</li>
+<li>...</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Les tests</p>
+<p>Voici un liste (non exhaustive) des tests possibles :</p>
+<ul>
+<li>test d'égalité : <code>a == b</code> (A ne pas faire avec <a href="AFAIRE">des flottants</a>)</li>
+<li>test de la non égalité : <code>a != b</code> (A ne pas faire avec <a href="AFAIRE">des flottants</a>)</li>
+<li>test d'inégailté strict : <code>a &gt; b</code> ou <code>a &lt; b</code> (avec des <code>str</code> voir <a href="AFAIRE">l'ordre lexicographique</a>)</li>
+<li>test d'inégailté large : <code>a &gt;= b</code> ou <code>a &lt;= b</code> (avec des <code>str</code> voir <a href="AFAIRE">l'ordre lexicographique</a>)</li>
+<li>test d'appartenance à une liste : <code>x in liste1</code></li>
+<li>test d'appartenance à une chaîne de caractères : <code>x in ch1</code></li>
+<li>test d'appartenance &laquo; aux clés d'un dictionnaires &raquo; : <code>x in dico1</code></li>
+<li>test de type : <code>isinstance(a , int)</code>, <code>isinstance(a , bool)</code>, <code>isinstance(a , list)</code>, <code>isinstance(a , dict)</code>, ...</li>
+</ul>
+</div>
+<details class="- warning"><summary>Un bon usage</summary><p>Il est inutile de tester si un booléen est égal à <code>True</code> !</p>
+<p><div class = "Cote_gauche"><div class = "Center_txt">A éviter</div></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">est_mention_TB</span><span class="p">(</span><span class="n">note</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">note</span> <span class="o">&gt;=</span> <span class="mi">16</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+<span class="n">ma_note</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Votre note ? &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">est_mention_TB</span><span class="p">(</span><span class="n">ma_note</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Félicitation pour voter mention TB!&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p></div>
+<div class = "Cote_droit"><div class = "Center_txt">A écrire</div></p>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">est_mention_TB</span><span class="p">(</span><span class="n">note</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">note</span> <span class="o">&gt;=</span> <span class="mi">16</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+<span class="n">ma_note</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Votre note ? &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">est_mention_TB</span><span class="p">(</span><span class="n">ma_note</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Félicitation pour voter mention TB!&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div></p>
+<p>De façon analogue avec un <code>False</code>, il est préférable d'utiliser un <code>not</code> !</p>
+<p><div class = "Cote_gauche"><div class = "Center_txt">A éviter</div></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">avoir_le_bac</span><span class="p">(</span><span class="n">note</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">note</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+<span class="n">ma_note</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Votre note ? &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">avoir_le_bac</span><span class="p">(</span><span class="n">ma_note</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dommage ! mais peut-être êtes-vous au rattrapage ?&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p></div>
+<div class = "Cote_droit"><div class = "Center_txt">A écrire</div></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">avoir_le_bac</span><span class="p">(</span><span class="n">note</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">note</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+<span class="n">ma_note</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Votre note ? &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">avoir_le_bac</span><span class="p">(</span><span class="n">ma_note</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dommage ! mais peut-être êtes-vous au rattrapage ?&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+</details>
                 
               
               
