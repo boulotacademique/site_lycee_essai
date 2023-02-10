@@ -1,6 +1,6 @@
-# if, elif et les boucles
+# if, elif
 
-## if, elif
+## if
 
 !!! info "A retenir"
 
@@ -27,6 +27,8 @@
     print("Revoyez les notions où vous vous êtes trompés.")  # pour toutes les notes
     ```
 
+## elif
+
 Il est possible de remplacer un 
 
 ```python
@@ -42,7 +44,7 @@ elif ... :
 
 ???- example "Exemple à bien comprendre"
 
-    <div class = "Cote_gauche"><div class = "Center_txt">Programme 1</div>
+    <div class = "Cote_demi"><div class = "Center_txt">Programme 1</div>
 
     ``` py
     un_nb = int(input("Choisir un entier entre 0 et 99 (compris) "))
@@ -57,7 +59,7 @@ elif ... :
     ```
 
     </div>
-    <div class = "Cote_droit"><div class = "Center_txt">Programme 2</div>
+    <div class = "Cote_demi"><div class = "Center_txt">Programme 2</div>
 
     ``` python
     un_nb = int(input("Choisir un entier entre 0 et 99 (compris) "))
@@ -115,7 +117,7 @@ elif ... :
 
     Il est inutile de tester si un booléen est égal à ```True``` !
 
-    <div class = "Cote_gauche"><div class = "Center_txt">A éviter</div>
+    <div class = "Cote_demi"><div class = "Center_txt">A éviter</div>
 
     ``` python
     def est_mention_TB(note):
@@ -124,12 +126,12 @@ elif ... :
         return False
     
     ma_note = int(input("Votre note ? "))
-    if est_mention_TB(ma_note) == True:
+    if est_mention_TB(ma_note) == True: # Inutile !!
         print("Félicitation pour votre mention TB!")
     ```
 
     </div>
-    <div class = "Cote_droit"><div class = "Center_txt">A écrire</div>
+    <div class = "Cote_demi"><div class = "Center_txt">A préférer</div>
 
     ``` python
     def est_mention_TB(note):
@@ -145,7 +147,7 @@ elif ... :
 
     De façon analogue avec un ```False```, il est préférable d'utiliser un ```not``` !
 
-    <div class = "Cote_gauche"><div class = "Center_txt">A éviter</div>
+    <div class = "Cote_demi"><div class = "Center_txt">A éviter</div>
 
     ``` python
     def avoir_le_bac(note):
@@ -154,12 +156,12 @@ elif ... :
         return False
     
     ma_note = int(input("Votre note ? "))
-    if avoir_le_bac(ma_note) == False:
-        print("Dommage ! mais peut-être êtes-vous au rattrapage ?")
+    if avoir_le_bac(ma_note) == False: # Inutile !!
+        print("Dommage ! Mais peut-être êtes-vous au rattrapage ?")
     ```
 
     </div>
-    <div class = "Cote_droit"><div class = "Center_txt">A écrire</div>
+    <div class = "Cote_demi"><div class = "Center_txt">A préférer</div>
 
     ``` python
     def avoir_le_bac(note):
@@ -169,7 +171,7 @@ elif ... :
     
     ma_note = int(input("Votre note ? "))
     if not(avoir_le_bac(ma_note)):
-        print("Dommage ! mais peut-être êtes-vous au rattrapage ?")
+        print("Dommage ! Mais peut-être êtes-vous au rattrapage ?")
     ```
 
     </div>

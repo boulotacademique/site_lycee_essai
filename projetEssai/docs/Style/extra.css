@@ -124,15 +124,17 @@
 		text-align: center;
 	}
 
-	.Cote_gauche{
+	.Cote_demi{
 		display: inline-block;
 		width : 48%;
+		vertical-align: top;
 		/*border: 2px blue dashed;*/
 	}
 
-	.Cote_droit{
+	.Cote_tiers{
 		display: inline-block;
-		width : 48%;
+		width : 33%;
+		vertical-align: top;
 		/*border: 2px red solid;*/
 	}
 
