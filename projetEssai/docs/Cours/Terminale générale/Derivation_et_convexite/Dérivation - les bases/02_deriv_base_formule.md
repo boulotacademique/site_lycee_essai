@@ -57,7 +57,7 @@
 	???- done "Solution"
 		A FAIRE
 
-!!! tip "Astuce"
+???- tip "Astuce"
 	
 	- $f(x) = \dfrac{k}{x^n} = k \times \dfrac{1}{x^n}$ (c'est plus simple que la formule d'un quotient)
 	- $f(x) = \dfrac{x^n}{k} = \dfrac{1}{k} \times x^n$ (c'est plus simple que la formule d'un quotient)
