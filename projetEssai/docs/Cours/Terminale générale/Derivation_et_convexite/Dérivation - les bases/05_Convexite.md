@@ -4,11 +4,11 @@
 
 !!! info "Une sécante, une corde"
 
-    Soit $f$ une fonction et $\mathcal{C}_f$ sa courbe représentative dans un repère. Soient $A$ et $B$ deux points distincts de $\mathcal{C}_f$, la droite $(AB)$ est appelée **sécante**}** de $\mathcal{C}_f$. Par ailleurs, le segement $[AB]$ est appelé **corde** $[AB]$.
+    Soit $f$ une fonction et $\mathcal{C}_f$ sa courbe représentative dans un repère. Soient $A$ et $B$ deux points distincts de $\mathcal{C}_f$, la droite $(AB)$ est appelée **sécante** de $\mathcal{C}_f$. Par ailleurs, le segement $[AB]$ est appelé **corde** $[AB]$.
 
     <div class="Center_txt">
 
-    ![Deux sécantes : (AB) et (AC)](../Image/secante.png)
+    <img src="../Image/secante.png" alt="Deux sécantes : (AB) et (AC)" style="width:20%;">
 
     Deux sécantes : (AB) et (AC)
     </div>

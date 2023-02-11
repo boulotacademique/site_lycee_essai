@@ -6,9 +6,9 @@
 
 * Rentrée
 * [Dérivation, convexité et primitive](./Derivation_et_convexite/Dérivation - les bases/01_deriv_base_tgte.md)
-* [Suites et récurrence](./Suites_et_recurrence/01_Rappels_sur_les_suites.md)
+* [Suites et récurrence](./Suites_et_recurrence/Suites_bases/01_Rappels_sur_les_suites.md)
 * Loi binomiale
-* [Limite de suite](./Limite_de_suite/01_Limite_d_une_suite.md)
+* [Limite de suite](./Limite_de_suite/Limite_suite_base/01_Limite_d_une_suite.md)
 * Vecteurs de l'espace
 * Limites de fonctions
 * Orthogonalité dans l'espace - Produit scalaire - Equation cartésienne

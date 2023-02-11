@@ -44,7 +44,7 @@
 
 Le théorème précédent permet de trouver des résultats analogues pour les suites géométriques en général.
 
-* Le sens de variations d'une suite géométrique dépend de la valeur de $q$ et de son signe (Pourquoi ? à vous d'y répondre)
+* Le sens de variations d'une suite géométrique dépend de la valeur de $q$ et du signe des termes de la suite (Pourquoi ? à vous d'y répondre)
 * Les formules de la somme conduisent facilement à celle d'une suite géométrique quelconque
 
 !!! abstract "Théorème"

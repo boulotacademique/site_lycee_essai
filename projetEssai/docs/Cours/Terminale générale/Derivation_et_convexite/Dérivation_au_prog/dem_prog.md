@@ -5,23 +5,17 @@
     $f''$ est positive sur $I$ équivaut à $\mathcal{C}_f$ est au-dessus de ses tangentes sur $I$.
 
 !!! abstract "Démonstration"
-    
-    - _Hypothèses du corollaire_ :
 
-    ???- done "Réponse"
+    ???- done "_Hypothèses du corollaire :_"
 
         - $f$ est deux fois dérivable sur un intervalle $I$.
         - $f''$ est positive $I$
-
-    - Objectif de la démonstration :
         
-    ???- done "Réponse"
+    ???- done "_Objectif de la démonstration :_"
     
         $\mathcal{C}_f$ est au-dessus de ses tangentes sur $I$}
 
-    - Une méthode pour l'étude de la position relative :
-
-    ???- done "Réponse"
+    ???- tip "_Une méthode pour l'étude de la position relative :_"
 
         Pour étudier la position relative de la courbe de $h$ et celle de $k$, il faut étudier le signe de $h-k$.
 
@@ -31,11 +25,9 @@
 
         Soit $a$ un réel de $I$. L'équation de la tangente en $a$ est $y=f'(a)(x-a)+f(a)$.
 
-        Etudions donc le signe $g(x)=f(x)-\lp f'(a)(x-a)+f(a) \rp$
+        Etudions donc le signe $g(x)=f(x)-\left( f'(a)(x-a)+f(a) \right)$
 
-        - Une méthode pour étudier le signe d'une expression : 
-
-        ???- done "Réponse"
+        ???- tip "_Une méthode pour étudier le signe d'une expression :_"
 
             On peut utiliser un tableau de variations pour trouver le signe.
 
@@ -52,7 +44,4 @@
         <img src="../Image/var_dem.png" alt="Tableau de variations de g" style="width:20%;" />
         </div>
 
-
-Comme $g$ admet $0$ pour minimum sur $I$, alors $g$ est positive sur $I$. Donc pour tout $a \in I$ et pour tout $x \in I$, $f$ est au-dessus de sa tangente en $a$.
-\end{Solub}
-\end{dem}
+        Comme $g$ admet $0$ pour minimum sur $I$, alors $g$ est positive sur $I$. Donc pour tout $a \in I$ et pour tout $x \in I$, $f$ est au-dessus de sa tangente en $a$.     

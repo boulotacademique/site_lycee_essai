@@ -31,7 +31,7 @@
 	
 	$u_p+u_{p+1}+ \ldots + u_{n} = \dfrac{(\text{ premier terme }+\text{ dernier terme })(\text{ nombre de termes})}{2}$
 
-	!!! warning
+	???- warning "ATTENTION"
 		Le nombre de termes entre $u_p$ et $u_n$ ($p\leqslant n$ ) est $n-p+1$ !
 		
 		Vous pouvez aller voir [ici](https://warmaths.fr/MATH/geometr/Vocabulaire%20de%20base/intervalarith.htm) 
@@ -52,7 +52,7 @@ Vous devez savoir démontrer qu'une suite *n'est pas* une suite arithmétique.
 		2. $u_{n+1}=(n+1)^2+1=n^2+2n+1+1=u_n+2n+1$ donc $u_n$ ne semble pas arithmétique. On peut alors le prouver avec un contre-exemple :</br>
 		$u_1-u_0=1 \neq u_2-u_1$ ($=3$)
 	
-!!! warning
+!!! warning "ATTENTION"
 	Le calcul des premiers valeurs (même en très grand nombre) ne permet pas de justifier qu'une suite est une suite arithmétique !
 	
 	??? question "Exercice"

@@ -93,9 +93,9 @@ On peut representer une telle suite sur une droite (avec donc des points de coor
 un plan avec des points de coordonnées $(n;u_n)$.
 
  
-Suite $u_n=\sqrt{n}$ sur une droite : [![Suite sur une droite](./Image/Cours_001.png){.VCenter .Vignette}](./Image/Cours_001.png)
+Suite $u_n=\sqrt{n}$ sur une droite : [![Suite sur une droite](../Image/Cours_001.png){.VCenter .Vignette}](../Image/Cours_001.png)
 
-Suite $u_n=\sqrt{n}$ dans un plan : [![Suite dans un plan](./Image/Cours_002.png){.VCenter .Vignette}](./Image/Cours_002.png)
+Suite $u_n=\sqrt{n}$ dans un plan : [![Suite dans un plan](../Image/Cours_002.png){.VCenter .Vignette}](../Image/Cours_002.png)
 
 ### La suite est définie à l'aide d'une relation de récurrence
 
@@ -110,12 +110,12 @@ les calculer à l'aide de la courbe $C_f$ représentant la fonction $f$ et la dr
 	* Placer $u_1$ l'abscisse de $B_0$ sur l'axe des abscisses .
 	* Recommencer à partir de $u_1$ les mêmes étapes et placer $u_2$, etc...
 
-[![Suite récurrente dans un plan](./Image/Cours_003.png){.Center .VignetteMed}](./Image/Cours_003.png)
+[![Suite récurrente dans un plan](../Image/Cours_003.gif){.Center .VignetteMed}](../Image/Cours_003.gif)
 
 La lecture graphique donne des valeurs approchées des $u_n$, 
 et elle permet d'émettre des conjectures concernant le comportement global et asymptotique de la suite. Elle semble :
 
-* croissante, décroissante ou stationnaire (parfois périodique);
+* être croissante, décroissante, stationnaire ou périodique;
 * converger vers l'abscisse du point d'intersection de $C_f$ et de $\Delta$, ou diverger.
 
 ??? question "Exercice"

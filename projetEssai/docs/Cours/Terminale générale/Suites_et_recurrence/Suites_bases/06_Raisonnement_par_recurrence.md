@@ -1,13 +1,13 @@
 # Raisonnement par récurrence
 
-Le raisonnement par récurrence s'apparente à la théorie des dominos:</br>
+Le raisonnement par récurrence s'apparente à la théorie des dominos.</br>
 On considère une suite de dominos.</br>
-Quelles sont les deux conditions pour que tous les dominos tombent?
+Quelles sont les deux conditions pour que tous les dominos tombent ?
 
 * Faire tomber le premier domino 
 * et s'assurer que chaque domino renverse le suivant 
 
-[![Suite récurrente dans un plan](./Image/Domino2.png){.Center .VignetteMed}](./Image/Domino2.png)
+[![Suite récurrente dans un plan](../Image/Domino2.png){.Center .VignetteMed}](../Image/Domino2.png)
 <div class="Source"> <a href="https://www.maths-et-tiques.fr/"><i>D'après  :</i> maths-et-tiques.fr</a></div>
 
 Lire [Wikipédia](https://fr.wikipedia.org/wiki/Raisonnement_par_r%C3%A9currence)
@@ -20,7 +20,7 @@ Lire [Wikipédia](https://fr.wikipedia.org/wiki/Raisonnement_par_r%C3%A9currence
 	(on lit &laquo;$P$ est vraie au rang k&raquo; ) :c'est l'hypothèse de récurrence. Et on démontre que $P(k+1)$  est vraie.
 	* Etape 3: **Conclusion**:   la proposition $P(n)$ est vraie pour tout entier naturel $n\geq n_0$.
 
-!!! warning
+!!! warning "ATTENTION"
 	Une proposition est une phrase qui n'est pas obligatoirement une égalité ou une inégalité :
 	
 	* Pour $n \geq 2$, $P(n)$ est &laquo; le nombre de diagonale dans un polygone à $n$ sommet est $n$ &raquo; (cette proposition peut être vraie ou fausse).
@@ -50,13 +50,13 @@ Lire [Wikipédia](https://fr.wikipedia.org/wiki/Raisonnement_par_r%C3%A9currence
 		
 		Par définition de la suite, $u_{n+1}=3u_n-2$.</br>
 		Par hypothèse de récurrence : $u_n=3^{n}+1$</br>
-		Donc $u_{n+1}=3\times(3^{n}+1)-2=3^{n+1}+1$</br>
-		donc **si P(n) est vraie, alors $P(n+1)$ est vraie.**
+		Donc $u_{n+1}=3\times(3^{n}+1)-2=3^{n+1}+1$.</br>
+		Ainsi **la propriété est héréditaire !**
 	
 	??? done "Etape 3 : conclusion"
 		Nous avons démontré par récurrence que pour tout entier naturel $n \in \mathbb{N}$ ,$P(n)$ est vraie c'est-à-dire $u_n = 3^n+1$
 
-!!! failure
+???- failure "Remarque"
 	Si vous n'utilisez pas votre hypothèse de récurrence dans l'hérédité, il y a une erreur de raisonnement.
 
 ??? question "Exercice"

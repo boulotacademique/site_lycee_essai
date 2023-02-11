@@ -108,19 +108,21 @@ nav:
             - "Dérivation : Au programme":
                 - Convexité et inégalités: "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/conv_ineg.md"
                 - Démonstration au programme: "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/dem_prog.md"
-
+            - "Dérivation : vers le supérieur": "Cours/Terminale générale/Derivation_et_convexite/Dérivation_en_plus/Dérivation_best.md"
         - "Suite et récurrence":
-            - Rappel sur les suites: "Cours/Terminale générale/Suites_et_recurrence/01_Rappels_sur_les_suites.md"
-            - Suites et python: "Cours/Terminale générale/Suites_et_recurrence/02_Suites_et_python.md"
-            - Suites et sens de variations: "Cours/Terminale générale/Suites_et_recurrence/03_Suite_et_sens_de_variations.md"
-            - Suites arithmétiques: "Cours/Terminale générale/Suites_et_recurrence/04_Suites_aritmetiques.md"
-            - Suites géométriques: "Cours/Terminale générale/Suites_et_recurrence/05_Suites_geometrique.md"
-            - Raisonnement par récurrence: "Cours/Terminale générale/Suites_et_recurrence/06_Raisonnement_par_recurrence.md"
-            - Suite majorée, minorée, bornée: "Cours/Terminale générale/Suites_et_recurrence/07_majoree_minoree_bornee.md"
+            - "Suites : les bases":
+                - Rappel sur les suites: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/01_Rappels_sur_les_suites.md"
+                - Suites et python: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/02_Suites_et_python.md"
+                - Suites et sens de variations: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/03_Suite_et_sens_de_variations.md"
+                - Suites arithmétiques: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/04_Suites_aritmetiques.md"
+                - Suites géométriques: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/05_Suites_geometrique.md"
+                - Raisonnement par récurrence: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/06_Raisonnement_par_recurrence.md"
+                - Suite majorée, minorée, bornée: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/07_majoree_minoree_bornee.md"
         - Limite de suite:
-            - Limite d'une suite: "Cours/Terminale générale/Limite_de_suite/01_Limite_d_une_suite.md"
-            - Limite de la suite $q^n$: "Cours/Terminale générale/Limite_de_suite/02_Limite_de_la_suite_qn.md"
-            - Limite et opérations: "Cours/Terminale générale/Limite_de_suite/03_Theoremes_d_operation.md"
+            - "Limite de suites : les bases":
+                - Limite d'une suite: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/01_Limite_d_une_suite.md"
+                - Limite de la suite $q^n$: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/02_Limite_de_la_suite_qn.md"
+                - Limite et opérations: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/03_Theoremes_d_operation.md"
     - Labo de math: 
         - Accueil: "Labo de math/c01.md"
         - "Liaison lycée/supérieur": "Labo de math/Liaison_lycée_sup/supérieur.md"

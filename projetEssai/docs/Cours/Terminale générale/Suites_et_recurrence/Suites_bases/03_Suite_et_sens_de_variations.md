@@ -5,38 +5,54 @@
 	* Une suite $(u_n)$ est  décroissante ( à partir d'un certain rang $k$) si  pour tout $n\geqslant k$, on a  $u_{n}\geqslant u_{n+1}$ 
 	* Une suite $(u_n)$ est monotone ( à partir d'un certain rang $k$) si elle est croissante ou décroissante ( à partir d'un certain rang $k$) 
 
-!!! warning
-	Il existe des suites qui ne sont ni croissantes ni décroissantes par exemple $u_n=(-1)^n$ 
+!!! warning "ATTENTION"
+	Il existe des suites qui ne sont ni croissantes ni décroissantes par exemple $u_n=(-1)^n$ .
 
 ## Méthodes pour étudier le sens de variation 
 
 ### Suite définie par une relation explicite
 
-1. **Technique algébrique**</br>
-On utilise la définition pour cela on étudie le signe de $u_{n+1}-u_n$
+!!! tip "**Technique algébrique**"
 
-	* Si la quantité est positive à partir d'un certain rang $k$ , la suite est croissante pour $n\geqslant k$
-	* Si la quantité est négative à partir d'un certain rang $k$ , la suite est décroissante pour $n\geqslant k$
+	On utilise la définition pour cela on étudie le signe de $u_{n+1}-u_n$
 
-2. **Technique fonctionnelle**<br>
-	Si $u_n=f(n)$ où $f$ est une fonction définie et **monotone** sur $[0,+\infty[$, on étudie le sens de variation de $f$.
+    * Si la quantité est positive à partir d'un certain rang $k$ , la suite est croissante pour $n\geqslant k$
+    * Si la quantité est négative à partir d'un certain rang $k$ , la suite est décroissante pour $n\geqslant k$
+
+!!! tip "**Technique fonctionnelle**"
+	
+    Si $u_n=f(n)$ où $f$ est une fonction définie et **monotone** sur $[0,+\infty[$, on étudie le sens de variation de $f$.
 	En effet, sous cette hypothèse, la suite a les mêmes variations que la fonction.
 
-	!!! warning
-		Il est possible d'avoir une fonction non monotone sur  $[0,+\infty[$<!--]-->, et pourtant la suite définie par 
-		$u_n=f(n)$ est elle monotone.
+	???- warning "ATTENTION"
 
-3. **Comparaison avec 1**</br>
-Si la suite $u$ est à termes positifs \cad si  $u_n>0$ alors on peut comparer $\dfrac{u_{n+1}}{u_n}$ avec 1.
+		Il est possible d'avoir une fonction _non monotone_ sur  $[0,+\infty[$<!--]-->, et pourtant la suite définie par $u_n=f(n)$ est elle monotone.
+
+!!! tip "**Comparaison avec 1**"
+
+    Si la suite $u$ est à **termes strictement positifs** c'est-à-dire si  $u_n>0$ alors on peut comparer $\dfrac{u_{n+1}}{u_n}$ avec 1.
 	
 	* Si pour tout $n$ , $\dfrac{u_{n+1}}{u_n} \geq 1$ avec $u_n>0$ alors $u_{n+1} \geq u_n$ et la suite $u$ est croissante.
 	* Si pour tout $n$ , $\dfrac{u_{n+1}}{u_n} \leq 1$ avec $u_n>0$ alors $u_{n+1} \leq u_n$ et la suite $u$ est décroissante.
 
-	!!! warning
-		Pour cette méthode, il faut s'adapter si $u_n<0$ pour tout $n$.</br>
+	???- tip "Et si $u_n < 0$ ?"
+		
+        Pour cette méthode, il faut s'adapter si $u_n<0$ pour tout $n$.
+
+        ???- done "Réponse"
+
+            Si la suite $u$ est à **termes strictement négatifs** c'est-à-dire si  $u_n<0$ alors on peut comparer $\dfrac{u_{n+1}}{u_n}$ avec 1.
+            
+            * Si pour tout $n$ , $\dfrac{u_{n+1}}{u_n} \geq 1$ avec $u_n<0$ alors $u_{n+1} \leq u_n$ et la suite $u$ est décroissante.
+            * Si pour tout $n$ , $\dfrac{u_{n+1}}{u_n} \leq 1$ avec $u_n<0$ alors $u_{n+1} \geq u_n$ et la suite $u$ est croissante.
+
+	???- warning "ATTENTION"
+    
 		Naturellement, cette méthode est inutilisable si $(u_n)$ n'est pas (à partir d'un certain rang) de signe constant.		
 
-4. **Utiliser une démonstration par récurrence**
+!!! tip "**Utiliser une démonstration par récurrence**"
+
+    cf [raisonnement par récurrence](AFAIRE)
 
 Naturellement, il est possible d'utiliser les méthodes précédentes à partir d'un certain rang.
 
