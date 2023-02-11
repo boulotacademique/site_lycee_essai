@@ -17,7 +17,7 @@
     
     
       
-        <title>Dérivation et tangente - Les maths à Mimard</title>
+        <title>Démonstration au programme - Les maths à Mimard</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#derivation_et_tangente_techniques_de_base" class="md-skip">
+        <a href="#demonstration_au_programme" class="md-skip">
           Aller au contenu
         </a>
       
@@ -91,7 +91,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Dérivation et tangente
+              Démonstration au programme
             
           </span>
         </div>
@@ -514,12 +514,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-2-1" type="checkbox" id="nav-7-2-1" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-2-1" type="checkbox" id="nav-7-2-1">
     
     <label class="md-nav__link" for="nav-7-2-1">
       Dérivation : les bases
@@ -541,20 +539,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="01_deriv_base_tgte.html" title="Dérivation et tangente" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../D%C3%A9rivation%20-%20les%20bases/01_deriv_base_tgte.html" title="Dérivation et tangente" class="md-nav__link">
       Dérivation et tangente
     </a>
-    
   </li>
 
         
@@ -564,7 +553,7 @@
 
 
   <li class="md-nav__item">
-    <a href="02_deriv_base_formule.html" title="Dérivation et formule" class="md-nav__link">
+    <a href="../D%C3%A9rivation%20-%20les%20bases/02_deriv_base_formule.html" title="Dérivation et formule" class="md-nav__link">
       Dérivation et formule
     </a>
   </li>
@@ -576,7 +565,7 @@
 
 
   <li class="md-nav__item">
-    <a href="03_deriv_utilis.html" title="Utilisation de la dérivée" class="md-nav__link">
+    <a href="../D%C3%A9rivation%20-%20les%20bases/03_deriv_utilis.html" title="Utilisation de la dérivée" class="md-nav__link">
       Utilisation de la dérivée
     </a>
   </li>
@@ -588,7 +577,7 @@
 
 
   <li class="md-nav__item">
-    <a href="04_deriv_composee.html" title="Composée de fonctions" class="md-nav__link">
+    <a href="../D%C3%A9rivation%20-%20les%20bases/04_deriv_composee.html" title="Composée de fonctions" class="md-nav__link">
       Composée de fonctions
     </a>
   </li>
@@ -600,7 +589,7 @@
 
 
   <li class="md-nav__item">
-    <a href="05_Convexite.html" title="Convexité" class="md-nav__link">
+    <a href="../D%C3%A9rivation%20-%20les%20bases/05_Convexite.html" title="Convexité" class="md-nav__link">
       Convexité
     </a>
   </li>
@@ -615,10 +604,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-2-2" type="checkbox" id="nav-7-2-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-2-2" type="checkbox" id="nav-7-2-2" checked>
     
     <label class="md-nav__link" for="nav-7-2-2">
       Dérivation : Au programme
@@ -642,7 +633,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../D%C3%A9rivation_au_prog/conv_ineg.html" title="Convexité et inégalités" class="md-nav__link">
+    <a href="conv_ineg.html" title="Convexité et inégalités" class="md-nav__link">
       Convexité et inégalités
     </a>
   </li>
@@ -652,11 +643,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../D%C3%A9rivation_au_prog/dem_prog.html" title="Démonstration au programme" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="dem_prog.html" title="Démonstration au programme" class="md-nav__link md-nav__link--active">
       Démonstration au programme
     </a>
+    
   </li>
 
         
@@ -940,43 +940,55 @@
                   
                 
                 
-                <h1 id="derivation_et_tangente_techniques_de_base">Dérivation et tangente : techniques de base<a class="headerlink" href="#derivation_et_tangente_techniques_de_base" title="Permanent link"></a></h1>
-<div class="admonition abstract">
+                <h1 id="demonstration_au_programme">Démonstration au programme<a class="headerlink" href="#demonstration_au_programme" title="Permanent link"></a></h1>
+<div class="admonition info">
 <p class="admonition-title">Théorème</p>
-<p>Si <span class="arithmatex">\(f\)</span> est une fonction dérivable sur <span class="arithmatex">\(I\)</span>, <span class="arithmatex">\(\mathcal{C}_f\)</span> sa courbe représentative et <span class="arithmatex">\(a\)</span> est un réel de <span class="arithmatex">\(I\)</span>, alors l'équation de la tangente à <span class="arithmatex">\(\mathcal{C}_f\)</span> au point d'abscisse <span class="arithmatex">\(a\)</span> est :</p>
-<div class="arithmatex">\[
-y = f'(a)(x-a) + f(a)
-\]</div>
+<p>Soit <span class="arithmatex">\(f\)</span> une fonction définie et <strong>deux fois dérivable</strong> sur un intervalle I. 
+<span class="arithmatex">\(f''\)</span> est positive sur <span class="arithmatex">\(I\)</span> équivaut à <span class="arithmatex">\(\mathcal{C}_f\)</span> est au-dessus de ses tangentes sur <span class="arithmatex">\(I\)</span>.</p>
 </div>
-<details class="- example"><summary>Exemple</summary><p>Soit <span class="arithmatex">\(f(x) = x^2+3x-5\)</span>. </p>
-<p>1/ Déterminer l'équation de la tangente à la courbe de <span class="arithmatex">\(f\)</span> au point d'abscisse <span class="arithmatex">\(2\)</span></p>
-<p>2/ Tracer la courbe de <span class="arithmatex">\(f\)</span> et sa tangente.</p>
-<details class="- done"><summary>Solution</summary><p>1/ <span class="arithmatex">\(f(2) = 5\)</span>.
-<span class="arithmatex">\(f'(x) = 2x +3\)</span>. Donc <span class="arithmatex">\(f'(2) = 7\)</span>. Ainsi, l'équaiton de la tangente est <span class="arithmatex">\(y = 7(x-2) + 5\)</span> c'est-à-dire <span class="arithmatex">\(y=7x + 9\)</span>. </p>
-<p>2/ A FAIRE</p>
-</details>
-</details>
-<details class="- example"><summary>Exemple</summary><p>Soit <span class="arithmatex">\(f\)</span> une fonction dont la courbe est donnée ci-dessous. La droite <span class="arithmatex">\(d\)</span> est la tangente au point <span class="arithmatex">\(A\)</span> d'abscisse <span class="arithmatex">\(-1\)</span>. Déterminer <span class="arithmatex">\(f'(-1)\)</span>.</p>
-<p>Courbe A FAIRE</p>
-<details class="- done"><summary>Solution</summary><p>A FAIRE</p>
-</details>
-</details>
 <div class="admonition abstract">
-<p class="admonition-title">Théorème</p>
-<p>Si <span class="arithmatex">\(f\)</span> est une fonction dérivable sur <span class="arithmatex">\(I\)</span> et si <span class="arithmatex">\(a\)</span> possède un maximum local en <span class="arithmatex">\(x = a\)</span>, alors sa tangente au point d'abscisse <span class="arithmatex">\(a\)</span> a pour coefficient directeur <span class="arithmatex">\(0\)</span>. Cette tangente est alors horizontale.</p>
-<p>IMAGE A FAIRE</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>Attention la réciproque est fausse :</strong></p>
-<p>Il existe des fonctions qui possèdent une tangente horizontale et pourtant il n'y a pas de maximum local. C'est le cas de la <span class="arithmatex">\(f(x) = x^3\)</span> au point d'abscisse <span class="arithmatex">\(0\)</span>.</p>
-<p>IMAGE A FAIRE</p>
-</div>
-<p>Il est important :</p>
+<p class="admonition-title">Démonstration</p>
 <ul>
-<li>de savoir trouver l'équation d'une tangente</li>
-<li>de savoir retrouver un nombre dérivée à partir de la lecture graphique d'une tangente</li>
+<li><em>Hypothèses du corollaire</em> :</li>
 </ul>
+<details class="- done"><summary>Réponse</summary><ul>
+<li><span class="arithmatex">\(f\)</span> est deux fois dérivable sur un intervalle <span class="arithmatex">\(I\)</span>.</li>
+<li><span class="arithmatex">\(f''\)</span> est positive <span class="arithmatex">\(I\)</span></li>
+</ul>
+</details>
+<ul>
+<li>Objectif de la démonstration :</li>
+</ul>
+<details class="- done"><summary>Réponse</summary><p><span class="arithmatex">\(\mathcal{C}_f\)</span> est au-dessus de ses tangentes sur <span class="arithmatex">\(I\)</span>}</p>
+</details>
+<ul>
+<li>Une méthode pour l'étude de la position relative :</li>
+</ul>
+<details class="- done"><summary>Réponse</summary><p>Pour étudier la position relative de la courbe de <span class="arithmatex">\(h\)</span> et celle de <span class="arithmatex">\(k\)</span>, il faut étudier le signe de <span class="arithmatex">\(h-k\)</span>.</p>
+</details>
+<details class="- done"><summary>Démonstration</summary><p>Soit <span class="arithmatex">\(f\)</span> une fonction définie et deux fois dérivable sur un intervalle <span class="arithmatex">\(I\)</span> et telle que <span class="arithmatex">\(f''\)</span> est positive sur <span class="arithmatex">\(I\)</span>.</p>
+<p>Soit <span class="arithmatex">\(a\)</span> un réel de <span class="arithmatex">\(I\)</span>. L'équation de la tangente en <span class="arithmatex">\(a\)</span> est <span class="arithmatex">\(y=f'(a)(x-a)+f(a)\)</span>.</p>
+<p>Etudions donc le signe <span class="arithmatex">\(g(x)=f(x)-\lp f'(a)(x-a)+f(a) \rp\)</span></p>
+<ul>
+<li>Une méthode pour étudier le signe d'une expression : </li>
+</ul>
+<details class="- done"><summary>Réponse</summary><p>On peut utiliser un tableau de variations pour trouver le signe.</p>
+</details>
+<p>Calculons <span class="arithmatex">\(g'\)</span>, ce qui est possible car <span class="arithmatex">\(f\)</span> est dérivable sur <span class="arithmatex">\(I\)</span> : <span class="arithmatex">\(g'(x)=f'(x)-f'(a)\)</span>.</p>
+<p>Comme <span class="arithmatex">\(f''\)</span> est positive sur <span class="arithmatex">\(I\)</span>, <span class="arithmatex">\(f'\)</span> est croissante sur <span class="arithmatex">\(I\)</span>.</p>
+<ul>
+<li>Si <span class="arithmatex">\(x \geq a\)</span>, <span class="arithmatex">\(f'(x) \geq f'(a)\)</span> donc <span class="arithmatex">\(g'(x)\geq 0\)</span> sur <span class="arithmatex">\([a ; +\infty[\cap I\)</span></li>
+<li>Si <span class="arithmatex">\(x \leq a\)</span>, <span class="arithmatex">\(f'(x) \leq f'(a)\)</span> donc <span class="arithmatex">\(g'(x)\leq 0\)</span> sur <span class="arithmatex">\(]-\infty;a] \cap I\)</span></li>
+</ul>
+<p>D'où le tableau de variations de <span class="arithmatex">\(g\)</span> sur <span class="arithmatex">\(I=[c;d]\)</span>:</p>
+<p><div class="Center_txt">
+<img src="../Image/var_dem.png" alt="Tableau de variations de g" style="width:20%;" />
+</div></p>
+</details>
+</div>
+<p>Comme <span class="arithmatex">\(g\)</span> admet <span class="arithmatex">\(0\)</span> pour minimum sur <span class="arithmatex">\(I\)</span>, alors <span class="arithmatex">\(g\)</span> est positive sur <span class="arithmatex">\(I\)</span>. Donc pour tout <span class="arithmatex">\(a \in I\)</span> et pour tout <span class="arithmatex">\(x \in I\)</span>, <span class="arithmatex">\(f\)</span> est au-dessus de sa tangente en <span class="arithmatex">\(a\)</span>.
+\end{Solub}
+\end{dem}</p>
                 
               
               
@@ -995,7 +1007,7 @@ y = f'(a)(x-a) + f(a)
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../index_term_G.html" title="Accueil TGEN" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="conv_ineg.html" title="Convexité et inégalités" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1004,19 +1016,19 @@ y = f'(a)(x-a) + f(a)
                 <span class="md-footer-nav__direction">
                   Précédent
                 </span>
-                Accueil TGEN
+                Convexité et inégalités
               </div>
             </div>
           </a>
         
         
-          <a href="02_deriv_base_formule.html" title="Dérivation et formule" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../Suites_et_recurrence/01_Rappels_sur_les_suites.html" title="Rappel sur les suites" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Suivant
                 </span>
-                Dérivation et formule
+                Rappel sur les suites
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

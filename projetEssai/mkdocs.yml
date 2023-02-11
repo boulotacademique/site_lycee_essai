@@ -44,6 +44,7 @@ extra_css:
     
 extra_javascript:
   #- 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+    #- E:\Travail\MathJax\MathJax-2.7.3/mathjax.js
     - javascripts/mathjax.js
     - https://polyfill.io/v3/polyfill.min.js?features=es6
     - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -104,7 +105,7 @@ nav:
                 - Utilisation de la dérivée: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/03_deriv_utilis.md"
                 - Composée de fonctions: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/04_deriv_composee.md"
                 - Convexité: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/05_Convexite.md"
-            - "Dérivation : la suite":
+            - "Dérivation : Au programme":
                 - Convexité et inégalités: "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/conv_ineg.md"
                 - Démonstration au programme: "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/dem_prog.md"
 

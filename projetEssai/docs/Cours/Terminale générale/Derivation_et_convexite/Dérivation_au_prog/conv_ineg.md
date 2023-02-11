@@ -82,3 +82,11 @@ Ainsi, $\mathcal{C}_f$ est en dessous de la corde $[AB]$ signifie que $y_M \geq 
 \[
 t \times f(x) + (1-t) f(y) \geq f(t \times x + (1-t)y)
 \]
+
+!!! info "A retenir"
+
+    Si $f$ est convexe sur $I$, alors pour tout $x,y$ deux réels de $I$ et pour tout $t \in [0;1]$
+
+    \[
+    t \times f(x) + (1-t) f(y) \geq f(t \times x + (1-t)y)
+    \]
