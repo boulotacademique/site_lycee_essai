@@ -61,8 +61,8 @@ theme:
 extra_css: 
     - 'Style/extra.css'
     - 'Style/print.css'
-    - 'dist/reveal.css'
-    - 'dist/theme/black.css'
+    #- 'dist/reveal.css'
+    #- 'dist/theme/black.css'
 
 
 # reveal:
