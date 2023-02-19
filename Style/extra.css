@@ -115,7 +115,7 @@
 	}
 
 	.Center_seul {
-		margin-right : auto;
+		margin-right : 15%;
 		margin-left : auto;
 		width : 70%;
 	}
@@ -141,6 +141,8 @@
 
 	.Vignette{
 		/*border : 2px solid black;*/
+		margin-right : 42%;
+		margin-left : 42%;
 		width : 15%;
 	}
 
@@ -162,6 +164,19 @@
 		min-width : 10%;
 		text-align : center;
 		vertical-align : middle;
+	}
+
+	.Bord_gche{
+		border-left: 1px solid black;
+	}
+
+	.Td_table{
+		display: inline-block;
+		border: 1px solid black;
+	}
+
+	.Tr_table{
+		border: 2px dotted red;
 	}
 
 	.Gras{
