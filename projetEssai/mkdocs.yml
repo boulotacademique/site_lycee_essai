@@ -39,13 +39,28 @@ theme:
 extra_css: 
     - 'Style/extra.css'
     - 'Style/print.css'
-    
+    - 'dist/reveal.css'
+    - 'dist/theme/black.css'
+
+
+# reveal:
+#   path: dist
+#   transition: slide
+#   theme:
+#     name: source/white.css
+#     path: css/theme
+#   plugin:
+#     path: plugin
+
+
 extra_javascript:
   #- 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
     #- E:/Travail/MathJax/MathJax-2.7.3/mathjax.js
     - javascripts/mathjax.js
     - https://polyfill.io/v3/polyfill.min.js?features=es6
     - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    - js/reveal.js
+
     
     
 #https://python-markdown.github.io/extensions/
@@ -156,3 +171,4 @@ nav:
     - Labo de math: 
         - Accueil: "Labo de math/c01.md"
         - "Liaison lycée/supérieur": "Labo de math/Liaison_lycée_sup/supérieur.md"
+        - "essai slide" : "Labo de math/Liaison_lycée_sup/essai_slide.md"
