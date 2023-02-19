@@ -8,7 +8,7 @@ Dans tout ce qui suit, $\ell$ et $\ell'$ désignent deux nombres réels.
 ## Limite d'une somme
 
 !!! info "Théorème"
-	<table class="AvecBordure"> 
+	<table class="AvecBordure" style="width:70%;margin:auto;"> 
 	<tr>
 	 <td>Si $\lim\limits_{n \to +\infty}~u_n=\cdots$ </td><td> $\ell$ </td><td> $\ell$ </td><td> $\ell$ </td><td> $+\infty$ </td><td> $-\infty$ </td><td> $-\infty$ </td>
 	</tr>
@@ -70,7 +70,7 @@ Dans tout ce qui suit, $\ell$ et $\ell'$ désignent deux nombres réels.
 ## Limite d'un produit
 
 !!! info "Théorème"
-	<table class="AvecBordure"> 
+	<table class="AvecBordure"  style="width:70%;margin:auto;"> 
 	<tr>
 	 <td>Si $\lim\limits_{n \to +\infty}~u_n=\cdots$ </td><td> $\ell$ </td><td> $\ell>0$ </td><td> $\ell>0$</td><td>$\ell<0$</td><td>$\ell<0$</td><td>$+\infty$</td><td>$+\infty$</td><td>$-\infty$</td><td>$0$</td><td>0</td>
 	</tr>
@@ -81,7 +81,7 @@ Dans tout ce qui suit, $\ell$ et $\ell'$ désignent deux nombres réels.
 	<td>alors $\lim\limits_{n \to +\infty}~(u_n\times v_n)=\cdots$</td><td>$\ell\times\ell'$</td><td>$+\infty$</td><td>$-\infty$</td><td>$-\infty$</td><td>$+\infty$</td><td>$+\infty$</td><td>$-\infty$</td><td>$+\infty$</td><td>$FI$</td><td>$FI$</td>
 	</tr>
 	<tr>
-	<td colspan="2"> </td><td colspan="4"> Règle des signes </td><td colspan="3"> Règle des signes </td><td> </td>
+	<td colspan="2"  style="border-left:1px solid white;border-bottom:1px solid white;"> </td><td colspan="4"> Règle des signes </td><td colspan="3"> Règle des signes </td><td style="border-right:1px solid white;border-bottom:1px solid white;"> </td><td style="border-right:1px solid white;border-bottom:1px solid white;"> </td>
 	</tr>
 	</table>
 
@@ -126,7 +126,7 @@ Dans tout ce qui suit, $\ell$ et $\ell'$ désignent deux nombres réels.
 ## Limite de l'inverse
 
 !!! info "Théorème"
-	<table class="AvecBordure"> 
+	<table class="AvecBordure"  style="width:70%;margin:auto;"> 
 	<tr>
 	 <td>Si  $\lim\limits_{n \to +\infty}~v_n$  = </td><td> $\ell\neq  0$</td><td>$0$  avec $v_n>0$ à partir d'un certain rang</td><td>$0$  avec $v_n<0$ à partir d'un certain rang</td><td>$+\infty$ ou $-\infty$</td>
     </tr>
@@ -145,21 +145,39 @@ Dans tout ce qui suit, $\ell$ et $\ell'$ désignent deux nombres réels.
 
 	Pour la limite d'un quotient $\frac{u_n}{v_n}$, distinguons deux cas :
 
-	- Cas où $\lim_{n \to +\infty} v_n \neq 0$ :
+	- Cas où $\lim\limits_{n \to +\infty} v_n \neq 0$ :
+	
+	<table class="AvecBordure" style="width:70%;margin:auto;"> 
+	<tr>
+	<td>Si $\lim\limits_{n \to +\infty} u_n =$ </td><td> $\ell$ </td><td> $\ell$ </td><td> $+\infty$ </td><td> $-\infty$ </td><td> $+\infty$ </td><td> $-\infty$ </td><td> $+\infty$  ou  $-\infty$</td>
+	</tr>
+	<tr>
+	<td>Si $\lim\limits_{n \to +\infty} v_n =$ </td><td> $\ell' \neq 0$ </td><td> $+ \infty$  ou $-\infty$ </td><td> $\ell' > 0$ </td><td> $\ell' > 0$ </td><td> $\ell' < 0$ </td><td> $\ell' < 0$ </td><td> $+ \infty$ ou $-\infty$</td>
+	</tr>
+	<tr>
+	<td>$\lim\limits_{n \to +\infty} \left( \frac{u_n}{v_n} \right) =$ </td><td> $\frac{\ell}{\ell '}$ </td><td> $0$ </td><td> $+\infty$ </td><td> $- \infty$ </td><td> $-\infty$ </td><td> $+\infty$ </td><td>  FI </td>
+	</tr>
+	</table>
 
-	\[
-		\begin{array}{|l|*{7}{c|}}
-		\hline
-		\text{Si } \lim_{n \to +\infty} u_n = & \ell & \ell & +\infty & -\infty & +\infty & -\infty & + \infty \text{ ou } \\
-		&  &  &   &  &  &  & - \infty\\
-		\hline 
-		\text{Si } \lim_{n \to +\infty} v_n = & \ell' \neq 0 & + \infty \text{ ou }& \ell' > 0 & \ell' > 0 & \ell' < 0 & \ell' < 0 & + \infty \text{ ou }\\
-		&  & - \infty  &  &  &  & & -\infty \\
-		\hline
-		\rule[-0.5cm]{0pt}{1.2cm} \text{Alors } \lim_{n \to +\infty} \left( \frac{u_n}{v_n} \right) = & \frac{\ell}{\ell '}  & 0 & +\infty & - \infty & -\infty & +\infty & \text{ FI }\\
-		\hline		
-		\end{array}
-	\]
+	- Cas où $\lim\limits_{n \to +\infty} v_n = 0$
+
+	
+	<table class="AvecBordure"  style="width:70%;margin:auto;"> 
+	<tr>
+	<td>Si $\lim\limits_{n \to +\infty} u_n =$ </td><td> $\ell>0$ ou $+ \infty$ </td><td> $\ell>0$ ou $+ \infty$ </td><td> $\ell<0$ ou $- \infty$ </td><td> $\ell<0$ ou $- \infty$ </td><td> $0$ </td>
+	</tr>
+	<tr>
+	<td>Si $\lim\limits_{n \to +\infty} v_n =$ </td><td> $0$ en restant positif </td><td> $0$ en restant négatif</td><td> $0$ en restant positif </td><td> $0$ en restant négatif </td><td> $0$ </td>
+	</tr>
+	<tr>
+	<td>$\lim\limits_{n \to +\infty} \left( \frac{u_n}{v_n} \right) =$ </td><td> $+\infty$ </td><td> $-\infty$ </td><td> $-\infty$ </td><td> $+ \infty$ </td><td>  FI </td>
+	</tr>
+	<tr>
+	<td style="border-left:1px solid white;border-bottom:1px solid white;"></td><td colspan="4"> Règle des signes </td><td style="border-right:1px solid white;border-bottom:1px solid white;"> </td>
+	</tr>
+	</table>
+
+
 
 ???+ example "Exemple"
 	

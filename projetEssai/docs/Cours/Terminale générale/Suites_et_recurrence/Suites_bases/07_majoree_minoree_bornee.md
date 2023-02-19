@@ -29,7 +29,7 @@
 	* Il est possible d'utiliser une démonstration par récurrence.
 
 ???- question "Exercice"
-	On considère la suite $(u_n)$ définie par 
+	<span id="ex2_16">On considère la suite $(u_n)$ définie par</span> 
 	
 	\[
 	\left\{\begin{array}{lcl}

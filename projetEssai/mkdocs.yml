@@ -35,16 +35,14 @@ theme:
         tabs : false
         #- navigation.tabs
         #- navigation.tabs.sticky
-        
-        
-        
+
 extra_css: 
     - 'Style/extra.css'
     - 'Style/print.css'
     
 extra_javascript:
   #- 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
-    #- E:\Travail\MathJax\MathJax-2.7.3/mathjax.js
+    #- E:/Travail/MathJax/MathJax-2.7.3/mathjax.js
     - javascripts/mathjax.js
     - https://polyfill.io/v3/polyfill.min.js?features=es6
     - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -82,7 +80,7 @@ markdown_extensions:
 
 nav:
     - Accueil: "index.md"
-    - Seconde: "Cours/Seconde/c01.md"
+    #- Seconde: "Cours/Seconde/c01.md"
     - Première NSI: 
         - Présentation: "Cours/Première NSI/Présentation/c01.md"
         - Les bases:
@@ -93,9 +91,9 @@ nav:
             - "if, elif et les conditions" : "Cours/Première NSI/Python/Les bases/if_elif.md"
             - "La boucle while" : "Cours/Première NSI/Python/Les bases/while.md"
             - "Les listes" : "Cours/Première NSI/Python/Les bases/list.md"
-    - Première STI2D: "Cours/Première STI2D/c01.md"
-    - Terminale STI2D: "Cours/Terminale STI2D/c01.md"
-    - Première générale: "Cours/Première générale/c01.md"
+    #- Première STI2D: "Cours/Première STI2D/c01.md"
+    #- Terminale STI2D: "Cours/Terminale STI2D/c01.md"
+    #- Première générale: "Cours/Première générale/c01.md"
     - Terminale générale:
         - Accueil TGEN: "Cours/Terminale générale/index_term_G.md"
         - Dérivation, convexité, primitive:
@@ -105,7 +103,7 @@ nav:
                 - Utilisation de la dérivée: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/03_deriv_utilis.md"
                 - Composée de fonctions: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/04_deriv_composee.md"
                 - Convexité: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/05_Convexite.md"
-            - "Dérivation : Au programme":
+            - "Dérivation : au programme":
                 - Convexité et inégalités: "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/conv_ineg.md"
                 - Démonstration au programme: "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/dem_prog.md"
             - "Dérivation : vers le supérieur": "Cours/Terminale générale/Derivation_et_convexite/Dérivation_en_plus/Dérivation_best.md"
@@ -118,11 +116,43 @@ nav:
                 - Suites géométriques: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/05_Suites_geometrique.md"
                 - Raisonnement par récurrence: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/06_Raisonnement_par_recurrence.md"
                 - Suite majorée, minorée, bornée: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/07_majoree_minoree_bornee.md"
+        - Loi binomiale:
+            - "Probabilité : les bases":
+                - Rappel: "Cours/Terminale générale/Loi_binomiale/binom_bases/01_binom_rappel.md"
+                - Succession d'épreuves: "Cours/Terminale générale/Loi_binomiale/binom_bases/02_succ_ep_ind.md"
+                - Loi binomiale: "Cours/Terminale générale/Loi_binomiale/binom_bases/03_loi_binom.md"
+            - "Probabilités : au programme": "Cours/Terminale générale/Loi_binomiale/binom_prog/binom_dem_prog.md"
         - Limite de suite:
             - "Limite de suites : les bases":
                 - Limite d'une suite: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/01_Limite_d_une_suite.md"
                 - Limite de la suite $q^n$: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/02_Limite_de_la_suite_qn.md"
                 - Limite et opérations: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/03_Theoremes_d_operation.md"
+                - Limite et comparaison : "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/04_th_comp.md"
+            - "Limite de suites : au programme": "Cours/Terminale générale/Limite_de_suite/lim_suite_prog/lim_suite_dem_prog.md"
+            - "Limite de suites : vers le supérieur": "Cours/Terminale générale/Limite_de_suite/Limite_de_suite_en_plus/limite_suite_best.md"
+        - Vecteur de l'espace:
+            - "Vecteur : les bases":
+                - Perspective cavalière: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/persp_cav.md"
+                - Droite et plan: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/dte_et_plan.md"
+                - Vecteur de l'espace: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/Vect_esp.md"
+                - Repère de l'espace: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/rep_esp.md"
+                - Equation paramétrique d'une droite: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/Eq_param.md"
+        - Limite de fonction:
+            - "Limite de fct : les bases":
+                - "Limite vers l'infini": "Cours/Terminale générale/Limite_fct/limite_fct_base/01_lim_fct_infinie.md"
+                - "Limite au voisinage d'un réel": "Cours/Terminale générale/Limite_fct/limite_fct_base/02_lim_fct_reel.md"
+                - "Limite et opérations": "Cours/Terminale générale/Limite_fct/limite_fct_base/03_lim_fct_op.md"
+                - "Limite et comparaison": "Cours/Terminale générale/Limite_fct/limite_fct_base/04_lim_fct_comp.md"
+            - "Limite de fct : au programme": 
+                - "Démonstration au programme" : "Cours/Terminale générale/Limite_fct/limite_fct_prog/lim_fct_dem.md" 
+        - Orthogonalité dans l'espace:
+            - "Orthogonalité : les bases":
+                - "Rappel : produit scalaire dans le plan": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/01_Rappel_pdt_scal_plan.md"
+                - "Espace et produit scalaire": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/02_pdt_scal_esp.md"
+                - "Vecteur normal": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/03_vect_normal.md"
+                - "Equation cartésienne": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/04_eq_cart_plan.md"
+            - "Orthogonalité : au programme":
+                - "Plan médiateur": "Cours/Terminale générale/Esp_ortho/Esp_ortho_prog/Plan_med.md"
     - Labo de math: 
         - Accueil: "Labo de math/c01.md"
         - "Liaison lycée/supérieur": "Labo de math/Liaison_lycée_sup/supérieur.md"
