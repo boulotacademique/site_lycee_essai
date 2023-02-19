@@ -1,5 +1,11 @@
 site_name: Les maths à Mimard
 site_author: Lycée Mimard
+site_url: https://boulotacademique.github.io/site_lycee_essai/
+
+repo_url: https://github.com/boulotacademique/site_lycee_essai
+edit_uri: ''
+
+docs_dir : docs
 
 # Repository
 use_directory_urls : false
@@ -29,12 +35,28 @@ theme:
     name: 'material'
     language: 'fr'
     palette:
+      - scheme: default
         primary: 'light green'
         accent: 'amber'
+        toggle:
+          icon: material/weather-sunny
+          name: Basculer en mode sombre
+      - scheme: slate
+        primary: 'light green'
+        accent: amber
+        toggle:
+          icon: material/weather-night
+          name: Basculer en mode clair
+
+
     features:
-        tabs : false
-        #- navigation.tabs
+        - navigation.instant
+        - navigation.tabs
+        - navigation.top
+        - toc.integrate
+        - header.autohide
         #- navigation.tabs.sticky
+    
 
 extra_css: 
     - 'Style/extra.css'
@@ -59,7 +81,7 @@ extra_javascript:
     - javascripts/mathjax.js
     - https://polyfill.io/v3/polyfill.min.js?features=es6
     - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    - js/reveal.js
+    - javascripts/reveal/reveal.js-master/js/reveal.js
 
     
     
@@ -68,6 +90,8 @@ extra_javascript:
 #https://github.com/Python-Markdown/markdown/wiki/Third-Party-Extensions
 
 markdown_extensions:
+    - abbr
+    - def_list
     - footnotes
     - tables
     - pymdownx.critic
@@ -79,8 +103,17 @@ markdown_extensions:
         custom_checkbox: true
         clickable_checkbox: true
     - pymdownx.details #https://facelessuser.github.io/pymdown-extensions/extensions/details/
+    - pymdownx.caret
+    - pymdownx.mark
+    - pymdownx.tilde
+    - pymdownx.highlight
+    - pymdownx.inlinehilite
+    # - pymdownx.snippets
     - pymdownx.superfences #https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
+    - pymdownx.tabbed:
+        alternate_style: true
     - pymdownx.emoji:
+          emoji_index: !!python/name:materialx.emoji.twemoji
           emoji_generator: !!python/name:pymdownx.emoji.to_svg 
           #https://facelessuser.github.io/pymdown-extensions/extensions/emoji/
           #https://www.emojicopy.com/
@@ -92,6 +125,11 @@ markdown_extensions:
         permalink: '' #'🔗'
         baselevel: 1
         separator: "_"
+
+plugins:
+    # - search
+    - mkdocs-jupyter:
+        include_source: true
 
 nav:
     - Accueil: "index.md"
@@ -171,4 +209,4 @@ nav:
     - Labo de math: 
         - Accueil: "Labo de math/c01.md"
         - "Liaison lycée/supérieur": "Labo de math/Liaison_lycée_sup/supérieur.md"
-        - "essai slide" : "Labo de math/Liaison_lycée_sup/essai_slide.md"
+        #- "essai slide" : "Labo de math/Liaison_lycée_sup/essai_slide.md"
