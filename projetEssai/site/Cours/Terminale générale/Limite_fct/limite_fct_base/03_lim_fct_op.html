@@ -1,0 +1,2065 @@
+
+
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Lycée Mimard">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.1">
+    
+    
+      
+        <title>Limite et opérations - Les maths à Mimard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.71dfd922.min.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.616af814.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#8bc34a">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../Style/extra.css">
+    
+      <link rel="stylesheet" href="../../../../Style/print.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-green" data-md-color-accent="amber">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#operation_sur_les_limites" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Les maths à Mimard" class="md-header-nav__button md-logo" aria-label="Les maths à Mimard">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Les maths à Mimard
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Limite et opérations
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../../index.html" class="md-tabs__link">
+        Accueil
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Premi%C3%A8re%20NSI/Pr%C3%A9sentation/c01.html" class="md-tabs__link">
+          Première NSI
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../index_term_G.html" class="md-tabs__link md-tabs__link--active">
+          Terminale générale
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../Labo%20de%20math/c01.html" class="md-tabs__link">
+          Labo de math
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Les maths à Mimard" class="md-nav__button md-logo" aria-label="Les maths à Mimard">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Les maths à Mimard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../index.html" title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Première NSI
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Première NSI" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Première NSI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Pr%C3%A9sentation/c01.html" title="Présentation" class="md-nav__link">
+      Présentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Les bases" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/ortho.html" title="Bien écrire en python" class="md-nav__link">
+      Bien écrire en python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/in_out.html" title="print/input" class="md-nav__link">
+      print/input
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/str.html" title="Chaine de caractères" class="md-nav__link">
+      Chaine de caractères
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/for.html" title="La boucle for" class="md-nav__link">
+      La boucle for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/if_elif.html" title="if, elif et les conditions" class="md-nav__link">
+      if, elif et les conditions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/while.html" title="La boucle while" class="md-nav__link">
+      La boucle while
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/list.html" title="Les listes" class="md-nav__link">
+      Les listes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Terminale générale
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terminale générale" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terminale générale
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../index_term_G.html" title="Accueil TGEN" class="md-nav__link">
+      Accueil TGEN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Dérivation, convexité, primitive
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dérivation, convexité, primitive" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Dérivation, convexité, primitive
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-1" type="checkbox" id="nav-3-2-1">
+    
+    <label class="md-nav__link" for="nav-3-2-1">
+      Dérivation : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dérivation : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Dérivation : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/01_deriv_base_tgte.html" title="Dérivation et tangente" class="md-nav__link">
+      Dérivation et tangente
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/02_deriv_base_formule.html" title="Dérivation et formule" class="md-nav__link">
+      Dérivation et formule
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/03_deriv_utilis.html" title="Utilisation de la dérivée" class="md-nav__link">
+      Utilisation de la dérivée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/04_deriv_composee.html" title="Composée de fonctions" class="md-nav__link">
+      Composée de fonctions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/05_Convexite.html" title="Convexité" class="md-nav__link">
+      Convexité
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-2" type="checkbox" id="nav-3-2-2">
+    
+    <label class="md-nav__link" for="nav-3-2-2">
+      Dérivation : au programme
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dérivation : au programme" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Dérivation : au programme
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Derivation_et_convexite/D%C3%A9rivation_au_prog/conv_ineg.html" title="Convexité et inégalités" class="md-nav__link">
+      Convexité et inégalités
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Derivation_et_convexite/D%C3%A9rivation_au_prog/dem_prog.html" title="Démonstration au programme" class="md-nav__link">
+      Démonstration au programme
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Derivation_et_convexite/D%C3%A9rivation_en_plus/D%C3%A9rivation_best.html" title="Dérivation : vers le supérieur" class="md-nav__link">
+      Dérivation : vers le supérieur
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Suite et récurrence
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Suite et récurrence" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Suite et récurrence
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3-1" type="checkbox" id="nav-3-3-1">
+    
+    <label class="md-nav__link" for="nav-3-3-1">
+      Suites : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Suites : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Suites : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/01_Rappels_sur_les_suites.html" title="Rappel sur les suites" class="md-nav__link">
+      Rappel sur les suites
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/02_Suites_et_python.html" title="Suites et python" class="md-nav__link">
+      Suites et python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/03_Suite_et_sens_de_variations.html" title="Suites et sens de variations" class="md-nav__link">
+      Suites et sens de variations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/04_Suites_aritmetiques.html" title="Suites arithmétiques" class="md-nav__link">
+      Suites arithmétiques
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/05_Suites_geometrique.html" title="Suites géométriques" class="md-nav__link">
+      Suites géométriques
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/06_Raisonnement_par_recurrence.html" title="Raisonnement par récurrence" class="md-nav__link">
+      Raisonnement par récurrence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/07_majoree_minoree_bornee.html" title="Suite majorée, minorée, bornée" class="md-nav__link">
+      Suite majorée, minorée, bornée
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Loi binomiale
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Loi binomiale" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Loi binomiale
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-1" type="checkbox" id="nav-3-4-1">
+    
+    <label class="md-nav__link" for="nav-3-4-1">
+      Probabilité : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Probabilité : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Probabilité : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Loi_binomiale/binom_bases/01_binom_rappel.html" title="Rappel" class="md-nav__link">
+      Rappel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Loi_binomiale/binom_bases/02_succ_ep_ind.html" title="Succession d'épreuves" class="md-nav__link">
+      Succession d'épreuves
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Loi_binomiale/binom_bases/03_loi_binom.html" title="Loi binomiale" class="md-nav__link">
+      Loi binomiale
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Loi_binomiale/binom_prog/binom_dem_prog.html" title="Probabilités : au programme" class="md-nav__link">
+      Probabilités : au programme
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      Limite de suite
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de suite" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de suite
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5-1" type="checkbox" id="nav-3-5-1">
+    
+    <label class="md-nav__link" for="nav-3-5-1">
+      Limite de suites : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de suites : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de suites : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/Limite_suite_base/01_Limite_d_une_suite.html" title="Limite d'une suite" class="md-nav__link">
+      Limite d'une suite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/Limite_suite_base/02_Limite_de_la_suite_qn.html" title="Limite de la suite $q^n$" class="md-nav__link">
+      Limite de la suite $q^n$
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/Limite_suite_base/03_Theoremes_d_operation.html" title="Limite et opérations" class="md-nav__link">
+      Limite et opérations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/Limite_suite_base/04_th_comp.html" title="Limite et comparaison" class="md-nav__link">
+      Limite et comparaison
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/lim_suite_prog/lim_suite_dem_prog.html" title="Limite de suites : au programme" class="md-nav__link">
+      Limite de suites : au programme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/Limite_de_suite_en_plus/limite_suite_best.html" title="Limite de suites : vers le supérieur" class="md-nav__link">
+      Limite de suites : vers le supérieur
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      Vecteur de l'espace
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Vecteur de l'espace" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Vecteur de l'espace
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6-1" type="checkbox" id="nav-3-6-1">
+    
+    <label class="md-nav__link" for="nav-3-6-1">
+      Vecteur : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Vecteur : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-6-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Vecteur : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Vecteur_esp/vect_esp_base/persp_cav.html" title="Perspective cavalière" class="md-nav__link">
+      Perspective cavalière
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Vecteur_esp/vect_esp_base/dte_et_plan.html" title="Droite et plan" class="md-nav__link">
+      Droite et plan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Vecteur_esp/vect_esp_base/Vect_esp.html" title="Vecteur de l'espace" class="md-nav__link">
+      Vecteur de l'espace
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Vecteur_esp/vect_esp_base/rep_esp.html" title="Repère de l'espace" class="md-nav__link">
+      Repère de l'espace
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Vecteur_esp/vect_esp_base/Eq_param.html" title="Equation paramétrique d'une droite" class="md-nav__link">
+      Equation paramétrique d'une droite
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7" checked>
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Limite de fonction
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de fonction" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de fonction
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-7-1" type="checkbox" id="nav-3-7-1" checked>
+    
+    <label class="md-nav__link" for="nav-3-7-1">
+      Limite de fct : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de fct : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-7-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de fct : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="01_lim_fct_infinie.html" title="Limite vers l'infini" class="md-nav__link">
+      Limite vers l'infini
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="02_lim_fct_reel.html" title="Limite au voisinage d'un réel" class="md-nav__link">
+      Limite au voisinage d'un réel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Limite et opérations
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="03_lim_fct_op.html" title="Limite et opérations" class="md-nav__link md-nav__link--active">
+      Limite et opérations
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resume_limites_de_references" class="md-nav__link">
+    Résumé : limites de références
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limite_et_operations" class="md-nav__link">
+    Limite et opérations
+  </a>
+  
+    <nav class="md-nav" aria-label="Limite et opérations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limite_dune_somme" class="md-nav__link">
+    Limite d'une somme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite_dun_produit" class="md-nav__link">
+    Limite d'un produit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite_de_linverse" class="md-nav__link">
+    Limite de l'inverse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite_dun_quotient" class="md-nav__link">
+    Limite d'un quotient
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resume_operations_sur_les_limites_de_fonctions" class="md-nav__link">
+    Résumé : Opérations sur les limites de fonctions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limite_et_composee" class="md-nav__link">
+    Limite et composée
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="04_lim_fct_comp.html" title="Limite et comparaison" class="md-nav__link">
+      Limite et comparaison
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-7-2" type="checkbox" id="nav-3-7-2">
+    
+    <label class="md-nav__link" for="nav-3-7-2">
+      Limite de fct : au programme
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de fct : au programme" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-7-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de fct : au programme
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../limite_fct_prog/lim_fct_dem.html" title="Démonstration au programme" class="md-nav__link">
+      Démonstration au programme
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-8" type="checkbox" id="nav-3-8">
+    
+    <label class="md-nav__link" for="nav-3-8">
+      Orthogonalité dans l'espace
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Orthogonalité dans l'espace" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Orthogonalité dans l'espace
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-8-1" type="checkbox" id="nav-3-8-1">
+    
+    <label class="md-nav__link" for="nav-3-8-1">
+      Orthogonalité : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Orthogonalité : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-8-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Orthogonalité : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Esp_ortho/Esp_ortho_base/01_Rappel_pdt_scal_plan.html" title="Rappel : produit scalaire dans le plan" class="md-nav__link">
+      Rappel : produit scalaire dans le plan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Esp_ortho/Esp_ortho_base/02_pdt_scal_esp.html" title="Espace et produit scalaire" class="md-nav__link">
+      Espace et produit scalaire
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Esp_ortho/Esp_ortho_base/03_vect_normal.html" title="Vecteur normal" class="md-nav__link">
+      Vecteur normal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Esp_ortho/Esp_ortho_base/04_eq_cart_plan.html" title="Equation cartésienne" class="md-nav__link">
+      Equation cartésienne
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-8-2" type="checkbox" id="nav-3-8-2">
+    
+    <label class="md-nav__link" for="nav-3-8-2">
+      Orthogonalité : au programme
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Orthogonalité : au programme" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-8-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Orthogonalité : au programme
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Esp_ortho/Esp_ortho_prog/Plan_med.html" title="Plan médiateur" class="md-nav__link">
+      Plan médiateur
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Labo de math
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Labo de math" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Labo de math
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Labo%20de%20math/c01.html" title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Labo%20de%20math/Liaison_lyc%C3%A9e_sup/sup%C3%A9rieur.html" title="Liaison lycée/supérieur" class="md-nav__link">
+      Liaison lycée/supérieur
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resume_limites_de_references" class="md-nav__link">
+    Résumé : limites de références
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limite_et_operations" class="md-nav__link">
+    Limite et opérations
+  </a>
+  
+    <nav class="md-nav" aria-label="Limite et opérations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limite_dune_somme" class="md-nav__link">
+    Limite d'une somme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite_dun_produit" class="md-nav__link">
+    Limite d'un produit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite_de_linverse" class="md-nav__link">
+    Limite de l'inverse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite_dun_quotient" class="md-nav__link">
+    Limite d'un quotient
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resume_operations_sur_les_limites_de_fonctions" class="md-nav__link">
+    Résumé : Opérations sur les limites de fonctions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limite_et_composee" class="md-nav__link">
+    Limite et composée
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="operation_sur_les_limites">Opération sur les limites<a class="headerlink" href="#operation_sur_les_limites" title="Permanent link"></a></h1>
+<h2 id="resume_limites_de_references">Résumé : limites de références<a class="headerlink" href="#resume_limites_de_references" title="Permanent link"></a></h2>
+<p><table class="AvecBordure" style="width:70%;margin:auto;"> 
+<tr>
+<td style="height:4em;"> <span class="arithmatex">\(\dlim{x}{+\infty}x^2=+ \infty\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{+\infty}x^3=+\infty\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{+\infty}x^p=+ \infty \ (\ p \in \N^*)\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{+\infty}\sqrt{x}=+ \infty\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{+\infty}e^x=+ \infty\)</span> </td>
+</tr>
+<tr>
+<td style="height:4em;"> <span class="arithmatex">\(\dlim{x}{-\infty}x^2=+ \infty\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{-\infty}x^3=-\infty\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{-\infty}x^p=+ \infty  \ (\ p \in \N^*, p \text{ pair })\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{-\infty}x^p=- \infty  \ (\ p \in \N^*, p \text{ impair })\)</span></td><td style="border-right:1px solid white;border-bottom:1px solid white"></td>
+</tr>
+<tr>
+<td style="height:4em;"> <span class="arithmatex">\(\dlim{x}{\pm\infty}\dfrac 1x=0\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{\pm\infty}\dfrac{1}{x^2}=0\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{\pm\infty}\dfrac{1}{x^n}=0\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{+\infty}\dfrac{1}{\sqrt{x}}=0\)</span></td><td style="border-right:1px solid white;border-bottom:1px solid white"></td>
+</tr>
+<tr>
+<td style="height:4em;"> <span class="arithmatex">\(\dlim{x}{0}\dfrac{1}{x^2}=+\infty\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{0}\dfrac{1}{x^n}=+\infty \ (\ n \in \N^* n \text{ pair })\)</span> </td><td style="border-right:1px solid white;"> </td><td style="border-right:1px solid white;"> </td><td style="border-right:1px solid white;border-bottom:1px solid white"></td>
+</tr>
+<tr>
+<td style="height:4em;"> <span class="arithmatex">\(\dlim{x}{0^+}\dfrac 1x=+\infty\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{0^-}\dfrac 1x=-\infty\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{0^+}\dfrac{1}{x^n}=+\infty \ (\ n \in \N^* n \text{ impair })\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{0^-}\dfrac{1}{x^n}=-\infty \ (\ n \in \N^* n \text{ impair })\)</span></td><td  style="border-right:1px solid white;border-bottom:1px solid white;"></td>
+</tr>
+ </table></p>
+<h2 id="limite_et_operations">Limite et opérations<a class="headerlink" href="#limite_et_operations" title="Permanent link"></a></h2>
+<p>Dans tout ce qui suit, <span class="arithmatex">\(\ell\)</span> et <span class="arithmatex">\(\ell'\)</span> désignent deux nombres réels <span class="arithmatex">\(a\)</span> désigne un réel ou <span class="arithmatex">\(+\infty\)</span> ou <span class="arithmatex">\(-\infty\)</span>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>La notation "FI" désigne une Forme Indéterminée, c'est à dire qu'on ne sait pas calculer par une opération élémentaire.</p>
+</div>
+<h3 id="limite_dune_somme">Limite d'une somme<a class="headerlink" href="#limite_dune_somme" title="Permanent link"></a></h3>
+<div class="admonition info">
+<p class="admonition-title">Théorème</p>
+<p><table class="AvecBordure" style="width:70%;margin:auto;"> 
+<tr>
+ <td>Si <span class="arithmatex">\(\lim\limits_{xn \to a}~f(x)=\cdots\)</span> </td><td> <span class="arithmatex">\(\ell\)</span> </td><td> <span class="arithmatex">\(\ell\)</span> </td><td> <span class="arithmatex">\(\ell\)</span> </td><td> <span class="arithmatex">\(+\infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span> </td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\text{et si }\lim\limits_{x \to a} g(x)=\cdots\)</span> </td><td> <span class="arithmatex">\(\ell'\)</span> </td><td> <span class="arithmatex">\(+\infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(+\infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span> </td><td> <span class="arithmatex">\(+\infty\)</span> </td>
+</tr>
+<tr>
+<td> alors <span class="arithmatex">\(\lim\limits_{x \to a}~(f(x) + g(x))=\cdots\)</span> </td><td> <span class="arithmatex">\(\ell+\ell'\)</span> </td><td> <span class="arithmatex">\(+\infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span> </td><td> <span class="arithmatex">\(+\infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span> </td><td> On ne peut pas conclure : <span class="arithmatex">\(FI\)</span> </td>
+</tr> 
+</table></p>
+</div>
+<h3 id="limite_dun_produit">Limite d'un produit<a class="headerlink" href="#limite_dun_produit" title="Permanent link"></a></h3>
+<div class="admonition info">
+<p class="admonition-title">Théorème</p>
+<p><table class="AvecBordure" style="width:70%;margin:auto;"> 
+<tr>
+ <td>Si <span class="arithmatex">\(\lim\limits_{x \to a}~f(x)=\cdots\)</span> </td><td> <span class="arithmatex">\(\ell\)</span> </td><td> <span class="arithmatex">\(\ell&gt;0\)</span> </td><td> <span class="arithmatex">\(\ell&gt;0\)</span></td><td><span class="arithmatex">\(\ell&lt;0\)</span></td><td><span class="arithmatex">\(\ell&lt;0\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(0\)</span></td><td>0</td>
+</tr>
+<tr>
+<td> et si <span class="arithmatex">\(\lim\limits_{x \to a}~g(x)=\cdots\)</span></td><td><span class="arithmatex">\(\ell'\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td>
+</tr>
+<tr>
+<td>alors <span class="arithmatex">\(\lim\limits_{x \to a}~(f(x) \times g(x))=\cdots\)</span></td><td><span class="arithmatex">\(\ell\times\ell'\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(FI\)</span></td><td><span class="arithmatex">\(FI\)</span></td>
+</tr>
+<tr>
+<td colspan="2"  style="border-left:1px solid white;border-bottom:1px solid white;"> </td><td colspan="4"> Règle des signes </td><td colspan="3"> Règle des signes </td><td style="border-right:1px solid white;border-bottom:1px solid white;"> </td><td style="border-right:1px solid white;border-bottom:1px solid white;"> </td>
+</tr>
+</table></p>
+</div>
+<h3 id="limite_de_linverse">Limite de l'inverse<a class="headerlink" href="#limite_de_linverse" title="Permanent link"></a></h3>
+<div class="admonition info">
+<p class="admonition-title">Théorème</p>
+<p><table class="AvecBordure" style="width:70%;margin:auto;"> 
+<tr>
+ <td>Si  <span class="arithmatex">\(\lim\limits_{x \to a}~f(x)\)</span>  = </td><td> <span class="arithmatex">\(\ell\neq  0\)</span></td><td><span class="arithmatex">\(0\)</span>  avec <span class="arithmatex">\(f(x)&gt;0\)</span> au voisinage de <span class="arithmatex">\(a\)</span></td><td><span class="arithmatex">\(0\)</span>  avec <span class="arithmatex">\(f(x)&lt;0\)</span> au voisinage de <span class="arithmatex">\(a\)</span></td><td><span class="arithmatex">\(+\infty\)</span> ou <span class="arithmatex">\(-\infty\)</span></td>
+</tr>
+<tr>
+<td>alors  <span class="arithmatex">\(\lim\limits_{x \to a }~\dfrac{1}{f(x)}\)</span>=</td><td><span class="arithmatex">\(\dfrac{1}{\ell}\)</span></td><td><span class="arithmatex">\(+\infty\)</span></td><td><span class="arithmatex">\(-\infty\)</span></td><td><span class="arithmatex">\(0\)</span></td>
+</tr>
+</table></p>
+</div>
+<h3 id="limite_dun_quotient">Limite d'un quotient<a class="headerlink" href="#limite_dun_quotient" title="Permanent link"></a></h3>
+<details class="- tip"><summary>Méthode</summary><p>Parfois, pour chercher la limite d'un quotient <span class="arithmatex">\(\dfrac{u_n}{v_n}\)</span> , on l'écrit comme le produit <span class="arithmatex">\(u_n\times \dfrac{1}{v_n}\)</span>.</p>
+</details>
+<div class="admonition info">
+<p class="admonition-title">Théorème</p>
+<p>Pour la limite d'un quotient <span class="arithmatex">\(\frac{f(x)}{g(x)}\)</span>, distinguons deux cas :</p>
+<ul>
+<li>Cas où <span class="arithmatex">\(\lim\limits_{x \to a} g(x) \neq 0\)</span> :</li>
+</ul>
+<p><table class="AvecBordure" style="width:70%;margin:auto;"> 
+<tr>
+<td>Si <span class="arithmatex">\(\lim\limits_{x \to a} f(x) =\)</span> </td><td> <span class="arithmatex">\(\ell\)</span> </td><td> <span class="arithmatex">\(\ell\)</span> </td><td> <span class="arithmatex">\(+\infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span> </td><td> <span class="arithmatex">\(+\infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span> </td><td> <span class="arithmatex">\(+\infty\)</span>  ou  <span class="arithmatex">\(-\infty\)</span></td>
+</tr>
+<tr>
+<td>Si <span class="arithmatex">\(\lim\limits_{x \to a} g(x) =\)</span> </td><td> <span class="arithmatex">\(\ell' \neq 0\)</span> </td><td> <span class="arithmatex">\(+ \infty\)</span>  ou <span class="arithmatex">\(-\infty\)</span> </td><td> <span class="arithmatex">\(\ell' &gt; 0\)</span> </td><td> <span class="arithmatex">\(\ell' &gt; 0\)</span> </td><td> <span class="arithmatex">\(\ell' &lt; 0\)</span> </td><td> <span class="arithmatex">\(\ell' &lt; 0\)</span> </td><td> <span class="arithmatex">\(+ \infty\)</span> ou <span class="arithmatex">\(-\infty\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\lim\limits_{x \to a} \left( \frac{f(x)}{g(x)} \right) =\)</span> </td><td> <span class="arithmatex">\(\frac{\ell}{\ell '}\)</span> </td><td> <span class="arithmatex">\(0\)</span> </td><td> <span class="arithmatex">\(+\infty\)</span> </td><td> <span class="arithmatex">\(- \infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span> </td><td> <span class="arithmatex">\(+\infty\)</span> </td><td>  FI </td>
+</tr>
+</table></p>
+<ul>
+<li>Cas où <span class="arithmatex">\(\lim\limits_{x \to a} g(x) = 0\)</span></li>
+</ul>
+<p><table class="AvecBordure"  style="width:70%;margin:auto;"> 
+<tr>
+<td>Si <span class="arithmatex">\(\lim\limits_{x \to a} f(x) =\)</span> </td><td> <span class="arithmatex">\(\ell&gt;0\)</span> ou <span class="arithmatex">\(+ \infty\)</span> </td><td> <span class="arithmatex">\(\ell&gt;0\)</span> ou <span class="arithmatex">\(+ \infty\)</span> </td><td> <span class="arithmatex">\(\ell&lt;0\)</span> ou <span class="arithmatex">\(- \infty\)</span> </td><td> <span class="arithmatex">\(\ell&lt;0\)</span> ou <span class="arithmatex">\(- \infty\)</span> </td><td> <span class="arithmatex">\(0\)</span> </td>
+</tr>
+<tr>
+<td>Si <span class="arithmatex">\(\lim\limits_{x \to a} g(x) =\)</span> </td><td> <span class="arithmatex">\(0\)</span> en restant positif </td><td> <span class="arithmatex">\(0\)</span> en restant négatif</td><td> <span class="arithmatex">\(0\)</span> en restant positif </td><td> <span class="arithmatex">\(0\)</span> en restant négatif </td><td> <span class="arithmatex">\(0\)</span> </td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\lim\limits_{x \to a} \left( \frac{f(x)}{g(x)} \right) =\)</span> </td><td> <span class="arithmatex">\(+\infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span> </td><td> <span class="arithmatex">\(-\infty\)</span> </td><td> <span class="arithmatex">\(+ \infty\)</span> </td><td>  FI </td>
+</tr>
+<tr>
+<td style="border-left:1px solid white;border-bottom:1px solid white;"></td><td colspan="4"> Règle des signes </td><td style="border-right:1px solid white;border-bottom:1px solid white;"> </td>
+</tr>
+</table></p>
+</div>
+<details class="- example"><summary>Exemple</summary><ol>
+<li><span class="arithmatex">\(\lim\limits_{x \to 0}~\left(e^x+x^3\right)\)</span> ?</li>
+<li><span class="arithmatex">\(\lim\limits_{x \to -\infty}\left(\dfrac{1}{x}+x^2\right)=\)</span>?</li>
+<li><span class="arithmatex">\(\lim\limits_{x \to +\infty}\left(e^ x+x^2\right)\)</span> = ?</li>
+<li><span class="arithmatex">\(\lim\limits_{x \to -\infty}\left(x+x^3\right)=\)</span> ?</li>
+<li><span class="arithmatex">\(\lim\limits_{x \to -\infty}\left(x^2+x^3\right)\)</span>  ?</li>
+</ol>
+<details class="- done"><summary>Réponse</summary><ol>
+<li><span class="arithmatex">\(\Lim{\lim\limits_{x \to 0}~e^x&amp;=&amp; 1}{\lim\limits_{x \to 0}~x^3&amp;=&amp; 0 } \quad \text{ par somme}\quad  \lim\limits_{x \to 0}~\left(e^x+x^3\right)= 1\)</span>.</li>
+<li><span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~\dfrac{1}{x}&amp;=&amp;0^- }{\lim\limits_{x \to -\infty}~x^2&amp;=&amp; +\infty } \quad\text{ par somme}\quad  \lim\limits_{x \to -\infty}\left(\dfrac{1}{x}+x^2\right)=+\infty\)</span></li>
+<li><span class="arithmatex">\(\Lim{\lim\limits_{x \to +\infty}~e^x&amp;=&amp; +\infty }{\lim\limits_{x \to +\infty}~x^2&amp;=&amp; {\color{reponse} +\infty }} \quad \text{ par somme}\quad \lim\limits_{x \to +\infty}\left(e^x+x^2\right)={\color{reponse} +\infty }\)</span>.</li>
+<li><span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~x&amp;=&amp; {\color{reponse}-\infty}}{\lim\limits_{x \to -\infty}~x^3&amp;=&amp;{\color{reponse} -\infty }} \quad \text{ par somme}\quad \lim\limits_{x \to -\infty}\left(x+x^3\right)={\color{reponse} -\infty }\)</span>.</li>
+<li><span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~x^2&amp;=&amp; {\color{reponse} +\infty}}{\lim\limits_{x \to -\infty}~x^3&amp;=&amp; {\color{reponse} -\infty }} \quad \text{ par somme}\quad \lim\limits_{x \to -\infty}\left(x^2+x^3\right)\)</span>  est une forme indéterminée du type &laquo; <span class="arithmatex">\(\infty-\infty\)</span> &raquo;. Seule une étude particulière permet de lever l'indétermination.</li>
+</ol>
+<details class="- tip"><summary>Lever une FI avec une somme : astuce</summary><p>On transforme l'expression en factorisant par le terme prépondérant.</p>
+<p>Pour un polynôme, le terme prépondérant est le terme de plus haut degré.</p>
+</details>
+<p>Pour <span class="arithmatex">\(x\neq0\)</span> , <span class="arithmatex">\(x^2+x^3= x^3\left(\dfrac1x+1\right)\)</span>.</p>
+<p>Or <span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~x^3&amp;=&amp;-\infty}{\lim\limits_{x \to -\infty}~\dfrac1x+1&amp;=&amp;1} \quad \lim\limits_{x \to -\infty}\left(x^2+x^3\right)=-\infty\)</span></p>
+</details>
+</details>
+<div class="admonition info">
+<p class="admonition-title">Pour <strong>les polynômes</strong> au voisinage de <strong>l'infini</strong> !</p>
+<p>La limite  d'une  <strong>fonction polynôme</strong> en <span class="arithmatex">\(+ \infty\)</span> et en <span class="arithmatex">\(-\infty\)</span> est la limite  de son terme de plus haut degré.</p>
+</div>
+<details class="- example"><summary>Exemple</summary><p>En utilisant le théorème précédent, trouver  la limite en <span class="arithmatex">\(\pm \infty\)</span> de  <span class="arithmatex">\(3x^3+2x+1\)</span>.</p>
+<details class="- done"><summary>Réponse</summary><p><span class="arithmatex">\(\dlim{x}{-\infty} 3x^3+2x+1 = \dlim{x}{-\infty} 3x^3=-\infty\)</span>  et <span class="arithmatex">\(\dlim{x}{+\infty} 3x^3+2x+1 = \dlim{x}{-\infty} 3x^3=+\infty\)</span>.</p>
+</details>
+</details>
+<details class="- example"><summary>Exemple</summary><ol>
+<li><span class="arithmatex">\(\lim\limits_{x \to 0}~[(e^x+3)\times(e^x-2)]\)</span> ?</li>
+<li><span class="arithmatex">\(\lim\limits_{x \to 0^+}\left[(x-3)\times \dfrac{1}{x}\right]\)</span> ?</li>
+<li><span class="arithmatex">\(\lim\limits_{x \to -\infty}[(x-1)\times x^3]\)</span> ?</li>
+<li><span class="arithmatex">\(\lim\limits_{x \to -\infty}\left[(x^2+1)\times \dfrac{1}{x}\right]\)</span>?</li>
+</ol>
+<details class="- done"><summary>Réponse</summary><ol>
+<li><span class="arithmatex">\(\Lim{\lim\limits_{x \to 0}~(e^x+3)&amp;=&amp;{\color{reponse} 4} }{\lim\limits_{x\to 0}~(e^x-2)&amp;=&amp;{\color{reponse} -1}} \quad \lim\limits_{x \to 0}~[(e^x+3)\times(e^x-2)]={\color{reponse} -4}\)</span>.</li>
+<li><span class="arithmatex">\(\Lim{\lim\limits_{x \to 0^+}~(x-3)&amp;=&amp;{\color{reponse} -3 }}{\lim\limits_{x \to 0^+}~\dfrac{1}{x}&amp;=&amp; {\color{reponse} +\infty }} \quad \lim\limits_{x \to 0^+}\left[(x-3)\times \dfrac{1}{x}\right]= {\color{reponse}-\infty}\)</span></li>
+<li><span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~(x-1) &amp;=&amp; {\color{reponse}-\infty}}{\lim\limits_{x \to -\infty}~x^3&amp;=&amp; {\color{reponse}-\infty}} \quad \lim\limits_{x \to -\infty}[(x-1)\times x^3]={\color{reponse}+\infty}\)</span>. </li>
+<li><span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~(x^2+1)&amp;=&amp;{\color{reponse} +\infty}}{\lim\limits_{x \to -\infty}~\dfrac{1}{x}&amp;=&amp;{\color{reponse} 0^- }} \quad \lim\limits_{x \to -\infty}\left[(x^2+1)\times \dfrac{1}{x}\right]\)</span>  est une forme indéterminée du type &laquo; <span class="arithmatex">\(0\times \infty\)</span> &raquo;</li>
+</ol>
+<details class="- tip"><summary>Lever une FI avec un produit : astuce</summary><p>On peut essayer de développer !</p>
+</details>
+<p><span class="arithmatex">\(f(x)=(x^2+1)\dfrac{1}{x}={\color{reponse}x+\dfrac{1}{x}}\)</span>.</p>
+<p><span class="arithmatex">\(\Lim{\lim\limits_{x\to -\infty}~x&amp;=&amp;-\infty}{\lim\limits_{x\to -\infty}~\dfrac{1}{x}&amp;=&amp;0}\)</span> d'où <span class="arithmatex">\(\lim\limits_{x\to -\infty}f(x)=-\infty\)</span>.</p>
+</details>
+</details>
+<details class="- example"><summary>Exemple</summary><p><span class="arithmatex">\(f\)</span> est définie pour <span class="arithmatex">\(x\neq 2\)</span> par <span class="arithmatex">\(f(x) =\dfrac{1}{2-x}\)</span>. Déterminer <span class="arithmatex">\(\lim\limits_{x \to 2}\left(\dfrac{1}{2-x}\right)\)</span>?</p>
+<details class="- done"><summary>Réponse</summary><p>Comme <span class="arithmatex">\(\dlim{x}{2} 2-x = 0\)</span>, il faut étudier le signe de la fonction <span class="arithmatex">\(f(x) = \dfrac{1}{2-x}\)</span> <em>au voisinage de</em> 2. Or <span class="arithmatex">\(1&gt;0\)</span> au voisinage de 2 (et sur tout <span class="arithmatex">\(\R\)</span>). Il suffit donc d'étudier le signe de <span class="arithmatex">\(2-x\)</span>.</p>
+<p><a href="../Image/Cours_011.png"><img alt="tab de signe" class="Center VignetteMed" src="../Image/Cours_011.png" /></a></p>
+<p><span class="arithmatex">\(\lim\limits_{x \to 2^+}~(2-x)={\color{reponse}0^-}    \quad \lim\limits_{x \to 2^+}~\dfrac{1}{2-x}={\color{reponse}-\infty }\)</span>.</p>
+<p><span class="arithmatex">\(\lim\limits_{x \to 2^-}~(2-x)={\color{reponse}0^+}    \quad \lim\limits_{x \to 2^-}~\dfrac{1}{2-x}={\color{reponse}+\infty}\)</span>.</p>
+</details>
+</details>
+<details class="- example"><summary>Exemple</summary><ol>
+<li><span class="arithmatex">\(\lim\limits_{x \to -\infty}~\left(\dfrac{e^x+3}{e^x-2}\right)\)</span> ?</li>
+<li><span class="arithmatex">\(\lim\limits_{x \to -\infty}~\left(\frac{\frac{1}{x}-3}{x^2}\right)?\)</span> ?</li>
+<li><span class="arithmatex">\(\lim\limits_{x \to 3}\left(\dfrac{x-4}{3-x}\right)\)</span> ?</li>
+<li><span class="arithmatex">\(\dlim{x}{3}=\dfrac{2x-5}{-x^2+3x}\)</span> ?</li>
+<li><span class="arithmatex">\(\lim\limits_{x \to -\infty}\left(\dfrac{x-1}{x^3-2}\right)\)</span>  ?</li>
+</ol>
+<details class="- done"><summary>Réponse</summary><p><ol>
+<li> <span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~(e^x+3)={\color{reponse}3}}{\lim\limits_{x\to -\infty}~(e^x-2)={\color{reponse}-2}}\)</span> \quad par quotient <span class="arithmatex">\(\lim\limits_{x \to -\infty}~\left(\dfrac{e^x+3}{e^x-2}\right)={\color{reponse} -\dfrac32}\)</span>.</li>
+<li> <span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~\frac{1}{x}-3={\color{reponse}-3}}{\lim\limits_{x\to -\infty}~x^2={\color{reponse}+\infty} }\)</span> \quad par quotient <span class="arithmatex">\(\lim\limits_{x \to -\infty}~\left(\dfrac{\frac{1}{x}-3}{x^2}\right)={\color{reponse} 0}\)</span>.</li>
+<li> Quand <span class="arithmatex">\(x\)</span> tend vers 3, le dénominateur tend vers 0 . On doit étudier le signe de <span class="arithmatex">\(f(x) = \dfrac{x-4}{3-x}\)</span> au voisinage de 3. Or <span class="arithmatex">\(x-4\)</span> est proche de <span class="arithmatex">\(3-4=-1\)</span> au voisinage de <span class="arithmatex">\(3\)</span>. Il est donc inutile de faire un tableau de signe pour le numérateur ! </p>
+<p><a href="../Image/Cours_012.png"><img alt="tab de signe" class="Center VignetteMed" src="../Image/Cours_012.png" /></a></p>
+<p><span class="arithmatex">\(\Lim{\lim\limits_{x \to 3^+}~x-4={\color{reponse}-1}}{\lim\limits_{x \to 3^+}~3-x={\color{reponse} 0^-}} \quad \text{ par quotient } \lim\limits_{x \to 3^+}\left(\dfrac{x-4}{3-x}\right)={\color{reponse}+\infty}\)</span>.</p>
+<p><span class="arithmatex">\(\Lim{\lim\limits_{x \to 3^-}~x-4={\color{reponse}-1}}{\lim\limits_{x \to 3^-}~3-x={\color{reponse} 0^+ } } \quad \text{ par quotient } \lim\limits_{x \to 3^-}\left(\dfrac{x-4}{3-x}\right)={\color{reponse} -\infty}\)</span>.</li>
+<li> Quand <span class="arithmatex">\(x\)</span> tend vers 3, le dénominateur tend vers 0 . On doit étudier le signe de <span class="arithmatex">\(-x^2+3x\)</span> (en effet, au voisinage de <span class="arithmatex">\(3\)</span>, <span class="arithmatex">\(2x-5\)</span> est proche de <span class="arithmatex">\(2\times 3 -5 =1\)</span>).</p>
+<p><a href="../Image/Cours_013.png"><img alt="tab de signe" class="Center VignetteMed" src="../Image/Cours_013.png" style="text-align:center;width:40%;" /></a></p>
+<p><span class="arithmatex">\(\Lim{\dlim{x}{3}2x-5=1}{\dlim{x}{3^-}-x^2+3x={\color{reponse}0^+} }\)</span>\quad par quotient <span class="arithmatex">\(\dlim{x}{3^-}f(x)={\color{reponse}+\infty}\)</span>.</p>
+<p><span class="arithmatex">\(\Lim{\dlim{x}{3}2x-5=1}{\dlim{x}{3^+}-x^2+3x={\color{reponse}0^-} }\)</span>\quad par quotient <span class="arithmatex">\(\dlim{x}{3^+}f(x)={\color{reponse}-\infty }\)</span>.
+</li>
+<li> <span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~(x-1)={\color{reponse}-\infty}}{\lim\limits_{x\to -\infty}~(x^3-2)={\color{reponse}-\infty}}\)</span> par quotient $ \lim\limits_{x \to -\infty}\left(\dfrac{x-1}{x^3-2}\right)$   est une forme indéterminée du type &laquo; <span class="arithmatex">\(0\times {\infty}\)</span> &raquo;</p>
+<details class="- tip"><summary>Lever une FI pour un quotient : astuce</summary><p>On transforme l'expression en mettant en facteur le terme prépondérant au numérateur et au dénominateur. Puis on simplifie !</p>
+</details>
+<p>Pour <span class="arithmatex">\(x\neq0\)</span> , on a <span class="arithmatex">\(\dfrac{x-1}{x^3-2}={\color{reponse}\dfrac{x\left(1-\dfrac{1}{x}\right)}{x^3\left( 1 - \dfrac{2}{x^3}\right)}=\dfrac{\left(1-\dfrac1x\right)}{1 - \dfrac{2}{x^3}} \times \dfrac{1}{x^2}}\)</span></p>
+<p><span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~1-\dfrac1x&amp;=&amp;{\color{reponse} 1}}{\lim\limits_{x \to -\infty}~1 - \dfrac{2}{x^3}&amp;=&amp; {\color{reponse} 1}} \quad \text{ par quotient } \lim\limits_{x \to -\infty}\left(\dfrac{1-\dfrac{1}{x}}{1 - \dfrac{2}{x^3}}\right)= {\color{reponse} 1}\)</span></p>
+<p><span class="arithmatex">\(\dlim{x}{-\infty} \dfrac{1}{x^2} = 0\)</span>. Ainsi, <span class="arithmatex">\(\dlim{x}{-\infty} \left(\dfrac{x-1}{x^3-2}\right)=0\)</span>.
+</li>
+</ol></p>
+</details>
+</details>
+<details class="- tip"><summary>Limite d'une <strong>fonction rationnelle</strong> au voisinage de <strong>l'infini</strong></summary><p>La limite en <span class="arithmatex">\(+\infty\)</span> et en <span class="arithmatex">\(-\infty\)</span>  <strong>d'une fonction rationnelle</strong> (quotient de deux fonctions polynômes)  est la limite du quotient des  termes de plus haut degré du numérateur et du dénominateur (pensez à simplifier).</p>
+</details>
+<details class="- example"><summary>Exemple</summary><ol>
+<li><span class="arithmatex">\(\dlim{x}{-\infty}\dfrac{x+4}{x^2+5}\)</span> ?</li>
+<li><span class="arithmatex">\(\dlim{x}{+\infty}\dfrac{5x-7}{2x+1}\)</span> ?</li>
+<li><span class="arithmatex">\(\lim\limits_{x\to -\infty}~\left(\dfrac{x^2+2x+1}{2x^2-3}\right)\)</span> ?</li>
+</ol>
+<details class="- done"><summary>Réponse</summary><p>AFAIRE</p>
+</details>
+</details>
+<details class="- example"><summary>Exemple d'une FI &laquo; <span class="arithmatex">\(\dfrac{0}{0}\)</span> &raquo; </summary><p><span class="arithmatex">\(\lim\limits_{x \to 0}~\left(\dfrac{x^2}{\sqrt{x}}\right)\)</span></p>
+<details class="- done"><summary>Réponse</summary><p><span class="arithmatex">\(\Lim{\lim\limits_{x \to 0}~x^2&amp;=&amp; {\color{reponse} 0} }{\lim\limits_{x \to 0}~\sqrt{x}&amp;=&amp; {\color{reponse} 0} } \quad \lim\limits_{x \to 0}~\left(\dfrac{x^2}{\sqrt{x}}\right)\)</span> est une forme indéterminée  du type &laquo; <span class="arithmatex">\(\dfrac{0}{0}\)</span> &raquo;.</p>
+<p><span class="arithmatex">\(\dfrac{x^2}{\sqrt{x}}={\color{reponse}\dfrac{x^2\sqrt{x}}{x}=x\sqrt{x}}\)</span>.</p>
+<p><span class="arithmatex">\(\Lim{\lim\limits_{x \to 0}~x&amp;=&amp; {\color{reponse} 0} }{\lim\limits_{x \to 0}~\sqrt{x}&amp;=&amp; {\color{reponse} 0} } \quad \lim\limits_{x \to 0}~x\sqrt{x}={\color{reponse} 0}\)</span>.</p>
+</details>
+</details>
+<h3 id="resume_operations_sur_les_limites_de_fonctions">Résumé : Opérations sur les limites de fonctions<a class="headerlink" href="#resume_operations_sur_les_limites_de_fonctions" title="Permanent link"></a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Opérations sur les limites</p>
+<p>Soient <span class="arithmatex">\(f\)</span> et <span class="arithmatex">\(g\)</span> deux fonctions  définies sur un intervalle I et admettant <span class="arithmatex">\(\ell\)</span> et <span class="arithmatex">\(\ell'\)</span> pour limite en <span class="arithmatex">\(a\)</span> (<span class="arithmatex">\(\ell\)</span>, <span class="arithmatex">\(\ell'\)</span>, <span class="arithmatex">\(a\)</span> sont  finis ou infinis).</p>
+<ul>
+<li>La somme de deux fonctions <span class="arithmatex">\(f+g\)</span>   a pour limite en a  ,la somme des limites <span class="arithmatex">\(\ell +\ell'\)</span>   sauf si l'on obtient &laquo; <span class="arithmatex">\(\infty-\infty\)</span>&raquo;</li>
+<li>Le produit  de deux fonctions<span class="arithmatex">\(f\times g\)</span>   a pour limite en a  le produit des limites <span class="arithmatex">\(\ell\times \ell\)</span>' (règle des signes)   sauf si l'on obtient &laquo; <span class="arithmatex">\(0\times \infty\)</span> &raquo;</li>
+<li>si <span class="arithmatex">\(k\)</span> est un nombre réel alors <span class="arithmatex">\(\dfrac{k}{g}\)</span> a pour limite en "a", <span class="arithmatex">\(\dfrac{k}{\ell'}\)</span> (règle des signes ) en particulier si <span class="arithmatex">\(\left\lbrace\begin{array}{ l} {\dlim{x}{a} g(x) =\,  \text{ alors }\,   \dlim{x}{a} \dfrac{k}{g(x)}=\pm \infty}\\ { \dlim{x}{a} g(x) =\pm \infty\,  \text{ alors }\,  \dlim{x}{a} \dfrac{k}{g(x)}=0} \end{array}\right.\)</span></li>
+<li>Pour le  quotient de deux fonctions <span class="arithmatex">\(\dfrac{f}{g}\)</span> on se ramène aux cas précédents en écrivant <span class="arithmatex">\(\dfrac{f}{g}=f\times \dfrac{1}{g}\)</span>  sauf si l'on obtient &laquo; <span class="arithmatex">\(\dfrac{0}{0}\)</span> &raquo; ou \&laquo; <span class="arithmatex">\(\dfrac{\infty}{\infty}\)</span> &raquo;</li>
+<li>Pour lever les indéterminations si l'expression est factorisée on développe et si l'expression est développée on factorise par le terme prépondérant.</li>
+<li>Pour les <strong>fonctions polynômes</strong> au voisinage de <strong>l'infini</strong> : la limite  d'une  <strong>fonction polynôme</strong> en <span class="arithmatex">\(+ \infty\)</span> et en <span class="arithmatex">\(-\infty\)</span> est la limite  de son terme de plus haut degré.</li>
+<li>Pour les <strong>fonctions rationnelles</strong> au voisinage de <strong>l'infini</strong> : la limite en <span class="arithmatex">\(+\infty\)</span> et en <span class="arithmatex">\(-\infty\)</span>  <strong>d'une fonction rationnelle</strong> (quotient de deux fonctions polynômes)  est la limite du quotient des  termes de plus haut degré du numérateur et du dénominateur (penser à simplifier).  </li>
+</ul>
+</div>
+<h2 id="limite_et_composee">Limite et composée<a class="headerlink" href="#limite_et_composee" title="Permanent link"></a></h2>
+<p>Soit <span class="arithmatex">\(f\)</span> la fonction définie par :<span class="arithmatex">\(f(x)= \sqrt{-2x+4}\)</span></p>
+<p><span class="arithmatex">\(x \stackrel{u}{\longmapsto} u(x){\color{reponse}=-2x+4 =X} \stackrel{v}{\longmapsto} v(X){\color{reponse}=\sqrt{X}=\sqrt{-2x+4}=f(x)}\)</span>.</p>
+<p>Ainsi, on a <span class="arithmatex">\(f(x)={\color{reponse}v[u(x)]=\sqrt{-2x+4}}\)</span> et  <span class="arithmatex">\(f\)</span> est définie pour tous les <span class="arithmatex">\(x\)</span> tels que <span class="arithmatex">\(-2x+4 \geq 0\)</span> c'est-à-dire <span class="arithmatex">\(x \leq 2\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Limite d'une composée</p>
+<p>Soient deux fonctions : <span class="arithmatex">\(u\)</span> , <span class="arithmatex">\(v\)</span> et <span class="arithmatex">\(f\)</span> la composée de <span class="arithmatex">\(u\)</span> suivie de <span class="arithmatex">\(v\)</span>.  <span class="arithmatex">\(a\)</span> , <span class="arithmatex">\(b\)</span> , <span class="arithmatex">\(c\)</span> désignent des réels ou <span class="arithmatex">\(+\infty\)</span> ou <span class="arithmatex">\(-\infty\)</span></p>
+<p>Si <span class="arithmatex">\(\quad \Lim{
+    \lim\limits_{
+        x \to {
+            \color{
+                red
+            }
+            a
+        }
+    }
+    u(x)={
+        \color{
+            blue
+        }
+        b
+    }
+}{
+    \lim\limits_{
+        X \to {
+            \color{
+                blue
+            }
+            b
+        }
+    }
+    v(X)= {\color{green} c}
+}\)</span>
+alors par composition <span class="arithmatex">\(\lim\limits_{
+    x \to {
+        \color{
+            red
+        }
+        a
+    }
+} v \left(u(x) \right)= {\color{green} c}\)</span>.</p>
+</div>
+<details class="- example"><summary>Exemple</summary><p>Soit <span class="arithmatex">\(f\)</span> la fonction définie sur <span class="arithmatex">\(]-\infty, 2[\)</span> par <span class="arithmatex">\(f(x) =\sqrt{-2x+4}\)</span>.
+Déterminer la limite en 2.</p>
+<details class="- done"><summary>Réponse</summary><p><span class="arithmatex">\(\Lim{\lim\limits_{x \to {\color{red}2}}~(-2x+4)&amp;=&amp; {\color{blue}0} }{\lim\limits_{X\to {\color{blue}0} }~\sqrt{X}&amp;=&amp; {\color{green}0}} \quad \lim\limits_{x \to 2}~\sqrt{-2x+4}= {\color{green}0}\)</span>.</p>
+</details>
+</details>
+<details class="- example"><summary>Exemple</summary><p>Soit <span class="arithmatex">\(g\)</span> la fonction définie sur <span class="arithmatex">\(\R-\{1\}\)</span> par <span class="arithmatex">\(g(x) = \exp\left(\frac{x+3}{1-x} \right)\)</span>.</p>
+<ol>
+<li>Déterminer la limite en <span class="arithmatex">\(-\infty\)</span>.</li>
+<li>Déterminer la limite en 1.</li>
+</ol>
+<details class="- done"><summary>Réponse</summary><p><ol>
+<li> <span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~\dfrac{x+3}{1-x}&amp; = &amp;\lim\limits_{x \to -\infty} \dfrac{x}{-x}=\lim\limits_{x \to -\infty} -1={\color{blue}-1} }{ \lim\limits_{X\to {\color{blue}-1}} e^X &amp;=&amp; {\color{green} \ex^{-1} }} \quad \lim\limits_{x \to -\infty}~\ex^{\frac{x+3}{1-x}}= {\color{green} \ex^{-1} }\)</span>
+</li>
+<li> Etude du signe de <span class="arithmatex">\(1-x\)</span> :</p>
+<p><a href="../Image/Cours_014.png"><img alt="tab signe" class="Center VignetteMed" src="../Image/Cours_014.png" /></a></p>
+<p><span class="arithmatex">\(\Lim{\Lim{\lim\limits_{x \to 1^+}~x+3&amp;=&amp;{\color{reponse}4}}{\lim\limits_{x \to 1^+}~1-x&amp;=&amp;{\color{reponse}0^-} }\text{donc} \quad \lim\limits_{x \to 1^+} \dfrac{x+3}{1-x}={\color{reponse}-\infty} }{\lim\limits_{X\to -\infty}~e^X={\color{reponse}0}&amp;&amp; }\quad \lim\limits_{x \to 1^+}~\ex^{\frac{x+3}{1-x}}={\color{reponse} 0}\)</span>.</p>
+<p><span class="arithmatex">\(\Lim{\Lim{\lim\limits_{x \to 1^-}~x+3&amp;=&amp;{\color{reponse} 4}}{\lim\limits_{x \to 1^-}~1-x&amp;=&amp;{\color{reponse}0^+} }\text{donc} \quad \lim\limits_{x \to 1^+}(x+3)\times \dfrac{1}{1-x}={\color{reponse}+\infty} }{\lim\limits_{X\to +\infty}~e^X={\color{reponse}+\infty}&amp;&amp;}\quad \lim\limits_{x \to 1^-}~e^{\frac{x+3}{1-x}}={\color{reponse}+\infty}\)</span>.</p>
+<p>Courbe ggb AFAIRE
+</li>
+</ol></p>
+</details>
+</details>
+<details class="- example"><summary>Exemple</summary><p>Soit <span class="arithmatex">\(h\)</span> la fonction définie sur <span class="arithmatex">\(\R-\{0\}\)</span> par <span class="arithmatex">\(h(x)= \dfrac{\sin(2x)}{x}\)</span>.</p>
+<p>Déterminer la limite en 0.</p>
+<details class="- done"><summary>Réponse</summary><p>On a  une forme indéterminée  du type \og <span class="arithmatex">\(\dfrac{0}{0}\)</span> \fg.</p>
+<details class="- tip"><summary>Limite et taux d'accroissement</summary><p>On  utilise la définition du nombre dérivé en 0 de la fonction <span class="arithmatex">\(\sin\)</span> :  <span class="arithmatex">\(\lim\limits_{x \to 0}~\dfrac{\sin(x)}{x}=1\)</span>.</p>
+</details>
+<p><span class="arithmatex">\(\dfrac{\sin(2x)}{x}={\color{reponse}2 \times \dfrac{\sin(2x)}{2x}= 2\times \dfrac{\sin(X)}{X}}\)</span> avec <span class="arithmatex">\(X = 2x\)</span>.</p>
+<p><span class="arithmatex">\(\Lim{\lim\limits_{x \to 0}~2x&amp;=&amp;{\color{reponse}0}}{\lim\limits_{X\to 0}~&amp;\dfrac{\sin X}{X}=&amp;{\color{reponse} 1}} \quad \lim\limits_{x \to 0}~\dfrac{\sin(2x)}{2x}={\color{reponse}1}\)</span>
+et ainsi <span class="arithmatex">\(\dlim{x}{0} \dfrac{\sin(2x)}{x}={\color{reponse}2 }\)</span>.</p>
+</details>
+</details>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="02_lim_fct_reel.html" title="Limite au voisinage d'un réel" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Précédent
+                </span>
+                Limite au voisinage d'un réel
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="04_lim_fct_comp.html" title="Limite et comparaison" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Suivant
+                </span>
+                Limite et comparaison
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: {"tabs": false},
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

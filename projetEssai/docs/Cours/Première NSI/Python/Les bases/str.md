@@ -95,7 +95,7 @@ print(mot[:-5]) # affiche Bonj
 
 !!! info "Parcourir une chaîne de caractères avec des indices"
 
-	POur récupérer les caractères d'une chaîne les uns après les autres **avec les indices**, il faut utiliser une boucle ```for```, la fonction ```range``` et la longueur de la chaîne.
+	Pour récupérer les caractères d'une chaîne les uns après les autres **avec les indices**, il faut utiliser une boucle ```for```, la fonction ```range``` et la longueur de la chaîne.
 
 	```python
 	mot = "Bonjour !"

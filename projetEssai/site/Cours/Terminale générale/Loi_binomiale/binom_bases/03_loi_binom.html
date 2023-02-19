@@ -1,0 +1,1868 @@
+
+
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Lycée Mimard">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.1">
+    
+    
+      
+        <title>Loi binomiale - Les maths à Mimard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.71dfd922.min.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.616af814.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#8bc34a">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../Style/extra.css">
+    
+      <link rel="stylesheet" href="../../../../Style/print.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-green" data-md-color-accent="amber">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#loi_binomiale" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Les maths à Mimard" class="md-header-nav__button md-logo" aria-label="Les maths à Mimard">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Les maths à Mimard
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Loi binomiale
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../../index.html" class="md-tabs__link">
+        Accueil
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Premi%C3%A8re%20NSI/Pr%C3%A9sentation/c01.html" class="md-tabs__link">
+          Première NSI
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../index_term_G.html" class="md-tabs__link md-tabs__link--active">
+          Terminale générale
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../Labo%20de%20math/c01.html" class="md-tabs__link">
+          Labo de math
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Les maths à Mimard" class="md-nav__button md-logo" aria-label="Les maths à Mimard">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Les maths à Mimard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../index.html" title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Première NSI
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Première NSI" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Première NSI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Pr%C3%A9sentation/c01.html" title="Présentation" class="md-nav__link">
+      Présentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Les bases" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/ortho.html" title="Bien écrire en python" class="md-nav__link">
+      Bien écrire en python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/in_out.html" title="print/input" class="md-nav__link">
+      print/input
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/str.html" title="Chaine de caractères" class="md-nav__link">
+      Chaine de caractères
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/for.html" title="La boucle for" class="md-nav__link">
+      La boucle for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/if_elif.html" title="if, elif et les conditions" class="md-nav__link">
+      if, elif et les conditions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/while.html" title="La boucle while" class="md-nav__link">
+      La boucle while
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/list.html" title="Les listes" class="md-nav__link">
+      Les listes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Terminale générale
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terminale générale" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terminale générale
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../index_term_G.html" title="Accueil TGEN" class="md-nav__link">
+      Accueil TGEN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Dérivation, convexité, primitive
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dérivation, convexité, primitive" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Dérivation, convexité, primitive
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-1" type="checkbox" id="nav-3-2-1">
+    
+    <label class="md-nav__link" for="nav-3-2-1">
+      Dérivation : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dérivation : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Dérivation : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/01_deriv_base_tgte.html" title="Dérivation et tangente" class="md-nav__link">
+      Dérivation et tangente
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/02_deriv_base_formule.html" title="Dérivation et formule" class="md-nav__link">
+      Dérivation et formule
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/03_deriv_utilis.html" title="Utilisation de la dérivée" class="md-nav__link">
+      Utilisation de la dérivée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/04_deriv_composee.html" title="Composée de fonctions" class="md-nav__link">
+      Composée de fonctions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/05_Convexite.html" title="Convexité" class="md-nav__link">
+      Convexité
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-2" type="checkbox" id="nav-3-2-2">
+    
+    <label class="md-nav__link" for="nav-3-2-2">
+      Dérivation : au programme
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dérivation : au programme" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Dérivation : au programme
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Derivation_et_convexite/D%C3%A9rivation_au_prog/conv_ineg.html" title="Convexité et inégalités" class="md-nav__link">
+      Convexité et inégalités
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Derivation_et_convexite/D%C3%A9rivation_au_prog/dem_prog.html" title="Démonstration au programme" class="md-nav__link">
+      Démonstration au programme
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Derivation_et_convexite/D%C3%A9rivation_en_plus/D%C3%A9rivation_best.html" title="Dérivation : vers le supérieur" class="md-nav__link">
+      Dérivation : vers le supérieur
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Suite et récurrence
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Suite et récurrence" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Suite et récurrence
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3-1" type="checkbox" id="nav-3-3-1">
+    
+    <label class="md-nav__link" for="nav-3-3-1">
+      Suites : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Suites : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Suites : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/01_Rappels_sur_les_suites.html" title="Rappel sur les suites" class="md-nav__link">
+      Rappel sur les suites
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/02_Suites_et_python.html" title="Suites et python" class="md-nav__link">
+      Suites et python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/03_Suite_et_sens_de_variations.html" title="Suites et sens de variations" class="md-nav__link">
+      Suites et sens de variations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/04_Suites_aritmetiques.html" title="Suites arithmétiques" class="md-nav__link">
+      Suites arithmétiques
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/05_Suites_geometrique.html" title="Suites géométriques" class="md-nav__link">
+      Suites géométriques
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/06_Raisonnement_par_recurrence.html" title="Raisonnement par récurrence" class="md-nav__link">
+      Raisonnement par récurrence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/07_majoree_minoree_bornee.html" title="Suite majorée, minorée, bornée" class="md-nav__link">
+      Suite majorée, minorée, bornée
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" checked>
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Loi binomiale
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Loi binomiale" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Loi binomiale
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-1" type="checkbox" id="nav-3-4-1" checked>
+    
+    <label class="md-nav__link" for="nav-3-4-1">
+      Probabilité : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Probabilité : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Probabilité : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="01_binom_rappel.html" title="Rappel" class="md-nav__link">
+      Rappel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="02_succ_ep_ind.html" title="Succession d'épreuves" class="md-nav__link">
+      Succession d'épreuves
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Loi binomiale
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="03_loi_binom.html" title="Loi binomiale" class="md-nav__link md-nav__link--active">
+      Loi binomiale
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#schema_de_bernoulli" class="md-nav__link">
+    Schéma de Bernoulli
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loi_binomiale_1" class="md-nav__link">
+    Loi binomiale
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../binom_prog/binom_dem_prog.html" title="Probabilités : au programme" class="md-nav__link">
+      Probabilités : au programme
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      Limite de suite
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de suite" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de suite
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5-1" type="checkbox" id="nav-3-5-1">
+    
+    <label class="md-nav__link" for="nav-3-5-1">
+      Limite de suites : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de suites : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de suites : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/Limite_suite_base/01_Limite_d_une_suite.html" title="Limite d'une suite" class="md-nav__link">
+      Limite d'une suite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/Limite_suite_base/02_Limite_de_la_suite_qn.html" title="Limite de la suite $q^n$" class="md-nav__link">
+      Limite de la suite $q^n$
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/Limite_suite_base/03_Theoremes_d_operation.html" title="Limite et opérations" class="md-nav__link">
+      Limite et opérations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/Limite_suite_base/04_th_comp.html" title="Limite et comparaison" class="md-nav__link">
+      Limite et comparaison
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/lim_suite_prog/lim_suite_dem_prog.html" title="Limite de suites : au programme" class="md-nav__link">
+      Limite de suites : au programme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/Limite_de_suite_en_plus/limite_suite_best.html" title="Limite de suites : vers le supérieur" class="md-nav__link">
+      Limite de suites : vers le supérieur
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      Vecteur de l'espace
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Vecteur de l'espace" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Vecteur de l'espace
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6-1" type="checkbox" id="nav-3-6-1">
+    
+    <label class="md-nav__link" for="nav-3-6-1">
+      Vecteur : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Vecteur : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-6-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Vecteur : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Vecteur_esp/vect_esp_base/persp_cav.html" title="Perspective cavalière" class="md-nav__link">
+      Perspective cavalière
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Vecteur_esp/vect_esp_base/dte_et_plan.html" title="Droite et plan" class="md-nav__link">
+      Droite et plan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Vecteur_esp/vect_esp_base/Vect_esp.html" title="Vecteur de l'espace" class="md-nav__link">
+      Vecteur de l'espace
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Vecteur_esp/vect_esp_base/rep_esp.html" title="Repère de l'espace" class="md-nav__link">
+      Repère de l'espace
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Vecteur_esp/vect_esp_base/Eq_param.html" title="Equation paramétrique d'une droite" class="md-nav__link">
+      Equation paramétrique d'une droite
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Limite de fonction
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de fonction" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de fonction
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-7-1" type="checkbox" id="nav-3-7-1">
+    
+    <label class="md-nav__link" for="nav-3-7-1">
+      Limite de fct : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de fct : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-7-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de fct : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_fct/limite_fct_base/01_lim_fct_infinie.html" title="Limite vers l'infini" class="md-nav__link">
+      Limite vers l'infini
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_fct/limite_fct_base/02_lim_fct_reel.html" title="Limite au voisinage d'un réel" class="md-nav__link">
+      Limite au voisinage d'un réel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_fct/limite_fct_base/03_lim_fct_op.html" title="Limite et opérations" class="md-nav__link">
+      Limite et opérations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_fct/limite_fct_base/04_lim_fct_comp.html" title="Limite et comparaison" class="md-nav__link">
+      Limite et comparaison
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-7-2" type="checkbox" id="nav-3-7-2">
+    
+    <label class="md-nav__link" for="nav-3-7-2">
+      Limite de fct : au programme
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de fct : au programme" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-7-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de fct : au programme
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_fct/limite_fct_prog/lim_fct_dem.html" title="Démonstration au programme" class="md-nav__link">
+      Démonstration au programme
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-8" type="checkbox" id="nav-3-8">
+    
+    <label class="md-nav__link" for="nav-3-8">
+      Orthogonalité dans l'espace
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Orthogonalité dans l'espace" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Orthogonalité dans l'espace
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-8-1" type="checkbox" id="nav-3-8-1">
+    
+    <label class="md-nav__link" for="nav-3-8-1">
+      Orthogonalité : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Orthogonalité : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-8-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Orthogonalité : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Esp_ortho/Esp_ortho_base/01_Rappel_pdt_scal_plan.html" title="Rappel : produit scalaire dans le plan" class="md-nav__link">
+      Rappel : produit scalaire dans le plan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Esp_ortho/Esp_ortho_base/02_pdt_scal_esp.html" title="Espace et produit scalaire" class="md-nav__link">
+      Espace et produit scalaire
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Esp_ortho/Esp_ortho_base/03_vect_normal.html" title="Vecteur normal" class="md-nav__link">
+      Vecteur normal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Esp_ortho/Esp_ortho_base/04_eq_cart_plan.html" title="Equation cartésienne" class="md-nav__link">
+      Equation cartésienne
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-8-2" type="checkbox" id="nav-3-8-2">
+    
+    <label class="md-nav__link" for="nav-3-8-2">
+      Orthogonalité : au programme
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Orthogonalité : au programme" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-8-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Orthogonalité : au programme
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Esp_ortho/Esp_ortho_prog/Plan_med.html" title="Plan médiateur" class="md-nav__link">
+      Plan médiateur
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Labo de math
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Labo de math" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Labo de math
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Labo%20de%20math/c01.html" title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Labo%20de%20math/Liaison_lyc%C3%A9e_sup/sup%C3%A9rieur.html" title="Liaison lycée/supérieur" class="md-nav__link">
+      Liaison lycée/supérieur
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#schema_de_bernoulli" class="md-nav__link">
+    Schéma de Bernoulli
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loi_binomiale_1" class="md-nav__link">
+    Loi binomiale
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="loi_binomiale">Loi binomiale<a class="headerlink" href="#loi_binomiale" title="Permanent link"></a></h1>
+<h2 id="schema_de_bernoulli">Schéma de Bernoulli<a class="headerlink" href="#schema_de_bernoulli" title="Permanent link"></a></h2>
+<div class="admonition info">
+<p class="admonition-title">Epreuve de Bernoulli</p>
+<p><strong>Une épreuve (ou expérience) de Bernoulli</strong> de paramètre <span class="arithmatex">\(p\)</span> est une expérience aléatoire présentant deux issues dont l'une, nommée &laquo; succès &raquo;, a pour probabilité <span class="arithmatex">\(p\)</span> et l'autre, nommée &laquo; échec &raquo; a pour probabilité <span class="arithmatex">\(1-p\)</span>.</p>
+<ul>
+<li><a href="AFAIRE">La variable aléatoire</a> qui prend la valeur <span class="arithmatex">\(1\)</span> en cas de succès et <span class="arithmatex">\(0\)</span> en cas d'échec est appelée <strong>variable aléatoire de Bernoulli</strong>.</li>
+<li>La <span id="loi_prob_bin">loi de probabilité</span> de cette variable aléatoire (notée <span class="arithmatex">\(X\)</span> par exemple) est appelée <strong>loi de Bernoulli de paramètre <span class="arithmatex">\(\mathbf{p}\)</span>.</strong></li>
+</ul>
+<div class="arithmatex">\[
+\begin{array}{|c|c|c|}
+\hline
+x_i &amp; 0 &amp; 1\\
+\hline
+\rule[-0.2cm]{0pt}{0.6cm} \Pb(X=x_i) &amp; 1-p &amp; p\\
+\hline
+\end{array}
+\]</div>
+</div>
+<details class="- example"><summary>Exemple</summary><p>Une urne contient dix jetons indiscernables au toucher : 5 bleues, 2 jaunes et 3 rouges. On tire un jeton au hasard.</p>
+<ul>
+<li>L'expérience qui consiste à observer la couleur du jeton tiré n'est pas une épreuve de Bernoulli car il y a 3 issues.</li>
+<li>L'expérience qui consiste à observer si le jeton est jaune ou  non est une épreuve de Bernoulli. Si on choisit d'appeler &laquo; succès &raquo; : &laquo; obtenir un jeton jaune &raquo;, alors il s'agit d'une épreuve de Bernoulli de paramètre <span class="arithmatex">\(p=\dfrac{2}{10}=\dfrac{1}{5}\)</span>.</li>
+</ul>
+</details>
+<div class="admonition - warning">
+<p class="admonition-title">Succès ... discutable</p>
+<p>Le choix de l'issue correspondant au succès dépend de l'énoncé ! Ce n'est pas toujours quelque chose de positif.</p>
+</div>
+<details class="- example"><summary>Exemple</summary><p>Lors de la production de clous de 50 mm, on considère qu'un clou est conforme si sa taille est comprise entre 48 mm et 52 mm. On prélève un clou dans la chaîne de production. On note <span class="arithmatex">\(X\)</span> la variable aléatoire qui à un clou, associe <span class="arithmatex">\(1\)</span> si il n'est pas conforme, <span class="arithmatex">\(0\)</span> sinon.</p>
+<p>Donner la loi de probabilité de <span class="arithmatex">\(X\)</span>, en sachant que la probabilité d'avoir un clou conforme est de <span class="arithmatex">\(98.3 \%\)</span>.</p>
+<details class="- done"><summary>Réponse</summary><p>Il y a deux issues possibles &laquo; ne pas être conforme &raquo; et &laquo; être conforme &raquo;. <span class="arithmatex">\(X\)</span> est donc une variable aléatoire de Bernoulli. Or, elle associe <span class="arithmatex">\(1\)</span> si le clou n'est pas conforme. Donc le succès est  &laquo; Avoir un clou qui n'est pas conforme &raquo;. Donc sa loi de probabilité est la loi de Bernoulli de paramètre <span class="arithmatex">\(p=0.017\)</span>.</p>
+<div class="arithmatex">\[
+\begin{array}{|c|c|c|}
+\hline
+x_i &amp; 0 &amp; 1\\
+\hline
+\rule[-0.2cm]{0pt}{0.6cm} \Pb(X=x_i) &amp; 0.983 &amp; 0.017 \\
+\hline
+\end{array}
+\]</div>
+</details>
+</details>
+<div class="admonition info">
+<p class="admonition-title">Théorème</p>
+<p>Si <span class="arithmatex">\(X\)</span> est une variable aléatoire qui suit une loi de Bernoulli de paramètre <span class="arithmatex">\(p\)</span>, alors :</p>
+<ul>
+<li>l'<a href="AFAIRE">espérance</a> : <span class="arithmatex">\(E(X)=p\)</span></li>
+<li>la <a href="AFAIRE">variance</a> : <span class="arithmatex">\(V(X)=p(1-p)\)</span></li>
+<li>l'<a href="AFAIRE">écart-type</a> : <span class="arithmatex">\(\sigma(X)=\sqrt{p(1-p)}\)</span></li>
+</ul>
+</div>
+<details class="- abstract"><summary>Démonstration</summary><p>A partir du tableau de la <a href="#loi_prob_bin">loi de probabilité</a> :
+- <span class="arithmatex">\(E(X)=(1-p) \times 0 + p \times 1 = p\)</span>
+- La variance :</p>
+<div class="arithmatex">\[\begin{eqnarray*}
+V(X) &amp; = &amp; (1-p) \times (0 - E(X))^2 + p \times (1- E(X))^2\\
+&amp; = &amp; (1-p)p^2 + p(1-p)^2\\
+&amp; = &amp; (1-p)p \times \left( p+(1-p) \right)\\
+&amp; = &amp; (1-p)p
+\end{eqnarray*}\]</div>
+<ul>
+<li><span class="arithmatex">\(\sigma(X) = \sqrt{V(X)} = \sqrt{p(1-p)}\)</span>.</li>
+</ul>
+</details>
+<div class="admonition info">
+<p class="admonition-title">Schéma de Bernoulli</p>
+<p>L'expérience aléatoire consistant en une succession de <span class="arithmatex">\(n\)</span> épreuves indépendantes de Bernoulli de paramètre <span class="arithmatex">\(p\)</span> (<span class="arithmatex">\(p\)</span> est donc la probabilité de succès à une épreuve) s'appelle <strong>un schéma de Bernoulli de paramètre <span class="arithmatex">\(\mathbf{n}\)</span> et <span class="arithmatex">\(\mathbf{p}\)</span></strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Théorème</p>
+<p>L'univers des issues d'un schéma de Bernoulli de paramètres <span class="arithmatex">\(n\)</span> et <span class="arithmatex">\(p\)</span> est <span class="arithmatex">\(\{0;1\}^n\)</span>.</p>
+</div>
+<details class="- example"><summary>Exemple</summary><p>On lance un dé à six faces. On appelle succès &laquo; obtenir un 6 &raquo;. Répéter 3 fois cette épreuve de Bernoulli est un schéma de Bernoulli de paramètre <span class="arithmatex">\(3\)</span> et <span class="arithmatex">\(p=\dfrac{1}{6}\)</span>.</p>
+<p>A l'aide d'un arbre, calculer <span class="arithmatex">\(\Pb(X=1)\)</span>, où <span class="arithmatex">\(X\)</span> est la variable aléatoire de Bernoulli.</p>
+<details class="- done"><summary>Réponse</summary><p>Voici l'arbre :</p>
+<p><a href="../Image/arbre2.png"><img alt="Abre" class="Center VignetteMed" src="../Image/arbre2.png" /></a></p>
+<p>Les triplets formés d'un seul succès sont <span class="arithmatex">\((S;E;E),(E;S;E)\)</span> et <span class="arithmatex">\((E;E;S)\)</span>. Or <span class="arithmatex">\(\Pb((S;E;E)) =\Pb((E;S;E)) = \Pb((E;E;S)) = pq^2\)</span>.</p>
+<p>Donc <span class="arithmatex">\(\Pb(X = 1)=3pq^2\)</span></p>
+</details>
+</details>
+<h2 id="loi_binomiale_1">Loi binomiale<a class="headerlink" href="#loi_binomiale_1" title="Permanent link"></a></h2>
+<div class="admonition info">
+<p class="admonition-title">Loi binomiale</p>
+<p>On considère un schéma de Bernoulli de paramètres <span class="arithmatex">\(n\)</span> (nombre de répétitions) et <span class="arithmatex">\(p\)</span> (probabilité d'un succès). La variable aléatoire <span class="arithmatex">\(X\)</span>, qui, à chaque issue de cette expérience, associe le nombre de succès, suit \textbf{la loi binomiale de paramètre <span class="arithmatex">\(\mathbf{n}\)</span> et <span class="arithmatex">\(\mathbf{p}\)</span>}.</p>
+<p>On note cette loi <span class="arithmatex">\(\mathcal{B}(n;p)\)</span> et on note <span class="arithmatex">\(X \sim\mathcal{B}(n;p)\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Méthode</p>
+<p>Pour justifier qu'une variable aléatoire suit une loi binomiale :</p>
+<ul>
+<li>on repère l'épreuve de Bernoulli et on note la probabilité du succès (le succès dépend de la phrase &laquo; <span class="arithmatex">\(X\)</span> compte le nombre de \ldots &raquo;);</li>
+<li>on repère le schéma de Bernoulli ( une succession <strong>indépendante</strong> d'épreuve de Bernoulli) et on note le nombre de répétition;</li>
+<li>on note que la variable aléatoire compte bien le nombre de succès.</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Théorème</p>
+<p><span class="arithmatex">\(X\)</span> est une variable aléatoire suivant <strong>la loi binomiale</strong> <span class="arithmatex">\(\mathbf{\mathcal{B}}(n;p)\)</span> et <span class="arithmatex">\(k\)</span> est un entier compris entre <span class="arithmatex">\(0\)</span> et <span class="arithmatex">\(n\)</span>. La probabilité d'obtenir exactement <span class="arithmatex">\(k\)</span> succès parmi les <span class="arithmatex">\(n\)</span> tentatives est :</p>
+<div class="arithmatex">\[
+\Pb(X=k) = \comb{n}{k} \times p^k \times (1-p)^{n-k}
+\]</div>
+<p>où $ \comb{n}{k}$ est le nombre de chemin comportant exactement <span class="arithmatex">\(k\)</span> succès parmi les <span class="arithmatex">\(n\)</span> tentatives. Il se lit &laquo; <span class="arithmatex">\(k\)</span> combinaison parmi <span class="arithmatex">\(n\)</span> &raquo;. Pour calculer ce nombre,  il est possible d'utiliser la calculatrice ou la formule suivante :</p>
+<div class="arithmatex">\[  \comb{n}{k} = \dfrac{n!}{k! \times (n-k)!} \]</div>
+<p>où <span class="arithmatex">\(k!=1 \times 2 \times \ldots \times k\)</span> se lit &laquo; factorielle <span class="arithmatex">\(k\)</span> &raquo; (cf <a href="AFAIRE">chapitre post épreuve sur le dénombrement</a>).</p>
+</div>
+<details class="- example"><summary>Exemple</summary><p>La ville de Las Vegas accueille environ <span class="arithmatex">\(100\,000\)</span> touristes chaque jour. On estime que <span class="arithmatex">\(5\%\)</span> des touristes ne viennent pas à Las Vegas pour jouer au casino. On interroge au hasard <span class="arithmatex">\(10\)</span> touristes dans la rue. On note <span class="arithmatex">\(Y\)</span> la variable aléatoire qui compte le nombre de touristes témoignant ne pas être venus dans cette ville pour jouer.</p>
+<ul>
+<li>Justifier que <span class="arithmatex">\(Y\)</span> suit une loi binomiale. Préciser ses paramètres.</li>
+<li>Calculer la probabilité d'avoir exactement 2 touristes qui ne viennent pas pour jouer au casino, parmi les 10 touristes interrogés.</li>
+</ul>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">Méthode : utilisation de la calculatrice</p>
+<p>Pour calculer <span class="arithmatex">\(\begin{pmatrix} n\\ k \end{pmatrix}\)</span></p>
+<details class="- tip"><summary>Combinaison pour Casio, TI et Numworks</summary><p><a href="../Image/Comb.png"><img alt="Combnaison" class="Center VignetteMed" src="../Image/Comb.png" /></a></p>
+</details>
+<details class="- tip"><summary>Loi binomiale pour Casio</summary><p><a href="../Image/Casio.png"><img alt="Loi binom Casio" class="Center VignetteMed" src="../Image/Casio.png" /></a></p>
+</details>
+<details class="- tip"><summary>Loi binomiale pour TI</summary><p><a href="../Image/TI.png"><img alt="Loi binom TI" class="Center VignetteMed" src="../Image/TI.png" /></a></p>
+</details>
+</div>
+<details class="- example"><summary>Exemple</summary><p>On considère la variable aléatoire <span class="arithmatex">\(X\)</span> qui suit la loi <span class="arithmatex">\(\mathcal{B}(20;0.36)\)</span>. Calculer à l'aide de la calculatrice :</p>
+<ol>
+<li><span class="arithmatex">\(\Pb(X=11)\)</span></li>
+<li><span class="arithmatex">\(\Pb(X\leq 8)\)</span></li>
+<li><span class="arithmatex">\(\Pb(X &gt; 15)\)</span></li>
+<li><span class="arithmatex">\(\Pb(X \geq 17)\)</span></li>
+<li><span class="arithmatex">\(\Pb(12&lt;X &lt;15)\)</span></li>
+</ol>
+</details>
+<details class="- example"><summary>Exemple</summary><p>On lance <span class="arithmatex">\(n\)</span> fois une pièce équilibrée. Soit <span class="arithmatex">\(X\)</span> la variable aléatoire qui, à chaque série de <span class="arithmatex">\(n\)</span> laners, associe le nombre de &laquo; Pile &raquo; obtenus. Déterminer la plus petite valeur de <span class="arithmatex">\(n\)</span> telle que la probabilité d'obtenir au moins une fois &laquo; Pile &raquo; dépasse <span class="arithmatex">\(0.999\)</span>.</p>
+<details class="- done"><summary>Réponse</summary><ul>
+<li>L'épreuve de Bernoulli : on lance une pièce et on appelle succès &laquo; avoir Pile &raquo;. Donc <span class="arithmatex">\(p=\dfrac{1}{2}\)</span></li>
+<li>Le schéma de Bernoulli : On répète <span class="arithmatex">\(n\)</span> fois cette expérience de façon indépendante.</li>
+<li><span class="arithmatex">\(X\)</span> est la variable qui, à chaque expérience, associe le nombre de succès.</li>
+</ul>
+<p>Donc <span class="arithmatex">\(X\)</span> suit une loi binomiale <span class="arithmatex">\(\mathcal{B}\left( n ; \dfrac{1}{2}\right)\)</span>.</p>
+<div class="arithmatex">\[\begin{eqnarray*}
+\Pb(X\geq 1) &amp; = &amp; 1-\Pb(X=0)\\
+&amp; = &amp; 1 - \comb{n}{0}\times \left( \dfrac{1}{2}\right)^0 \times \left( \dfrac{1}{2}\right)^{n-0}\\
+&amp; = &amp; 1-\left( \dfrac{1}{2}\right)^n
+\end{eqnarray*}\]</div>
+<p>On doit donc résoudre l'inéquation <span class="arithmatex">\(1-\left( \dfrac{1}{2}\right)^n \geq 0.999\)</span>, soit <span class="arithmatex">\(\left( \dfrac{1}{2}\right)^n \leq 0.001\)</span>.</p>
+<p>Avec la méthode par balayage, on trouve qu'à partir de <span class="arithmatex">\(n=10\)</span>, la probabilité d'obtenir au moins un &laquo; Pile &raquo; est supérieure à <span class="arithmatex">\(0.999\)</span>.</p>
+<p>cf <a href="AFAIRE">une autre méthode avec le logarithme</a>.</p>
+</details>
+</details>
+<details class="- example"><summary>Exemple</summary><p>Dans une chaîne de production pharmaceutique, la proportion de gélules non commercialisables en sortie de chaîne est <span class="arithmatex">\(3\%\)</span>.
+Soit <span class="arithmatex">\(X\)</span> la variable aléatoire qui, à chaque échantillon de <span class="arithmatex">\(200\)</span> gélules (le prélèvement est assimilé à un tirage avec remise), associe le nombre de gélules non commercialisables.</p>
+<ol>
+<li>Quelle est la loi suivie par <span class="arithmatex">\(X\)</span> ? (Justifier)</li>
+<li>A l'aide d'une calculatrice, déterminer le plus petit entier <span class="arithmatex">\(b\)</span> tel que <span class="arithmatex">\(\Pb(X \in [0;b]) \geq 0.9\)</span>. Interpréter ce résultat.</li>
+<li>A l'aide d'une calculatrice, déterminer les entiers <span class="arithmatex">\(a\)</span> et <span class="arithmatex">\(b\)</span> tels que <span class="arithmatex">\(a\)</span> est le plus petit entier tel que <span class="arithmatex">\(\Pb(X\leq a) &gt; 0.025\)</span> et <span class="arithmatex">\(b\)</span> est le plus petit entier tel que <span class="arithmatex">\(\Pb(X\leq b)\geq 0.975\)</span>.</li>
+</ol>
+<details class="- done"><summary>Réponse</summary><ol>
+<li>
+<p>Le fait de choisir une gélule est une épreuve de Bernoulli dont le succès &laquo; la gélule est non commercialisable&raquo;  a pour probabilité <span class="arithmatex">\(p=0.03\)</span>.</p>
+<p>La constitution de l'échantillon revient à réaliser <span class="arithmatex">\(200\)</span> fois de façon indépendante (en tant que tirage avec remise) cette épreuve de Bernoulli.</p>
+<p>Par ailleurs, <span class="arithmatex">\(X\)</span> compte le nombre de succès.</p>
+<p>Donc <span class="arithmatex">\(X\)</span> suit une loi binomiale <span class="arithmatex">\(\mathcal{B}(200 ; 0.03)\)</span>.</p>
+</li>
+<li>
+<p>On utilise un tableau de valeur pour <span class="arithmatex">\(\Pb(X\leq k)\)</span>, pour <span class="arithmatex">\(k\)</span> compris entre <span class="arithmatex">\(0\)</span> et <span class="arithmatex">\(200\)</span> :</p>
+<p><a href="../Image/Ex58.png"><img alt="Exo" class="Center VignetteMed" src="../Image/Ex58.png" /></a></p>
+<p>En parcourant les valeurs de la table, on obtient <span class="arithmatex">\(b=9\)</span>, puisque <span class="arithmatex">\(\Pb(X\leq 8) \approx 0.85\)</span> et <span class="arithmatex">\(\Pb(X\leq 9) \approx 0.92\)</span>.</p>
+<p>On peut affirmer qu'au moins <span class="arithmatex">\(90\%\)</span> des échantillons de 200 gélules ne contiennent pas plus de 9 gélules défectueuses</p>
+</li>
+<li>
+<p>En utilisant le même tableau de la calculatrice, on trouve <span class="arithmatex">\(a=2\)</span> et <span class="arithmatex">\(b=11\)</span>.</p>
+</li>
+<li>
+<div class="arithmatex">\[\begin{eqnarray*}
+\Pb(X \in I) &amp; = &amp; \Pb(2 \leq X \leq 11)\\
+&amp; = &amp; \Pb(X \leq 11) - \Pb(X&lt;2)\\
+&amp; = &amp; \Pb(X \leq 11) - \Pb(X\leq 1)
+\end{eqnarray*}\]</div>
+<p>Comme <span class="arithmatex">\(a=2\)</span> est le plus petit entier tel que <span class="arithmatex">\(\Pb(X \leq a) &gt; 0.25\)</span>, <span class="arithmatex">\(\Pb(X \leq a-1) \leq 0.25\)</span>.</p>
+<p>Comme <span class="arithmatex">\(\Pb(X \geq 11) \geq 0.975\)</span> et <span class="arithmatex">\(-\Pb(X \leq 1)\geq -0.25\)</span>, on trouve que <span class="arithmatex">\(\Pb(X \leq 11) - \Pb(X \leq 1) \geq 0.975-0.025\)</span>.</p>
+<p>Donc <span class="arithmatex">\(\Pb(X \in I) \geq 0.95\)</span>.</p>
+<p>La probabilité d'avoir entre 2 et 11 gélules non commercialisables est supérieure à <span class="arithmatex">\(95\%\)</span>.</p>
+</li>
+</ol>
+</details>
+</details>
+<div class="admonition info">
+<p class="admonition-title">Théorème</p>
+<p>Si <span class="arithmatex">\(X\)</span> suit une loi binomiale de paramètre <span class="arithmatex">\(n\)</span> et <span class="arithmatex">\(p\)</span>. Alors :</p>
+<ul>
+<li><span class="arithmatex">\(E(X)=np\)</span></li>
+<li><span class="arithmatex">\(V(X)=np(1-p)\)</span></li>
+<li><span class="arithmatex">\(\sigma(X)=\sqrt{np(1-p)}\)</span></li>
+</ul>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="02_succ_ep_ind.html" title="Succession d'épreuves" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Précédent
+                </span>
+                Succession d'épreuves
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../binom_prog/binom_dem_prog.html" title="Probabilités : au programme" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Suivant
+                </span>
+                Probabilités : au programme
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: {"tabs": false},
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1793 @@
+
+
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Lycée Mimard">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.1">
+    
+    
+      
+        <title>Convexité - Les maths à Mimard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.71dfd922.min.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.616af814.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#8bc34a">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../Style/extra.css">
+    
+      <link rel="stylesheet" href="../../../../Style/print.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-green" data-md-color-accent="amber">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#convexite" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Les maths à Mimard" class="md-header-nav__button md-logo" aria-label="Les maths à Mimard">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Les maths à Mimard
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Convexité
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../../index.html" class="md-tabs__link">
+        Accueil
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Premi%C3%A8re%20NSI/Pr%C3%A9sentation/c01.html" class="md-tabs__link">
+          Première NSI
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../index_term_G.html" class="md-tabs__link md-tabs__link--active">
+          Terminale générale
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../Labo%20de%20math/c01.html" class="md-tabs__link">
+          Labo de math
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Les maths à Mimard" class="md-nav__button md-logo" aria-label="Les maths à Mimard">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Les maths à Mimard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../index.html" title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Première NSI
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Première NSI" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Première NSI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Pr%C3%A9sentation/c01.html" title="Présentation" class="md-nav__link">
+      Présentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Les bases" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/ortho.html" title="Bien écrire en python" class="md-nav__link">
+      Bien écrire en python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/in_out.html" title="print/input" class="md-nav__link">
+      print/input
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/str.html" title="Chaine de caractères" class="md-nav__link">
+      Chaine de caractères
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/for.html" title="La boucle for" class="md-nav__link">
+      La boucle for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/if_elif.html" title="if, elif et les conditions" class="md-nav__link">
+      if, elif et les conditions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/while.html" title="La boucle while" class="md-nav__link">
+      La boucle while
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/list.html" title="Les listes" class="md-nav__link">
+      Les listes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Terminale générale
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terminale générale" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terminale générale
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../index_term_G.html" title="Accueil TGEN" class="md-nav__link">
+      Accueil TGEN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Dérivation, convexité, primitive
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dérivation, convexité, primitive" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Dérivation, convexité, primitive
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-1" type="checkbox" id="nav-3-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-3-2-1">
+      Dérivation : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dérivation : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Dérivation : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="01_deriv_base_tgte.html" title="Dérivation et tangente" class="md-nav__link">
+      Dérivation et tangente
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="02_deriv_base_formule.html" title="Dérivation et formule" class="md-nav__link">
+      Dérivation et formule
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="03_deriv_utilis.html" title="Utilisation de la dérivée" class="md-nav__link">
+      Utilisation de la dérivée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="04_deriv_composee.html" title="Composée de fonctions" class="md-nav__link">
+      Composée de fonctions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Convexité
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="05_Convexite.html" title="Convexité" class="md-nav__link md-nav__link--active">
+      Convexité
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#premiere_approche" class="md-nav__link">
+    Première approche
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convexite_et_derivation" class="md-nav__link">
+    Convexité et dérivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#point_dinflexion" class="md-nav__link">
+    Point d'inflexion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-2" type="checkbox" id="nav-3-2-2">
+    
+    <label class="md-nav__link" for="nav-3-2-2">
+      Dérivation : au programme
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dérivation : au programme" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Dérivation : au programme
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../D%C3%A9rivation_au_prog/conv_ineg.html" title="Convexité et inégalités" class="md-nav__link">
+      Convexité et inégalités
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../D%C3%A9rivation_au_prog/dem_prog.html" title="Démonstration au programme" class="md-nav__link">
+      Démonstration au programme
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../D%C3%A9rivation_en_plus/D%C3%A9rivation_best.html" title="Dérivation : vers le supérieur" class="md-nav__link">
+      Dérivation : vers le supérieur
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Suite et récurrence
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Suite et récurrence" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Suite et récurrence
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3-1" type="checkbox" id="nav-3-3-1">
+    
+    <label class="md-nav__link" for="nav-3-3-1">
+      Suites : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Suites : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Suites : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/01_Rappels_sur_les_suites.html" title="Rappel sur les suites" class="md-nav__link">
+      Rappel sur les suites
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/02_Suites_et_python.html" title="Suites et python" class="md-nav__link">
+      Suites et python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/03_Suite_et_sens_de_variations.html" title="Suites et sens de variations" class="md-nav__link">
+      Suites et sens de variations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/04_Suites_aritmetiques.html" title="Suites arithmétiques" class="md-nav__link">
+      Suites arithmétiques
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/05_Suites_geometrique.html" title="Suites géométriques" class="md-nav__link">
+      Suites géométriques
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/06_Raisonnement_par_recurrence.html" title="Raisonnement par récurrence" class="md-nav__link">
+      Raisonnement par récurrence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Suites_et_recurrence/Suites_bases/07_majoree_minoree_bornee.html" title="Suite majorée, minorée, bornée" class="md-nav__link">
+      Suite majorée, minorée, bornée
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Loi binomiale
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Loi binomiale" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Loi binomiale
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-1" type="checkbox" id="nav-3-4-1">
+    
+    <label class="md-nav__link" for="nav-3-4-1">
+      Probabilité : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Probabilité : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Probabilité : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Loi_binomiale/binom_bases/01_binom_rappel.html" title="Rappel" class="md-nav__link">
+      Rappel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Loi_binomiale/binom_bases/02_succ_ep_ind.html" title="Succession d'épreuves" class="md-nav__link">
+      Succession d'épreuves
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Loi_binomiale/binom_bases/03_loi_binom.html" title="Loi binomiale" class="md-nav__link">
+      Loi binomiale
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Loi_binomiale/binom_prog/binom_dem_prog.html" title="Probabilités : au programme" class="md-nav__link">
+      Probabilités : au programme
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      Limite de suite
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de suite" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de suite
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5-1" type="checkbox" id="nav-3-5-1">
+    
+    <label class="md-nav__link" for="nav-3-5-1">
+      Limite de suites : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de suites : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de suites : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/Limite_suite_base/01_Limite_d_une_suite.html" title="Limite d'une suite" class="md-nav__link">
+      Limite d'une suite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/Limite_suite_base/02_Limite_de_la_suite_qn.html" title="Limite de la suite $q^n$" class="md-nav__link">
+      Limite de la suite $q^n$
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/Limite_suite_base/03_Theoremes_d_operation.html" title="Limite et opérations" class="md-nav__link">
+      Limite et opérations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/Limite_suite_base/04_th_comp.html" title="Limite et comparaison" class="md-nav__link">
+      Limite et comparaison
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/lim_suite_prog/lim_suite_dem_prog.html" title="Limite de suites : au programme" class="md-nav__link">
+      Limite de suites : au programme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_de_suite/Limite_de_suite_en_plus/limite_suite_best.html" title="Limite de suites : vers le supérieur" class="md-nav__link">
+      Limite de suites : vers le supérieur
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      Vecteur de l'espace
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Vecteur de l'espace" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Vecteur de l'espace
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6-1" type="checkbox" id="nav-3-6-1">
+    
+    <label class="md-nav__link" for="nav-3-6-1">
+      Vecteur : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Vecteur : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-6-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Vecteur : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Vecteur_esp/vect_esp_base/persp_cav.html" title="Perspective cavalière" class="md-nav__link">
+      Perspective cavalière
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Vecteur_esp/vect_esp_base/dte_et_plan.html" title="Droite et plan" class="md-nav__link">
+      Droite et plan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Vecteur_esp/vect_esp_base/Vect_esp.html" title="Vecteur de l'espace" class="md-nav__link">
+      Vecteur de l'espace
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Vecteur_esp/vect_esp_base/rep_esp.html" title="Repère de l'espace" class="md-nav__link">
+      Repère de l'espace
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Vecteur_esp/vect_esp_base/Eq_param.html" title="Equation paramétrique d'une droite" class="md-nav__link">
+      Equation paramétrique d'une droite
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Limite de fonction
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de fonction" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de fonction
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-7-1" type="checkbox" id="nav-3-7-1">
+    
+    <label class="md-nav__link" for="nav-3-7-1">
+      Limite de fct : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de fct : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-7-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de fct : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_fct/limite_fct_base/01_lim_fct_infinie.html" title="Limite vers l'infini" class="md-nav__link">
+      Limite vers l'infini
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_fct/limite_fct_base/02_lim_fct_reel.html" title="Limite au voisinage d'un réel" class="md-nav__link">
+      Limite au voisinage d'un réel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_fct/limite_fct_base/03_lim_fct_op.html" title="Limite et opérations" class="md-nav__link">
+      Limite et opérations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_fct/limite_fct_base/04_lim_fct_comp.html" title="Limite et comparaison" class="md-nav__link">
+      Limite et comparaison
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-7-2" type="checkbox" id="nav-3-7-2">
+    
+    <label class="md-nav__link" for="nav-3-7-2">
+      Limite de fct : au programme
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Limite de fct : au programme" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-7-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Limite de fct : au programme
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Limite_fct/limite_fct_prog/lim_fct_dem.html" title="Démonstration au programme" class="md-nav__link">
+      Démonstration au programme
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-8" type="checkbox" id="nav-3-8">
+    
+    <label class="md-nav__link" for="nav-3-8">
+      Orthogonalité dans l'espace
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Orthogonalité dans l'espace" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Orthogonalité dans l'espace
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-8-1" type="checkbox" id="nav-3-8-1">
+    
+    <label class="md-nav__link" for="nav-3-8-1">
+      Orthogonalité : les bases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Orthogonalité : les bases" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-8-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Orthogonalité : les bases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Esp_ortho/Esp_ortho_base/01_Rappel_pdt_scal_plan.html" title="Rappel : produit scalaire dans le plan" class="md-nav__link">
+      Rappel : produit scalaire dans le plan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Esp_ortho/Esp_ortho_base/02_pdt_scal_esp.html" title="Espace et produit scalaire" class="md-nav__link">
+      Espace et produit scalaire
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Esp_ortho/Esp_ortho_base/03_vect_normal.html" title="Vecteur normal" class="md-nav__link">
+      Vecteur normal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Esp_ortho/Esp_ortho_base/04_eq_cart_plan.html" title="Equation cartésienne" class="md-nav__link">
+      Equation cartésienne
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-8-2" type="checkbox" id="nav-3-8-2">
+    
+    <label class="md-nav__link" for="nav-3-8-2">
+      Orthogonalité : au programme
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Orthogonalité : au programme" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-8-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Orthogonalité : au programme
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Esp_ortho/Esp_ortho_prog/Plan_med.html" title="Plan médiateur" class="md-nav__link">
+      Plan médiateur
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Labo de math
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Labo de math" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Labo de math
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Labo%20de%20math/c01.html" title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Labo%20de%20math/Liaison_lyc%C3%A9e_sup/sup%C3%A9rieur.html" title="Liaison lycée/supérieur" class="md-nav__link">
+      Liaison lycée/supérieur
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#premiere_approche" class="md-nav__link">
+    Première approche
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convexite_et_derivation" class="md-nav__link">
+    Convexité et dérivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#point_dinflexion" class="md-nav__link">
+    Point d'inflexion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="convexite">Convexité<a class="headerlink" href="#convexite" title="Permanent link"></a></h1>
+<h2 id="premiere_approche">Première approche<a class="headerlink" href="#premiere_approche" title="Permanent link"></a></h2>
+<div class="admonition info">
+<p class="admonition-title">Une sécante, une corde</p>
+<p>Soit <span class="arithmatex">\(f\)</span> une fonction et <span class="arithmatex">\(\mathcal{C}_f\)</span> sa courbe représentative dans un repère. Soient <span class="arithmatex">\(A\)</span> et <span class="arithmatex">\(B\)</span> deux points distincts de <span class="arithmatex">\(\mathcal{C}_f\)</span>, la droite <span class="arithmatex">\((AB)\)</span> est appelée <strong>sécante</strong> de <span class="arithmatex">\(\mathcal{C}_f\)</span>. Par ailleurs, le segement <span class="arithmatex">\([AB]\)</span> est appelé <strong>corde</strong> <span class="arithmatex">\([AB]\)</span>.</p>
+<div class="Center_txt">
+
+<p><img src="../Image/secante.png" alt="Deux sécantes : (AB) et (AC)" style="width:20%;"></p>
+<p>Deux sécantes : (AB) et (AC)
+</div></p>
+</div>
+<p>On remarque</p>
+<div class="admonition info">
+<p class="admonition-title">Convexe</p>
+<p>Soit une fonction et <span class="arithmatex">\(\mathcal{C}_f\)</span> sa courbe représentative dans un repère. On dit que <span class="arithmatex">\(f\)</span> est <span id = "convexe"><strong>convexe</strong></span> sur un intervalle <span class="arithmatex">\(I\)</span> si <span class="arithmatex">\(\mathcal{C}_f\)</span> est en dessous de <strong>toutes</strong> ses sécantes entre les deux points d'intersection, c'est-à-dire en dessous des cordes associées.</p>
+</div>
+<details class="- example"><summary>Une fonction convexe sur son domaine</summary><p><iframe scrolling="no" title="Sécante01" src="https://www.geogebra.org/material/iframe/id/zkhwaskg/width/1906/height/901/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1906px" height="901px" style="border:0px;"> </iframe></p>
+<p><div class="Center_txt">
+La fonction exponentielle est au-dessous de ses sécantes sur <span class="arithmatex">\(\mathbb{R}\)</span> ! Elle est convexe sur <span class="arithmatex">\(\mathbb{R}\)</span> (pas encore démontré).
+</div></p>
+</details>
+<div class="admonition info">
+<p class="admonition-title">Concave</p>
+<p>Soit une fonction et <span class="arithmatex">\(\mathcal{C}_f\)</span> sa courbe représentative dans un repère. On dit que <span class="arithmatex">\(f\)</span> est <span id="concave"><strong>concave</strong></span> sur un intervalle <span class="arithmatex">\(I\)</span> si pour tout réel <span class="arithmatex">\(x\)</span> de <span class="arithmatex">\(I\)</span>, <span class="arithmatex">\(\mathcal{C}_f\)</span> est au-dessus de chacune de ses sécantes entre les deux points d'intersection.</p>
+</div>
+<details class="- example"><summary>Une fonction concave sur son domaine</summary><p><iframe scrolling="no" title="secante02" src="https://www.geogebra.org/material/iframe/id/rcqfstar/width/1906/height/901/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1906px" height="901px" style="border:0px;"> </iframe></p>
+<p><div class="Center_txt">
+Cette fonction (qui est la fonction logarithme) est au-dessus de ses sécantes sur <span class="arithmatex">\([0; +\infty[\)</span> ! Elle est concave sur <span class="arithmatex">\([0; +\infty[\)</span> (pas encore démontré).
+</div></p>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Il faut toujours préciser <strong>l'intervalle</strong> sur lequel une fonction est convexe (ou concave) !</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Une fonction qui n'est pas convexe sur un intervalle <span class="arithmatex">\(I\)</span> n'est pas une fonction concave sur <span class="arithmatex">\(I\)</span> !!
+Comme pour le sens de variations, il faudra le plus souvent décrire la convexité d'une fonction.</p>
+<p>Par exemple, une fonction est convexe sur <span class="arithmatex">\([-5;2]\)</span>, concave sur <span class="arithmatex">\([2;10]\)</span> et convexe sur <span class="arithmatex">\([10; + \infty[\)</span>.</p>
+</div>
+<details class="- example"><summary>Une fonction quelconque</summary><p><iframe scrolling="no" title="Sécante03" src="https://www.geogebra.org/material/iframe/id/qur2rtxv/width/1906/height/901/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1906px" height="901px" style="border:0px;"> </iframe></p>
+<p><div class="Center_txt">
+Cette fonction est au-dessus de ses sécantes sur <span class="arithmatex">\(]-\infty; 1]\)</span> ! Elle est concave sur <span class="arithmatex">\(]-\infty; 1]\)</span> (pas encore démontré).</p>
+<p>Cette fonction est au-dessous de ses sécantes sur <span class="arithmatex">\([1; +\infty[\)</span> ! Elle est convexe sur <span class="arithmatex">\([1; +\infty[\)</span> (pas encore démontré).
+</div></p>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">Une définition presque inutilisable</p>
+<p>Il est plutôt compliqué de démontrer qu'une courbe est au-dessous au-dessus de <strong>toutes</strong> ses sécantes sur un intervalle. Aussi, ne cherchez pas à le faire !</p>
+<p>Les théorèmes ci-dessous sont beaucoup plus simples d'utilisation.</p>
+</div>
+<p>L'étude de la convexité d'une fonction permet (entre autre) d'affiner la compréhension de son comportement : cela permet de savoir si la croissance &laquo; accélère &raquo; ou &laquo; ralentit &raquo;.</p>
+<h2 id="convexite_et_derivation">Convexité et dérivation<a class="headerlink" href="#convexite_et_derivation" title="Permanent link"></a></h2>
+<div class="admonition info">
+<p class="admonition-title">Convexe et dérivation</p>
+<p>Soit <span class="arithmatex">\(f\)</span> une fonction définie et <strong>deux fois dérivable</strong> sur un intervalle I. </p>
+<ul>
+<li><span class="arithmatex">\(f\)</span> est <em>convexe</em> sur <span class="arithmatex">\(I\)</span> équivaut à <span class="arithmatex">\(f'\)</span> est croissante sur <span class="arithmatex">\(I\)</span>.</li>
+<li><span class="arithmatex">\(f\)</span> est <em>convexe</em> sur <span class="arithmatex">\(I\)</span> équivaut à <strong><span class="arithmatex">\(f''\)</span></strong> est <strong>positive</strong> sur <span class="arithmatex">\(I\)</span>.</li>
+<li><span class="arithmatex">\(f\)</span> est <em>convexe</em> sur <span class="arithmatex">\(I\)</span> équivaut à <span class="arithmatex">\(\mathcal{C}_f\)</span> est <strong>au-dessus</strong> de ses tangentes sur <span class="arithmatex">\(I\)</span>.</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Concave et dérivation</p>
+<p>Soit <span class="arithmatex">\(f\)</span> une fonction définie et <strong>deux fois dérivable</strong> sur un intervalle I. </p>
+<ul>
+<li><span class="arithmatex">\(f\)</span> est <em>concave</em> sur <span class="arithmatex">\(I\)</span> équivaut à <span class="arithmatex">\(f'\)</span> est décroissante sur <span class="arithmatex">\(I\)</span>.</li>
+<li><span class="arithmatex">\(f\)</span> est <em>concave</em> sur <span class="arithmatex">\(I\)</span> équivaut à <strong><span class="arithmatex">\(f''\)</span></strong> est <strong>négative</strong> sur <span class="arithmatex">\(I\)</span>.</li>
+<li><span class="arithmatex">\(f\)</span> est <em>concave</em> sur <span class="arithmatex">\(I\)</span> équivaut à <span class="arithmatex">\(\mathcal{C}_f\)</span> est <strong>au-dessous</strong> de ses tangentes sur <span class="arithmatex">\(I\)</span>.</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">tangente et convextié</p>
+<p>Avec la convexité (resp. concavité), la position relative entre une courbe et ses tangentes n'est connue que sur l'intervalle où la fonction est convexe (resp. concave).</p>
+</div>
+<details class="- example"><summary>Courbe et tangente</summary><p><iframe scrolling="no" title="Tgte02" src="https://www.geogebra.org/material/iframe/id/hyxh8zf2/width/1906/height/901/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1906px" height="901px" style="border:0px;"> </iframe></p>
+<p><div class="Center_txt">
+Cette fonction  est concave sur <span class="arithmatex">\(]-\infty; 1]\)</span>. Elle est <em>au-dessous</em> de ses tangentes <strong>uniquement</strong> sur <span class="arithmatex">\(]-\infty; 1]\)</span> ! On remarque que la courbe passe <em>en dessus</em> de la tangente tracée un peu plus loin sur <span class="arithmatex">\([1; +\infty[\)</span>.</p>
+<p>Cette fonction  est convexe sur <span class="arithmatex">\([1; +\infty[\)</span>. Elle est <em>au-dessus</em> de ses tangentes <strong>uniquement</strong> sur <span class="arithmatex">\([1; +\infty[\)</span> ! On remarque que la courbe passe <em>en dessous</em> de la tangente tracée un peu plus loin sur <span class="arithmatex">\(]-\infty; 1]\)</span>.
+</div></p>
+</details>
+<h2 id="point_dinflexion">Point d'inflexion<a class="headerlink" href="#point_dinflexion" title="Permanent link"></a></h2>
+<p>Il est intéressant de trouver le moment où se produit le changement de convexité. D'où la définition :</p>
+<div class="admonition info">
+<p class="admonition-title">Point d'inflexion</p>
+<p>Un <strong>point d'inflexion</strong> est un point où la courbe représentative d'une fonction traverse sa tangente.</p>
+<p><div class="Center_txt">
+<img alt="Point d'inflexion et tangente" src="../Image/PtInflex.png" /></p>
+</div>
+
+</div>
+<div class="admonition info">
+<p class="admonition-title">Caractérisation d'un point d'inflexion</p>
+<p>Soit <span class="arithmatex">\(f\)</span> une fonction définie sur un intervalle <span class="arithmatex">\(I\)</span> et <span class="arithmatex">\(a\)</span> un réel de <span class="arithmatex">\(I\)</span>.</p>
+<ul>
+<li>Le point <span class="arithmatex">\(A(a;f(a))\)</span> est un point d'inflexion de <span class="arithmatex">\(\mathcal{C}_f\)</span> si et seulement si la convexité de <span class="arithmatex">\(f\)</span> change en <span class="arithmatex">\(a\)</span>.</li>
+<li>Si de plus <span class="arithmatex">\(f\)</span> est deux fois dérivable sur <span class="arithmatex">\(I\)</span>, alors le point <span class="arithmatex">\(A(a;f(a))\)</span> est un point d'inflexion si et seulement <span class="arithmatex">\(f''\)</span> s'annule <strong>et change de signe</strong> en <span class="arithmatex">\(a\)</span>.</li>
+</ul>
+</div>
+<details class="- tip"><summary>Astuce</summary><p>Il est évident que, pour trouver un point d'inflexion, le plus simple est d'étudier le signe de <span class="arithmatex">\(f''\)</span> !</p>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>La seule résolution de <span class="arithmatex">\(f''(x) = 0\)</span> ne permet pas de conclure ! Il faut en plus savoir si la dérivée seconde change de signe !</p>
+</div>
+</details>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="04_deriv_composee.html" title="Composée de fonctions" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Précédent
+                </span>
+                Composée de fonctions
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../D%C3%A9rivation_au_prog/conv_ineg.html" title="Convexité et inégalités" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Suivant
+                </span>
+                Convexité et inégalités
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: {"tabs": false},
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
