@@ -15,8 +15,8 @@
 
 !!! example "Exemple"
 	* Une suite à termes positifs est minorée par 0
-	* **A retenir :** Une suite croissante est minorée par son premier terme $u_0$ : $u_0 \leq u_1 \leq \cdots \leq u_n$
-	* **A retenir :** Une suite décroissante est majorée par son premier terme $u_0$ : $u_n \leq \cdots \leq u_1 \leq u_0$ 
+	* <span id="suite_max_min">**A retenir :**</span> Une suite croissante est minorée par son premier terme $u_0$ : $u_0 \leq u_1 \leq \cdots \leq u_n$. En particulier, pour tout $n \in \N$, $u_0 \leq u_n$.
+	* **A retenir :** Une suite décroissante est majorée par son premier terme $u_0$ : $u_n \leq \cdots \leq u_1 \leq u_0$. En particulier, pour tout $n \in \N$, $u_0 \geq u_n$. 
 	* La suite $u$ définie par $u_n=\sin n$  est minorée par -1 et majorée par 1 
 	* La suite $u$ définie par $u_n=n$ est minorée par 0 et non majorée.
 	* la suite définie pour $n \geq 1$ par $u_n=1+\dfrac{2}{n}$ est minorée par 1 et majorée par 3. Elle est bornée.</br>

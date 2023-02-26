@@ -32,7 +32,7 @@ On rappelle que :
 
 !!! info "Croissance comparée"
     
-    - Pour tout $n\in \N$, $\dlim{x}{+\infty}\dfrac{\ex^x}{x^n}=+\infty$
+    - <span id="exp_crois_comp">Pour tout</span> $n\in \N$, $\dlim{x}{+\infty}\dfrac{\ex^x}{x^n}=+\infty$
     - Pour tout $n\in \N$, $\dlim{x}{-\infty} x^n \ex^x=0$
 
 !!! info "Limite et taux d'accroissement"

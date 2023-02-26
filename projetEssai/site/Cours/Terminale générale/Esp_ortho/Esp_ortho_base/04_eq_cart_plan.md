@@ -10,7 +10,7 @@
 !!! info "Equation cartésienne d'un plan"
     Dans un repère orthonormal
     
-    - Un plan $P$ de vecteur  normal $\V{n}(a,b,c)$ a une équation cartésienne de la forme $ax+by+cz+d=0$ où  $d$ est un réel. 
+    - Un plan $P$ de vecteur  normal $\V{n}(a,b,c)$ a <span id="eq_cartesienne_plan">**une équation cartésienne**</span> de la forme $ax+by+cz+d=0$ où  $d$ est un réel. 
     - Réciproquement : l'ensemble des points $M(x,y,z)$ tels que $ax+by+cz+d=0$  avec $(a,b,c)\neq(0,0,0)$ est un plan qui a pour vecteur normal est $\V{n}(a,b,c)$.
 
 ???- tip "Equation de plans particuliers"
@@ -84,3 +84,82 @@
     Déterminer la distance entre $A(-1;3;2)$ et $\mc{P}$ : $x-3y+2z-4=0$.
 
     ???- done "Réponse"
+        Soient $H(x_H;y_H;z_H)$ le projeté orthogonal de $A$ sur $\mc{P}$ et $\V{n}(1;-3;2)$ un vecteur normal à $\mc{P}$.
+
+        - $H$ est un point de $\mc{P}$ donc $x_H-3y_H+2z_H-4=0$
+        - $H$ est sur la droite $(AH)$ passant par $A$ et dirigée par $\V{n}$. Ainsi, une représentation paramétrique de cette droite $(AH)$ est 
+
+        \[
+            \left\lbrace
+            \begin{array}{lr}
+            x = -1 + t\\
+            y = 3 -3t\ ,\qquad t\in \R \\
+            z = 2+ 2t
+            \end{array}
+            \right.
+        \]
+
+        Comme $H$ est cette droite et sur le plan $\mc{P}$,
+
+        \[
+            \left\lbrace
+            \begin{array}{lr}
+            x_H = -1 + t\\
+            y_H = 3 -3t\ ,\qquad \text{ pour un } t \in \R \\
+            z_H = 2+ 2t
+            x_H-3y_H+2z_H-4=0
+            \end{array}
+            \right.
+        \]
+
+        On résout $t-1-3(-3t+3)+2(2t+2)-4=0$. On trouve $t = \dfrac{5}{7}$. D'où :
+
+        \[
+            \left\{
+            \begin{array}{l}
+            x_H  =  -\dfrac{2}{7}\\
+            y_H  =  \dfrac{6}{7}\\
+            \rule[-0.5cm]{0pt}{1.2cm}z_H  =  \dfrac{24}{7}
+            \end{array}
+            \right.
+        \]
+
+        Donc, d'après le théorème, la distance entre $A$ et $\mc{P}$ est la longueur $AH = \sqrt{}AH=\sqrt{\left( -\dfrac{2}{7} +1\right)^2 + \left( \dfrac{6}{7} -3\right)^2+\left( \dfrac{24}{7} -2\right)^2}=\sqrt{\dfrac{50}{7}}=5\dfrac{\sqrt{14}}{7}$.
+
+!!! info "Distance point-droite"
+    Soit $(d)$ une droite de l'espace et $A$ un point. La **distance du point $\mathbf{A}$ à la droite $\mathbf{(d)}$**, notée $d(A, d)$, est la plus petite des longueurs $AM$ où $M \in (d)$.
+
+!!! tip "Comment calculer cette distance ?"
+    Si on note $H$ le projeté orthogonal de $A$ sur la droite $(\Delta)$, alors $d(A, \Delta)=AH$.
+
+???- example "Exemple"
+    On se place dans un repère orthonormé.
+    
+    Soit $(d)$ la droite passant par $I(1;0;-1)$ et dirigée par $\V{u}(2;-1;1)$. Déterminer la distance entre $A(2;-1;2)$ et la droite $(d)$.
+
+    ???- done "Réponse"
+        Notons $H$ le projeté orthogonal de $A$ sur $(d)$.
+        
+        Et soit $(P)$ le plan passant par $A$ et ayant pour vecteur normal $\V{u}(2;-1;1)$. Donc $\mc{P}$ a pour équation cartésienne $2(x-2)-(y+1)+(z-2)=0$, c'est-à-dire $2x-y+z-7=0$. Or $H$ appartient à ce plan $\mc{P}$. Donc $2x_H-y_H+z_H-7=0$.
+
+        $H$ est un point de $(d)$ qui a pour équation paramétrique $\left\lbrace \begin{array}{lr} x = 1 + 2t\\ y=-t \ \quad t \in \R\\ z = -1+t \end{array}\right.$
+
+        Les coordonnées de $H$ vérifient : $\left\{\begin{array}{l} 2x_H-y_H+z_H-7=0 \\ x_H  =  1 + 2t\\ y_H  =  -t \\ z_H   = -1 + t \end{array} \right.$.
+
+        On résout : $2(2t+1)-(-t)+(t-1)-7=0$. On trouve $t = 1$. D'où :
+
+        \[
+            \left\{
+            \begin{array}{l}
+            x_H  =  3\\
+            y_H  =  -1 \\
+            z_H  =  0
+            \end{array}
+            \right.
+        \]
+
+        Or d'après le théorème précédent, la distance entre $A$ et la droite $(d)$ est la longueur $AH$.
+
+        Donc $d(A, d)= \displaystyle\sqrt{\left( 3-2\right)^2+\left( -1+1\right)^2+\left( 0-2\right)^2} = \sqrt{5}$.
+
+
