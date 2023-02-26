@@ -34,6 +34,17 @@ use_directory_urls : false
 theme:
     name: 'material'
     language: 'fr'
+    features:
+        - tabs
+        - instant
+        - tabs
+        - top
+        - toc.integrate
+        - header.autohide
+        #- navigation.tabs.
+    # palette:
+    #     primary: 'light green'
+    #     accent: 'amber'
     palette:
       - scheme: default
         primary: 'light green'
@@ -47,15 +58,7 @@ theme:
         toggle:
           icon: material/weather-night
           name: Basculer en mode clair
-
-
-    features:
-        - navigation.instant
-        - navigation.tabs
-        - navigation.top
-        - toc.integrate
-        - header.autohide
-        #- navigation.tabs.sticky
+    
     
 
 extra_css: 
@@ -111,7 +114,7 @@ markdown_extensions:
     # - pymdownx.snippets
     - pymdownx.superfences #https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
     - pymdownx.tabbed:
-        alternate_style: true
+#        alternate_style: true
     - pymdownx.emoji:
           emoji_index: !!python/name:materialx.emoji.twemoji
           emoji_generator: !!python/name:pymdownx.emoji.to_svg 
@@ -127,9 +130,9 @@ markdown_extensions:
         separator: "_"
 
 plugins:
-    # - search
-    - mkdocs-jupyter:
-        include_source: true
+    #- search
+    # - mkdocs-jupyter:
+    #     include_source: true
 
 nav:
     - Accueil: "index.md"
@@ -157,6 +160,7 @@ nav:
                 - Composée de fonctions: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/04_deriv_composee.md"
                 - Convexité: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/05_Convexite.md"
             - "Dérivation : au programme":
+                - "A retenir": "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/Deriv_A_retenir.md"
                 - Convexité et inégalités: "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/conv_ineg.md"
                 - Démonstration au programme: "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/dem_prog.md"
             - "Dérivation : vers le supérieur": "Cours/Terminale générale/Derivation_et_convexite/Dérivation_en_plus/Dérivation_best.md"
@@ -169,19 +173,25 @@ nav:
                 - Suites géométriques: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/05_Suites_geometrique.md"
                 - Raisonnement par récurrence: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/06_Raisonnement_par_recurrence.md"
                 - Suite majorée, minorée, bornée: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/07_majoree_minoree_bornee.md"
+            - "Suites : au programme":
+                - "A retenir": "Cours/Terminale générale/Suites_et_recurrence/Suites_prog/SuiteRec_A_retenir.md"
         - Loi binomiale:
             - "Probabilité : les bases":
                 - Rappel: "Cours/Terminale générale/Loi_binomiale/binom_bases/01_binom_rappel.md"
                 - Succession d'épreuves: "Cours/Terminale générale/Loi_binomiale/binom_bases/02_succ_ep_ind.md"
                 - Loi binomiale: "Cours/Terminale générale/Loi_binomiale/binom_bases/03_loi_binom.md"
-            - "Probabilités : au programme": "Cours/Terminale générale/Loi_binomiale/binom_prog/binom_dem_prog.md"
+            - "Probabilités : au programme": 
+                - A retenir: "Cours/Terminale générale/Loi_binomiale/binom_prog/binom_A_Retenir.md"
+                - Démonstration au programme: "Cours/Terminale générale/Loi_binomiale/binom_prog/binom_dem_prog.md"
         - Limite de suite:
             - "Limite de suites : les bases":
                 - Limite d'une suite: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/01_Limite_d_une_suite.md"
                 - Limite de la suite $q^n$: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/02_Limite_de_la_suite_qn.md"
                 - Limite et opérations: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/03_Theoremes_d_operation.md"
                 - Limite et comparaison : "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/04_th_comp.md"
-            - "Limite de suites : au programme": "Cours/Terminale générale/Limite_de_suite/lim_suite_prog/lim_suite_dem_prog.md"
+            - "Limite de suites : au programme": 
+                - A retenir: "Cours/Terminale générale/Limite_de_suite/lim_suite_prog/lim_suite_A_retenir.md"
+                - "Démonstrations au programme": "Cours/Terminale générale/Limite_de_suite/lim_suite_prog/lim_suite_dem_prog.md"
             - "Limite de suites : vers le supérieur": "Cours/Terminale générale/Limite_de_suite/Limite_de_suite_en_plus/limite_suite_best.md"
         - Vecteur de l'espace:
             - "Vecteur : les bases":
@@ -190,6 +200,8 @@ nav:
                 - Vecteur de l'espace: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/Vect_esp.md"
                 - Repère de l'espace: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/rep_esp.md"
                 - Equation paramétrique d'une droite: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/Eq_param.md"
+            - "Vecteur : au programme":
+                - "A retenir" : "Cours/Terminale générale/Vecteur_esp/vect_esp_prog/vect_esp_A_Retenir.md"
         - Limite de fonction:
             - "Limite de fct : les bases":
                 - "Limite vers l'infini": "Cours/Terminale générale/Limite_fct/limite_fct_base/01_lim_fct_infinie.md"
@@ -197,6 +209,7 @@ nav:
                 - "Limite et opérations": "Cours/Terminale générale/Limite_fct/limite_fct_base/03_lim_fct_op.md"
                 - "Limite et comparaison": "Cours/Terminale générale/Limite_fct/limite_fct_base/04_lim_fct_comp.md"
             - "Limite de fct : au programme": 
+                - A retenir: "Cours/Terminale générale/Limite_fct/limite_fct_prog/lim_fct_A_Retenir.md"
                 - "Démonstration au programme" : "Cours/Terminale générale/Limite_fct/limite_fct_prog/lim_fct_dem.md" 
         - Orthogonalité dans l'espace:
             - "Orthogonalité : les bases":
@@ -205,7 +218,18 @@ nav:
                 - "Vecteur normal": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/03_vect_normal.md"
                 - "Equation cartésienne": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/04_eq_cart_plan.md"
             - "Orthogonalité : au programme":
+                - A retenir: "Cours/Terminale générale/Esp_ortho/Esp_ortho_prog/Esp_ortho_A_Retenir.md"
                 - "Plan médiateur": "Cours/Terminale générale/Esp_ortho/Esp_ortho_prog/Plan_med.md"
+        - Continuité:
+            - "Continuité : les bases":
+                - Fonction continue: "Cours/Terminale générale/Continuite/Continuite_base/01_cont_fct.md"
+                - Théorème des valeurs intermédiaires: "Cours/Terminale générale/Continuite/Continuite_base/02_TVI.md"
+            - "Continuité : au programme":
+                - A retenir: "Cours/Terminale générale/Continuite/Continuite_prog/Continuite_A_Retenir.md"
+        - Logarithme népérien:
+            - "Log népérien : les bases": 
+                - "La fonction ln": "Cours/Terminale générale/Log/Log_base/01_fct_ln.md"
+                - "Etude de la fonction": "Cours/Terminale générale/Log/Log_base/02_etude_fct.md"
     - Labo de math: 
         - Accueil: "Labo de math/c01.md"
         - "Liaison lycée/supérieur": "Labo de math/Liaison_lycée_sup/supérieur.md"
