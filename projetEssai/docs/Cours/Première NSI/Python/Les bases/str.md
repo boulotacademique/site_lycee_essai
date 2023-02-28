@@ -74,7 +74,7 @@ print(mot[:-5]) # affiche Bonj
 	```
 
 	- La <span class = "Gras" id = "concat">concaténation</span> consiste à coller plusieurs chaines de caractères. Cela s'effectue à l'aide du symbole ```+```. Ainsi, ```mot + " " + mot_suiv``` correspond à ```Bonjour ! Tout le monde !```
-	- Pour répéter une chaine : ```mot*2``` correspond à ```'Bonjour !Bonjour !'``` et ```"a"*5``` correpsond à ```aaaaa```
+	- Pour <span class = "Gras" id = "repet_str">répéter une chaine</span>: ```mot*2``` correspond à ```'Bonjour !Bonjour !'``` et ```"a"*5``` correpsond à ```aaaaa```
 
 !!! warning "Attention"
 
@@ -131,7 +131,7 @@ for idx in range(len(mot)):
 
 ???- tip "Parcourir une chaîne de caractères sans les indices"
 
-	POur récupérer les caractères d'une chaîne les uns après les autres **sans les indices**, il faut seulement utiliser une boucle ```for``. Il est alors plus difficile d'accéder aux indices !
+	Pour récupérer les caractères d'une chaîne les uns après les autres **sans les indices**, il faut seulement utiliser une boucle ```for``. Il est alors plus difficile d'accéder aux indices !
 
 	```python
 	mot = "Bonjour !"
@@ -265,7 +265,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 	mot = ""
 	for idx in range(len(mot_cache)):
 		if idx%2 == 1: # On ne prend ques les indices impairs
-			mot = mot_cache[idx] + mot	# On accumule les caractères à la fin (à droite)
+			mot = mot_cache[idx] + mot	# On accumule les caractères au début (à gauche)
 	print(mot) # affiche Cache
 	```
 
@@ -300,7 +300,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 
 ???- question "Exercice"
 
-	A l'aide des taranches, compléter le programme suivant pour obtenir une chaîne où l'alphabet aura été remis dans le bonne ordre.
+	A l'aide des tranches, compléter le programme suivant pour obtenir une chaîne où l'alphabet aura été remis dans le bonne ordre.
 
 	```python
 	melange = "QRSTABCDELMNUVFGHIJKWXYZOP"

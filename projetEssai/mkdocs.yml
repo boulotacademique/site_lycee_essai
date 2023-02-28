@@ -39,7 +39,7 @@ theme:
         - instant
         - tabs
         - top
-        - toc.integrate
+        # - toc.integrate
         - header.autohide
         #- navigation.tabs.
     # palette:
@@ -139,14 +139,20 @@ nav:
     #- Seconde: "Cours/Seconde/c01.md"
     - Première NSI: 
         - Présentation: "Cours/Première NSI/Présentation/c01.md"
-        - Les bases:
-            - "Bien écrire en python": "Cours/Première NSI/Python/Les bases/ortho.md"
-            - "print/input": "Cours/Première NSI/Python/Les bases/in_out.md"                
-            - "Chaine de caractères": "Cours/Première NSI/Python/Les bases/str.md"
-            - "La boucle for" : "Cours/Première NSI/Python/Les bases/for.md"
-            - "if, elif et les conditions" : "Cours/Première NSI/Python/Les bases/if_elif.md"
-            - "La boucle while" : "Cours/Première NSI/Python/Les bases/while.md"
-            - "Les listes" : "Cours/Première NSI/Python/Les bases/list.md"
+        - Python:
+            - Les bases:
+                - "Bien écrire en python": "Cours/Première NSI/Python/Les bases/ortho.md"
+                - "Variables, opérations" : "Cours/Première NSI/Python/Les bases/variables.md"
+                - "print/input": "Cours/Première NSI/Python/Les bases/in_out.md"                
+                - "Chaine de caractères": "Cours/Première NSI/Python/Les bases/str.md"
+                - "La boucle for" : "Cours/Première NSI/Python/Les bases/for.md"
+                - "if, elif et les conditions" : "Cours/Première NSI/Python/Les bases/if_elif.md"
+                - "La boucle while" : "Cours/Première NSI/Python/Les bases/while.md"
+                - "Les listes (I)" : "Cours/Première NSI/Python/Les bases/list.md"
+                - "Les fonctions" : "Cours/Première NSI/Python/Les bases/fct.md"
+            - Les structures:
+                - "Les listes (II)" : "Cours/Première NSI/Python/Structures/list02.md"
+                - "Les matrices" : "Cours/Première NSI/Python/Structures/matrice.md"
     #- Première STI2D: "Cours/Première STI2D/c01.md"
     #- Terminale STI2D: "Cours/Terminale STI2D/c01.md"
     #- Première générale: "Cours/Première générale/c01.md"
@@ -230,6 +236,8 @@ nav:
             - "Log népérien : les bases": 
                 - "La fonction ln": "Cours/Terminale générale/Log/Log_base/01_fct_ln.md"
                 - "Etude de la fonction": "Cours/Terminale générale/Log/Log_base/02_etude_fct.md"
+            - "Log népérien : au programme" : 
+                - A retenir: "Cours/Terminale générale/Log/Log_prog/Log_A_Retenir.md"
     - Labo de math: 
         - Accueil: "Labo de math/c01.md"
         - "Liaison lycée/supérieur": "Labo de math/Liaison_lycée_sup/supérieur.md"

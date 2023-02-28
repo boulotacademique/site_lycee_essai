@@ -19,7 +19,7 @@ Il est préférable d'utiliser une chaine de caractère dans un ```print```. Pou
 
 !!! info "A retenir"
 
-	Pour récupérer ce qu'un utilisateur tape au clavier, il suffit d'utiliser la fonction ```input``` ! Elle peut prendre 0 argument mais aussi plusieurs ! En général, on utilisera un argument qui est une chaîne de caractères (c'est-à-dire un texte) qui explique à l'utilisateur ce qu'il doit faire !
+	Pour récupérer ce qu'un utilisateur tape au clavier, il suffit d'utiliser la fonction ```input``` ! Elle peut prendre 0 ou 1 argument ! En général, on utilisera un argument qui est une chaîne de caractères (c'est-à-dire un texte) qui explique à l'utilisateur ce qu'il doit faire !
 
 	Cette fonction renvoie **une chaîne de caractère** (type ```str```). Il faut donc la récupérer dans une variable !
 

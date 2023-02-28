@@ -9,7 +9,7 @@ Naturellement, ce chapitre nécessite de bien connaitre le chapitre sur [les sui
 - Utilisation du théorème de convergence des suites monotones
 - Utilisation d'encadrement, en particulier avec $(-1)^n$ (plus rarement avec $\cos(n)$ et $\sin(n)$)
 - Théorème de comparaison
-- [Le théorème du point fixe](../../Continuite/Continuite_base/01_cont_fct.#th_pt_fixe) dans une version simplifiée : on admet que $\ell$ vérifie $f(\ell) = \ell$
+- [Le théorème du point fixe](../../Continuite/Continuite_base/01_cont_fct.md#th_pt_fixe) dans une version simplifiée : on admet que $\ell$ vérifie $f(\ell) = \ell$
 - Utilisation du sens de variations de $(u_n)$ et de [la propriété vue ici](../../Suites_et_recurrence/Suites_bases/07_majoree_minoree_bornee.md#suite_max_min), pour avoir un &laquo; meilleur &raquo; intervalle contenant $\ell$.
 
 ### ... mais parfois il y a aussi
