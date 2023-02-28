@@ -40,7 +40,7 @@
 	- accéder à une tranche depuis le dernier caractère : ```liste_a[len(liste_a)-3:len(liste_a)]``` correspond aux 3 derniers caractères. Ainsi, ```liste_a[len(liste_a)-3:len(liste_a)]``` correspond à ```[3, 6, 13]```. On peut aussi écrire ```liste_a[-3:]`
 	- accéder à toute la chaîne sauf les derniers : ```liste_a[0:len(liste_a)-5]``` correspond à toute la chaîne **sauf** les 5 derniers caractères. Ainsi, ```liste_a[0:len(liste_a) - 5]``` correspond à ```[1, -5, 10]```. On peut aussi écrire ```liste_a[:-5]```
 
-    On trouve auusi la concaténation : ```liste_b = liste_a + [1000]``` et la répétition ```liste_c = [5]*10```
+    On trouve aussi <span class = "Gras" id = "concat_list">la concaténation</span> : ```liste_b = liste_a + [1000]``` et <span class = "Gras" id = "repet_list">la répétition</span> ```liste_c = [5]*10```
 
     
 
@@ -96,9 +96,10 @@
 		elt = liste_a[idx]
 		print(elt)
 	```
+
 	affiche
 
-	<div class = "Center_seul" style="width:10%;">
+	<div class = "Center_ss_bd" style="width:10%;">
 
 	```python
 	1
@@ -129,6 +130,7 @@ for idx in range(len(liste_a)):
 	for elt in liste_a:
 		print(elt)
 	```
+
 	affiche
 
 	<div class = "Center_seul" style="width:10%;">
@@ -145,73 +147,7 @@ for idx in range(len(liste_a)):
 
 	</div>
 
-### Insérer une chaîne
 
-Pour insérer des éléments dans une liste, il est possible d'utiliser les tranches. <!--Lire et bien travailler les exemples suivants afin de bien les comprendre.-->
-
-!!! note "Insérer une chaîne"
-
-	On souhaite insérer une liste (éventuellement contenant un seul élément) dans une chaîne. Par exemple, dans la liste ```liste_a = [1,5,2,6,4,7,8]```, on souhaite insérer ```100``` entre le ```2``` et le ```6```.
-
-	<div class = "Center_seul">
-	
-	|chaîne :|[|1|,|5|,|2|,|6|,|4|,|7|,|8|]|
-	|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-	|Indice :| |0| |1| |2| |3| |4| |5| |6| |7| |
-
-	</div>
-
-	Il faut [concaténer](#concat) les chaînes suivantes :
-	
-	- la sous liste dont les indices commencent à 0 et sont **strictement inférieur à 3** (Faite attention à ce dernier point !!!)
-	- la liste que l'on souhaite insérer
-	- la sous liste dont les indices vont de l'indice 3 jusqu'au dernier
-	
-
-	```python
-	liste_a = [1,5,2,6,4,7,8]
-	a_inserer = [100] # ATTENTION il faut une liste ! Même pour un élément !
-	liste_a = liste_a[0:3] + a_inserer + liste_a[3:]
-	print(liste_a) # affiche Bonbon !
-	```
-
-???- tip "Ajouter une liste à la fin"
-
-	Il est inutile d'utiliser des tranches ! Il suffit de [concaténer](#concat) à droite.
-
-	```python
-	liste_a = [1,5,2,6,4,7,8]
-	a_inserer = [100, 150] # ATTENTION il faut une liste ! Même pour un élément !
-	liste_a = liste_a + a_inserer
-	print(liste_a) # affiche [1,5,2,6,4,7,8,100,150]
-	```
-
-!!! warning "Ajouter **un** élément à la fin d'une liste : append"
-
-    Pour ajouter un élément à la fin, il est préférable d'utiliser ```liste_a.append(100)``` !
-
-???- tip "Ajouter une liste au début"
-
-	Cela revient à ajouter une liste à la fin, non ?
-
-	```python
-	liste_a = [1,5,2,6,4,7,8]
-	debut = [100, 150] # ATTENTION il faut une liste ! Même pour un élément !
-	liste_a = debut + liste_a
-	print(liste_a) # affiche [100,150,1,5,2,6,4,7,8]
-	```
-
-???- danger "Les listes sont des mutables !"
-
-    En tant que [mutable](AFAIRE), une affectation ```liste_a =``` doit être utilisée en connaissance de cause, en particulier dans des [fonctions](AFAIRE) ! Il est souvent préférable d'utiliser une boucle ```for``` et la méthode ```append``` !
-
-	```python
-	liste_a = [1,5,2,6,4,7,8]
-	a_inserer = [100, 150] # ATTENTION il faut une liste ! Même pour un élément !
-    for idx in range(len(a_inserer)):
-	    liste_a.append(a_inserer[idx])
-	print(liste_a) # affiche [1,5,2,6,4,7,8,100,150]
-	```
 
 ### Créer une liste
 
@@ -240,6 +176,8 @@ Pour insérer des éléments dans une liste, il est possible d'utiliser les tran
     - ```for elt in L :``` : parcourt la liste ```L```
     - ```A = L``` : copie [**par référence**](AFAIRE) la liste ```L```
 
-## Exercices
 
-???- question "Exercice"
+
+<!--## Exercices
+
+???- question "Exercice"-->
