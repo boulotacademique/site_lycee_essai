@@ -39,7 +39,7 @@ theme:
         - instant
         - tabs
         - top
-        # - toc.integrate
+        - toc.integrate
         - header.autohide
         #- navigation.tabs.
     # palette:
@@ -47,8 +47,6 @@ theme:
     #     accent: 'amber'
     palette:
       - scheme: default
-        primary: 'light green'
-        accent: 'amber'
         toggle:
           icon: material/weather-sunny
           name: Basculer en mode sombre
@@ -58,7 +56,15 @@ theme:
         toggle:
           icon: material/weather-night
           name: Basculer en mode clair
-    
+
+
+    features:
+        - navigation.instant
+        - navigation.tabs
+        - navigation.top
+        # - toc.integrate
+        - header.autohide
+        #- navigation.tabs.sticky
     
 
 extra_css: 
@@ -114,7 +120,7 @@ markdown_extensions:
     # - pymdownx.snippets
     - pymdownx.superfences #https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
     - pymdownx.tabbed:
-#        alternate_style: true
+        alternate_style: true
     - pymdownx.emoji:
           emoji_index: !!python/name:materialx.emoji.twemoji
           emoji_generator: !!python/name:pymdownx.emoji.to_svg 
@@ -130,9 +136,9 @@ markdown_extensions:
         separator: "_"
 
 plugins:
-    #- search
-    # - mkdocs-jupyter:
-    #     include_source: true
+    # - search
+    - mkdocs-jupyter:
+        include_source: true
 
 nav:
     - Accueil: "index.md"
