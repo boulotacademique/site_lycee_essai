@@ -10,6 +10,7 @@
         som=som+compt
     print(som)
     ```
+    
     Il y a d'autres façons [d'utiliser ```range```](./ortho.md#range) !
 
 ???- example "Un classique important"
@@ -64,6 +65,7 @@ Une boucle ```for``` peut donc s'utiliser lorsque le nombre de répétition des 
     for co in range(20, 30):
         print("Alerte intrusion !")
     ```
+
     Alors que dans le second, une telle modification est beaucoup plus difficile à effectuer (et totalement inappropriée) !
 
 ???- example "Exercice"
@@ -97,15 +99,17 @@ Une boucle ```for``` peut donc s'utiliser lorsque le nombre de répétition des 
 
     Par exemple, sur 5 lignes : on a :
 
-    <div class = "Center_txt" style="width:5em;margin-left:auto;margin-right:auto;">
+    <div  style="width:5em;margin-left:auto;margin-right:auto;">
+
 
     ```python
-    X
-    XX
-    XXX
-    XXXX
+    X  
+    XX  
+    XXX  
+    XXXX  
     XXXXX
     ```
+
     </div>
 
     ???- done "Réponse"
@@ -122,7 +126,7 @@ Une boucle ```for``` peut donc s'utiliser lorsque le nombre de répétition des 
 
     Par exemple, sur 5 lignes : on a :
 
-    <div class = "Center_txt" style="width:5em;margin-left:auto;margin-right:auto;">
+    <div style="width:5em;margin-left:auto;margin-right:auto;">
 
     ```python
     XXXXX
@@ -149,13 +153,13 @@ Une boucle ```for``` peut donc s'utiliser lorsque le nombre de répétition des 
 
     <div class = "Center_txt" style="width:9em;margin-left:auto;margin-right:auto;">
 
-    <pre>
+    ```python
     A
     AAA
     AAAAA
     AAAAAAA
     AAAAAAAAA
-    </pre>
+    ```
 
     </div>
 

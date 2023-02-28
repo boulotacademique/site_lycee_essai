@@ -10,6 +10,8 @@
 	\left( \ln x \right)' = \dfrac{1}{x}
 	\]
 
+???- tip "Primitive"
+	Ainsi d'après le théorème précédent, les primtives de $h(x) = \dfrac{1}{x}$ sont $\ln(x) + k$, $k \in \R$.
 
 ???- abstract "Démonstration"
 	On admet que la fonction logarithme népérien est dérivable sur $]0 ; +\infty[$.  
