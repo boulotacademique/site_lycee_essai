@@ -2,10 +2,10 @@
 
 ## Définition
 
-Un dictionnaire est basé sur les ensembles (une autre structure informatique) qui possède les principales caractéristiques d'un ensemble :
+Un dictionnaire est basé sur les ensembles (une autre structure informatique) qui possède les principales caractéristiques d'un ensemble mathématiques :
 
 - il n'y a pas d'ordre (en effet $S = \{0;3;1 \} = \{ 3;0 ; 1\} = \{ 1;0 ; 3\}$)
-- il n'y a pas de répétition possible ~~$\{0;0;2;3 \}$~~ 
+- il n'y a pas de répétition possible {-- {0;0;2;3} --}
 
 ???- warning "Pas d'ordre donc pas d'indice"
     Comme un ensemble n'a pas d'ordre, parler de premier élément ou d'élément d'indice 0 n'a pas de sens !
