@@ -1,4 +1,6 @@
-# Equation cartésienne du plan
+# Equation cartésienne du plan, distance
+
+## Equation cartésienne
 
 !!! info "Rappel"
     Un plan peut être déterminé par : 
@@ -71,6 +73,8 @@
 
 ## Distance d'un point à une droite ou à un plan
 
+### Distance entre un point et un plan
+
 !!! info "Distance point-plan"
     Soient $\mc{P}$ un plan de l'espace et $A$ un point.
     La **distance du point A au plan** $\mathbf{\mc{P}}$, notée $d(A, \mc{P})$, est la plus petite des longueurs $AM$ où $M \in \mc{P}$.
@@ -125,6 +129,8 @@
         \]
 
         Donc, d'après le théorème, la distance entre $A$ et $\mc{P}$ est la longueur $AH = \sqrt{}AH=\sqrt{\left( -\dfrac{2}{7} +1\right)^2 + \left( \dfrac{6}{7} -3\right)^2+\left( \dfrac{24}{7} -2\right)^2}=\sqrt{\dfrac{50}{7}}=5\dfrac{\sqrt{14}}{7}$.
+
+### Distance entre un point et une droite
 
 !!! info "Distance point-droite"
     Soit $(d)$ une droite de l'espace et $A$ un point. La **distance du point $\mathbf{A}$ à la droite $\mathbf{(d)}$**, notée $d(A, d)$, est la plus petite des longueurs $AM$ où $M \in (d)$.

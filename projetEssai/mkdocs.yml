@@ -51,8 +51,8 @@ theme:
           icon: material/weather-sunny
           name: Basculer en mode sombre
       - scheme: slate
-        primary: 'light green'
-        accent: amber
+        #primary: 'light green'
+        #accent: amber
         toggle:
           icon: material/weather-night
           name: Basculer en mode clair
@@ -230,7 +230,7 @@ nav:
                 - "Rappel : produit scalaire dans le plan": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/01_Rappel_pdt_scal_plan.md"
                 - "Espace et produit scalaire": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/02_pdt_scal_esp.md"
                 - "Vecteur normal": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/03_vect_normal.md"
-                - "Equation cartésienne": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/04_eq_cart_plan.md"
+                - "Equation cartésienne, distance": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/04_eq_cart_plan.md"
             - "Orthogonalité : au programme":
                 - A retenir: "Cours/Terminale générale/Esp_ortho/Esp_ortho_prog/Esp_ortho_A_Retenir.md"
                 - "Plan médiateur": "Cours/Terminale générale/Esp_ortho/Esp_ortho_prog/Plan_med.md"
