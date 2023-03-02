@@ -119,8 +119,8 @@ markdown_extensions:
     - pymdownx.inlinehilite
     # - pymdownx.snippets
     - pymdownx.superfences #https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
-    - pymdownx.tabbed:
-        alternate_style: true
+    # - pymdownx.tabbed:
+    #     alternate_style: true
     - pymdownx.emoji:
           emoji_index: !!python/name:materialx.emoji.twemoji
           emoji_generator: !!python/name:pymdownx.emoji.to_svg 
@@ -135,10 +135,10 @@ markdown_extensions:
         baselevel: 1
         separator: "_"
 
-plugins:
+# plugins:
     # - search
-    - mkdocs-jupyter:
-        include_source: true
+    # - mkdocs-jupyter:
+    #     include_source: true
 
 nav:
     - Accueil: "index.md"
