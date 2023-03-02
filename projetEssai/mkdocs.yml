@@ -136,10 +136,10 @@ markdown_extensions:
         baselevel: 1
         separator: "_"
 
-# plugins:
-#     # - search
-#     - mkdocs-jupyter:
-#         include_source: true
+plugins:
+    # - search
+    - mkdocs-jupyter:
+        include_source: true
 
 nav:
     - Accueil: "index.md"
