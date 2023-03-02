@@ -136,10 +136,10 @@ markdown_extensions:
         baselevel: 1
         separator: "_"
 
-plugins:
-    # - search
-    - mkdocs-jupyter:
-        include_source: true
+# plugins:
+#     # - search
+#     - mkdocs-jupyter:
+#         include_source: true
 
 nav:
     - Accueil: "index.md"
@@ -175,6 +175,7 @@ nav:
                 - Convexité: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/05_Convexite.md"
             - "Dérivation : au programme":
                 - "A retenir": "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/Deriv_A_retenir.md"
+                - Nombre dérivé: "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/Nbre_dérivé.md"
                 - Convexité et inégalités: "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/conv_ineg.md"
                 - Démonstration au programme: "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/dem_prog.md"
             - "Dérivation : vers le supérieur": "Cours/Terminale générale/Derivation_et_convexite/Dérivation_en_plus/Dérivation_best.md"
@@ -246,7 +247,10 @@ nav:
                 - "Etude de la fonction": "Cours/Terminale générale/Log/Log_base/02_etude_fct.md"
             - "Log népérien : au programme" : 
                 - A retenir: "Cours/Terminale générale/Log/Log_prog/Log_A_Retenir.md"
-    - Labo de math: 
+        - Equation différentielle:
+            - "Eq diff : les bases":
+                - "Définition" : "Cours/Terminale générale/Eq_diff/Eq_diff_base/01_Def.md"
+    - Labo de math:  
         - Accueil: "Labo de math/c01.md"
         - "Liaison lycée/supérieur": "Labo de math/Liaison_lycée_sup/supérieur.md"
         #- "essai slide" : "Labo de math/Liaison_lycée_sup/essai_slide.md"

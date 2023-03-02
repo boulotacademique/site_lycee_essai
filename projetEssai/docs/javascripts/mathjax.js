@@ -12,6 +12,8 @@ window.MathJax = {
       rp : '{\\right) }',
       ex : '{\\text{e}}',
       equivaut : '{\\iff}',
+      dx : ['\\text{d} #1',1,'x'],
+      dxx : ['\\text{d}^2 #1',1,'x'],
       eq : '{\\iff}',
       Syst : ['\\left\\{ \\begin{array}{rcl} #1\\\\ #2 \\end{array} \\right.', 2],
       dlim : ['\\displaystyle{\\lim_{#1 \\to #2}}',2],
