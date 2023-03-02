@@ -14,9 +14,9 @@
 
 ???- danger "ATTENTION"
 
-	Le principal danger d'une boucle ```while``` est la boucle infinie. Il faut donc impérativement vérifier qu'au minimum les instructions dans la boucle permettent de faire évoluer la condition !
+	Le principal danger d'une boucle ```while``` est la boucle infinie. Il faut donc impérativement vérifier qu'au minimum les instructions dans la boucle permettent de faire évoluer des éléments de cette condition !
 
-	Par exemple:
+	Par exemple (NE PAS TESTER):
 
 	```python
 	a = 5 
@@ -24,7 +24,7 @@
 		b = a + b
 	```
 
-	Ici, la condition porte sur ```a``` et les instructions dans la boucle ````while``` ne font jamais évoluer cette condition ! Il y a donc une boucle infinie.
+	Ici, la condition porte sur ```a``` et les instructions dans la boucle ````while``` ne font pas évoluer des éléments cette condition (il faudrait au minimum modifier la variable ```a```) ! Il y a donc une boucle infinie.
 
 	Malheureusement, cette vérification indispensable n'est pas une condition suffisante pour éviter une boucle infinie ! L'utilisation de [variants de boucle](AFAIRE) permet de s'assurer de la terminaison d'une boucle ```while``` !
 

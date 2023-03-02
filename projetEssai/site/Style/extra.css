@@ -86,12 +86,12 @@
 		color:#009d65!important;
 		/*background-color:yellow;*/
 		border-bottom: ridge #009d65;
-		border-left: ridge #009d65;
+		/*border-left: ridge #009d65;*/
 		border-radius:10px;
 		line-height: 1.5em!important;
 		/*text-align:center;*/
 		/*margin:1rem auto!important;*/
-		width : 30%;
+		width : 50%;
 	}
 
 	.ImCentre.InLine{
@@ -123,6 +123,11 @@
 		margin-right : 15%;
 		margin-left : auto;
 		width : 70%;
+	}
+
+	.Center_ss_bd {
+		margin-right : auto;
+		margin-left : auto;
 	}
 
 	.Center_txt {
