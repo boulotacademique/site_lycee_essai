@@ -103,9 +103,10 @@ print(mot[:-5]) # affiche Bonj
 		car = mot[idx]
 		print(car)
 	```
+
 	affiche
 
-	<div class = "Center_seul" style="width:10%;">
+	<div class = "Center_ss_bd" style="width:10%;">
 
 	```python
 	B
@@ -141,7 +142,7 @@ for idx in range(len(mot)):
 
 	affiche
 
-	<div class = "Center_seul" style="width:10%;">
+	<div class = "Center_ss_bd" style="width:10%;">
 
 	```python
 	B
@@ -161,7 +162,7 @@ for idx in range(len(mot)):
 
 !!! warning "Attention"
 
-	Une chaîne de caractères (type ```str```) est un [**non mutable**](AFAIRE) (ou **immuable**). Il est donc impossible de faire, par exemple, ```mot[2] = "r"``` !!
+	Une chaîne de caractères (type ```str```) est un [**non mutable**](AFAIRE) (ou **immuable**). Il est donc impossible de faire, par exemple, {-- ```mot[2] = "r"``` --} !!
 
 ### Insérer une chaîne
 

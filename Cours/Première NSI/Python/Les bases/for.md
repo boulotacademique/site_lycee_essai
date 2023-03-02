@@ -5,17 +5,44 @@
     La boucle ```for``` permet d'exécuter un nombre connu de fois des instructions. Si il faut répéter 10 fois, on écrit :
 
     ```python
-    som=0
-    for compt in range(10):
-        som=som+compt
-    print(som)
+    for co in range(10):
+        res = co * 2
+        print(" 2 x " + str(co) + " = " + str(res)) 
     ```
+
+    affiche
+
+    <div class = "Center_ss_bd" style="width:10%;">
+
+	```python
+	2 x 0 = 0 
+    2 x 1 = 2 
+    2 x 2 = 4 
+    2 x 3 = 6 
+    2 x 4 = 8 
+    2 x 5 = 10
+    2 x 6 = 12
+    2 x 7 = 14
+    2 x 8 = 16
+    2 x 9 = 18
+	```
+
+	</div>
     
     Il y a d'autres façons [d'utiliser ```range```](./ortho.md#range) !
 
 ???- example "Un classique important"
 
-    Pour calculer $0+1+2+3+\ldots+9$ , il faut accumuler/ajouter dans une variable initialisée à 0 (valeur qui ne modifie pas le résultat d'une addition) les valeurs utiles. C'est ce que fait le programme précédent.
+    Pour calculer $0+1+2+3+\ldots+9$ , il faut accumuler/ajouter dans une variable initialisée à 0 (valeur qui ne modifie pas le résultat d'une addition) les valeurs utiles. 
+    
+    Par exemple, pour calculer $0+1+2+3+4+5+6+7+8+9$, on peut écrire :
+
+    ```python
+    som = 0
+    for co in range(10):
+        som = som + co
+    print(som)
+    ```
 
     1. Modifier le programme précédent pour calculer $0+1+2+3+\ldots 50$.
     2. Modifier le programme précédent pour calculer $1\times 2\times 3 \times \ldots \times 9$
@@ -58,7 +85,7 @@ Une boucle ```for``` peut donc s'utiliser lorsque le nombre de répétition des 
 
     </div>
 
-    Dans le premier programme, peu importe les valeurs prises par le compteur ```co``` ! Il est possible d'écrire :
+    Dans le premier programme, peu importe les valeurs prises par le compteur ```co``` ! Il est donc possible d'écrire :
 
     ```python
     print("Attention : ")
