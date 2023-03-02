@@ -104,6 +104,7 @@ markdown_extensions:
     - footnotes
     - tables
     - pymdownx.critic
+    - pymdownx.keys
     - attr_list #https://python-markdown.github.io/extensions/attr_list/
     - md_in_html
     - pymdownx.arithmatex: #https://squidfunk.github.io/mkdocs-material/extensions/pymdown/
@@ -136,9 +137,9 @@ markdown_extensions:
         separator: "_"
 
 # plugins:
-    # - search
-    # - mkdocs-jupyter:
-    #     include_source: true
+#     # - search
+#     - mkdocs-jupyter:
+#         include_source: true
 
 nav:
     - Accueil: "index.md"
@@ -159,6 +160,7 @@ nav:
             - Les structures:
                 - "Les listes (II)" : "Cours/Première NSI/Python/Structures/list02.md"
                 - "Les matrices" : "Cours/Première NSI/Python/Structures/matrice.md"
+                - "Les dictionnaires" : "Cours/Première NSI/Python/Structures/dico.md"
     #- Première STI2D: "Cours/Première STI2D/c01.md"
     #- Terminale STI2D: "Cours/Terminale STI2D/c01.md"
     #- Première générale: "Cours/Première générale/c01.md"
