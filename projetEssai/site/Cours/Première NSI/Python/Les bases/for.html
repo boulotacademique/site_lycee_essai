@@ -585,6 +585,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Structures/dico.html" class="md-nav__link">
+        Les dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2385,16 +2399,35 @@
 <div class="admonition info">
 <p class="admonition-title">A retenir</p>
 <p>La boucle <code>for</code> permet d'exécuter un nombre connu de fois des instructions. Si il faut répéter 10 fois, on écrit :</p>
-<div class="highlight"><pre><span></span><code><span class="n">som</span><span class="o">=</span><span class="mi">0</span>
-<span class="k">for</span> <span class="n">compt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">som</span><span class="o">=</span><span class="n">som</span><span class="o">+</span><span class="n">compt</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">som</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">co</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">co</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; 2 x &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">co</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">res</span><span class="p">))</span> 
 </code></pre></div>
+<p>affiche</p>
+<div class = "Center_ss_bd" style="width:10%;">
+<div class="highlight"><pre><span></span><code><span class="mi">2</span> <span class="n">x</span> <span class="mi">0</span> <span class="o">=</span> <span class="mi">0</span> 
+<span class="mi">2</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">2</span> 
+<span class="mi">2</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">4</span> 
+<span class="mi">2</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">6</span> 
+<span class="mi">2</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">8</span> 
+<span class="mi">2</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="mi">2</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="mi">2</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="mi">2</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="mi">2</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">18</span>
+</code></pre></div>
+</div>
 <p>Il y a d'autres façons <a href="ortho.html#range">d'utiliser <code>range</code></a> !</p>
 </div>
 <details class="- example">
 <summary>Un classique important</summary>
-<p>Pour calculer <span class="arithmatex">\(0+1+2+3+\ldots+9\)</span> , il faut accumuler/ajouter dans une variable initialisée à 0 (valeur qui ne modifie pas le résultat d'une addition) les valeurs utiles. C'est ce que fait le programme précédent.</p>
+<p>Pour calculer <span class="arithmatex">\(0+1+2+3+\ldots+9\)</span> , il faut accumuler/ajouter dans une variable initialisée à 0 (valeur qui ne modifie pas le résultat d'une addition) les valeurs utiles. </p>
+<p>Par exemple, pour calculer <span class="arithmatex">\(0+1+2+3+4+5+6+7+8+9\)</span>, on peut écrire :</p>
+<div class="highlight"><pre><span></span><code><span class="n">som</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">co</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">som</span> <span class="o">=</span> <span class="n">som</span> <span class="o">+</span> <span class="n">co</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">som</span><span class="p">)</span>
+</code></pre></div>
 <ol>
 <li>Modifier le programme précédent pour calculer <span class="arithmatex">\(0+1+2+3+\ldots 50\)</span>.</li>
 <li>Modifier le programme précédent pour calculer <span class="arithmatex">\(1\times 2\times 3 \times \ldots \times 9\)</span></li>
@@ -2426,7 +2459,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Boum !!!&quot;</span><span class="p">)</span>
 </code></pre></div>
 </div>
-<p>Dans le premier programme, peu importe les valeurs prises par le compteur <code>co</code> ! Il est possible d'écrire :</p>
+<p>Dans le premier programme, peu importe les valeurs prises par le compteur <code>co</code> ! Il est donc possible d'écrire :</p>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Attention : &quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">co</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Alerte intrusion !&quot;</span><span class="p">)</span>

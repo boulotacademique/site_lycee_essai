@@ -17,7 +17,7 @@
 !!! info "Utilisation"
     - Pour affecter une valeur à une variable, on utilise ```=```. Par exemple, ```x = 2``` ou ```firstname = "Anakin"```.
     - Pour afficher le contenu d'une variable, on utilise ```print()``` (mais pas de ""). Par exemple, ```print(x)```.
-    - Pour afficher du texte et le contenu d'une variable,on peut utiliser la virgule ```print("Je m'appelle",firstname)``` ou utiliser la concaténation de chaînes de caractères ```print("Je m'appelle" + str(firstname)) ``` 
+    - Pour afficher du texte et le contenu d'une variable,on peut utiliser la virgule ```print("Je m'appelle",firstname)``` ou utiliser la concaténation de chaînes de caractères ```print("Je m'appelle " + str(firstname)) ``` 
 
 ??? warning "Déclarer avant d'utiliser"
     Avant d'utiliser une variable, elle doit être déclarée (i.e. une valeur a été affetée à une variable) ou être un paramètre d'une fonction.
@@ -46,7 +46,7 @@
     Cela déclanche une erreur ```NameError: name 'd' is not defined```
     </div>
 
-!!! info "type d'une variable"
+!!! info "Type d'une variable"
     Une valeur enregistrée dans une variable possède un type, c'est aussi le type de cette variable.
 
     Les principaux types &laquo; simples &raquo; :

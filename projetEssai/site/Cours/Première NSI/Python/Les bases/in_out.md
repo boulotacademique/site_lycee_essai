@@ -1,5 +1,7 @@
 # Les méthodes de bases : Entrèe/sortie
 
+## Une sortie : print
+
 !!! info "A retenir"
 
 	Pour afficher **en console** un résultat, il suffit d'utiliser la fonction ```print``` ! Elle peut prendre 0 argument mais aussi plusieurs !
@@ -15,7 +17,7 @@
 
 Il est préférable d'utiliser une chaine de caractère dans un ```print```. Pour cela, il suffit d'utiliser [la concaténation](str.md#concat) et [le transtypage](AFAIRE) ou la [méthode ```format```](AFAIRE).
 
-
+## Une entrée : input
 
 !!! info "A retenir"
 
