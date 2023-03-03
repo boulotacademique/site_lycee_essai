@@ -250,6 +250,18 @@ nav:
         - Equation différentielle:
             - "Eq diff : les bases":
                 - "Définition" : "Cours/Terminale générale/Eq_diff/Eq_diff_base/01_Def.md"
+                - Eq. diff. premier ordre: "Cours/Terminale générale/Eq_diff/Eq_diff_base/02_ED1.md"
+            - "Eq diff : au programme":
+                - "Démonstration au programme": "Cours/Terminale générale/Eq_diff/Eq_diff_prog/Dem_prog.md"
+        - Ensemble:
+            - "Ensemble : les bases": 
+                - Ensemble: "Cours/Terminale générale/Ensemble/Ensemble_base/01_ensemble.md"
+                - Dénombrement: "Cours/Terminale générale/Ensemble/Ensemble_base/02_denom.md"
+            - "Ensemble : Au programme":
+                - "Démonstration au programme": "Cours/Terminale générale/Ensemble/Ensemble_prog/Dem_prog.md"
+        - Calcul intégral:
+            - "Intégral : les bases":
+                - "Fonctions positives" : "Cours/Terminale générale/Calcul_integral/Cal_int_base/01_fct_pos.md"
     - Labo de math:  
         - Accueil: "Labo de math/c01.md"
         - "Liaison lycée/supérieur": "Labo de math/Liaison_lycée_sup/supérieur.md"

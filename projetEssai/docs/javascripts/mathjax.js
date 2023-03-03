@@ -8,6 +8,8 @@ window.MathJax = {
       N : '{\\mathbb{N}}',
       R : '{\\mathbb{R}}',
       Z : '{\\mathbb{Z}}',
+      Q : '{\\mathbb{Q}}',
+      non : ['\\overline{#1}',1],
       lp : '{\\left( }',
       rp : '{\\right) }',
       ex : '{\\text{e}}',
@@ -29,7 +31,7 @@ window.MathJax = {
       Lim: ['\\displaystyle{\\left. \\begin{array}{lcl} #1 \\\\ #2 \\\\ \\end{array} \\right\\} }',2],
       Oij: '{\\left( O;\\vec{i},\\vec{j}\\right)}',
       Oijk: '{\\left( O;\\vec{i},\\vec{j},\\vec{k}\\right)}',
-        
+      rep: '{\\left(O ; I, J \\right)}',
      }
    },
    options: {
