@@ -260,9 +260,11 @@ nav:
             - "Ensemble : Au programme":
                 - "Démonstration au programme": "Cours/Terminale générale/Ensemble/Ensemble_prog/Dem_prog.md"
         - Calcul intégral:
-            - "Intégral : les bases":
+            - "Intégrale : les bases":
                 - "Fonctions positives" : "Cours/Terminale générale/Calcul_integral/Cal_int_base/01_fct_pos.md"
                 - "Fonctions positives et primitives": "Cours/Terminale générale/Calcul_integral/Cal_int_base/02_fct_pos_prim.md"
+            - "Intégrale : au programme":
+                - "Démonstration au programme" : "Cours/Terminale générale/Calcul_integral/Cal_int_prog/Dem_prog.md"
     - Labo de math:  
         - Accueil: "Labo de math/c01.md"
         - "Liaison lycée/supérieur": "Labo de math/Liaison_lycée_sup/supérieur.md"
