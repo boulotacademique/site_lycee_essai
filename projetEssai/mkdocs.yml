@@ -262,6 +262,7 @@ nav:
         - Calcul intégral:
             - "Intégral : les bases":
                 - "Fonctions positives" : "Cours/Terminale générale/Calcul_integral/Cal_int_base/01_fct_pos.md"
+                - "Fonctions positives et primitives": "Cours/Terminale générale/Calcul_integral/Cal_int_base/02_fct_pos_prim.md"
     - Labo de math:  
         - Accueil: "Labo de math/c01.md"
         - "Liaison lycée/supérieur": "Labo de math/Liaison_lycée_sup/supérieur.md"

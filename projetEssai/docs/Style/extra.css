@@ -163,6 +163,11 @@
 		width : 30%;
 	}
 
+	.VignetteTer{
+		/*border : 2px solid black;*/
+		width : 40%;
+	}
+
 	.AvecBordure{
 		border : 1px solid black;
 		border-collapse : collapse;
