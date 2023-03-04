@@ -10,11 +10,11 @@
     - Si $\dvec{u}$ et $\dvec{v}$ sont deux vecteurs non nuls tels que  tels que $\dvec{u}=\dvec{OA}$ ,$\dvec{v}=\dvec{OB}$ (avec $O$,$A$ ,$B$ trois points du plan)  alors ,
         - Si $\dvec{u}$ et $\dvec{v}$ sont colinéaires et de même sens alors $\dvec{u}\cdot  \dvec{v}=OA\times OB$.
         
-        [![pdt scalaire](../Image/Im02.png){.Center .Vignette}](../Image/Im02.png)
+        [![pdt scalaire](../Image/Im02.png){.Center_lien .Vignette}](../Image/Im02.png)
 
         - Si $\dvec{u}$ et $\dvec{v}$ sont colinéaires et de  sens contraire alors $\dvec{u}\cdot  \dvec{v}=-OA\times OB$.
 
-        [![pdt scalaire](../Image/Im03.png){.Center .Vignette}](../Image/Im03.png)
+        [![pdt scalaire](../Image/Im03.png){.Center_lien .Vignette}](../Image/Im03.png)
 
     - Dans le cas où $\dvec{u}=\dvec{0}$ ou $\dvec{v}=\dvec{0}$ alors on pose $\dvec{u}\cdot  \dvec{v}=0$.
 
@@ -33,7 +33,7 @@
 !!! info "Produit scalaire et projeté orthogonal"
     Si $H$ est le projeté orthogonal de $B$ sur la droite $(OA)$ alors  $\dvec{u}\cdot  \dvec{v}=\V{OA}\cdot \V{OH}$.
 
-    [![pdt scalaire](../Image/Im04.png){.Center .Vignette}](../Image/Im04.png)
+    [![pdt scalaire](../Image/Im04.png){.Center_lien .Vignette}](../Image/Im04.png)
 
 !!! info "Les trois  autres expressions du produit scalaire"
     - **Expression à  l'aide des normes et d'un angle**

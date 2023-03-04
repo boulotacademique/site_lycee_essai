@@ -11,7 +11,7 @@
     
     On veut démontrer que $F$ est dérivable sur $[a;b]$ donc en particulier en $x_0 \in [a;b]$, on cherche la limite en 0 de la fonction $T$ définie pour tout $h \neq 0$ par $T(h)=\dfrac{F(x_0+h)-F(x_0)}{h}$
 
-    [![Exple integrale](../Image/Im07.png){.Center}](../Image/Im07.png){.Center_txt}
+    [![Exple integrale](../Image/Im07.png){.Center_lien }](../Image/Im07.png)
 
     \begin{eqnarray*}
     F(x_0+h)-F(x_0)  & = & \displaystyle\int_a^{x_0+h} f(x) \dx - \displaystyle\int_a^{x_0} f(x) \dx\\

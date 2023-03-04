@@ -77,7 +77,7 @@ style="border:0px;" allowfullscreen>
 	y=f'(a)(x-a)+f(a)
 	\]
 
-[![Suite récurrente dans un plan](./Image/Im01.png){.Center .VignetteMed}](./Image/Im01.png)
+[![Suite récurrente dans un plan](./Image/Im01.png){.Center_lien .VignetteMed}](./Image/Im01.png)
 
 
 

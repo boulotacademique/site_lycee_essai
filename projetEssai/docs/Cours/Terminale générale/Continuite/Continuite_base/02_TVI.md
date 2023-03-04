@@ -11,7 +11,7 @@ On conviendra que dans un tableau de variation une flèche vers le haut (respect
 
     En d'autres termes , $f$ prend au moins une fois toute valeur comprise entre $f(a)$ et $f(b)$.
 
-    [![TVI](../Image/cours_cb3.png){.Center .Vignette}](../Image/cours_cb3.png)
+    [![TVI](../Image/cours_cb3.png){.Center_lien .Vignette}](../Image/cours_cb3.png)
 
 ???- danger "Attention"
 
@@ -89,6 +89,6 @@ On généralise le théorème des valeurs intermédiaires sur un intervalle ouve
             $f'(x)$ et $g(x)$  sont de signes contraires.  
             2. Tableau de variations  
 
-                [![Tableau de variaiton](../Image/Cours_004.png){.Center .VignetteMed}](../Image/Cours_004.png)
+                [![Tableau de variaiton](../Image/Cours_004.png){.Center_lien .VignetteMed}](../Image/Cours_004.png)
 
 

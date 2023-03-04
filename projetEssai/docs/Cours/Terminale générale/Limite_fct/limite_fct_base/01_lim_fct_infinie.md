@@ -11,7 +11,7 @@ La limite d'une fonction lorsque $x$ tend vers $+\infty$ est très semblable à 
     \lim_{x \to +\infty} f(x) = +\infty \equivaut\ \forall\ A\ \in\ \R\ \exists\ m\ \in\ \R\ :\ \forall\ x\ \geq\ m\ f(x)\geq A
     \]
 
-    [![Suite récurrente dans un plan](../Image/Cours_001.png){.Center .Vignette}](../Image/Cours_001.png)
+    [![Suite récurrente dans un plan](../Image/Cours_001.png){.Center_lien .Vignette}](../Image/Cours_001.png)
 
     
 !!! info "Définition"
@@ -21,7 +21,7 @@ La limite d'une fonction lorsque $x$ tend vers $+\infty$ est très semblable à 
     \lim_{x \to +\infty} f(x) = -\infty \equivaut\ \forall\ A\ \in\ \R\ \exists\ m\ \in\ \R\ :\ \forall\ x\ \geq\ m\ f(x)\leq A
     \]
 
-    [![Suite récurrente dans un plan](../Image/Cours_002.png){.Center .Vignette}](../Image/Cours_002.png)
+    [![Suite récurrente dans un plan](../Image/Cours_002.png){.Center_lien .Vignette}](../Image/Cours_002.png)
 
     
 
@@ -45,7 +45,7 @@ De même, lorsque $x$ tend vers $-\infty$
 !!! tip "Limites de fonctions de références"
     $\dlim{x}{+\infty}x^2=+\infty$ et $\dlim{x}{-\infty}x^2=+\infty$ 
 
-    [![Suite récurrente dans un plan](../Image/Cours_003.png){.Center .Vignette}](../Image/Cours_003.png)
+    [![Suite récurrente dans un plan](../Image/Cours_003.png){.Center_lien .Vignette}](../Image/Cours_003.png)
 
     Plus généralement, pour tout entier $p \geq 1$,
 
@@ -62,11 +62,11 @@ De même, lorsque $x$ tend vers $-\infty$
 
     $\dlim{x}{+\infty}\sqrt{x}=+\infty$
 
-    [![Suite récurrente dans un plan](../Image/Cours_004.png){.Center .Vignette}](../Image/Cours_004.png)
+    [![Suite récurrente dans un plan](../Image/Cours_004.png){.Center_lien .Vignette}](../Image/Cours_004.png)
 
     $\dlim{x}{+\infty}e^x=+\infty$
 
-    [![Suite récurrente dans un plan](../Image/Cours_005.png){.Center .Vignette}](../Image/Cours_005.png)
+    [![Suite récurrente dans un plan](../Image/Cours_005.png){.Center_lien .Vignette}](../Image/Cours_005.png)
 
 ???- tip "Suite définie explicitement"
     Si une fonction $f$ a pour limite $\pm\infty$ en $+\infty$ , la suite définie par $u_n=f(n)$ a la même limite.
@@ -98,7 +98,7 @@ De même, lorsque $x$ tend vers $-\infty$
     \lim_{x \to +\infty} f(x)=\ell \equivaut \forall \epsilon >0\ \exists m \in \R\ :\ \forall x \geq m \quad |f(x)-\ell|< \epsilon
     \]
 
-    [![Suite récurrente dans un plan](../Image/Cours_006.png){.Center .Vignette}](../Image/Cours_006.png)
+    [![Suite récurrente dans un plan](../Image/Cours_006.png){.Center_lien .Vignette}](../Image/Cours_006.png)
 
 De même lorsque $x$ tend vers $-\infty$ :
 
@@ -127,7 +127,7 @@ De même lorsque $x$ tend vers $-\infty$ :
 !!! tip "Limite de fonctions de références"
     $\dlim{x}{-\infty}\dfrac1x=0$ et $\dlim{x}{+\infty}\dfrac1x=0$
 
-    [![Suite récurrente dans un plan](../Image/Cours_007.png){.Center .Vignette}](../Image/Cours_007.png)
+    [![Suite récurrente dans un plan](../Image/Cours_007.png){.Center_lien .Vignette}](../Image/Cours_007.png)
 
     **L'axe des abscisses est asymptote horizontale** à la courbe en $-\infty$ et $+\infty$.
 

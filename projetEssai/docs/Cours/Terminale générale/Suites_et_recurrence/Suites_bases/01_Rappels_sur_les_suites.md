@@ -110,7 +110,7 @@ les calculer à l'aide de la courbe $C_f$ représentant la fonction $f$ et la dr
 	* Placer $u_1$ l'abscisse de $B_0$ sur l'axe des abscisses .
 	* Recommencer à partir de $u_1$ les mêmes étapes et placer $u_2$, etc...
 
-[![Suite récurrente dans un plan](../Image/Cours_003.gif){.Center .VignetteMed}](../Image/Cours_003.gif)
+[![Suite récurrente dans un plan](../Image/Cours_003.gif){.Center_lien .VignetteMed}](../Image/Cours_003.gif)
 
 La lecture graphique donne des valeurs approchées des $u_n$, 
 et elle permet d'émettre des conjectures concernant le comportement global et asymptotique de la suite. Elle semble :

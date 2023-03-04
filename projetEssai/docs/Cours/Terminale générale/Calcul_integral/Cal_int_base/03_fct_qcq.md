@@ -26,7 +26,7 @@
     \]
 
     \[ 
-        \int_a^b f(x) + g(x) \dx = \in_a^b f(x) \dx + \int_a^b g(x) \dx 
+        \int_a^b f(x) + g(x) \dx = \int_a^b f(x) \dx + \int_a^b g(x) \dx 
     \]
 
     - Relation de Chasles : pour tous réels $a,b$ et $c$
@@ -65,73 +65,84 @@
  
 
 ???- example "Exemple"
-Soit $I_n=\int_1^n \dfrac{1}{1+x^2} \dx$ pour tout $n \in \N^*$.
-\begin{enumerate}
-\item Montrer que la suite $(I_n$) est croissante.
-\item Montrer que pour tout $n$, $I_n \leq \int_1^n \dfrac{1}{x^2} \dx$.\\
-En déduire que la suite $(I_n)$ converge.
-\end{enumerate}
-%\begin{comment}
-%\vspace{4cm}
-%\end{comment}
-\begin{Solub}
-\begin{enumerate}
-\item Pour tout $n \in \N^*$, 
-\begin{eqn}
-I_{n+1}-I_n & = & \int_1^{n+1} \dfrac{1}{1+x^2} \dx - \int_1^n \dfrac{1}{1+x^2} \dx\\
-& = & \int_1^{n+1} \dfrac{1}{1+x^2} \dx + \int_n^1 \dfrac{1}{1+x^2} \dx\\
-& = & \int_n^{n+1} \dfrac{1}{1+x^2} \dx \quad (\text{ Relation de Chasles})
-\end{eqn}
-Comme $x \mapsto \dfrac{1}{1+x^2}$ est continue, positive sur $\R$ et que la borne inférieure $n$ est inférieure à la borne supérieure $n+1$, $ \int_n^{n+1} \dfrac{1}{1+x^2} \dx \geq 0$. Donc pour tout $n\in \N^*$, $I_{n+1}-I_n \geq 0$.\\
-Donc la suite $(I_n)$ est croissante.
-\item Pour tout $x$ de $[1;n]$, $1+x^2 \geq x^2$. Donc $0 \leq \dfrac{1}{1+x^2} \leq \dfrac{1}{x^2}$.\\
-De plus $1 \leq n$, donc $0 \leq \int_1^n \dfrac{1}{1+x^2} \dx \leq \int_1^n \dfrac{1}{x^2} \dx$.
-\begin{eqn}
-\int_1^n \dfrac{1}{x^2} \dx & = & \left[ \dfrac{-1}{x} \right]_1^n \\
-& = & \dfrac{-1}{n}- \dfrac{-1}{1} \\
-& = & 1-\dfrac{1}{n}
-\end{eqn}
-$\lim_{n \to +\infty} 1-\dfrac{1}{n} =1$. Cette suite est convergente, elle est donc bornée. Donc, il existe $M$ tel que $1+\dfrac{1}{n} \leq M$\\
-Comme pour tout $n \in \N^*$, $I_n \leq 1-\dfrac{1}{n}$, donc $I_n \leq M$, pour tout $n \in \N$.\\
-$(I_n)$ est une suite croissante majorée, elle est donc convergente.
-\end{enumerate}
-
-\end{Solub}
-
-\end{exple}
-
-\subsection{Valeur moyenne d'une fonction continue}
-
-!!! info ""
-$f$ est une fonction continue sur $[a;b]$ $(a<b)$, la valeur moyenne de la fonction $f$ sur $[a;b]$ est le réel $\mu = \dfrac{1}{b-a} \int_a^b f(x) \dx$
+    Soit $I_n=\int_1^n \dfrac{1}{1+x^2} \dx$ pour tout $n \in \N^*$.
+    <ol>
+    <li> Montrer que la suite $(I_n$) est croissante.</li>
+    <li> Montrer que pour tout $n$, $I_n \leq \displaystyle\int_1^n \dfrac{1}{x^2} \dx$.
+        En déduire que la suite $(I_n)$ converge.
+    </li>
+    </ol>
  
+    ???- done "Réponse"
+        <ol>
+        <li> Pour tout $n \in \N^*$, 
+        
+        \begin{eqnarray*}
+        I_{n+1}-I_n & = & \int_1^{n+1} \dfrac{1}{1+x^2} \dx - \int_1^n \dfrac{1}{1+x^2} \dx\\
+        & = & \int_1^{n+1} \dfrac{1}{1+x^2} \dx + \int_n^1 \dfrac{1}{1+x^2} \dx\\
+        & = & \int_n^{n+1} \dfrac{1}{1+x^2} \dx \quad (\text{ Relation de Chasles})
+        \end{eqnarray*}
 
-\textbf{Interprétation graphique pour $f\geq 0$}\\
-On a $\mu (b-a)=\int_a^b f(x) \dx$. En termes d'aires, ceci signifie que l'aire \og sous la courbe \fg de $f$ est égale à l'aire \og sous la courbe \fg de la fonction constante égale à $\mu$.\\
-C'est-à-dire que la valeur moyenne $\mu$ de la fonction $f$ est la hauteur du rectangle ABCD de base $(b-a)$ ayant la même aire que l'aire du domaine sous la courbe de la fonction $f$ entre $a$ et $b$.
+        Comme $x \mapsto \dfrac{1}{1+x^2}$ est continue, positive sur $\R$ et que la borne inférieure $n$ est inférieure à la borne supérieure $n+1$, $\displaystyle\int_n^{n+1} \dfrac{1}{1+x^2} \dx \geq 0$. Donc pour tout $n\in \N^*$, $I_{n+1}-I_n \geq 0$.
+
+        Donc la suite $(I_n)$ est croissante.
+        </li>
+        <li> Pour tout $x$ de $[1;n]$, $1+x^2 \geq x^2$. Donc $0 \leq \dfrac{1}{1+x^2} \leq \dfrac{1}{x^2}$.
+
+        De plus $1 \leq n$, donc $0 \leq \displaystyle\int_1^n \dfrac{1}{1+x^2} \dx \leq \displaystyle\int_1^n \dfrac{1}{x^2} \dx$.
+
+        \begin{eqnarray*}
+        \int_1^n \dfrac{1}{x^2} \dx & = & \left[ \dfrac{-1}{x} \right]_1^n \\
+        & = & \dfrac{-1}{n}- \dfrac{-1}{1} \\
+        & = & 1-\dfrac{1}{n}
+        \end{eqnarray*}
+
+        $\dlim_{n}{+\infty} 1-\dfrac{1}{n} =1$. Cette suite est convergente, elle est donc bornée. Donc, il existe $M$ tel que $1+\dfrac{1}{n} \leq M$.
+
+        Comme pour tout $n \in \N^*$, $I_n \leq 1-\dfrac{1}{n}$, donc $I_n \leq M$, pour tout $n \in \N$.
+
+        $(I_n)$ est une suite croissante majorée, elle est donc convergente.
+        </li>
+        </ol>
+
+
+## Valeur moyenne d'une fonction continue
+
+!!! info "Valeur moyenne"
+    $f$ est une fonction continue sur $[a;b]$ $(a<b)$, la valeur moyenne de la fonction $f$ sur $[a;b]$ est le réel $\mu = \dfrac{1}{b-a} \displaystyle\int_a^b f(x) \dx$.
+ 
+???- tip "Interprétation graphique pour $f \geq 0$"
+
+    On a $\mu (b-a)=\displaystyle\int_a^b f(x) \dx$. En termes d'aires, ceci signifie que l'aire &laquo; sous la courbe &raquo; de $f$ est égale à l'aire &laquo; sous la courbe &raquo; de la fonction constante égale à $\mu$.
+    
+    C'est-à-dire que la valeur moyenne $\mu$ de la fonction $f$ est la hauteur du rectangle ABCD de base $(b-a)$ ayant la même aire que l'aire du domaine sous la courbe de la fonction $f$ entre $a$ et $b$.
+
+    [![Valeur moyenne](../Image/Im08.png){.Center_lien .vignette}](../Image/Im08.png)
 
 ???- example "Exemple"
-On considère les fonctions $f$ et $g$ définies pour $x>0$ par $f(x)=2x \ln x$ et $g(x)= x^2 \ln x$.
-\begin{enumerate}
-\item Vérifier que $f(x)=g'(x)-x$.
-\item Déterminer une primitive $F$ de $f$.
-\item Calculer la valeur moyenne de la fonction $f$ enter $1$ et $\ex$
-\end{enumerate}
-%\begin{comment}
-%\vspace{4cm}
-%\end{comment}
-\begin{Solub}
-\begin{enumerate}
-\item $g'(x) = 2x \ln(x) + x^2 \times \dfrac{1}{x} = 2x \ln(x) + x=f(x) + x$.
-Donc $f(x) = g'(x) - x$
-\item Une primitive de $f$ est donc une primitive de $g'(x)-x$. Donc, $F(x) = g(x) - \dfrac{x^2}{2} = x^2\ln(x) - \dfrac{x^2}{2}$
-\item La valeur moyenne de $f$ enter $1$ et $\ex$ est notée $m$.
-\begin{eqn}
-m & = &  \dfrac{1}{\ex-1}\int_1^{\ex} f(x) \dx \\
-& =  & \dfrac{1}{\ex-1}\left[ x^2 \ln(x) - \dfrac{x^2}{2} \right]_1^{\ex} \\
-& = & \dfrac{1}{\ex-1} \times \left( \left(\ex^2-\dfrac{\ex^2}{2} \right) - \left( 0 - \dfrac{1}{2} \right) \right) \\ 
-& =& \dfrac{\ex^2+1}{2\ex - 2}
-\end{eqn}
-\end{enumerate}
-\end{Solub}
-\end{exple}
+    On considère les fonctions $f$ et $g$ définies pour $x>0$ par $f(x)=2x \ln x$ et $g(x)= x^2 \ln x$.
+    <ol>
+    <li> Vérifier que $f(x)=g'(x)-x$.</li>
+    <li> Déterminer une primitive $F$ de $f$.</li>
+    <li> Calculer la valeur moyenne de la fonction $f$ enter $1$ et $\ex$</li>
+    </ol>
+ 
+    ???- done "Réponse"
+        <ol>
+        <li> $g'(x) = 2x \ln(x) + x^2 \times \dfrac{1}{x} = 2x \ln(x) + x=f(x) + x$.
+        
+        Donc $f(x) = g'(x) - x$</li>
+        <li> Une primitive de $f$ est donc une primitive de $g'(x)-x$. Donc, $F(x) = g(x) - \dfrac{x^2}{2} = x^2\ln(x) - \dfrac{x^2}{2}$</li>
+        <li> La valeur moyenne de $f$ enter $1$ et $\ex$ est notée $m$.
+
+        \begin{eqnarray*}
+        m & = &  \dfrac{1}{\ex-1}\int_1^{\ex} f(x) \dx \\
+        & =  & \dfrac{1}{\ex-1}\left[ x^2 \ln(x) - \dfrac{x^2}{2} \right]_1^{\ex} \\
+        & = & \dfrac{1}{\ex-1} \times \left( \left(\ex^2-\dfrac{\ex^2}{2} \right) - \left( 0 - \dfrac{1}{2} \right) \right) \\ 
+        & =& \dfrac{\ex^2+1}{2\ex - 2}
+        \end{eqnarray*}
+
+        </li>
+        </ol>
+ 
+ 

@@ -13,7 +13,7 @@
     
     $\Lim{\text {Si pour } x \text{ assez grand } f(x) \leq g(x) \leq h(x) }{\text {si} \quad \lim\limits_{x\to +\infty} f(x) =\ell \text{ et si } \quad \lim\limits_{x\to +\infty} h(x) =\ell } \quad \text{ alors } \quad\lim\limits_{x \to +\infty} g(x)=\ell$.
 
-    [![Th d'encadrement](../Image/Cours_010.png){.Center .VignetteMed}](../Image/Cours_010.png)
+    [![Th d'encadrement](../Image/Cours_010.png){.Center_lien .VignetteMed}](../Image/Cours_010.png)
 
 ???- example "Exemple"
     Etudier la limite en $+\infty$ de la fonction $f$ définie sur $]0,+\infty[$ par $f(x)=\dfrac{\sin x}{x}$

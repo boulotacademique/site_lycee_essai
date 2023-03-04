@@ -16,7 +16,7 @@
 ???- abstract "Démonstration"
     $X$ suit la loi binomiale de paramètres $n$ et $p$. On représente le schéma de Bernoulli par l'arbre suivant :
 
-    [![Abre](../Image/binom.png){.Center .VignetteMed}](../Image/binom.png)
+    [![Abre](../Image/binom.png){.Center_lien .VignetteMed}](../Image/binom.png)
 
     Soit $k$ un nombre entier compris enter $0$ et $n$. Sur un chemin comportant exactement $k$ succès, il y a donc $k$ fois la probabilité $p$ et $n-k$ fois la probabilité $(1-p)$. Or d'après le théorème sur la succession de $n$ épreuves indépendantes, la probabilité de l'issue correspondant à un tel chemin est $p^k(1-p)^{n-k}$.
 

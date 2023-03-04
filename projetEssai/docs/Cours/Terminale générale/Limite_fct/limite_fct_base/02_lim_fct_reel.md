@@ -49,7 +49,7 @@
 
     On note $\lim\limits_{\substack{x\to0\\x>0}}~\dfrac1x=+\infty$. On note aussi $\dlim{x}{0^+}{\dfrac{1}{x}} = +\infty$.
 
-    [![Suite récurrente dans un plan](../Image/Cours_009.png){.Center .Vignette}](../Image/Cours_009.png)
+    [![Suite récurrente dans un plan](../Image/Cours_009.png){.Center_lien .Vignette}](../Image/Cours_009.png)
 
     Si $x$ tend vers 0 avec $x<0$ , $\dfrac1x $ tend vers $-\infty$.
     

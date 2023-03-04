@@ -172,7 +172,7 @@ Dans tout ce qui suit, $\ell$ et $\ell'$ désignent deux nombres réels $a$ dés
 	???- done "Réponse"
 		Comme $\dlim{x}{2} 2-x = 0$, il faut étudier le signe de la fonction $f(x) = \dfrac{1}{2-x}$ _au voisinage de_ 2. Or $1>0$ au voisinage de 2 (et sur tout $\R$). Il suffit donc d'étudier le signe de $2-x$.
 
-		[![tab de signe](../Image/Cours_011.png){.Center .VignetteMed}](../Image/Cours_011.png)
+		[![tab de signe](../Image/Cours_011.png){.Center_lien .VignetteMed}](../Image/Cours_011.png)
 
 		$\lim\limits_{x \to 2^+}~(2-x)={\color{reponse}0^-}    \quad \lim\limits_{x \to 2^+}~\dfrac{1}{2-x}={\color{reponse}-\infty }$.
 		
@@ -191,14 +191,14 @@ Dans tout ce qui suit, $\ell$ et $\ell'$ désignent deux nombres réels $a$ dés
 		<li> $\Lim{\lim\limits_{x \to -\infty}~\frac{1}{x}-3={\color{reponse}-3}}{\lim\limits_{x\to -\infty}~x^2={\color{reponse}+\infty} }$ \quad par quotient $\lim\limits_{x \to -\infty}~\left(\dfrac{\frac{1}{x}-3}{x^2}\right)={\color{reponse} 0}$.</li>
 		<li> Quand $x$ tend vers 3, le dénominateur tend vers 0 . On doit étudier le signe de $f(x) = \dfrac{x-4}{3-x}$ au voisinage de 3. Or $x-4$ est proche de $3-4=-1$ au voisinage de $3$. Il est donc inutile de faire un tableau de signe pour le numérateur ! 
 
-		[![tab de signe](../Image/Cours_012.png){.Center .VignetteMed}](../Image/Cours_012.png)
+		[![tab de signe](../Image/Cours_012.png){.Center_lien .VignetteMed}](../Image/Cours_012.png)
 
 		$\Lim{\lim\limits_{x \to 3^+}~x-4={\color{reponse}-1}}{\lim\limits_{x \to 3^+}~3-x={\color{reponse} 0^-}} \quad \text{ par quotient } \lim\limits_{x \to 3^+}\left(\dfrac{x-4}{3-x}\right)={\color{reponse}+\infty}$.
 
 		$\Lim{\lim\limits_{x \to 3^-}~x-4={\color{reponse}-1}}{\lim\limits_{x \to 3^-}~3-x={\color{reponse} 0^+ } } \quad \text{ par quotient } \lim\limits_{x \to 3^-}\left(\dfrac{x-4}{3-x}\right)={\color{reponse} -\infty}$.</li>
 		<li> Quand $x$ tend vers 3, le dénominateur tend vers 0 . On doit étudier le signe de $-x^2+3x$ (en effet, au voisinage de $3$, $2x-5$ est proche de $2\times 3 -5 =1$).
 
-		[![tab de signe](../Image/Cours_013.png){.Center .VignetteMed style="text-align:center;width:40%;"}](../Image/Cours_013.png)
+		[![tab de signe](../Image/Cours_013.png){.Center_lien .VignetteMed style="text-align:center;width:40%;"}](../Image/Cours_013.png)
 
 		$\Lim{\dlim{x}{3}2x-5=1}{\dlim{x}{3^-}-x^2+3x={\color{reponse}0^+} }$\quad par quotient $\dlim{x}{3^-}f(x)={\color{reponse}+\infty}$.
   		
@@ -317,7 +317,7 @@ Ainsi, on a $f(x)={\color{reponse}v[u(x)]=\sqrt{-2x+4}}$ et  $f$ est définie po
 		</li>
 		<li> Etude du signe de $1-x$ :
 
-		[![tab signe](../Image/Cours_014.png){.Center .VignetteMed}](../Image/Cours_014.png)
+		[![tab signe](../Image/Cours_014.png){.Center_lien .VignetteMed}](../Image/Cours_014.png)
 
 		$\Lim{\Lim{\lim\limits_{x \to 1^+}~x+3&=&{\color{reponse}4}}{\lim\limits_{x \to 1^+}~1-x&=&{\color{reponse}0^-} }\text{donc} \quad \lim\limits_{x \to 1^+} \dfrac{x+3}{1-x}={\color{reponse}-\infty} }{\lim\limits_{X\to -\infty}~e^X={\color{reponse}0}&& }\quad \lim\limits_{x \to 1^+}~\ex^{\frac{x+3}{1-x}}={\color{reponse} 0}$.
 

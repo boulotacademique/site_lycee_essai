@@ -263,6 +263,9 @@ nav:
             - "Intégrale : les bases":
                 - "Fonctions positives" : "Cours/Terminale générale/Calcul_integral/Cal_int_base/01_fct_pos.md"
                 - "Fonctions positives et primitives": "Cours/Terminale générale/Calcul_integral/Cal_int_base/02_fct_pos_prim.md"
+                - "Fonctions quelconques" : "Cours/Terminale générale/Calcul_integral/Cal_int_base/03_fct_qcq.md"
+                - "Intégration par parties": "Cours/Terminale générale/Calcul_integral/Cal_int_base/04_int_pp.md"
+                - "Calcul d'aire": "Cours/Terminale générale/Calcul_integral/Cal_int_base/05_calc_aire.md" 
             - "Intégrale : au programme":
                 - "Démonstration au programme" : "Cours/Terminale générale/Calcul_integral/Cal_int_prog/Dem_prog.md"
     - Labo de math:  

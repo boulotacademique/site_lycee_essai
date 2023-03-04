@@ -16,15 +16,15 @@
 ???- example "Exemple"
     - Une fonction continue sur $[-2; 2]$.
 
-        [![Fonction continue](../Image/Cours_001.png){.Center .Vignette}](../Image/Cours_001.png)
+        [![Fonction continue](../Image/Cours_001.png){.Center_lien .Vignette}](../Image/Cours_001.png)
     
     - Une fonction continue sur $[-2;0[ \cup ]0; 2]$
 
-        [![Fonction continue](../Image/Cours_002.png){.Center .Vignette}](../Image/Cours_002.png)
+        [![Fonction continue](../Image/Cours_002.png){.Center_lien .Vignette}](../Image/Cours_002.png)
     
     - Une fonction qui n'est pas continue sur $[-1;2]$
 
-        [![Fonction continue](../Image/Cours_003.png){.Center .Vignette}](../Image/Cours_003.png)
+        [![Fonction continue](../Image/Cours_003.png){.Center_lien .Vignette}](../Image/Cours_003.png)
     
 ???- example "Exemple"
     Soit $f$ la fonction définie sur $\R$ par $f(x)= \left\{ \begin{array}{l} x^2 \text{ si } x<2\\ 3  \text{ si } x=2\\ x^2 \text{ si } x>2 \end{array} \right.$.

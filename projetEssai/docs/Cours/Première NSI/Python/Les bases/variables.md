@@ -5,9 +5,9 @@
 !!! info "Un premièr point de vue"
     Vous avez vu en seconde qu'une variable pouvait être vu comme une boîte avec une étiquette et un contenu.
 
-    [![affecter une variable](../Image/affect-var5.png){.Center .Vignette}](../Image/affect-var5.png)
+    [![affecter une variable](../Image/affect-var5.png){.Center_lien .Vignette}](../Image/affect-var5.png)
 
-    [![affecter une variable](../Image/var5.png){.Center .Vignette}](../Image/var5.png)
+    [![affecter une variable](../Image/var5.png){.Center_lien .Vignette}](../Image/var5.png)
 
     Cette image n'est valable que pour des contenus &laquo; simples &raquo; : les nombres, les chaînes de caractères.
 

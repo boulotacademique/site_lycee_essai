@@ -15,7 +15,7 @@
     2. En déduire la valeur de $\V{AE}\cdot\V{AC}$.
     3. Montrer que le vecteur $\V{AC}$ est normal au plan (BDH).
 
-    [![pdt scalaire](../Image/Im13.png){.Center .Vignette}](../Image/Im13.png)
+    [![pdt scalaire](../Image/Im13.png){.Center_lien .Vignette}](../Image/Im13.png)
     
     ???- done "Réponse"
         1. Le vecteur$\V{AE}$ est orthogonal aux vecteurs $\V{AB}$ et $\V{AD}$ , qui sont deux vecteurs non colinéaires du plan $(ABC)$.
@@ -37,12 +37,12 @@
     
     L’ensemble des points M de l’espace tels que $\V{AM}\cdot \dvec{n}$ =0 est le plan $\mathcal{P}$ passant par $A$ et de vecteur normal $\dvec{n}$.
 
-    [![pdt scalaire](../Image/Im14.png){.Center .Vignette}](../Image/Im14.png)
+    [![pdt scalaire](../Image/Im14.png){.Center_lien .Vignette}](../Image/Im14.png)
 
 !!! info "Orthogonalité de deux plans"
     $\mathcal{P}$ et $\mathcal{P’}$  sont deux plans de vecteurs normaux respectifs  $\dvec{n}$ et  $\dvec{n'}$ sont perpendiculaires lorsque $\dvec{n}$ et  $\dvec{n'}$ sont orthogonaux.
 
-    [![pdt scalaire](../Image/Im15.png){.Center .Vignette}](../Image/Im15.png)
+    [![pdt scalaire](../Image/Im15.png){.Center_lien .Vignette}](../Image/Im15.png)
 
 ## Projeté orthogonal
 
@@ -55,7 +55,7 @@
     Le projeté orthogonal de $M$ sur $(d)$ est l'intersection du plan normal à $\V{u}$ passant par $M$ avec la droite $(d)$.
     
     ???- tip "Construction"
-        [![Proj ortho](../Image/proj_dte.gif){.Center .VignetteMed}](../Image/proj_dte.gif)
+        [![Proj ortho](../Image/proj_dte.gif){.Center_lien .VignetteMed}](../Image/proj_dte.gif)
     
         Ou [https://www.geogebra.org/m/qekbqjbt](https://www.geogebra.org/m/qekbqjbt) !
 

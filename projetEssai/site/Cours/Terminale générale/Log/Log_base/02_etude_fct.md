@@ -39,9 +39,9 @@
 
 	Donc la courbe de la fonction $\ln$ possède une asymptote verticale d'équation $x=0$.
 
-	[![Tableau de variations](../Image/courbe001.png){.Center .VignetteMed}](../Image/courbe001.png)
+	[![Tableau de variations](../Image/courbe001.png){.Center_lien .VignetteMed}](../Image/courbe001.png)
 
-	[![Courbe représentative](../Image/courbe002.png){.Center .VignetteMed}](../Image/courbe002.png)
+	[![Courbe représentative](../Image/courbe002.png){.Center_lien .VignetteMed}](../Image/courbe002.png)
 
 
 ???- abstract "Démonstration partielle"
@@ -88,7 +88,7 @@
 		</li>
 		<li> Sur $]0 ; + \infty[$, $\dfrac{2}{x}>0$, donc $f'$ est du signe de $\ln(x)$.
 
-		[![Tableau de variations](../Image/courbe003.png){.Center .VignetteMed}](../Image/courbe003.png)
+		[![Tableau de variations](../Image/courbe003.png){.Center_lien .VignetteMed}](../Image/courbe003.png)
 
 		</li>
 		</ol>

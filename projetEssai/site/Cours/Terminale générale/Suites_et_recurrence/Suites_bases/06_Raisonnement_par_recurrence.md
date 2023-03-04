@@ -7,7 +7,7 @@ Quelles sont les deux conditions pour que tous les dominos tombent ?
 * Faire tomber le premier domino 
 * et s'assurer que chaque domino renverse le suivant 
 
-[![Suite récurrente dans un plan](../Image/Domino2.png){.Center .VignetteMed}](../Image/Domino2.png)
+[![Suite récurrente dans un plan](../Image/Domino2.png){.Center_lien .VignetteMed}](../Image/Domino2.png)
 <div class="Source"> <a href="https://www.maths-et-tiques.fr/"><i>D'après  :</i> maths-et-tiques.fr</a></div>
 
 Lire [Wikipédia](https://fr.wikipedia.org/wiki/Raisonnement_par_r%C3%A9currence)

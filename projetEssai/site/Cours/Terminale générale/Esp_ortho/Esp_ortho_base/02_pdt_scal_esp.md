@@ -16,13 +16,13 @@ Il en résulte que les expressions du produit scalaire établies dans le plan so
 !!! info "Formules connues"
     - $\V{u}.\V{v}=AB\times AC \cos(\theta)$  avec $\theta= \widehat{BAC}$
 
-        [![pdt scalaire](../Image/Im06.png){.Center .Vignette}](../Image/Im06.png)
+        [![pdt scalaire](../Image/Im06.png){.Center_lien .Vignette}](../Image/Im06.png)
 
     - $\V{u}.\V{v}=\V{AB}\cdot\V{AH}$
 
         où $H$ est le projeté orthogonal de $C$ sur $(AB)$ c'est-à-dire le point d'intersection du plan $\mathcal{P'}$ passant par $C$ et orthogonal à la droite $(AB)$.
 
-        [![pdt scalaire](../Image/Im07.png){.Center .Vignette}](../Image/Im07.png)
+        [![pdt scalaire](../Image/Im07.png){.Center_lien .Vignette}](../Image/Im07.png)
 
     - Avec les normes (par exemple) : 
     
@@ -53,7 +53,7 @@ Il en résulte que les expressions du produit scalaire établies dans le plan so
     2. $\V{HB}\cdot\V{BA}$
     3. $\V{AB}\cdot\V{AO}$
 
-    [![pdt scalaire](../Image/Im08.png){.Center .Vignette}](../Image/Im08.png)
+    [![pdt scalaire](../Image/Im08.png){.Center_lien .Vignette}](../Image/Im08.png)
 
     ???- done "Réponse"
         1. $\V{AE}\cdot \V{BG}=\V{AE}\cdot \V{AH}=AE\times AH\times  \cos(\widehat{EAH})=a\times a \sqrt{2}\times \dfrac{1}{\sqrt{2}}=a^2$.
@@ -98,7 +98,7 @@ Il en résulte que les expressions du produit scalaire établies dans le plan so
     2. Calculer $\V{JI}\cdot\V{JF}$.
     3. Déterminer l'arrondi au dixième de degré de l'angle $\widehat{IJF}$.
 
-    [![pdt scalaire](../Image/Im09.png){.Center .Vignette}](../Image/Im09.png)
+    [![pdt scalaire](../Image/Im09.png){.Center_lien .Vignette}](../Image/Im09.png)
 
     ???- done "Réponse"
         1. $I\left(0,\dfrac12,\dfrac12\right)$ , $J(1,1,1)$ et $F(2,0,1)$.
@@ -132,7 +132,7 @@ Il en résulte que les expressions du produit scalaire établies dans le plan so
 !!! info "Une équivalence à un sens pratique"
     Une droite est orthogonale à un plan si et seulement si elle est orthogonale à toute droite de ce plan.
 
-    [![pdt scalaire](../Image/Im10.png){.Center .Vignette}](../Image/Im10.png)
+    [![pdt scalaire](../Image/Im10.png){.Center_lien .Vignette}](../Image/Im10.png)
 
 !!! tip "En pratique"
     Pour démontrer qu'une droite $\Delta$ est orthogonale à un plan $\mathcal{P}$, il suffit d'établir qu'elle orthogonale à deux droites sécantes de ce plan (d'après la définition) !
@@ -146,7 +146,7 @@ Il en résulte que les expressions du produit scalaire établies dans le plan so
     2. Démontrer que les droites(DF) et (EB) sont orthogonales .
     3. Démontrer que la droite (DF) et le plan (EBG) sont orthogonaux.
 
-    [![pdt scalaire](../Image/Im11.png){.Center .Vignette}](../Image/Im11.png)
+    [![pdt scalaire](../Image/Im11.png){.Center_lien .Vignette}](../Image/Im11.png)
 
     ???- done "Réponse"
         1. D(0,0,0) ; A( 1,0,0) ; C(0,1,0) ; H(0,0,1) ; B(1,1,0) ; E( 1,0,1) ; G( 0,1,1)  ; F( 1,1,1)

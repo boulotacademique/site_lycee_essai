@@ -3,7 +3,7 @@
 !!! info "Définition d'un plan médiateur"
     Le plan médiateur d'un segment [AB] est le plan orthogonal à (AB) qui passe par le milieu de [AB]. 
 
-    [![plan médiateur](../Image/Im16.png){.Center .Vignette}](../Image/Im16.png)
+    [![plan médiateur](../Image/Im16.png){.Center_lien .Vignette}](../Image/Im16.png)
 
 !!! info "Caractérisation d'un plan médiateur"
     Le plan médiateur d'un segment [AB] est aussi l'ensemble des points de l'espace équidistants de $A$ et $B$.

@@ -13,7 +13,7 @@
 	\lim_{n \to +\infty} u_n=+\infty
 	\]
 
-[![Suite qui a une limite infinie](../Image/Cours_001.png){.Center .VignetteMed}](../Image/Cours_001.png)
+[![Suite qui a une limite infinie](../Image/Cours_001.png){.Center_lien .VignetteMed}](../Image/Cours_001.png)
 
 
 !!! info "Définition"
@@ -81,7 +81,7 @@ Soit $u$ la suite définie par $u_n =0,5n^2-n+1$.
 	- Si $k >0$ alors  ($-k\sqrt{n}$) , ($-kn$) ,($-kn^2$),$\cdots$ ,($-kn^p$),($-ke^n$)   ont pour limite $-\infty$ quand $n $ tend vers $+\infty$
 
 
-[![Suites de référence qui a une limite infinie](../Image/Cours_002.png){.Center .VignetteMed}](../Image/Cours_002.png)
+[![Suites de référence qui a une limite infinie](../Image/Cours_002.png){.Center_lien .VignetteMed}](../Image/Cours_002.png)
 
 ## Limite finie d'une suite
 
@@ -99,7 +99,7 @@ Soit $u$ la suite définie par $u_n =0,5n^2-n+1$.
 	Cette limite est **unique**.
 
 
-[![Suites qui a une limite finie](../Image/Cours_003.png){.Center .VignetteMed}](../Image/Cours_003.png)
+[![Suites qui a une limite finie](../Image/Cours_003.png){.Center_lien .VignetteMed}](../Image/Cours_003.png)
 
 
 !!! tip "Remarque"

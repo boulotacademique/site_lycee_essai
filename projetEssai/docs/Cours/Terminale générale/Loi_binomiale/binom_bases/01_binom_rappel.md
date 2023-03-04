@@ -26,7 +26,7 @@ En général on construit un arbre pondéré avec les notations et lois suivante
 - **Loi des chemins** : La probabilité d'un évènement correspondant à un chemin est égale au produit des probabilités de chaque branche de ce chemin.
 - La probabilité d'un évènement  correspondant à  plusieurs chemins est la somme des probabilités de ces  chemins.
 
-[![Arbre de probabilité](../Image/arbre.png){.Center .VignetteMed}](../Image/arbre.png)
+[![Arbre de probabilité](../Image/arbre.png){.Center_lien .VignetteMed}](../Image/arbre.png)
 
 !!! info "Evénements indépendants"
     On dit que $A$ et $B$ sont des événements **indépendants** si et seulement si $\Pb(A\cap B)=\Pb(A)\times \Pb(B)$.

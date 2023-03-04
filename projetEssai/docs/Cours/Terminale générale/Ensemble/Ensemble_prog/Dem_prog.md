@@ -29,7 +29,7 @@
     - Par définition, ce nombre de parties est égal à $\comb{n}{p}$
     - Notons $a$ l'un des éléments de l'ensemble $E$
     
-    [![demonstration](../Image/dem.png){.Center .VignetteMed}](../Image/dem.png)
+    [![demonstration](../Image/dem.png){.Center_lien .VignetteMed}](../Image/dem.png)
 
     Il y a deux catégories de sous-ensemble :
     

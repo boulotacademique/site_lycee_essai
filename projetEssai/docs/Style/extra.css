@@ -134,6 +134,17 @@
 		text-align: center;
 	}
 
+	.Center_lien{
+		display: block;
+		min-width : 10%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.Bord{
+		border: 1px solid black;
+	}
+
 	.Cote_demi{
 		display: inline-block;
 		width : 48%;

@@ -80,7 +80,7 @@
     ???- done "Réponse"
         Voici l'arbre :
 
-        [![Abre](../Image/arbre2.png){.Center .VignetteMed}](../Image/arbre2.png)
+        [![Abre](../Image/arbre2.png){.Center_lien .VignetteMed}](../Image/arbre2.png)
 
         Les triplets formés d'un seul succès sont $(S;E;E),(E;S;E)$ et $(E;E;S)$. Or $\Pb((S;E;E)) =\Pb((E;S;E)) = \Pb((E;E;S)) = pq^2$.
         
@@ -124,15 +124,15 @@
 
     ???- tip "Combinaison pour Casio, TI et Numworks"
 
-        [![Combnaison](../Image/Comb.png){.Center .VignetteMed}](../Image/Comb.png)
+        [![Combnaison](../Image/Comb.png){.Center_lien .VignetteMed}](../Image/Comb.png)
     
     ???- tip "Loi binomiale pour Casio"
 
-        [![Loi binom Casio](../Image/Casio.png){.Center .VignetteMed}](../Image/Casio.png)
+        [![Loi binom Casio](../Image/Casio.png){.Center_lien .VignetteMed}](../Image/Casio.png)
     
     ???- tip "Loi binomiale pour TI"
 
-        [![Loi binom TI](../Image/TI.png){.Center .VignetteMed}](../Image/TI.png)
+        [![Loi binom TI](../Image/TI.png){.Center_lien .VignetteMed}](../Image/TI.png)
 
 ???- example "Exemple"
     On considère la variable aléatoire $X$ qui suit la loi $\mathcal{B}(20;0.36)$. Calculer à l'aide de la calculatrice :
@@ -189,7 +189,7 @@
 
         2. On utilise un tableau de valeur pour $\Pb(X\leq k)$, pour $k$ compris entre $0$ et $200$ :
 
-            [![Exo](../Image/Ex58.png){.Center .VignetteMed}](../Image/Ex58.png)
+            [![Exo](../Image/Ex58.png){.Center_lien .VignetteMed}](../Image/Ex58.png)
 
             En parcourant les valeurs de la table, on obtient $b=9$, puisque $\Pb(X\leq 8) \approx 0.85$ et $\Pb(X\leq 9) \approx 0.92$.
 

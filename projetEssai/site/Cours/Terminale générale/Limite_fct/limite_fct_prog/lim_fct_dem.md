@@ -63,7 +63,7 @@
             & \equivaut & x >0
             \end{eqnarray*}
 
-            [![Th d'encadrement](../Image/Cours_015.png){.Center .VignetteMed}](../Image/Cours_015.png)
+            [![Th d'encadrement](../Image/Cours_015.png){.Center_lien .VignetteMed}](../Image/Cours_015.png)
 
             Le minimum de $f'$ sur $\R$ est $1$, donc $f'$ est positive sur $\R$. Donc $f$ est croissante sur $\R$.
 
