@@ -19,7 +19,7 @@ Un dictionnaire est basé sur les ensembles (une autre structure informatique) q
 
     Il est impossible d'avoir 2 fois la même clé dans un dictionnaire. Mais les valeurs pour des clés différentes peuvent être identiques.
 
-    Les clés sont de préférence des immuables. Dans ce cours, les clés seront de chaines de caractères.
+    Les clés sont de préférence des immuables. Dans ce cours, les clés seront des chaines de caractères.
 
 !!! tip "Dictionnaire vide"
     Le dictionnaire vide est noté ```{}```
@@ -151,7 +151,7 @@ avatar = {"Image" : "./Image/av01.png", "code_id" : 21456, "Abonne" : False}
     Il est possible d'avoir la clé et la valeur avec ```items()```
 
     ```python
-    for k,v in avatar:
+    for k,v in avatar.items():
         print("clé : " + str(k) + " et valeur : " + str(v))
     ```
 

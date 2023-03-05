@@ -17,7 +17,7 @@
 
     Comme le terme &laquo; tableau &raquo; a un sens bien précis en informatique, nous parlerons ici de **matrice**.
 
-Une structure pour coder une telle matrice est une &laquo une liste de listes &raquo; c'est-à-dire une liste ou chaque élément est aussi une liste.
+Une structure pour coder une telle matrice est une &laquo; une liste de listes &raquo; c'est-à-dire une liste ou chaque élément est aussi une liste.
 
 Ainsi, pour coder la matrice de l'exemple précédent, on écrirait :
 
@@ -54,6 +54,9 @@ Il est aussi naturel d'employer les termes de &laquo; lignes &raquo; et de &laqu
 
     Signature : ```Fonction ligne_matrice(mat : list,num_lig : int) : list```
 
+    ???- danger "Une liste est un mutable"
+        Il y a deux façons d'écrire une telle fonction. Il faut choisir selon qu'il faut une [copie par référence ou par valeur](AFAIRE) de la ligne
+
 !!! info "Le nombre de colonne"
     Le nombre de colonnes d'une matrice est le nombre d'élements d'une ligne d'indice quelconque (pourquoi pas celle d'indice 0 ?), c'est-à-dire ```len(matrice1[0])```.
 
@@ -61,3 +64,4 @@ Il est aussi naturel d'employer les termes de &laquo; lignes &raquo; et de &laqu
     Ecrire une fonction qui prend en argument une matrice ```mat``` et un entier ```num_col``` et qui renvoie une liste contenant les éléments de la colonne de ```mat``` d'indice ```num_col```.
 
     Signature : ```Fonction colonne_matrice(mat : list, num_col : int) : list```
+

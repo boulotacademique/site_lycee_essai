@@ -148,6 +148,11 @@
 		margin-right: auto;
 	}
 
+	.Pas_gris th {
+		background-color: var(--md-default-bg-color--light)!important;
+		color : var(--md-footer-bg-color)!important;
+	}
+
 	.Bord{
 		border: 1px solid black;
 		padding-left: 0.8em;

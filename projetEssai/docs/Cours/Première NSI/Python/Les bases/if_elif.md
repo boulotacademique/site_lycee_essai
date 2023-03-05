@@ -106,8 +106,8 @@ elif ... :
 
     - test d'égalité : ```a == b``` (A ne pas faire avec [des flottants](AFAIRE))
     - test de la non égalité : ```a != b``` (A ne pas faire avec [des flottants](AFAIRE))
-    - test d'inégailté strict : ```a > b``` ou ```a < b``` (avec des ```str``` voir [l'ordre lexicographique](AFAIRE))
-    - test d'inégailté large : ```a >= b``` ou ```a <= b``` (avec des ```str``` voir [l'ordre lexicographique](AFAIRE))
+    - test d'inégailté strict : ```a > b``` ou ```a < b``` (avec des ```str``` voir [l'ordre lexicographique](./variables.md#ordre_lexico))
+    - test d'inégailté large : ```a >= b``` ou ```a <= b``` (avec des ```str``` voir [l'ordre lexicographique](./variables.md#ordre_lexico))
     - test d'appartenance à une liste : ```x in liste1 ```
     - test d'appartenance à une chaîne de caractères : ```x in ch1 ```
     - test d'appartenance &laquo; aux clés d'un dictionnaires &raquo; : ```x in dico1 ```

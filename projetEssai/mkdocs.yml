@@ -161,6 +161,9 @@ nav:
                 - "Les listes (II)" : "Cours/Première NSI/Python/Structures/list02.md"
                 - "Les matrices" : "Cours/Première NSI/Python/Structures/matrice.md"
                 - "Les dictionnaires" : "Cours/Première NSI/Python/Structures/dico.md"
+        - Codage :
+            - Les bases :
+                - "Codage d'entier": "Cours/Première NSI/Codage/Les bases/Binaire/01_codage_entier.md"
     #- Première STI2D: "Cours/Première STI2D/c01.md"
     #- Terminale STI2D: "Cours/Terminale STI2D/c01.md"
     #- Première générale: "Cours/Première générale/c01.md"

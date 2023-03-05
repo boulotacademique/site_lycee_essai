@@ -47,6 +47,7 @@
     ```
 
 L'intérêt d'écrire des fonctions est multiple :
+
 - décomposer un programme complexe en plusieurs fonctions (qui pourront être testées et corrigées plus facilement)
 - pouvoir utiliser ces fonctions dans différentes parties du programme (éventuellement ces fonctions sont rangées dans un fichier appelé **bibliothèque**).
 

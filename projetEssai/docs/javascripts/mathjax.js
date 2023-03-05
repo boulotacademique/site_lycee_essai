@@ -17,6 +17,7 @@ window.MathJax = {
       dx : ['\\text{d} #1',1,'x'],
       dxx : ['\\text{d}^2 #1',1,'x'],
       Su : ['\\left( #1_n \\right)',1,'u'],
+      base : ['\\left( #2 \\right)_{#1}',2,'2'],
       eq : '{\\iff}',
       Syst : ['\\left\\{ \\begin{array}{rcl} #1\\\\ #2 \\end{array} \\right.', 2],
       dlim : ['\\displaystyle{\\lim_{#1 \\to #2}}',2],

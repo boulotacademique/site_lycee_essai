@@ -28,11 +28,6 @@ liste_carre = [i**2 for i in range(10) ]
 </div>
 
 
-# Python et les listes
-
-
-
-
 ## Insérer une liste dans une liste
 
 Pour insérer des éléments dans une liste, il est possible d'utiliser les tranches. <!--Lire et bien travailler les exemples suivants afin de bien les comprendre.-->
