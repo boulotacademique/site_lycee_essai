@@ -14,14 +14,14 @@
 
     Si $f$ est positive sur $[a;b]$, alors l'aire de $\mc{D}$ en u.a. est $\displaystyle\int_a^b f(x) \dx$
 
-    [![ aire ](../Image/Im09.png){.Center_lien}](../Image/Im09.png)
+    [![ aire ](../Image/Im09.png){.Center_lien .VignetteTer}](../Image/Im09.png)
 
     $\text{Aire}(\mc{D}) = \displaystyle\int_a^b f(x) \dx$ en u.a.
 
 !!! info "Cas d'une fonction négative"
     Si $f$ est négative sur $[a;b]$, alors l'aire de $\mc{D}$ est $-\displaystyle\int_a^b f(x) \dx=\displaystyle\int_a^b (-f(x)) \dx$
 
-    [![ aire ](../Image/Im10.png){.Center_lien}](../Image/Im10.png)
+    [![ aire ](../Image/Im10.png){.Center_lien .VignetteTer}](../Image/Im10.png)
 
     $\text{Aire}(\mc{D}) = -\displaystyle\int_a^b f(x) \dx$ en u.a.
 
@@ -30,7 +30,7 @@
 
     $\text{Aire}(\mc{D})=\left( -\displaystyle\int_1^3 f(x) \dx \right) + \left( \displaystyle\int_3^4 f(x) \dx \right)$
 
-!!! example "Exemple : cas où $f$ est négative sur $I$"
+???- example "Exemple : cas où $f$ est négative sur $I$"
 
     Soit $\left(\text{O}; \text{I} , \text{J} \right)$ est un repère orthogonal d'unités graphiques $2$ cm en abscisse et $1$ cm en ordonnée.
 
@@ -56,7 +56,7 @@
     Comme $1$ u.a. $= 2 \text{ cm}^2$, $\text{Aire}(\mc{D})= 2 \times \dfrac{5}{6} = \dfrac{5}{3} \cm^2$.
  
 
-!!! example "Exemple : cas où $f$ change de signes sur $I$"
+???- example "Exemple : cas où $f$ change de signes sur $I$"
 
     Soit $\left(\text{O}; \text{I} , \text{J} \right)$ est un repère orthogonal d'unités graphiques $1.5$ cm en abscisse et $3$ cm pour $20$ unités en ordonnée.
 

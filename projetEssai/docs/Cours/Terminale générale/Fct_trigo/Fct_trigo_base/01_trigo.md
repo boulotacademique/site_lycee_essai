@@ -18,6 +18,10 @@
 [![ Cercle trigo](../Image/Im01.png){.Center_lien .VignetteMed}](../Image/Im01.png)
 <div class="Center_txt"> <span>$M\Coor{\cos x}{\sin x}$</span></div>
 
+???- tip "Geogebra"
+
+    <iframe scrolling="no" title="Def trigo" src="https://www.geogebra.org/material/iframe/id/gpjtwczx/width/1306/height/556/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1306px" height="556px" style="border:0px;"> </iframe>
+
 !!! info " "
     <ul>
     <li> $\cos^{2}x + \sin^{2}x=1$</li>
@@ -232,9 +236,19 @@
 
     [![Variations de sinus](../Image/Im07.png){.Center_lien .VignetteMed}](../Image/Im07.png)
 
+    ???- tip "Courbe de sinus"
+
+        <!--<iframe scrolling="no" title="Courbe sinus" src="https://www.geogebra.org/material/iframe/id/gjvbdjgd/width/1296/height/704/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1296px" height="704px" style="border:0px;"> </iframe>-->
+
+        <iframe scrolling="no" title="Courbe sinus" src="https://www.geogebra.org/material/iframe/id/gjvbdjgd/width/1296/height/704/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1296px" height="704px" style="border:0px;"> </iframe>
+
 !!! info "Variations de la fonction cosinus"
 
     [![Variations de cosinus](../Image/Im08.png){.Center_lien .Vignette}](../Image/Im08.png)
+
+    ???- tip "Courbe de cosinus"
+
+        <iframe scrolling="no" title="Courbe cos" src="https://www.geogebra.org/material/iframe/id/dynbm2ky/width/1296/height/704/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1296px" height="704px" style="border:0px;"> </iframe>
 
 
 ### Courbe représentative sur $[-\pi,\pi]$

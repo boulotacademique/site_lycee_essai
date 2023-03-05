@@ -23,7 +23,7 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
  
 
 
-???+ example "Exemple"
+???- example "Exemple"
     On lance <span id="piece">une pièce de monnaie</span>. Si on obtient pile, on gagne 5 &#8364; et si on obtient face on gagne 2 &#8364;.
 
     On peut définir une variable aléatoire $X$ correspondant au gain obtenu en euro.
@@ -33,7 +33,7 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
     Ici, la loi de probabilité est $\Pb(X=5)=\Pb($ pile $)=\dfrac{1}{2}$ et $\Pb(X=2)=\Pb($ face $)=\dfrac{1}{2}$.
  
 
-???+ example "Exemple"
+???- example "Exemple"
     On lance $1$ dé tétraédrique équilibré. Un joueur doit payer $2$ &#8364; pour jouer. Si la face obtenue est paire, il ne gagne rien. Si la face vaut $1$, il gagne $2$ &#8364;. Dans tous les autres cas, il gagne $5$ &#8364;.
     
     On définit la variable aléatoire $X$  qui, à chaque épreuve, associe le gain algébrique du joueur.
@@ -67,7 +67,7 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
     Si on note $x_i$ les valeurs possibles de $X$, alors $\Pb(Y=a x_i)=\Pb(X=x_i)$.
 
 
-???+ example "Exemple"
+???- example "Exemple"
     Reprenons la situation [avec les pièces](#piece). Il est décidé d'augmenter les gains de $20\%$. Cela revient à multiplier les valeurs de $X(\omega)$ par $1.2$.
     
     Si on note $Y$ la variable aléatoire associée aux nouveaux gains, alors $Y=1.2X$.
@@ -89,7 +89,7 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
     \]
  
 
-???+ example "Exemple"
+???- example "Exemple"
     Lors des réglages des machines, un contrôleur qualité d'une usine effectue de nombreux prélèvements dans la production et relève, pour chaque pièce, si elle a un défaut A, un défaut B.
     
     On note $X$ (resp. $Y$) la variable aléatoire qui compte le nombre de défaut A (resp. B). Voici le tableau des relevés :
@@ -118,7 +118,7 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
     \]
  
 
-???+ example "Exemple"
+???- example "Exemple"
     Lors de la fabrication d'une pièce, 3 morceaux sont nécessaires. On s'intéresse au poids de ces pièces et on note $X_i$ la variable aléatoire qui, à la pièce $i$ associe  son poids.
     
     Voici la loi de probabilité de ces variables :
@@ -148,7 +148,7 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
 
     On suppose que $X_1$, $X_2$ et $X_3$ sont indépendantes. Déterminer la loi de probabilité de $S=X_1+X_2+X_3$.
     
-    ???+ done "Réponse"
+    ???- done "Réponse"
         $S$ peut prendre comme valeur $60,65,70,75,80,85,90$.
 
         $\Pb(S=60)=\Pb(X_1=20) \times \Pb(X_2=15) \times \Pb(X_3=25)=0.003$
@@ -157,7 +157,7 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
  
  
 
-???+ example "Exemple : cas où les lois sont les mêmes"
+???- example "Exemple : cas où les lois sont les mêmes"
     On lance 3 dés tétraédriques équilibrés et **de couleurs différentes**. On note $X_i$ le numéro affiché par le dé $i$ et on suppose que $X_1, X_2$ et $X_3$ sont indépendantes. Déterminer la loi de probabilité de $S=X_1+X_2+X_3$.
  
 
@@ -197,7 +197,7 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
     Soit $X$ et $Y$ deux variables aléatoires indépendantes. Si pour tout $\omega$ de l'univers, $Y(\omega)=b \in \R^*$, on note $X+b$ pour $X+Y$. Donc $V(X+Y)=V(X+b)=V(X)+V(Y)=V(X)$.
  
 
-???+ warning "L'écart-type n'est pas linéaire !"
+???- warning "L'écart-type n'est pas linéaire !"
     Les formules précédentes ne fonctionnent pas pour l'écart-type :
     
     \[
@@ -216,7 +216,7 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
     Soit $X$ une vairable aléatoire définie sur l'univers $\Omega$. **Un échantillon de taille $n$ de la loi $X$** est une liste $(X_1,X_2, \ldots , X_n)$ de variables aléatoires indépendantes et identiques suivant la même loi que $X$.
  
 
-???+ example "Exemple"
+???- example "Exemple"
     Soit $X$ la variable aléatoire qui, <span id="bonbon">à chaque paquet de bonbons</span> issue d'une chaine de production, associe sa mass en grammes. On note $X_i$ la variable aléatoire qui, à chaque lot de 3 paquets, associe la masse du $i$-ème paquet.
     
     Les variables $X_1,X_2$ et $X_3$ sont indépendantes et suivent la même loi que $X$. Donc $(X_1,X_2,X_3)$ est un échantillon de taille 3 de la loi $X$.
@@ -225,7 +225,7 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
     Dans cette situation, on s'intéresse souvent à la variable aléatoire somme $S_n$ définie précédemment (donc $S_n=X_1+X_2+\ldots+X_n$) mais aussi **la variable aléatoire moyenne** définie par $M_n = \dfrac{1}{n} S_n$.
  
 
-???+ example "Exemple"
+???- example "Exemple"
     Avec l'exemple \ref{bonbon} et notant que la loi de $X$ est 
 
     <div class="Center2">
@@ -249,7 +249,7 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
     \]
  
 
-???+ abstract "Démonstration"
+???- abstract "Démonstration"
     Soit $(X_1,X_2, \ldots , X_n)$ des variables aléatoires indépendantes et identiques suivant la même loi que $X$.
 
     \begin{eqnarray*}
@@ -277,7 +277,7 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
     \]
  
 
-???+ abstract "Démonstration"
+???- abstract "Démonstration"
     Soit $(X_1,X_2, \ldots , X_n)$ des variables aléatoires indépendantes et identiques suivant la même loi que $X$.
 
     \begin{eqnarray*}
@@ -297,7 +297,7 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
     Et $\sigma(M_n) = \sqrt{V(M_n)}= \sqrt{\dfrac{1}{n} \times V(X)} = \dfrac{1}{\sqrt{n}} \sigma(x)$.
  
 
-???+ example "Exemple"
+???- example "Exemple"
     En utilisant l'exemple sur [la fabrication des bonbons](#bonbon), déterminer l'espérance, la variance et l'écart-type de $S_3$ et $M_3$.
  
 
@@ -307,7 +307,7 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
     Soit $X$ une variable aléatoire suivant une loi binomiale de paramètre $n$ et $p$. Alors $E(X) = np$, $V(X)=np(1-p)$ et $\sigma(X)=\sqrt{np(1-p)}$.
  
 
-???+ abstract "Démonstration : démonstration au programme"
+???- abstract "Démonstration : démonstration au programme"
     $X$ est la somme de $n$ variables aléatoires indépendantes de Bernoulli $X_i$. Donc $X=X_1+X_2+\ldots+X_n$ où pour tout $i$, $X_i$ suit la même loi que celle de la variable aléatoire $Y$ de Bernoulli. 
     
     [Rappel du chapitre 5](../../Loi_binomiale/binom_bases/03_loi_binom.md#binom_esp), $E(Y)=p$ et $V(Y)=p(1-p)$.

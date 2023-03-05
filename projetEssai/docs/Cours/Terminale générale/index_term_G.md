@@ -14,12 +14,12 @@
 * [Orthogonalité dans l'espace - Produit scalaire - Equation cartésienne](Esp_ortho/Esp_ortho_base/01_Rappel_pdt_scal_plan.md)
 * [Continuité](./Continuite/Continuite_base/01_cont_fct.md)
 * [Logarithme népérien](./Log/Log_base/01_fct_ln.md)
-* Equations différentielles
-* Dénombrement : arrangements, permutations et combinaison
-* Calcul intégral
-* Somme de variables aléatoires
-* Fonctions trigonométriques
-* Loi des grands nombres
+* [Equations différentielles](./Eq_diff/Eq_diff_base/01_Def.md)
+* [Dénombrement : arrangements, permutations et combinaison](./Ensemble/Ensemble_base/01_ensemble.md)
+* [Calcul intégral](./Calcul_integral/Cal_int_base/01_fct_pos.md)
+* [Somme de variables aléatoires](./Somme_VAR/VAR_base/01_var.md)
+* [Fonctions trigonométriques](./Fct_trigo/Fct_trigo_base/01_trigo.md)
+* [Loi des grands nombres](./Loi_gds_nombres/Gds_nbres_bases/01_gds_nbres.md)
 
 Naturellement, le travail autour de python se fera tout au long de l'année.</br>
 La préparation au grand oral occupera quelques séances avant l'épreuve écrite, mais elle occupera surtout des semaines qui suivent l'examen.
