@@ -1,27 +1,45 @@
-avatar = {"Image" : "./Image/av01.png", "code_id" : 21456, "Abonne" : False}
+import matplotlib.pyplot as mp
+import random as rd
+import scipy.special as sci
+import time
 
-print(avatar["code_id"]) # affiche 21456
-# ou une variable contenant une clé
-c = "code_id"
-print(avatar[c]) # affiche 21456
+def expBern(p):
+    nb=int(p*100)
+    nbAlea=rd.randint(1,100)
+    if nbAlea<=nb:
+        return 1
+    return 0
 
-avatar["Abonne"] = True
-print(avatar)
-avatar["Pseudo"] = "Last_jedi"
-print(avatar)
+def schemaBern(n,p):
+    L=[]
+    for i in range(n):
+        L.append(expBern(p))
+    return L
 
-liste_cle = ["Zeus", "Poseidon", "Hades", "Athena"]
-liste_valeur = [ 1000, 900, 950, 1100]
-dico_puissance = {}
-for idx in range(len(liste_cle)):
-    cle = liste_cle[idx]
-    val = liste_valeur[idx]
-    dico_puissance[cle] = val
-print(dico_puissance)
+def nbSuc(n,p):
+    tot=0
+    L=schemaBern(n,p)
+    for i in range(len(L)):
+        if L[i]==1:
+            tot=tot+1
+    return tot
 
-for k in avatar:
-    print(k)    
+def distribution(n,p,nbExp):
+    L=[0]*(n+1)
+    for i in range(nbExp):
+        t=nbSuc(n,p)
+        L[t]=L[t]+1
+    return L
 
-for k in avatar:
-   val = avatar[k]
-   print("clé : " + str(k) + " et valeur : " + str(val))
+def binomFD(n,p,k):
+    return sci.comb(n,k,exact=True)*p**k*(1-p)**(n-k)    
+
+p=0.78
+n=20
+nbExp=100
+L=distribution(n,p,nbExp)
+listeAbs=[i for i in range(0,n+1) ]
+LTheo=[nbExp*binomFD(n,p,i) for i in range(0,n+1)]
+mp.plot(listeAbs,L,'r')
+mp.plot(listeAbs,LTheo,'b')
+mp.show()

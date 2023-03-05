@@ -46,6 +46,16 @@
         display: none!important;
     }
 	
+    /* Pour cacher les réponses */
+    .done{
+        display: none!important;
+    }
+
+    /* Pour cacher les démonstrations */
+    .abstract{
+        display: none!important;
+    }
+
 	.SautDePage{
 		display: block;
 		page-break-before: always; 

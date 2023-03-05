@@ -33,6 +33,11 @@ window.MathJax = {
       Oij: '{\\left( O;\\vec{i},\\vec{j}\\right)}',
       Oijk: '{\\left( O;\\vec{i},\\vec{j},\\vec{k}\\right)}',
       rep: '{\\left(O ; I, J \\right)}',
+      Aire:'{\\text{Aire}}',
+      ua: '{\\text{ u.a.}}',
+      cm: '{\\text{ cm}}',
+      Coor: ['\\displaystyle{\\left( #1 ; #2 \\right) }',2],
+      Oj: ['\\left(O; \\vec{j} \\right)'],
      }
    },
    options: {

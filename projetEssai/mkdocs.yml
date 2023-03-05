@@ -1,5 +1,5 @@
-site_name: Les maths à Mimard
-site_author: Lycée Mimard
+site_name: Maths et NSI
+site_author: Lycée
 site_url: https://boulotacademique.github.io/site_lycee_essai/
 
 repo_url: https://github.com/boulotacademique/site_lycee_essai
@@ -268,6 +268,15 @@ nav:
                 - "Calcul d'aire": "Cours/Terminale générale/Calcul_integral/Cal_int_base/05_calc_aire.md" 
             - "Intégrale : au programme":
                 - "Démonstration au programme" : "Cours/Terminale générale/Calcul_integral/Cal_int_prog/Dem_prog.md"
+        - Somme de variable aléatoire:
+            - "Variable aléatoire : les bases":
+                - "Tout le cours": "Cours/Terminale générale/Somme_VAR/VAR_base/01_var.md"
+        - Fonction trigonomértique:
+            - "Fct trigo : les bases":
+                - "Tout le cours": "Cours/Terminale générale/Fct_trigo/Fct_trigo_base/01_trigo.md"
+        - Loi des grands nombres:
+            - "Lois des grands nombres : les bases":
+                - "Tout le cours": "Cours/Terminale générale/Loi_gds_nombres/Gds_nbres_bases/01_gds_nbres.md"
     - Labo de math:  
         - Accueil: "Labo de math/c01.md"
         - "Liaison lycée/supérieur": "Labo de math/Liaison_lycée_sup/supérieur.md"

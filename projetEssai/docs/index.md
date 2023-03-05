@@ -1,3 +1,3 @@
-# Mathématiques à Mimard
+# Mathématiques et NSI
 
 En construction

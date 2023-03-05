@@ -46,7 +46,7 @@
         \]
 
 !!! info "Théorème"
-    Si $X$ est une variable aléatoire qui suit une loi de Bernoulli de paramètre $p$, alors :
+    Si $X$ est une variable aléatoire qui suit <span id="binom_esp">une loi de Bernoulli</span> de paramètre $p$, alors :
 
     - l'[espérance](AFAIRE) : $E(X)=p$
     - la [variance](AFAIRE) : $V(X)=p(1-p)$
