@@ -134,6 +134,33 @@
 		text-align: center;
 	}
 
+	.Center_lien{
+		display: block;
+		min-width : 10%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.Center2{
+		min-width: 10%;
+		max-width: 30%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.Pas_gris th {
+		background-color: var(--md-default-bg-color--light)!important;
+		color : var(--md-footer-bg-color)!important;
+	}
+
+	.Bord{
+		border: 1px solid black;
+		padding-left: 0.8em;
+		padding-right: 0.8em;
+		padding-top: 0.2em;
+		padding-bottom: 0.2em;
+	}
+
 	.Cote_demi{
 		display: inline-block;
 		width : 48%;
@@ -161,6 +188,11 @@
 		/*margin-right : 35%;
 		margin-left : 35%;*/
 		width : 30%;
+	}
+
+	.VignetteTer{
+		/*border : 2px solid black;*/
+		width : 40%;
 	}
 
 	.AvecBordure{
