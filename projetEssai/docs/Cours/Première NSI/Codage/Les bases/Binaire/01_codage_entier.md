@@ -289,29 +289,37 @@
         <ol>
         <li>
         
-        <div class="Center_txt Pas_gris>
+        <div class="Center_txt Pas_gris">
 
         | Dividende | $35\,782$ | $2\,236$ | 139 | 8 |
         |:---:|:---:|:---:|:---:|:---:|
-        |Diviseur  | 16   | 16   | 16  | 16 |
+        |Diviseur  | 16 | 16 | 16 | 16 |
         |Quotient  | $2\,236$ | 139   | 8  |  0 |
         |Reste   | 6    | 12(=$C$)   | 11(=$B$) |  8 |        
+
+        </div>
 
         D'où $35\,782=6 + 12\times 16 + 11 \times 16^2 + 8\times 16^3$.
         
         Donc $35\,782 = \base[16]{8BC6}$
 
-        </div>
         </li>
         <li>
         
+
+        <div class="Center_txt Pas_gris">
+
         |Dividende | $42\,971$ | $2\,685$ | 167  | 10 |
         |:---:|:---:|:---:|:---:|:---:|
         |Diviseur  | 16   | 16   | 16  | 16 |
         |Quotient  | $2\,685$ | 167   | 10  |  0 |
         |Reste   | 11(=$B$)  | 13(=$D$)  | 7  |  10(=$A$) |
+        
+        </div>
 
-        D'où $42\,971=11 + 13\times 16 + 7 \times 16^2 + 10\times 16^3$.\\
+
+        D'où $42\,971=11 + 13\times 16 + 7 \times 16^2 + 10\times 16^3$.
+        
         Donc $35\,782 = \base[16]{A7DB}$
 
         </li>
@@ -320,26 +328,27 @@
 
 #### Conversion d'un hexadécimal vers un décimal.
 
-!!! tip " "
-Il suffit d'utiliser la définition ou l'algorithme d'Hörner (cf exercices).
+!!! tip "Hexadécimal en décimal"
+    Il suffit d'utiliser la définition ou l'algorithme d'Hörner (cf exercices).
  
 
 ???+ example "Exemple"
-Donner l'écriture décimale des nombres suivants écrits en hexadécimal :
-<ol>{4}
-</li>
-<li> $\base[16]{A2}$ \qquad \ans{162}
-</li>
-<li> $\base[16]{10}$ \qquad \ans{16}
-</li>
-<li> $\base[16]{C10}$ \qquad \ans{$\np{3088}$}
-</li>
-<li> $\base[16]{ABCD}$ \qquad \ans{$\np{43981}$}
-</li>
-</ol>
+    Donner l'écriture décimale des nombres suivants écrits en hexadécimal :
+    <ol>
+    <li> $\base[16]{A2}$</li>
+    <li> $\base[16]{10}$</li>
+    <li> $\base[16]{C10}$</li>
+    <li> $\base[16]{ABCD}$</li>
+    </ol>
  
+    ???+ done "Réponse"
+        <ol>
+        <li> $\base[16]{A2}$ = 162</li>
+        <li> $\base[16]{10}$ = 16</li>
+        <li> $\base[16]{C10}$ = $3\,088$</li>
+        <li> $\base[16]{ABCD}$ = $43\,981$</li>
+        </ol>
 
-\vspace{-0.5cm}
 #### Passage entre l'hexadécimal et le binaire}
 
 !!! tip " "[Méthode: du binaire vers l'hexadécimal]
