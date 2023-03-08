@@ -81,7 +81,7 @@
     <ol>
     <li> Compléter le tableau suivant :
 
-    <div class="Center_txt">
+    <div class="Center_txt Pas_gris">
 
     | Dividende | $2305$ |  230 | ? | ? |
     |:---:|:---:|:---:|:---:|:---:|
@@ -93,7 +93,7 @@
     
     ???+ done "Réponse"
 
-        <div class="Center_txt">
+        <div class="Center_txt Pas_gris">
 
         | Dividende | 2305 |  230 | 23 | 2 |
         |:---:|:---:|:---:|:---:|:---:|
@@ -114,7 +114,7 @@
  
     ???+ done "Réponse"
 
-        <div class="Center_txt">    
+        <div class="Center_txt Pas_gris">    
 
         | Dividende  | 12008 |  1200  | 120  | 12  | 1  |
         |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -168,7 +168,7 @@
 
     <div class="Center_txt Pas_gris">
 
-    1| | 108 | 108 | 44 | ? | ? | ? | ? | ? |
+    | | 108 | 108 | 44 | ? | ? | ? | ? | ? |
     |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
     |Puissance de $2$ | $2^7 = 128$ | $2^6=64$ | $2^5=32$ | $2^4=16$ | $2^3=8$ | $2^2=4$ | $2^1=2$ | $2^0=1$ |
     |Différence | $108-128<0$ | $108-64=44$ | ? | ? | ? | ? | ? | ? | 
@@ -349,234 +349,231 @@
         <li> $\base[16]{ABCD}$ = $43\,981$</li>
         </ol>
 
-#### Passage entre l'hexadécimal et le binaire}
+#### Passage entre l'hexadécimal et le binaire
 
-!!! tip " "[Méthode: du binaire vers l'hexadécimal]
-À partir du nombre binaire, il suffit de former des paquets de 4 chiffres (en commençant par le bit de poids faible) et de convertir chaque paquet en hexadécimal.
- 
-
-???+ example "Exemple"
-Convertir en hexadécimal les nombres suivants écrits en binaire :
-<ol>
-<li> $\base{101011}$\\
-\begin{minipage}{0.5\linewidth}
-$a=0010\ 1011$.\\
-$\left( 10 \right)_2$ s'écrit en décimal $2$ qui s'écrit en hexadécimal $2$.\\
-$\left( 1011 \right)_2$ s'écrit en décimal $11$ qui s'écrit en hexadécimal $B$.\\
-Donc $\base{10\ 1011} = \left( 2B\right)_{16}$.
-\end{minipage}
-\begin{minipage}{0.5\linewidth}
-\begin{center}
-\begin{tabular}{|m{3cm}|c|c|}
-\hline
-Binaire   | 10  | 1011 \\
-\hline
-Pseudo décimal | 2   | 11 \\
-\hline
-Hexadécimal  | 2  | B\\
-\hline
-\end{tabular}
-\end{center}
-\end{minipage}
-</li>
-<li> $\base{10101110}$\\
-\begin{comment}
-\vspace{4cm}
-\end{comment}
-    ???+ done "Réponse"
-$a=\base{1010\ 1110}$.\\
-$\base{1010}$ s'écrit en décimal $10$, qui s'écrit en hexadécimal $A$.\\
-$\base{1110}$ s'écrit en décimal $14$, qui s'écrit en hexadécimal $E$.\\
-Donc $\base{1010\ 1110} = \base[16]{AE}$.
- 
-</li>
-<li> $\base{111100011}$\\
-\begin{comment}
-\vspace{4cm}
-\end{comment}
-    ???+ done "Réponse"
-$a=\base{0001\ 1110\ 0011}$.\\
-$\base{1}$ s'écrit en décimal $1$, qui s'écrit en hexadécimal $1$.\\
-$\base{1110}$ s'écrit en décimal $14$, qui s'écrit en hexadécimal $E$.\\
-$\base{0011}$ s'écrit en décimal $3$, qui s'écrit en hexadécimal $3$.\\
-Donc $\base{1010\ 1110} = \base[16]{1E3}$.
- 
-</li>
-</ol>
- 
-
-!!! tip " "[Méthode: de l'hexadécimal vers le binaire]
-À partir du nombre hexadécimal, il suffit de convertir chacun de ses chiffres en binaire \textbf{en utilisant 4 bits}.
+!!! tip "Méthode: du binaire vers l'hexadécimal"
+    À partir du nombre binaire, il suffit de former des paquets de 4 chiffres (en commençant par le bit de poids faible) et de convertir chaque paquet en hexadécimal.
  
 
 ???+ example "Exemple"
-Convertir en binaire les nombres suivants écrits en hexadécimal :
-<ol>[a)]
-</li>
-<li> $\base[16]{A1B}$\\
-\begin{comment}
-\vspace{4cm}
-\end{comment}
+    Convertir en hexadécimal les nombres suivants écrits en binaire :
+    <ol>
+    <li> $\base{101011}$
+
+    $a=0010\ 1011$.
+
+    $\left( 10 \right)_2$ s'écrit en décimal $2$ qui s'écrit en hexadécimal $2$.
+
+    $\left( 1011 \right)_2$ s'écrit en décimal $11$ qui s'écrit en hexadécimal $B$.
+
+    Donc $\base{10\ 1011} = \left( 2B\right)_{16}$.
+    
+    <div class="Center_txt Pas_gris">
+
+    | Binaire   | 10  | 1011 |
+    |:---:|:---:|:---:|
+    | Pseudo décimal | 2   | 11 |
+    | Hexadécimal  | 2  | B |
+
+    </div>
+    
+    </li>
+    <li> $\base{10101110}$
+        
     ???+ done "Réponse"
-$a=A\ 1\ B$.\\
-$\base[16]{A}$ s'écrit $10$ en décimal qui s'écrit $\base{1010}$.\\
-$\base[16]{1}$ s'écrit $1$ en décimal qui s'écrit $\base{1}=\base{0001}$.\\
-$\base[16]{B}$ s'écrit $11$ en décimal qui s'écrit $\base{1011}$.\\
-Donc $\base[16]{A1B}=\base{1010\ 0001\ 1011}$.
- 
-</li>
-<li> $\base[16]{1001}$\\
-\begin{comment}
-\vspace{4cm}
-\end{comment}
+        $a=\base{1010\ 1110}$.
+    
+        $\base{1010}$ s'écrit en décimal $10$, qui s'écrit en hexadécimal $A$.
+        
+        $\base{1110}$ s'écrit en décimal $14$, qui s'écrit en hexadécimal $E$.
+
+        Donc $\base{1010\ 1110} = \base[16]{AE}$.
+    
+    </li>
+    <li> $\base{111100011}$
+    
     ???+ done "Réponse"
-$a=\base[16]{1\ 0\ 0\ 1}$.\\
-$\base[16]{1}$ s'écrit $1$ en décimal qui s'écrit $\base{1}=\base{0001}$.\\
-$\base[16]{0}$ s'écrit $0$ en décimal qui s'écrit $\base{0}=\base{0000}$.\\
-$\base[16]{0}$ s'écrit $0$ en décimal qui s'écrit $\base{0}=\base{0000}$.\\
-$\base[16]{1}$ s'écrit $1$ en décimal qui s'écrit $\base{1}=\base{0001}$.\\
-Donc $\base[16]{1001}=\base{0001\ 0000\ 0000\ 0001}$.
+    
+        $a=\base{0001\ 1110\ 0011}$.
+
+        $\base{1}$ s'écrit en décimal $1$, qui s'écrit en hexadécimal $1$.
+        
+        $\base{1110}$ s'écrit en décimal $14$, qui s'écrit en hexadécimal $E$.
+        
+        $\base{0011}$ s'écrit en décimal $3$, qui s'écrit en hexadécimal $3$.
+        
+        Donc $\base{1010\ 1110} = \base[16]{1E3}$.
+    
+    </li>
+    </ol>
  
-</li>
-<li> $\base[16]{2AF3}$\\
-\begin{comment}
-\vspace{4cm }
-\end{comment}
+
+!!! tip "Méthode: de l'hexadécimal vers le binaire"
+    À partir du nombre hexadécimal, il suffit de convertir chacun de ses chiffres en binaire **en utilisant 4 bits**.
+ 
+
+???+ example "Exemple"
+    Convertir en binaire les nombres suivants écrits en hexadécimal :
+    <ol>
+    <li> $\base[16]{A1B}$
+    
     ???+ done "Réponse"
-$a=\base[16]{2\ A\ F\ 3}$.\\
-$\base[16]{2}$ s'écrit $2$ en décimal qui s'écrit $\base{0010}$.\\
-$\base[16]{A}$ s'écrit $10$ en décimal qui s'écrit $\base{1010}$.\\
-$\base[16]{F}$ s'écrit $15$ en décimal qui s'écrit $\base{1111}$.\\
-$\base[16]{3}$ s'écrit $3$ en décimal qui s'écrit $\base{0011}$.\\
-Donc $\base[16]{2AF3}=\base{0010\ 1010\ 1111\ 0011}$.
+        $a=A\ 1\ B$.
+        
+        $\base[16]{A}$ s'écrit $10$ en décimal qui s'écrit $\base{1010}$.
+        
+        $\base[16]{1}$ s'écrit $1$ en décimal qui s'écrit $\base{1}=\base{0001}$.
+
+        $\base[16]{B}$ s'écrit $11$ en décimal qui s'écrit $\base{1011}$.
+
+        Donc $\base[16]{A1B}=\base{1010\ 0001\ 1011}$.
+    
+    </li>
+    <li> $\base[16]{1001}$
+    
+    ???+ done "Réponse"
+        $a=\base[16]{1\ 0\ 0\ 1}$.
+        
+        $\base[16]{1}$ s'écrit $1$ en décimal qui s'écrit $\base{1}=\base{0001}$.
+        
+        $\base[16]{0}$ s'écrit $0$ en décimal qui s'écrit $\base{0}=\base{0000}$.
+        
+        $\base[16]{0}$ s'écrit $0$ en décimal qui s'écrit $\base{0}=\base{0000}$.
+        
+        $\base[16]{1}$ s'écrit $1$ en décimal qui s'écrit $\base{1}=\base{0001}$.
+
+        Donc $\base[16]{1001}=\base{0001\ 0000\ 0000\ 0001}$.
+    </li>
+    <li> $\base[16]{2AF3}$
+
+    ???+ done "Réponse"
+        $a=\base[16]{2\ A\ F\ 3}$.
+        
+        $\base[16]{2}$ s'écrit $2$ en décimal qui s'écrit $\base{0010}$.
+        
+        $\base[16]{A}$ s'écrit $10$ en décimal qui s'écrit $\base{1010}$.
+        
+        $\base[16]{F}$ s'écrit $15$ en décimal qui s'écrit $\base{1111}$.
+        
+        $\base[16]{3}$ s'écrit $3$ en décimal qui s'écrit $\base{0011}$.
+        
+        Donc $\base[16]{2AF3}=\base{0010\ 1010\ 1111\ 0011}$.
+    
+    </li>
+    </ol>
+
+!!! tip "Pourquoi l'héxadecimal ?"
+    L'écriture en hexadécimal d'un nombre binaire est beaucoup plus concise que son écriture binaire ! D'où son utilité.
  
-</li>
-</ol>
- %
-%
-%
 
-\begin{rque}
-L'écriture en hexadécimal d'un nombre binaire est beaucoup plus concise que son écriture binaire ! D'où son utilité.
+### Le cas général 
+
+!!! info "Une base quelconque !"
+    Soit $b$ un entier, $b\geq 2$.
+    
+    Tout entier $a \geq 0$ s'écrit de façon unique sous la forme : 
+    
+    \[
+        a = a_0 + a_1 \times b + a_2 \times b^2 + \ldots + a_n \times b^n  = \sum_{i=0}^{n} a_i \times b^i
+    \]
+    
+    où $n$ est un entier et les $a_i$ sont des entiers compris entre 0 et b-1 et $a_n \neq 0$.
  
 
-### Le cas général }
 
-!!! info " "
-Soit $b$ un entier, $b\geq 2$.\\
-Tout entier $a \geq 0$ s'écrit de façon unique sous la forme : 
-\[ a = a_0 + a_1 \times b + a_2 \times b^2 + \ldots + a_n \times b^n  = \sum_{i=0}^{n} a_i \times b^i \]
-où $n$ est un entier et les $a_i$ sont des entiers compris entre 0 et b-1 et $a_n \neq 0$.
- 
-
-Cf. la feuille d'exercice.
-
-## Opération sur les binaires}
+## Opération sur les binaires
 
 !!! tip " "
-Pour ajouter deux nombres binaires, on procède comme en primaire, mais ne pas oublier que :
-\begin{itemize}
-</li>
-<li> $\base{0}+\base{0}=\base{0}$
-</li>
-<li> $\base{0}+\base{1}=\base{1}$
-</li>
-<li> $\base{1}+\base{1}=\base{10}$ il y a donc une retenue !
-\end{itemize}
+    Pour ajouter deux nombres binaires, on procède comme en primaire, mais ne pas oublier que :
+    <ul>
+    <li> $\base{0}+\base{0}=\base{0}$
+    </li>
+    <li> $\base{0}+\base{1}=\base{1}$
+    </li>
+    <li> $\base{1}+\base{1}=\base{10}$ il y a donc une retenue !
+    </li>
+    </ul>
  
 
-\begin{att}
-Comme les opérations sont effectuées sur un nombre de bits fini, il peut arriver ce que l'on appelle un \textbf{dépassement de capacité}.
-\end{att}
+!!! danger "Dépassement de capacité"
+    Comme les opérations sont effectuées sur un nombre de bits fini, il peut arriver ce que l'on appelle un **dépassement de capacité**.
 
-???+ example "Exemple"
-Sur un octet : $\base{0110\ 1001}+\base{1001\ 1110} = \base{0000\ 0111}$ (la dernière retenue est perdue). Ce qui conduit à $105+158 = 7$ !!!
+    ???+ example "Exemple"
+        Sur un octet : $\base{0110\ 1001}+\base{1001\ 1110} = \base{0000\ 0111}$ (la dernière retenue est perdue). Ce qui conduit à $105+158 = 7$ !!!
  
 
 
-!!! tip " "
-Il est parfois indispensable d'inverser les $0$ et les $1$. Cela s'appelle &laquo; \textbf{le complément à un} &raquo;.
+!!! tip "Le complément à 1"
+    Il est parfois indispensable d'inverser les $0$ et les $1$. Cela s'appelle &laquo; **le complément à un** &raquo;.
  
-
 Nous croiserons à nouveau ces deux notions dans le chapitre sur les booléens.
 
-
-
-%\begin{att}
+<!--%\begin{att}
 %Addition\\ &laquo; complément &raquo; \\ Comparaison de binaire, ordre ?
-%\end{att}
+%\end{att}-->
 
-\begin{comment}
-\clearpage
-\end{comment}
-## \'Ecriture d'un entier en base 2}
+## \'Ecriture d'un entier en base 2
 
-!!! tip " "[Méthode pour écrire un nombre négatif en binaire]
-Soit un entier $a<0$, écrit en décimal.
-\begin{itemize}
-</li>
-<li> Tenir compte (parfois déterminer) le nombre de bits à utiliser.
-</li>
-<li> Convertir en binaire la valeur absolue de $a$ en utilisant le nombre de bits nécessaire.
-</li>
-<li> faire le complément à 2 de ce nombre, c'est-à-dire :
-\begin{itemize}
-</li>
-<li> Prendre le complément à un du nombre obtenu.
-</li>
-<li> Ajouter $1$ au nombre binaire trouvé précédemment. Le résultat obtenu est l'écriture en binaire de $a$.
-\end{itemize}
-\end{itemize}
+!!! tip "Méthode pour écrire un nombre négatif en binaire"
+    Soit un entier $a<0$, écrit en décimal.
+    <ul>
+    <li> Tenir compte (parfois déterminer) le nombre de bits à utiliser.
+    </li>
+    <li> Convertir en binaire la valeur absolue de $a$ en utilisant le nombre de bits nécessaire.
+    </li>
+    <li> faire le complément à 2 de ce nombre, c'est-à-dire :
+    <ul>
+    </li>
+    <li> Prendre le complément à un du nombre obtenu.
+    </li>
+    <li> Ajouter $1$ au nombre binaire trouvé précédemment. Le résultat obtenu est l'écriture en binaire de $a$.
+    </li>
+    </ul>
+    </li>
+    </ul>
  
 
-%\clearpage
 
-\begin{minipage}{\linewidth}
-!!! info " "
-On obtient donc :
-\begin{center}
-\begin{tabular}{|>{\centering}m{2cm}|*{5}{>{\centering}m{0.5cm}}|>{\centering}m{2cm}|}
-\hline
-\multirow{2}{*}{\begin{minipage}{1.8cm}\begin{center} Entiers\\ naturels \end{center}\end{minipage}} & \multicolumn{5}{>{\centering}m{4cm}|}{\begin{minipage}{\linewidth}\begin{center}Binaire\end{center}\end{minipage}} & \multirow{2}{*}{\begin{minipage}{1.8cm}\begin{center} Entiers\\ relatifs \end{center}\end{minipage}} |
-    &   & & & & &  |
-\hline
-16 & 1 & 1 & 0 & 0 & 0 &    |
-\hline
-15 &   & 1 & 1 & 1 & 1 & -1 |
-\hline
-14 &   & 1 & 1 & 1 & 0 & -2 |
-\hline
-13 &   & 1 & 1 & 0 & 1 & -3 |
-\hline
-12 &   & 1 & 1 & 0 & 0 & -4 |
-\hline
-11 &   & 1 & 0 & 1 & 1 & -5 |
-\hline
-10 &   & 1 & 0 & 1 & 0 & -6 |
-\hline
-9 &   & 1 & 0 & 0 & 1 & -7 |
-\hline
-8 &   & 1 & 0 & 0 & 0 & -8 |
-\hline
-7 &   & 0 & 1 & 1 & 1 & 7  |
-\hline
-6 &   & 0 & 1 & 1 & 0 & 6  |
-\hline
-5 &   & 0 & 1 & 0 & 1 & 5  |
-\hline
-4 &   & 0 & 1 & 0 & 0 & 4  |
-\hline
-3 &   & 0 & 0 & 1 & 1 & 2  |
-\hline
-2 &   & 0 & 0 & 1 & 0 & 2  |
-\hline
-1 &   & 0 & 0 & 0 & 1 & 1  |
-\hline
-0 &   & 0 & 0 & 0 & 0 & 0  |
-\hline
-\end{tabular}
-\end{center}
-\begin{itemize}
+???+ example "Exemple"
+    On obtient donc :
+     Entiers  naturels  Binaire  Entiers relatifs |
+     
+    16 | 1 | 1 | 0 | 0 | 0 |    |
+     
+    15 |   | 1 | 1 | 1 | 1 | -1 |
+     
+    14 |   | 1 | 1 | 1 | 0 | -2 |
+     
+    13 |   | 1 | 1 | 0 | 1 | -3 |
+     
+    12 |   | 1 | 1 | 0 | 0 | -4 |
+     
+    11 |   | 1 | 0 | 1 | 1 | -5 |
+     
+    10 |   | 1 | 0 | 1 | 0 | -6 |
+     
+    9 |   | 1 | 0 | 0 | 1 | -7 |
+     
+    8 |   | 1 | 0 | 0 | 0 | -8 |
+     
+    7 |   | 0 | 1 | 1 | 1 | 7  |
+     
+    6 |   | 0 | 1 | 1 | 0 | 6  |
+     
+    5 |   | 0 | 1 | 0 | 1 | 5  |
+     
+    4 |   | 0 | 1 | 0 | 0 | 4  |
+     
+    3 |   | 0 | 0 | 1 | 1 | 2  |
+     
+    2 |   | 0 | 0 | 1 | 0 | 2  |
+     
+    1 |   | 0 | 0 | 0 | 1 | 1  |
+     
+    0 |   | 0 | 0 | 0 | 0 | 0  |
+     
+
+<ul>
 </li>
 <li> Le nombre de bits à utiliser est un contrainte ! Mais $5$ codé sur 4 chiffres est \base{0101} et sur 8 chiffres \base{0000\ 0101}.
 $-5$ codé sur 4 chiffres est \base{1011} et sur 8 chiffres \base{1111\ 1011}. Il suffit de répéter le chiffre le plus à gauche!
@@ -590,7 +587,8 @@ $-5$ codé sur 4 chiffres est \base{1011} et sur 8 chiffres \base{1111\ 1011}. I
  {\tiny 1 }& 0 & 0 & 0 & 0
 \end{tabular}
 \end{center}
-\end{itemize}
+</li>
+</ul>
  
 \end{minipage}
 
@@ -598,7 +596,7 @@ $-5$ codé sur 4 chiffres est \base{1011} et sur 8 chiffres \base{1111\ 1011}. I
 \'Ecrire en binaire les entiers suivants :
 <ol>
 <li> $-35$ sur $8$ bits.\\
-\begin{itemize}
+<ul>
 </li>
 <li> Cherchons l'écriture binaire sur $8$ bits de $35$.\\
 \begin{comment}
@@ -633,7 +631,8 @@ Pour le vérifier, posons l'addition $35+(-35)$ :
 \end{tabular}
 \end{center}
  
-\end{itemize}
+</li>
+</ul>
 </li>
 <li> $-35$ sur 2 octets.\\
 \begin{comment}
@@ -657,14 +656,15 @@ En ajoutant $1$ : $\base{1000\ 1110}$. Donc l'écriture binaire de $-114$ est $\
  
 
 !!! tip " "[Méthode : convertir un binaire &laquo; négatif &raquo; en décimal]
-\begin{itemize}
+<ul>
 </li>
 <li> Tenir compte du  (ou déterminer le) nombre $n$ de bits utilisés en binaire.
 </li>
 <li> Convertir le nombre binaire en décimal &laquo; comme si c'était un nombre positif &raquo; pour obtenir un nombre $d$
 </li>
 <li> Le nombre décimal recherché est $d-2^n$.
-\end{itemize}
+</li>
+</ul>
  
 
 ???+ example "Exemple"
@@ -676,7 +676,7 @@ Déterminer le nombre décimal correspondant
 \vspace{5cm }
 \end{comment}
     ???+ done "Réponse"
-\begin{itemize}
+<ul>
 </li>
 <li> $\base{1011}$ correspond à $11$ en décimal.
 </li>
@@ -691,13 +691,14 @@ Déterminer le nombre décimal correspondant
  {\tiny 1 } & 0 & 0 & 0 & 0
 \end{tabular}
 \end{center}
-\end{itemize}
+</li>
+</ul>
  
 </li>
 <li> au binaire négatif $\base{1010\ 1111}$ codé sur 8 bits.\\
  
     ???+ done "Réponse"
-\begin{itemize}
+<ul>
 </li>
 <li> $\base{1010\ 1111}$ correspond à $175$ en décimal.
 </li>
@@ -712,7 +713,8 @@ Déterminer le nombre décimal correspondant
  {\tiny 1 } & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 
 \end{tabular}
 \end{center}
-\end{itemize}
+</li>
+</ul>
  
 </li>
 </ol>
@@ -731,7 +733,7 @@ Les entiers qui peuvent donc être écrit en binaire sur 8 bits sont les entiers
  
 
 \begin{obj}
-\begin{itemize}
+<ul>
 </li>
 <li> Connaître le vocabulaire : bit, octet, bytes, bit de poids fort, bit de poids faible, complément à 1, complément à 2, dépassement de capacités
 </li>
@@ -748,5 +750,6 @@ Les entiers qui peuvent donc être écrit en binaire sur 8 bits sont les entiers
 <li> Savoir calculer l'intervalle des entiers relatifs qui peuvent être codés sur $n$ bits
 </li>
 <li> Savoir poser une addition d'entiers relatifs écrits en binaires.
-\end{itemize}
+</li>
+</ul>
 \end{obj}
