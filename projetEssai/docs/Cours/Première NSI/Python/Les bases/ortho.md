@@ -47,6 +47,11 @@ print("Hello") # affiche Hello, puis effectue un retour à la ligne
 print(3+5) # affiche 8, puis effectue un retour à la ligne
 print(3+5,"hello") # affiche 8 hello (notez l'espace !!), puis effectue un retour à la ligne
 ```
+<div>
+
+{{ IDEv('Python_base_code/ortho_01', MAX = 1000) }}
+
+</div>
 
 !!! warning "Très important"
 
@@ -75,6 +80,9 @@ print(3+5,"hello") # affiche 8 hello (notez l'espace !!), puis effectue un retou
 		Plus généralement, ```range(a,b)``` est une (sorte) de liste à $b - a$ éléments commençant à $a$. Elle se termine donc {==**à** $\mathbf{b-1}$==} !
 	
 	Il est possible d'utiliser la fonction ```range``` avec trois arguments : cf [ici](AFAIRE)
+
+
+{{ IDEv('Python_base_code/ortho_02', MAX = 1000) }}
 
 !!! tip "Bilan"
 

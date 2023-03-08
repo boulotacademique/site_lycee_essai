@@ -17,9 +17,11 @@
 !!! info "Utilisation"
     - Pour affecter une valeur à une variable, on utilise ```=```. Par exemple, ```x = 2``` ou ```firstname = "Anakin"```.
     - Pour afficher le contenu d'une variable, on utilise ```print()``` (mais pas de ""). Par exemple, ```print(x)```.
-    - Pour afficher du texte et le contenu d'une variable,on peut utiliser la virgule ```print("Je m'appelle",firstname)``` ou utiliser la concaténation de chaînes de caractères ```print("Je m'appelle " + str(firstname)) ``` 
+    - Pour afficher du texte et le contenu d'une variable,on peut utiliser la virgule ```print("Je m'appelle",firstname)``` ou utiliser la concaténation de chaînes de caractères ```print("Je m'appelle " + str(firstname)) ```
 
-??? warning "Déclarer avant d'utiliser"
+{{ IDEv('Python_base_code/variables_01', MAX = 1000) }}
+
+???- warning "Déclarer avant d'utiliser"
     Avant d'utiliser une variable, elle doit être déclarée (i.e. une valeur a été affetée à une variable) ou être un paramètre d'une fonction.
 
     Par exemple:
@@ -45,6 +47,8 @@
 
     Cela déclanche une erreur ```NameError: name 'd' is not defined```
     </div>
+
+    {{ IDEv('Python_base_code/variables_02', MAX = 1000) }}
 
 !!! info "Type d'une variable"
     Une valeur enregistrée dans une variable possède un type, c'est aussi le type de cette variable.
@@ -79,7 +83,7 @@ Il y a aussi **le reste d'une division euclidienne** de $a$ par $b$, avec l'opé
 
 En ce qui concerne **la puissance**, il faut utiliser ```**```. Par exemple, pour $5^3$ on écrit ```5**3```.
 
-???- tip "Une propriété importante"
+!!! info "Une propriété importante"
 
     Afin de savoir si un entier $a$ est dans la table de multiplication d'un autre entier $b$ (i.e. si **$a$ un multiple de $b$**), il suffit de vérifier que le reste de la division euclidienne de $a$ par $b$ vaut 0 !
 
@@ -93,6 +97,8 @@ En ce qui concerne **la puissance**, il faut utiliser ```**```. Par exemple, pou
         
         - $a$ est **un nombre pair**, c'est-à-dire un multiple de $2$, si et seulement si ```a % 2``` vaut 0 ;
         - $a$ est **un nombre impair**, c'est-à-dire $a$ n'est pas un multiple de $2$, si et seulement si ```a % 2``` vaut 1 ;
+
+{{ IDEv('Python_base_code/variables_03', MAX = 1000) }}
 
 !!! info "Les comparaisons"
 
@@ -125,6 +131,8 @@ Il existe aussi des comparaisons !
     Par exemple, ```"BAC" < "aab" < "aba" < "b" ``` 
 
     Par exemple, ```"100" < "9" ``` !!
+
+{{ IDEv('Python_base_code/variables_04', MAX = 1000) }}
 
 #### Sur les listes
 

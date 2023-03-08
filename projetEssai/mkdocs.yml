@@ -140,13 +140,29 @@ markdown_extensions:
 plugins:
     - search
     - macros
-    # - exclude:
-    #     glob:
-    #         - "c01*.md"
+    - exclude:
+        glob:
+            - "*.py"
 #     - mkdocs-jupyter:
 #         include_source: true
 
 nav:
+    - "":
+        - "Cours/c01.md"
+        - "Cours/Première NSI/c01.md"
+        - "Cours/Première NSI/Accueil/c01.md"
+        - "Cours/Première NSI/Codage/Au programme/Le son/c01.md"
+        - "Cours/Première NSI/Codage/Au programme/Les flottants suite/c01.md"
+        - "Cours/Première NSI/Codage/Au programme/Les images/c01.md"
+        - "Cours/Première NSI/Codage/Les bases/Hexadécimal/c01.md"
+        - "Cours/Première STI2D/c01.md"
+        - "Cours/Première générale/c01.md"
+        - "Cours/Seconde/c01.md"
+        - "Cours/Terminale STI2D/c01.md"
+        - "Cours/Terminale générale/Derivation_et_convexite/01_Fonction_derivable.md"
+        - "Cours/Terminale générale/Esp_ortho/Esp_ortho_prog/ortho_esp_dem.md"
+        - "my_theme_customizations/pyodide-mkdocs/end_REM.md"
+        - "my_theme_customizations/pyodide-mkdocs/start_REM.md"
     - Accueil: "index.md"
     #- Seconde: "Cours/Seconde/c01.md"
     - Première NSI: 
