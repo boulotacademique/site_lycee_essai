@@ -1,0 +1,4233 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Lycée">
+      
+      
+        <link rel="canonical" href="https://boulotacademique.github.io/site_lycee_essai/Cours/Premi%C3%A8re%20NSI/Python/Les%20bases/str/">
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Chaine de caractères - Maths et NSI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css">
+<!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.asm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
+<script src="../../../../../pyodide-mkdocs/interpreter.js"></script> 
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../Style/extra.css">
+    
+      <link rel="stylesheet" href="../../../../../Style/print.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+<link rel="stylesheet" href="../../../../../pyodide-mkdocs/pyoditeur.css">
+<link rel="stylesheet" href="../../../../../qcm/qcm.css">
+
+
+<input id="ace_palette" autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor" type="checkbox"></input>
+
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#les_chaines_de_caracteres_str" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../../../.." title="Maths et NSI" class="md-header__button md-logo" aria-label="Maths et NSI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Maths et NSI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chaine de caractères
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Basculer en mode sombre"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Basculer en mode sombre" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Basculer en mode clair"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Basculer en mode clair" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/boulotacademique/site_lycee_essai" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../c01/" class="md-tabs__link">
+        
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../.." class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Pr%C3%A9sentation/c01/" class="md-tabs__link md-tabs__link--active">
+        Première NSI
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/index_term_G/" class="md-tabs__link">
+        Terminale générale
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../Labo%20de%20math/c01/" class="md-tabs__link">
+        Labo de math
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Maths et NSI" class="md-nav__button md-logo" aria-label="Maths et NSI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Maths et NSI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/boulotacademique/site_lycee_essai" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Accueil/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Codage/Au%20programme/Le%20son/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Codage/Au%20programme/Les%20flottants%20suite/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Codage/Au%20programme/Les%20images/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Codage/Les%20bases/Hexad%C3%A9cimal/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20STI2D/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20g%C3%A9n%C3%A9rale/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Seconde/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20STI2D/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/01_Fonction_derivable/" class="md-nav__link">
+        Fonction dérivable
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Esp_ortho/Esp_ortho_prog/ortho_esp_dem/" class="md-nav__link">
+        Démonstration au programme
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../my_theme_customizations/pyodide-mkdocs/end_REM/" class="md-nav__link">
+        end REM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../my_theme_customizations/pyodide-mkdocs/start_REM/" class="md-nav__link">
+        start REM
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Première NSI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Première NSI" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Première NSI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Pr%C3%A9sentation/c01/" class="md-nav__link">
+        Présentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_1" type="checkbox" id="__nav_3_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1">
+          Les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ortho/" class="md-nav__link">
+        Bien écrire en python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variables/" class="md-nav__link">
+        Variables, opérations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../in_out/" class="md-nav__link">
+        print/input
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Chaine de caractères
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Chaine de caractères
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#les_indices" class="md-nav__link">
+    Les indices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concatenation_et_repetition" class="md-nav__link">
+    Concaténation et répétition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulation_des_chaines_de_caracteres" class="md-nav__link">
+    Manipulation des chaînes de caractères
+  </a>
+  
+    <nav class="md-nav" aria-label="Manipulation des chaînes de caractères">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parcourir_une_chaine_de_caracteres" class="md-nav__link">
+    Parcourir une chaîne de caractères
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifier_une_chaine_de_caracteres" class="md-nav__link">
+    Modifier une chaîne de caractères
+  </a>
+  
+    <nav class="md-nav" aria-label="Modifier une chaîne de caractères">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inserer_une_chaine" class="md-nav__link">
+    Insérer une chaîne
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifier_un_caractere" class="md-nav__link">
+    Modifier un caractère
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creer_une_chaine" class="md-nav__link">
+    Créer une chaîne
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diverses_methodes_autour_des_str" class="md-nav__link">
+    Diverses méthodes autour des str
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice_a_maitriser" class="md-nav__link">
+    Exercice à maitriser
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../for/" class="md-nav__link">
+        La boucle for
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../if_elif/" class="md-nav__link">
+        if, elif et les conditions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../while/" class="md-nav__link">
+        La boucle while
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list/" class="md-nav__link">
+        Les listes (I)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fct/" class="md-nav__link">
+        Les fonctions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2">
+          Les structures
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Les structures" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Les structures
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structures/list02/" class="md-nav__link">
+        Les listes (II)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structures/matrice/" class="md-nav__link">
+        Les matrices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structures/dico/" class="md-nav__link">
+        Les dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Codage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Codage" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Codage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_1" type="checkbox" id="__nav_3_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_1">
+          Les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Codage/Les%20bases/Binaire/01_codage_entier/" class="md-nav__link">
+        Codage d'entier
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Terminale générale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminale générale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale générale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/index_term_G/" class="md-nav__link">
+        Accueil TGEN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Dérivation, convexité, primitive
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dérivation, convexité, primitive" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Dérivation, convexité, primitive
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_1" type="checkbox" id="__nav_4_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_1">
+          Dérivation : les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dérivation : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Dérivation : les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/01_deriv_base_tgte/" class="md-nav__link">
+        Dérivation et tangente
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/02_deriv_base_formule/" class="md-nav__link">
+        Dérivation et formule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/03_deriv_utilis/" class="md-nav__link">
+        Utilisation de la dérivée
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/04_deriv_composee/" class="md-nav__link">
+        Composée de fonctions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/05_Convexite/" class="md-nav__link">
+        Convexité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2" type="checkbox" id="__nav_4_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_2">
+          Dérivation : au programme
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dérivation : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Dérivation : au programme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/D%C3%A9rivation_au_prog/Deriv_A_retenir/" class="md-nav__link">
+        A retenir
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/D%C3%A9rivation_au_prog/Nbre_d%C3%A9riv%C3%A9/" class="md-nav__link">
+        Nombre dérivé
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/D%C3%A9rivation_au_prog/conv_ineg/" class="md-nav__link">
+        Convexité et inégalités
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/D%C3%A9rivation_au_prog/dem_prog/" class="md-nav__link">
+        Démonstration au programme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/D%C3%A9rivation_en_plus/D%C3%A9rivation_best/" class="md-nav__link">
+        Dérivation : vers le supérieur
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Suite et récurrence
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Suite et récurrence" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Suite et récurrence
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1" type="checkbox" id="__nav_4_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_1">
+          Suites : les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Suites : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Suites : les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Suites_et_recurrence/Suites_bases/01_Rappels_sur_les_suites/" class="md-nav__link">
+        Rappel sur les suites
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Suites_et_recurrence/Suites_bases/02_Suites_et_python/" class="md-nav__link">
+        Suites et python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Suites_et_recurrence/Suites_bases/03_Suite_et_sens_de_variations/" class="md-nav__link">
+        Suites et sens de variations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Suites_et_recurrence/Suites_bases/04_Suites_aritmetiques/" class="md-nav__link">
+        Suites arithmétiques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Suites_et_recurrence/Suites_bases/05_Suites_geometrique/" class="md-nav__link">
+        Suites géométriques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Suites_et_recurrence/Suites_bases/06_Raisonnement_par_recurrence/" class="md-nav__link">
+        Raisonnement par récurrence
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Suites_et_recurrence/Suites_bases/07_majoree_minoree_bornee/" class="md-nav__link">
+        Suite majorée, minorée, bornée
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_2" type="checkbox" id="__nav_4_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_2">
+          Suites : au programme
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Suites : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Suites : au programme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Suites_et_recurrence/Suites_prog/SuiteRec_A_retenir/" class="md-nav__link">
+        A retenir
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Loi binomiale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Loi binomiale" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Loi binomiale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_1" type="checkbox" id="__nav_4_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_1">
+          Probabilité : les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Probabilité : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Probabilité : les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Loi_binomiale/binom_bases/01_binom_rappel/" class="md-nav__link">
+        Rappel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Loi_binomiale/binom_bases/02_succ_ep_ind/" class="md-nav__link">
+        Succession d'épreuves
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Loi_binomiale/binom_bases/03_loi_binom/" class="md-nav__link">
+        Loi binomiale
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_2" type="checkbox" id="__nav_4_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_2">
+          Probabilités : au programme
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Probabilités : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Probabilités : au programme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Loi_binomiale/binom_prog/binom_A_Retenir/" class="md-nav__link">
+        A retenir
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Loi_binomiale/binom_prog/binom_dem_prog/" class="md-nav__link">
+        Démonstration au programme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Limite de suite
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Limite de suite" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Limite de suite
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_1" type="checkbox" id="__nav_4_5_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5_1">
+          Limite de suites : les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Limite de suites : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Limite de suites : les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Limite_de_suite/Limite_suite_base/01_Limite_d_une_suite/" class="md-nav__link">
+        Limite d'une suite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Limite_de_suite/Limite_suite_base/02_Limite_de_la_suite_qn/" class="md-nav__link">
+        Limite de la suite $q^n$
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Limite_de_suite/Limite_suite_base/03_Theoremes_d_operation/" class="md-nav__link">
+        Limite et opérations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Limite_de_suite/Limite_suite_base/04_th_comp/" class="md-nav__link">
+        Limite et comparaison
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_2" type="checkbox" id="__nav_4_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5_2">
+          Limite de suites : au programme
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Limite de suites : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Limite de suites : au programme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Limite_de_suite/lim_suite_prog/lim_suite_A_retenir/" class="md-nav__link">
+        A retenir
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Limite_de_suite/lim_suite_prog/lim_suite_dem_prog/" class="md-nav__link">
+        Démonstrations au programme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Limite_de_suite/Limite_de_suite_en_plus/limite_suite_best/" class="md-nav__link">
+        Limite de suites : vers le supérieur
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6">
+          Vecteur de l'espace
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Vecteur de l'espace" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Vecteur de l'espace
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_1" type="checkbox" id="__nav_4_6_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6_1">
+          Vecteur : les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Vecteur : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Vecteur : les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Vecteur_esp/vect_esp_base/persp_cav/" class="md-nav__link">
+        Perspective cavalière
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Vecteur_esp/vect_esp_base/dte_et_plan/" class="md-nav__link">
+        Droite et plan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Vecteur_esp/vect_esp_base/Vect_esp/" class="md-nav__link">
+        Vecteur de l'espace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Vecteur_esp/vect_esp_base/rep_esp/" class="md-nav__link">
+        Repère de l'espace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Vecteur_esp/vect_esp_base/Eq_param/" class="md-nav__link">
+        Equation paramétrique d'une droite
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_2" type="checkbox" id="__nav_4_6_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6_2">
+          Vecteur : au programme
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Vecteur : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Vecteur : au programme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Vecteur_esp/vect_esp_prog/vect_esp_A_Retenir/" class="md-nav__link">
+        A retenir
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7">
+          Limite de fonction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Limite de fonction" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Limite de fonction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7_1" type="checkbox" id="__nav_4_7_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7_1">
+          Limite de fct : les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Limite de fct : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Limite de fct : les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Limite_fct/limite_fct_base/01_lim_fct_infinie/" class="md-nav__link">
+        Limite vers l'infini
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Limite_fct/limite_fct_base/02_lim_fct_reel/" class="md-nav__link">
+        Limite au voisinage d'un réel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Limite_fct/limite_fct_base/03_lim_fct_op/" class="md-nav__link">
+        Limite et opérations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Limite_fct/limite_fct_base/04_lim_fct_comp/" class="md-nav__link">
+        Limite et comparaison
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7_2" type="checkbox" id="__nav_4_7_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7_2">
+          Limite de fct : au programme
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Limite de fct : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Limite de fct : au programme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Limite_fct/limite_fct_prog/lim_fct_A_Retenir/" class="md-nav__link">
+        A retenir
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Limite_fct/limite_fct_prog/lim_fct_dem/" class="md-nav__link">
+        Démonstration au programme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_8" type="checkbox" id="__nav_4_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_8">
+          Orthogonalité dans l'espace
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Orthogonalité dans l'espace" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_8">
+          <span class="md-nav__icon md-icon"></span>
+          Orthogonalité dans l'espace
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_8_1" type="checkbox" id="__nav_4_8_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_8_1">
+          Orthogonalité : les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Orthogonalité : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          Orthogonalité : les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Esp_ortho/Esp_ortho_base/01_Rappel_pdt_scal_plan/" class="md-nav__link">
+        Rappel : produit scalaire dans le plan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Esp_ortho/Esp_ortho_base/02_pdt_scal_esp/" class="md-nav__link">
+        Espace et produit scalaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Esp_ortho/Esp_ortho_base/03_vect_normal/" class="md-nav__link">
+        Vecteur normal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Esp_ortho/Esp_ortho_base/04_eq_cart_plan/" class="md-nav__link">
+        Equation cartésienne, distance
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_8_2" type="checkbox" id="__nav_4_8_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_8_2">
+          Orthogonalité : au programme
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Orthogonalité : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_8_2">
+          <span class="md-nav__icon md-icon"></span>
+          Orthogonalité : au programme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Esp_ortho/Esp_ortho_prog/Esp_ortho_A_Retenir/" class="md-nav__link">
+        A retenir
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Esp_ortho/Esp_ortho_prog/Plan_med/" class="md-nav__link">
+        Plan médiateur
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9" type="checkbox" id="__nav_4_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_9">
+          Continuité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Continuité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Continuité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9_1" type="checkbox" id="__nav_4_9_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_9_1">
+          Continuité : les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Continuité : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_9_1">
+          <span class="md-nav__icon md-icon"></span>
+          Continuité : les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Continuite/Continuite_base/01_cont_fct/" class="md-nav__link">
+        Fonction continue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Continuite/Continuite_base/02_TVI/" class="md-nav__link">
+        Théorème des valeurs intermédiaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9_2" type="checkbox" id="__nav_4_9_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_9_2">
+          Continuité : au programme
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Continuité : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Continuité : au programme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Continuite/Continuite_prog/Continuite_A_Retenir/" class="md-nav__link">
+        A retenir
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_10" type="checkbox" id="__nav_4_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_10">
+          Logarithme népérien
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Logarithme népérien" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_10">
+          <span class="md-nav__icon md-icon"></span>
+          Logarithme népérien
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_10_1" type="checkbox" id="__nav_4_10_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_10_1">
+          Log népérien : les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Log népérien : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_10_1">
+          <span class="md-nav__icon md-icon"></span>
+          Log népérien : les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Log/Log_base/01_fct_ln/" class="md-nav__link">
+        La fonction ln
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Log/Log_base/02_etude_fct/" class="md-nav__link">
+        Etude de la fonction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_10_2" type="checkbox" id="__nav_4_10_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_10_2">
+          Log népérien : au programme
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Log népérien : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_10_2">
+          <span class="md-nav__icon md-icon"></span>
+          Log népérien : au programme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Log/Log_prog/Log_A_Retenir/" class="md-nav__link">
+        A retenir
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_11" type="checkbox" id="__nav_4_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_11">
+          Equation différentielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Equation différentielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_11">
+          <span class="md-nav__icon md-icon"></span>
+          Equation différentielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_11_1" type="checkbox" id="__nav_4_11_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_11_1">
+          Eq diff : les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Eq diff : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          Eq diff : les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Eq_diff/Eq_diff_base/01_Def/" class="md-nav__link">
+        Définition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Eq_diff/Eq_diff_base/02_ED1/" class="md-nav__link">
+        Eq. diff. premier ordre
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_11_2" type="checkbox" id="__nav_4_11_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_11_2">
+          Eq diff : au programme
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Eq diff : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          Eq diff : au programme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Eq_diff/Eq_diff_prog/Dem_prog/" class="md-nav__link">
+        Démonstration au programme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_12" type="checkbox" id="__nav_4_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_12">
+          Ensemble
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ensemble" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_12">
+          <span class="md-nav__icon md-icon"></span>
+          Ensemble
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_12_1" type="checkbox" id="__nav_4_12_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_12_1">
+          Ensemble : les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ensemble : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_12_1">
+          <span class="md-nav__icon md-icon"></span>
+          Ensemble : les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Ensemble/Ensemble_base/01_ensemble/" class="md-nav__link">
+        Ensemble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Ensemble/Ensemble_base/02_denom/" class="md-nav__link">
+        Dénombrement
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_12_2" type="checkbox" id="__nav_4_12_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_12_2">
+          Ensemble : Au programme
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ensemble : Au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_12_2">
+          <span class="md-nav__icon md-icon"></span>
+          Ensemble : Au programme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Ensemble/Ensemble_prog/Dem_prog/" class="md-nav__link">
+        Démonstration au programme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_13" type="checkbox" id="__nav_4_13" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_13">
+          Calcul intégral
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Calcul intégral" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_13">
+          <span class="md-nav__icon md-icon"></span>
+          Calcul intégral
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_13_1" type="checkbox" id="__nav_4_13_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_13_1">
+          Intégrale : les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Intégrale : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_13_1">
+          <span class="md-nav__icon md-icon"></span>
+          Intégrale : les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Calcul_integral/Cal_int_base/01_fct_pos/" class="md-nav__link">
+        Fonctions positives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Calcul_integral/Cal_int_base/02_fct_pos_prim/" class="md-nav__link">
+        Fonctions positives et primitives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Calcul_integral/Cal_int_base/03_fct_qcq/" class="md-nav__link">
+        Fonctions quelconques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Calcul_integral/Cal_int_base/04_int_pp/" class="md-nav__link">
+        Intégration par parties
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Calcul_integral/Cal_int_base/05_calc_aire/" class="md-nav__link">
+        Calcul d'aire
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_13_2" type="checkbox" id="__nav_4_13_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_13_2">
+          Intégrale : au programme
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Intégrale : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_13_2">
+          <span class="md-nav__icon md-icon"></span>
+          Intégrale : au programme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Calcul_integral/Cal_int_prog/Dem_prog/" class="md-nav__link">
+        Démonstration au programme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_14" type="checkbox" id="__nav_4_14" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_14">
+          Somme de variable aléatoire
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Somme de variable aléatoire" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_14">
+          <span class="md-nav__icon md-icon"></span>
+          Somme de variable aléatoire
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_14_1" type="checkbox" id="__nav_4_14_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_14_1">
+          Variable aléatoire : les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Variable aléatoire : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_14_1">
+          <span class="md-nav__icon md-icon"></span>
+          Variable aléatoire : les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Somme_VAR/VAR_base/01_var/" class="md-nav__link">
+        Tout le cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_15" type="checkbox" id="__nav_4_15" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_15">
+          Fonction trigonomértique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fonction trigonomértique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_15">
+          <span class="md-nav__icon md-icon"></span>
+          Fonction trigonomértique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_15_1" type="checkbox" id="__nav_4_15_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_15_1">
+          Fct trigo : les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fct trigo : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_15_1">
+          <span class="md-nav__icon md-icon"></span>
+          Fct trigo : les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Fct_trigo/Fct_trigo_base/01_trigo/" class="md-nav__link">
+        Tout le cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_16" type="checkbox" id="__nav_4_16" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_16">
+          Loi des grands nombres
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Loi des grands nombres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_16">
+          <span class="md-nav__icon md-icon"></span>
+          Loi des grands nombres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_16_1" type="checkbox" id="__nav_4_16_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_16_1">
+          Lois des grands nombres : les bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lois des grands nombres : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_16_1">
+          <span class="md-nav__icon md-icon"></span>
+          Lois des grands nombres : les bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Loi_gds_nombres/Gds_nbres_bases/01_gds_nbres/" class="md-nav__link">
+        Tout le cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Labo de math
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Labo de math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Labo de math
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Labo%20de%20math/c01/" class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Labo%20de%20math/Liaison_lyc%C3%A9e_sup/sup%C3%A9rieur/" class="md-nav__link">
+        Liaison lycée/supérieur
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#les_indices" class="md-nav__link">
+    Les indices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concatenation_et_repetition" class="md-nav__link">
+    Concaténation et répétition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulation_des_chaines_de_caracteres" class="md-nav__link">
+    Manipulation des chaînes de caractères
+  </a>
+  
+    <nav class="md-nav" aria-label="Manipulation des chaînes de caractères">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parcourir_une_chaine_de_caracteres" class="md-nav__link">
+    Parcourir une chaîne de caractères
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifier_une_chaine_de_caracteres" class="md-nav__link">
+    Modifier une chaîne de caractères
+  </a>
+  
+    <nav class="md-nav" aria-label="Modifier une chaîne de caractères">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inserer_une_chaine" class="md-nav__link">
+    Insérer une chaîne
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifier_un_caractere" class="md-nav__link">
+    Modifier un caractère
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creer_une_chaine" class="md-nav__link">
+    Créer une chaîne
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diverses_methodes_autour_des_str" class="md-nav__link">
+    Diverses méthodes autour des str
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice_a_maitriser" class="md-nav__link">
+    Exercice à maitriser
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+  <a href="https://github.com/boulotacademique/site_lycee_essai/projetEssai/docs/Cours/Première NSI/Python/Les bases/str.md" title="Editer cette page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="les_chaines_de_caracteres_str">Les chaînes de caractères : str<a class="headerlink" href="#les_chaines_de_caracteres_str" title="Permanent link"></a></h1>
+<h2 id="les_indices">Les indices<a class="headerlink" href="#les_indices" title="Permanent link"></a></h2>
+<div class="admonition info">
+<p class="admonition-title">A retenir</p>
+<p>Une chaîne de caractère est de type <code>str</code>. Elle peut être écrite </p>
+<ul>
+<li>entre des guillemets simples <code>'Bonjour !'</code></li>
+<li>entre des guillemets doubles <code>"Bonjour !"</code></li>
+<li>entre des guillemets doubles répétés trois fois <code>"""Bonjour !"""</code></li>
+</ul>
+<p>Dans une chaîne, chaque caractère est repéré par un indice !</p>
+<div class = "Center_seul">
+
+<table>
+<thead>
+<tr>
+<th align="center">chaîne :</th>
+<th align="center">B</th>
+<th align="center">o</th>
+<th align="center">n</th>
+<th align="center">j</th>
+<th align="center">o</th>
+<th align="center">u</th>
+<th align="center">r</th>
+<th align="center"></th>
+<th align="center">!</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Indice :</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+<td align="center">6</td>
+<td align="center">7</td>
+<td align="center">8</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>En python, les indices commencent toujours <strong>à 0 !</strong></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">A connaître</p>
+<p>Dans tout ce qui suit, on utilise l'exemple suivant :</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour !&quot;</span>
+</code></pre></div>
+
+<ul>
+<li>connaitre le nombre de caractères ou la longueur d'une chaîne : <code>len(mot)</code> correspond à <code>9</code></li>
+<li>accéder à un caractère à partir de son indice : <code>mot[2]</code> correspond à <code>n</code></li>
+<li>accéder aux derniers caractères : <code>mot[len(mot)-1]</code> correspond à <code>!</code>. On peut aussi écrire <code>mot[-1]</code></li>
+<li>accéder à une tranche : <code>mot[2:5]</code> correspond aux caractères dont les indices sont supérieurs ou égaux à 2 et <strong>strictement inférieur</strong> à 5. Ainsi, <code>mot[2:5]</code> correspond à <code>njo</code></li>
+<li>accéder à une tranche contenant les premiers caractères : <code>mot[0:5]</code> correspond aux 5 premiers caractères (dont les indices sont supérieurs ou égaux à 0 et <strong>strictement inférieur</strong> à 5). Ainsi, <code>mot[0:5]</code> correspond à <code>Bonjo</code>. On peut aussi écrire <code>mot[:5]</code></li>
+<li>accéder à une tranche depuis le dernier caractère : <code>mot[len(mot)-3:len(mot)]</code> correspond aux 3 derniers caractères. Ainsi, <code>mot[len(mot)-3:len(mot)]</code> correspond à <code>r !</code>. On peut aussi écrire <code>``mot[-3:]</code></li>
+<li>accéder à toute la chaîne sauf les derniers : <code>mot[0:len(mot)-5]</code> correspond à toute la chaîne <strong>sauf</strong> les 5 derniers caractères. Ainsi, <code>mot[0:len(mot) - 5]</code> correspond à <code>Bonj</code>. On peut aussi écrire <code>mot[:-5]</code></li>
+</ul>
+</div>
+<p>En résumé:</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour !&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">))</span> <span class="c1"># affiche 9</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># affiche n</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># affiche !</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># affiche !</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche njo</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche Bonjo</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche Bonjo</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)])</span> <span class="c1"># affiche r !</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:])</span> <span class="c1"># affiche r !</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche Bonj</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[:</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche Bonj</span>
+</code></pre></div>
+
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Le nombre de caractères <strong>ne correspond pas</strong> au dernier indice ! En effet, le dernier indice est toujours <code>len(...) - 1</code>.</p>
+</div>
+<h2 id="concatenation_et_repetition">Concaténation et répétition<a class="headerlink" href="#concatenation_et_repetition" title="Permanent link"></a></h2>
+<div class="admonition tip">
+<p class="admonition-title">A connaître</p>
+<p>Dans tout ce qui suit, on utilise l'exemple suivant :</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour !&quot;</span>
+<span class="n">mot_suiv</span> <span class="o">=</span> <span class="s2">&quot;Tout le monde !&quot;</span>
+</code></pre></div>
+
+<ul>
+<li>La <span class = "Gras" id = "concat">concaténation</span> consiste à coller plusieurs chaines de caractères. Cela s'effectue à l'aide du symbole <code>+</code>. Ainsi, <code>mot + " " + mot_suiv</code> correspond à <code>Bonjour ! Tout le monde !</code></li>
+<li>Pour <span class = "Gras" id = "repet_str">répéter une chaine</span>: <code>mot*2</code> correspond à <code>'Bonjour !Bonjour !'</code> et <code>"a"*5</code> correpsond à <code>aaaaa</code></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Il faut avoir uniquement des <code>str</code> pour une concaténation ! Par exemple <del class="critic"> <code>"Bonjour</code>+1000 </del> déclenche une erreur : <code>TypeError: can only concatenate str (not "int") to str</code></p>
+</div>
+<details class="- tip"><summary>Transtypage</summary><p>Il est possible de transformer presque tous les type en <code>str</code> en utilisant la fonction <code>str</code> !</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="c1"># Affiche Bonjour 1000</span>
+</code></pre></div>
+
+</details>
+<h2 id="manipulation_des_chaines_de_caracteres">Manipulation des chaînes de caractères<a class="headerlink" href="#manipulation_des_chaines_de_caracteres" title="Permanent link"></a></h2>
+<h3 id="parcourir_une_chaine_de_caracteres">Parcourir une chaîne de caractères<a class="headerlink" href="#parcourir_une_chaine_de_caracteres" title="Permanent link"></a></h3>
+<div class="admonition info">
+<p class="admonition-title">Parcourir une chaîne de caractères avec des indices</p>
+<p>Pour récupérer les caractères d'une chaîne les uns après les autres <strong>avec les indices</strong>, il faut utiliser une boucle <code>for</code>, la fonction <code>range</code> et la longueur de la chaîne.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour !&quot;</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)):</span>
+    <span class="n">car</span> <span class="o">=</span> <span class="n">mot</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
+</code></pre></div>
+
+<p>affiche</p>
+<div class = "Center_ss_bd" style="width:10%;">
+
+<div class="highlight"><pre><span></span><code><span class="n">B</span>
+<span class="n">o</span>
+<span class="n">n</span>
+<span class="n">j</span>
+<span class="n">o</span>
+<span class="n">u</span>
+<span class="n">r</span>
+
+<span class="err">!</span>
+</code></pre></div>
+
+</div>
+
+</div>
+<p>Il est aussi possible de ne pas passer par la variable <code>car</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour !&quot;</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+</code></pre></div>
+
+<details class="- tip"><summary>Parcourir une chaîne de caractères sans les indices</summary><p>Pour récupérer les caractères d'une chaîne les uns après les autres <strong>sans les indices</strong>, il faut seulement utiliser une boucle <code>`for</code>. Il est alors plus difficile d'accéder aux indices !</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour !&quot;</span>
+<span class="k">for</span> <span class="n">car</span> <span class="ow">in</span> <span class="n">mot</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
+</code></pre></div>
+
+<p>affiche</p>
+<div class = "Center_ss_bd" style="width:10%;">
+
+<div class="highlight"><pre><span></span><code><span class="n">B</span>
+<span class="n">o</span>
+<span class="n">n</span>
+<span class="n">j</span>
+<span class="n">o</span>
+<span class="n">u</span>
+<span class="n">r</span>
+
+<span class="err">!</span>
+</code></pre></div>
+
+</div>
+
+</details>
+<h2 id="modifier_une_chaine_de_caracteres">Modifier une chaîne de caractères<a class="headerlink" href="#modifier_une_chaine_de_caracteres" title="Permanent link"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Une chaîne de caractères (type <code>str</code>) est un <a href="AFAIRE"><strong>non mutable</strong></a> (ou <strong>immuable</strong>). Il est donc impossible de faire, par exemple, <del class="critic"> <code>mot[2] = "r"</code> </del> !!</p>
+</div>
+<h3 id="inserer_une_chaine">Insérer une chaîne<a class="headerlink" href="#inserer_une_chaine" title="Permanent link"></a></h3>
+<p>Pour modifier une chaîne de caractères, il est possible d'utiliser les tranches. <!--Lire et bien travailler les exemples suivants afin de bien les comprendre.--></p>
+<div class="admonition note">
+<p class="admonition-title">Insérer une chaîne</p>
+<p>On souhaite insérer une chaîne de caractères (éventuellement un caractère seul) dans une chaîne. Par exemple, on souhaite insérer <code>bon</code> entre le <code>n</code> et l'espace dans la chaîne suivante.</p>
+<div class = "Center_seul">
+
+<table>
+<thead>
+<tr>
+<th align="center">chaîne :</th>
+<th align="center">B</th>
+<th align="center">o</th>
+<th align="center">n</th>
+<th align="center"></th>
+<th align="center">!</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Indice :</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>Il faut <a href="#concat">concaténer</a> les chaînes suivantes :</p>
+<ul>
+<li>la chaîne dont les indices commencent à 0 et sont <strong>strictement inférieur à 3</strong> (Faite attention à ce dernier point !!!)</li>
+<li>la chaîne que l'on souhaite insérer</li>
+<li>la chaîne dont les indices vont de l'indice 3 jusqu'au dernier</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bon !&quot;</span>
+<span class="n">a_inserer</span> <span class="o">=</span> <span class="s2">&quot;bon&quot;</span>
+<span class="n">mot2</span> <span class="o">=</span> <span class="n">mot</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">a_inserer</span> <span class="o">+</span> <span class="n">mot</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot2</span><span class="p">)</span> <span class="c1"># affiche Bonbon !</span>
+</code></pre></div>
+
+</div>
+<details class="- tip"><summary>Ajouter une chaîne à la fin</summary><p>Il est inutile d'utiliser des tranches ! Il suffit de <a href="#concat">concaténer</a> à droite.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="n">mot2</span> <span class="o">=</span> <span class="s2">&quot; world !&quot;</span>
+<span class="n">mot3</span> <span class="o">=</span> <span class="n">mot</span> <span class="o">+</span> <span class="n">mot2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot3</span><span class="p">)</span> <span class="c1"># affiche Hello world !</span>
+</code></pre></div>
+
+</details>
+<details class="- tip"><summary>Ajouter une chaîne au début</summary><p>Il est inutile d'utiliser des tranches ! Il suffit de <a href="#concat">concaténer</a> à gauche.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Jedi&quot;</span>
+<span class="n">mot2</span> <span class="o">=</span> <span class="s2">&quot;Maitre &quot;</span>
+<span class="n">mot3</span> <span class="o">=</span> <span class="n">mot2</span> <span class="o">+</span> <span class="n">mot</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot3</span><span class="p">)</span> <span class="c1"># affiche Maitre Jedi</span>
+</code></pre></div>
+
+</details>
+<h3 id="modifier_un_caractere">Modifier un caractère<a class="headerlink" href="#modifier_un_caractere" title="Permanent link"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Modifier <strong>un</strong> caractère</p>
+<p>On souhaite modifier un caractère d'une chaîne. Par exemple, on souhaite corriger <code>chebal</code>.</p>
+<div class = "Center_seul">
+
+<table>
+<thead>
+<tr>
+<th align="center">chaîne :</th>
+<th align="center">c</th>
+<th align="center">h</th>
+<th align="center">e</th>
+<th align="center">b</th>
+<th align="center">a</th>
+<th align="center">l</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Indice :</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>Il faut alors <a href="#concat">concaténer</a> les chaînes suivantes :</p>
+<ul>
+<li>la tranche du début jusqu'au caractère à remplacer</li>
+<li>le caractère de remplacement</li>
+<li>la tranche commençant <strong>après</strong> le caractère à remplacer</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;chebal&quot;</span>
+<span class="n">mot2</span> <span class="o">=</span> <span class="n">mot</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;v&quot;</span> <span class="o">+</span> <span class="n">mot</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span> <span class="c1"># voyez la différence avec l&#39;insertion de la méthode précédente</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot2</span><span class="p">)</span> <span class="c1"># affiche cheval !</span>
+</code></pre></div>
+
+</div>
+<h3 id="creer_une_chaine">Créer une chaîne<a class="headerlink" href="#creer_une_chaine" title="Permanent link"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Créer une chaîne de caractères</p>
+<p>Il suffit de commencer avec une chaîne vide <code>""</code> et d'accumuler les chaînes de caractères voulues.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot_cache</span><span class="o">=</span><span class="s2">&quot;SeehccraeCt&quot;</span>
+<span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot_cache</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">idx</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># On ne prend ques les indices pairs</span>
+        <span class="n">mot</span> <span class="o">=</span> <span class="n">mot</span> <span class="o">+</span> <span class="n">mot_cache</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>  <span class="c1"># On accumule les caractères à la fin (à droite)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="c1"># affiche Secret</span>
+</code></pre></div>
+
+</div>
+<details class="- tip"><summary>Accumuler au début</summary><p>Il est possible d'accumuler au début (à gauche)</p>
+<div class="highlight"><pre><span></span><code><span class="n">mot_cache</span><span class="o">=</span><span class="s2">&quot;SeehccraeCt&quot;</span>
+<span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot_cache</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">idx</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># On ne prend ques les indices impairs</span>
+        <span class="n">mot</span> <span class="o">=</span> <span class="n">mot_cache</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">+</span> <span class="n">mot</span>  <span class="c1"># On accumule les caractères au début (à gauche)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="c1"># affiche Cache</span>
+</code></pre></div>
+
+</details>
+<h2 id="diverses_methodes_autour_des_str">Diverses méthodes autour des str<a class="headerlink" href="#diverses_methodes_autour_des_str" title="Permanent link"></a></h2>
+<div class="admonition - tip">
+<p class="admonition-title">A apprendre en faisant les exercices</p>
+<ul>
+<li><code>''</code> ou <code>""</code> (sans espace) : la chaîne vide.</li>
+<li>les caractères spéciaux : <code>\n</code> pour le retour à la ligne, <code>\t</code> pour une tabulation</li>
+<li><code>'rrr' in C</code> : retourne <code>True</code> si <code>'rrr'</code> est dans <code>C</code>, <code>False</code> sinon (cf <a href="AFFAIRE">les booléens</a> ).</li>
+<li><code>C.index(x)</code> : retourne l'indice de l'élément <code>x</code> (si il est dans <code>C</code>, sinon il y a un message d'erreur)</li>
+<li><code>C.find(x)</code>: retourne l'indice de l'élément <code>x</code> (si il est dans <code>C</code>, sinon il retourne -1)</li>
+<li><code>C.count(x)</code> : retourne le nombre d’occurrences  de l'élément <code>x</code>. </li>
+<li><code>C1 == C2</code> : retourne <code>True</code> si <code>C1</code> et <code>C2</code> sont identiques, <code>False</code> sinon. \textbf{Attention à la casse (majuscule, minuscule) !}</li>
+</ul>
+</div>
+<h2 id="exercice_a_maitriser">Exercice à maitriser<a class="headerlink" href="#exercice_a_maitriser" title="Permanent link"></a></h2>
+<details class="- question"><summary>Exercice</summary><p>Demander un prénom et un age et dire bonjour à l'utilisateur en lui donnantson age.</p>
+<p>Pour une personne de 20 ans qui s'appelle Luke, l'affichage attendu est <code>Bonjour Luke. Vous avez 20 ans.</code></p>
+<details class="- done"><summary>Réponse</summary><div class="highlight"><pre><span></span><code><span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Votre nom ? &quot;</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Votre age ? &quot;</span><span class="p">))</span>
+<span class="n">reponse</span> <span class="o">=</span> <span class="s2">&quot;Bonjour &quot;</span> <span class="o">+</span> <span class="n">nom</span> <span class="o">+</span> <span class="s2">&quot;. Vous avez &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; ans.&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reponse</span><span class="p">)</span>
+</code></pre></div>
+
+</details>
+</details>
+<details class="- question"><summary>Exercice</summary><p>A l'aide des tranches, compléter le programme suivant pour obtenir une chaîne où l'alphabet aura été remis dans le bonne ordre.</p>
+<div class="highlight"><pre><span></span><code><span class="n">melange</span> <span class="o">=</span> <span class="s2">&quot;QRSTABCDELMNUVFGHIJKWXYZOP&quot;</span>
+<span class="n">alphabet</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># compléter avec des tranches</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alphabet</span><span class="p">)</span> <span class="c1"># affiche ABCEFGHIJKLMNOPQRSTUVWXYZ</span>
+</code></pre></div>
+
+<details class="- done"><summary>Réponse</summary><div class="highlight"><pre><span></span><code><span class="n">melange</span> <span class="o">=</span> <span class="s2">&quot;QRSTABCDELMNUVFGHIJKWXYZOP&quot;</span>
+<span class="n">alphabet</span> <span class="o">=</span> <span class="n">melange</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">9</span><span class="p">]</span> <span class="o">+</span> <span class="n">melange</span><span class="p">[</span><span class="mi">14</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span> <span class="o">+</span> <span class="n">melange</span><span class="p">[</span><span class="mi">9</span><span class="p">:</span><span class="mi">12</span><span class="p">]</span> <span class="o">+</span> <span class="n">melange</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="n">melange</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">melange</span><span class="p">[</span><span class="mi">12</span><span class="p">:</span><span class="mi">14</span><span class="p">]</span> <span class="o">+</span> <span class="n">melange</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">24</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alphabet</span><span class="p">)</span> <span class="c1"># affiche ABCEFGHIJKLMNOPQRSTUVWXYZ</span>
+</code></pre></div>
+
+</details>
+</details>
+<details class="- question"><summary>Exercice</summary><p><code>mots="La revolution informatique"</code>. En utilisant les méthodes précédentes :</p>
+<ol>
+<li>
+<p>Donner le code qui affiche :</p>
+<ol>
+<li>le nombre de caractère de <code>mots</code>;</li>
+<li>True si le mot <code>"la"</code> est dans <code>mots</code>, <code>False</code> sinon.</li>
+<li>la position de la première lettre <code>r</code> ; Et (plus difficile) la seconde ;</li>
+</ol>
+</li>
+<li>
+<p>Donner le code :</p>
+<ol>
+<li>qui affiche les deux premiers caractères de <code>mots</code></li>
+<li>qui extrait le mot "revolution" de <code>mots</code></li>
+<li>qui teste le résultat précédent : c'est-à-dire qui renvoie <code>'True'</code> si le code a bien trouvé le mot <code>revolution</code> (<code>False</code> sinon)</li>
+<li>en utilisant des tranches de la chaîne de caractères \verb<code>mots</code>, affecter à la variable <code>modif</code> la chaîne de caractère <code>"informatique revolution La"</code>.</li>
+</ol>
+</li>
+</ol>
+<details class="- done"><summary>Réponse</summary><div class="highlight"><pre><span></span><code><span class="c1"># Quesiton 1.a.</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mots</span><span class="p">))</span>
+<span class="c1"># Quesiton 1.b.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;la&#39;</span> <span class="ow">in</span> <span class="n">mots</span><span class="p">)</span>
+<span class="c1"># Question 1.c.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mots</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">))</span>
+<span class="n">premier</span> <span class="o">=</span> <span class="n">mots</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">premier</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">))</span>
+<span class="c1"># Question 2.a.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mots</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span> 
+<span class="c1">#ou</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mots</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1"># Question 2.b.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mots</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">13</span><span class="p">])</span>
+<span class="c1"># Question 2.c.</span>
+<span class="n">essai</span> <span class="o">=</span> <span class="n">mots</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">13</span><span class="p">]</span>
+<span class="n">motCherche</span> <span class="o">=</span> <span class="s2">&quot;revolution&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">essai</span> <span class="o">==</span> <span class="n">motCherche</span><span class="p">)</span>
+<span class="c1"># Question 2.d.</span>
+<span class="n">modif</span> <span class="o">=</span> <span class="n">mots</span><span class="p">[</span><span class="mi">14</span><span class="p">:]</span> <span class="o">+</span> <span class="n">mots</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">14</span><span class="p">]</span> <span class="o">+</span> <span class="n">mots</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">modif</span><span class="p">)</span>
+</code></pre></div>
+
+</details>
+</details>
+<details class="- question"><summary>Exercice</summary><p>Pour un spectacle, le tarif normal est de 25 &#8364; et le tarif réduit est de 18 &#8364;. Écrire un programme qui demande à l'utilisateur le nombre de place total, puis le nombre de place à tarif réduit. Afficher alors le prix à payer.</p>
+<p>Par exemple, pour 10 places dont 3 au tarif réduit, il faut afficher :</p>
+<p><code>Le coût total est de 229 euros.</code></p>
+<details class="- done"><summary>Réponse</summary><div class="highlight"><pre><span></span><code><span class="n">nbPlace</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Nombre de place ? &quot;</span><span class="p">))</span>
+<span class="n">nbReduit</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Nombre de tarif réduit ? &quot;</span><span class="p">))</span>
+<span class="n">cout</span><span class="o">=</span><span class="n">nbReduit</span><span class="o">*</span><span class="mi">18</span><span class="o">+</span><span class="p">(</span><span class="n">nbPlace</span><span class="o">-</span><span class="n">nbReduit</span><span class="p">)</span><span class="o">*</span><span class="mi">25</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le coût total est de&quot;</span><span class="p">,</span><span class="n">cout</span><span class="p">,</span><span class="s2">&quot;euros&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le coût total est de &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">cout</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; euros&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le coût total est de </span><span class="si">{}</span><span class="s2"> euros&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cout</span><span class="p">))</span>
+</code></pre></div>
+
+</details>
+</details>
+<details class="- question"><summary>Exercice</summary><p>Pour cette exercice, <strong>revoir le cours sur <code>if</code> et <code>elif</code></strong>.</p>
+<p>Écrire un programme qui compte le nombre de voyelles dans la phrase : </p>
+<p>&laquo; Cela n'a aucun sens d'embaucher des gens intelligents et de leur dire quoi faire; Nous embauchons des gens intelligents pour qu'ils puissent nous dire quoi faire.&raquo; <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<div class="highlight"><pre><span></span><code><span class="n">phrase</span> <span class="o">=</span> <span class="s2">&quot;Cela n&#39;a aucun sens d&#39;embaucher des gens intelligents et de leur dire quoi faire; Nous embauchons des gens intelligents pour qu&#39;ils puissent nous dire quoi faire.&quot;</span>
+<span class="c1"># A COMPLETER</span>
+</code></pre></div>
+
+<details class="- done"><summary>Réponse</summary><div class="highlight"><pre><span></span><code><span class="n">phrase</span> <span class="o">=</span> <span class="s2">&quot;Cela n&#39;a aucun sens d&#39;embaucher des gens intelligents et de leur dire quoi faire; Nous embauchons des gens intelligents pour qu&#39;ils puissent nous dire quoi faire.&quot;</span>
+<span class="n">compt</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">phrase</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">elt</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
+        <span class="n">compt</span> <span class="o">=</span> <span class="n">compt</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">elt</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span>
+        <span class="n">compt</span> <span class="o">=</span> <span class="n">compt</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">elt</span> <span class="o">==</span> <span class="s1">&#39;i&#39;</span><span class="p">:</span>
+        <span class="n">compt</span> <span class="o">=</span> <span class="n">compt</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">elt</span> <span class="o">==</span> <span class="s1">&#39;o&#39;</span><span class="p">:</span>
+        <span class="n">compt</span> <span class="o">=</span> <span class="n">compt</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">elt</span> <span class="o">==</span> <span class="s1">&#39;u&#39;</span><span class="p">:</span>
+        <span class="n">compt</span> <span class="o">=</span> <span class="n">compt</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">compt</span><span class="p">)</span>
+</code></pre></div>
+
+</details>
+</details>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Steve Jobs&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+                
+<script src="../../../../../pyodide-mkdocs/ide.js"></script> 
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Retour en haut de la page
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+      
+        
+        <a href="../in_out/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: print/input" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              print/input
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../for/" class="md-footer__link md-footer__link--next" aria-label="Suivant: La boucle for" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              La boucle for
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "header.autohide"], "search": "../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
+</html>
