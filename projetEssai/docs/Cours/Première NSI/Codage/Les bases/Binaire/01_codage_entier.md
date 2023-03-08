@@ -116,11 +116,11 @@
 
         <div class="Center_txt">    
 
-        | Dividende 	| 12008	|  1200 	| 120 	| 12 	|	1  |
+        | Dividende  | 12008 |  1200  | 120  | 12  | 1  |
         |:---:|:---:|:---:|:---:|:---:|:---:|
-        | Diviseur 	| 10            | 10 			| 10 	| 10	| 	10 |
-        | Quotient 	| 1200   | 120 			| 12 	|  1	|	0  |
-        | Reste 		| 8 			| 0 			| 0 	|  2 	|	1  |
+        | Diviseur  | 10            | 10    | 10  | 10 |  10 |
+        | Quotient  | 1200   | 120    | 12  |  1 | 0  |
+        | Reste   | 8    | 0    | 0  |  2  | 1  |
 
         </div>
     </li>
@@ -151,11 +151,11 @@
     ???+ done "Réponse"
         <div class="Center_txt Pas_gris">
 
-        |Dividende 	| 114	|  57	| 28 	| 14	|	7	| 3	| 1 |
+        |Dividende  | 114 |  57 | 28  | 14 | 7 | 3 | 1 |
         |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-        |Diviseur 	| 2		| 2		| 2 	| 2		| 	2	| 2	| 2 |
-        |Quotient 	| 57	| 28	| 14 	|  7	|	3	| 1	| 0 |
-        |Reste 		| 0		| 1		| 0 	|  0 	|	1	| 1	| 1 |
+        |Diviseur  | 2  | 2  | 2  | 2  |  2 | 2 | 2 |
+        |Quotient  | 57 | 28 | 14  |  7 | 3 | 1 | 0 |
+        |Reste   | 0  | 1  | 0  |  0  | 1 | 1 | 1 |
 
         D'où $114=0 + 1 \times 2 + 0 \times 2^2 + 0\times 2^3+ 1 \times 2^4 + 1 \times 2^5 + 1 \times 2^6$.
         Donc $114 = \base{1110010}$.
@@ -168,10 +168,10 @@
 
     <div class="Center_txt Pas_gris">
 
- 	| | 108	| 108 | 44 | ?	| ? | ? | ? | ? |
+    1| | 108 | 108 | 44 | ? | ? | ? | ? | ? |
     |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
     |Puissance de $2$ | $2^7 = 128$ | $2^6=64$ | $2^5=32$ | $2^4=16$ | $2^3=8$ | $2^2=4$ | $2^1=2$ | $2^0=1$ |
-    |Différence | $108-128<0$ | $108-64=44$	| ? | ? | ? | ? | ? | ? | 
+    |Différence | $108-128<0$ | $108-64=44$ | ? | ? | ? | ? | ? | ? | 
     |Coefficient | 0 | 1 | ? | ? | ? | ? | ? | ? |
  
     </div>
@@ -180,10 +180,10 @@
 
         <div class="Center_txt Pas_gris">
 
-        | | 108	| 108 | 44 | 12	| 12 | 4 | 0 | 0 |
+        | | 108 | 108 | 44 | 12 | 12 | 4 | 0 | 0 |
         |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
         |Puissance de $2$ | $2^7 = 128$ | $2^6=64$ | $2^5=32$ | $2^4=16$ | $2^3=8$ | $2^2=4$ | $2^1=2$ | $2^0=1$ |
-        |Différence | $108-128<0$ | $108-64=44$	| $44-32=12$ | $12-16<0$ | $12-8=4$ | $4-4=0$ | $0-2<0$ | $0-1<0$ | 
+        |Différence | $108-128<0$ | $108-64=44$ | $44-32=12$ | $12-16<0$ | $12-8=4$ | $4-4=0$ | $0-2<0$ | $0-1<0$ | 
         |Coefficient | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
     
         </div>
@@ -199,7 +199,7 @@
 
         <div class="Center_txt Pas_gris">
 
-        | |	173	  | 173   | 45   | 45    | 13  | 13  | 5   | 1   | 1 |
+        | | 173   | 173   | 45   | 45    | 13  | 13  | 5   | 1   | 1 |
         |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
         |Puissance de $2$  | $2^8=256$ | $2^7 = 128$ | $2^6=64$  | $2^5=32$  | $2^4=16$ | $2^3=8$ | $2^2=4$ | $2^1=2$ | $2^0=1$ |
         |Différence    | $173-256<0$ | $173-128=45$ | $45-64<0$  | $45-32=13$  | $13-16<0$ | $13-8=5$ | $5-4=1$ | $1-2<0$  | $1-1=0$ |
@@ -257,99 +257,99 @@
         <li> Si le nombre est pair, l'écriture binaire se termine par un $0$. Sinon, il se termine par un $1$.</li>
         </ol>
     
+
+### Un autre exemple indispensable : la base 16
+
+#### Conversion d'un décimal vers un hexadécimal.
+
+!!! info "Ecriture en base 16"
+    Tout entier $a \geq 0$ s'écrit de façon unique sous la forme : 
     
-    </li>
+    \[
+    a = a_0 + a_1 \times 16 + a_2 \times 16^2 + \ldots + a_n \times 16^n  = \sum_{i=0}^{n} a_i \times 16^i
+    \]
+
+    où $n$ est un entier et les $a_i$ sont des entiers compris entre 0 et 16-1=15 et $a_n \neq 0$.
+
+    Il faut donc 16 &laquo; chiffres &raquo; : $0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F$. Donc le chiffre $\left( A\right)_{16}$ vaut 10, $\left( B\right)_{16}$ vaut 11, $\ldots \left( F\right)_{16}$ vaut 15 !
+ 
+
+???+ tip "Autre méthode"
+    La deuxième méthode nécessite de connaître les puissances de 16.
+
+???+ example "Exemple"
+    <ol>
+    <li> En utilisant la première méthode, donner l'écriture hexadécimale de $35\,782$.</li>
+    <li> En utilisant la première méthode, donner l'écriture hexadécimale de $42\,971$.</li>
+    </ol>
+
+    
+    ???+ done "Réponse"
+
+        <ol>
+        <li>
+        
+        <div class="Center_txt Pas_gris">
+
+        | Dividende | $35\,782$ | $2\,236$ | 139 | 8 |
+        |:---:|:---:|:---:|:---:|:---:|
+        |Diviseur  | 16 | 16 | 16 | 16 |
+        |Quotient  | $2\,236$ | 139   | 8  |  0 |
+        |Reste   | 6    | 12(=$C$)   | 11(=$B$) |  8 |        
+
+        </div>
+
+        D'où $35\,782=6 + 12\times 16 + 11 \times 16^2 + 8\times 16^3$.
+        
+        Donc $35\,782 = \base[16]{8BC6}$
+
+        </li>
+        <li>
+        
+
+        <div class="Center_txt Pas_gris">
+
+        |Dividende | $42\,971$ | $2\,685$ | 167  | 10 |
+        |:---:|:---:|:---:|:---:|:---:|
+        |Diviseur  | 16   | 16   | 16  | 16 |
+        |Quotient  | $2\,685$ | 167   | 10  |  0 |
+        |Reste   | 11(=$B$)  | 13(=$D$)  | 7  |  10(=$A$) |
+        
+        </div>
+
+
+        D'où $42\,971=11 + 13\times 16 + 7 \times 16^2 + 10\times 16^3$.
+        
+        Donc $35\,782 = \base[16]{A7DB}$
+
+        </li>
+        </ol>
+
+
+#### Conversion d'un hexadécimal vers un décimal.
+
+!!! tip "Hexadécimal en décimal"
+    Il suffit d'utiliser la définition ou l'algorithme d'Hörner (cf exercices).
+ 
+
+???+ example "Exemple"
+    Donner l'écriture décimale des nombres suivants écrits en hexadécimal :
+    <ol>
+    <li> $\base[16]{A2}$</li>
+    <li> $\base[16]{10}$</li>
+    <li> $\base[16]{C10}$</li>
+    <li> $\base[16]{ABCD}$</li>
     </ol>
  
-
-
-
-
-
-### Un autre exemple indispensable : la base 16 }
-
-\subsubsection{Conversion d'un décimal vers un hexadécimal.}
-!!! info " "
-Tout entier $a \geq 0$ s'écrit de façon unique sous la forme : 
-\[ a = a_0 + a_1 \times 16 + a_2 \times 16^2 + \ldots + a_n \times 16^n  = \sum_{i=0}^{n} a_i \times 16^i \]
-où $n$ est un entier et les $a_i$ sont des entiers compris entre 0 et 16-1=15 et $a_n \neq 0$.\\
-Il faut donc 16 &laquo; chiffres &raquo; : $0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F$. Donc le chiffre $\left( A\right)_{16}$ vaut 10, $\left( B\right)_{16}$ vaut 11, \ldots $\left( F\right)_{16}$ vaut 15 !
- 
-
-\begin{att}
-La deuxième méthode nécessite de connaître les puissances de 16.
-\end{att}
-
-
-???+ example "Exemple"
-<ol>
-<li> En utilisant la première méthode, donner l'écriture hexadécimale de $184$.
- 
     ???+ done "Réponse"
-\begin{center}
-\begin{tabular}{|>{\centering}m{3cm}|*{4}{>{\centering}m{1cm}|}}
-\hline
-Dividende 	& $\np{35782}$	& $\np{2236}$	& 139 	& 8 \tabularnewline
-\hline
-Diviseur 	& 16			& 16			& 16 	& 16 \tabularnewline
-\hline
-Quotient 	& $\np{2236}$	& 139			& 8 	&  0 \tabularnewline
-\hline
-Reste 		& 6				& 12(=$C$)			& 11(=$B$)	&  8 \tabularnewline
-\hline
-\end{tabular}
-\end{center}
-D'où $\np{35782}=6 + 12\times 16 + 11 \times 16^2 + 8\times 16^3$.\\
-Donc $\np{35782} = \base[16]{8BC6}$
- 
-</li>
-<li> En utilisant la première méthode, donner l'écriture hexadécimale de $\np{42971}$.\\
+        <ol>
+        <li> $\base[16]{A2}$ = 162</li>
+        <li> $\base[16]{10}$ = 16</li>
+        <li> $\base[16]{C10}$ = $3\,088$</li>
+        <li> $\base[16]{ABCD}$ = $43\,981$</li>
+        </ol>
 
- 
-    ???+ done "Réponse"
-\begin{center}
-\begin{tabular}{|>{\centering}m{3cm}|*{4}{>{\centering}m{1cm}|}}
-\hline
-Dividende 	& $\np{42971}$	& $\np{2685}$	& 167 	& 10 \tabularnewline
-\hline
-Diviseur 	& 16			& 16			& 16 	& 16 \tabularnewline
-\hline
-Quotient 	& $\np{2685}$	& 167			& 10 	&  0 \tabularnewline
-\hline
-Reste 		& 11(=$B$)		& 13(=$D$)		& 7		&  10(=$A$) \tabularnewline
-\hline
-\end{tabular}
-\end{center}
-D'où $\np{42971}=11 + 13\times 16 + 7 \times 16^2 + 10\times 16^3$.\\
-Donc $\np{35782} = \base[16]{A7DB}$
- 
-</li>
-</ol>
- 
-
-\subsubsection{Conversion d'un hexadécimal vers un décimal.}
-
-!!! tip " "
-Il suffit d'utiliser la définition ou l'algorithme d'Hörner (cf exercices).
- 
-
-???+ example "Exemple"
-Donner l'écriture décimale des nombres suivants écrits en hexadécimal :
-<ol>{4}
-</li>
-<li> $\base[16]{A2}$ \qquad \ans{162}
-</li>
-<li> $\base[16]{10}$ \qquad \ans{16}
-</li>
-<li> $\base[16]{C10}$ \qquad \ans{$\np{3088}$}
-</li>
-<li> $\base[16]{ABCD}$ \qquad \ans{$\np{43981}$}
-</li>
-</ol>
- 
-
-\vspace{-0.5cm}
-\subsubsection{Passage entre l'hexadécimal et le binaire}
+#### Passage entre l'hexadécimal et le binaire}
 
 !!! tip " "[Méthode: du binaire vers l'hexadécimal]
 À partir du nombre binaire, il suffit de former des paquets de 4 chiffres (en commençant par le bit de poids faible) et de convertir chaque paquet en hexadécimal.
@@ -369,11 +369,11 @@ Donc $\base{10\ 1011} = \left( 2B\right)_{16}$.
 \begin{center}
 \begin{tabular}{|m{3cm}|c|c|}
 \hline
-Binaire 		& 10 	& 1011	\\
+Binaire   | 10  | 1011 \\
 \hline
-Pseudo décimal	& 2  	& 11	\\
+Pseudo décimal | 2   | 11 \\
 \hline
-Hexadécimal		& 2		& B\\
+Hexadécimal  | 2  | B\\
 \hline
 \end{tabular}
 \end{center}
@@ -537,42 +537,42 @@ On obtient donc :
 \begin{center}
 \begin{tabular}{|>{\centering}m{2cm}|*{5}{>{\centering}m{0.5cm}}|>{\centering}m{2cm}|}
 \hline
-\multirow{2}{*}{\begin{minipage}{1.8cm}\begin{center} Entiers\\ naturels \end{center}\end{minipage}} & \multicolumn{5}{>{\centering}m{4cm}|}{\begin{minipage}{\linewidth}\begin{center}Binaire\end{center}\end{minipage}} & \multirow{2}{*}{\begin{minipage}{1.8cm}\begin{center} Entiers\\ relatifs \end{center}\end{minipage}} \tabularnewline
-   	&  	&	&	&	&	&		\tabularnewline
+\multirow{2}{*}{\begin{minipage}{1.8cm}\begin{center} Entiers\\ naturels \end{center}\end{minipage}} & \multicolumn{5}{>{\centering}m{4cm}|}{\begin{minipage}{\linewidth}\begin{center}Binaire\end{center}\end{minipage}} & \multirow{2}{*}{\begin{minipage}{1.8cm}\begin{center} Entiers\\ relatifs \end{center}\end{minipage}} |
+    &   & & & & &  |
 \hline
-16	& 1 & 1 & 0 & 0 & 0 &  		\tabularnewline
+16 & 1 & 1 & 0 & 0 & 0 &    |
 \hline
-15	&  	& 1 & 1 & 1 & 1	& -1	\tabularnewline
+15 &   & 1 & 1 & 1 & 1 & -1 |
 \hline
-14	&  	& 1 & 1 & 1 & 0	& -2	\tabularnewline
+14 &   & 1 & 1 & 1 & 0 & -2 |
 \hline
-13	&  	& 1 & 1 & 0 & 1	& -3	\tabularnewline
+13 &   & 1 & 1 & 0 & 1 & -3 |
 \hline
-12	&  	& 1 & 1 & 0 & 0	& -4	\tabularnewline
+12 &   & 1 & 1 & 0 & 0 & -4 |
 \hline
-11	&  	& 1 & 0 & 1 & 1	& -5	\tabularnewline
+11 &   & 1 & 0 & 1 & 1 & -5 |
 \hline
-10	&  	& 1 & 0 & 1 & 0	& -6	\tabularnewline
+10 &   & 1 & 0 & 1 & 0 & -6 |
 \hline
-9	&  	& 1 & 0 & 0 & 1	& -7	\tabularnewline
+9 &   & 1 & 0 & 0 & 1 & -7 |
 \hline
-8	&  	& 1 & 0 & 0 & 0	& -8	\tabularnewline
+8 &   & 1 & 0 & 0 & 0 & -8 |
 \hline
-7	&  	& 0 & 1 & 1 & 1	& 7		\tabularnewline
+7 &   & 0 & 1 & 1 & 1 & 7  |
 \hline
-6	&  	& 0 & 1 & 1 & 0	& 6		\tabularnewline
+6 &   & 0 & 1 & 1 & 0 & 6  |
 \hline
-5	&  	& 0 & 1 & 0 & 1	& 5		\tabularnewline
+5 &   & 0 & 1 & 0 & 1 & 5  |
 \hline
-4	&  	& 0 & 1 & 0 & 0	& 4		\tabularnewline
+4 &   & 0 & 1 & 0 & 0 & 4  |
 \hline
-3	&  	& 0 & 0 & 1 & 1	& 2		\tabularnewline
+3 &   & 0 & 0 & 1 & 1 & 2  |
 \hline
-2	&  	& 0 & 0 & 1 & 0	& 2		\tabularnewline
+2 &   & 0 & 0 & 1 & 0 & 2  |
 \hline
-1	&  	& 0 & 0 & 0 & 1	& 1		\tabularnewline
+1 &   & 0 & 0 & 0 & 1 & 1  |
 \hline
-0	&  	& 0 & 0 & 0 & 0	& 0		\tabularnewline
+0 &   & 0 & 0 & 0 & 0 & 0  |
 \hline
 \end{tabular}
 \end{center}
@@ -626,10 +626,10 @@ Donc l'écriture binaire de $-35$ est $\base{1101\ 1101}$.\\
 Pour le vérifier, posons l'addition $35+(-35)$ :
 \begin{center}
 \begin{tabular}{*{9}{c}}
-  			& 0 & 0 & 1 & 0 & 0 & 0 & 1 & 1 \\
-+ 			& 1 & 1 & 0 & 1 & 1 & 1 & 0 & 1 \\
+     & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 1 \\
++    & 1 & 1 & 0 & 1 & 1 & 1 & 0 & 1 \\
 \hline
- {\tiny 1 }	& 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 
+ {\tiny 1 } & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 
 \end{tabular}
 \end{center}
  
@@ -685,10 +685,10 @@ Déterminer le nombre décimal correspondant
 <li> Vérifions en calculant $5+(-5)$
 \begin{center}
 \begin{tabular}{*{5}{c}}
-  			& 0 & 1 & 0 & 1\\
-+ 			& 1 & 0 & 1 & 1 \\
+     & 0 & 1 & 0 & 1\\
++    & 1 & 0 & 1 & 1 \\
 \hline
- {\tiny 1 }	& 0 & 0 & 0 & 0
+ {\tiny 1 } & 0 & 0 & 0 & 0
 \end{tabular}
 \end{center}
 \end{itemize}
@@ -706,10 +706,10 @@ Déterminer le nombre décimal correspondant
 <li> Vérifions en calculant $81+(-81)$
 \begin{center}
 \begin{tabular}{*{9}{c}}
-  			& 0 & 1 & 0 & 1 & 0 & 0 & 0 & 1 \\
-+ 			& 1 & 0 & 1 & 0 & 1 & 1 & 1 & 1 \\
+     & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 1 \\
++    & 1 & 0 & 1 & 0 & 1 & 1 & 1 & 1 \\
 \hline
- {\tiny 1 }	& 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 
+ {\tiny 1 } & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 
 \end{tabular}
 \end{center}
 \end{itemize}
