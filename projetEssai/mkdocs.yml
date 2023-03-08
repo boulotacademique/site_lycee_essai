@@ -3,12 +3,12 @@ site_author: Lycée
 site_url: https://boulotacademique.github.io/site_lycee_essai/
 
 repo_url: https://github.com/boulotacademique/site_lycee_essai
-edit_uri: ''
+edit_uri: projetEssai/docs
 
 docs_dir : docs
 
 # Repository
-use_directory_urls : false
+#use_directory_urls : false
 # Copyright
 
 
@@ -34,6 +34,7 @@ use_directory_urls : false
 theme:
     name: 'material'
     language: 'fr'
+    custom_dir: docs/my_theme_customizations/
     features:
         - tabs
         - instant
@@ -136,8 +137,12 @@ markdown_extensions:
         baselevel: 1
         separator: "_"
 
-# plugins:
-#     # - search
+plugins:
+    - search
+    - macros
+    # - exclude:
+    #     glob:
+    #         - "c01*.md"
 #     - mkdocs-jupyter:
 #         include_source: true
 
