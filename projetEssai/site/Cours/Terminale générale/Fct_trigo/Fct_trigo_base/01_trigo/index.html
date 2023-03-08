@@ -12,14 +12,8 @@
       
         <link rel="canonical" href="https://boulotacademique.github.io/site_lycee_essai/Cours/Terminale%20g%C3%A9n%C3%A9rale/Fct_trigo/Fct_trigo_base/01_trigo/">
       
-      
-        <link rel="prev" href="../../../Somme_VAR/VAR_base/01_var/">
-      
-      
-        <link rel="next" href="../../../Loi_gds_nombres/Gds_nbres_bases/01_gds_nbres/">
-      
       <link rel="icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -27,15 +21,30 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.402914a4.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.975780f9.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.2505c338.min.css">
+        
       
       
 
     
     
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css">
+<!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.asm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
+<script src="../../../../../pyodide-mkdocs/interpreter.js"></script> 
+
     
       
         
@@ -57,6 +66,14 @@
     
     
     
+
+<link rel="stylesheet" href="../../../../../pyodide-mkdocs/pyoditeur.css">
+<link rel="stylesheet" href="../../../../../qcm/qcm.css">
+
+
+<input id="ace_palette" autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor" type="checkbox"></input>
+
+
   </head>
   
   
@@ -122,6 +139,8 @@
       <form class="md-header__option" data-md-component="palette">
         
           
+          
+          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Basculer en mode sombre"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Basculer en mode sombre" for="__palette_2" hidden>
@@ -129,6 +148,8 @@
             </label>
           
         
+          
+          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Basculer en mode clair"  type="radio" name="__palette" id="__palette_2">
           
@@ -153,7 +174,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Recherche">
+      <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
@@ -167,7 +188,7 @@
           <div class="md-search-result__meta">
             Initialisation de la recherche
           </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
+          <ol class="md-search-result__list"></ol>
         </div>
       </div>
     </div>
@@ -179,7 +200,7 @@
         <a href="https://github.com/boulotacademique/site_lycee_essai" title="Aller au dépôt" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -198,8 +219,24 @@
           
             
 <nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
-  <div class="md-grid">
+  <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../c01/" class="md-tabs__link">
+        
+      </a>
+    </li>
+  
+
       
         
   
@@ -297,7 +334,7 @@
       <a href="https://github.com/boulotacademique/site_lycee_essai" title="Aller au dépôt" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -306,6 +343,250 @@
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20NSI/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20NSI/Accueil/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Au%20programme/Le%20son/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Au%20programme/Les%20flottants%20suite/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Au%20programme/Les%20images/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Les%20bases/Hexad%C3%A9cimal/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20STI2D/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20g%C3%A9n%C3%A9rale/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Seconde/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20STI2D/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Derivation_et_convexite/01_Fonction_derivable/" class="md-nav__link">
+        Fonction dérivable
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Esp_ortho/Esp_ortho_prog/ortho_esp_dem/" class="md-nav__link">
+        Démonstration au programme
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../my_theme_customizations/pyodide-mkdocs/end_REM/" class="md-nav__link">
+        end REM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../my_theme_customizations/pyodide-mkdocs/start_REM/" class="md-nav__link">
+        start REM
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
       
       
@@ -333,19 +614,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3">
           Première NSI
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2">
+      <nav class="md-nav" aria-label="Première NSI" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Première NSI
         </label>
@@ -374,19 +654,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_2">
           Python
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_2">
+      <nav class="md-nav" aria-label="Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           Python
         </label>
@@ -401,19 +680,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_1" type="checkbox" id="__nav_3_2_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_2_1">
           Les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_2_1">
+      <nav class="md-nav" aria-label="Les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_1">
           <span class="md-nav__icon md-icon"></span>
           Les bases
         </label>
@@ -561,19 +839,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_2_2">
           Les structures
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_2_2">
+      <nav class="md-nav" aria-label="Les structures" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
           <span class="md-nav__icon md-icon"></span>
           Les structures
         </label>
@@ -644,19 +921,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
       
       
-      
-        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_3">
           Codage
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_3">
+      <nav class="md-nav" aria-label="Codage" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Codage
         </label>
@@ -671,19 +947,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_1" type="checkbox" id="__nav_3_3_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_3_1">
           Les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_3_1">
+      <nav class="md-nav" aria-label="Les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_1">
           <span class="md-nav__icon md-icon"></span>
           Les bases
         </label>
@@ -736,19 +1011,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
-      
-        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4">
           Terminale générale
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3">
+      <nav class="md-nav" aria-label="Terminale générale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Terminale générale
         </label>
@@ -777,19 +1051,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_2">
           Dérivation, convexité, primitive
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_2">
+      <nav class="md-nav" aria-label="Dérivation, convexité, primitive" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
           Dérivation, convexité, primitive
         </label>
@@ -804,19 +1077,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_1" type="checkbox" id="__nav_4_2_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_2_1">
           Dérivation : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_2_1">
+      <nav class="md-nav" aria-label="Dérivation : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_1">
           <span class="md-nav__icon md-icon"></span>
           Dérivation : les bases
         </label>
@@ -908,19 +1180,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2" type="checkbox" id="__nav_4_2_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_2_2">
           Dérivation : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_2_2">
+      <nav class="md-nav" aria-label="Dérivation : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_2">
           <span class="md-nav__icon md-icon"></span>
           Dérivation : au programme
         </label>
@@ -1019,19 +1290,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_3">
           Suite et récurrence
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_3">
+      <nav class="md-nav" aria-label="Suite et récurrence" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           Suite et récurrence
         </label>
@@ -1046,19 +1316,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1" type="checkbox" id="__nav_4_3_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_3_1">
           Suites : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_3_1">
+      <nav class="md-nav" aria-label="Suites : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_1">
           <span class="md-nav__icon md-icon"></span>
           Suites : les bases
         </label>
@@ -1178,19 +1447,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_2" type="checkbox" id="__nav_4_3_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_3_2">
           Suites : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_3_2">
+      <nav class="md-nav" aria-label="Suites : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_2">
           <span class="md-nav__icon md-icon"></span>
           Suites : au programme
         </label>
@@ -1233,19 +1501,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_4">
           Loi binomiale
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_4">
+      <nav class="md-nav" aria-label="Loi binomiale" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
           <span class="md-nav__icon md-icon"></span>
           Loi binomiale
         </label>
@@ -1260,19 +1527,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_1" type="checkbox" id="__nav_4_4_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_4_1">
           Probabilité : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_4_1">
+      <nav class="md-nav" aria-label="Probabilité : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_4_1">
           <span class="md-nav__icon md-icon"></span>
           Probabilité : les bases
         </label>
@@ -1336,19 +1602,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_2" type="checkbox" id="__nav_4_4_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_4_2">
           Probabilités : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_4_2">
+      <nav class="md-nav" aria-label="Probabilités : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_4_2">
           <span class="md-nav__icon md-icon"></span>
           Probabilités : au programme
         </label>
@@ -1405,19 +1670,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_5">
           Limite de suite
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5">
+      <nav class="md-nav" aria-label="Limite de suite" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
           Limite de suite
         </label>
@@ -1432,19 +1696,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_1" type="checkbox" id="__nav_4_5_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_5_1" id="__nav_3_5_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_5_1">
           Limite de suites : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5_1">
+      <nav class="md-nav" aria-label="Limite de suites : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_1">
           <span class="md-nav__icon md-icon"></span>
           Limite de suites : les bases
         </label>
@@ -1522,19 +1785,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_2" type="checkbox" id="__nav_4_5_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_5_2" id="__nav_3_5_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_5_2">
           Limite de suites : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5_2">
+      <nav class="md-nav" aria-label="Limite de suites : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_2">
           <span class="md-nav__icon md-icon"></span>
           Limite de suites : au programme
         </label>
@@ -1605,19 +1867,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_6">
           Vecteur de l'espace
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_6">
+      <nav class="md-nav" aria-label="Vecteur de l'espace" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
           <span class="md-nav__icon md-icon"></span>
           Vecteur de l'espace
         </label>
@@ -1632,19 +1893,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_1" type="checkbox" id="__nav_4_6_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_6_1" id="__nav_3_6_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_6_1">
           Vecteur : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_6_1">
+      <nav class="md-nav" aria-label="Vecteur : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_6_1">
           <span class="md-nav__icon md-icon"></span>
           Vecteur : les bases
         </label>
@@ -1736,19 +1996,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_2" type="checkbox" id="__nav_4_6_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_6_2" id="__nav_3_6_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_6_2">
           Vecteur : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_6_2">
+      <nav class="md-nav" aria-label="Vecteur : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_6_2">
           <span class="md-nav__icon md-icon"></span>
           Vecteur : au programme
         </label>
@@ -1791,19 +2050,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_7">
           Limite de fonction
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_7">
+      <nav class="md-nav" aria-label="Limite de fonction" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
           <span class="md-nav__icon md-icon"></span>
           Limite de fonction
         </label>
@@ -1818,19 +2076,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7_1" type="checkbox" id="__nav_4_7_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_7_1" id="__nav_3_7_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_7_1">
           Limite de fct : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_7_1">
+      <nav class="md-nav" aria-label="Limite de fct : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_7_1">
           <span class="md-nav__icon md-icon"></span>
           Limite de fct : les bases
         </label>
@@ -1908,19 +2165,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7_2" type="checkbox" id="__nav_4_7_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_7_2" id="__nav_3_7_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_7_2">
           Limite de fct : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_7_2">
+      <nav class="md-nav" aria-label="Limite de fct : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_7_2">
           <span class="md-nav__icon md-icon"></span>
           Limite de fct : au programme
         </label>
@@ -1977,19 +2233,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_8" type="checkbox" id="__nav_4_8" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_8">
           Orthogonalité dans l'espace
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_8">
+      <nav class="md-nav" aria-label="Orthogonalité dans l'espace" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_8">
           <span class="md-nav__icon md-icon"></span>
           Orthogonalité dans l'espace
         </label>
@@ -2004,19 +2259,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_8_1" type="checkbox" id="__nav_4_8_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_8_1" id="__nav_3_8_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_8_1">
           Orthogonalité : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_8_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_8_1">
+      <nav class="md-nav" aria-label="Orthogonalité : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_8_1">
           <span class="md-nav__icon md-icon"></span>
           Orthogonalité : les bases
         </label>
@@ -2094,19 +2348,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_8_2" type="checkbox" id="__nav_4_8_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_8_2" id="__nav_3_8_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_8_2">
           Orthogonalité : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_8_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_8_2">
+      <nav class="md-nav" aria-label="Orthogonalité : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_8_2">
           <span class="md-nav__icon md-icon"></span>
           Orthogonalité : au programme
         </label>
@@ -2163,19 +2416,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9" type="checkbox" id="__nav_4_9" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_9">
           Continuité
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_9">
+      <nav class="md-nav" aria-label="Continuité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_9">
           <span class="md-nav__icon md-icon"></span>
           Continuité
         </label>
@@ -2190,19 +2442,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9_1" type="checkbox" id="__nav_4_9_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_9_1" id="__nav_3_9_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_9_1">
           Continuité : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_9_1">
+      <nav class="md-nav" aria-label="Continuité : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_9_1">
           <span class="md-nav__icon md-icon"></span>
           Continuité : les bases
         </label>
@@ -2252,19 +2503,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9_2" type="checkbox" id="__nav_4_9_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_9_2" id="__nav_3_9_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_9_2">
           Continuité : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_9_2">
+      <nav class="md-nav" aria-label="Continuité : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_9_2">
           <span class="md-nav__icon md-icon"></span>
           Continuité : au programme
         </label>
@@ -2307,19 +2557,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_10" type="checkbox" id="__nav_4_10" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_10">
           Logarithme népérien
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_10">
+      <nav class="md-nav" aria-label="Logarithme népérien" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_10">
           <span class="md-nav__icon md-icon"></span>
           Logarithme népérien
         </label>
@@ -2334,19 +2583,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_10_1" type="checkbox" id="__nav_4_10_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_10_1" id="__nav_3_10_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_10_1">
           Log népérien : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_10_1">
+      <nav class="md-nav" aria-label="Log népérien : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_10_1">
           <span class="md-nav__icon md-icon"></span>
           Log népérien : les bases
         </label>
@@ -2396,19 +2644,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_10_2" type="checkbox" id="__nav_4_10_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_10_2" id="__nav_3_10_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_10_2">
           Log népérien : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_10_2">
+      <nav class="md-nav" aria-label="Log népérien : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_10_2">
           <span class="md-nav__icon md-icon"></span>
           Log népérien : au programme
         </label>
@@ -2451,19 +2698,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_11" type="checkbox" id="__nav_4_11" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_11">
           Equation différentielle
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_11">
+      <nav class="md-nav" aria-label="Equation différentielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_11">
           <span class="md-nav__icon md-icon"></span>
           Equation différentielle
         </label>
@@ -2478,19 +2724,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_11_1" type="checkbox" id="__nav_4_11_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_11_1" id="__nav_3_11_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_11_1">
           Eq diff : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_11_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_11_1">
+      <nav class="md-nav" aria-label="Eq diff : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_11_1">
           <span class="md-nav__icon md-icon"></span>
           Eq diff : les bases
         </label>
@@ -2540,19 +2785,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_11_2" type="checkbox" id="__nav_4_11_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_11_2" id="__nav_3_11_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_11_2">
           Eq diff : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_11_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_11_2">
+      <nav class="md-nav" aria-label="Eq diff : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_11_2">
           <span class="md-nav__icon md-icon"></span>
           Eq diff : au programme
         </label>
@@ -2595,19 +2839,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_12" type="checkbox" id="__nav_4_12" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_12">
           Ensemble
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_12">
+      <nav class="md-nav" aria-label="Ensemble" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_12">
           <span class="md-nav__icon md-icon"></span>
           Ensemble
         </label>
@@ -2622,19 +2865,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_12_1" type="checkbox" id="__nav_4_12_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_12_1" id="__nav_3_12_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_12_1">
           Ensemble : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_12_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_12_1">
+      <nav class="md-nav" aria-label="Ensemble : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_12_1">
           <span class="md-nav__icon md-icon"></span>
           Ensemble : les bases
         </label>
@@ -2684,19 +2926,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_12_2" type="checkbox" id="__nav_4_12_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_12_2" id="__nav_3_12_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_12_2">
           Ensemble : Au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_12_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_12_2">
+      <nav class="md-nav" aria-label="Ensemble : Au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_12_2">
           <span class="md-nav__icon md-icon"></span>
           Ensemble : Au programme
         </label>
@@ -2739,19 +2980,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_13" type="checkbox" id="__nav_4_13" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_13">
           Calcul intégral
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_13">
+      <nav class="md-nav" aria-label="Calcul intégral" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_13">
           <span class="md-nav__icon md-icon"></span>
           Calcul intégral
         </label>
@@ -2766,19 +3006,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_13_1" type="checkbox" id="__nav_4_13_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_13_1" id="__nav_3_13_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_13_1">
           Intégrale : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_13_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_13_1">
+      <nav class="md-nav" aria-label="Intégrale : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_13_1">
           <span class="md-nav__icon md-icon"></span>
           Intégrale : les bases
         </label>
@@ -2870,19 +3109,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_13_2" type="checkbox" id="__nav_4_13_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_13_2" id="__nav_3_13_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_13_2">
           Intégrale : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_13_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_13_2">
+      <nav class="md-nav" aria-label="Intégrale : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_13_2">
           <span class="md-nav__icon md-icon"></span>
           Intégrale : au programme
         </label>
@@ -2925,19 +3163,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_14" type="checkbox" id="__nav_4_14" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_14">
           Somme de variable aléatoire
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_14">
+      <nav class="md-nav" aria-label="Somme de variable aléatoire" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_14">
           <span class="md-nav__icon md-icon"></span>
           Somme de variable aléatoire
         </label>
@@ -2952,19 +3189,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_14_1" type="checkbox" id="__nav_4_14_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_14_1" id="__nav_3_14_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_14_1">
           Variable aléatoire : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_14_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_14_1">
+      <nav class="md-nav" aria-label="Variable aléatoire : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_14_1">
           <span class="md-nav__icon md-icon"></span>
           Variable aléatoire : les bases
         </label>
@@ -3009,19 +3245,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_15" type="checkbox" id="__nav_4_15" checked>
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" checked>
       
       
-      
-        <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_15">
           Fonction trigonomértique
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3_15">
+      <nav class="md-nav" aria-label="Fonction trigonomértique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_15">
           <span class="md-nav__icon md-icon"></span>
           Fonction trigonomértique
         </label>
@@ -3038,19 +3273,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_15_1" type="checkbox" id="__nav_4_15_1" checked>
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15_1" checked>
       
       
-      
-        <label class="md-nav__link" for="__nav_3_15_1" id="__nav_3_15_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_15_1">
           Fct trigo : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_15_1_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3_15_1">
+      <nav class="md-nav" aria-label="Fct trigo : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_15_1">
           <span class="md-nav__icon md-icon"></span>
           Fct trigo : les bases
         </label>
@@ -3065,7 +3299,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
         
@@ -3263,19 +3497,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_16" type="checkbox" id="__nav_4_16" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_16">
           Loi des grands nombres
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_16">
+      <nav class="md-nav" aria-label="Loi des grands nombres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_16">
           <span class="md-nav__icon md-icon"></span>
           Loi des grands nombres
         </label>
@@ -3290,19 +3523,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_16_1" type="checkbox" id="__nav_4_16_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_16_1" id="__nav_3_16_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_16_1">
           Lois des grands nombres : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_16_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_16_1">
+      <nav class="md-nav" aria-label="Lois des grands nombres : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_16_1">
           <span class="md-nav__icon md-icon"></span>
           Lois des grands nombres : les bases
         </label>
@@ -3353,19 +3585,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
-      
-        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_5">
           Labo de math
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4">
+      <nav class="md-nav" aria-label="Labo de math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Labo de math
         </label>
@@ -3579,10 +3810,13 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+
                   
 
-  
-  
+  <a href="https://github.com/boulotacademique/site_lycee_essai/projetEssai/docs/Cours/Terminale générale/Fct_trigo/Fct_trigo_base/01_trigo.md" title="Editer cette page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
 
 
 <h1 id="fonction_trigonometrique">Fonction trigonométrique<a class="headerlink" href="#fonction_trigonometrique" title="Permanent link"></a></h1>
@@ -3598,12 +3832,9 @@
 <li> La fonction <span class="arithmatex">\(x\mapsto \sin x\)</span> définie sur <span class="arithmatex">\(\R\)</span> est appelé <strong>fonction sinus</strong> et notée <span class="arithmatex">\(\sin\)</span>.</li>
 </ul></p>
 </div>
-<p><a href="../../Image/Im01.png"><img alt=" Cercle trigo" class="Center_lien VignetteMed" src="../../Image/Im01.png" /></a></p>
-<div class="Center_txt"> <span>$M\Coor{\cos x}{\sin x}$</span></div>
-
-<details class="- tip">
-<summary>Geogebra</summary>
-<p><iframe scrolling="no" title="Def trigo" src="https://www.geogebra.org/material/iframe/id/gpjtwczx/width/1306/height/556/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1306px" height="556px" style="border:0px;"> </iframe></p>
+<p><a href="../../Image/Im01.png"><img alt=" Cercle trigo" class="Center_lien VignetteMed" src="../../Image/Im01.png" /></a>
+<div class="Center_txt"> <span><span class="arithmatex">\(M\Coor{\cos x}{\sin x}\)</span></span></div></p>
+<details class="- tip"><summary>Geogebra</summary><p><iframe scrolling="no" title="Def trigo" src="https://www.geogebra.org/material/iframe/id/gpjtwczx/width/1306/height/556/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1306px" height="556px" style="border:0px;"> </iframe></p>
 </details>
 <div class="admonition info">
 <p class="admonition-title"> </p>
@@ -3616,6 +3847,7 @@
 <div class="admonition info">
 <p class="admonition-title">Valeur remarquable : à connaitre par c&#0156;ur</p>
 <div class="Center2" style="max-width:50%!important">
+
 <table>
 <thead>
 <tr>
@@ -3650,11 +3882,11 @@
 </tbody>
 </table>
 </div>
+
 </div>
-<details class="- example">
-<summary>Exemple : à connaitre</summary>
-<p>Placer sur le cercle trigonométrique, les points associés aux angles suivants :</p>
+<details class="- example"><summary>Exemple : à connaitre</summary><p>Placer sur le cercle trigonométrique, les points associés aux angles suivants :</p>
 <div class="Cote_tiers">
+
 <p><ul>
 <li> 0 </li>
 <li> <span class="arithmatex">\(\dfrac{\pi}{3}\)</span> </li>
@@ -3662,20 +3894,25 @@
 <li> <span class="arithmatex">\(\dfrac{\pi}{4}\)</span> </li>
 </ul></p>
 </div>
+
 <div class="Cote_tiers">
+
 <p><ul>
 <li> <span class="arithmatex">\(\dfrac{\pi}{2}\)</span> </li>
 <li> <span class="arithmatex">\(\pi\)</span> </li>
 <li> <span class="arithmatex">\(\dfrac{2\pi}{3}\)</span> </li>
 </ul></p>
 </div>
+
 <div class="Cote_tiers">
+
 <p><ul>
 <li> <span class="arithmatex">\(\dfrac{-5\pi}{6}\)</span> </li>
 <li> <span class="arithmatex">\(\dfrac{3\pi}{4}\)</span> </li>
 <li> <span class="arithmatex">\(\dfrac{-8\pi}{6}\)</span> </li>
 </ul></p>
 </div>
+
 </details>
 <h3 id="cosinus_et_sinus_des_angles_orientes">Cosinus et sinus des angles orientés.<a class="headerlink" href="#cosinus_et_sinus_des_angles_orientes" title="Permanent link"></a></h3>
 <div class="admonition info">
@@ -3685,46 +3922,59 @@
 <div class="admonition info">
 <p class="admonition-title">Symétrie par rapport à <span class="arithmatex">\((Ox)\)</span></p>
 <div class="Cote_demi">
+
 <p>Avec la symétrie d'axe <span class="arithmatex">\((Ox)\)</span>, on remarque que 
 <ul>
 <li> <span class="arithmatex">\(\cos(-\theta)=\cos(\theta)\)</span></li>
 <li> <span class="arithmatex">\(\sin(-\theta)=-\sin(\theta)\)</span>.</li>
 </ul> </p>
 </div>
+
 <div class="Cote_demi">
+
 <p><a href="../../Image/Im02.png"><img alt="Symétrie par rapport à \((Ox)\)" class="Center_lien VignetteMed" src="../../Image/Im02.png" /></a></p>
 </div>
+
 </div>
 <div class="admonition info">
 <p class="admonition-title">Symétrie par rapport à <span class="arithmatex">\(O\)</span></p>
 <p>Avec la symétrie centrale de centre <span class="arithmatex">\(O\)</span>, on remarque que </p>
 <div class="Cote_demi">
+
 <p><ul>
 <li> <span class="arithmatex">\(\cos(\pi+\theta) = -\cos(\theta)\)</span></li>
 <li> <span class="arithmatex">\(\sin(\pi+\theta)=-\sin(\theta)\)</span></li>
 </ul></p>
 </div>
+
 <div class="Cote_demi">
+
 <p><a href="../../Image/Im03.png"><img alt="Symétrie par rapport à \(O\)" class="Center_lien VignetteMed" src="../../Image/Im03.png" /></a></p>
 </div>
+
 </div>
 <div class="admonition info">
 <p class="admonition-title">Symétrie par rapport à <span class="arithmatex">\((Oy)\)</span></p>
 <p>Avec la symétrie d'axe <span class="arithmatex">\((Oy)\)</span>, on remarque que </p>
 <div class="Cote_demi">
+
 <p><ul>
 <li> <span class="arithmatex">\(\cos(\pi-\theta)=-\cos(\theta)\)</span></li>
 <li> <span class="arithmatex">\(\sin(\pi-\theta)=\sin(\theta)\)</span></li>
 </ul></p>
 </div>
+
 <div class="Cote_demi">
+
 <p><a href="../../Image/Im04.png"><img alt="Symétrie par rapport à \((Oy)\)" class="Center_lien VignetteMed" src="../../Image/Im04.png" /></a></p>
 </div>
+
 </div>
 <div class="admonition info">
 <p class="admonition-title">Symétrie par rapport à <span class="arithmatex">\(y=x\)</span></p>
 <p>Avec la symétrie d'axe la première bissectrice, on remarque que</p>
 <div class="Cote_demi">
+
 <p><ul>
 <li> <span class="arithmatex">\(\cos \left( \frac{\pi}{2}-\theta \right)=\sin(\theta)\)</span>
 </li>
@@ -3732,22 +3982,29 @@
 </li>
 </ul></p>
 </div>
+
 <div class="Cote_demi">
+
 <p><a href="../../Image/Im05.png"><img alt="Symétrie par rapport à \(y=x\)" class="Center_lien VignetteMed" src="../../Image/Im05.png" /></a></p>
 </div>
+
 </div>
 <div class="admonition info">
 <p class="admonition-title">Rotation de centre <span class="arithmatex">\(O\)</span> et d'angle <span class="arithmatex">\(\frac{\pi}{2}\)</span></p>
 <p>Avec la rotation de centre <span class="arithmatex">\(O\)</span> et d'angle <span class="arithmatex">\(\frac{\pi}{2}\)</span>, on remarque que</p>
 <div class="Cote_demi">
+
 <p><ul>
 <li> <span class="arithmatex">\(\cos \left( \frac{\pi}{2}+\theta \right)=-\sin(\theta)\)</span></li>
 <li> <span class="arithmatex">\(\sin \left( \frac{\pi}{2}+\theta \right)=\cos(\theta)\)</span></li>
 </ul></p>
 </div>
+
 <div class="Cote_demi">
+
 <p><a href="../../Image/Im06.png"><img alt="Symétrie par rapport à \(y=x\)" class="Center_lien VignetteMed" src="../../Image/Im06.png" /></a></p>
 </div>
+
 </div>
 <h2 id="derivabilite_-_primitive">Dérivabilité - Primitive<a class="headerlink" href="#derivabilite_-_primitive" title="Permanent link"></a></h2>
 <div class="admonition info">
@@ -3780,12 +4037,8 @@
 </ul></p>
 <p>Pour les primitives, voir le tableau des primitives.</p>
 </div>
-<details class="- example">
-<summary>Exemple</summary>
-<p>Calculer la dérivée de <span class="arithmatex">\(g(x)=\cos(3x+\dfrac{\pi}{4})\)</span> définie sur <span class="arithmatex">\(\R\)</span>.</p>
-<details class="- done">
-<summary>Réponse</summary>
-<p><span class="arithmatex">\(g(x)=f(ax+b)\)</span> </p>
+<details class="- example"><summary>Exemple</summary><p>Calculer la dérivée de <span class="arithmatex">\(g(x)=\cos(3x+\dfrac{\pi}{4})\)</span> définie sur <span class="arithmatex">\(\R\)</span>.</p>
+<details class="- done"><summary>Réponse</summary><p><span class="arithmatex">\(g(x)=f(ax+b)\)</span> </p>
 <p><span class="arithmatex">\(g\)</span> est définie sur <span class="arithmatex">\(\R\)</span> et <span class="arithmatex">\(g'(x)=\)</span> <span class="arithmatex">\(a\times f'(ax+b) =-3\sin(3x+\dfrac{\pi}{4})\)</span>.</p>
 </details>
 </details>
@@ -3794,18 +4047,15 @@
 <div class="admonition info">
 <p class="admonition-title">Variations de la fonction sinus</p>
 <p><a href="../../Image/Im07.png"><img alt="Variations de sinus" class="Center_lien VignetteMed" src="../../Image/Im07.png" /></a></p>
-<details class="- tip">
-<summary>Courbe de sinus</summary>
-<!--<iframe scrolling="no" title="Courbe sinus" src="https://www.geogebra.org/material/iframe/id/gjvbdjgd/width/1296/height/704/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1296px" height="704px" style="border:0px;"> </iframe>-->
+<details class="- tip"><summary>Courbe de sinus</summary><!--<iframe scrolling="no" title="Courbe sinus" src="https://www.geogebra.org/material/iframe/id/gjvbdjgd/width/1296/height/704/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1296px" height="704px" style="border:0px;"> </iframe>-->
+
 <p><iframe scrolling="no" title="Courbe sinus" src="https://www.geogebra.org/material/iframe/id/gjvbdjgd/width/1296/height/704/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1296px" height="704px" style="border:0px;"> </iframe></p>
 </details>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Variations de la fonction cosinus</p>
 <p><a href="../../Image/Im08.png"><img alt="Variations de cosinus" class="Center_lien Vignette" src="../../Image/Im08.png" /></a></p>
-<details class="- tip">
-<summary>Courbe de cosinus</summary>
-<p><iframe scrolling="no" title="Courbe cos" src="https://www.geogebra.org/material/iframe/id/dynbm2ky/width/1296/height/704/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1296px" height="704px" style="border:0px;"> </iframe></p>
+<details class="- tip"><summary>Courbe de cosinus</summary><p><iframe scrolling="no" title="Courbe cos" src="https://www.geogebra.org/material/iframe/id/dynbm2ky/width/1296/height/704/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1296px" height="704px" style="border:0px;"> </iframe></p>
 </details>
 </div>
 <h3 id="courbe_representative_sur_-pipi">Courbe représentative sur <span class="arithmatex">\([-\pi,\pi]\)</span><a class="headerlink" href="#courbe_representative_sur_-pipi" title="Permanent link"></a></h3>
@@ -3833,16 +4083,12 @@
 <p>Les courbes représentatives des fonctions sinus et cosinus sont <strong>invariantes par translation de vecteur <span class="arithmatex">\(2\pi \dvec{i}\)</span> et <span class="arithmatex">\(-2\pi \dvec{i}\)</span></strong>.</p>
 <p>Ces courbes s'appellent des <strong>sinusoïdes</strong>.</p>
 </div>
-<details class="- example">
-<summary>Exemple</summary>
-<p>Mettre votre feuille en format paysage, puis en le centrant sur la page tracer un repère <span class="arithmatex">\((O;I,J)\)</span> tel que sur l'axe des abscisses <span class="arithmatex">\(1\)</span> cm correspond à <span class="arithmatex">\(\dfrac{\pi}{6}\)</span> et sur l'axe des ordonnées <span class="arithmatex">\(6\)</span> cm correspond à <span class="arithmatex">\(1\)</span> unité.</p>
+<details class="- example"><summary>Exemple</summary><p>Mettre votre feuille en format paysage, puis en le centrant sur la page tracer un repère <span class="arithmatex">\((O;I,J)\)</span> tel que sur l'axe des abscisses <span class="arithmatex">\(1\)</span> cm correspond à <span class="arithmatex">\(\dfrac{\pi}{6}\)</span> et sur l'axe des ordonnées <span class="arithmatex">\(6\)</span> cm correspond à <span class="arithmatex">\(1\)</span> unité.</p>
 <p>A l'aide des valeurs remarquables et du tableau de variations, tracez la courbe de <span class="arithmatex">\(x \mapsto \cos(x)\)</span> sur <span class="arithmatex">\([0;\pi]\)</span>.</p>
 <p>Puis, utilisez la parité de <span class="arithmatex">\(x \mapsto \cos(x)\)</span> pour compléter la courbe sur <span class="arithmatex">\([-\pi ; 0]\)</span>.</p>
 <p>Enfin, utilisez la périodicité de <span class="arithmatex">\(x \mapsto \cos(x)\)</span> pour compléter la courbe sur <span class="arithmatex">\([-2\pi ; 2\pi]\)</span>.</p>
 </details>
-<details class="- example">
-<summary>Exemple</summary>
-<p>Mettre votre feuille en format paysage, puis en le centrant sur la page tracer un repère <span class="arithmatex">\((O;I,J)\)</span> tel que sur l'axe des abscisses <span class="arithmatex">\(1\)</span> cm correspond à <span class="arithmatex">\(\dfrac{\pi}{6}\)</span> et sur l'axe des ordonnées <span class="arithmatex">\(6\)</span> cm correspond à <span class="arithmatex">\(1\)</span> unité.</p>
+<details class="- example"><summary>Exemple</summary><p>Mettre votre feuille en format paysage, puis en le centrant sur la page tracer un repère <span class="arithmatex">\((O;I,J)\)</span> tel que sur l'axe des abscisses <span class="arithmatex">\(1\)</span> cm correspond à <span class="arithmatex">\(\dfrac{\pi}{6}\)</span> et sur l'axe des ordonnées <span class="arithmatex">\(6\)</span> cm correspond à <span class="arithmatex">\(1\)</span> unité.</p>
 <p>A l'aide des valeurs remarquables et du tableau de variations, tracez la courbe de <span class="arithmatex">\(x \mapsto \sin(x)\)</span> sur <span class="arithmatex">\([0;\pi]\)</span>.</p>
 <p>Puis, utilisez la parité de <span class="arithmatex">\(x \mapsto \sin(x)\)</span> pour compléter la courbe sur <span class="arithmatex">\([-\pi ; 0]\)</span>.</p>
 <p>Enfin, utilisez la périodicité de <span class="arithmatex">\(x \mapsto \sin(x)\)</span> pour compléter la courbe sur <span class="arithmatex">\([-2\pi ; 2\pi]\)</span>.</p>
@@ -3860,9 +4106,7 @@
 </li>
 </ul></p>
 </div>
-<details class="- example">
-<summary>Exemple</summary>
-<p>Résoudre sur <span class="arithmatex">\(I\)</span> :
+<details class="- example"><summary>Exemple</summary><p>Résoudre sur <span class="arithmatex">\(I\)</span> :
 <ol>
 <li> <span class="arithmatex">\(\cos(x)=-\dfrac{\sqrt{2}}{2}\)</span> et <span class="arithmatex">\(I=[-\pi;2\pi]\)</span></li>
 <li> <span class="arithmatex">\(2\cos(x) +1=0\)</span> et <span class="arithmatex">\(I=[-2\pi;0]\)</span></li>
@@ -3870,9 +4114,7 @@
 </ol></p>
 </details>
 <h3 id="resolution_de_cosxleq_a">Résolution de <span class="arithmatex">\(\cos(x)\leq a\)</span><a class="headerlink" href="#resolution_de_cosxleq_a" title="Permanent link"></a></h3>
-<details class="- example">
-<summary>Exemples de cas particuliers : réfléchissez !</summary>
-<p><ol>
+<details class="- example"><summary>Exemples de cas particuliers : réfléchissez !</summary><p><ol>
 <li> <span class="arithmatex">\(\cos(x) \leq 1\)</span></li>
 <li> <span class="arithmatex">\(\cos(x) &lt; -1\)</span></li>
 </ol></p>
@@ -3881,9 +4123,7 @@
 <p class="admonition-title">Méthode</p>
 <p>A l'aide des valeurs remarquables (ou pour certains cas avec la calculatrice), on trouve une solution à l'équation <span class="arithmatex">\(\cos(x) = a\)</span>, puis à l'aide de la courbe ou du cercle trigonométrique, il est possible de déterminer toutes les solutions de <span class="arithmatex">\(\cos(x) \leq a\)</span> dans un intervalle donné.</p>
 </div>
-<details class="- example">
-<summary>Exemple</summary>
-<p>Résoudre sur <span class="arithmatex">\(I\)</span> :
+<details class="- example"><summary>Exemple</summary><p>Résoudre sur <span class="arithmatex">\(I\)</span> :
 <ol>
 <li> <span class="arithmatex">\(\cos(x)\leq-\dfrac{\sqrt{2}}{2}\)</span> et <span class="arithmatex">\(I=[-\pi;2\pi]\)</span></li>
 <li> <span class="arithmatex">\(2\cos(x) +1\leq 0\)</span> et <span class="arithmatex">\(I=[-2\pi;0]\)</span></li>
@@ -3940,9 +4180,7 @@ Une fonction $f$ définie sur un intervalle $D$ de $\R$ est impaire  si
 <p class="admonition-title">Définition de la mesure principale</p>
 <p>La mesure principale d'un angle est la seule mesure de cette angle appartenant à <span class="arithmatex">\(]-\pi ; \pi]\)</span>.</p>
 </div>
-<details class="- example">
-<summary>Exemple</summary>
-<p>Donner la mesure principale des valeurs suivantes :
+<details class="- example"><summary>Exemple</summary><p>Donner la mesure principale des valeurs suivantes :
 <ol>
 <li> <span class="arithmatex">\(x=\dfrac{17\pi}{4}\)</span></li>
 <li> <span class="arithmatex">\(x=-\dfrac{25\pi}{3}\)</span></li>
@@ -3973,6 +4211,8 @@ x = \theta + k \times 2\pi \ k \in \Z \quad \text{ ou } \quad  x = \pi - \theta 
 
 
                 
+<script src="../../../../../pyodide-mkdocs/ide.js"></script> 
+
               </article>
             </div>
           
@@ -3987,6 +4227,42 @@ x = \theta + k \times 2\pi \ k \in \Z \quad \text{ ou } \quad  x = \pi - \theta 
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+      
+        
+        <a href="../../../Somme_VAR/VAR_base/01_var/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Tout le cours" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Tout le cours
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../../Loi_gds_nombres/Gds_nbres_bases/01_gds_nbres/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Tout le cours" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Tout le cours
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -4009,10 +4285,10 @@ x = \theta + k \times 2\pi \ k \in \Z \quad \text{ ou } \quad  x = \pi - \theta 
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "header.autohide"], "search": "../../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "header.autohide"], "search": "../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.b78d2936.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
       
         <script src="../../../../../javascripts/mathjax.js"></script>
       
@@ -4020,6 +4296,7 @@ x = \theta + k \times 2\pi \ k \in \Z \quad \text{ ou } \quad  x = \pi - \theta 
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
+    
     
   </body>
 </html>

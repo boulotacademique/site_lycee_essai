@@ -12,14 +12,8 @@
       
         <link rel="canonical" href="https://boulotacademique.github.io/site_lycee_essai/Cours/Terminale%20g%C3%A9n%C3%A9rale/Limite_fct/limite_fct_base/03_lim_fct_op/">
       
-      
-        <link rel="prev" href="../02_lim_fct_reel/">
-      
-      
-        <link rel="next" href="../04_lim_fct_comp/">
-      
       <link rel="icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -27,15 +21,30 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.402914a4.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.975780f9.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.2505c338.min.css">
+        
       
       
 
     
     
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css">
+<!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.asm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
+<script src="../../../../../pyodide-mkdocs/interpreter.js"></script> 
+
     
       
         
@@ -57,6 +66,14 @@
     
     
     
+
+<link rel="stylesheet" href="../../../../../pyodide-mkdocs/pyoditeur.css">
+<link rel="stylesheet" href="../../../../../qcm/qcm.css">
+
+
+<input id="ace_palette" autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor" type="checkbox"></input>
+
+
   </head>
   
   
@@ -122,6 +139,8 @@
       <form class="md-header__option" data-md-component="palette">
         
           
+          
+          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Basculer en mode sombre"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Basculer en mode sombre" for="__palette_2" hidden>
@@ -129,6 +148,8 @@
             </label>
           
         
+          
+          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Basculer en mode clair"  type="radio" name="__palette" id="__palette_2">
           
@@ -153,7 +174,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Recherche">
+      <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
@@ -167,7 +188,7 @@
           <div class="md-search-result__meta">
             Initialisation de la recherche
           </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
+          <ol class="md-search-result__list"></ol>
         </div>
       </div>
     </div>
@@ -179,7 +200,7 @@
         <a href="https://github.com/boulotacademique/site_lycee_essai" title="Aller au dépôt" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -198,8 +219,24 @@
           
             
 <nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
-  <div class="md-grid">
+  <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../c01/" class="md-tabs__link">
+        
+      </a>
+    </li>
+  
+
       
         
   
@@ -297,7 +334,7 @@
       <a href="https://github.com/boulotacademique/site_lycee_essai" title="Aller au dépôt" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -306,6 +343,250 @@
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20NSI/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20NSI/Accueil/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Au%20programme/Le%20son/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Au%20programme/Les%20flottants%20suite/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Au%20programme/Les%20images/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Les%20bases/Hexad%C3%A9cimal/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20STI2D/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Premi%C3%A8re%20g%C3%A9n%C3%A9rale/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Seconde/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Terminale%20STI2D/c01/" class="md-nav__link">
+        En construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Derivation_et_convexite/01_Fonction_derivable/" class="md-nav__link">
+        Fonction dérivable
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Esp_ortho/Esp_ortho_prog/ortho_esp_dem/" class="md-nav__link">
+        Démonstration au programme
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../my_theme_customizations/pyodide-mkdocs/end_REM/" class="md-nav__link">
+        end REM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../my_theme_customizations/pyodide-mkdocs/start_REM/" class="md-nav__link">
+        start REM
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
       
       
@@ -333,19 +614,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3">
           Première NSI
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2">
+      <nav class="md-nav" aria-label="Première NSI" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Première NSI
         </label>
@@ -374,19 +654,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_2">
           Python
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_2">
+      <nav class="md-nav" aria-label="Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           Python
         </label>
@@ -401,19 +680,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_1" type="checkbox" id="__nav_3_2_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_2_1">
           Les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_2_1">
+      <nav class="md-nav" aria-label="Les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_1">
           <span class="md-nav__icon md-icon"></span>
           Les bases
         </label>
@@ -561,19 +839,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_2_2">
           Les structures
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_2_2">
+      <nav class="md-nav" aria-label="Les structures" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
           <span class="md-nav__icon md-icon"></span>
           Les structures
         </label>
@@ -644,19 +921,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
       
       
-      
-        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_3">
           Codage
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_3">
+      <nav class="md-nav" aria-label="Codage" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Codage
         </label>
@@ -671,19 +947,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_1" type="checkbox" id="__nav_3_3_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_3_1">
           Les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_3_1">
+      <nav class="md-nav" aria-label="Les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_1">
           <span class="md-nav__icon md-icon"></span>
           Les bases
         </label>
@@ -736,19 +1011,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
-      
-        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4">
           Terminale générale
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3">
+      <nav class="md-nav" aria-label="Terminale générale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Terminale générale
         </label>
@@ -777,19 +1051,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_2">
           Dérivation, convexité, primitive
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_2">
+      <nav class="md-nav" aria-label="Dérivation, convexité, primitive" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
           Dérivation, convexité, primitive
         </label>
@@ -804,19 +1077,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_1" type="checkbox" id="__nav_4_2_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_2_1">
           Dérivation : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_2_1">
+      <nav class="md-nav" aria-label="Dérivation : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_1">
           <span class="md-nav__icon md-icon"></span>
           Dérivation : les bases
         </label>
@@ -908,19 +1180,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2" type="checkbox" id="__nav_4_2_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_2_2">
           Dérivation : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_2_2">
+      <nav class="md-nav" aria-label="Dérivation : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_2">
           <span class="md-nav__icon md-icon"></span>
           Dérivation : au programme
         </label>
@@ -1019,19 +1290,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_3">
           Suite et récurrence
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_3">
+      <nav class="md-nav" aria-label="Suite et récurrence" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           Suite et récurrence
         </label>
@@ -1046,19 +1316,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1" type="checkbox" id="__nav_4_3_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_3_1">
           Suites : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_3_1">
+      <nav class="md-nav" aria-label="Suites : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_1">
           <span class="md-nav__icon md-icon"></span>
           Suites : les bases
         </label>
@@ -1178,19 +1447,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_2" type="checkbox" id="__nav_4_3_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_3_2">
           Suites : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_3_2">
+      <nav class="md-nav" aria-label="Suites : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_2">
           <span class="md-nav__icon md-icon"></span>
           Suites : au programme
         </label>
@@ -1233,19 +1501,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_4">
           Loi binomiale
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_4">
+      <nav class="md-nav" aria-label="Loi binomiale" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
           <span class="md-nav__icon md-icon"></span>
           Loi binomiale
         </label>
@@ -1260,19 +1527,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_1" type="checkbox" id="__nav_4_4_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_4_1">
           Probabilité : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_4_1">
+      <nav class="md-nav" aria-label="Probabilité : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_4_1">
           <span class="md-nav__icon md-icon"></span>
           Probabilité : les bases
         </label>
@@ -1336,19 +1602,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_2" type="checkbox" id="__nav_4_4_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_4_2">
           Probabilités : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_4_2">
+      <nav class="md-nav" aria-label="Probabilités : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_4_2">
           <span class="md-nav__icon md-icon"></span>
           Probabilités : au programme
         </label>
@@ -1405,19 +1670,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_5">
           Limite de suite
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5">
+      <nav class="md-nav" aria-label="Limite de suite" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
           Limite de suite
         </label>
@@ -1432,19 +1696,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_1" type="checkbox" id="__nav_4_5_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_5_1" id="__nav_3_5_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_5_1">
           Limite de suites : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5_1">
+      <nav class="md-nav" aria-label="Limite de suites : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_1">
           <span class="md-nav__icon md-icon"></span>
           Limite de suites : les bases
         </label>
@@ -1522,19 +1785,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_2" type="checkbox" id="__nav_4_5_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_5_2" id="__nav_3_5_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_5_2">
           Limite de suites : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5_2">
+      <nav class="md-nav" aria-label="Limite de suites : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_2">
           <span class="md-nav__icon md-icon"></span>
           Limite de suites : au programme
         </label>
@@ -1605,19 +1867,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_6">
           Vecteur de l'espace
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_6">
+      <nav class="md-nav" aria-label="Vecteur de l'espace" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
           <span class="md-nav__icon md-icon"></span>
           Vecteur de l'espace
         </label>
@@ -1632,19 +1893,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_1" type="checkbox" id="__nav_4_6_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_6_1" id="__nav_3_6_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_6_1">
           Vecteur : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_6_1">
+      <nav class="md-nav" aria-label="Vecteur : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_6_1">
           <span class="md-nav__icon md-icon"></span>
           Vecteur : les bases
         </label>
@@ -1736,19 +1996,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_2" type="checkbox" id="__nav_4_6_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_6_2" id="__nav_3_6_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_6_2">
           Vecteur : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_6_2">
+      <nav class="md-nav" aria-label="Vecteur : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_6_2">
           <span class="md-nav__icon md-icon"></span>
           Vecteur : au programme
         </label>
@@ -1793,19 +2052,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" checked>
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" checked>
       
       
-      
-        <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_7">
           Limite de fonction
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3_7">
+      <nav class="md-nav" aria-label="Limite de fonction" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
           <span class="md-nav__icon md-icon"></span>
           Limite de fonction
         </label>
@@ -1822,19 +2080,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7_1" type="checkbox" id="__nav_4_7_1" checked>
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_1" checked>
       
       
-      
-        <label class="md-nav__link" for="__nav_3_7_1" id="__nav_3_7_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_7_1">
           Limite de fct : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_1_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3_7_1">
+      <nav class="md-nav" aria-label="Limite de fct : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_7_1">
           <span class="md-nav__icon md-icon"></span>
           Limite de fct : les bases
         </label>
@@ -1877,7 +2134,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
         
@@ -2008,19 +2265,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7_2" type="checkbox" id="__nav_4_7_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_7_2" id="__nav_3_7_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_7_2">
           Limite de fct : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_7_2">
+      <nav class="md-nav" aria-label="Limite de fct : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_7_2">
           <span class="md-nav__icon md-icon"></span>
           Limite de fct : au programme
         </label>
@@ -2077,19 +2333,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_8" type="checkbox" id="__nav_4_8" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_8">
           Orthogonalité dans l'espace
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_8">
+      <nav class="md-nav" aria-label="Orthogonalité dans l'espace" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_8">
           <span class="md-nav__icon md-icon"></span>
           Orthogonalité dans l'espace
         </label>
@@ -2104,19 +2359,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_8_1" type="checkbox" id="__nav_4_8_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_8_1" id="__nav_3_8_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_8_1">
           Orthogonalité : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_8_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_8_1">
+      <nav class="md-nav" aria-label="Orthogonalité : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_8_1">
           <span class="md-nav__icon md-icon"></span>
           Orthogonalité : les bases
         </label>
@@ -2194,19 +2448,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_8_2" type="checkbox" id="__nav_4_8_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_8_2" id="__nav_3_8_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_8_2">
           Orthogonalité : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_8_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_8_2">
+      <nav class="md-nav" aria-label="Orthogonalité : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_8_2">
           <span class="md-nav__icon md-icon"></span>
           Orthogonalité : au programme
         </label>
@@ -2263,19 +2516,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9" type="checkbox" id="__nav_4_9" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_9">
           Continuité
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_9">
+      <nav class="md-nav" aria-label="Continuité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_9">
           <span class="md-nav__icon md-icon"></span>
           Continuité
         </label>
@@ -2290,19 +2542,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9_1" type="checkbox" id="__nav_4_9_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_9_1" id="__nav_3_9_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_9_1">
           Continuité : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_9_1">
+      <nav class="md-nav" aria-label="Continuité : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_9_1">
           <span class="md-nav__icon md-icon"></span>
           Continuité : les bases
         </label>
@@ -2352,19 +2603,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9_2" type="checkbox" id="__nav_4_9_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_9_2" id="__nav_3_9_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_9_2">
           Continuité : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_9_2">
+      <nav class="md-nav" aria-label="Continuité : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_9_2">
           <span class="md-nav__icon md-icon"></span>
           Continuité : au programme
         </label>
@@ -2407,19 +2657,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_10" type="checkbox" id="__nav_4_10" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_10">
           Logarithme népérien
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_10">
+      <nav class="md-nav" aria-label="Logarithme népérien" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_10">
           <span class="md-nav__icon md-icon"></span>
           Logarithme népérien
         </label>
@@ -2434,19 +2683,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_10_1" type="checkbox" id="__nav_4_10_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_10_1" id="__nav_3_10_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_10_1">
           Log népérien : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_10_1">
+      <nav class="md-nav" aria-label="Log népérien : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_10_1">
           <span class="md-nav__icon md-icon"></span>
           Log népérien : les bases
         </label>
@@ -2496,19 +2744,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_10_2" type="checkbox" id="__nav_4_10_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_10_2" id="__nav_3_10_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_10_2">
           Log népérien : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_10_2">
+      <nav class="md-nav" aria-label="Log népérien : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_10_2">
           <span class="md-nav__icon md-icon"></span>
           Log népérien : au programme
         </label>
@@ -2551,19 +2798,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_11" type="checkbox" id="__nav_4_11" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_11">
           Equation différentielle
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_11">
+      <nav class="md-nav" aria-label="Equation différentielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_11">
           <span class="md-nav__icon md-icon"></span>
           Equation différentielle
         </label>
@@ -2578,19 +2824,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_11_1" type="checkbox" id="__nav_4_11_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_11_1" id="__nav_3_11_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_11_1">
           Eq diff : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_11_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_11_1">
+      <nav class="md-nav" aria-label="Eq diff : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_11_1">
           <span class="md-nav__icon md-icon"></span>
           Eq diff : les bases
         </label>
@@ -2640,19 +2885,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_11_2" type="checkbox" id="__nav_4_11_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_11_2" id="__nav_3_11_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_11_2">
           Eq diff : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_11_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_11_2">
+      <nav class="md-nav" aria-label="Eq diff : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_11_2">
           <span class="md-nav__icon md-icon"></span>
           Eq diff : au programme
         </label>
@@ -2695,19 +2939,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_12" type="checkbox" id="__nav_4_12" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_12">
           Ensemble
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_12">
+      <nav class="md-nav" aria-label="Ensemble" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_12">
           <span class="md-nav__icon md-icon"></span>
           Ensemble
         </label>
@@ -2722,19 +2965,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_12_1" type="checkbox" id="__nav_4_12_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_12_1" id="__nav_3_12_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_12_1">
           Ensemble : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_12_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_12_1">
+      <nav class="md-nav" aria-label="Ensemble : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_12_1">
           <span class="md-nav__icon md-icon"></span>
           Ensemble : les bases
         </label>
@@ -2784,19 +3026,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_12_2" type="checkbox" id="__nav_4_12_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_12_2" id="__nav_3_12_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_12_2">
           Ensemble : Au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_12_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_12_2">
+      <nav class="md-nav" aria-label="Ensemble : Au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_12_2">
           <span class="md-nav__icon md-icon"></span>
           Ensemble : Au programme
         </label>
@@ -2839,19 +3080,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_13" type="checkbox" id="__nav_4_13" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_13">
           Calcul intégral
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_13">
+      <nav class="md-nav" aria-label="Calcul intégral" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_13">
           <span class="md-nav__icon md-icon"></span>
           Calcul intégral
         </label>
@@ -2866,19 +3106,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_13_1" type="checkbox" id="__nav_4_13_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_13_1" id="__nav_3_13_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_13_1">
           Intégrale : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_13_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_13_1">
+      <nav class="md-nav" aria-label="Intégrale : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_13_1">
           <span class="md-nav__icon md-icon"></span>
           Intégrale : les bases
         </label>
@@ -2970,19 +3209,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_13_2" type="checkbox" id="__nav_4_13_2" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13_2" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_13_2" id="__nav_3_13_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_13_2">
           Intégrale : au programme
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_13_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_13_2">
+      <nav class="md-nav" aria-label="Intégrale : au programme" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_13_2">
           <span class="md-nav__icon md-icon"></span>
           Intégrale : au programme
         </label>
@@ -3025,19 +3263,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_14" type="checkbox" id="__nav_4_14" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_14">
           Somme de variable aléatoire
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_14">
+      <nav class="md-nav" aria-label="Somme de variable aléatoire" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_14">
           <span class="md-nav__icon md-icon"></span>
           Somme de variable aléatoire
         </label>
@@ -3052,19 +3289,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_14_1" type="checkbox" id="__nav_4_14_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_14_1" id="__nav_3_14_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_14_1">
           Variable aléatoire : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_14_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_14_1">
+      <nav class="md-nav" aria-label="Variable aléatoire : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_14_1">
           <span class="md-nav__icon md-icon"></span>
           Variable aléatoire : les bases
         </label>
@@ -3107,19 +3343,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_15" type="checkbox" id="__nav_4_15" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_15">
           Fonction trigonomértique
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_15">
+      <nav class="md-nav" aria-label="Fonction trigonomértique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_15">
           <span class="md-nav__icon md-icon"></span>
           Fonction trigonomértique
         </label>
@@ -3134,19 +3369,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_15_1" type="checkbox" id="__nav_4_15_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_15_1" id="__nav_3_15_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_15_1">
           Fct trigo : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_15_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_15_1">
+      <nav class="md-nav" aria-label="Fct trigo : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_15_1">
           <span class="md-nav__icon md-icon"></span>
           Fct trigo : les bases
         </label>
@@ -3189,19 +3423,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_16" type="checkbox" id="__nav_4_16" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_16">
           Loi des grands nombres
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_16">
+      <nav class="md-nav" aria-label="Loi des grands nombres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_16">
           <span class="md-nav__icon md-icon"></span>
           Loi des grands nombres
         </label>
@@ -3216,19 +3449,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_16_1" type="checkbox" id="__nav_4_16_1" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16_1" >
       
       
-      
-        <label class="md-nav__link" for="__nav_3_16_1" id="__nav_3_16_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_16_1">
           Lois des grands nombres : les bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_16_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_16_1">
+      <nav class="md-nav" aria-label="Lois des grands nombres : les bases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_16_1">
           <span class="md-nav__icon md-icon"></span>
           Lois des grands nombres : les bases
         </label>
@@ -3279,19 +3511,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
-      
-        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_5">
           Labo de math
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4">
+      <nav class="md-nav" aria-label="Labo de math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Labo de math
         </label>
@@ -3431,32 +3662,34 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+
                   
 
-  
-  
+  <a href="https://github.com/boulotacademique/site_lycee_essai/projetEssai/docs/Cours/Terminale générale/Limite_fct/limite_fct_base/03_lim_fct_op.md" title="Editer cette page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
 
 
 <h1 id="operation_sur_les_limites">Opération sur les limites<a class="headerlink" href="#operation_sur_les_limites" title="Permanent link"></a></h1>
 <h2 id="resume_limites_de_references">Résumé : limites de références<a class="headerlink" href="#resume_limites_de_references" title="Permanent link"></a></h2>
-<table class="AvecBordure" style="width:70%;margin:auto;"> 
+<p><table class="AvecBordure" style="width:70%;margin:auto;"> 
 <tr>
-<td style="height:4em;"> $\dlim{x}{+\infty}x^2=+ \infty$ </td><td> $\dlim{x}{+\infty}x^3=+\infty$ </td><td> $\dlim{x}{+\infty}x^p=+ \infty \ (\ p \in \N^*)$ </td><td> $\dlim{x}{+\infty}\sqrt{x}=+ \infty$ </td><td> $\dlim{x}{+\infty}e^x=+ \infty$ </td>
+<td style="height:4em;"> <span class="arithmatex">\(\dlim{x}{+\infty}x^2=+ \infty\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{+\infty}x^3=+\infty\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{+\infty}x^p=+ \infty \ (\ p \in \N^*)\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{+\infty}\sqrt{x}=+ \infty\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{+\infty}e^x=+ \infty\)</span> </td>
 </tr>
 <tr>
-<td style="height:4em;"> $\dlim{x}{-\infty}x^2=+ \infty$ </td><td> $\dlim{x}{-\infty}x^3=-\infty$ </td><td> $\dlim{x}{-\infty}x^p=+ \infty  \ (\ p \in \N^*, p \text{ pair })$ </td><td> $\dlim{x}{-\infty}x^p=- \infty  \ (\ p \in \N^*, p \text{ impair })$</td><td style="border-right:1px solid white;border-bottom:1px solid white"></td>
+<td style="height:4em;"> <span class="arithmatex">\(\dlim{x}{-\infty}x^2=+ \infty\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{-\infty}x^3=-\infty\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{-\infty}x^p=+ \infty  \ (\ p \in \N^*, p \text{ pair })\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{-\infty}x^p=- \infty  \ (\ p \in \N^*, p \text{ impair })\)</span></td><td style="border-right:1px solid white;border-bottom:1px solid white"></td>
 </tr>
 <tr>
-<td style="height:4em;"> $\dlim{x}{\pm\infty}\dfrac 1x=0$ </td><td> $\dlim{x}{\pm\infty}\dfrac{1}{x^2}=0$ </td><td> $\dlim{x}{\pm\infty}\dfrac{1}{x^n}=0$ </td><td> $\dlim{x}{+\infty}\dfrac{1}{\sqrt{x}}=0$</td><td style="border-right:1px solid white;border-bottom:1px solid white"></td>
+<td style="height:4em;"> <span class="arithmatex">\(\dlim{x}{\pm\infty}\dfrac 1x=0\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{\pm\infty}\dfrac{1}{x^2}=0\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{\pm\infty}\dfrac{1}{x^n}=0\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{+\infty}\dfrac{1}{\sqrt{x}}=0\)</span></td><td style="border-right:1px solid white;border-bottom:1px solid white"></td>
 </tr>
 <tr>
-<td style="height:4em;"> $\dlim{x}{0}\dfrac{1}{x^2}=+\infty$ </td><td> $\dlim{x}{0}\dfrac{1}{x^n}=+\infty \ (\ n \in \N^* n \text{ pair })$ </td><td style="border-right:1px solid white;"> </td><td style="border-right:1px solid white;"> </td><td style="border-right:1px solid white;border-bottom:1px solid white"></td>
+<td style="height:4em;"> <span class="arithmatex">\(\dlim{x}{0}\dfrac{1}{x^2}=+\infty\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{0}\dfrac{1}{x^n}=+\infty \ (\ n \in \N^* n \text{ pair })\)</span> </td><td style="border-right:1px solid white;"> </td><td style="border-right:1px solid white;"> </td><td style="border-right:1px solid white;border-bottom:1px solid white"></td>
 </tr>
 <tr>
-<td style="height:4em;"> $\dlim{x}{0^+}\dfrac 1x=+\infty$ </td><td> $\dlim{x}{0^-}\dfrac 1x=-\infty$ </td><td> $\dlim{x}{0^+}\dfrac{1}{x^n}=+\infty \ (\ n \in \N^* n \text{ impair })$ </td><td> $\dlim{x}{0^-}\dfrac{1}{x^n}=-\infty \ (\ n \in \N^* n \text{ impair })$</td><td  style="border-right:1px solid white;border-bottom:1px solid white;"></td>
+<td style="height:4em;"> <span class="arithmatex">\(\dlim{x}{0^+}\dfrac 1x=+\infty\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{0^-}\dfrac 1x=-\infty\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{0^+}\dfrac{1}{x^n}=+\infty \ (\ n \in \N^* n \text{ impair })\)</span> </td><td> <span class="arithmatex">\(\dlim{x}{0^-}\dfrac{1}{x^n}=-\infty \ (\ n \in \N^* n \text{ impair })\)</span></td><td  style="border-right:1px solid white;border-bottom:1px solid white;"></td>
 </tr>
- </table>
-
+ </table></p>
 <h2 id="limite_et_operations">Limite et opérations<a class="headerlink" href="#limite_et_operations" title="Permanent link"></a></h2>
 <p>Dans tout ce qui suit, <span class="arithmatex">\(\ell\)</span> et <span class="arithmatex">\(\ell'\)</span> désignent deux nombres réels <span class="arithmatex">\(a\)</span> désigne un réel ou <span class="arithmatex">\(+\infty\)</span> ou <span class="arithmatex">\(-\infty\)</span>.</p>
 <div class="admonition warning">
@@ -3509,9 +3742,7 @@
 </table></p>
 </div>
 <h3 id="limite_dun_quotient">Limite d'un quotient<a class="headerlink" href="#limite_dun_quotient" title="Permanent link"></a></h3>
-<details class="- tip">
-<summary>Méthode</summary>
-<p>Parfois, pour chercher la limite d'un quotient <span class="arithmatex">\(\dfrac{u_n}{v_n}\)</span> , on l'écrit comme le produit <span class="arithmatex">\(u_n\times \dfrac{1}{v_n}\)</span>.</p>
+<details class="- tip"><summary>Méthode</summary><p>Parfois, pour chercher la limite d'un quotient <span class="arithmatex">\(\dfrac{u_n}{v_n}\)</span> , on l'écrit comme le produit <span class="arithmatex">\(u_n\times \dfrac{1}{v_n}\)</span>.</p>
 </details>
 <div class="admonition info">
 <p class="admonition-title">Théorème</p>
@@ -3548,27 +3779,21 @@
 </tr>
 </table></p>
 </div>
-<details class="- example">
-<summary>Exemple</summary>
-<ol>
+<details class="- example"><summary>Exemple</summary><ol>
 <li><span class="arithmatex">\(\lim\limits_{x \to 0}~\left(e^x+x^3\right)\)</span> ?</li>
 <li><span class="arithmatex">\(\lim\limits_{x \to -\infty}\left(\dfrac{1}{x}+x^2\right)=\)</span>?</li>
 <li><span class="arithmatex">\(\lim\limits_{x \to +\infty}\left(e^ x+x^2\right)\)</span> = ?</li>
 <li><span class="arithmatex">\(\lim\limits_{x \to -\infty}\left(x+x^3\right)=\)</span> ?</li>
 <li><span class="arithmatex">\(\lim\limits_{x \to -\infty}\left(x^2+x^3\right)\)</span>  ?</li>
 </ol>
-<details class="- done">
-<summary>Réponse</summary>
-<ol>
+<details class="- done"><summary>Réponse</summary><ol>
 <li><span class="arithmatex">\(\Lim{\lim\limits_{x \to 0}~e^x&amp;=&amp; 1}{\lim\limits_{x \to 0}~x^3&amp;=&amp; 0 } \quad \text{ par somme}\quad  \lim\limits_{x \to 0}~\left(e^x+x^3\right)= 1\)</span>.</li>
 <li><span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~\dfrac{1}{x}&amp;=&amp;0^- }{\lim\limits_{x \to -\infty}~x^2&amp;=&amp; +\infty } \quad\text{ par somme}\quad  \lim\limits_{x \to -\infty}\left(\dfrac{1}{x}+x^2\right)=+\infty\)</span></li>
 <li><span class="arithmatex">\(\Lim{\lim\limits_{x \to +\infty}~e^x&amp;=&amp; +\infty }{\lim\limits_{x \to +\infty}~x^2&amp;=&amp; {\color{reponse} +\infty }} \quad \text{ par somme}\quad \lim\limits_{x \to +\infty}\left(e^x+x^2\right)={\color{reponse} +\infty }\)</span>.</li>
 <li><span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~x&amp;=&amp; {\color{reponse}-\infty}}{\lim\limits_{x \to -\infty}~x^3&amp;=&amp;{\color{reponse} -\infty }} \quad \text{ par somme}\quad \lim\limits_{x \to -\infty}\left(x+x^3\right)={\color{reponse} -\infty }\)</span>.</li>
 <li><span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~x^2&amp;=&amp; {\color{reponse} +\infty}}{\lim\limits_{x \to -\infty}~x^3&amp;=&amp; {\color{reponse} -\infty }} \quad \text{ par somme}\quad \lim\limits_{x \to -\infty}\left(x^2+x^3\right)\)</span>  est une forme indéterminée du type &laquo; <span class="arithmatex">\(\infty-\infty\)</span> &raquo;. Seule une étude particulière permet de lever l'indétermination.</li>
 </ol>
-<details class="- tip">
-<summary>Lever une FI avec une somme : astuce</summary>
-<p>On transforme l'expression en factorisant par le terme prépondérant.</p>
+<details class="- tip"><summary>Lever une FI avec une somme : astuce</summary><p>On transforme l'expression en factorisant par le terme prépondérant.</p>
 <p>Pour un polynôme, le terme prépondérant est le terme de plus haut degré.</p>
 </details>
 <p>Pour <span class="arithmatex">\(x\neq0\)</span> , <span class="arithmatex">\(x^2+x^3= x^3\left(\dfrac1x+1\right)\)</span>.</p>
@@ -3579,61 +3804,43 @@
 <p class="admonition-title">Pour <strong>les polynômes</strong> au voisinage de <strong>l'infini</strong> !</p>
 <p>La limite  d'une  <strong>fonction polynôme</strong> en <span class="arithmatex">\(+ \infty\)</span> et en <span class="arithmatex">\(-\infty\)</span> est la limite  de son terme de plus haut degré.</p>
 </div>
-<details class="- example">
-<summary>Exemple</summary>
-<p>En utilisant le théorème précédent, trouver  la limite en <span class="arithmatex">\(\pm \infty\)</span> de  <span class="arithmatex">\(3x^3+2x+1\)</span>.</p>
-<details class="- done">
-<summary>Réponse</summary>
-<p><span class="arithmatex">\(\dlim{x}{-\infty} 3x^3+2x+1 = \dlim{x}{-\infty} 3x^3=-\infty\)</span>  et <span class="arithmatex">\(\dlim{x}{+\infty} 3x^3+2x+1 = \dlim{x}{-\infty} 3x^3=+\infty\)</span>.</p>
+<details class="- example"><summary>Exemple</summary><p>En utilisant le théorème précédent, trouver  la limite en <span class="arithmatex">\(\pm \infty\)</span> de  <span class="arithmatex">\(3x^3+2x+1\)</span>.</p>
+<details class="- done"><summary>Réponse</summary><p><span class="arithmatex">\(\dlim{x}{-\infty} 3x^3+2x+1 = \dlim{x}{-\infty} 3x^3=-\infty\)</span>  et <span class="arithmatex">\(\dlim{x}{+\infty} 3x^3+2x+1 = \dlim{x}{-\infty} 3x^3=+\infty\)</span>.</p>
 </details>
 </details>
-<details class="- example">
-<summary>Exemple</summary>
-<ol>
+<details class="- example"><summary>Exemple</summary><ol>
 <li><span class="arithmatex">\(\lim\limits_{x \to 0}~[(e^x+3)\times(e^x-2)]\)</span> ?</li>
 <li><span class="arithmatex">\(\lim\limits_{x \to 0^+}\left[(x-3)\times \dfrac{1}{x}\right]\)</span> ?</li>
 <li><span class="arithmatex">\(\lim\limits_{x \to -\infty}[(x-1)\times x^3]\)</span> ?</li>
 <li><span class="arithmatex">\(\lim\limits_{x \to -\infty}\left[(x^2+1)\times \dfrac{1}{x}\right]\)</span>?</li>
 </ol>
-<details class="- done">
-<summary>Réponse</summary>
-<ol>
+<details class="- done"><summary>Réponse</summary><ol>
 <li><span class="arithmatex">\(\Lim{\lim\limits_{x \to 0}~(e^x+3)&amp;=&amp;{\color{reponse} 4} }{\lim\limits_{x\to 0}~(e^x-2)&amp;=&amp;{\color{reponse} -1}} \quad \lim\limits_{x \to 0}~[(e^x+3)\times(e^x-2)]={\color{reponse} -4}\)</span>.</li>
 <li><span class="arithmatex">\(\Lim{\lim\limits_{x \to 0^+}~(x-3)&amp;=&amp;{\color{reponse} -3 }}{\lim\limits_{x \to 0^+}~\dfrac{1}{x}&amp;=&amp; {\color{reponse} +\infty }} \quad \lim\limits_{x \to 0^+}\left[(x-3)\times \dfrac{1}{x}\right]= {\color{reponse}-\infty}\)</span></li>
 <li><span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~(x-1) &amp;=&amp; {\color{reponse}-\infty}}{\lim\limits_{x \to -\infty}~x^3&amp;=&amp; {\color{reponse}-\infty}} \quad \lim\limits_{x \to -\infty}[(x-1)\times x^3]={\color{reponse}+\infty}\)</span>. </li>
 <li><span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~(x^2+1)&amp;=&amp;{\color{reponse} +\infty}}{\lim\limits_{x \to -\infty}~\dfrac{1}{x}&amp;=&amp;{\color{reponse} 0^- }} \quad \lim\limits_{x \to -\infty}\left[(x^2+1)\times \dfrac{1}{x}\right]\)</span>  est une forme indéterminée du type &laquo; <span class="arithmatex">\(0\times \infty\)</span> &raquo;</li>
 </ol>
-<details class="- tip">
-<summary>Lever une FI avec un produit : astuce</summary>
-<p>On peut essayer de développer !</p>
+<details class="- tip"><summary>Lever une FI avec un produit : astuce</summary><p>On peut essayer de développer !</p>
 </details>
 <p><span class="arithmatex">\(f(x)=(x^2+1)\dfrac{1}{x}={\color{reponse}x+\dfrac{1}{x}}\)</span>.</p>
 <p><span class="arithmatex">\(\Lim{\lim\limits_{x\to -\infty}~x&amp;=&amp;-\infty}{\lim\limits_{x\to -\infty}~\dfrac{1}{x}&amp;=&amp;0}\)</span> d'où <span class="arithmatex">\(\lim\limits_{x\to -\infty}f(x)=-\infty\)</span>.</p>
 </details>
 </details>
-<details class="- example">
-<summary>Exemple</summary>
-<p><span class="arithmatex">\(f\)</span> est définie pour <span class="arithmatex">\(x\neq 2\)</span> par <span class="arithmatex">\(f(x) =\dfrac{1}{2-x}\)</span>. Déterminer <span class="arithmatex">\(\lim\limits_{x \to 2}\left(\dfrac{1}{2-x}\right)\)</span>?</p>
-<details class="- done">
-<summary>Réponse</summary>
-<p>Comme <span class="arithmatex">\(\dlim{x}{2} 2-x = 0\)</span>, il faut étudier le signe de la fonction <span class="arithmatex">\(f(x) = \dfrac{1}{2-x}\)</span> <em>au voisinage de</em> 2. Or <span class="arithmatex">\(1&gt;0\)</span> au voisinage de 2 (et sur tout <span class="arithmatex">\(\R\)</span>). Il suffit donc d'étudier le signe de <span class="arithmatex">\(2-x\)</span>.</p>
+<details class="- example"><summary>Exemple</summary><p><span class="arithmatex">\(f\)</span> est définie pour <span class="arithmatex">\(x\neq 2\)</span> par <span class="arithmatex">\(f(x) =\dfrac{1}{2-x}\)</span>. Déterminer <span class="arithmatex">\(\lim\limits_{x \to 2}\left(\dfrac{1}{2-x}\right)\)</span>?</p>
+<details class="- done"><summary>Réponse</summary><p>Comme <span class="arithmatex">\(\dlim{x}{2} 2-x = 0\)</span>, il faut étudier le signe de la fonction <span class="arithmatex">\(f(x) = \dfrac{1}{2-x}\)</span> <em>au voisinage de</em> 2. Or <span class="arithmatex">\(1&gt;0\)</span> au voisinage de 2 (et sur tout <span class="arithmatex">\(\R\)</span>). Il suffit donc d'étudier le signe de <span class="arithmatex">\(2-x\)</span>.</p>
 <p><a href="../../Image/Cours_011.png"><img alt="tab de signe" class="Center_lien VignetteMed" src="../../Image/Cours_011.png" /></a></p>
 <p><span class="arithmatex">\(\lim\limits_{x \to 2^+}~(2-x)={\color{reponse}0^-}    \quad \lim\limits_{x \to 2^+}~\dfrac{1}{2-x}={\color{reponse}-\infty }\)</span>.</p>
 <p><span class="arithmatex">\(\lim\limits_{x \to 2^-}~(2-x)={\color{reponse}0^+}    \quad \lim\limits_{x \to 2^-}~\dfrac{1}{2-x}={\color{reponse}+\infty}\)</span>.</p>
 </details>
 </details>
-<details class="- example">
-<summary>Exemple</summary>
-<ol>
+<details class="- example"><summary>Exemple</summary><ol>
 <li><span class="arithmatex">\(\lim\limits_{x \to -\infty}~\left(\dfrac{e^x+3}{e^x-2}\right)\)</span> ?</li>
 <li><span class="arithmatex">\(\lim\limits_{x \to -\infty}~\left(\frac{\frac{1}{x}-3}{x^2}\right)?\)</span> ?</li>
 <li><span class="arithmatex">\(\lim\limits_{x \to 3}\left(\dfrac{x-4}{3-x}\right)\)</span> ?</li>
 <li><span class="arithmatex">\(\dlim{x}{3}=\dfrac{2x-5}{-x^2+3x}\)</span> ?</li>
 <li><span class="arithmatex">\(\lim\limits_{x \to -\infty}\left(\dfrac{x-1}{x^3-2}\right)\)</span>  ?</li>
 </ol>
-<details class="- done">
-<summary>Réponse</summary>
-<p><ol>
+<details class="- done"><summary>Réponse</summary><p><ol>
 <li> <span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~(e^x+3)={\color{reponse}3}}{\lim\limits_{x\to -\infty}~(e^x-2)={\color{reponse}-2}}\)</span> \quad par quotient <span class="arithmatex">\(\lim\limits_{x \to -\infty}~\left(\dfrac{e^x+3}{e^x-2}\right)={\color{reponse} -\dfrac32}\)</span>.</li>
 <li> <span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~\frac{1}{x}-3={\color{reponse}-3}}{\lim\limits_{x\to -\infty}~x^2={\color{reponse}+\infty} }\)</span> \quad par quotient <span class="arithmatex">\(\lim\limits_{x \to -\infty}~\left(\dfrac{\frac{1}{x}-3}{x^2}\right)={\color{reponse} 0}\)</span>.</li>
 <li> Quand <span class="arithmatex">\(x\)</span> tend vers 3, le dénominateur tend vers 0 . On doit étudier le signe de <span class="arithmatex">\(f(x) = \dfrac{x-4}{3-x}\)</span> au voisinage de 3. Or <span class="arithmatex">\(x-4\)</span> est proche de <span class="arithmatex">\(3-4=-1\)</span> au voisinage de <span class="arithmatex">\(3\)</span>. Il est donc inutile de faire un tableau de signe pour le numérateur ! </p>
@@ -3646,9 +3853,7 @@
 <p><span class="arithmatex">\(\Lim{\dlim{x}{3}2x-5=1}{\dlim{x}{3^+}-x^2+3x={\color{reponse}0^-} }\)</span>\quad par quotient <span class="arithmatex">\(\dlim{x}{3^+}f(x)={\color{reponse}-\infty }\)</span>.
 </li>
 <li> <span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~(x-1)={\color{reponse}-\infty}}{\lim\limits_{x\to -\infty}~(x^3-2)={\color{reponse}-\infty}}\)</span> par quotient $ \lim\limits_{x \to -\infty}\left(\dfrac{x-1}{x^3-2}\right)$   est une forme indéterminée du type &laquo; <span class="arithmatex">\(0\times {\infty}\)</span> &raquo;</p>
-<details class="- tip">
-<summary>Lever une FI pour un quotient : astuce</summary>
-<p>On transforme l'expression en mettant en facteur le terme prépondérant au numérateur et au dénominateur. Puis on simplifie !</p>
+<details class="- tip"><summary>Lever une FI pour un quotient : astuce</summary><p>On transforme l'expression en mettant en facteur le terme prépondérant au numérateur et au dénominateur. Puis on simplifie !</p>
 </details>
 <p>Pour <span class="arithmatex">\(x\neq0\)</span> , on a <span class="arithmatex">\(\dfrac{x-1}{x^3-2}={\color{reponse}\dfrac{x\left(1-\dfrac{1}{x}\right)}{x^3\left( 1 - \dfrac{2}{x^3}\right)}=\dfrac{\left(1-\dfrac1x\right)}{1 - \dfrac{2}{x^3}} \times \dfrac{1}{x^2}}\)</span></p>
 <p><span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~1-\dfrac1x&amp;=&amp;{\color{reponse} 1}}{\lim\limits_{x \to -\infty}~1 - \dfrac{2}{x^3}&amp;=&amp; {\color{reponse} 1}} \quad \text{ par quotient } \lim\limits_{x \to -\infty}\left(\dfrac{1-\dfrac{1}{x}}{1 - \dfrac{2}{x^3}}\right)= {\color{reponse} 1}\)</span></p>
@@ -3657,28 +3862,18 @@
 </ol></p>
 </details>
 </details>
-<details class="- tip">
-<summary>Limite d'une <strong>fonction rationnelle</strong> au voisinage de <strong>l'infini</strong></summary>
-<p>La limite en <span class="arithmatex">\(+\infty\)</span> et en <span class="arithmatex">\(-\infty\)</span>  <strong>d'une fonction rationnelle</strong> (quotient de deux fonctions polynômes)  est la limite du quotient des  termes de plus haut degré du numérateur et du dénominateur (pensez à simplifier).</p>
+<details class="- tip"><summary>Limite d'une <strong>fonction rationnelle</strong> au voisinage de <strong>l'infini</strong></summary><p>La limite en <span class="arithmatex">\(+\infty\)</span> et en <span class="arithmatex">\(-\infty\)</span>  <strong>d'une fonction rationnelle</strong> (quotient de deux fonctions polynômes)  est la limite du quotient des  termes de plus haut degré du numérateur et du dénominateur (pensez à simplifier).</p>
 </details>
-<details class="- example">
-<summary>Exemple</summary>
-<ol>
+<details class="- example"><summary>Exemple</summary><ol>
 <li><span class="arithmatex">\(\dlim{x}{-\infty}\dfrac{x+4}{x^2+5}\)</span> ?</li>
 <li><span class="arithmatex">\(\dlim{x}{+\infty}\dfrac{5x-7}{2x+1}\)</span> ?</li>
 <li><span class="arithmatex">\(\lim\limits_{x\to -\infty}~\left(\dfrac{x^2+2x+1}{2x^2-3}\right)\)</span> ?</li>
 </ol>
-<details class="- done">
-<summary>Réponse</summary>
-<p>AFAIRE</p>
+<details class="- done"><summary>Réponse</summary><p>AFAIRE</p>
 </details>
 </details>
-<details class="- example">
-<summary>Exemple d'une FI &laquo; <span class="arithmatex">\(\dfrac{0}{0}\)</span> &raquo; </summary>
-<p><span class="arithmatex">\(\lim\limits_{x \to 0}~\left(\dfrac{x^2}{\sqrt{x}}\right)\)</span></p>
-<details class="- done">
-<summary>Réponse</summary>
-<p><span class="arithmatex">\(\Lim{\lim\limits_{x \to 0}~x^2&amp;=&amp; {\color{reponse} 0} }{\lim\limits_{x \to 0}~\sqrt{x}&amp;=&amp; {\color{reponse} 0} } \quad \lim\limits_{x \to 0}~\left(\dfrac{x^2}{\sqrt{x}}\right)\)</span> est une forme indéterminée  du type &laquo; <span class="arithmatex">\(\dfrac{0}{0}\)</span> &raquo;.</p>
+<details class="- example"><summary>Exemple d'une FI &laquo; <span class="arithmatex">\(\dfrac{0}{0}\)</span> &raquo; </summary><p><span class="arithmatex">\(\lim\limits_{x \to 0}~\left(\dfrac{x^2}{\sqrt{x}}\right)\)</span></p>
+<details class="- done"><summary>Réponse</summary><p><span class="arithmatex">\(\Lim{\lim\limits_{x \to 0}~x^2&amp;=&amp; {\color{reponse} 0} }{\lim\limits_{x \to 0}~\sqrt{x}&amp;=&amp; {\color{reponse} 0} } \quad \lim\limits_{x \to 0}~\left(\dfrac{x^2}{\sqrt{x}}\right)\)</span> est une forme indéterminée  du type &laquo; <span class="arithmatex">\(\dfrac{0}{0}\)</span> &raquo;.</p>
 <p><span class="arithmatex">\(\dfrac{x^2}{\sqrt{x}}={\color{reponse}\dfrac{x^2\sqrt{x}}{x}=x\sqrt{x}}\)</span>.</p>
 <p><span class="arithmatex">\(\Lim{\lim\limits_{x \to 0}~x&amp;=&amp; {\color{reponse} 0} }{\lim\limits_{x \to 0}~\sqrt{x}&amp;=&amp; {\color{reponse} 0} } \quad \lim\limits_{x \to 0}~x\sqrt{x}={\color{reponse} 0}\)</span>.</p>
 </details>
@@ -3739,25 +3934,17 @@ alors par composition <span class="arithmatex">\(\lim\limits_{
     }
 } v \left(u(x) \right)= {\color{green} c}\)</span>.</p>
 </div>
-<details class="- example">
-<summary>Exemple</summary>
-<p>Soit <span class="arithmatex">\(f\)</span> la fonction définie sur <span class="arithmatex">\(]-\infty, 2[\)</span> par <span class="arithmatex">\(f(x) =\sqrt{-2x+4}\)</span>.
+<details class="- example"><summary>Exemple</summary><p>Soit <span class="arithmatex">\(f\)</span> la fonction définie sur <span class="arithmatex">\(]-\infty, 2[\)</span> par <span class="arithmatex">\(f(x) =\sqrt{-2x+4}\)</span>.
 Déterminer la limite en 2.</p>
-<details class="- done">
-<summary>Réponse</summary>
-<p><span class="arithmatex">\(\Lim{\lim\limits_{x \to {\color{red}2}}~(-2x+4)&amp;=&amp; {\color{blue}0} }{\lim\limits_{X\to {\color{blue}0} }~\sqrt{X}&amp;=&amp; {\color{green}0}} \quad \lim\limits_{x \to 2}~\sqrt{-2x+4}= {\color{green}0}\)</span>.</p>
+<details class="- done"><summary>Réponse</summary><p><span class="arithmatex">\(\Lim{\lim\limits_{x \to {\color{red}2}}~(-2x+4)&amp;=&amp; {\color{blue}0} }{\lim\limits_{X\to {\color{blue}0} }~\sqrt{X}&amp;=&amp; {\color{green}0}} \quad \lim\limits_{x \to 2}~\sqrt{-2x+4}= {\color{green}0}\)</span>.</p>
 </details>
 </details>
-<details class="- example">
-<summary>Exemple</summary>
-<p>Soit <span class="arithmatex">\(g\)</span> la fonction définie sur <span class="arithmatex">\(\R-\{1\}\)</span> par <span class="arithmatex">\(g(x) = \exp\left(\frac{x+3}{1-x} \right)\)</span>.</p>
+<details class="- example"><summary>Exemple</summary><p>Soit <span class="arithmatex">\(g\)</span> la fonction définie sur <span class="arithmatex">\(\R-\{1\}\)</span> par <span class="arithmatex">\(g(x) = \exp\left(\frac{x+3}{1-x} \right)\)</span>.</p>
 <ol>
 <li>Déterminer la limite en <span class="arithmatex">\(-\infty\)</span>.</li>
 <li>Déterminer la limite en 1.</li>
 </ol>
-<details class="- done">
-<summary>Réponse</summary>
-<p><ol>
+<details class="- done"><summary>Réponse</summary><p><ol>
 <li> <span class="arithmatex">\(\Lim{\lim\limits_{x \to -\infty}~\dfrac{x+3}{1-x}&amp; = &amp;\lim\limits_{x \to -\infty} \dfrac{x}{-x}=\lim\limits_{x \to -\infty} -1={\color{blue}-1} }{ \lim\limits_{X\to {\color{blue}-1}} e^X &amp;=&amp; {\color{green} \ex^{-1} }} \quad \lim\limits_{x \to -\infty}~\ex^{\frac{x+3}{1-x}}= {\color{green} \ex^{-1} }\)</span>
 </li>
 <li> Etude du signe de <span class="arithmatex">\(1-x\)</span> :</p>
@@ -3769,16 +3956,10 @@ Déterminer la limite en 2.</p>
 </ol></p>
 </details>
 </details>
-<details class="- example">
-<summary>Exemple</summary>
-<p>Soit <span class="arithmatex">\(h\)</span> la fonction définie sur <span class="arithmatex">\(\R-\{0\}\)</span> par <span class="arithmatex">\(h(x)= \dfrac{\sin(2x)}{x}\)</span>.</p>
+<details class="- example"><summary>Exemple</summary><p>Soit <span class="arithmatex">\(h\)</span> la fonction définie sur <span class="arithmatex">\(\R-\{0\}\)</span> par <span class="arithmatex">\(h(x)= \dfrac{\sin(2x)}{x}\)</span>.</p>
 <p>Déterminer la limite en 0.</p>
-<details class="- done">
-<summary>Réponse</summary>
-<p>On a  une forme indéterminée  du type \og <span class="arithmatex">\(\dfrac{0}{0}\)</span> \fg.</p>
-<details class="- tip">
-<summary>Limite et taux d'accroissement</summary>
-<p>On  utilise la définition du nombre dérivé en 0 de la fonction <span class="arithmatex">\(\sin\)</span> :  <span class="arithmatex">\(\lim\limits_{x \to 0}~\dfrac{\sin(x)}{x}=1\)</span>.</p>
+<details class="- done"><summary>Réponse</summary><p>On a  une forme indéterminée  du type \og <span class="arithmatex">\(\dfrac{0}{0}\)</span> \fg.</p>
+<details class="- tip"><summary>Limite et taux d'accroissement</summary><p>On  utilise la définition du nombre dérivé en 0 de la fonction <span class="arithmatex">\(\sin\)</span> :  <span class="arithmatex">\(\lim\limits_{x \to 0}~\dfrac{\sin(x)}{x}=1\)</span>.</p>
 </details>
 <p><span class="arithmatex">\(\dfrac{\sin(2x)}{x}={\color{reponse}2 \times \dfrac{\sin(2x)}{2x}= 2\times \dfrac{\sin(X)}{X}}\)</span> avec <span class="arithmatex">\(X = 2x\)</span>.</p>
 <p><span class="arithmatex">\(\Lim{\lim\limits_{x \to 0}~2x&amp;=&amp;{\color{reponse}0}}{\lim\limits_{X\to 0}~&amp;\dfrac{\sin X}{X}=&amp;{\color{reponse} 1}} \quad \lim\limits_{x \to 0}~\dfrac{\sin(2x)}{2x}={\color{reponse}1}\)</span>
@@ -3791,6 +3972,8 @@ et ainsi <span class="arithmatex">\(\dlim{x}{0} \dfrac{\sin(2x)}{x}={\color{repo
 
 
                 
+<script src="../../../../../pyodide-mkdocs/ide.js"></script> 
+
               </article>
             </div>
           
@@ -3805,6 +3988,42 @@ et ainsi <span class="arithmatex">\(\dlim{x}{0} \dfrac{\sin(2x)}{x}={\color{repo
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+      
+        
+        <a href="../02_lim_fct_reel/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Limite au voisinage d&#39;un réel" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Limite au voisinage d'un réel
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../04_lim_fct_comp/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Limite et comparaison" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Limite et comparaison
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -3827,10 +4046,10 @@ et ainsi <span class="arithmatex">\(\dlim{x}{0} \dfrac{\sin(2x)}{x}={\color{repo
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "header.autohide"], "search": "../../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "header.autohide"], "search": "../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.b78d2936.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
       
         <script src="../../../../../javascripts/mathjax.js"></script>
       
@@ -3838,6 +4057,7 @@ et ainsi <span class="arithmatex">\(\dlim{x}{0} \dfrac{\sin(2x)}{x}={\color{repo
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
+    
     
   </body>
 </html>

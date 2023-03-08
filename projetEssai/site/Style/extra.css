@@ -230,6 +230,15 @@
 		margin-left: auto!important;
 		width : 70%!important;
 	}
+
+	.py_mk_ide + p{
+		display: none;
+	}
+
+	.py_mk_ide + p + p{
+		display: none;
+	}
+
 }
 /*
 @media print {
