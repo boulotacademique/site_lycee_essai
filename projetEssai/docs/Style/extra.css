@@ -131,7 +131,7 @@
 	}
 
 	.Center_txt {
-		text-align: center;
+		text-align: center!important;
 	}
 
 	.Center_lien{
@@ -229,6 +229,10 @@
 		margin-right: auto!important;
 		margin-left: auto!important;
 		width : 70%!important;
+	}
+
+	.Tiny{
+		font-size: 0.5em!important;
 	}
 
 	.py_mk_ide + p{

@@ -317,7 +317,25 @@
         
         </div>
 
+        <div class="Center_txt Pas_gris">
 
+        | Binaire   | 10  | 1011 |
+        |:---:|:---:|:---:|
+        | Pseudo décimal | 2   | 11 |
+        | Hexadécimal  | 2  | B |
+
+        </div>
+
+
+ 
+
+| d  | 0 | 0 | 1 | 0 |
+|:---:|:---:|:---:|:---:|:---:|
+| + | 1 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 | 0 |
+
+
+<!--
         D'où $42\,971=11 + 13\times 16 + 7 \times 16^2 + 10\times 16^3$.
         
         Donc $35\,782 = \base[16]{A7DB}$
@@ -376,7 +394,7 @@
     | Hexadécimal  | 2  | B |
 
     </div>
-    
+
     </li>
     <li> $\base{10101110}$
         
@@ -511,7 +529,7 @@ Nous croiserons à nouveau ces deux notions dans le chapitre sur les booléens.
 <!--%\begin{att}
 %Addition\\ &laquo; complément &raquo; \\ Comparaison de binaire, ordre ?
 %\end{att}-->
-
+<!--
 ## \'Ecriture d'un entier en base 2
 
 !!! tip "Méthode pour écrire un nombre négatif en binaire"
@@ -536,61 +554,58 @@ Nous croiserons à nouveau ces deux notions dans le chapitre sur les booléens.
 
 ???+ example "Exemple"
     On obtient donc :
-     Entiers  naturels  Binaire  Entiers relatifs |
-     
-    16 | 1 | 1 | 0 | 0 | 0 |    |
-     
-    15 |   | 1 | 1 | 1 | 1 | -1 |
-     
-    14 |   | 1 | 1 | 1 | 0 | -2 |
-     
-    13 |   | 1 | 1 | 0 | 1 | -3 |
-     
-    12 |   | 1 | 1 | 0 | 0 | -4 |
-     
-    11 |   | 1 | 0 | 1 | 1 | -5 |
-     
-    10 |   | 1 | 0 | 1 | 0 | -6 |
-     
-    9 |   | 1 | 0 | 0 | 1 | -7 |
-     
-    8 |   | 1 | 0 | 0 | 0 | -8 |
-     
-    7 |   | 0 | 1 | 1 | 1 | 7  |
-     
-    6 |   | 0 | 1 | 1 | 0 | 6  |
-     
-    5 |   | 0 | 1 | 0 | 1 | 5  |
-     
-    4 |   | 0 | 1 | 0 | 0 | 4  |
-     
-    3 |   | 0 | 0 | 1 | 1 | 2  |
-     
-    2 |   | 0 | 0 | 1 | 0 | 2  |
-     
-    1 |   | 0 | 0 | 0 | 1 | 1  |
-     
-    0 |   | 0 | 0 | 0 | 0 | 0  |
-     
+    
+    <table class="AvecBordure">
+    <tr><td> Entiers naturels </td> <td class="Center_txt" colspan="5">Binaire </td><td> Entiers relatifs </td></tr>
+    <tr><td> 16 </td><td> 1 </td><td> 1 </td><td> 0 </td><td> 0 </td><td> 0 </td><td> </tr>
+    <tr><td> 15 </td><td>   </td><td> 1 </td><td> 1 </td><td> 1 </td><td> 1 </td><td> -1 </td></tr>
+    <tr><td> 14 </td><td>   </td><td> 1 </td><td> 1 </td><td> 1 </td><td> 0 </td><td> -2  </td></tr>
+    <tr><td> 13 </td><td>   </td><td> 1 </td><td> 1 </td><td> 0 </td><td> 1 </td><td> -3  </td></tr>
+    <tr><td> 12 </td><td>   </td><td> 1 </td><td> 1 </td><td> 0 </td><td> 0 </td><td> -4  </td></tr>
+    <tr><td> 11 </td><td>   </td><td> 1 </td><td> 0 </td><td> 1 </td><td> 1 </td><td> -5  </td></tr>
+    <tr><td> 10 </td><td>   </td><td> 1 </td><td> 0 </td><td> 1 </td><td> 0 </td><td> -6  </td></tr>
+    <tr><td> 9 </td><td>   </td><td> 1 </td><td> 0 </td><td> 0 </td><td> 1 </td><td> -7  </td></tr>
+    <tr><td> 8 </td><td>   </td><td> 1 </td><td> 0 </td><td> 0 </td><td> 0 </td><td> -8  </td></tr>
+    <tr><td> 7 </td><td>   </td><td> 0 </td><td> 1 </td><td> 1 </td><td> 1 </td><td> 7   </td></tr>
+    <tr><td> 6 </td><td>   </td><td> 0 </td><td> 1 </td><td> 1 </td><td> 0 </td><td> 6   </td></tr>
+    <tr><td> 5 </td><td>   </td><td> 0 </td><td> 1 </td><td> 0 </td><td> 1 </td><td> 5   </td></tr>
+    <tr><td> 4 </td><td>   </td><td> 0 </td><td> 1 </td><td> 0 </td><td> 0 </td><td> 4   </td></tr>
+    <tr><td> 3 </td><td>   </td><td> 0 </td><td> 0 </td><td> 1 </td><td> 1 </td><td> 2   </td></tr>
+    <tr><td> 2 </td><td>   </td><td> 0 </td><td> 0 </td><td> 1 </td><td> 0 </td><td> 2   </td></tr>
+    <tr><td> 1 </td><td>   </td><td> 0 </td><td> 0 </td><td> 0 </td><td> 1 </td><td> 1   </td></tr>
+    <tr><td> 0 </td><td>   </td><td> 0 </td><td> 0 </td><td> 0 </td><td> 0 </td><td> 0   </td></tr>
+    </table>
 
-<ul>
-</li>
-<li> Le nombre de bits à utiliser est un contrainte ! Mais $5$ codé sur 4 chiffres est \base{0101} et sur 8 chiffres \base{0000\ 0101}.
-$-5$ codé sur 4 chiffres est \base{1011} et sur 8 chiffres \base{1111\ 1011}. Il suffit de répéter le chiffre le plus à gauche!
-</li>
-<li> L'addition &laquo; classique&raquo; fonctionne, à condition de ne pas tenir compte du 5ème bit (la dernière retenue).
-\begin{center}
-\begin{tabular}{*{5}{c}}
-  & 0 & 0 & 1 & 0\\
-+ & 1 & 1 & 1 & 0 \\
-\hline
- {\tiny 1 }& 0 & 0 & 0 & 0
-\end{tabular}
-\end{center}
-</li>
-</ul>
- 
-\end{minipage}
+     
+!!! tip "Et si on change le nombre de bits utilisés ?"
+    Le nombre de bits à utiliser est un contrainte ! Mais $5$ codé sur 4 chiffres est $\base{0101}$ et sur 8 chiffres $\base{0000\ 0101}$.
+
+    $-5$ codé sur 4 chiffres est $\base{1011}$ et sur 8 chiffres $\base{1111\ 1011}$. Il suffit de répéter le chiffre le plus à gauche!
+
+L'addition &laquo; classique &raquo; fonctionne, à condition de ne pas tenir compte du 5ème bit (la dernière retenue).
+-->
+
+
+<div class="Center_txt Pas_gris">
+
+| Binaire   | 10  | 1011 |
+|:---:|:---:|:---:|
+| Pseudo décimal | 2   | 11 |
+| Hexadécimal  | 2  | B |
+
+</div>
+
+
+<div class="Center_txt Pas_gris">
+
+| d  | 0 | 0 | 1 | 0 |
+|:---:|:---:|:---:|:---:|:---:|
+| + | 1 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 | 0 |
+
+</div>
+
+
 
 ???+ example "Exemple"
 \'Ecrire en binaire les entiers suivants :
