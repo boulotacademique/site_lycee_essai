@@ -25,7 +25,7 @@
 	- Si $q \leq-1$ alors la suite $ q^n$ n'a pas de limite.
 
 
-Dessiner à la calculatrice les termes de la  suite $1,8^n$ , $(-0,7)^n $ et $(-1,2)^n$
+Dessiner à la calculatrice les termes de la  suite $1,8^n$ , $(-0,7)^n$ et $(-1,2)^n$
 
 
 ??? question "Exercice"

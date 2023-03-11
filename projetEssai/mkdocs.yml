@@ -154,7 +154,6 @@ nav:
         - "Cours/Première NSI/Codage/Au programme/Le son/c01.md"
         - "Cours/Première NSI/Codage/Au programme/Les flottants suite/c01.md"
         - "Cours/Première NSI/Codage/Au programme/Les images/c01.md"
-        - "Cours/Première NSI/Codage/Les bases/Hexadécimal/c01.md"
         - "Cours/Première STI2D/c01.md"
         - "Cours/Première générale/c01.md"
         - "Cours/Seconde/c01.md"
@@ -184,7 +183,10 @@ nav:
                 - "Les dictionnaires" : "Cours/Première NSI/Python/Structures/dico.md"
         - Codage :
             - Les bases :
-                - "Codage d'entier": "Cours/Première NSI/Codage/Les bases/Binaire/01_codage_entier.md"
+                - "Codage d'entier positif": "Cours/Première NSI/Codage/Les bases/Binaire/01_codage_entier.md"
+                - "Codage d'entier négatif": "Cours/Première NSI/Codage/Les bases/Binaire/02_codage_negatif.md"
+                - "Codage en hexadécimal": "Cours/Première NSI/Codage/Les bases/Hexadécimal/03_hexadécimal.md"
+                - "Codage des caractères : ASCII" : "Cours/Première NSI/Codage/Les bases/Les_caracteres/04_caract_ASCII.md"
     #- Première STI2D: "Cours/Première STI2D/c01.md"
     #- Terminale STI2D: "Cours/Terminale STI2D/c01.md"
     #- Première générale: "Cours/Première générale/c01.md"

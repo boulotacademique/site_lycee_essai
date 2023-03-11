@@ -35,7 +35,8 @@
     
     alors $\lim\limits_{n \to +\infty}~v_n=\ell$.
 
-    <a href="../Image/Cours_004.png" ><img src="../Image/Cours_004.png" alt="Th d'encadrement" style="width:15%;" class="Center VignetteMed"/></a>
+    [![Th d'encadrement](../Image/Cours_004.png){.Center_lien .Vignette}](../Image/Cours_004.png)
+    
 
 ???- example "Exemple"
 

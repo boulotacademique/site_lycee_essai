@@ -65,7 +65,7 @@ Donc $g$ est une solution de $y''+9y=0$.
 \end{Solub}-->
 
 
-???- tip ""
+???- tip "Une infinité de solution"
     Une équation différentielle possède une infinité de solution.
 
     Cas d'une équation différentielle linéaire :
