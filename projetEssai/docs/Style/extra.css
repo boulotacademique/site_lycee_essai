@@ -235,13 +235,18 @@
 		font-size: 0.5em!important;
 	}
 
-	.py_mk_ide + p{
+	/*.py_mk_ide + p{
 		display: none;
 	}
 
 	.py_mk_ide + p + p{
 		display: none;
 	}
+
+
+	.py_mk_hide + p + p{
+		display: none;
+	}*/
 
 }
 /*

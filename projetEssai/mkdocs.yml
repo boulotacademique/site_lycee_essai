@@ -152,7 +152,6 @@ nav:
         - "Cours/Première NSI/c01.md"
         - "Cours/Première NSI/Accueil/c01.md"
         - "Cours/Première NSI/Codage/Au programme/Le son/c01.md"
-        - "Cours/Première NSI/Codage/Au programme/Les flottants suite/c01.md"
         - "Cours/Première NSI/Codage/Au programme/Les images/c01.md"
         - "Cours/Première STI2D/c01.md"
         - "Cours/Première générale/c01.md"
@@ -160,14 +159,14 @@ nav:
         - "Cours/Terminale STI2D/c01.md"
         - "Cours/Terminale générale/Derivation_et_convexite/01_Fonction_derivable.md"
         - "Cours/Terminale générale/Esp_ortho/Esp_ortho_prog/ortho_esp_dem.md"
-        - "my_theme_customizations/pyodide-mkdocs/end_REM.md"
-        - "my_theme_customizations/pyodide-mkdocs/start_REM.md"
+        - "my_theme_customizations/pyodide-mkdocs/end_REM.md" 
+        - "my_theme_customizations/pyodide-mkdocs/start_REM.md" 
     - Accueil: "index.md"
     #- Seconde: "Cours/Seconde/c01.md"
     - Première NSI: 
         - Présentation: "Cours/Première NSI/Présentation/c01.md"
         - Python:
-            - Les bases:
+            - Les bases:  
                 - "Bien écrire en python": "Cours/Première NSI/Python/Les bases/ortho.md"
                 - "Variables, opérations" : "Cours/Première NSI/Python/Les bases/variables.md"
                 - "print/input": "Cours/Première NSI/Python/Les bases/in_out.md"                
@@ -187,6 +186,14 @@ nav:
                 - "Codage d'entier négatif": "Cours/Première NSI/Codage/Les bases/Binaire/02_codage_negatif.md"
                 - "Codage en hexadécimal": "Cours/Première NSI/Codage/Les bases/Hexadécimal/03_hexadécimal.md"
                 - "Codage des caractères : ASCII" : "Cours/Première NSI/Codage/Les bases/Les_caracteres/04_caract_ASCII.md"
+                - "Codage des caractères et python" : "Cours/Première NSI/Codage/Les bases/Les_caracteres/05_iso-8859-1.md"
+                - "Codage des réels" : "Cours/Première NSI/Codage/Les bases/Les flottants/01_manip_reel.md"
+            - Au programme:
+                - "Codage des caractères : ISO-8859-15" : "Cours/Première NSI/Codage/Au programme/Les_caracteres_suite/06_iso-8859-15.md"
+                - "Codage des caractères : UTF-8" : "Cours/Première NSI/Codage/Au programme/Les_caracteres_suite/07_UTF8.md" 
+                - "Codage des réels (suite)" :  "Cours/Première NSI/Codage/Au programme/Les flottants_suite/02_flottant.md"
+
+## ISO-8859-15 (Facultatif)
     #- Première STI2D: "Cours/Première STI2D/c01.md"
     #- Terminale STI2D: "Cours/Terminale STI2D/c01.md"
     #- Première générale: "Cours/Première générale/c01.md"

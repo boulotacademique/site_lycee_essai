@@ -213,7 +213,7 @@
 
 
 !!! tip "Convertir un binaire en décimal"
-    À partir de $a=\left( a_n a_{n-1} \ldots a_0\right)_2$, on calcule : $a_0 + a_1 \times 2 + a_2 \times 2^2 + \ldots + a_n \times 2^n  = \displaystyle\sum_{i=0}^{n} a_i \times 2^i$.
+    <span id="bin_en_dec">À partir</span> de $a=\left( a_n a_{n-1} \ldots a_0\right)_2$, on calcule : $a_0 + a_1 \times 2 + a_2 \times 2^2 + \ldots + a_n \times 2^n  = \displaystyle\sum_{i=0}^{n} a_i \times 2^i$.
 
     On peut aussi utiliser l'algorithme d'Hörner (cf exercice).
  
