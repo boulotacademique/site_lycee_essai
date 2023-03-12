@@ -239,88 +239,78 @@ Pour le représenter, il faut coder ces éléments. On notera alors $c(s)$ le co
 
 
  
-\begin{tabular}{|>{\centering}m{4cm}|*{4}{>{\centering}m{2cm}|}|>{\centering}m{2cm}|}
+
  
- | $c(s)$ | $c(e)$ | $c(m)$ | total | Décalage $d$ ou biais |
- 
-Simple précision | 1 bit | 8 bits | 23 bits | 32 bits | 127 |
- 
-Double précision | 1 bit | 11 bits | 52 bits | 64 bits | \np{1023}|
- 
-Précision étendue | 1 bit | 15 bits | 64 bits | 80 bits | \np{16383} |
- 
- 
+| | $c(s)$ | $c(e)$ | $c(m)$ | total | Décalage $d$ ou biais |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|Simple précision | 1 bit | 8 bits | 23 bits | 32 bits | 127 |
+|Double précision | 1 bit | 11 bits | 52 bits | 64 bits | \np{1023}|
+|Précision étendue | 1 bit | 15 bits | 64 bits | 80 bits | \np{16383} |
  
 
+!!! tip "Organisation du codage"
+    <ul>
+    <li> Un bit pour le signe $0$ si le réel est positif, $1$ sinon. Donc $c(s)=0$ ou $c(s) = 1$.</li>
+    <li> On écrit ensuite la valeur absolue du réel sous la forme d'un nombre binaire à virgule (avec autant de bits que nécessaires\footnotemark) $1,m \times 2^e$ avec $e$ compris entre $-d-1$ et $d$.</li>
+    <li> Alors le code de l'exposant $c(e)$ se trouve avec la relation $\base[10]{c(e)}=e+d$. Comme $c(e)\geq 0$, on l'écrit en binaire comme un entier naturel sur le nombre de bits nécessaires.</li>
+    <li> À partir de $1,m$, on trouve la mantisse (en base 2). On ne code pas le premier $1$. On conserve et/ou on rajoute des $0$ pour obtenir le nombre de chiffres qu'il faut (cf tableau plus haut)</li>
+    <li> On range alors dans l'ordre (et sans les espaces !): 
 
-!!! tip " "
-<ul>
-<li> Un bit pour le signe $0$ si le réel est positif, $1$ sinon. Donc $c(s)=0$ ou $c(s) = 1$.
-</li>
-<li> On écrit ensuite la valeur absolue du réel sous la forme d'un nombre binaire à virgule (avec autant de bits que nécessaires\footnotemark) $1,m \times 2^e$ avec $e$ compris entre $-d-1$ et $d$.
-</li>
-<li> Alors le code de l'exposant $c(e)$ se trouve avec la relation $\base[10]{c(e)}=e+d$. Comme $c(e)\geq 0$, on l'écrit en binaire comme un entier naturel sur le nombre de bits nécessaires.
-</li>
-<li> À partir de $1,m$, on trouve la mantisse (en base 2). On ne code pas le premier $1$. On conserve et/ou on rajoute des $0$ pour obtenir le nombre de chiffres qu'il faut (cf tableau plus haut)
-</li>
-<li> On range alors dans l'ordre (et sans les espaces !):
- 
-signe exposant mantisse
- 
-</li>
-</ul>
-\end{methode}
+    signe exposant mantisse 
+    </li>
+    </ul>
+
 
 \footnotetext{cela dépend de la précision, mais aussi de la position du premier 1}
 
 ???+ example "Exemple"
-Convertir en binaire à virgule flottant selon la norme \textbf{IEEE 754}, les réels suivants :
-\begin{enumerate}[a)]
-</li>
-<li> $\base[10]{-5.375}$ en simple précision.\\
-\begin{comment}
-\vspace{6cm}
-\end{comment}
-\begin{Solub}
-<ul>
-<li> le bit de signe : $c(s)=1$.
-</li>
-<li> On écrit $5.375$ en nombre à virgule binaire. $5.375=1\times 2^2 + 0\times 2 + 1 + 0\times 2^{-1}+ 1\times 2^{-2}+ 1\times 2^{-3}$. Donc l'écriture scientifique est $1.01011 \times 2^2$.
-</li>
-<li> Donc $e=2$ et pour une simple précision le décalage est 127. D'où $\base[10]{c(e)}=2+127=129$. $129$ écrit en binaire sur un octet est $\base{c(e)}=1000\ 0001$
-</li>
-<li> De $1.01011$, on ne conserve que $01011$. On rajoute les $0$ pour avoir 23 bits (en simple précision). Donc la mantisse est $010\ 1100\ 0000\ 0000\ 0000\ 0000$.
-</li>
-<li> Donc $-5.375$ va s'écrire (sans les espaces) :
-\[ {\color{green!50!black}1}\ {\redP1000\ 0001}\ {\blu 010\ 1100\ 0000\ 0000\ 0000\ 0000} \]
-Rque : le découpage naturel en binaire est :$1100\ 0000\ 1010\ 1100\ 0000\ 0000\ 0000\ 0000$.\\
-Ce qui permettra d'écrire en hexadécimal : $C0\ AC\ 00\ 00 $
-</li>
-</ul>
-\end{Solub}
-</li>
-<li> $\base[10]{1039,0}$ (vu comme un réel) en simple précision.\\
-\begin{comment}
-\vspace{ 6cm}
-\end{comment}
-\begin{Solub}
-<ul>
-<li> le bit de signe : $c(s)=0$.
-</li>
-<li> On écrit $1039$ en nombre à virgule binaire. $1039=1024+8+4+2+1=1\times 2^{10}+1 \times 2^3+1 \times 2^2+1 \times 2+1=\base{100\ 0000\ 1111}$. Donc l'écriture scientifique est $1.0000001111 \times 2^{10}$.
-</li>
-<li> Donc $e=10$ et pour une simple précision le décalage est 127. D'où $\base[10]{c(e)}=10+127=137$. $137$ écrit en binaire sur un octet est $c(e)=1000\ 1001$
-</li>
-<li> De $1.0000001111$, on ne conserve que $0000001111$. On rajoute les $0$ pour avoir 23 bits (en simple précision). Donc la mantisse est $000\ 0001\ 1110\ 0000\ 0000\ 0000$.
-</li>
-<li> Donc $1039.0$ va s'écrire (sans les espaces) :
-\[ {\color{green!50!black}0}\ {\redP1000\ 1001}\ {\blu 000\ 0001\ 1110\ 0000\ 0000\ 0000} \]
-Rque : le découpage naturel en binaire est :$0100\ 0100\ 1000\ 0001\ 1110\ 0000\ 0000\ 0000$.\\
-Ce qui permettra d'écrire en hexadécimal : $44\ 81\ E0\ 00 $
-</li>
-</ul>
-\end{Solub}
-\end{enumerate}
+    Convertir en binaire à virgule flottant selon la norme \textbf{IEEE 754}, les réels suivants :
+    <ol>
+    <li> $\base[10]{-5.375}$ en simple précision.</li>
+    <li> $\base[10]{1039,0}$ (vu comme un réel) en simple précision.</li>
+    </ol>
+
+
+    ???+ done "Réponse"
+        <ol>
+        <li>
+        <ul>
+        <li> le bit de signe : $c(s)=1$.
+        </li>
+        <li> On écrit $5.375$ en nombre à virgule binaire. $5.375=1\times 2^2 + 0\times 2 + 1 + 0\times 2^{-1}+ 1\times 2^{-2}+ 1\times 2^{-3}$. Donc l'écriture scientifique est $1.01011 \times 2^2$.
+        </li>
+        <li> Donc $e=2$ et pour une simple précision le décalage est 127. D'où $\base[10]{c(e)}=2+127=129$. $129$ écrit en binaire sur un octet est $\base{c(e)}=1000\ 0001$
+        </li>
+        <li> De $1.01011$, on ne conserve que $01011$. On rajoute les $0$ pour avoir 23 bits (en simple précision). Donc la mantisse est $010\ 1100\ 0000\ 0000\ 0000\ 0000$.
+        </li>
+        <li> Donc $-5.375$ va s'écrire (sans les espaces) :
+        \[ {\color{green!50!black}1}\ {\redP1000\ 0001}\ {\blu 010\ 1100\ 0000\ 0000\ 0000\ 0000} \]
+        Rque : le découpage naturel en binaire est :$1100\ 0000\ 1010\ 1100\ 0000\ 0000\ 0000\ 0000$.\\
+        Ce qui permettra d'écrire en hexadécimal : $C0\ AC\ 00\ 00 $
+        </li>
+        </ul>
+        </li>
+ 
+        <li>
+        <ul>
+        <li> le bit de signe : $c(s)=0$.
+        </li>
+        <li> On écrit $1039$ en nombre à virgule binaire. $1039=1024+8+4+2+1=1\times 2^{10}+1 \times 2^3+1 \times 2^2+1 \times 2+1=\base{100\ 0000\ 1111}$. Donc l'écriture scientifique est $1.0000001111 \times 2^{10}$.
+        </li>
+        <li> Donc $e=10$ et pour une simple précision le décalage est 127. D'où $\base[10]{c(e)}=10+127=137$. $137$ écrit en binaire sur un octet est $c(e)=1000\ 1001$
+        </li>
+        <li> De $1.0000001111$, on ne conserve que $0000001111$. On rajoute les $0$ pour avoir 23 bits (en simple précision). Donc la mantisse est $000\ 0001\ 1110\ 0000\ 0000\ 0000$.
+        </li>
+        <li> Donc $1039.0$ va s'écrire (sans les espaces) :
+        \[ {\color{green!50!black}0}\ {\redP1000\ 1001}\ {\blu 000\ 0001\ 1110\ 0000\ 0000\ 0000} \]
+        Rque : le découpage naturel en binaire est :$0100\ 0100\ 1000\ 0001\ 1110\ 0000\ 0000\ 0000$.\\
+        Ce qui permettra d'écrire en hexadécimal : $44\ 81\ E0\ 00 $
+        </li>
+        </ul>
+        </li>
+        </ol>
+ 
+
  
 
 

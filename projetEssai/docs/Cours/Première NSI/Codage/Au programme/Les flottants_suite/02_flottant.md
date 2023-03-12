@@ -208,3 +208,129 @@ correspond à une précision de l’ordre de $10^{-15}$ (15 décimales) sur la m
 Par ailleurs, comme l’exposant et la mantisse sont stockés indépendamment, l’ordre de grandeur (qui vient de l'exposant) n’a aucune influence sur la précision de la mantisse, ce qui est parfait pour les calculs mêlant divers ordres de grandeur. En somme, il suffit de quelques dizaines de bits pour stocker tout le nécessaire, c’est-à-dire la taille des mots machine usuels. Par conséquent, on arrive à obtenir assez facilement une représentation performante des réels.
 
 Le nombre et l’organisation exacte des bits formant un flottant sont définis dans ce qu’on appelle des formats (des normes) de nombres à virgule flottante. Il existe différents formats standards, dont le plus utilisé est un format binaire sur 64 bits (ou double précision). Pour des raisons de longueur d'écriture, nous traiterons plutôt des exemples avec un format binaire sur 32 bits (simple précision).
+
+### La méthode
+
+Notation : L'écriture d'un nombre scientifique d'un nombre binaire est donc $signe \times mantisse \times 2^{exposant}$.
+
+Comme la mantisse pourra toujours s'écrire sous la forme $1,m$, on le notera $s \times 1,m \times 2^e$.
+
+Pour le représenter, il faut coder ces éléments. On notera alors $c(s)$ le codage (en binaire) associé $s$, $c(m)$ celui associé à $m$ et $c(e)$ celui associé à $e$.
+
+
+ 
+<div class="Center_txt Pas_gris">
+ 
+| | $c(s)$ | $c(e)$ | $c(m)$ | total | Décalage $d$ ou biais |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|Simple précision | 1 bit | 8 bits | 23 bits | 32 bits | 127 |
+|Double précision | 1 bit | 11 bits | 52 bits | 64 bits | \np{1023}|
+|Précision étendue | 1 bit | 15 bits | 64 bits | 80 bits | \np{16383} |
+
+</div>
+ 
+
+!!! tip "Organisation du codage"
+    <ul>
+    <li> Un bit pour le signe $0$ si le réel est positif, $1$ sinon. Donc $c(s)=0$ ou $c(s) = 1$.</li>
+    <li> On écrit ensuite la valeur absolue du réel sous la forme d'un nombre binaire à virgule (avec autant de bits que nécessaires\footnotemark) $1,m \times 2^e$ avec $e$ compris entre $-d-1$ et $d$.</li>
+    <li> Alors le code de l'exposant $c(e)$ se trouve avec la relation $\base[10]{c(e)}=e+d$. Comme $c(e)\geq 0$, on l'écrit en binaire comme un entier naturel sur le nombre de bits nécessaires.</li>
+    <li> À partir de $1,m$, on trouve la mantisse (en base 2). On ne code pas le premier $1$. On conserve et/ou on rajoute des $0$ pour obtenir le nombre de chiffres qu'il faut (cf tableau plus haut)</li>
+    <li> On range alors dans l'ordre (et sans les espaces !): 
+
+    signe exposant mantisse 
+    </li>
+    </ul>
+
+
+???+ example "Exemple"
+    Convertir en binaire à virgule flottant selon la norme \textbf{IEEE 754}, les réels suivants :
+    <ol>
+    <li> $\base[10]{-5.375}$ en simple précision.</li>
+    <li> $\base[10]{1039,0}$ (vu comme un réel) en simple précision.</li>
+    </ol>
+
+
+    ???+ done "Réponse"
+        <ol>
+        <li>
+        <ul>
+        <li> le bit de signe : ${\color{green}c(s)=1}$.
+        </li>
+        <li> On écrit $5.375$ en nombre à virgule binaire. $5.375=1\times 2^2 + 0\times 2 + 1 + 0\times 2^{-1}+ 1\times 2^{-2}+ 1\times 2^{-3}$. Donc l'écriture scientifique est $1.01011 \times 2^2$.
+        </li>
+        <li> Donc $e=2$ et pour une simple précision le décalage est 127. D'où $\base[10]{c(e)}=2+127=129$. $129$ écrit en binaire sur un octet est $\color{red}\base{c(e)}=1000\ 0001$
+        </li>
+        <li> De $1.01011$, on ne conserve que $01011$. On rajoute les $0$ pour avoir 23 bits (en simple précision). Donc la mantisse est $\color{blue}010\ 1100\ 0000\ 0000\ 0000\ 0000$.
+        </li>
+        <li> Donc $-5.375$ va s'écrire (sans les espaces) :
+        
+        \[ 
+        {\color{green} 1}\ {\color{red}1000\ 0001}\ \color{blue}010\ 1100\ 0000\ 0000\ 0000\ 0000 
+        \]
+        
+        </li>
+        
+        Rque : le découpage naturel en binaire est :$1100\ 0000\ 1010\ 1100\ 0000\ 0000\ 0000\ 0000$.
+
+        Ce qui permettra d'écrire en hexadécimal : C0 AC 00 00.
+        </ul>
+        </li>
+ 
+        <li>
+        <ul>
+        <li> le bit de signe : $\color{green}c(s)=0$.
+        </li>
+        <li> On écrit $1039$ en nombre à virgule binaire. $1039=1024+8+4+2+1=1\times 2^{10}+1 \times 2^3+1 \times 2^2+1 \times 2+1=\base{100\ 0000\ 1111}$. Donc l'écriture scientifique est $1.0000001111 \times 2^{10}$.
+        </li>
+        <li> Donc $e=10$ et pour une simple précision le décalage est 127. D'où $\base[10]{c(e)}=10+127=137$. $137$ écrit en binaire sur un octet est $\color{red}c(e)=1000\ 1001$
+        </li>
+        <li> De $1.0000001111$, on ne conserve que $0000001111$. On rajoute les $0$ pour avoir 23 bits (en simple précision). Donc la mantisse est $\color{blue}000\ 0001\ 1110\ 0000\ 0000\ 0000$.
+        </li>
+        <li> Donc $1039.0$ va s'écrire (sans les espaces) :
+        
+        \[
+        {\color{green}0}\ {\color{red}1000\ 1001}\ {\color{blue} 000\ 0001\ 1110\ 0000\ 0000\ 0000}
+        \]
+
+        </li>
+        
+        Rque : le découpage naturel en binaire est : $0100\ 0100\ 1000\ 0001\ 1110\ 0000\ 0000\ 0000$.
+
+        Ce qui permettra d'écrire en hexadécimal : 44 81 E0 00
+        </ul>
+        </li>
+        </ol>
+
+???+ warning "Code particulier"
+    La norme IEEE 754 impose à certains codes une association. Il faut retenir qu'en simple précision :
+    <ul>
+    <li> Zéro : 
+    
+    \[
+    {\color{green}?}\ {\color{red}0000\ 0000}\ {\color{blue} 000\ 0000\ 0000\ 0000\ 0000\ 0000}
+    \]
+    
+    est associé au 0 (zéro). C'est le code où il n'y a que des zéros (sauf pour le signe qui peut-être un 0 ou un 1).
+    </li>
+    <li> des nombres &laquo; dénormalisés &raquo;
+    
+    \[ {\color{green}?}\ {\color{red}0000\ 0000}\ {\color{blue} \text{au moins un bit à 1} } \]
+
+    Pour des nombres très petits !
+    </li>
+    <li> l'infini 
+
+    \[ {\color{green}?}\ {\color{red}1111\ 1111}\ {\color{blue} 000\ 0000\ 0000\ 0000\ 0000\ 0000} \]
+    
+    est associé à l'infini. C'est le code où il n'y a que des uns pour l'exposant.
+    </li>
+    <li> Not a Number
+    
+    \[ {\color{green}1}\ {\color{red}1111\ 1111}\ {\color{blue} \text{au moins un bit à 1}} \]
+    
+    est associé à ```NaN``` (comme $0/0$, $\infty / \infty$, $\sqrt{-2}$ \ldots).
+    </li>
+    </ul>
+
+

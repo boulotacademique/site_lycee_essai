@@ -239,6 +239,10 @@
 		display: none;
 	}
 
+	.Vert{
+		color: green;
+	}
+
 	/*.py_mk_ide + p{
 		display: none;
 	}
