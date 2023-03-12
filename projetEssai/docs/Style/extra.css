@@ -235,6 +235,10 @@
 		font-size: 0.5em!important;
 	}
 
+	.Py_eff{
+		display: none;
+	}
+
 	/*.py_mk_ide + p{
 		display: none;
 	}

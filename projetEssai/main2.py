@@ -377,19 +377,19 @@ def define_env(env):
 
         block_remark = ""
         if script_name != "":
-            block_remark = f"""<span class="Py_eff">
-{leading_spaces}--8<--- "{get_custom_dir()}/pyodide-mkdocs/start_REM.md"</span>
+            block_remark = f"""
+{leading_spaces}<!--- "{get_custom_dir()}/pyodide-mkdocs/start_REM.md "-->
 """
             filepath = get_filepath()
             block_remark += (
-                f'''<span class="Py_eff">
-{leading_spaces}--8<--- "docs/{filepath if filepath != "" else "scripts"}/{script_name}_REM.md"</span>'''
+                f'''
+{leading_spaces}<!--- "docs/{filepath if filepath != "" else "scripts"}/{script_name}_REM.md"-->'''
                 if key_ide == ""
                 else f""
             )
 
-            block_remark += f"""<span class="Py_eff">
-{leading_spaces}--8<--- "{get_custom_dir()}/pyodide-mkdocs/end_REM.md"</span>
+            block_remark += f"""
+{leading_spaces}<!--- "{get_custom_dir()}/pyodide-mkdocs/end_REM.md "-->
 """
         return block_remark
 
