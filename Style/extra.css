@@ -131,7 +131,7 @@
 	}
 
 	.Center_txt {
-		text-align: center;
+		text-align: center!important;
 	}
 
 	.Center_lien{
@@ -231,13 +231,30 @@
 		width : 70%!important;
 	}
 
-	.py_mk_ide + p{
+	.Tiny{
+		font-size: 0.5em!important;
+	}
+
+	.Py_eff{
+		display: none;
+	}
+
+	.Vert{
+		color: green;
+	}
+
+	/*.py_mk_ide + p{
 		display: none;
 	}
 
 	.py_mk_ide + p + p{
 		display: none;
 	}
+
+
+	.py_mk_hide + p + p{
+		display: none;
+	}*/
 
 }
 /*
