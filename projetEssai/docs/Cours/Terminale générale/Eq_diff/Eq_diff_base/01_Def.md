@@ -1,4 +1,4 @@
-# Equation différentielle
+# Equation différentielle : Définition
 
 
 !!! info "Défintion d'une équation différentielle"
@@ -72,7 +72,15 @@ Donc $g$ est une solution de $y''+9y=0$.
 
     Les fonctions de la formes $f(x)=C \times \ex^{-\dfrac{1}{2}x} + 5x-10$ où $C$ est un réel quelconque sont toutes des solutions de $2y'+y=5x$.
 
-    <iframe scrolling="no" title="Eq diff linéaire" src="https://www.geogebra.org/material/iframe/id/z28bfpau/width/1296/height/500/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1296px" height="500px" style="border:0px;"> </iframe>
+    <div class="Ggb_iframe">
+    
+    [![Solution d'eq diff](../Image/Eq_diff_ggb01.png){.Center_lien .VignetteMed}](https://www.geogebra.org/m/juupw9cp)
+
+    [Lien vers un image plus grande](../Image/Eq_diff_ggb01.png){.Print_eff}
+
+    <!--<iframe scrolling="no" title="Eq diff linéaire" src="https://www.geogebra.org/material/iframe/id/z28bfpau/width/1296/height/500/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1296px" height="500px" style="border:0px;"> </iframe>-->
+
+    </div>
 
 
 

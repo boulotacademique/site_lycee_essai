@@ -3,7 +3,7 @@ site_author: Lycée
 site_url: https://boulotacademique.github.io/site_lycee_essai/
 
 repo_url: https://github.com/boulotacademique/site_lycee_essai
-edit_uri: projetEssai/docs
+#edit_uri: projetEssai/docs
 
 docs_dir : docs
 
@@ -36,7 +36,6 @@ theme:
     language: 'fr'
     custom_dir: docs/my_theme_customizations/
     features:
-        - tabs
         - instant
         - tabs
         - top
@@ -89,6 +88,7 @@ extra_javascript:
   #- 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
     #- E:/Travail/MathJax/MathJax-2.7.3/mathjax.js
     - javascripts/mathjax.js
+    - javascripts/my_java.js
     - https://polyfill.io/v3/polyfill.min.js?features=es6
     - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     #- javascripts/reveal/reveal.js-master/js/reveal.js

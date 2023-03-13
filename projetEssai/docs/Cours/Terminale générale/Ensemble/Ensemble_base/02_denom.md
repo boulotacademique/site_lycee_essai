@@ -240,7 +240,7 @@ On rappelle qu'une partie d'un ensemble est un sous-ensemble : il n'y a donc pas
  
 
 !!!- info "Théorème : Relation de Pascal - Triangle de Pascal"
-    Pour tout $n \in \N$ et pour tout $p \in \N$ tel que $0\leq p \leq n$:
+    Pour tout $n \in \N$ et pour tout $p \in \N$ tel que $0\leq p < n$:
 
     \[
     \comb{n-1}{p-1}+\comb{n-1}{p} = \comb{n}{p}

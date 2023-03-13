@@ -1,7 +1,7 @@
 # Démonstration au programme
 
 !!!- info "[Théorème : Relation de Pascal - Triangle de Pascal]"
-    Pour tout $n \in \N$ et pour tout $p \in \N$ tel que $0\leq p \leq n$:
+    Pour tout $n \in \N$ et pour tout $p \in \N$ tel que $0\leq p < n$:
 
     \[
     \comb{n-1}{p-1}+\comb{n-1}{p} = \comb{n}{p}
@@ -11,9 +11,9 @@
     Pour tout $n \in \N$ et pour tout $p \in \N$ tel que $0\leq p \leq n$:
     
     \begin{eqnarray*}
-    \comb{n-1}{p-1}+\comb{n-1}{p} & = & \dfrac{(n-1)!}{(n-1-(p-1))!(p-1)!} + \dfrac{(n-1)!}{(n-1-p))!p!}\\
-    & = &  \dfrac{(n-1)!}{(n-1-p)!(n-1-(p-1))(p-1)!} + \dfrac{(n-1)!}{(n-1-p))!(p-1)!p}\\
-    & = &  \dfrac{(n-1)!p}{(n-1-p)!(n-1-(p-1))(p-1)!p} + \dfrac{(n-1)!(n-1-(p-1))}{(n-1-p))!(n-1-(p-1))(p-1)!p}\\
+    \comb{n-1}{p-1}+\comb{n-1}{p} & = & \dfrac{(n-1)!}{(n-1-(p-1))!(p-1)!} + \dfrac{(n-1)!}{(n-1-p)!p!}\\
+    & = &  \dfrac{(n-1)!}{(n-1-p)!(n-1-(p-1))(p-1)!} + \dfrac{(n-1)!}{(n-1-p)!(p-1)!p}\\
+    & = &  \dfrac{(n-1)!p}{(n-1-p)!(n-1-(p-1))(p-1)!p} + \dfrac{(n-1)!(n-1-(p-1))}{(n-1-p)!(n-1-(p-1))(p-1)!p}\\
     & = &  \dfrac{(n-1)!p + (n-1)!(n-1-(p-1))}{(n-1-(p-1))!(p-1)!p}\\
     & = &  \dfrac{(n-1)!p + (n-1)!(n-1-p+1)}{(n-1-p+1)!p!}\\
     & = &  \dfrac{(n-1)!p + (n-1)!n-(n-1)!p}{(n-p)!p!}\\
