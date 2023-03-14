@@ -32,7 +32,7 @@ Pour compter le nombre d'éléments d'un ensemble, le principe additif et multip
 !!!- info "Conséquence"
     
     - $0!=1$ (Convention)
-    - Si $n>1$, $n!=n\times (n-1)!$
+    - Si $n \geq 1$, $n!=n\times (n-1)!$
     - $(n+1)!=(n+1) \times n!$
 
 
@@ -103,7 +103,7 @@ Pour compter le nombre d'éléments d'un ensemble, le principe additif et multip
     Le nombre de $p$-uplets d'éléments distincts d'un ensemble à $n$ éléments est $\dfrac{n!}{(n-p)!}$.
 
 
-???- tip ""
+???- tip "Vocabulaire hors programme"
     Un $p$-uplets d'éléments **distincts** d'un ensemble à $n$ éléments s'appelle aussi *un arrangement de $p$ éléments parmi $n$*.
 
 

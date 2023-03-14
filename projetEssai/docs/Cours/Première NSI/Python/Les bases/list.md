@@ -151,7 +151,21 @@ for idx in range(len(liste_a)):
 
 ### Créer une liste
 
-!!! info "Créer une liste"
+!!! info "Créer une liste de taille connue"
+
+    Grâce à la répétition, il est possible de créer une liste avec le nombre d'élément voulu. Puis on modifie ces éléments
+    
+    Par exemple pour créer une liste contenant les 5 premiers carrés
+    
+    ```python
+    # liste avec 5 zéros:
+    liste_carre = [0]*5
+    for i in range(5):
+        liste_carre[i] = i**2
+    print(liste_carre) # affiche [0,1,4,9,16]
+    ```
+
+???- tip "Créer une liste de taille inconnue"
 
     Il suffit ce commencer avec une liste vide et d'accumuler les eléments voulus.
 
