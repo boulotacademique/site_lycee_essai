@@ -3917,8 +3917,18 @@
 </details>
 <h3 id="creer_une_liste">Créer une liste<a class="headerlink" href="#creer_une_liste" title="Permanent link"></a></h3>
 <div class="admonition info">
-<p class="admonition-title">Créer une liste</p>
-<p>Il suffit ce commencer avec une liste vide et d'accumuler les eléments voulus.</p>
+<p class="admonition-title">Créer une liste de taille connue</p>
+<p>Grâce à la répétition, il est possible de créer une liste avec le nombre d'élément voulu. Puis on modifie ces éléments</p>
+<p>Par exemple pour créer une liste contenant les 5 premiers carrés</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># liste avec 5 zéros:</span>
+<span class="n">liste_carre</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">liste_carre</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">liste_carre</span><span class="p">)</span> <span class="c1"># affiche [0,1,4,9,16]</span>
+</code></pre></div>
+
+</div>
+<details class="- tip"><summary>Créer une liste de taille inconnue</summary><p>Il suffit ce commencer avec une liste vide et d'accumuler les eléments voulus.</p>
 <div class="highlight"><pre><span></span><code><span class="n">une_liste</span><span class="o">=</span> <span class="p">[</span><span class="mi">102</span><span class="p">,</span> <span class="mi">104</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">104</span><span class="p">,</span> <span class="mi">99</span><span class="p">]</span>
 <span class="n">liste</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">une_liste</span><span class="p">)):</span>
@@ -3927,7 +3937,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="c1"># affiche [102, 104, 100, 104]</span>
 </code></pre></div>
 
-</div>
+</details>
 <h3 id="diverses_methodes_autour_des_listes">Diverses méthodes autour des listes<a class="headerlink" href="#diverses_methodes_autour_des_listes" title="Permanent link"></a></h3>
 <div class="admonition info">
 <p class="admonition-title">A apprendre en faisant les exercices</p>
