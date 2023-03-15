@@ -6,13 +6,40 @@
 
     Une fonction qui vérifie une équation différentielle est une **solution** de l'équation différentielle.
 
+???- example "Premiers exemples"
+    Voici quelques équations différentielles :
+
+    -  si un circuit constitué d'une résistance $R$, d'un condensateur de capacité $C$ est soudainement connecté à une tension constante $U$. On commence l'étude du circuit au moment où la tension apparaît, en supposant que le condensateur est initialement vide. Alors la tension $u_c$ aux bornes du condensateur vérifie :
+
+    \[
+        \displaystyle u_{c}'(t) + \dfrac{1}{RC} u_{c}(t) - \dfrac{U}{RC} = 0
+    \]
+    
+    - décharge d'un condensateur : si un circuit constitué d'une résistance $R$, d'un condensateur de capacité $C$ et d'une bobine d'inductance $L$ est monté en série aux bornes d'un générateur fournissant une tension variable $f(t)$, la charge $Q(t)$ du condensateur vérifie l'équation :
+
+    \[
+    LQ''(t) + RQ'(t) + \dfrac{1}{C}Q(t) = f(t)
+    \]
+
+    - si une masse $m$ est suspendue à un ressort ayant un coefficient de rappel $F$ et un amortissement constant $k$, sa position $h(t)$ vérifie l'équation
+
+    \[
+        m \times h''(t)+k\times h′(t)+F\times h(t)=0
+    \]
+
+    - un pendule, constitué d'une petite bille, se meut dans un plan vertical au bout d'une fine tige rigide de longueur l dont l'autre extrémité est fixe. Notons $A(t)$ l'angle de la tige repéré depuis la position d'équilibre. $A(t)$ vérifie l'équation (g désigne l'accélération de la pesanteur) :
+
+    \[
+        A''(t) = −\dfrac{g}{l} \sin⁡ (A(t)) 
+    \]
+
 ???- tip "Notation en physique"
     En sciences physiques, la variable est souvent le temps. Elle est donc alors notée $t$. Les fonctions sont parfois notées $x(t)$. L'inconnue d'une telle équation différentielle est alors notée $x$ (mais elle représente bien une fonction). La dérivée de cette inconnue est alors notée $x'$ et la dérivée seconde $x''$.
 
 ???- tip "Notation différentielle"
     En raison de ces différentes variables, il est possible d'utiliser la notation différentielle $\dfrac{\dx[ ]}{\dx}$.
     
-    $y''+2y'-y=2x$ se note alors $\dfrac{\dxx[y]}{\dx^2} + 2 \dfrac{\dx[y]}{\dx}-y(x)= 2x$.
+    $LQ''(t) + RQ'(t) + \dfrac{1}{C}Q(t) = f(t)$ se note alors $L\dfrac{\dxx[Q]}{\dx[t]^2} + R \dfrac{\dx[Q]}{\dx[t]} + \dfrac{1}{C}Q(t) = f(t)$.
     
     $x''+2x'-x=2t$ se note alors $\dfrac{\dxx}{\dx[t]^2} + 2 \dfrac{\dx}{\dx[t]}-x(t)= 2t$.
 
@@ -35,7 +62,10 @@
         \end{eqnarray*}
         
         Donc $f$ est une solution de $y'-5y=-50$.
-        
+
+???- example "Exemple"
+    Ex 1, 2 p.226
+
 
 <!--
 \begin{exple}[Pour aller plus loin]
