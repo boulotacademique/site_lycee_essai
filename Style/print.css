@@ -60,6 +60,10 @@
         border-bottom: 1px dotted black;
     }
 
+    .Code_cache{
+        display : block;
+    }
+
     .solution{
         display: none!important;
     }
