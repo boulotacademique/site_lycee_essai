@@ -6,32 +6,51 @@
 
     Une fonction qui vérifie une équation différentielle est une **solution** de l'équation différentielle.
 
-???- example "Premiers exemples"
-    Voici quelques équations différentielles :
-
-    -  si un circuit constitué d'une résistance $R$, d'un condensateur de capacité $C$ est soudainement connecté à une tension constante $U$. On commence l'étude du circuit au moment où la tension apparaît, en supposant que le condensateur est initialement vide. Alors la tension $u_c$ aux bornes du condensateur vérifie :
+???+ example "Premiers exemples"
+    Si un circuit constitué d'une résistance $R$, d'un condensateur de capacité $C$ est soudainement connecté à une tension constante $E$. On commence l'étude du circuit au moment où la tension apparaît, en supposant que le condensateur est initialement vide. Alors la tension $u_c$ aux bornes du condensateur vérifie :
 
     \[
-        \displaystyle u_{c}'(t) + \dfrac{1}{RC} u_{c}(t) - \dfrac{U}{RC} = 0
+        \displaystyle u_{c}'(t) + \dfrac{1}{RC} u_{c}(t) - \dfrac{E}{RC} = 0
     \]
+
+    [![Image circuit RC](../Image/RC01.png){.Center_lien .VignetteMed .Im_retaille}](../Image/RC01.png)
     
-    - décharge d'un condensateur : si un circuit constitué d'une résistance $R$, d'un condensateur de capacité $C$ et d'une bobine d'inductance $L$ est monté en série aux bornes d'un générateur fournissant une tension variable $f(t)$, la charge $Q(t)$ du condensateur vérifie l'équation :
+???+ example "Premiers exemples"
+    Décharge d'un condensateur : si un circuit constitué d'une résistance $R$, d'un condensateur de capacité $C$ et d'une bobine d'inductance $L$ est monté en série aux bornes d'un générateur fournissant une tension variable $f(t)$, la charge $Q(t)$ du condensateur vérifie l'équation :
 
     \[
     LQ''(t) + RQ'(t) + \dfrac{1}{C}Q(t) = f(t)
     \]
+    
+    [![Image circuit RLC](../Image/RLC01.png){.Center_lien .VignetteMed .Im_retaille}](../Image/RLC01.png)
 
-    - si une masse $m$ est suspendue à un ressort ayant un coefficient de rappel $F$ et un amortissement constant $k$, sa position $h(t)$ vérifie l'équation
+???+ example "Premiers exemples"
+    Si une masse $m$ est suspendue à un ressort ayant un coefficient de rappel $F$ et un amortissement constant $k$, sa position $h(t)$ vérifie l'équation
 
     \[
         m \times h''(t)+k\times h′(t)+F\times h(t)=0
     \]
 
-    - un pendule, constitué d'une petite bille, se meut dans un plan vertical au bout d'une fine tige rigide de longueur l dont l'autre extrémité est fixe. Notons $A(t)$ l'angle de la tige repéré depuis la position d'équilibre. $A(t)$ vérifie l'équation (g désigne l'accélération de la pesanteur) :
+    [![Ressort](../Image/ressort.gif){.Center_lien .Vignette .Im_cache .Im_retaille}](../Image/ressort.gif)
+
+    <div class="Aligne_dte">
+    [Source wikipédia](https://fr.wikipedia.org/wiki/Syst%C3%A8me_masse-ressort)
+    </div>
+
+???+ example "Premiers exemples"
+    Un pendule, constitué d'une petite bille, se meut dans un plan vertical au bout d'une fine tige rigide de longueur l dont l'autre extrémité est fixe. Notons $\Theta(t)$ l'angle de la tige repéré depuis la position d'équilibre. $Theta(t)$ vérifie l'équation ($g$ désigne l'accélération de la pesanteur) :
 
     \[
-        A''(t) = −\dfrac{g}{l} \sin⁡ (A(t)) 
+        \Theta''(t) = −\dfrac{g}{l} \sin⁡ (\Theta(t)) 
     \]
+
+    [![Pendule](../Image/Pendulum.gif){.Center_lien .Vignette .Im_retaille}](../Image/Pendulum.gif)
+
+    <div class="Aligne_dte">
+    [Source wikipédia](https://fr.wikipedia.org/wiki/Pendule_simple)
+    </div>
+    
+
 
 ???- tip "Notation en physique"
     En sciences physiques, la variable est souvent le temps. Elle est donc alors notée $t$. Les fonctions sont parfois notées $x(t)$. L'inconnue d'une telle équation différentielle est alors notée $x$ (mais elle représente bien une fonction). La dérivée de cette inconnue est alors notée $x'$ et la dérivée seconde $x''$.

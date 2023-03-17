@@ -246,6 +246,11 @@
 		display: block;
 	}
 
+    .Im_cache{
+        display : block;
+    }
+
+
 	.Tiny{
 		font-size: 0.5em!important;
 	}
