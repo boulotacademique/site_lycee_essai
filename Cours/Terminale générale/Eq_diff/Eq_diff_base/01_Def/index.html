@@ -3638,31 +3638,35 @@
 <p>On appelle <strong>équation différentielle</strong> une équation dont l'inconnue est <em>une fonction</em> notée <span class="arithmatex">\(y\)</span> dans laquelle apparaissent une ou plusieurs dérivées successives de <span class="arithmatex">\(y\)</span> (dont peut-être <span class="arithmatex">\(y\)</span>) et éventuellement d'autres fonctions.</p>
 <p>Une fonction qui vérifie une équation différentielle est une <strong>solution</strong> de l'équation différentielle.</p>
 </div>
-<details class="- example"><summary>Premiers exemples</summary><p>Voici quelques équations différentielles :</p>
-<ul>
-<li>si un circuit constitué d'une résistance <span class="arithmatex">\(R\)</span>, d'un condensateur de capacité <span class="arithmatex">\(C\)</span> est soudainement connecté à une tension constante <span class="arithmatex">\(U\)</span>. On commence l'étude du circuit au moment où la tension apparaît, en supposant que le condensateur est initialement vide. Alors la tension <span class="arithmatex">\(u_c\)</span> aux bornes du condensateur vérifie :</li>
-</ul>
+<details class="example" open="open"><summary>Premiers exemples</summary><p>Si un circuit constitué d'une résistance <span class="arithmatex">\(R\)</span>, d'un condensateur de capacité <span class="arithmatex">\(C\)</span> est soudainement connecté à une tension constante <span class="arithmatex">\(E\)</span>. On commence l'étude du circuit au moment où la tension apparaît, en supposant que le condensateur est initialement vide. Alors la tension <span class="arithmatex">\(u_c\)</span> aux bornes du condensateur vérifie :</p>
 <div class="arithmatex">\[
-    \displaystyle u_{c}'(t) + \dfrac{1}{RC} u_{c}(t) - \dfrac{U}{RC} = 0
+    \displaystyle u_{c}'(t) + \dfrac{1}{RC} u_{c}(t) - \dfrac{E}{RC} = 0
 \]</div>
-<ul>
-<li>décharge d'un condensateur : si un circuit constitué d'une résistance <span class="arithmatex">\(R\)</span>, d'un condensateur de capacité <span class="arithmatex">\(C\)</span> et d'une bobine d'inductance <span class="arithmatex">\(L\)</span> est monté en série aux bornes d'un générateur fournissant une tension variable <span class="arithmatex">\(f(t)\)</span>, la charge <span class="arithmatex">\(Q(t)\)</span> du condensateur vérifie l'équation :</li>
-</ul>
+<p><a href="../../Image/RC01.png"><img alt="Image circuit RC" class="Center_lien VignetteMed Im_retaille" src="../../Image/RC01.png" /></a></p>
+</details>
+<details class="example" open="open"><summary>Premiers exemples</summary><p>Décharge d'un condensateur : si un circuit constitué d'une résistance <span class="arithmatex">\(R\)</span>, d'un condensateur de capacité <span class="arithmatex">\(C\)</span> et d'une bobine d'inductance <span class="arithmatex">\(L\)</span> est monté en série aux bornes d'un générateur fournissant une tension variable <span class="arithmatex">\(f(t)\)</span>, la charge <span class="arithmatex">\(Q(t)\)</span> du condensateur vérifie l'équation :</p>
 <div class="arithmatex">\[
 LQ''(t) + RQ'(t) + \dfrac{1}{C}Q(t) = f(t)
 \]</div>
-<ul>
-<li>si une masse <span class="arithmatex">\(m\)</span> est suspendue à un ressort ayant un coefficient de rappel <span class="arithmatex">\(F\)</span> et un amortissement constant <span class="arithmatex">\(k\)</span>, sa position <span class="arithmatex">\(h(t)\)</span> vérifie l'équation</li>
-</ul>
+<p><a href="../../Image/RLC01.png"><img alt="Image circuit RLC" class="Center_lien VignetteMed Im_retaille" src="../../Image/RLC01.png" /></a></p>
+</details>
+<details class="example" open="open"><summary>Premiers exemples</summary><p>Si une masse <span class="arithmatex">\(m\)</span> est suspendue à un ressort ayant un coefficient de rappel <span class="arithmatex">\(F\)</span> et un amortissement constant <span class="arithmatex">\(k\)</span>, sa position <span class="arithmatex">\(h(t)\)</span> vérifie l'équation</p>
 <div class="arithmatex">\[
     m \times h''(t)+k\times h′(t)+F\times h(t)=0
 \]</div>
-<ul>
-<li>un pendule, constitué d'une petite bille, se meut dans un plan vertical au bout d'une fine tige rigide de longueur l dont l'autre extrémité est fixe. Notons <span class="arithmatex">\(A(t)\)</span> l'angle de la tige repéré depuis la position d'équilibre. <span class="arithmatex">\(A(t)\)</span> vérifie l'équation (g désigne l'accélération de la pesanteur) :</li>
-</ul>
+<p><a href="../../Image/ressort.gif"><img alt="Ressort" class="Center_lien Vignette Im_cache Im_retaille" src="../../Image/ressort.gif" /></a></p>
+<p><div class="Aligne_dte">
+<a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_masse-ressort">Source wikipédia</a>
+</div></p>
+</details>
+<details class="example" open="open"><summary>Premiers exemples</summary><p>Un pendule, constitué d'une petite bille, se meut dans un plan vertical au bout d'une fine tige rigide de longueur l dont l'autre extrémité est fixe. Notons <span class="arithmatex">\(\Theta(t)\)</span> l'angle de la tige repéré depuis la position d'équilibre. <span class="arithmatex">\(Theta(t)\)</span> vérifie l'équation (<span class="arithmatex">\(g\)</span> désigne l'accélération de la pesanteur) :</p>
 <div class="arithmatex">\[
-    A''(t) = −\dfrac{g}{l} \sin⁡ (A(t)) 
+    \Theta''(t) = −\dfrac{g}{l} \sin⁡ (\Theta(t)) 
 \]</div>
+<p><a href="../../Image/Pendulum.gif"><img alt="Pendule" class="Center_lien Vignette Im_retaille" src="../../Image/Pendulum.gif" /></a></p>
+<p><div class="Aligne_dte">
+<a href="https://fr.wikipedia.org/wiki/Pendule_simple">Source wikipédia</a>
+</div></p>
 </details>
 <details class="- tip"><summary>Notation en physique</summary><p>En sciences physiques, la variable est souvent le temps. Elle est donc alors notée <span class="arithmatex">\(t\)</span>. Les fonctions sont parfois notées <span class="arithmatex">\(x(t)\)</span>. L'inconnue d'une telle équation différentielle est alors notée <span class="arithmatex">\(x\)</span> (mais elle représente bien une fonction). La dérivée de cette inconnue est alors notée <span class="arithmatex">\(x'\)</span> et la dérivée seconde <span class="arithmatex">\(x''\)</span>.</p>
 </details>
