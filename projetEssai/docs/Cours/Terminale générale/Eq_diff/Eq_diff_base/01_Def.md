@@ -58,9 +58,9 @@
 ???- tip "Notation différentielle"
     En raison de ces différentes variables, il est possible d'utiliser la notation différentielle $\dfrac{\dx[ ]}{\dx}$.
     
-    $LQ''(t) + RQ'(t) + \dfrac{1}{C}Q(t) = f(t)$ se note alors $L\dfrac{\dxx[Q]}{\dx[t]^2} + R \dfrac{\dx[Q]}{\dx[t]} + \dfrac{1}{C}Q(t) = f(t)$.
+    $LQ''(t) + RQ'(t) + \dfrac{1}{C}Q(t) = f(t)$ se note alors $L\dfrac{\dxx[Q]}{\dx[t]^2}(t) + R \dfrac{\dx[Q]}{\dx[t]}(t) + \dfrac{1}{C}Q(t) = f(t)$.
     
-    $x''+2x'-x=2t$ se note alors $\dfrac{\dxx}{\dx[t]^2} + 2 \dfrac{\dx}{\dx[t]}-x(t)= 2t$.
+    $x''+2x'-x=2t$ se note alors $\dfrac{\dxx}{\dx[t]^2}(t) + 2 \dfrac{\dx}{\dx[t]}(t)-x(t)= 2t$.
 
 !!! danger "Méthode"
     Pour montrer qu'une fonction $f$ est solution, il suffit de remplacer l'inconnue (souvent $y$) par $f$ dans le &laquo; membre de gauche &raquo;, de faire les calculs (dérivations et opérations) et de vérifier que le résultat est bien égal au &laquo; au membre de droite &raquo;.
@@ -115,7 +115,7 @@ Donc $g$ est une solution de $y''+9y=0$.
 
 
 ???- tip "Une infinité de solution"
-    Une équation différentielle possède une infinité de solution.
+    Une équation différentielle linéaire possède une infinité de solution.
 
     Cas d'une équation différentielle linéaire :
 
