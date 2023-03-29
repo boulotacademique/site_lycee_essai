@@ -11,7 +11,7 @@ La partie du plan situé entre la courbe , l'axe des abscisses et les droites d'
     
     L'unité d'aire est l'aire du rectangle OIKJ. Elle est notée **u.a.**.
 
-    [![Unité d'aire](../Image/Im01.png){.Center_lien .Vignette}](../Image/Im01.png)
+    [![Unité d'aire](../Image/Im01.png){.Center_lien .Vignette .Im_retaille}](../Image/Im01.png)
 
  $\displaystyle\int_a^b f(x) \dx$ se lit &laquo; *intégrale de $a$ à $b$ de $f(x)\dx$* &raquo; ou &laquo; somme de $a$ à $b$ de $f(x )\dx$ &raquo;.
  

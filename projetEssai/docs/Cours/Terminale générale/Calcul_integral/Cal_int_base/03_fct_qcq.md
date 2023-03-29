@@ -13,12 +13,14 @@
  
 
 
-!!! info "Propriétés"
+!!! info "Propriétés immédiates"
     Soient $f$ et $g$ deux fonctions continues sur un intervalle $I$. $a,b$ et $c$ sont trois réels de $I$ et $k$ est une constante réelle.
 
     - Si $f=0$ alors $\displaystyle\int_a^b f(x) \dx =0$. 
     - $\displaystyle\int_a^a f(x) \dx =0$
     - $\displaystyle\int_a^b f(x)\dx = - \int_b^a f(x) \dx$
+
+!!! info "Propriétés : linéarité de l'intégrale"
     - **Linéarité :** 
     
     \[
@@ -29,16 +31,22 @@
         \int_a^b f(x) + g(x) \dx = \int_a^b f(x) \dx + \int_a^b g(x) \dx 
     \]
 
-    - Relation de Chasles : pour tous réels $a,b$ et $c$
+!!! info "Relation de Chasles"
+    Relation de Chasles : pour tous réels $a,b$ et $c$
 
     \[
     \int_a^c f(x) \dx + \int_c^b f(x) \dx =\int_a^b f(x) \dx
     \]
 
+
+!!! info "Comparaison"
+
     - Positivité : si pour tout $x$ de $[a;b]$ ($a\leq b$) $f(x) \geq 0$, alors $\displaystyle\int_a^b f(x) \dx \geq 0$ **(Réciproque fausse)**. 
     
     - Comparaison : si pour tout $x$ de $[a;b]$ ($a\leq b$) $f(x) \geq g(x)$, alors $\displaystyle\int_a^b f(x) \dx \geq \int_a^b g(x) \dx$ **(Réciproque fausse)**.
 
+
+!!! info "Conservation"
     - Conservation par symétrie : soit $f$ est une fonction définie et continue sur $[-a;a]$, si $f$ est **paire** alors 
 
     \[
@@ -117,7 +125,7 @@
     
     C'est-à-dire que la valeur moyenne $\mu$ de la fonction $f$ est la hauteur du rectangle ABCD de base $(b-a)$ ayant la même aire que l'aire du domaine sous la courbe de la fonction $f$ entre $a$ et $b$.
 
-    [![Valeur moyenne](../Image/Im08.png){.Center_lien .vignette}](../Image/Im08.png)
+    [![Valeur moyenne](../Image/Im08.png){.Center_lien .vignette .Im_retaille}](../Image/Im08.png)
 
 ???- example "Exemple"
     On considère les fonctions $f$ et $g$ définies pour $x>0$ par $f(x)=2x \ln x$ et $g(x)= x^2 \ln x$.
