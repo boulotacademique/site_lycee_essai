@@ -3717,12 +3717,17 @@
 <p>Où <span class="arithmatex">\(F\)</span> est une primitive de <span class="arithmatex">\(f\)</span>.</p>
 </div>
 <div class="admonition info">
-<p class="admonition-title">Propriétés</p>
+<p class="admonition-title">Propriétés immédiates</p>
 <p>Soient <span class="arithmatex">\(f\)</span> et <span class="arithmatex">\(g\)</span> deux fonctions continues sur un intervalle <span class="arithmatex">\(I\)</span>. <span class="arithmatex">\(a,b\)</span> et <span class="arithmatex">\(c\)</span> sont trois réels de <span class="arithmatex">\(I\)</span> et <span class="arithmatex">\(k\)</span> est une constante réelle.</p>
 <ul>
 <li>Si <span class="arithmatex">\(f=0\)</span> alors <span class="arithmatex">\(\displaystyle\int_a^b f(x) \dx =0\)</span>. </li>
 <li><span class="arithmatex">\(\displaystyle\int_a^a f(x) \dx =0\)</span></li>
 <li><span class="arithmatex">\(\displaystyle\int_a^b f(x)\dx = - \int_b^a f(x) \dx\)</span></li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Propriétés : linéarité de l'intégrale</p>
+<ul>
 <li><strong>Linéarité :</strong> </li>
 </ul>
 <div class="arithmatex">\[
@@ -3731,12 +3736,16 @@
 <div class="arithmatex">\[ 
     \int_a^b f(x) + g(x) \dx = \int_a^b f(x) \dx + \int_a^b g(x) \dx 
 \]</div>
-<ul>
-<li>Relation de Chasles : pour tous réels <span class="arithmatex">\(a,b\)</span> et <span class="arithmatex">\(c\)</span></li>
-</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Relation de Chasles</p>
+<p>Relation de Chasles : pour tous réels <span class="arithmatex">\(a,b\)</span> et <span class="arithmatex">\(c\)</span></p>
 <div class="arithmatex">\[
 \int_a^c f(x) \dx + \int_c^b f(x) \dx =\int_a^b f(x) \dx
 \]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Comparaison</p>
 <ul>
 <li>
 <p>Positivité : si pour tout <span class="arithmatex">\(x\)</span> de <span class="arithmatex">\([a;b]\)</span> (<span class="arithmatex">\(a\leq b\)</span>) <span class="arithmatex">\(f(x) \geq 0\)</span>, alors <span class="arithmatex">\(\displaystyle\int_a^b f(x) \dx \geq 0\)</span> <strong>(Réciproque fausse)</strong>. </p>
@@ -3744,9 +3753,12 @@
 <li>
 <p>Comparaison : si pour tout <span class="arithmatex">\(x\)</span> de <span class="arithmatex">\([a;b]\)</span> (<span class="arithmatex">\(a\leq b\)</span>) <span class="arithmatex">\(f(x) \geq g(x)\)</span>, alors <span class="arithmatex">\(\displaystyle\int_a^b f(x) \dx \geq \int_a^b g(x) \dx\)</span> <strong>(Réciproque fausse)</strong>.</p>
 </li>
-<li>
-<p>Conservation par symétrie : soit <span class="arithmatex">\(f\)</span> est une fonction définie et continue sur <span class="arithmatex">\([-a;a]\)</span>, si <span class="arithmatex">\(f\)</span> est <strong>paire</strong> alors </p>
-</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Conservation</p>
+<ul>
+<li>Conservation par symétrie : soit <span class="arithmatex">\(f\)</span> est une fonction définie et continue sur <span class="arithmatex">\([-a;a]\)</span>, si <span class="arithmatex">\(f\)</span> est <strong>paire</strong> alors </li>
 </ul>
 <div class="arithmatex">\[
 \int_{-a}^0 f(x) \dx = \int_0^a f(x) \dx
@@ -3806,7 +3818,7 @@ I_{n+1}-I_n &amp; = &amp; \int_1^{n+1} \dfrac{1}{1+x^2} \dx - \int_1^n \dfrac{1}
 </div>
 <details class="- tip"><summary>Interprétation graphique pour <span class="arithmatex">\(f \geq 0\)</span></summary><p>On a <span class="arithmatex">\(\mu (b-a)=\displaystyle\int_a^b f(x) \dx\)</span>. En termes d'aires, ceci signifie que l'aire &laquo; sous la courbe &raquo; de <span class="arithmatex">\(f\)</span> est égale à l'aire &laquo; sous la courbe &raquo; de la fonction constante égale à <span class="arithmatex">\(\mu\)</span>.</p>
 <p>C'est-à-dire que la valeur moyenne <span class="arithmatex">\(\mu\)</span> de la fonction <span class="arithmatex">\(f\)</span> est la hauteur du rectangle ABCD de base <span class="arithmatex">\((b-a)\)</span> ayant la même aire que l'aire du domaine sous la courbe de la fonction <span class="arithmatex">\(f\)</span> entre <span class="arithmatex">\(a\)</span> et <span class="arithmatex">\(b\)</span>.</p>
-<p><a href="../../Image/Im08.png"><img alt="Valeur moyenne" class="Center_lien vignette" src="../../Image/Im08.png" /></a></p>
+<p><a href="../../Image/Im08.png"><img alt="Valeur moyenne" class="Center_lien vignette Im_retaille" src="../../Image/Im08.png" /></a></p>
 </details>
 <details class="- example"><summary>Exemple</summary><p>On considère les fonctions <span class="arithmatex">\(f\)</span> et <span class="arithmatex">\(g\)</span> définies pour <span class="arithmatex">\(x&gt;0\)</span> par <span class="arithmatex">\(f(x)=2x \ln x\)</span> et <span class="arithmatex">\(g(x)= x^2 \ln x\)</span>.
 <ol>
