@@ -1,4 +1,4 @@
-# Intégrale d'une fonction positive sur un intervalle $[a,b]$
+# Intégrale d'une fonction positive sur un intervalle [a,b]
 
 ## Définition
 
@@ -11,7 +11,7 @@ La partie du plan situé entre la courbe , l'axe des abscisses et les droites d'
     
     L'unité d'aire est l'aire du rectangle OIKJ. Elle est notée **u.a.**.
 
-    [![Unité d'aire](../Image/Im01.png){.Center_lien .Vignette .Im_retaille}](../Image/Im01.png)
+    [![Unité d'aire](../Image/Im01.png){.Center_lien .Vignette .Im_retaille20}](../Image/Im01.png)
 
  $\displaystyle\int_a^b f(x) \dx$ se lit &laquo; *intégrale de $a$ à $b$ de $f(x)\dx$* &raquo; ou &laquo; somme de $a$ à $b$ de $f(x )\dx$ &raquo;.
  
@@ -118,7 +118,7 @@ La variable $x$ est dite muette , elle peut être remplacée par n'importe quell
 
 ## Propriétés
 
-!!! info ""
+!!! info "Positivité"
 
 	- L'intégrale d'une fonction continue et positive sur un intervalle $[a;b]$ est positive.
 
@@ -131,7 +131,8 @@ La variable $x$ est dite muette , elle peut être remplacée par n'importe quell
     - Si $f=0$ alors $\displaystyle\int_a^b f(x) \dx =0$. 
     - $\displaystyle\int_a^a f(x) \dx =0$
     - $\displaystyle\int_a^b f(x)\dx = - \int_b^a f(x) \dx$
-    - **Linéarité :** 
+
+!!! info "Linéarité"
     
     \[
         \int_a^b kf(x) \dx = k \times \int_a^b f(x) \dx
@@ -141,12 +142,16 @@ La variable $x$ est dite muette , elle peut être remplacée par n'importe quell
         \int_a^b f(x) + g(x) \dx = \int_a^b f(x) \dx + \int_a^b g(x) \dx 
     \]
 
+!!! info "Relation de Chasles"
+
     - Relation de Chasles : pour tous réels $a,b$ et $c$
 
     \[
     \int_a^c f(x) \dx + \int_c^b f(x) \dx =\int_a^b f(x) \dx
     \] 
-    
+
+!!! info "Comparaison et conservation"
+
     - Comparaison : si pour tout $x$ de $[a;b]$ ($a\leq b$) $f(x) \geq g(x) \geq 0$, alors $\displaystyle\int_a^b f(x) \dx \geq \int_a^b g(x) \dx \geq 0$.
 
     - Conservation par symétrie : soit $f$ est une fonction définie et continue sur $[-a;a]$, si $f$ est **paire** alors 

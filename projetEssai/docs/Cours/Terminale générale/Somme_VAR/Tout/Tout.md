@@ -108,7 +108,7 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
     Déterminer la loi de probabilité de $S$.
  
 
-### Somme de n variables aléatoires indépendantes
+### Somme de $n$ variables aléatoires indépendantes
 
 !!! info "définition"
     Soient $X_1, X_2, \ldots X_n$ $n$ **variables indépendantes**, on définit la variable aléatoire $S=X_1+X_2+\ldots+X_n$ d'une façon analogue :
@@ -239,9 +239,9 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
     Donner la loi de probabilité de $S_3=X_1+X_2+X_3$ et de $M_3 = \dfrac{1}{3} S_3$, où $(X_1;X_2;X_3)$ est un échantillon de taille 3 de la loi $X$.
  
 
-### Espérance, variance et écart-type de Sn et Mn
+### Espérance, variance et écart-type de $S_n$ et $M_n$
 
-!!! info "Var somme"
+!!! info " "
     Soit $S_n$ la variable aléatoire somme d'un échantillon de taille $n$ de la variable aléatoire $X$, alors 
     
     \[
@@ -269,11 +269,11 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
     Et $\sigma(S_n) = \sqrt{V(S_n)}= \sqrt{nV(X)} = \sqrt{n} \sigma(X)$.
  
 
-!!! info "Var moyenne"
-    Soit $M_n$ la variable aléatoire moyenne d'un échantillon de taille $n$ de la variable aléatoire $X$, alors 
+!!! info " "
+    Soit $S_n$ la variable aléatoire moyenne d'un échantillon de taille $n$ de la variable aléatoire $X$, alors 
     
     \[
-    E(M_n) = E(X) \qquad V(M_n) = \frac{1}{n}V(X) \qquad \sigma(M_n) = \dfrac{\sigma(X)}{\sqrt{n}}
+    E(M_n) = E(X) \qquad V(M_n) = \frac{1}{n}V(X) \qquad \sigma(S_n) = \dfrac{\sigma(X)}{\sqrt{n}}
     \]
  
 
@@ -303,14 +303,14 @@ Soit $\Omega$ l'univers des possibles d'une expérience aléatoire, et $\Pb$ une
 
 ### Espérance et variance d'une loi binomiale
 
-!!! info "Espérance, variance et écart-type"
+!!! info " "
     Soit $X$ une variable aléatoire suivant une loi binomiale de paramètre $n$ et $p$. Alors $E(X) = np$, $V(X)=np(1-p)$ et $\sigma(X)=\sqrt{np(1-p)}$.
  
 
 ???- abstract "Démonstration : démonstration au programme"
     $X$ est la somme de $n$ variables aléatoires indépendantes de Bernoulli $X_i$. Donc $X=X_1+X_2+\ldots+X_n$ où pour tout $i$, $X_i$ suit la même loi que celle de la variable aléatoire $Y$ de Bernoulli. 
     
-    [Rappel : ](../../Loi_binomiale/binom_bases/03_loi_binom.md#binom_esp), $E(Y)=p$ et $V(Y)=p(1-p)$.
+    [Rappel du chapitre 5](../../Loi_binomiale/binom_bases/03_loi_binom.md#binom_esp), $E(Y)=p$ et $V(Y)=p(1-p)$.
 
     D'où $E(X)=nE(Y) = np$ et $V(X)=nV(Y)=np(1-p)$.
 
@@ -365,3 +365,4 @@ mp.plot(listeAbs,L,'r')
 mp.plot(listeAbs,LTheo,'b')
 mp.show()
 ```
+

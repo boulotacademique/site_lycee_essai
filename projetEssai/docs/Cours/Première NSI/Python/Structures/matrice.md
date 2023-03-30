@@ -40,7 +40,7 @@ Ainsi, le type d'une matrice est ... ```list```. C'est bien une liste !
 
     
 
-???+ example "Exemple"
+???- example "Exemple"
     Voici une matrice.
 
     <div class="Center_ss_bd Encadre Code_cache">
@@ -57,9 +57,10 @@ Ainsi, le type d'une matrice est ... ```list```. C'est bien une liste !
     print(matrice1)
     ```
 
+    </div>
+
     {{ IDE('Python_base_code/matrice_01' ,MAX = 1000) }}
 
-    </div>
 
     
 Il est aussi naturel d'employer les termes de &laquo; lignes &raquo; et de &laquo; colonnes &raquo;.
@@ -120,11 +121,61 @@ Il est aussi naturel d'employer les termes de &laquo; lignes &raquo; et de &laqu
 
     Signature : ```Fonction ligne_matrice(mat : list,num_lig : int) : list```
 
+    {{ IDEv() }}
+
+    ???- done "Réponse"
+
+        ```python
+        def ligne_matrice(mat, num_lig):
+            return mat[num_lig] # Par référence
+        
+        # Exemple
+        matrice1 = [[1,10,100,1000],
+                  [1,2,4,8],
+                  [1,3,9,27]]
+        print(ligne_matrice(matrice1,2))
+        ```
+
     ???- danger "Une liste est un mutable"
-        Il y a deux façons d'écrire une telle fonction. Il faut choisir selon qu'il faut une [copie par référence ou par valeur](AFAIRE) de la ligne
+        Il y a deux façons d'écrire une telle fonction. Il faut choisir selon qu'il faut une [copie par référence ou par valeur](AFAIRE) de la ligne.
+
+    ???- done "Réponse"
+
+        ```python
+        def ligne_matrice(mat, num_lig):
+            liste_rep = []
+            for idx in range(len(mat[num_lig])):
+                liste_rep.append(mat[num_lig][idx])
+            return liste_rep # Par valeur
+        
+        # Exemple
+        matrice1 = [[1,10,100,1000],
+                  [1,2,4,8],
+                  [1,3,9,27]]
+        print(ligne_matrice(matrice1,2))
+        ```
 
 ???- example "Exemple"
     Ecrire une fonction qui prend en argument une matrice ```mat``` et un entier ```num_col``` et qui renvoie une liste contenant les éléments de la colonne de ```mat``` d'indice ```num_col```.
 
     Signature : ```Fonction colonne_matrice(mat : list, num_col : int) : list```
 
+!!! info "Créer une matrice"
+
+    Le principe est simple : créer des listes pour les lignes et les ajouter comme éléments de la matrice.
+
+    ```python
+    nb_lig = 4
+    nb_col = 2
+    matrice = [] # On va remplir cette matrice
+    for num_lig in range(nb_lig):
+        ligne = [] # Il faut partir d'une ligne vide
+        for num_col in range(nb_col):
+            # On ajoute les éléments voulus
+            ligne.append(f"elt ({num_lig},{num_col})")
+        # Une fois la ligne remplie
+        # on l'ajoute à notre matrice
+        matrice.append(ligne)    
+    ```
+
+    {{ IDEv('Python_base_code/matrice_03' , MAX = 1000) }}
