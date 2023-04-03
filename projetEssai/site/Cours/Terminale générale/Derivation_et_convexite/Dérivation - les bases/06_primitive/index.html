@@ -10,21 +10,21 @@
         <meta name="author" content="Lycée">
       
       
-        <link rel="canonical" href="https://boulotacademique.github.io/site_lycee_essai/Cours/Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/01_Fonction_derivable/">
+        <link rel="canonical" href="https://boulotacademique.github.io/site_lycee_essai/Cours/Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/D%C3%A9rivation%20-%20les%20bases/06_primitive/">
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Fonction dérivable - Maths et NSI</title>
+        <title>Primitive - Maths et NSI</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.975780f9.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.2505c338.min.css">
         
       
       
@@ -43,7 +43,7 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../pyodide-mkdocs/interpreter.js"></script> 
+<script src="../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
       
@@ -55,11 +55,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../Style/extra.css">
+      <link rel="stylesheet" href="../../../../../Style/extra.css">
     
-      <link rel="stylesheet" href="../../../../Style/print.css">
+      <link rel="stylesheet" href="../../../../../Style/print.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,8 +67,8 @@
     
     
 
-<link rel="stylesheet" href="../../../../pyodide-mkdocs/pyoditeur.css">
-<link rel="stylesheet" href="../../../../qcm/qcm.css">
+<link rel="stylesheet" href="../../../../../pyodide-mkdocs/pyoditeur.css">
+<link rel="stylesheet" href="../../../../../qcm/qcm.css">
 
 
 <input id="ace_palette" autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor" type="checkbox"></input>
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fonction_derivable" class="md-skip">
+        <a href="#calcul_de_primitive" class="md-skip">
           Aller au contenu
         </a>
       
@@ -110,7 +110,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../../.." title="Maths et NSI" class="md-header__button md-logo" aria-label="Maths et NSI" data-md-component="logo">
+    <a href="../../../../.." title="Maths et NSI" class="md-header__button md-logo" aria-label="Maths et NSI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -129,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fonction dérivable
+              Primitive
             
           </span>
         </div>
@@ -225,15 +225,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../c01/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../../c01/" class="md-tabs__link">
         
       </a>
     </li>
@@ -246,7 +244,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../.." class="md-tabs__link">
+    <a href="../../../../.." class="md-tabs__link">
       Accueil
     </a>
   </li>
@@ -261,7 +259,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Pr%C3%A9sentation/c01/" class="md-tabs__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Pr%C3%A9sentation/c01/" class="md-tabs__link">
         Première NSI
       </a>
     </li>
@@ -271,13 +269,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../index_term_G/" class="md-tabs__link">
+      <a href="../../../index_term_G/" class="md-tabs__link md-tabs__link--active">
         Terminale générale
       </a>
     </li>
@@ -293,7 +293,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../Labo%20de%20math/c01/" class="md-tabs__link">
+      <a href="../../../../../Labo%20de%20math/c01/" class="md-tabs__link">
         Labo de math
       </a>
     </li>
@@ -321,7 +321,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Maths et NSI" class="md-nav__button md-logo" aria-label="Maths et NSI" data-md-component="logo">
+    <a href="../../../../.." title="Maths et NSI" class="md-nav__button md-logo" aria-label="Maths et NSI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -350,14 +350,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
       
       
       
@@ -380,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../c01/" class="md-nav__link">
+      <a href="../../../../c01/" class="md-nav__link">
         En construction
       </a>
     </li>
@@ -394,7 +392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/c01/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/c01/" class="md-nav__link">
         En construction
       </a>
     </li>
@@ -408,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Accueil/c01/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Accueil/c01/" class="md-nav__link">
         En construction
       </a>
     </li>
@@ -422,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Codage/Au%20programme/Le%20son/c01/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Au%20programme/Le%20son/c01/" class="md-nav__link">
         En construction
       </a>
     </li>
@@ -436,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Codage/Au%20programme/Les%20images/c01/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Au%20programme/Les%20images/c01/" class="md-nav__link">
         En construction
       </a>
     </li>
@@ -450,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20STI2D/c01/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20STI2D/c01/" class="md-nav__link">
         En construction
       </a>
     </li>
@@ -464,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20g%C3%A9n%C3%A9rale/c01/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20g%C3%A9n%C3%A9rale/c01/" class="md-nav__link">
         En construction
       </a>
     </li>
@@ -478,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Seconde/c01/" class="md-nav__link">
+      <a href="../../../../Seconde/c01/" class="md-nav__link">
         En construction
       </a>
     </li>
@@ -492,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Terminale%20STI2D/c01/" class="md-nav__link">
+      <a href="../../../../Terminale%20STI2D/c01/" class="md-nav__link">
         En construction
       </a>
     </li>
@@ -504,21 +502,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../01_Fonction_derivable/" class="md-nav__link">
         Fonction dérivable
       </a>
-      
     </li>
   
 
@@ -530,7 +518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Esp_ortho/Esp_ortho_prog/ortho_esp_dem/" class="md-nav__link">
+      <a href="../../../Esp_ortho/Esp_ortho_prog/ortho_esp_dem/" class="md-nav__link">
         Démonstration au programme
       </a>
     </li>
@@ -544,7 +532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../my_theme_customizations/pyodide-mkdocs/end_REM/" class="md-nav__link">
+      <a href="../../../../../my_theme_customizations/pyodide-mkdocs/end_REM/" class="md-nav__link">
         end REM
       </a>
     </li>
@@ -558,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../my_theme_customizations/pyodide-mkdocs/start_REM/" class="md-nav__link">
+      <a href="../../../../../my_theme_customizations/pyodide-mkdocs/start_REM/" class="md-nav__link">
         start REM
       </a>
     </li>
@@ -580,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         Accueil
       </a>
     </li>
@@ -621,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Pr%C3%A9sentation/c01/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Pr%C3%A9sentation/c01/" class="md-nav__link">
         Présentation
       </a>
     </li>
@@ -687,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/ortho/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Python/Les%20bases/ortho/" class="md-nav__link">
         Bien écrire en python
       </a>
     </li>
@@ -701,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/variables/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Python/Les%20bases/variables/" class="md-nav__link">
         Variables, opérations
       </a>
     </li>
@@ -715,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/in_out/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Python/Les%20bases/in_out/" class="md-nav__link">
         print/input
       </a>
     </li>
@@ -729,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/str/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Python/Les%20bases/str/" class="md-nav__link">
         Chaine de caractères
       </a>
     </li>
@@ -743,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/for/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Python/Les%20bases/for/" class="md-nav__link">
         La boucle for
       </a>
     </li>
@@ -757,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/if_elif/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Python/Les%20bases/if_elif/" class="md-nav__link">
         if, elif et les conditions
       </a>
     </li>
@@ -771,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/while/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Python/Les%20bases/while/" class="md-nav__link">
         La boucle while
       </a>
     </li>
@@ -785,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/list/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Python/Les%20bases/list/" class="md-nav__link">
         Les listes (I)
       </a>
     </li>
@@ -799,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Python/Les%20bases/fct/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Python/Les%20bases/fct/" class="md-nav__link">
         Les fonctions
       </a>
     </li>
@@ -846,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Python/Structures/list02/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Python/Structures/list02/" class="md-nav__link">
         Les listes (II)
       </a>
     </li>
@@ -860,7 +848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Python/Structures/matrice/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Python/Structures/matrice/" class="md-nav__link">
         Les matrices
       </a>
     </li>
@@ -874,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Python/Structures/dico/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Python/Structures/dico/" class="md-nav__link">
         Les dictionnaires
       </a>
     </li>
@@ -954,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Codage/Les%20bases/Binaire/01_codage_entier/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Les%20bases/Binaire/01_codage_entier/" class="md-nav__link">
         Codage d'entier positif
       </a>
     </li>
@@ -968,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Codage/Les%20bases/Binaire/02_codage_negatif/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Les%20bases/Binaire/02_codage_negatif/" class="md-nav__link">
         Codage d'entier négatif
       </a>
     </li>
@@ -982,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Codage/Les%20bases/Hexad%C3%A9cimal/03_hexad%C3%A9cimal/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Les%20bases/Hexad%C3%A9cimal/03_hexad%C3%A9cimal/" class="md-nav__link">
         Codage en hexadécimal
       </a>
     </li>
@@ -996,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Codage/Les%20bases/Les_caracteres/04_caract_ASCII/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Les%20bases/Les_caracteres/04_caract_ASCII/" class="md-nav__link">
         Codage des caractères : ASCII
       </a>
     </li>
@@ -1010,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Codage/Les%20bases/Les_caracteres/05_iso-8859-1/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Les%20bases/Les_caracteres/05_iso-8859-1/" class="md-nav__link">
         Codage des caractères et python
       </a>
     </li>
@@ -1024,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Codage/Les%20bases/Les%20flottants/01_manip_reel/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Les%20bases/Les%20flottants/01_manip_reel/" class="md-nav__link">
         Codage des réels
       </a>
     </li>
@@ -1071,7 +1059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Codage/Au%20programme/Les_caracteres_suite/06_iso-8859-15/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Au%20programme/Les_caracteres_suite/06_iso-8859-15/" class="md-nav__link">
         Codage des caractères : ISO-8859-15
       </a>
     </li>
@@ -1085,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Codage/Au%20programme/Les_caracteres_suite/07_UTF8/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Au%20programme/Les_caracteres_suite/07_UTF8/" class="md-nav__link">
         Codage des caractères : UTF-8
       </a>
     </li>
@@ -1099,7 +1087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Premi%C3%A8re%20NSI/Codage/Au%20programme/Les%20flottants_suite/02_flottant/" class="md-nav__link">
+      <a href="../../../../Premi%C3%A8re%20NSI/Codage/Au%20programme/Les%20flottants_suite/02_flottant/" class="md-nav__link">
         Codage des réels (suite)
       </a>
     </li>
@@ -1133,12 +1121,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -1161,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index_term_G/" class="md-nav__link">
+      <a href="../../../index_term_G/" class="md-nav__link">
         Accueil TGEN
       </a>
     </li>
@@ -1173,12 +1163,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
       
       
       
@@ -1199,12 +1191,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_1" type="checkbox" id="__nav_4_2_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_1" type="checkbox" id="__nav_4_2_1" checked>
       
       
       
@@ -1227,7 +1221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../D%C3%A9rivation%20-%20les%20bases/01_deriv_base_tgte/" class="md-nav__link">
+      <a href="../01_deriv_base_tgte/" class="md-nav__link">
         Dérivation et tangente
       </a>
     </li>
@@ -1241,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../D%C3%A9rivation%20-%20les%20bases/02_deriv_base_formule/" class="md-nav__link">
+      <a href="../02_deriv_base_formule/" class="md-nav__link">
         Dérivation et formule
       </a>
     </li>
@@ -1255,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../D%C3%A9rivation%20-%20les%20bases/03_deriv_utilis/" class="md-nav__link">
+      <a href="../03_deriv_utilis/" class="md-nav__link">
         Utilisation de la dérivée
       </a>
     </li>
@@ -1269,7 +1263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../D%C3%A9rivation%20-%20les%20bases/04_deriv_composee/" class="md-nav__link">
+      <a href="../04_deriv_composee/" class="md-nav__link">
         Composée de fonctions
       </a>
     </li>
@@ -1283,7 +1277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../D%C3%A9rivation%20-%20les%20bases/05_Convexite/" class="md-nav__link">
+      <a href="../05_Convexite/" class="md-nav__link">
         Convexité
       </a>
     </li>
@@ -1295,11 +1289,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../D%C3%A9rivation%20-%20les%20bases/06_primitive/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Primitive
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Primitive
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#primitives_des_fonctions_usuelles" class="md-nav__link">
+    Primitives des fonctions usuelles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primitives_et_operation" class="md-nav__link">
+    Primitives et opération
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1344,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../D%C3%A9rivation_au_prog/Deriv_A_retenir/" class="md-nav__link">
+      <a href="../../D%C3%A9rivation_au_prog/Deriv_A_retenir/" class="md-nav__link">
         A retenir
       </a>
     </li>
@@ -1358,7 +1400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../D%C3%A9rivation_au_prog/Nbre_d%C3%A9riv%C3%A9/" class="md-nav__link">
+      <a href="../../D%C3%A9rivation_au_prog/Nbre_d%C3%A9riv%C3%A9/" class="md-nav__link">
         Nombre dérivé
       </a>
     </li>
@@ -1372,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../D%C3%A9rivation_au_prog/conv_ineg/" class="md-nav__link">
+      <a href="../../D%C3%A9rivation_au_prog/conv_ineg/" class="md-nav__link">
         Convexité et inégalités
       </a>
     </li>
@@ -1386,7 +1428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../D%C3%A9rivation_au_prog/dem_prog/" class="md-nav__link">
+      <a href="../../D%C3%A9rivation_au_prog/dem_prog/" class="md-nav__link">
         Démonstration au programme
       </a>
     </li>
@@ -1407,7 +1449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../D%C3%A9rivation_en_plus/D%C3%A9rivation_best/" class="md-nav__link">
+      <a href="../../D%C3%A9rivation_en_plus/D%C3%A9rivation_best/" class="md-nav__link">
         Dérivation : vers le supérieur
       </a>
     </li>
@@ -1480,7 +1522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Suites_et_recurrence/Suites_bases/01_Rappels_sur_les_suites/" class="md-nav__link">
+      <a href="../../../Suites_et_recurrence/Suites_bases/01_Rappels_sur_les_suites/" class="md-nav__link">
         Rappel sur les suites
       </a>
     </li>
@@ -1494,7 +1536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Suites_et_recurrence/Suites_bases/02_Suites_et_python/" class="md-nav__link">
+      <a href="../../../Suites_et_recurrence/Suites_bases/02_Suites_et_python/" class="md-nav__link">
         Suites et python
       </a>
     </li>
@@ -1508,7 +1550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Suites_et_recurrence/Suites_bases/03_Suite_et_sens_de_variations/" class="md-nav__link">
+      <a href="../../../Suites_et_recurrence/Suites_bases/03_Suite_et_sens_de_variations/" class="md-nav__link">
         Suites et sens de variations
       </a>
     </li>
@@ -1522,7 +1564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Suites_et_recurrence/Suites_bases/04_Suites_aritmetiques/" class="md-nav__link">
+      <a href="../../../Suites_et_recurrence/Suites_bases/04_Suites_aritmetiques/" class="md-nav__link">
         Suites arithmétiques
       </a>
     </li>
@@ -1536,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Suites_et_recurrence/Suites_bases/05_Suites_geometrique/" class="md-nav__link">
+      <a href="../../../Suites_et_recurrence/Suites_bases/05_Suites_geometrique/" class="md-nav__link">
         Suites géométriques
       </a>
     </li>
@@ -1550,7 +1592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Suites_et_recurrence/Suites_bases/06_Raisonnement_par_recurrence/" class="md-nav__link">
+      <a href="../../../Suites_et_recurrence/Suites_bases/06_Raisonnement_par_recurrence/" class="md-nav__link">
         Raisonnement par récurrence
       </a>
     </li>
@@ -1564,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Suites_et_recurrence/Suites_bases/07_majoree_minoree_bornee/" class="md-nav__link">
+      <a href="../../../Suites_et_recurrence/Suites_bases/07_majoree_minoree_bornee/" class="md-nav__link">
         Suite majorée, minorée, bornée
       </a>
     </li>
@@ -1611,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Suites_et_recurrence/Suites_prog/SuiteRec_A_retenir/" class="md-nav__link">
+      <a href="../../../Suites_et_recurrence/Suites_prog/SuiteRec_A_retenir/" class="md-nav__link">
         A retenir
       </a>
     </li>
@@ -1691,7 +1733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Loi_binomiale/binom_bases/01_binom_rappel/" class="md-nav__link">
+      <a href="../../../Loi_binomiale/binom_bases/01_binom_rappel/" class="md-nav__link">
         Rappel
       </a>
     </li>
@@ -1705,7 +1747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Loi_binomiale/binom_bases/02_succ_ep_ind/" class="md-nav__link">
+      <a href="../../../Loi_binomiale/binom_bases/02_succ_ep_ind/" class="md-nav__link">
         Succession d'épreuves
       </a>
     </li>
@@ -1719,7 +1761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Loi_binomiale/binom_bases/03_loi_binom/" class="md-nav__link">
+      <a href="../../../Loi_binomiale/binom_bases/03_loi_binom/" class="md-nav__link">
         Loi binomiale
       </a>
     </li>
@@ -1766,7 +1808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Loi_binomiale/binom_prog/binom_A_Retenir/" class="md-nav__link">
+      <a href="../../../Loi_binomiale/binom_prog/binom_A_Retenir/" class="md-nav__link">
         A retenir
       </a>
     </li>
@@ -1780,7 +1822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Loi_binomiale/binom_prog/binom_dem_prog/" class="md-nav__link">
+      <a href="../../../Loi_binomiale/binom_prog/binom_dem_prog/" class="md-nav__link">
         Démonstration au programme
       </a>
     </li>
@@ -1860,7 +1902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Limite_de_suite/Limite_suite_base/01_Limite_d_une_suite/" class="md-nav__link">
+      <a href="../../../Limite_de_suite/Limite_suite_base/01_Limite_d_une_suite/" class="md-nav__link">
         Limite d'une suite
       </a>
     </li>
@@ -1874,7 +1916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Limite_de_suite/Limite_suite_base/02_Limite_de_la_suite_qn/" class="md-nav__link">
+      <a href="../../../Limite_de_suite/Limite_suite_base/02_Limite_de_la_suite_qn/" class="md-nav__link">
         Limite de la suite $q^n$
       </a>
     </li>
@@ -1888,7 +1930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Limite_de_suite/Limite_suite_base/03_Theoremes_d_operation/" class="md-nav__link">
+      <a href="../../../Limite_de_suite/Limite_suite_base/03_Theoremes_d_operation/" class="md-nav__link">
         Limite et opérations
       </a>
     </li>
@@ -1902,7 +1944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Limite_de_suite/Limite_suite_base/04_th_comp/" class="md-nav__link">
+      <a href="../../../Limite_de_suite/Limite_suite_base/04_th_comp/" class="md-nav__link">
         Limite et comparaison
       </a>
     </li>
@@ -1949,7 +1991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Limite_de_suite/lim_suite_prog/lim_suite_A_retenir/" class="md-nav__link">
+      <a href="../../../Limite_de_suite/lim_suite_prog/lim_suite_A_retenir/" class="md-nav__link">
         A retenir
       </a>
     </li>
@@ -1963,7 +2005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Limite_de_suite/lim_suite_prog/lim_suite_dem_prog/" class="md-nav__link">
+      <a href="../../../Limite_de_suite/lim_suite_prog/lim_suite_dem_prog/" class="md-nav__link">
         Démonstrations au programme
       </a>
     </li>
@@ -1984,7 +2026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Limite_de_suite/Limite_de_suite_en_plus/limite_suite_best/" class="md-nav__link">
+      <a href="../../../Limite_de_suite/Limite_de_suite_en_plus/limite_suite_best/" class="md-nav__link">
         Limite de suites : vers le supérieur
       </a>
     </li>
@@ -2057,7 +2099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Vecteur_esp/vect_esp_base/persp_cav/" class="md-nav__link">
+      <a href="../../../Vecteur_esp/vect_esp_base/persp_cav/" class="md-nav__link">
         Perspective cavalière
       </a>
     </li>
@@ -2071,7 +2113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Vecteur_esp/vect_esp_base/dte_et_plan/" class="md-nav__link">
+      <a href="../../../Vecteur_esp/vect_esp_base/dte_et_plan/" class="md-nav__link">
         Droite et plan
       </a>
     </li>
@@ -2085,7 +2127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Vecteur_esp/vect_esp_base/Vect_esp/" class="md-nav__link">
+      <a href="../../../Vecteur_esp/vect_esp_base/Vect_esp/" class="md-nav__link">
         Vecteur de l'espace
       </a>
     </li>
@@ -2099,7 +2141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Vecteur_esp/vect_esp_base/rep_esp/" class="md-nav__link">
+      <a href="../../../Vecteur_esp/vect_esp_base/rep_esp/" class="md-nav__link">
         Repère de l'espace
       </a>
     </li>
@@ -2113,7 +2155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Vecteur_esp/vect_esp_base/Eq_param/" class="md-nav__link">
+      <a href="../../../Vecteur_esp/vect_esp_base/Eq_param/" class="md-nav__link">
         Equation paramétrique d'une droite
       </a>
     </li>
@@ -2160,7 +2202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Vecteur_esp/vect_esp_prog/vect_esp_A_Retenir/" class="md-nav__link">
+      <a href="../../../Vecteur_esp/vect_esp_prog/vect_esp_A_Retenir/" class="md-nav__link">
         A retenir
       </a>
     </li>
@@ -2240,7 +2282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Limite_fct/limite_fct_base/01_lim_fct_infinie/" class="md-nav__link">
+      <a href="../../../Limite_fct/limite_fct_base/01_lim_fct_infinie/" class="md-nav__link">
         Limite vers l'infini
       </a>
     </li>
@@ -2254,7 +2296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Limite_fct/limite_fct_base/02_lim_fct_reel/" class="md-nav__link">
+      <a href="../../../Limite_fct/limite_fct_base/02_lim_fct_reel/" class="md-nav__link">
         Limite au voisinage d'un réel
       </a>
     </li>
@@ -2268,7 +2310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Limite_fct/limite_fct_base/03_lim_fct_op/" class="md-nav__link">
+      <a href="../../../Limite_fct/limite_fct_base/03_lim_fct_op/" class="md-nav__link">
         Limite et opérations
       </a>
     </li>
@@ -2282,7 +2324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Limite_fct/limite_fct_base/04_lim_fct_comp/" class="md-nav__link">
+      <a href="../../../Limite_fct/limite_fct_base/04_lim_fct_comp/" class="md-nav__link">
         Limite et comparaison
       </a>
     </li>
@@ -2329,7 +2371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Limite_fct/limite_fct_prog/lim_fct_A_Retenir/" class="md-nav__link">
+      <a href="../../../Limite_fct/limite_fct_prog/lim_fct_A_Retenir/" class="md-nav__link">
         A retenir
       </a>
     </li>
@@ -2343,7 +2385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Limite_fct/limite_fct_prog/lim_fct_dem/" class="md-nav__link">
+      <a href="../../../Limite_fct/limite_fct_prog/lim_fct_dem/" class="md-nav__link">
         Démonstration au programme
       </a>
     </li>
@@ -2423,7 +2465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Esp_ortho/Esp_ortho_base/01_Rappel_pdt_scal_plan/" class="md-nav__link">
+      <a href="../../../Esp_ortho/Esp_ortho_base/01_Rappel_pdt_scal_plan/" class="md-nav__link">
         Rappel : produit scalaire dans le plan
       </a>
     </li>
@@ -2437,7 +2479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Esp_ortho/Esp_ortho_base/02_pdt_scal_esp/" class="md-nav__link">
+      <a href="../../../Esp_ortho/Esp_ortho_base/02_pdt_scal_esp/" class="md-nav__link">
         Espace et produit scalaire
       </a>
     </li>
@@ -2451,7 +2493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Esp_ortho/Esp_ortho_base/03_vect_normal/" class="md-nav__link">
+      <a href="../../../Esp_ortho/Esp_ortho_base/03_vect_normal/" class="md-nav__link">
         Vecteur normal
       </a>
     </li>
@@ -2465,7 +2507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Esp_ortho/Esp_ortho_base/04_eq_cart_plan/" class="md-nav__link">
+      <a href="../../../Esp_ortho/Esp_ortho_base/04_eq_cart_plan/" class="md-nav__link">
         Equation cartésienne, distance
       </a>
     </li>
@@ -2512,7 +2554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Esp_ortho/Esp_ortho_prog/Esp_ortho_A_Retenir/" class="md-nav__link">
+      <a href="../../../Esp_ortho/Esp_ortho_prog/Esp_ortho_A_Retenir/" class="md-nav__link">
         A retenir
       </a>
     </li>
@@ -2526,7 +2568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Esp_ortho/Esp_ortho_prog/Plan_med/" class="md-nav__link">
+      <a href="../../../Esp_ortho/Esp_ortho_prog/Plan_med/" class="md-nav__link">
         Plan médiateur
       </a>
     </li>
@@ -2606,7 +2648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Continuite/Continuite_base/01_cont_fct/" class="md-nav__link">
+      <a href="../../../Continuite/Continuite_base/01_cont_fct/" class="md-nav__link">
         Fonction continue
       </a>
     </li>
@@ -2620,7 +2662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Continuite/Continuite_base/02_TVI/" class="md-nav__link">
+      <a href="../../../Continuite/Continuite_base/02_TVI/" class="md-nav__link">
         Théorème des valeurs intermédiaires
       </a>
     </li>
@@ -2667,7 +2709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Continuite/Continuite_prog/Continuite_A_Retenir/" class="md-nav__link">
+      <a href="../../../Continuite/Continuite_prog/Continuite_A_Retenir/" class="md-nav__link">
         A retenir
       </a>
     </li>
@@ -2747,7 +2789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Log/Log_base/01_fct_ln/" class="md-nav__link">
+      <a href="../../../Log/Log_base/01_fct_ln/" class="md-nav__link">
         La fonction ln
       </a>
     </li>
@@ -2761,7 +2803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Log/Log_base/02_etude_fct/" class="md-nav__link">
+      <a href="../../../Log/Log_base/02_etude_fct/" class="md-nav__link">
         Etude de la fonction
       </a>
     </li>
@@ -2808,7 +2850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Log/Log_prog/Log_A_Retenir/" class="md-nav__link">
+      <a href="../../../Log/Log_prog/Log_A_Retenir/" class="md-nav__link">
         A retenir
       </a>
     </li>
@@ -2888,7 +2930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Eq_diff/Eq_diff_base/01_Def/" class="md-nav__link">
+      <a href="../../../Eq_diff/Eq_diff_base/01_Def/" class="md-nav__link">
         Définition
       </a>
     </li>
@@ -2902,7 +2944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Eq_diff/Eq_diff_base/02_ED1/" class="md-nav__link">
+      <a href="../../../Eq_diff/Eq_diff_base/02_ED1/" class="md-nav__link">
         Eq. diff. premier ordre
       </a>
     </li>
@@ -2949,7 +2991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Eq_diff/Eq_diff_prog/Dem_prog/" class="md-nav__link">
+      <a href="../../../Eq_diff/Eq_diff_prog/Dem_prog/" class="md-nav__link">
         Démonstration au programme
       </a>
     </li>
@@ -3029,7 +3071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ensemble/Ensemble_base/01_ensemble/" class="md-nav__link">
+      <a href="../../../Ensemble/Ensemble_base/01_ensemble/" class="md-nav__link">
         Ensemble
       </a>
     </li>
@@ -3043,7 +3085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ensemble/Ensemble_base/02_denom/" class="md-nav__link">
+      <a href="../../../Ensemble/Ensemble_base/02_denom/" class="md-nav__link">
         Dénombrement
       </a>
     </li>
@@ -3090,7 +3132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ensemble/Ensemble_prog/Dem_prog/" class="md-nav__link">
+      <a href="../../../Ensemble/Ensemble_prog/Dem_prog/" class="md-nav__link">
         Démonstration au programme
       </a>
     </li>
@@ -3170,7 +3212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Calcul_integral/Cal_int_base/01_fct_pos/" class="md-nav__link">
+      <a href="../../../Calcul_integral/Cal_int_base/01_fct_pos/" class="md-nav__link">
         Fonctions positives
       </a>
     </li>
@@ -3184,7 +3226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Calcul_integral/Cal_int_base/02_fct_pos_prim/" class="md-nav__link">
+      <a href="../../../Calcul_integral/Cal_int_base/02_fct_pos_prim/" class="md-nav__link">
         Fonctions positives et primitives
       </a>
     </li>
@@ -3198,7 +3240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Calcul_integral/Cal_int_base/03_fct_qcq/" class="md-nav__link">
+      <a href="../../../Calcul_integral/Cal_int_base/03_fct_qcq/" class="md-nav__link">
         Fonctions quelconques
       </a>
     </li>
@@ -3212,7 +3254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Calcul_integral/Cal_int_base/04_int_pp/" class="md-nav__link">
+      <a href="../../../Calcul_integral/Cal_int_base/04_int_pp/" class="md-nav__link">
         Intégration par parties
       </a>
     </li>
@@ -3226,7 +3268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Calcul_integral/Cal_int_base/05_calc_aire/" class="md-nav__link">
+      <a href="../../../Calcul_integral/Cal_int_base/05_calc_aire/" class="md-nav__link">
         Calcul d'aire
       </a>
     </li>
@@ -3273,7 +3315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Calcul_integral/Cal_int_prog/Dem_prog/" class="md-nav__link">
+      <a href="../../../Calcul_integral/Cal_int_prog/Dem_prog/" class="md-nav__link">
         Démonstration au programme
       </a>
     </li>
@@ -3353,7 +3395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Somme_VAR/VAR_base/01_var/" class="md-nav__link">
+      <a href="../../../Somme_VAR/VAR_base/01_var/" class="md-nav__link">
         Tout le cours
       </a>
     </li>
@@ -3433,7 +3475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Fct_trigo/Fct_trigo_base/01_trigo/" class="md-nav__link">
+      <a href="../../../Fct_trigo/Fct_trigo_base/01_trigo/" class="md-nav__link">
         Tout le cours
       </a>
     </li>
@@ -3513,7 +3555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Loi_gds_nombres/Gds_nbres_bases/01_gds_nbres/" class="md-nav__link">
+      <a href="../../../Loi_gds_nombres/Gds_nbres_bases/01_gds_nbres/" class="md-nav__link">
         Tout le cours
       </a>
     </li>
@@ -3575,7 +3617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Labo%20de%20math/c01/" class="md-nav__link">
+      <a href="../../../../../Labo%20de%20math/c01/" class="md-nav__link">
         Accueil
       </a>
     </li>
@@ -3589,7 +3631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Labo%20de%20math/Liaison_lyc%C3%A9e_sup/sup%C3%A9rieur/" class="md-nav__link">
+      <a href="../../../../../Labo%20de%20math/Liaison_lyc%C3%A9e_sup/sup%C3%A9rieur/" class="md-nav__link">
         Liaison lycée/supérieur
       </a>
     </li>
@@ -3623,6 +3665,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#primitives_des_fonctions_usuelles" class="md-nav__link">
+    Primitives des fonctions usuelles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primitives_et_operation" class="md-nav__link">
+    Primitives et opération
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3636,84 +3700,115 @@
 
                   
 
-  <a href="https://github.com/boulotacademique/site_lycee_essai/edit/master/docs/Cours/Terminale générale/Derivation_et_convexite/01_Fonction_derivable.md" title="Editer cette page" class="md-content__button md-icon">
+  <a href="https://github.com/boulotacademique/site_lycee_essai/edit/master/docs/Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/06_primitive.md" title="Editer cette page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="fonction_derivable">Fonction dérivable<a class="headerlink" href="#fonction_derivable" title="Permanent link"></a></h1>
-<div class="admonition note">
-<p class="admonition-title">Définition</p>
-<p>Soit <span class="arithmatex">\(f\)</span>  une fonction définie sur un intervalle <span class="arithmatex">\(I\)</span> contenant <span class="arithmatex">\(a\)</span>.</p>
+<h1 id="calcul_de_primitive">Calcul de primitive<a class="headerlink" href="#calcul_de_primitive" title="Permanent link"></a></h1>
+<h2 id="primitives_des_fonctions_usuelles">Primitives des fonctions usuelles<a class="headerlink" href="#primitives_des_fonctions_usuelles" title="Permanent link"></a></h2>
+<div class="arithmatex">\[
+\begin{array}{|c|c|c|c|}
+\hline
+\rule[-4pt]{0pt}{15pt} \text{Fonction $f$ définie sur} &amp; \text{Par :}&amp; \text{a pour primitive}&amp; \text{sur} \\
+\hline
+\rule[-4pt]{0pt}{15pt} \R &amp; f(x) = k &amp; F(x) = kx  \ \text{(k cste)} &amp; \R \\
+\hline
+\rule[-12pt]{0pt}{30pt} \R &amp; f(x) = x^n \quad n \in \mathbb{N},\ n \geq 1 &amp; F(x) = \dfrac{x^{n+1}}{n+1} &amp; \R \\
+\hline
+\rule[-12pt]{0pt}{30pt} ]-\infty;0[ \text{ou}  ]0;+\infty[  &amp; f(x) = x^n \quad n \in \mathbb{Z},\ n \leq -2 &amp; F(x) = \dfrac{x^{n+1}}{n+1} &amp; ]-\infty;0[ \text{ou}  ]0;+\infty[ \\
+\hline
+\rule[-12pt]{0pt}{30pt} ]-\infty;0[ \text{ou}  ]0;+\infty[  &amp; f(x) = \dfrac{1}{x^n} \quad n \in \mathbb{N},\ n \geq 2 &amp; F(x) = \dfrac{-1}{(n-1)x^{n-1}} &amp; ]-\infty;0[ \text{ou}  ]0;+\infty[ \\
+\hline
+\rule[-12pt]{0pt}{30pt}]-\infty;0[ \text{ou}  ]0;+\infty[ &amp; f(x) = \frac{1}{x} &amp; F(x) = \ln (|x|) &amp; ]-\infty;0[ \text{ou}  ]0;+\infty[\\
+\hline
+\rule[-12pt]{0pt}{30pt} \left]0;+\infty \right[ &amp; f(x) = \dfrac{1}{\sqrt{x}} &amp; F(x) = 2\sqrt{x} &amp; ]0;+\infty[\\
+\hline
+\rule[-4pt]{0pt}{15pt} \R &amp; f(x) = \cos{x} &amp; F(x) = \sin{x} &amp; \R\\
+\hline
+\rule[-4pt]{0pt}{15pt} \R &amp; f(x) = \sin{x} &amp; F(x) = -\cos{x} &amp; \R\\
+\hline
+\rule[-12pt]{0pt}{30pt} \R &amp; f(x) = \cos{(ax+b)} &amp; F(x) = \dfrac{1}{a}\sin{(ax+b)} &amp; \R\\
+\hline
+\rule[-12pt]{0pt}{30pt} \R &amp; f(x) = \sin{(ax+b)} &amp; F(x) = \dfrac{-1}{a}\cos{(ax+b)} &amp; \R\\
+\hline
+\rule[-4pt]{0pt}{15pt} \R &amp; f(x) = \ex^{x}=\exp (x) &amp; F(x) = \ex^{x}=\exp (x) &amp; \R\\
+\hline
+\rule[-12pt]{0pt}{30pt} \R &amp; f(x) = \ex^{ax+b}=\exp (ax+b) &amp; F(x) =\dfrac{1}{a} \ex^{ax+b}=\dfrac{1}{a}\exp (ax+b) &amp; \R\\
+\hline
+\end{array}
+\]</div>
+<h2 id="primitives_et_operation">Primitives et opération<a class="headerlink" href="#primitives_et_operation" title="Permanent link"></a></h2>
+<div class="admonition info">
+<p class="admonition-title">Primitive et opérations</p>
+<p>Si <span class="arithmatex">\(F\)</span> et <span class="arithmatex">\(G\)</span> sont des primitives des fonctions <span class="arithmatex">\(f\)</span> et <span class="arithmatex">\(g\)</span> sur <span class="arithmatex">\(I\)</span>
 <ul>
-<li><span class="arithmatex">\(f\)</span> est <strong>dérivable</strong> en <span class="arithmatex">\(a\)</span>  de nombre dérivé <span class="arithmatex">\(f'(a)\)</span> signifie:</li>
-</ul>
-<div class="arithmatex">\[
-\lim\limits_{h\to 0}\dfrac{f(a+h)-f(a)}{h}=f'(a)
-\]</div>
-<p>ou encore</p>
-<div class="arithmatex">\[
-\lim\limits_{x\to a}\dfrac{f(x)-f(a)}{x-a}=f'(a)
-\]</div>
-<p>(avec <span class="arithmatex">\(f'(a)\)</span> nombre <strong>fini</strong>).</p>
-<ul>
-<li><span class="arithmatex">\(f\)</span> est dérivable sur <span class="arithmatex">\(I\)</span> signifie que <span class="arithmatex">\(f\)</span> est dérivable en tout <span class="arithmatex">\(x\)</span> de <span class="arithmatex">\(I\)</span>.</li>
-<li>La fonction dérivée de <span class="arithmatex">\(f\)</span>  notée <span class="arithmatex">\(f'\)</span> est la fonction qui, à tout <span class="arithmatex">\(x\)</span> de I associe le nombre <span class="arithmatex">\(f'(x)\)</span> .</li>
-</ul>
+<li> alors une primitive de <span class="arithmatex">\(f+g\)</span> est <span class="arithmatex">\(F+G\)</span></li>
+<li> alors une primitive de <span class="arithmatex">\(\alpha f\)</span> et <span class="arithmatex">\(\alpha F\)</span>, pour <span class="arithmatex">\(\alpha\)</span> un nombre réel.</li>
+</ul></p>
 </div>
-<details class="example" open="open"><summary>Exemple</summary><p>Etudier la dérivabilité en 2 de la fonction <span class="arithmatex">\(f:x\mapsto x^2+2\)</span>.</p>
-<details class="done" open="open"><summary>Question</summary><p>Soit <span class="arithmatex">\(h\neq0\)</span></br>
-<span class="arithmatex">\(\dfrac{f(2+h)-f(2)}{h}=\dfrac{(2+h)^2+2-6}{h}= \dfrac{h^2+4h}{h}=h+4\)</span>. Or </p>
-<div class="arithmatex">\[
-\lim_{h \to 0}(h+4)=4
-\]</div>
-<p>Donc <span class="arithmatex">\(f\)</span> est dérivable en 2 et <span class="arithmatex">\(f'(2)=4\)</span>.</p>
+<details class="- example"><summary>Exemple</summary><p>Déterminer les primitives des fonctions suivantes sur <span class="arithmatex">\(I\)</span> :
+<ol>
+<li> <span class="arithmatex">\(f(x)=5x^3+3x^2-2x+7\)</span> et <span class="arithmatex">\(I=\R\)</span></li>
+<li> <span class="arithmatex">\(f(x)=\dfrac{1}{x}-\dfrac{1}{x^2}\)</span> et <span class="arithmatex">\(I=]0 ; +\infty[\)</span></li>
+<li> <span class="arithmatex">\(f(x) = \dfrac{3}{x^3} + \dfrac{1}{5x^2}\)</span> et <span class="arithmatex">\(I=]0 ; +\infty[\)</span></li>
+<li> <span class="arithmatex">\(f(x) = \ex^{2x}+5\ex^{-x+4}+3\)</span> et <span class="arithmatex">\(I=\R\)</span></li>
+</ol></p>
 </details>
+<details class="- example"><summary>Exemple</summary><p>Déterminer la primitive <span class="arithmatex">\(F\)</span> de <span class="arithmatex">\(f\)</span> sur <span class="arithmatex">\(I\)</span> telle que <span class="arithmatex">\(F(x_0)=y_0\)</span>:
+<ol>
+</li>
+<li> <span class="arithmatex">\(f(x)=5x^3+3x^2-2x+7\)</span>, <span class="arithmatex">\(I=\R\)</span> et <span class="arithmatex">\(F(-1)=4\)</span>
+</li>
+<li> <span class="arithmatex">\(f(x)=\dfrac{1}{x}-\dfrac{1}{x^2}\)</span>, <span class="arithmatex">\(I=]0 ; +\infty[\)</span>  et <span class="arithmatex">\(F(2)=-5\)</span>
+</li>
+<li> <span class="arithmatex">\(f(x) = \dfrac{3}{x^3} + \dfrac{1}{5x^2}\)</span>, <span class="arithmatex">\(I=]0 ; +\infty[\)</span>  et <span class="arithmatex">\(F(1)=0\)</span>
+</li>
+<li> <span class="arithmatex">\(f(x) = \ex^{2x}+5\ex^{-x+4}+3\)</span>, <span class="arithmatex">\(I=\R\)</span>  et <span class="arithmatex">\(F(0)=3\)</span>
+</li>
+</ol></p>
 </details>
-<details class="example" open="open"><summary>Exemple</summary><p>Etudier la dérivabilité en 0 de la fonction <span class="arithmatex">\(f:x \mapsto \sqrt{x}\)</span>.</p>
-<details class="done" open="open"><summary>Question</summary><p>La fonction racine carrée est définie pour <span class="arithmatex">\(x\geq 0\)</span>.</br>
-Soit <span class="arithmatex">\(h&gt;0\)</span></br>
-<span class="arithmatex">\(\dfrac{f(0+h)-f(0)}{h}=\dfrac{\sqrt{h}}{h}=\dfrac{1}{\sqrt{h}}\)</span>, or</p>
 <div class="arithmatex">\[
-\lim_{h \to 0} \dfrac{1}{\sqrt{h}}=+\infty
+\begin{array}{|c|c|c|}
+\hline
+u \text{ est une fonction dérivable sur } I &amp; \text{une primtive } F \text{ de } f \text{est : } &amp; \text{Conditions sur } u\\
+\hline
+\rule[-12pt]{0pt}{30pt}  u' \times u^{n} (n\in \Z^* \text{ et } n\neq -1) &amp; \dfrac{u^{n+1}}{n+1}  &amp;  \text{si } n&lt;-1, \text{ pour tout } x \text{ de } I :  u(x) \neq 0\\
+\hline
+\rule[-12pt]{0pt}{30pt}  \dfrac{v'}{v^2} &amp; \dfrac{-1}{v} &amp;  \text{Pour tout } x \text{ de } I : u(x) \neq 0 \\
+\hline
+\rule[-12pt]{0pt}{30pt}  \dfrac{u'}{u^{n}} \ \fbox{$\mathbf{n \geq 2}$} &amp; \dfrac{-1}{(n-1)u^{n-1}}  &amp;  \text{Pour tout } x \text{ de } I : u(x) \neq 0 \\
+\hline
+\rule[-12pt]{0pt}{30pt}  \dfrac{u'}{u}  &amp; \ln (|u|)  &amp;  \text{Pour tout } x \text{ de } I : u(x)\neq 0\\
+\hline
+\rule[-4pt]{0pt}{15pt} u' \ex^{u}=u' \exp (u) &amp; \ex^{u}=\exp (u) &amp; \\
+\hline
+\rule[-4pt]{0pt}{15pt} \dfrac{u'}{\sqrt{u}} &amp; 2\sqrt{u} &amp;  \text{Pour tout } x \text{ de } I : u(x)&gt; 0 \\
+\hline
+\rule[-4pt]{0pt}{15pt}  u' \times \sin (u) &amp; -\cos(u) &amp; \\
+\hline
+\rule[-4pt]{0pt}{15pt}  u' \times \cos (u) &amp; \sin(u) &amp; \\
+\hline
+%\rule[-4pt]{0pt}{15pt} \dfrac{u'}{1+u} &amp; \arctan(u) &amp; \\
+%\hline
+\end{array}
 \]</div>
-<p>donc </p>
-<div class="arithmatex">\[
-\lim_{h \to 0} \dfrac{f(0+h)-f(0)}{h}=+\infty
-\]</div>
-<p>Donc la fonction racine carrée n'est pas dérivable en 0.</p>
+<details class="- example"><summary>Exemple</summary><p>Déterminer les primitives de <span class="arithmatex">\(f\)</span> sur <span class="arithmatex">\(I\)</span>:
+<ol>
+<li> <span class="arithmatex">\(f(x)= 6x(x^2-5)^3\)</span>, <span class="arithmatex">\(I=\R_+\)</span></li>
+<li> <span class="arithmatex">\(f(x)=\dfrac{5}{2x+4}\)</span>, <span class="arithmatex">\(I=\R_+\)</span></li>
+<li> <span class="arithmatex">\(f(x)=\dfrac{3x}{(x^2+5)^3}\)</span>, <span class="arithmatex">\(I=\R_+\)</span></li>
+<li> <span class="arithmatex">\(f(x) = \dfrac{2}{\sqrt{3x+4}}\)</span>, <span class="arithmatex">\(I=\R_+\)</span></li>
+</ol></p>
 </details>
-</details>
-<p>Rappel : Le coefficient directeur d'une droite passant par <span class="arithmatex">\(A(x_A,y_B)\)</span> et $B(x_B,y_B) $ est <span class="arithmatex">\(m= \dfrac{y_B-y_A}{x_B-x_A}\)</span>.</p>
-<p><strong>Interprétation graphique de la dérivabilité</strong></p>
-<p>Si  <span class="arithmatex">\(A(a,f(a))\)</span> et <span class="arithmatex">\(M(x,f(x))\)</span> alors  <span class="arithmatex">\(\dfrac{f(x)-f(a)}{x-a}\)</span> est le coefficient directeur de la droite (AM).</br>
-Lorsque <span class="arithmatex">\(x\)</span> tend vers <span class="arithmatex">\(a\)</span>, cette droite (AM) tend vers une position limite la tangente à la courbe <span class="arithmatex">\(C_f\)</span> au point A.</p>
-<!--<iframe scrolling="no"
-src="https://www.geogebra.org/m/axmvyk6m"
-width="800px"
-height="600px"
-style="border:0px;" allowfullscreen>
-</iframe>-->
-
-<div class="admonition abstract">
-<p class="admonition-title">Théorème</p>
-<p>Dire que <span class="arithmatex">\(f\)</span> est dérivable en <span class="arithmatex">\(a\)</span> signifie que <span class="arithmatex">\(C_f\)</span> admet au point <span class="arithmatex">\(A(a,f(a))\)</span>  une tangente <span class="arithmatex">\(T_A\)</span> 
-<strong>non verticale</strong> (ou 2 demi-tangentes à droites et à gauche de A confondues).</br>
-Le <strong>coefficient directeur de la tangente au point d'abscisse <span class="arithmatex">\(a\)</span>  est <span class="arithmatex">\(f'(a)\)</span></strong>.</br>
-Une <strong>équation de la tangente</strong> <span class="arithmatex">\(T_A\)</span> (on dit aussi au point d'abscisse <span class="arithmatex">\(a\)</span>) est </p>
-<div class="arithmatex">\[
-y=f'(a)(x-a)+f(a)
-\]</div>
-</div>
-<p><a href="../Image/Im01.png"><img alt="Suite récurrente dans un plan" class="Center_lien VignetteMed" src="../Image/Im01.png" /></a></p>
 
 
 
 
 
                 
-<script src="../../../../pyodide-mkdocs/ide.js"></script> 
+<script src="../../../../../pyodide-mkdocs/ide.js"></script> 
 
               </article>
             </div>
@@ -3734,7 +3829,7 @@ y=f'(a)(x-a)+f(a)
     <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
       
         
-        <a href="../../../Terminale%20STI2D/c01/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: En construction" rel="prev">
+        <a href="../05_Convexite/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Convexité" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3743,20 +3838,20 @@ y=f'(a)(x-a)+f(a)
               <span class="md-footer__direction">
                 Précédent
               </span>
-              En construction
+              Convexité
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../Esp_ortho/Esp_ortho_prog/ortho_esp_dem/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Démonstration au programme" rel="next">
+        <a href="../../D%C3%A9rivation_au_prog/Deriv_A_retenir/" class="md-footer__link md-footer__link--next" aria-label="Suivant: A retenir" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Suivant
               </span>
-              Démonstration au programme
+              A retenir
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -3787,14 +3882,14 @@ y=f'(a)(x-a)+f(a)
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "header.autohide"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "header.autohide"], "search": "../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
       
-        <script src="../../../../javascripts/mathjax.js"></script>
+        <script src="../../../../../javascripts/mathjax.js"></script>
       
-        <script src="../../../../javascripts/my_java.js"></script>
+        <script src="../../../../../javascripts/my_java.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
