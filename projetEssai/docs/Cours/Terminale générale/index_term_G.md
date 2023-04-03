@@ -9,7 +9,7 @@
 * [Suites et récurrence](./Suites_et_recurrence/Suites_bases/01_Rappels_sur_les_suites.md)
 * [Loi binomiale](./Loi_binomiale/binom_bases/01_binom_rappel.md)
 * [Limite de suite](./Limite_de_suite/Limite_suite_base/01_Limite_d_une_suite.md)
-* [Vecteurs de l'espace - Equation paramétrique](./Vecteur_esp/vect_esp_base/persp_cav.md)
+* [Vecteurs de l'espace - Equation paramétrique](./Vecteur_esp/vect_esp_base/01_persp_cav.md)
 * [Limites de fonctions](./Limite_fct/limite_fct_base/01_lim_fct_infinie.md)
 * [Orthogonalité dans l'espace - Produit scalaire - Equation cartésienne](Esp_ortho/Esp_ortho_base/01_Rappel_pdt_scal_plan.md)
 * [Continuité](./Continuite/Continuite_base/01_cont_fct.md)

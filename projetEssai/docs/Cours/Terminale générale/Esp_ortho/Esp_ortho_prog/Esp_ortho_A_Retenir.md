@@ -24,7 +24,7 @@
 - Trouver la distance entre un point et une droite
 - Trouver la distance enter un point et un plan
 
-L'exercice du baccalauréat portant sur ce chapitre porte aussi sur le chapitre traitant des [vecteurs de l'espace](../../Vecteur_esp/vect_esp_base/persp_cav.md), en particulier [les représentations paramétriques d'une droite](../../Vecteur_esp/vect_esp_base/Eq_param.md).
+L'exercice du baccalauréat portant sur ce chapitre porte aussi sur le chapitre traitant des [vecteurs de l'espace](../../Vecteur_esp/vect_esp_base/01_persp_cav.md), en particulier [les représentations paramétriques d'une droite](../../Vecteur_esp/vect_esp_base/05_Eq_param.md).
 
 ### ... mais parfois il y a aussi
 

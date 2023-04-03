@@ -160,7 +160,8 @@ nav:
         - "Cours/Terminale générale/Derivation_et_convexite/01_Fonction_derivable.md"
         - "Cours/Terminale générale/Esp_ortho/Esp_ortho_prog/ortho_esp_dem.md"
         - "my_theme_customizations/pyodide-mkdocs/end_REM.md" 
-        - "my_theme_customizations/pyodide-mkdocs/start_REM.md" 
+        - "my_theme_customizations/pyodide-mkdocs/start_REM.md"
+        - "Cours/Terminale générale/Derivation_et_convexite/Tout/Tout.md"
     - Accueil: "index.md"
     #- Seconde: "Cours/Seconde/c01.md"
     - Première NSI: 
@@ -235,7 +236,7 @@ nav:
         - Limite de suite:
             - "Limite de suites : les bases":
                 - Limite d'une suite: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/01_Limite_d_une_suite.md"
-                - Limite de la suite $q^n$: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/02_Limite_de_la_suite_qn.md"
+                - Limite de la suite q^n: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/02_Limite_de_la_suite_qn.md"
                 - Limite et opérations: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/03_Theoremes_d_operation.md"
                 - Limite et comparaison : "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/04_th_comp.md"
             - "Limite de suites : au programme": 
@@ -244,11 +245,11 @@ nav:
             - "Limite de suites : vers le supérieur": "Cours/Terminale générale/Limite_de_suite/Limite_de_suite_en_plus/limite_suite_best.md"
         - Vecteur de l'espace:
             - "Vecteur : les bases":
-                - Perspective cavalière: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/persp_cav.md"
-                - Droite et plan: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/dte_et_plan.md"
-                - Vecteur de l'espace: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/Vect_esp.md"
-                - Repère de l'espace: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/rep_esp.md"
-                - Equation paramétrique d'une droite: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/Eq_param.md"
+                - Perspective cavalière: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/01_persp_cav.md"
+                - Droite et plan: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/02_dte_et_plan.md"
+                - Vecteur de l'espace: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/03_Vect_esp.md"
+                - Repère de l'espace: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/04_rep_esp.md"
+                - Equation paramétrique d'une droite: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/05_Eq_param.md"
             - "Vecteur : au programme":
                 - "A retenir" : "Cours/Terminale générale/Vecteur_esp/vect_esp_prog/vect_esp_A_Retenir.md"
         - Limite de fonction:
