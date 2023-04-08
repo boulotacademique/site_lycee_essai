@@ -192,9 +192,29 @@
 		margin-left : 42%;
 		width : 15%;
 	}
-
+	
+	.Vignette15{
+		/*border : 2px solid black;*/
+		margin-right : 42%;
+		margin-left : 42%;
+		width : 15%;
+	}
+	
+	.Vignette20{
+		/*border : 2px solid black;*/
+		margin-right : 40%;
+		margin-left : 40%;
+		width : 20%;
+	}
 
 	.VignetteMed{
+		/*border : 2px solid black;*/
+		/*margin-right : 35%;
+		margin-left : 35%;*/
+		width : 30%;
+	}
+
+	.Vignette30{
 		/*border : 2px solid black;*/
 		/*margin-right : 35%;
 		margin-left : 35%;*/
@@ -205,6 +225,17 @@
 		/*border : 2px solid black;*/
 		width : 40%;
 	}
+
+	.Vignette40{
+		/*border : 2px solid black;*/
+		width : 40%;
+	}
+
+	.Vignette60{
+		/*border : 2px solid black;*/
+		width : 60%;
+	}
+
 
 	.AvecBordure{
 		border : 1px solid black;
