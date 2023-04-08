@@ -200,6 +200,10 @@ nav:
     #- Première générale: "Cours/Première générale/c01.md"
     - Terminale générale:
         - Accueil TGEN: "Cours/Terminale générale/index_term_G.md"
+        - Pour réussir sa terminale: 
+            - Calcul algébrique:
+                - Développement, factorisation : "Cours/Terminale générale/Pre_requis/Dev_Fact/Dev_fact.md"
+                - Equation : "Cours/Terminale générale/Pre_requis/Equation/Equation.md"
         - Dérivation, convexité, primitive:
             - "Dérivation : les bases":
                 - Dérivation et tangente: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/01_deriv_base_tgte.md"
