@@ -162,6 +162,10 @@ nav:
         - "my_theme_customizations/pyodide-mkdocs/end_REM.md" 
         - "my_theme_customizations/pyodide-mkdocs/start_REM.md"
         - "Cours/Terminale générale/Derivation_et_convexite/Tout/Tout.md"
+        - "Cours/Terminale générale/Pre_requis/Fonctions/Fct_cube.md"
+        - "Cours/Terminale générale/Pre_requis/Fonctions/Fct_exp.md"
+        - "Cours/Terminale générale/Pre_requis/Fonctions/Fct_inverse.md"
+        - "Cours/Terminale générale/Pre_requis/Fonctions/Fct_va.md"
     - Accueil: "index.md"
     #- Seconde: "Cours/Seconde/c01.md"
     - Première NSI: 
@@ -204,6 +208,9 @@ nav:
             - Calcul algébrique:
                 - Développement, factorisation : "Cours/Terminale générale/Pre_requis/Dev_Fact/Dev_fact.md"
                 - Equation : "Cours/Terminale générale/Pre_requis/Equation/Equation.md"
+            - Fonctions:
+                - Fonction affine: "Cours/Terminale générale/Pre_requis/Fonctions/Fct_affine.md"
+                - Fonction du second degré: "Cours/Terminale générale/Pre_requis/Fonctions/Fct_carre.md"
         - Dérivation, convexité, primitive:
             - "Dérivation : les bases":
                 - Dérivation et tangente: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/01_deriv_base_tgte.md"

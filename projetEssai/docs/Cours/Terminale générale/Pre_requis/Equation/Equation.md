@@ -45,7 +45,7 @@
 ## Equation du second degré
 
 !!! note "Résolution d'équation du second degré"
-    Le nombre de solutions de l'équation du second degré $ax^2+bx+c=0$ ($a \neq 0$) dépend du signe de $\Delta = b^2 - 4ac$. On note $f(x) = ax^2+bx+c$.
+    Le nombre de <span id="sol_sec_deg">solutions de l'équation du second degré</span> $ax^2+bx+c=0$ ($a \neq 0$) dépend du signe de $\Delta = b^2 - 4ac$. On note $f(x) = ax^2+bx+c$.
 
     <table class="AvecBordure">
     <tr><td></td><td>$\Delta{} >0$</td><td>$\Delta{} =0$</td><td>$\Delta{} <0$</td></tr>
@@ -137,7 +137,7 @@
         <li> $\left(x+3\right)^2-9$ </li>
         </ol>
 
-???+ question "Exercice"
+???- question "Exercice"
     Résoudre les équations suivantes dans $\mathbb{R}$ :
     <ol>
     <li> $\exp(x)=\ex$</li>
