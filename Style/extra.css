@@ -236,6 +236,11 @@
 		width : 60%;
 	}
 
+	.Vignette50{
+		/*border : 2px solid black;*/
+		width : 50%;
+	}
+
 
 	.AvecBordure{
 		border : 1px solid black;
@@ -292,6 +297,11 @@
 
 	.Vert{
 		color: green;
+	}
+
+	.Sous_liste li
+	{
+		list-style-type: circle;
 	}
 
 	/*.py_mk_ide + p{
