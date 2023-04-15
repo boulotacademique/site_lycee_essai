@@ -207,6 +207,7 @@ nav:
             - Calcul algébrique:
                 - Développement, factorisation : "Cours/Terminale générale/Pre_requis/Dev_Fact/Dev_fact.md"
                 - Equation : "Cours/Terminale générale/Pre_requis/Equation/Equation.md"
+                - Inégalité : "Cours/Terminale générale/Pre_requis/Dev_Fact/Inegalite.md"
             - Fonctions:
                 - Fonction affine: "Cours/Terminale générale/Pre_requis/Fonctions/Fct_affine.md"
                 - Fonction du second degré: "Cours/Terminale générale/Pre_requis/Fonctions/Fct_carre.md"
