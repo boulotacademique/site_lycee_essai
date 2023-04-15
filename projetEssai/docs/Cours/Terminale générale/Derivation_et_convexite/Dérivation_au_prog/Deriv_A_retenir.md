@@ -32,8 +32,8 @@ L'exercice du baccalauréat portant sur ce chapitre porte aussi sur le chapitre 
 
 ### ... mais parfois il y a aussi
 
-- Etudier la position relative enrte une courbe et une tangente par le calcul
-- Etudier la position relative enrte une courbe et une tangente en utilisant la convexité
+- Etudier la position relative entre une courbe et une tangente par le calcul
+- Etudier la position relative entre une courbe et une tangente en utilisant la convexité
 - Calcul d'un produit scalaire dans le plan
 - Equation cartésienne d'une droite et orthogonalité
  
