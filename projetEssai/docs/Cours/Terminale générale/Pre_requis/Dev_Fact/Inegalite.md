@@ -27,14 +27,6 @@ Comparer donc deux réels $a$ et $b$, c'est chercher à savoir lequel est le plu
 
 ### Ordre et addition.
 
-???+ example "Exercices"
-    Comparer ces nombres sans faire de calculs et en précisant les règles utilisées :
-	<ul>
-    <li> $-7$ et $-3$</li>
-    <li> $-7+4$ et $-3+4$</li>
-    <li> $-7-4$ et $-3-4$</li>
-    </ul>
-
 
 !!! info "Ajouter ou soustraire un même nombre"
 	Soient $a$ et $b$ deux réels, si $a \leq b$, alors $a + c \leq b + c$ et $a - c \leq b -c$.
@@ -44,17 +36,15 @@ Comparer donc deux réels $a$ et $b$, c'est chercher à savoir lequel est le plu
 	    $a+c -(b+c) = a-b \leq 0$
 
 
+???+ example "Exercices"
+    Soit deux réels $x$ et $y$ tels que $x<y$, comparer ces nombres sans faire de calculs et en précisant les règles utilisées :
+	<ul>
+    <li> $x+4$ et $y+4$</li>
+    <li> $x-4$ et $y-4$</li>
+    </ul>
+
 !!! info "&laquo; passer de l'autre côté &raquo;"
 	si $x + a \leq b$, alors $x+a-a \leq b-a$, d'où $x\leq b-a$.
-
-
-???+ example "Exercices"
-	Comparer ces nombres sans faire de calculs et en précisant les règles utilisées :
-	<ul>
-    <li> $-4$ et $-3$</li>
-    <li> $-2$ et $-5$</li>
-    <li> $-3-2$ et $-4-5$</li>
-    </ul>
 
 
 !!! info "&laquo; Addition de &raquo; deux inégalités"
@@ -72,6 +62,13 @@ Comparer donc deux réels $a$ et $b$, c'est chercher à savoir lequel est le plu
         \end{eqnarray*}
         \]
 
+???+ example "Exercices"
+	Soit deux réels $x$ et $y$ tels que $x<y$, comparer ces nombres sans faire de calculs et en précisant les règles utilisées :
+	<ul>
+    <li> $4$ et $3$</li>
+    <li> $x+4$ et $y+3$</li>
+    </ul>
+
 ???+ warning "Cela ne fonctionne pas avec une soustraction"
     Attention dans le théorème précédent, on ne parle que d'addition.
 
@@ -85,17 +82,14 @@ Comparer donc deux réels $a$ et $b$, c'est chercher à savoir lequel est le plu
             - Comme $-1 < x < 5$ et $−3 < y < 4$  donc $-1 < x < 5$ et $−4 < −y < 3$. Ainsi, d'après la règle sur l'addition : $−5 < x − y < 8$.
 
 
+???+ example "Exercices"
+	Soit deux réels $x$ et $y$ tels que $x<y$, comparer ces nombres sans faire de calculs et en précisant les règles utilisées :
+	<ul>
+    <li> $4$ et $3$</li>
+    <li> $x-3$ et $y-4$</li>
+    </ul>
 
 ### Ordre et multiplication.
-
-???+ example "Exercices"
-	Comparer ces nombres sans faire de calculs et en précisant les règles utilisées :
-	<ul>
-    <li> $-7$ et $-3$</li>
-    <li> $-7 \times 4$ et $-3 \times 4$</li>
-    <li> $-7 \times (-8)$ et $-3 \times (-8)$</li>
-    <li> $-7 \times \frac{-1}{4}$ et $-3 \times \frac{-1}{4}$</li>
-    </ul>
 
 
 !!! info "Multiplication par une expression de signes constants !"
@@ -111,6 +105,14 @@ Comparer donc deux réels $a$ et $b$, c'est chercher à savoir lequel est le plu
 	
 	Pour comparer deux nombres réels négatifs, on compare leur opposé.
 
+???+ example "Exercices"
+	Comparer ces nombres sans faire de calculs et en précisant les règles utilisées :
+	<ul>
+    <li> $-7$ et $-3$</li>
+    <li> $-7 \times 4$ et $-3 \times 4$</li>
+    <li> $-7 \times (-8)$ et $-3 \times (-8)$</li>
+    <li> $-7 \times \frac{-1}{4}$ et $-3 \times \frac{-1}{4}$</li>
+    </ul>
 
 !!! info "&laquo;Produit de &raquo; deux inégalités"
 	Si $a,b,c$ et $d$ sont des nombres réels **positifs** tels que $a \leq b$ et $c \leq d$ alors $ac \leq bd$.
@@ -134,13 +136,6 @@ Comparer donc deux réels $a$ et $b$, c'est chercher à savoir lequel est le plu
 
 ### Passage au carré, à la racine carrée
 
-???+ example "Exercices"
-	Comparer ces nombres sans faire de calculs et en précisant les règles utilisées :
-	<ul>
-    <li> 0.38 et 1.05</li>
-    <li> $0.38^2$ et $1.05^2$</li>
-    </ul>
-
 
 !!! info "Au carré"
 	$a$ et $b$ étant deux nombres **positifs**, $0 \leq a\leq b$ alors $a^2\leq b^2$; et réciproquement, si $a^2\leq b^2$ , alors $a\leq b$.
@@ -154,14 +149,14 @@ Comparer donc deux réels $a$ et $b$, c'est chercher à savoir lequel est le plu
 	$a$ et $b$ étant deux nombres **positifs**,$\sqrt{a} \leq \sqrt{b}$ équivaut à $a\leq b$.
 
 
-### Passage à l'inverse.
-
 ???+ example "Exercices"
 	Comparer ces nombres sans faire de calculs et en précisant les règles utilisées :
 	<ul>
-    <li> $\pi$ et $3$.</li>
-    <li> $\frac{1}{\pi}$ et $\frac{1}{3}$.</li>
+    <li> 0.38 et 1.05</li>
+    <li> $0.38^2$ et $1.05^2$</li>
     </ul>
+
+### Passage à l'inverse.
 
 
 !!! info "Passage à l'inverse"
@@ -173,6 +168,13 @@ Comparer donc deux réels $a$ et $b$, c'est chercher à savoir lequel est le plu
     Si $a$ et $b$ ne sont pas de même signes, alors le passage à l'inverse utilise simplement ... les signes.
 
     Si $a < 0 < b$, alors $\dfrac{1}{a} <0 < \dfrac{1}{b}$.
+
+???+ example "Exercices"
+	Comparer ces nombres sans faire de calculs et en précisant les règles utilisées :
+	<ul>
+    <li> $\pi$ et $3$.</li>
+    <li> $\frac{1}{\pi}$ et $\frac{1}{3}$.</li>
+    </ul>
  
 ### Comparaison des puissances de a
 
@@ -211,7 +213,11 @@ Comparer donc deux réels $a$ et $b$, c'est chercher à savoir lequel est le plu
 	<ul>
     <li>Démontrer l'inégalité $(x+y-6)(x-y)>0$.</li>
     <li>Développer $(x+y-6)(x-y)$.</li>
-    <li>En déduire une comparaison des nombres $A$ et $B$ définis par :\[A=x^2-6x+1 \quad \text{et} \quad B=y^2-6y+1\]</li>
+    <li>En déduire une comparaison des nombres $A$ et $B$ définis par :
+    
+    \[A=x^2-6x+1 \quad \text{et} \quad B=y^2-6y+1\]
+    
+    </li>
     </ul>
 
 

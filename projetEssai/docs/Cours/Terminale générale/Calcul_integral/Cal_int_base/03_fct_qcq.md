@@ -114,6 +114,47 @@
         </ol>
 
 
+
+???- example "Exemple"
+    Soit la suite \Su définie pour tout entier naturel $n$ par :
+    
+    \[
+    u_n = \displaystyle\int_0^1 \dfrac{x^n}{1+x} \dx 
+    \]
+
+    <ol>
+    <li> Calculer $u_0 = \displaystyle\int_0^1 \dfrac{1}{1+x} \dx$</li>
+    <li> 
+    <ol>
+    <li> Démontrer que, pour tout entier naturel $n$, 
+    
+    \[
+        u_{n+1} + u_n = \dfrac{1}{n+1}
+    \]
+
+    </li>
+    <li> En déduire la valeur exacte de $u_1$.
+    </li>
+    </ol>
+    </li>
+    <li> Démontrer que la suite $\Su$ est décroissante.</li>
+    </ol>
+
+
+    ???- done "Réponse"
+        
+        <ol>
+        <li>
+        
+        \begin{eqnarray*}
+        \displaystyle\int_0^1 \dfrac{1}{1+x} \dx & = & \left[ \ln(1+x) \right]_0^1\\
+        & = & \ln(2)
+        \end{eqnarray*}
+
+        </li>
+        AFAIRE
+        </ol>
+
 ## Valeur moyenne d'une fonction continue
 
 !!! info "Valeur moyenne"
