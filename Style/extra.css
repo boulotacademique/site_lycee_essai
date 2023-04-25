@@ -242,6 +242,11 @@
 	}
 
 
+	.Vignette45{
+		/*border : 2px solid black;*/
+		width : 45%;
+	}
+
 	.AvecBordure{
 		border : 1px solid black;
 		border-collapse : collapse;
