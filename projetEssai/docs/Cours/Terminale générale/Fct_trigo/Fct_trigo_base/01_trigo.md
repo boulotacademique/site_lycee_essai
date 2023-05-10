@@ -23,7 +23,7 @@
 
     <iframe scrolling="no" title="Def trigo" src="https://www.geogebra.org/material/iframe/id/gpjtwczx/width/1306/height/556/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1306px" height="556px" style="border:0px;"> </iframe>
 
-!!! info "Formule"
+!!! info "Formules"
     <ul>
     <li> $\cos^{2}x + \sin^{2}x=1$</li>
     <li> $-1 \leqslant \cos x \leqslant 1$ et $-1 \leqslant \sin x \leqslant 1$</li>
