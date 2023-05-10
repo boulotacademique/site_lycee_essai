@@ -26,7 +26,7 @@
 !!! info "Formule"
     <ul>
     <li> $\cos^{2}x + \sin^{2}x=1$</li>
-    <li> $-1 \leqslant \cos x \leqslant 1$ \quad et \quad $-1 \leqslant \sin x \leqslant 1$</li>
+    <li> $-1 \leqslant \cos x \leqslant 1$ et $-1 \leqslant \sin x \leqslant 1$</li>
     </ul>
  
 
