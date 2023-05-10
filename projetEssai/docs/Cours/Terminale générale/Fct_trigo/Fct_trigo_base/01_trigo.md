@@ -33,7 +33,7 @@
 
 ### Valeurs remarquables
 
-!!! info "Valeur remarquable : à connaitre par c&#0156;ur"
+!!! info "Valeurs remarquables : à connaitre par c&#0156;ur"
 
     <div class="Center2 Tab50">
 
