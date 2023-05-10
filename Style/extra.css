@@ -309,6 +309,11 @@
 		list-style-type: circle;
 	}
 
+	.Tab50
+	{
+		max-width:50%!important;
+	}
+
 	/*.py_mk_ide + p{
 		display: none;
 	}
