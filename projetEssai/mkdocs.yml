@@ -327,6 +327,9 @@ nav:
         - Loi des grands nombres:
             - "Lois des grands nombres : les bases":
                 - "Tout le cours": "Cours/Terminale générale/Loi_gds_nombres/Gds_nbres_bases/01_gds_nbres.md"
+    - BTS CPI 2ème année: 
+        - Accueil: "Cours/BTS_CPI_2/Index_CPI2.md"
+        - "Equation différentielle I": "Cours/BTS_CPI_2/ED_I/Eq_diff_01.md"
     - Labo de math:  
         - Accueil: "Labo de math/c01.md"
         - "Liaison lycée/supérieur": "Labo de math/Liaison_lycée_sup/supérieur.md"

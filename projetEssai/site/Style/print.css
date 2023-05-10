@@ -39,8 +39,42 @@
     }
 
     .Print_eff{
-        display: none;
+        display: none!important;
     }
+
+    .print_eff{
+        display: none!important;
+    }
+
+	.Center_lien{
+		display: block;
+		min-width : 10%!important;
+		margin-left: auto!important;
+		margin-right: auto!important;
+	}
+
+	.Center2{
+		min-width: 10%!important;
+		max-width: 30%!important;
+		margin-left: auto!important;
+		margin-right: auto!important;
+        border: 1px solid black;
+        text-align: center!important;
+	}
+
+	.Tab50
+	{
+		max-width:100%!important;
+	}
+
+	.Cote_tiers{
+		display: inline-block;
+		width : 33%!important;
+		vertical-align: top!important;
+		/*border: 2px red solid;*/
+	}
+
+
     /*.md-main_inner{
         border : 5px blue solid;
         /*width : 90%;

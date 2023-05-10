@@ -15,14 +15,15 @@
     </ul>
 
 
-[![ Cercle trigo](../Image/Im01.png){.Center_lien .VignetteMed}](../Image/Im01.png)
-<div class="Center_txt"> <span>$M\Coor{\cos x}{\sin x}$</span></div>
+[![ Cercle trigo](../Image/Im01.png){.Center_lien .VignetteMed .Im_retaille30}](../Image/Im01.png)
+<div class="Center_txt Encadre Center2"> <span>$M\Coor{\cos x}{\sin x}$</span></div>
 
-???- tip "Geogebra"
+
+???- tip Print_eff "Geogebra" 
 
     <iframe scrolling="no" title="Def trigo" src="https://www.geogebra.org/material/iframe/id/gpjtwczx/width/1306/height/556/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1306px" height="556px" style="border:0px;"> </iframe>
 
-!!! info " "
+!!! info "Formule"
     <ul>
     <li> $\cos^{2}x + \sin^{2}x=1$</li>
     <li> $-1 \leqslant \cos x \leqslant 1$ \quad et \quad $-1 \leqslant \sin x \leqslant 1$</li>
@@ -34,7 +35,7 @@
 
 !!! info "Valeur remarquable : à connaitre par c&#0156;ur"
 
-    <div class="Center2" style="max-width:50%!important">
+    <div class="Center2 Tab50">
 
     | $x$ | $0$ | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ | $\pi$ |
     |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -95,7 +96,7 @@
 
     </div>
 
-    <div class="Cote_demi">
+    <div class="Cote_demi Im_retaille40">
 
     [![Symétrie par rapport à $(Ox)$](../Image/Im02.png){.Center_lien .VignetteMed}](../Image/Im02.png)
 
@@ -113,7 +114,7 @@
 
     </div>
 
-    <div class="Cote_demi">
+    <div class="Cote_demi Im_retaille40">
 
     [![Symétrie par rapport à $O$](../Image/Im03.png){.Center_lien .VignetteMed}](../Image/Im03.png)
 
@@ -131,7 +132,7 @@
 
     </div>
 
-    <div class="Cote_demi">
+    <div class="Cote_demi Im_retaille40">
 
     [![Symétrie par rapport à $(Oy)$](../Image/Im04.png){.Center_lien .VignetteMed}](../Image/Im04.png)
 
@@ -152,7 +153,7 @@
 
     </div>
 
-    <div class="Cote_demi">
+    <div class="Cote_demi Im_retaille40">
 
     [![Symétrie par rapport à $y=x$](../Image/Im05.png){.Center_lien .VignetteMed}](../Image/Im05.png)
 
@@ -172,7 +173,7 @@
 
     </div>
 
-    <div class="Cote_demi">
+    <div class="Cote_demi Im_retaille40">
 
     [![Symétrie par rapport à $y=x$](../Image/Im06.png){.Center_lien .VignetteMed}](../Image/Im06.png)
 
@@ -234,9 +235,9 @@
 
 !!! info "Variations de la fonction sinus"
 
-    [![Variations de sinus](../Image/Im07.png){.Center_lien .VignetteMed}](../Image/Im07.png)
+    [![Variations de sinus](../Image/Im07.png){.Center_lien .Vignette50 .Im_retaille40}](../Image/Im07.png)
 
-    ???- tip "Courbe de sinus"
+    ???- tip Print_eff "Courbe de sinus"
 
         <!--<iframe scrolling="no" title="Courbe sinus" src="https://www.geogebra.org/material/iframe/id/gjvbdjgd/width/1296/height/704/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1296px" height="704px" style="border:0px;"> </iframe>-->
 
@@ -244,9 +245,9 @@
 
 !!! info "Variations de la fonction cosinus"
 
-    [![Variations de cosinus](../Image/Im08.png){.Center_lien .Vignette}](../Image/Im08.png)
+    [![Variations de cosinus](../Image/Im08.png){.Center_lien .Vignette30 .Im_retaille40}](../Image/Im08.png)
 
-    ???- tip "Courbe de cosinus"
+    ???- tip Print_eff "Courbe de cosinus"
 
         <iframe scrolling="no" title="Courbe cos" src="https://www.geogebra.org/material/iframe/id/dynbm2ky/width/1296/height/704/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1296px" height="704px" style="border:0px;"> </iframe>
 
