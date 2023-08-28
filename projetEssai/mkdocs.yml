@@ -91,6 +91,7 @@ extra_javascript:
     - javascripts/my_java.js
     - https://polyfill.io/v3/polyfill.min.js?features=es6
     - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    #- https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML
     #- javascripts/reveal/reveal.js-master/js/reveal.js
 
     
@@ -104,6 +105,7 @@ markdown_extensions:
     - def_list
     - footnotes
     - tables
+    #- mdx_math
     - pymdownx.critic
     - pymdownx.keys
     - attr_list #https://python-markdown.github.io/extensions/attr_list/
@@ -332,5 +334,8 @@ nav:
         - "Equation différentielle I": "Cours/BTS_CPI_2/ED_I/Eq_diff_01.md"
     - Labo de math:  
         - Accueil: "Labo de math/c01.md"
-        - "Liaison lycée/supérieur": "Labo de math/Liaison_lycée_sup/supérieur.md"
-        #- "essai slide" : "Labo de math/Liaison_lycée_sup/essai_slide.md"
+        - "Liaison lycée/supérieur": 
+            #- "Labo de math/Liaison_lycee_sup/supérieur.md"
+            - "Des méthodes pour réussir dans le supérieur" :
+                - "Autour des polynômes" : "Labo de math/Liaison_lycee_sup/Polynomes.md"
+        #- "essai slide" : "Labo de math/Liaison_lycee_sup/essai_slide.md"

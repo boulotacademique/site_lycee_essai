@@ -57,7 +57,7 @@
     </table>
 
 !!! warning "Eviter le discriminant"
-    Lorsqu'il est possible de résoudre une équation du second degré **sans** utiliser le discriminat, il serait préférable de ne pas utiliser le discriminant !
+    Lorsqu'il est possible de résoudre une équation du second degré **sans** utiliser le discriminant, il serait préférable de ne pas utiliser le discriminant !
 
 !!! abstract "Forme canonique"
     Il peut être utile de savoir retrouver la forme canonique d'une expression du second degré.

@@ -99,10 +99,11 @@ Pour résoudre des inéquations, il peut êter utile de connaitre le tableau de 
         
         - si $a>0$, $\dfrac{-b-\sqrt{\Delta}}{2a} < \dfrac{-b}{2a} < \dfrac{-b+\sqrt{\Delta}}{2a}$ et ainsi $x_1 < x_2$
         - si $a<0$, $\dfrac{-b-\sqrt{\Delta}}{2a} > \dfrac{-b}{2a} > \dfrac{-b+\sqrt{\Delta}}{2a}$ et ainsi $x_1 > x_2$
-</li>
+    </li>
     <li>  Si $\Delta<0$, alors  $ax^2+bx+c = a \underbrace{\left( \left( x + \frac{b}{2a} \right)^2 -  \underbrace{\frac{\Delta}{4a^2}}_{<0} \right)}_{>0}$ est donc toujours du signe de $a$.
 
-    [![second degré et signe](Image/Signe03.png){.Center_lien .Vignette40}](Image/Signe03.png)</li>
+    [![second degré et signe](Image/Signe03.png){.Center_lien .Vignette40}](Image/Signe03.png)
+    </li>
     </ul>
 
 ## Exercices
