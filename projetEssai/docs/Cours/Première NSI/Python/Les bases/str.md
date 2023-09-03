@@ -286,7 +286,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 
 ???- question "Exercice"
 
-	Demander un prénom et un age et dire bonjour à l'utilisateur en lui donnantson age.
+	Demander un prénom et un age et dire bonjour à l'utilisateur en lui donnant son age.
 
 	Pour une personne de 20 ans qui s'appelle Luke, l'affichage attendu est ```Bonjour Luke. Vous avez 20 ans.```
 

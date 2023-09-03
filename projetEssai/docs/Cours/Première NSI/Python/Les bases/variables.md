@@ -3,7 +3,7 @@
 ## Les variables
 
 !!! info "Un premièr point de vue"
-    Vous avez vu en seconde qu'une variable pouvait être vu comme une boîte avec une étiquette et un contenu.
+    Vous avez vu en seconde qu'une variable pouvait être vue comme une boîte avec une étiquette et un contenu.
 
     [![affecter une variable](../Image/affect-var5.png){.Center_lien .Vignette}](../Image/affect-var5.png)
 
@@ -12,7 +12,7 @@
     Cette image n'est valable que pour des contenus &laquo; simples &raquo; : les nombres, les chaînes de caractères.
 
 - Il faut donner des noms compréhensibles aux variables (et aux fonctions).
-- Pour la typographie des noms des variables, utiliser de préférence **le snake\_case**. Tous les caractères sont des minuscules et les mots sont séparés par des underscore (ou tiret du 8).
+- Pour la typographie des noms des variables, utiliser de préférence **le snake\_case**. Tous les caractères sont des minuscules et les mots sont séparés par des underscores (ou tiret du 8).
 
 !!! info "Utilisation"
     - Pour affecter une valeur à une variable, on utilise ```=```. Par exemple, ```x = 2``` ou ```firstname = "Anakin"```.
@@ -102,7 +102,7 @@ En ce qui concerne **la puissance**, il faut utiliser ```**```. Par exemple, pou
 
 !!! info "Les comparaisons"
 
-    Il est possible de comparer des entiers. Le résultats de tels comparaisons sont des tests qui renvoient ```True``` ou ```False``` !
+    Il est possible de comparer des entiers. Le résultat de telles comparaisons sont des tests qui renvoient ```True``` ou ```False``` !
 
     - test d'égalité : ```a == b``` (A ne pas faire avec [des flottants](AFAIRE))
     - test de la non égalité : ```a != b``` (A ne pas faire avec [des flottants](AFAIRE))

@@ -103,10 +103,10 @@ Il est important :
 	<li> $f(x) = \dfrac{1}{x^3}$ </li>
 	</ol>
 
-	Courbe A FAIRE
-	
-	???- done "Solution"
-		A FAIRE
+<!--Courbe A FAIRE
+
+???- done "Solution"
+	A FAIRE-->
 
 !!! abstract "Théorème"
 	Si $u$ et $v$ sont deux fonctions dérivables sur $I$ et $\lambda$ un réel, alors :
@@ -121,10 +121,10 @@ Il est important :
 	<li> $f(x) = \dfrac{1}{x^3} - 5\times \text{e}^{x} - 2\sqrt{x}$ </li>
 	</ol>
 
-	Courbe A FAIRE
-	
-	???- done "Solution"
-		A FAIRE
+<!--Courbe A FAIRE
+
+???- done "Solution"
+	A FAIRE-->
 
 ???- tip "Astuce"
 	
@@ -138,10 +138,10 @@ Il est important :
 	<li> $f(x) = \dfrac{1}{x^3} - 5\times \text{e}^{x} - 2\sqrt{x}$ </li>
 	</ol>
 
-	Courbe A FAIRE
-	
-	???- done "Solution"
-		A FAIRE
+<!--Courbe A FAIRE
+
+???- done "Solution"
+	A FAIRE-->
 
 
 **Il est impératif de connaitre par c&#339;ur les formules suivantes :**
@@ -214,11 +214,11 @@ I & \text{e}^{u}=\exp (u) & u' \text{e}^{u}=u' \exp (u) & I \\
 \end{array}
 \]
 
-???- example "Exemple"
+<!--???- example "Exemple"
 	A FAIRE
 	
 	???- done "Solution"
-		A FAIRE
+		A FAIRE-->
 
 **Il est indispensable de savoir dériver les fonctions en utilisant les formules précédents !**
 
@@ -231,8 +231,8 @@ I & \text{e}^{u}=\exp (u) & u' \text{e}^{u}=u' \exp (u) & I \\
 ???- example "Exemple"
 	Dériver $f(x) = \dfrac{2x^2-3}{x^3-4}$
 	
-	???- done "Solution"
-		A FAIRE
+<!--???- done "Solution"
+	A FAIRE-->
 
 # Utilisation de la dérivation
 
@@ -240,8 +240,8 @@ I & \text{e}^{u}=\exp (u) & u' \text{e}^{u}=u' \exp (u) & I \\
 
 Dans la plupart des énoncés, vous serez amenés à dériver afin d'étudier les variations d'une fonction. Mais, il est aussi possible de calculer une dérivée afin :
 
-- d'étudier la convexité d'une fonction et donc d'établir des inégalités (cf *lien AFAIRE*)
-- de vérifier si une fonction est une primitive (cf *lien AFAIRE*)
+- d'étudier la convexité d'une fonction et donc d'établir des inégalités <!--(cf *lien AFAIRE*)-->
+- de vérifier si une fonction est une primitive <!--(cf *lien AFAIRE*)-->
 - de vérifier si une fonction est une solution d'une équation différentielle
 - de faire encore plus lors de vos futures études !
   
@@ -252,11 +252,12 @@ Dans la plupart des énoncés, vous serez amenés à dériver afin d'étudier le
 	- $f'$ est négative sur $I$ équivaut à $f$ est décroissante sur $I$
 	- $f'$ est nulle sur $I$ équivaut à $f$ est constante sur $I$.
 
-Rappel : tableau de signe (*lien AFAIRE*), etude de signe et maximum et/ou minimum (*lien AFAIRE*), etude du signe d'un second degré (*lien AFAIRE*), étude du signe d'une expression contenant une exponentielle (*lien vers première AFAIRE* et *lien vers term et* $\ln$ *AFAIRE*), étude du signe d'une expression contenant un logarithme (*lien vers première AFAIRE* et *lien vers term et* $\ln$ *AFAIRE*).
+Rappel : tableau de signe <!--(*lien AFAIRE*)-->, etude de signe et maximum et/ou minimum <!--(*lien AFAIRE*)-->, etude du signe d'un second degré <!--(*lien AFAIRE*)-->, étude du signe d'une expression contenant une exponentielle <!--(*lien vers première AFAIRE* et *lien vers term et* $\ln$ *AFAIRE*)-->, étude du signe d'une expression contenant un logarithme <!--(*lien vers première AFAIRE* et *lien vers term et* $\ln$ *AFAIRE*)-->.
 
-???- example "Exemple"
+<!--???- example "Exemple"
 
 	AFAIRE
+-->
 
 !!! abstract "Théorème"
 
@@ -265,9 +266,9 @@ Rappel : tableau de signe (*lien AFAIRE*), etude de signe et maximum et/ou minim
 	En pratique, ce théorème n'est pas cité ! Mais il se voit au travers du tableau de variations !
 
 
-???- example "Exemple"
+<!--???- example "Exemple"
 
-	AFAIRE
+	AFAIRE-->
 
 ## Dérivée seconde
 
@@ -298,7 +299,7 @@ En physique, on utilise parfois la notation différentielle : si la variable est
 
 	\[ (v \circ u) (x) = v(u(x)) \]
 
-	image AFAIRE
+<!--image AFAIRE-->
 
 ???- example "Exemple"
 	
@@ -352,7 +353,7 @@ Vous aurez surtout besoin de savoir écrire une fonction comme étant la compos�
 
 	???- done "Solution"
 
-	AFAIRE
+		AFAIRE
 
 ???- tip "Remarque"
 

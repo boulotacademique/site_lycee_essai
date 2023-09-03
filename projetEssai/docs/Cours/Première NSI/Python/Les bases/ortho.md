@@ -33,7 +33,7 @@
 
 !!! info "A retenir"
 
-	Certains mots en python désignent des fonctions. Il sont donc suivis de parenthèses (sauf dans certains cas cf [Callback](AFAIRE) par exemple !). A l'intérieur de ces parenthèses, il peut y avoir entre 0 et plusieurs paramètres qui seront **toutjours** séparés par une virgule. Il faut bien respecter l'ordre imposé et le type de chaque paramètre imposé.
+	Certains mots en python désignent des fonctions. Il sont donc suivis de parenthèses (sauf dans certains cas cf [Callback](AFAIRE) par exemple !). A l'intérieur de ces parenthèses, il peut y avoir entre 0 et plusieurs paramètres qui seront **toujours** séparés par une virgule. Il faut bien respecter l'ordre imposé et le type de chaque paramètre imposé.
 
 	A tout moment dans une console python, vous pouvez obtenir des renseignements sur une fonction en tapant ```help(nom_de_la_fonction)```
 

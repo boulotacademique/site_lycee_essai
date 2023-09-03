@@ -181,10 +181,10 @@ Une boucle ```for``` peut donc s'utiliser lorsque le nombre de répétition des 
     <div class = "Center_txt" style="width:9em;margin-left:auto;margin-right:auto;">
 
     ```python
-    A
-    AAA
-    AAAAA
-    AAAAAAA
+     A
+     AAA
+     AAAAA
+     AAAAAAA
     AAAAAAAAA
     ```
 
