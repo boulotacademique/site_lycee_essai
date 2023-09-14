@@ -242,14 +242,12 @@ nav:
                 - Suite majorée, minorée, bornée: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/07_majoree_minoree_bornee.md"
             - "Suites : au programme":
                 - "A retenir": "Cours/Terminale générale/Suites_et_recurrence/Suites_prog/SuiteRec_A_retenir.md"
-        - Loi binomiale:
-            - "Probabilité : les bases":
-                - Rappel: "Cours/Terminale générale/Loi_binomiale/binom_bases/01_binom_rappel.md"
-                - Succession d'épreuves: "Cours/Terminale générale/Loi_binomiale/binom_bases/02_succ_ep_ind.md"
-                - Loi binomiale: "Cours/Terminale générale/Loi_binomiale/binom_bases/03_loi_binom.md"
-            - "Probabilités : au programme": 
-                - A retenir: "Cours/Terminale générale/Loi_binomiale/binom_prog/binom_A_Retenir.md"
-                - Démonstration au programme: "Cours/Terminale générale/Loi_binomiale/binom_prog/binom_dem_prog.md"
+        - "Dénombrement : Combinaison":
+            - "Dénombrement les bases": 
+                - "Arrangement" : "Cours/Terminale générale/Combinaison/Ensemble_base/02_denom.md"
+                - "Combinaison" : "Cours/Terminale générale/Combinaison/Ensemble_base/03_combi.md"
+            - "Dénombrement : Au programme":
+                - "Démonstration au programme": "Cours/Terminale générale/Ensemble/Ensemble_prog/Dem_prog.md"
         - Limite de suite:
             - "Limite de suites : les bases":
                 - Limite d'une suite: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/01_Limite_d_une_suite.md"
@@ -278,15 +276,14 @@ nav:
             - "Limite de fct : au programme": 
                 - A retenir: "Cours/Terminale générale/Limite_fct/limite_fct_prog/lim_fct_A_Retenir.md"
                 - "Démonstration au programme" : "Cours/Terminale générale/Limite_fct/limite_fct_prog/lim_fct_dem.md" 
-        - Orthogonalité dans l'espace:
-            - "Orthogonalité : les bases":
-                - "Rappel : produit scalaire dans le plan": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/01_Rappel_pdt_scal_plan.md"
-                - "Espace et produit scalaire": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/02_pdt_scal_esp.md"
-                - "Vecteur normal": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/03_vect_normal.md"
-                - "Equation cartésienne, distance": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/04_eq_cart_plan.md"
-            - "Orthogonalité : au programme":
-                - A retenir: "Cours/Terminale générale/Esp_ortho/Esp_ortho_prog/Esp_ortho_A_Retenir.md"
-                - "Plan médiateur": "Cours/Terminale générale/Esp_ortho/Esp_ortho_prog/Plan_med.md"
+        - Loi binomiale:
+            - "Probabilité : les bases": 
+                - Rappel: "Cours/Terminale générale/Loi_binomiale/binom_bases/01_binom_rappel.md"
+                - Succession d'épreuves: "Cours/Terminale générale/Loi_binomiale/binom_bases/02_succ_ep_ind.md"
+                - Loi binomiale: "Cours/Terminale générale/Loi_binomiale/binom_bases/03_loi_binom.md"
+            - "Probabilités : au programme": 
+                - A retenir: "Cours/Terminale générale/Loi_binomiale/binom_prog/binom_A_Retenir.md"
+                - Démonstration au programme: "Cours/Terminale générale/Loi_binomiale/binom_prog/binom_dem_prog.md"
         - Continuité:
             - "Continuité : les bases":
                 - Fonction continue: "Cours/Terminale générale/Continuite/Continuite_base/01_cont_fct.md"
@@ -299,6 +296,15 @@ nav:
                 - "Etude de la fonction": "Cours/Terminale générale/Log/Log_base/02_etude_fct.md"
             - "Log népérien : au programme" : 
                 - A retenir: "Cours/Terminale générale/Log/Log_prog/Log_A_Retenir.md"
+        - Orthogonalité dans l'espace:
+            - "Orthogonalité : les bases":
+                - "Rappel : produit scalaire dans le plan": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/01_Rappel_pdt_scal_plan.md"
+                - "Espace et produit scalaire": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/02_pdt_scal_esp.md"
+                - "Vecteur normal": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/03_vect_normal.md"
+                - "Equation cartésienne, distance": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/04_eq_cart_plan.md"
+            - "Orthogonalité : au programme":
+                - A retenir: "Cours/Terminale générale/Esp_ortho/Esp_ortho_prog/Esp_ortho_A_Retenir.md"
+                - "Plan médiateur": "Cours/Terminale générale/Esp_ortho/Esp_ortho_prog/Plan_med.md"
         - Equation différentielle:
             - "Eq diff : les bases":
                 - "Définition" : "Cours/Terminale générale/Eq_diff/Eq_diff_base/01_Def.md"
@@ -308,9 +314,7 @@ nav:
         - Ensemble:
             - "Ensemble : les bases": 
                 - Ensemble: "Cours/Terminale générale/Ensemble/Ensemble_base/01_ensemble.md"
-                - Dénombrement: "Cours/Terminale générale/Ensemble/Ensemble_base/02_denom.md"
-            - "Ensemble : Au programme":
-                - "Démonstration au programme": "Cours/Terminale générale/Ensemble/Ensemble_prog/Dem_prog.md"
+                #- Dénombrement: "Cours/Terminale générale/Ensemble/Ensemble_base/02_denom.md"
         - Calcul intégral:
             - "Intégrale : les bases":
                 - "Fonctions positives" : "Cours/Terminale générale/Calcul_integral/Cal_int_base/01_fct_pos.md"

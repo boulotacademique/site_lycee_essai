@@ -13,7 +13,7 @@
         
     ???- done "_Objectif de la démonstration :_"
     
-        $\mathcal{C}_f$ est au-dessus de ses tangentes sur $I$}
+        $\mathcal{C}_f$ est au-dessus de ses tangentes sur $I$
 
     ???- tip "_Une méthode pour l'étude de la position relative :_"
 
@@ -40,8 +40,11 @@
 
         D'où le tableau de variations de $g$ sur $I=[c;d]$:
 
-        <div class="Center_txt">
+
+        [![Calcul d'une combinaison](../Image/var_dem.png){.Center_lien .VignetteMed }](../Image/var_dem.png)
+
+        <!--<div class="Center_txt">
         <img src="../Image/var_dem.png" alt="Tableau de variations de g" style="width:20%;" />
-        </div>
+        </div>-->
 
         Comme $g$ admet $0$ pour minimum sur $I$, alors $g$ est positive sur $I$. Donc pour tout $a \in I$ et pour tout $x \in I$, $f$ est au-dessus de sa tangente en $a$.     
