@@ -57,7 +57,7 @@ print(3+5,"hello") # affiche 8 hello (notez l'espace !!), puis effectue un retou
 
 	La fonction ```range``` prend **obligatoirement** au moins un paramètre ! Ainsi, {--```range()```--} déclenche une erreur !
 
-	De plus, ces paramètres sont **toujours** de type ```int``` ! Ainis, si la variable ```liste``` contient une liste, {--```range(liste)```--} déclenche une erreur !
+	De plus, ces paramètres sont **toujours** de type ```int``` ! Ainsi, si la variable ```liste``` contient une liste, {--```range(liste)```--} déclenche une erreur !
 
 !!! info "Exemple à retenir" 
 
