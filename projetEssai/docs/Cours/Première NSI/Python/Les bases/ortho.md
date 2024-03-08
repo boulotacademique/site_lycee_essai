@@ -74,7 +74,7 @@ print(3+5,"hello") # affiche 8 hello (notez l'espace !!), puis effectue un retou
 	- La fonction ```range``` avec **deux** arguments :
 
 		```python
-		list(range(2,7)) # affiche [2,3,4,5,6]
+		list(range(2,7))  # affiche [2,3,4,5,6]
 		```
 
 		Plus généralement, ```range(a,b)``` est une (sorte) de liste à $b - a$ éléments commençant à $a$. Elle se termine donc {==**à** $\mathbf{b-1}$==} !
