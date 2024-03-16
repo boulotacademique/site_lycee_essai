@@ -82,7 +82,12 @@ print(3+5,"hello") # affiche 8 hello (notez l'espace !!), puis effectue un retou
 	Il est possible d'utiliser la fonction ```range``` avec trois arguments : cf [ici](AFAIRE)
 
 
-{{ IDEv('Python_base_code/ortho_02', MAX = 1000) }}
+<div>
+
+{{ IDEv('Python_base_code/ortho_03', MAX = 1000) }}
+
+<br>Appuyer le 4éme bouton !
+</div>
 
 !!! tip "Bilan"
 

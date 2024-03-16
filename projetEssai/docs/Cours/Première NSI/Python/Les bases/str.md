@@ -58,6 +58,8 @@ print(mot[0:len(mot)-5]) # affiche Bonj
 print(mot[:-5]) # affiche Bonj
 ```
 
+{{ IDEv('Python_base_code/str_01', MAX = 1000) }}
+
 !!! warning "Attention"
 
 	Le nombre de caractères **ne correspond pas** au dernier indice ! En effet, le dernier indice est toujours ```len(...) - 1```.
@@ -196,7 +198,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 
 ???- tip "Ajouter une chaîne à la fin"
 
-	Il est inutile d'utiliser des tranches ! Il suffit de [concaténer](#concat) à droite.
+	Pour ajouter un chaîne à la fin d'une autre chaîne, il est inutile d'utiliser des tranches ! Il suffit de [concaténer](#concat) à droite.
 
 	```python
 	mot = "Hello"
@@ -207,7 +209,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 
 ???- tip "Ajouter une chaîne au début"
 
-	Il est inutile d'utiliser des tranches ! Il suffit de [concaténer](#concat) à gauche.
+	Pour ajouter un chaîne au début d'une autre chaîne, il est inutile d'utiliser des tranches ! Il suffit de [concaténer](#concat) à gauche.
 
 	```python
 	mot = "Jedi"
@@ -238,7 +240,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 
 	```python
 	mot = "chebal"
-	mot2 = mot[0:3] + "v" + mot[4:] # voyez la différence avec l'insertion de la méthode précédente
+	mot2 = mot[0:3] + "v" + mot[4:] # voyez la différence des indices avec l'insertion de la méthode précédente
 	print(mot2) # affiche cheval !
 	```
 
@@ -252,7 +254,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 	mot_cache="SeehccraeCt"
 	mot = ""
 	for idx in range(len(mot_cache)):
-		if idx%2 == 0: # On ne prend ques les indices pairs
+		if idx%2 == 0: # On ne prend que les indices pairs
 			mot = mot + mot_cache[idx]	# On accumule les caractères à la fin (à droite)
 	print(mot) # affiche Secret
 	```

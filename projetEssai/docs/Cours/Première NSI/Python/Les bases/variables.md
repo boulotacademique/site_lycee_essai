@@ -2,7 +2,7 @@
 
 ## Les variables
 
-!!! info "Un premièr point de vue"
+!!! info "Un premier point de vue"
     Vous avez vu en seconde qu'une variable pouvait être vue comme une boîte avec une étiquette et un contenu.
 
     [![affecter une variable](../Image/affect-var5.png){.Center_lien .Vignette}](../Image/affect-var5.png)
@@ -12,7 +12,7 @@
     Cette image n'est valable que pour des contenus &laquo; simples &raquo; : les nombres, les chaînes de caractères.
 
 - Il faut donner des noms compréhensibles aux variables (et aux fonctions).
-- Pour la typographie des noms des variables, utiliser de préférence **le snake\_case**. Tous les caractères sont des minuscules et les mots sont séparés par des underscores (ou tiret du 8).
+- Pour la typographie des noms des variables, utiliser de préférence **le snake\_case**. Tous les caractères sont des minuscules et les mots sont séparés par des underscores (ou &laquo; tiret du 8 &raquo; sur nos claviers).
 
 !!! info "Utilisation"
     - Pour affecter une valeur à une variable, on utilise ```=```. Par exemple, ```x = 2``` ou ```firstname = "Anakin"```.
@@ -22,7 +22,7 @@
 {{ IDEv('Python_base_code/variables_01', MAX = 1000) }}
 
 ???- warning "Déclarer avant d'utiliser"
-    Avant d'utiliser une variable, elle doit être déclarée (i.e. une valeur a été affetée à une variable) ou être un paramètre d'une fonction.
+    Avant d'utiliser une variable, elle doit être déclarée (i.e. une valeur a été affectée à une variable) ou être un paramètre d'une fonction.
 
     Par exemple:
 
@@ -45,7 +45,7 @@
     c = d + 3 # La variable d est utilisée mais n'a pas été déclarée !
     ```
 
-    Cela déclanche une erreur ```NameError: name 'd' is not defined```
+    Cela déclenche une erreur ```NameError: name 'd' is not defined```
     </div>
 
     {{ IDEv('Python_base_code/variables_02', MAX = 1000) }}
