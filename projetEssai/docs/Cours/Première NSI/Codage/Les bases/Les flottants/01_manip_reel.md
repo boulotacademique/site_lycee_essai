@@ -40,11 +40,15 @@ Ajouter un très grand nombre avec un petit nombre, revient à ne garder que le 
 {{ IDE('Python_base_code/flottant_02', MAX = 1000) }} 
 
 !!! warning "Une addition pas toujours commutative"
-    Modifier l'ordre dans lequel est effectué une opération sur des réels peut modifier le résultat !
+    En raison de ce phénomène, modifier l'ordre dans lequel est effectué une addition sur des réels peut modifier le résultat !
+
+    Par exemple pour calculer $1 + \dfrac{1}{2} + \ldots + \dfrac{1}{10^5 - 1} + \dfrac{1}{10^5}$ et éviter le phénomène d'absorbtion, il est préférable d'effectuer le calcul de la façon suivante $\dfrac{1}{10^5} + + \dfrac{1}{10^5 - 1} + \ldots + \dfrac{1}{2} + 1$ !
+
+    {{ IDE('Python_base_code/flottant_04', MAX = 1000) }} 
 
 ### L'annulation catastrophique.
 
-Par exemple, $A=\sqrt{2}\left( 1 +10^{-14} \right)$ et $B=\sqrt{2}$. Donc $A-B=\sqrt{2} \times 10^{-14} \approx \np{1,414213562373095} \times 10^{-14}$. Et pourtant
+Par exemple, $A=\sqrt{2}\left( 1 +10^{-14} \right)$ et $B=\sqrt{2}$. Donc $A-B=\sqrt{2} \times 10^{-14} \approx 1,414\ 213\ 562\ 373\ 095 \times 10^{-14}$. Et pourtant
 
 {{ IDE('Python_base_code/flottant_03', MAX = 1000) }}  
 

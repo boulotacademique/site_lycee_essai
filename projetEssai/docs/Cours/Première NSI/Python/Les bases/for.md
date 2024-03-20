@@ -31,7 +31,9 @@
     
     Il y a d'autres façons [d'utiliser ```range```](./ortho.md#range) !
 
-???- example "Un classique important"
+{{ IDEv('Python_base_code/for_01', MAX = 1000) }}
+
+???+ example "Un classique important"
 
     Pour calculer $0+1+2+3+\ldots+9$ , il faut accumuler/ajouter dans une variable initialisée à 0 (valeur qui ne modifie pas le résultat d'une addition) les valeurs utiles. 
     
@@ -49,15 +51,17 @@
 
     Pour aller plus loin avec d'autres questions du même type : cf [ici](AFAIRE)
 
-Une boucle ```for``` peut donc s'utiliser lorsque le nombre de répétition des instructions est connu (explicitement comme dans l'exemple précédent ou avec une variable cf ci-dessous)
 
-???- example "Exemple"
+{{ IDEv('Python_base_code/for_02', MAX = 1000) }}
 
-    ```python
-    nb_rep = int(input("Nombre de répétition ? "))
-    for co in range(nb_rep):
-        print("Je ne dois pas recopier bêtement !")
-    ```
+
+!!! info "Un nombre connu de répétition"
+    Une boucle ```for``` peut donc s'utiliser lorsque le nombre de répétition des instructions est connu (explicitement comme dans l'exemple précédent ou avec une variable cf ci-dessous)
+
+
+{{ IDEv('Python_base_code/for_03', MAX = 1000) }}
+
+
 
 ???- danger "Réflechissez !"
 

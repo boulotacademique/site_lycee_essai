@@ -163,7 +163,7 @@ nav:
         - "Cours/Terminale générale/Esp_ortho/Esp_ortho_prog/ortho_esp_dem.md"
         - "my_theme_customizations/pyodide-mkdocs/end_REM.md" 
         - "my_theme_customizations/pyodide-mkdocs/start_REM.md"
-        - "Cours/Terminale générale/Derivation_et_convexite/Tout/Tout.md"
+        #- "Cours/Terminale générale/Derivation_et_convexite/Tout/Tout.md"
         - "Cours/Terminale générale/Pre_requis/Fonctions/Fct_cube.md"
         - "Cours/Terminale générale/Pre_requis/Fonctions/Fct_inverse.md"
         - "Cours/Terminale générale/Pre_requis/Fonctions/Fct_va.md"

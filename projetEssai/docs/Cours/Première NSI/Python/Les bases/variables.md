@@ -11,17 +11,20 @@
 
     Cette image n'est valable que pour des contenus &laquo; simples &raquo; : les nombres, les chaînes de caractères.
 
-- Il faut donner des noms compréhensibles aux variables (et aux fonctions).
-- Pour la typographie des noms des variables, utiliser de préférence **le snake\_case**. Tous les caractères sont des minuscules et les mots sont séparés par des underscores (ou &laquo; tiret du 8 &raquo; sur nos claviers).
+!!! warning "De bonnes pratiques"
+    
+    - Il faut donner des noms compréhensibles aux variables (et aux fonctions).
+    - Pour la typographie des noms des variables, utiliser de préférence **le snake\_case**. Tous les caractères sont des minuscules et les mots sont séparés par des underscores (ou &laquo; tiret du 8 &raquo; sur nos claviers).
 
 !!! info "Utilisation"
     - Pour affecter une valeur à une variable, on utilise ```=```. Par exemple, ```x = 2``` ou ```firstname = "Anakin"```.
-    - Pour afficher le contenu d'une variable, on utilise ```print()``` (mais pas de ""). Par exemple, ```print(x)```.
-    - Pour afficher du texte et le contenu d'une variable,on peut utiliser la virgule ```print("Je m'appelle",firstname)``` ou utiliser la concaténation de chaînes de caractères ```print("Je m'appelle " + str(firstname)) ```
+    - Pour afficher le contenu d'une variable, on utilise ```print()``` (mais pas de ```" "```). Par exemple, ```print(x)```.
+    - Pour afficher du texte et le contenu d'une variable,on peut utiliser la virgule ```print("Je m'appelle",firstname)``` ou utiliser [la concaténation](.\str.md#concat) de chaînes de caractères ```print("Je m'appelle " + str(firstname)) ```
 
 {{ IDEv('Python_base_code/variables_01', MAX = 1000) }}
 
 ???- warning "Déclarer avant d'utiliser"
+
     Avant d'utiliser une variable, elle doit être déclarée (i.e. une valeur a été affectée à une variable) ou être un paramètre d'une fonction.
 
     Par exemple:
@@ -58,8 +61,8 @@
     - les entiers : ```int```
     - les réels : ```float```
     - les caractères ou les chaînes de caractères : ```str```
-    - les booléens : ```bool```
-
+    - les booléens : ```bool```; c'est un type qui ne peut prendre que deux valeurs : ```True``` ou ```False```
+ 
     Il y a aussi des structures dites construites :
 
     - les &laquo; listes &raquo; : ```list```
@@ -76,12 +79,15 @@ En python, il est possible d'effectuer les opérations mathématiques usuelles a
 - l'addition ```+```
 - la multiplication ```*```
 - la division ```/```
+- En ce qui concerne **la puissance**, il faut utiliser ```**```. Par exemple, pour $5^3$ on écrit ```5**3```.
 
-Il y a aussi **le quotient d'une division euclidienne** de $a$ par $b$, avec l'opérateur ```//``` (on écrit ```a // b```). Par exemple, comme $13 = 3 \times 4 + 1$, ```13 // 3``` vaut 4 !
+!!! info "La division euclidienne"
 
-Il y a aussi **le reste d'une division euclidienne** de $a$ par $b$, avec l'opérateur ```%``` (on écrit alors ```a % b``` et on lit &laquo; a modulo b &raquo;). Par exemple, comme $13 = 3 \times 4 + 1$, ```13 % 3``` vaut 1 !
+    Il y a aussi **le quotient d'une division euclidienne** de $a$ par $b$, avec l'opérateur ```//``` (on écrit ```a // b```). Par exemple, comme $13 = 3 \times 4 + 1$, ```13 // 3``` vaut 4 !
 
-En ce qui concerne **la puissance**, il faut utiliser ```**```. Par exemple, pour $5^3$ on écrit ```5**3```.
+    Il y a aussi **le reste d'une division euclidienne** de $a$ par $b$, avec l'opérateur ```%``` (on écrit alors ```a % b``` et on lit &laquo; a modulo b &raquo;). Par exemple, comme $13 = 3 \times 4 + 1$, ```13 % 3``` vaut 1 !
+
+
 
 !!! info "Une propriété importante"
 
@@ -98,11 +104,11 @@ En ce qui concerne **la puissance**, il faut utiliser ```**```. Par exemple, pou
         - $a$ est **un nombre pair**, c'est-à-dire un multiple de $2$, si et seulement si ```a % 2``` vaut 0 ;
         - $a$ est **un nombre impair**, c'est-à-dire $a$ n'est pas un multiple de $2$, si et seulement si ```a % 2``` vaut 1 ;
 
-{{ IDEv('Python_base_code/variables_03', MAX = 1000) }}
+    {{ IDEv('Python_base_code/variables_03', MAX = 1000) }}
 
 !!! info "Les comparaisons"
 
-    Il est possible de comparer des entiers. Le résultat de telles comparaisons sont des tests qui renvoient ```True``` ou ```False``` !
+    Il est possible de comparer des nombres. Le résultat de telles comparaisons sont des booléens qui renvoient ```True``` ou ```False``` !
 
     - test d'égalité : ```a == b``` (A ne pas faire avec [des flottants](AFAIRE))
     - test de la non égalité : ```a != b``` (A ne pas faire avec [des flottants](AFAIRE))
@@ -132,7 +138,7 @@ Il existe aussi des comparaisons !
 
     Par exemple, ```"100" < "9" ``` !!
 
-{{ IDEv('Python_base_code/variables_04', MAX = 1000) }}
+    {{ IDEv('Python_base_code/variables_04', MAX = 1000) }}
 
 #### Sur les listes
 

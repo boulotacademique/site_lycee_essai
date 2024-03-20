@@ -6,35 +6,35 @@ Chapitre 6 : factorisation et équation produit
 connaissances de 3eme. Ce chapitre nous permet de simplifier des
 problèmes pour arriver à trouver leur(s) solution(s).
 
-![](./Image/10000000000002C70000019C4B38F2CA29B47BF0.png){width="17cm"
-height="9.85cm"}
+![](./Image/Panier_basket.png)
 
-  --------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------
-  Ce que je dois savoir faire sur le Chapitre 06 - Factorisation-équation produit                                                                                                                                                                                                           
-                                                                                    ![](./Image/1000000000000017000000179D95D4976E047AD3.png){width="0.496cm" height="0.496cm"}   ![](./Image/1000000000000017000000170ED2D9661CFEEA75.png){width="0.496cm" height="0.496cm"}   ![](./Image/1000000000000017000000172727BF8555874C9F.png){width="0.496cm" height="0.496cm"}
-  Je sais développer une expression numérique (rappel)                                                                                                                                                                                                                                      
-  Je sais factoriser une expression numérique simple                                                                                                                                                                                                                                        
-  Je sais résoudre une équation produit                                                                                                                                                                                                                                                     
-  --------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------
 
-I.  Développement (Rappel)
+Ce que je dois savoir faire sur le Chapitre 06 - Factorisation-équation produit 
+
+Je sais développer une expression numérique (rappel) 
+
+Je sais factoriser une expression numérique simple
+
+Je sais résoudre une équation produit
+
+I. Développement (Rappel)
 
 [,,et, on a :]{.image}
 
 I.  Factorisation
 
-***Définition***** : Factoriser** une somme, c'est la transformer en un
+**Définition** : Factoriser** une somme, c'est la transformer en un
 produit.
 
 On utilise la règle de distributivité simple en sens inverse
 
-**Propriété :** Quels que soient les nombres *a*, *b* et ***k*** :
+**Propriété :** Quels que soient les nombres *a*, *b* et **k** :
 
-***k** × a + **k** × b = **k** ×* (*a + b*)
+**k** × a + **k** × b = **k** ×* (*a + b*)
 
-***k** × a -- **k** × b = **k** *× (*a -- b*)
+**k** × a -- **k** × b = **k** *× (*a -- b*)
 
-On met ***k*** en facteur. On dit que k est un **facteur commun.**
+On met **k*** en facteur. On dit que k est un **facteur commun.**
 
 **Exemples :Factoriser**
 
@@ -65,7 +65,7 @@ I.  Équation produit
 «  la méthode du chapitre précédent ne fonctionne pas, car si on
 développe on obtient une équation du second degré ... »
 
-***Définition***: Une « équation produit » est une équation dans
+**Définition**: Une « équation produit » est une équation dans
 laquelle il y a un **produit de facteurs** dans l'un des deux membres et
 **zéro** dans l'autre
 
@@ -85,8 +85,7 @@ Donc, soit (2x + 8) = 0 , soit (12 -- 6x) = 0
 
 []{.image}
 
-***Rem****arque**** ***: Cette équation admet **deux** solutions  -4 et
-2
+**Remarque** : Cette équation admet **deux** solutions  -4 et 2
 
 Faire la vérification pour montrer que ça marche...
 

@@ -53,7 +53,7 @@ Ainsi, le type d'une matrice est ... ```list```. C'est bien une liste !
     matrice1 = [[1,10,100,1000],
                 [1,2,4,8],
                 [1,3,9,27]]
-    print("Malheureusement, cela ne fonctionne pas avec print !")
+    print("Malheureusement, cette affichage ne fonctionne pas avec print !")
     print(matrice1)
     ```
 

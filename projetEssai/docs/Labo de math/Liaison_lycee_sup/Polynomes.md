@@ -76,7 +76,7 @@
 ???- tip "Produit de 2 polynômes"
     Voici une présentation pour simplifier le produit de 2 polynômes.
 
-    [![Produit de deux polynômes](../Image/Produit_polynome.gif){.Center_lien .Vignette40}](../Image/Produit_polynome.gif){:target="_blank"}
+    [![Produit de deux polynômes](../Image/Produit_polynome.gif){.Center_lien .Vignette40}](../Image/Produit_polynome.png){:target="_blank"}
 
     Cette méthode permet d'obtenir des lignes avec des puissances décroissantes.
 
@@ -84,15 +84,15 @@
 
     Voici un exemple de la méthode qui consiste à faire les calculs de façon à obtenir &laquo; ensemble &raquo; des termes de même puissance. Cette approche est particulièrement adaptée au produit de polynômes, avec un facteur de degré 1.
 
-    [![Produit de deux polynômes01](../Image/Produit_polynome01.gif){.Center_lien .Vignette40}](../Image/Produit_polynome01.gif){:target="_blank"}
+    [![Produit de deux polynômes01](../Image/Produit_polynome01.gif){.Center_lien .Vignette40}](../Image/Produit_polynome01.png){:target="_blank"}
 
 ???- tip "Méthode par identification"
     En raison de l'unicité d'écriture d'un polynôme, il est possible (par exemple) de factoriser un polynôme.
 
-    [![Par identification](../Image/polynome03.gif){.Center_lien .Vignette40}](../Image/polynome03.gif){:target="_blank"}
+    [![Par identification](../Image/polynome03.gif){.Center_lien .Vignette40}](../Image/polynome03.png){:target="_blank"}
 
 ???- tip "Méthode par identification : cas d'un polynome de degré 1"
     Avec un polynôme de degré 1, il est possible de faire les calculs de tête :
 
-    [![Par identification](../Image/polynome02b.gif){.Center_lien .Vignette40}](../Image/polynome02b.gif){:target="_blank"}
+    [![Par identification](../Image/polynome02b.gif){.Center_lien .Vignette40}](../Image/polynome02b.png){:target="_blank"}
 

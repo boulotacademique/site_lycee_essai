@@ -129,12 +129,12 @@ Il en résulte que les expressions du produit scalaire établies dans le plan so
     - Deux droites $D_1$ et $D_2$ de vecteurs directeurs $\V{u_1}$ et $\V{u_2}$ sont orthogonales si et seulement si  $\V{u_1}\cdot \V{u_2}=0$.
     - _Remarque_ : si un vecteur $\V{u}$ est orthogonal à tout vecteur , alors $\V{u}$ est le vecteur nul.
 
-!!! info "Une équivalence à un sens pratique"
+!!! info "Une équivalence avec un sens pratique"
     Une droite est orthogonale à un plan si et seulement si elle est orthogonale à toute droite de ce plan.
 
     [![pdt scalaire](../Image/Im10.png){.Center_lien .Vignette}](../Image/Im10.png)
 
-!!! tip "En pratique"
+???- tip "En pratique"
     Pour démontrer qu'une droite $\Delta$ est orthogonale à un plan $\mathcal{P}$, il suffit d'établir qu'elle orthogonale à deux droites sécantes de ce plan (d'après la définition) !
 
     Ainsi, pour démontrer qu'une droite $\Delta$ est orthogonale à un plan $\mathcal{P}$, il suffit d'établir qu'un vecteur directeur de $\Delta$ est orthogonal à une base (ou un couple de vecteurs directeurs) du plan $\mathcal{P}$.

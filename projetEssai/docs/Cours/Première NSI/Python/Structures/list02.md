@@ -58,7 +58,7 @@ Pour insérer des éléments dans une liste, il est possible d'utiliser les tran
 	print(liste_a) # affiche [1,5,2,100,101,6,4,7,8]
 	```
 
-???- tip "Ajouter une liste à la fin"
+???+ tip "Ajouter une liste à la fin"
 
 	Il est inutile d'utiliser des tranches ! Il suffit de [concaténer](#concat) à droite.
 
@@ -73,7 +73,7 @@ Pour insérer des éléments dans une liste, il est possible d'utiliser les tran
 
     Pour ajouter un élément à la fin, il est préférable d'utiliser ```liste_a.append(100)``` !
 
-???- tip "Ajouter une liste au début"
+???+ tip "Ajouter une liste au début"
 
 	Cela revient à ajouter une liste à la fin, non ?
 
@@ -84,7 +84,7 @@ Pour insérer des éléments dans une liste, il est possible d'utiliser les tran
 	print(liste_a) # affiche [100,150,1,5,2,6,4,7,8]
 	```
 
-???- danger "Les listes sont des mutables !"
+???+ danger "Les listes sont des mutables !"
 
     En tant que [mutable](AFAIRE), une affectation ```liste_a =``` doit être utilisée en connaissance de cause, en particulier dans des [fonctions](AFAIRE) ! Il est souvent préférable d'utiliser une boucle ```for``` et la méthode ```append``` !
 

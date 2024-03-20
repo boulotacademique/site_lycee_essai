@@ -129,6 +129,12 @@
 		border : 1px solid black;
 	}
 
+	.Center2_lien {
+		margin-right : auto;
+		margin-left : 35%;
+		/*border : 1px solid black;*/
+	}
+
 	.Center_seul {
 		margin-right : 15%;
 		margin-left : auto;

@@ -4,7 +4,7 @@
 
 !!! info "A retenir"
 
-    Une <span id="liste">**liste**</span> (ou du moins ce qui sera [appelée liste pour l'instant](AFAIRE)) est une structure de donnée _très importanate_ !
+    Une <span id="liste">**liste**</span> (ou du moins ce qui sera [appelée liste pour l'instant](AFAIRE)) est une structure de donnée _très importante_ !
 
     C'est une séquence ou une suite (donc l'ordre compte) d'éléments (par forcément distincts) notée entre des crochets.
 
@@ -42,28 +42,8 @@
 
     On trouve aussi <span class = "Gras" id = "concat_list">la concaténation</span> : ```liste_b = liste_a + [1000]``` et <span class = "Gras" id = "repet_list">la répétition</span> ```liste_c = [5]*10```
 
-    
 
-    En résumé:
-
-    ```python
-    liste_a = [1, -5, 10, 15, 2, 3, 6, 13]
-    print(len(liste_a)) # affiche 8
-    print(liste_a[2]) # affiche 10
-    print(liste_a[len(liste_a)-1]) # affiche 13
-    print(liste_a[-1]) # affiche 13
-    print(liste_a[2:5]) # affiche [10,15,2]
-    print(liste_a[0:5]) # affiche [1,-5,10,15,2]
-    print(liste_a[:5]) # affiche [1,-5,10,15,2]
-    print(liste_a[len(liste_a)-3:len(liste_a)]) # affiche [3, 6, 13]
-    print(liste_a[-3:]) # affiche [3, 6, 13]
-    print(liste_a[0:len(liste_a)-5]) # affiche [1, -5, 10]
-    print(liste_a[:-5]) # affiche [1, -5, 10]
-    liste_b = liste_a + [1000]
-    print(liste_b) # affiche [1, -5, 10, 15, 2, 3, 6, 13, 1000]
-    liste_c = [5]*10
-    print(liste_c) # affiche [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
-    ```
+{{ IDEv('Python_base_code/list_01', MAX = 1000) }}
 
 ## Méthodes spécifiques aux listes
 
@@ -74,13 +54,8 @@
     - modifier un élément en connaissant son indice : ```liste_a[2] = 300```
     - ajouter un élément à la fin : ```liste_a.append(-25)```
 
-    ```python
-    liste_a = [1, -5, 10, 15, 2, 3, 6, 13]
-    liste_a[2] = 300
-    print(liste_a) # affiche [1, -5, 300, 15, 2, 3, 6, 13]
-    liste_a.append(-25) # inutile d'utiliser une affection =
-    print(liste_a) # affiche [1, -5, 300, 15, 2, 3, 6, 13, -25]
-    ```
+
+{{ IDE('Python_base_code/list_02', MAX = 1000) }}
 
 ## Manipulation des listes
 
@@ -133,7 +108,7 @@ for idx in range(len(liste_a)):
 
 	affiche
 
-	<div class = "Center_seul" style="width:10%;">
+	<div class = "Center_ss_bd" style="width:10%;">
 
 	```python
 	1
@@ -165,9 +140,9 @@ for idx in range(len(liste_a)):
     print(liste_carre) # affiche [0,1,4,9,16]
     ```
 
-???- tip "Créer une liste de taille inconnue"
+???+ tip "Créer une liste de taille inconnue"
 
-    Il suffit ce commencer avec une liste vide et d'accumuler les eléments voulus.
+    Il suffit de commencer avec une liste vide et d'accumuler les eléments voulus.
 
     ```python
     une_liste= [102, 104, 97, 97, 100, 97, 98, 99, 104, 99]

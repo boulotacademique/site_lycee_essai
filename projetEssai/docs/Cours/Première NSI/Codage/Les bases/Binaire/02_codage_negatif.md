@@ -21,6 +21,8 @@
 
 !!! tip "Le complément à 1"
     Il est parfois indispensable d'inverser les $0$ et les $1$. Cela s'appelle &laquo; **le complément à un** &raquo;.
+
+    Ainsi, le complément à 1 de $\base{0110\ 1001}$ est $\base{1001\ 0110}$ !
  
 Nous croiserons à nouveau ces deux notions dans le chapitre sur les booléens.
 

@@ -15,7 +15,7 @@
 
 	Cette fonction renvoie ```None``` : c'est-à-dire rien !
 
-Il est préférable d'utiliser une chaine de caractère dans un ```print```. Pour cela, il suffit d'utiliser [la concaténation](str.md#concat) et [le transtypage](AFAIRE) ou la [méthode ```format```](AFAIRE).
+Il est préférable d'utiliser une chaine de caractère dans un ```print```. Pour cela, il suffit d'utiliser [la concaténation](str.md#concat) et [le transtypage](./str.md#cast) ou la [méthode ```format```](AFAIRE).
 
 ## Une entrée : input
 
@@ -34,7 +34,7 @@ Il est préférable d'utiliser une chaine de caractère dans un ```print```. Pou
 
 	Ce que renvoie ```input``` est un ```str``` ! Il est donc impossible de faire des opérations mathématiques avec !
 
-	Si nécessaire, il faut le transtyper (*cast* en anglais), par exemple, avec les fonctions :
+	Si nécessaire, il faut le <span class = "Gras" id = "cast_ent">transtyper (*cast* en anglais)</span>, par exemple, avec les fonctions :
 	
 	- ```int``` pour avoir un entier
 	- ```float``` pour avoir un réel

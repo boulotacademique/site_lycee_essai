@@ -90,6 +90,16 @@ avatar = {"Image" : "./Image/av01.png", "code_id" : 21456, "Abonne" : False}
     # {"Image" : "./Image/av01.png", "code_id" : 21456, "Abonne" : False, "Pseudo" : "Last_jedi"}
     ```
 
+!!! info "Autour des clés"
+
+    Pour savoir si un élément est bien une clé d'un dictionnaire :
+
+    ```python
+    print("Image" in avatar) # affiche True
+    print("Nom" in avatar) # affiche False
+    print("./Image/av01.png" in avatar) # affiche False
+    ```
+
 ## Créer un dictionnaire
 
 !!! info "Créer un dictionnaire"

@@ -14,7 +14,7 @@ C'est plus facile à écrire, mais il est difficile convertir rapidement un octe
 
 Mais il est possible d'avoir une base dans laquelle l'écriture est plus concise qu'un binaire et les calculs de conversion sont plus simples que ceux à effectuer pour obtenir un décimal : **il s'agit de la base 16** !
 
-## Conversion d'un décimal vers un hexadécimal.
+### Conversion d'un décimal vers un hexadécimal.
 
 !!! info "Ecriture en base 16"
     Tout entier $a \geq 0$ s'écrit de façon unique sous la forme : 
@@ -79,7 +79,7 @@ Mais il est possible d'avoir une base dans laquelle l'écriture est plus concise
         </ol>
 
 
-## Conversion d'un hexadécimal vers un décimal.
+### Conversion d'un hexadécimal vers un décimal.
 
 !!! tip "Hexadécimal en décimal"
     Il suffit d'utiliser la définition ou l'algorithme d'Hörner (cf exercices).
