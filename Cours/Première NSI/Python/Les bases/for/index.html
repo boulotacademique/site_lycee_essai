@@ -576,20 +576,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/Tout/Tout/" class="md-nav__link">
-        Dérivation et tangente : techniques de base
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Pre_requis/Fonctions/Fct_cube/" class="md-nav__link">
         Fct cube
       </a>
@@ -4179,7 +4165,14 @@
 
 <p>Il y a d'autres façons <a href="../ortho/#range">d'utiliser <code>range</code></a> !</p>
 </div>
-<details class="- example"><summary>Un classique important</summary><p>Pour calculer <span class="arithmatex">\(0+1+2+3+\ldots+9\)</span> , il faut accumuler/ajouter dans une variable initialisée à 0 (valeur qui ne modifie pas le résultat d'une addition) les valeurs utiles. </p>
+<div class="py_mk_ide"  data-max="∞"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_d48ee5c1c60d93b2400717c3fc8e0497bd47659f" class="comment">###</span><div class="line_v"><div id="editor_d48ee5c1c60d93b2400717c3fc8e0497bd47659f"></div></div><div id="term_editor_d48ee5c1c60d93b2400717c3fc8e0497bd47659f"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_d48ee5c1c60d93b2400717c3fc8e0497bd47659f","_v")'>            <img src="../../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_d48ee5c1c60d93b2400717c3fc8e0497bd47659f","Python_base_code/for_01")'>            <img src="../../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_d48ee5c1c60d93b2400717c3fc8e0497bd47659f').click()" >            <img src="../../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_d48ee5c1c60d93b2400717c3fc8e0497bd47659f" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_d48ee5c1c60d93b2400717c3fc8e0497bd47659f")'>            <img src="../../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_d48ee5c1c60d93b2400717c3fc8e0497bd47659f")'>            <img src="../../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+
+<p><span id="content_editor_d48ee5c1c60d93b2400717c3fc8e0497bd47659f" class="py_mk_hide">for co in range(10):bksl-nl    res = co py-str 2bksl-nl    print(" 2 x " + str(co) + " = " + str(res)) bksl-nlbksl-nl</span><span id="corr_content_editor_d48ee5c1c60d93b2400717c3fc8e0497bd47659f" class="py_mk_hide" data-strudel=""></span><span class="Py_eff">
+--8&lt;--- "my_theme_customizations/pyodide-mkdocs/start_REM.md"</span>
+<span class="Py_eff">
+--8&lt;--- "docs/Cours/Première NSI/Python/Les bases/Python_base_code/for_01_REM.md"</span><span class="Py_eff">
+--8&lt;--- "my_theme_customizations/pyodide-mkdocs/end_REM.md"</span></p>
+<details class="example" open="open"><summary>Un classique important</summary><p>Pour calculer <span class="arithmatex">\(0+1+2+3+\ldots+9\)</span> , il faut accumuler/ajouter dans une variable initialisée à 0 (valeur qui ne modifie pas le résultat d'une addition) les valeurs utiles. </p>
 <p>Par exemple, pour calculer <span class="arithmatex">\(0+1+2+3+4+5+6+7+8+9\)</span>, on peut écrire :</p>
 <div class="highlight"><pre><span></span><code><span class="n">som</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">co</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
@@ -4193,13 +4186,24 @@
 </ol>
 <p>Pour aller plus loin avec d'autres questions du même type : cf <a href="AFAIRE">ici</a></p>
 </details>
-<p>Une boucle <code>for</code> peut donc s'utiliser lorsque le nombre de répétition des instructions est connu (explicitement comme dans l'exemple précédent ou avec une variable cf ci-dessous)</p>
-<details class="- example"><summary>Exemple</summary><div class="highlight"><pre><span></span><code><span class="n">nb_rep</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Nombre de répétition ? &quot;</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">co</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb_rep</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Je ne dois pas recopier bêtement !&quot;</span><span class="p">)</span>
-</code></pre></div>
+<div class="py_mk_ide"  data-max="∞"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_83f601bbe7b0393dca6f3ccf95ed2e453114a926" class="comment">###</span><div class="line_v"><div id="editor_83f601bbe7b0393dca6f3ccf95ed2e453114a926"></div></div><div id="term_editor_83f601bbe7b0393dca6f3ccf95ed2e453114a926"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_83f601bbe7b0393dca6f3ccf95ed2e453114a926","_v")'>            <img src="../../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_83f601bbe7b0393dca6f3ccf95ed2e453114a926","Python_base_code/for_02")'>            <img src="../../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_83f601bbe7b0393dca6f3ccf95ed2e453114a926').click()" >            <img src="../../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_83f601bbe7b0393dca6f3ccf95ed2e453114a926" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_83f601bbe7b0393dca6f3ccf95ed2e453114a926")'>            <img src="../../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_83f601bbe7b0393dca6f3ccf95ed2e453114a926")'>            <img src="../../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
 
-</details>
+<p><span id="content_editor_83f601bbe7b0393dca6f3ccf95ed2e453114a926" class="py_mk_hide">som = 0bksl-nlfor co in range(10):bksl-nl    som = som + cobksl-nlprint(som)bksl-nlbksl-nl</span><span id="corr_content_editor_83f601bbe7b0393dca6f3ccf95ed2e453114a926" class="py_mk_hide" data-strudel=""></span><span class="Py_eff">
+--8&lt;--- "my_theme_customizations/pyodide-mkdocs/start_REM.md"</span>
+<span class="Py_eff">
+--8&lt;--- "docs/Cours/Première NSI/Python/Les bases/Python_base_code/for_02_REM.md"</span><span class="Py_eff">
+--8&lt;--- "my_theme_customizations/pyodide-mkdocs/end_REM.md"</span></p>
+<div class="admonition info">
+<p class="admonition-title">Un nombre connu de répétition</p>
+<p>Une boucle <code>for</code> peut donc s'utiliser lorsque le nombre de répétition des instructions est connu (explicitement comme dans l'exemple précédent ou avec une variable cf ci-dessous)</p>
+</div>
+<div class="py_mk_ide"  data-max="∞"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_50143f23b4b9ab1e58138c9d964298a2d8064b48" class="comment">###</span><div class="line_v"><div id="editor_50143f23b4b9ab1e58138c9d964298a2d8064b48"></div></div><div id="term_editor_50143f23b4b9ab1e58138c9d964298a2d8064b48"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_50143f23b4b9ab1e58138c9d964298a2d8064b48","_v")'>            <img src="../../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_50143f23b4b9ab1e58138c9d964298a2d8064b48","Python_base_code/for_03")'>            <img src="../../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_50143f23b4b9ab1e58138c9d964298a2d8064b48').click()" >            <img src="../../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_50143f23b4b9ab1e58138c9d964298a2d8064b48" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_50143f23b4b9ab1e58138c9d964298a2d8064b48")'>            <img src="../../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_50143f23b4b9ab1e58138c9d964298a2d8064b48")'>            <img src="../../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+
+<p><span id="content_editor_50143f23b4b9ab1e58138c9d964298a2d8064b48" class="py_mk_hide">nbpy-undrep = int(input("Nombre de repetition ? "))bksl-nlfor co in range(nbpy-undrep):bksl-nl    print("Je ne dois pas recopier betement !")bksl-nlbksl-nl</span><span id="corr_content_editor_50143f23b4b9ab1e58138c9d964298a2d8064b48" class="py_mk_hide" data-strudel=""></span><span class="Py_eff">
+--8&lt;--- "my_theme_customizations/pyodide-mkdocs/start_REM.md"</span>
+<span class="Py_eff">
+--8&lt;--- "docs/Cours/Première NSI/Python/Les bases/Python_base_code/for_03_REM.md"</span><span class="Py_eff">
+--8&lt;--- "my_theme_customizations/pyodide-mkdocs/end_REM.md"</span></p>
 <details class="- danger"><summary>Réflechissez !</summary><p>Lorsque vous voulez utiliser une boucle <code>for</code>, vous devez vous poser la question suivante : &laquo; est-ce que mon compteur de boucle est utilisé dans les instructions à répéter ? &raquo;</p>
 <p>Comparez les deux programmes suivants</p>
 <p><div class = "Cote_gauche"><div class="Center_txt">Le compteur de boucle n'intervient pas dans les instructions</div></p>

@@ -576,20 +576,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/Tout/Tout/" class="md-nav__link">
-        Dérivation et tangente : techniques de base
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Pre_requis/Fonctions/Fct_cube/" class="md-nav__link">
         Fct cube
       </a>
@@ -4283,7 +4269,7 @@
 <h2 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link"></a></h2>
 <div class="admonition info">
 <p class="admonition-title">A retenir</p>
-<p>Une <span id="liste"><strong>liste</strong></span> (ou du moins ce qui sera <a href="AFAIRE">appelée liste pour l'instant</a>) est une structure de donnée <em>très importanate</em> !</p>
+<p>Une <span id="liste"><strong>liste</strong></span> (ou du moins ce qui sera <a href="AFAIRE">appelée liste pour l'instant</a>) est une structure de donnée <em>très importante</em> !</p>
 <p>C'est une séquence ou une suite (donc l'ordre compte) d'éléments (par forcément distincts) notée entre des crochets.</p>
 <div class="highlight"><pre><span></span><code><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;bonjour&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
 </code></pre></div>
@@ -4345,26 +4331,14 @@
 <li>accéder à toute la chaîne sauf les derniers : <code>liste_a[0:len(liste_a)-5]</code> correspond à toute la chaîne <strong>sauf</strong> les 5 derniers caractères. Ainsi, <code>liste_a[0:len(liste_a) - 5]</code> correspond à <code>[1, -5, 10]</code>. On peut aussi écrire <code>liste_a[:-5]</code></li>
 </ul>
 <p>On trouve aussi <span class = "Gras" id = "concat_list">la concaténation</span> : <code>liste_b = liste_a + [1000]</code> et <span class = "Gras" id = "repet_list">la répétition</span> <code>liste_c = [5]*10</code></p>
-<p>En résumé:</p>
-<div class="highlight"><pre><span></span><code><span class="n">liste_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">liste_a</span><span class="p">))</span> <span class="c1"># affiche 8</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">liste_a</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># affiche 10</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">liste_a</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">liste_a</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># affiche 13</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">liste_a</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># affiche 13</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">liste_a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche [10,15,2]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">liste_a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche [1,-5,10,15,2]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">liste_a</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche [1,-5,10,15,2]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">liste_a</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">liste_a</span><span class="p">)</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">liste_a</span><span class="p">)])</span> <span class="c1"># affiche [3, 6, 13]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">liste_a</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:])</span> <span class="c1"># affiche [3, 6, 13]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">liste_a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">liste_a</span><span class="p">)</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche [1, -5, 10]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">liste_a</span><span class="p">[:</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche [1, -5, 10]</span>
-<span class="n">liste_b</span> <span class="o">=</span> <span class="n">liste_a</span> <span class="o">+</span> <span class="p">[</span><span class="mi">1000</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">liste_b</span><span class="p">)</span> <span class="c1"># affiche [1, -5, 10, 15, 2, 3, 6, 13, 1000]</span>
-<span class="n">liste_c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">liste_c</span><span class="p">)</span> <span class="c1"># affiche [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]</span>
-</code></pre></div>
-
 </div>
+<div class="py_mk_ide"  data-max="∞"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_86cdd64cdfb0ad62c7201677cf57594c63cb0fe9" class="comment">###</span><div class="line_v"><div id="editor_86cdd64cdfb0ad62c7201677cf57594c63cb0fe9"></div></div><div id="term_editor_86cdd64cdfb0ad62c7201677cf57594c63cb0fe9"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_86cdd64cdfb0ad62c7201677cf57594c63cb0fe9","_v")'>            <img src="../../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_86cdd64cdfb0ad62c7201677cf57594c63cb0fe9","Python_base_code/list_01")'>            <img src="../../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_86cdd64cdfb0ad62c7201677cf57594c63cb0fe9').click()" >            <img src="../../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_86cdd64cdfb0ad62c7201677cf57594c63cb0fe9" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_86cdd64cdfb0ad62c7201677cf57594c63cb0fe9")'>            <img src="../../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_86cdd64cdfb0ad62c7201677cf57594c63cb0fe9")'>            <img src="../../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+
+<p><span id="content_editor_86cdd64cdfb0ad62c7201677cf57594c63cb0fe9" class="py_mk_hide">listepy-unda = [1, -5, 10, 15, 2, 3, 6, 13]bksl-nlprint(len(listepy-unda)) # affiche 8bksl-nlprint(listepy-unda[2]) # affiche 10bksl-nlprint(listepy-unda[len(listepy-unda)-1]) # affiche 13bksl-nlprint(listepy-unda[-1]) # affiche 13bksl-nlprint(listepy-unda[2:5]) # affiche [10,15,2]bksl-nlprint(listepy-unda[0:5]) # affiche [1,-5,10,15,2]bksl-nlprint(listepy-unda[:5]) # affiche [1,-5,10,15,2]bksl-nlprint(listepy-unda[len(listepy-unda)-3:len(listepy-unda)]) # affiche [3, 6, 13]bksl-nlprint(listepy-unda[-3:]) # affiche [3, 6, 13]bksl-nlprint(listepy-unda[0:len(listepy-unda)-5]) # affiche [1, -5, 10]bksl-nlprint(listepy-unda[:-5]) # affiche [1, -5, 10]bksl-nllistepy-undb = listepy-unda + [1000]bksl-nlprint(listepy-undb) # affiche [1, -5, 10, 15, 2, 3, 6, 13, 1000]bksl-nllistepy-undc = [5]py-str10bksl-nlprint(listepy-undc) # affiche [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]bksl-nlbksl-nl</span><span id="corr_content_editor_86cdd64cdfb0ad62c7201677cf57594c63cb0fe9" class="py_mk_hide" data-strudel=""></span><span class="Py_eff">
+--8&lt;--- "my_theme_customizations/pyodide-mkdocs/start_REM.md"</span>
+<span class="Py_eff">
+--8&lt;--- "docs/Cours/Première NSI/Python/Les bases/Python_base_code/list_01_REM.md"</span><span class="Py_eff">
+--8&lt;--- "my_theme_customizations/pyodide-mkdocs/end_REM.md"</span></p>
 <h2 id="methodes_specifiques_aux_listes">Méthodes spécifiques aux listes<a class="headerlink" href="#methodes_specifiques_aux_listes" title="Permanent link"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">... et celles spécifiques aux list</p>
@@ -4373,14 +4347,14 @@
 <li>modifier un élément en connaissant son indice : <code>liste_a[2] = 300</code></li>
 <li>ajouter un élément à la fin : <code>liste_a.append(-25)</code></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">liste_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
-<span class="n">liste_a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">300</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">liste_a</span><span class="p">)</span> <span class="c1"># affiche [1, -5, 300, 15, 2, 3, 6, 13]</span>
-<span class="n">liste_a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">-</span><span class="mi">25</span><span class="p">)</span> <span class="c1"># inutile d&#39;utiliser une affection =</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">liste_a</span><span class="p">)</span> <span class="c1"># affiche [1, -5, 300, 15, 2, 3, 6, 13, -25]</span>
-</code></pre></div>
-
 </div>
+<div class="py_mk_ide"  data-max="∞"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_1f89177237e39439f475422b532032d888c8ad26" class="comment">###</span><div class="line" id="editor_1f89177237e39439f475422b532032d888c8ad26"></div><div id="term_editor_1f89177237e39439f475422b532032d888c8ad26"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_1f89177237e39439f475422b532032d888c8ad26","")'>            <img src="../../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_1f89177237e39439f475422b532032d888c8ad26","Python_base_code/list_02")'>            <img src="../../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_1f89177237e39439f475422b532032d888c8ad26').click()" >            <img src="../../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_1f89177237e39439f475422b532032d888c8ad26" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_1f89177237e39439f475422b532032d888c8ad26")'>            <img src="../../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_1f89177237e39439f475422b532032d888c8ad26")'>            <img src="../../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+
+<p><span id="content_editor_1f89177237e39439f475422b532032d888c8ad26" class="py_mk_hide">listepy-unda = [1, -5, 10, 15, 2, 3, 6, 13]bksl-nllistepy-unda[2] = 300bksl-nlprint(listepy-unda) # affiche [1, -5, 300, 15, 2, 3, 6, 13]bksl-nllistepy-unda.append(-25) # inutile d'utiliser une affectation =bksl-nlprint(listepy-unda) # affiche [1, -5, 300, 15, 2, 3, 6, 13, -25]bksl-nlbksl-nl</span><span id="corr_content_editor_1f89177237e39439f475422b532032d888c8ad26" class="py_mk_hide" data-strudel=""></span><span class="Py_eff">
+--8&lt;--- "my_theme_customizations/pyodide-mkdocs/start_REM.md"</span>
+<span class="Py_eff">
+--8&lt;--- "docs/Cours/Première NSI/Python/Les bases/Python_base_code/list_02_REM.md"</span><span class="Py_eff">
+--8&lt;--- "my_theme_customizations/pyodide-mkdocs/end_REM.md"</span></p>
 <h2 id="manipulation_des_listes">Manipulation des listes<a class="headerlink" href="#manipulation_des_listes" title="Permanent link"></a></h2>
 <h3 id="parcourir_une_liste">Parcourir une liste<a class="headerlink" href="#parcourir_une_liste" title="Permanent link"></a></h3>
 <div class="admonition info">
@@ -4420,7 +4394,7 @@
 </code></pre></div>
 
 <p>affiche</p>
-<div class = "Center_seul" style="width:10%;">
+<div class = "Center_ss_bd" style="width:10%;">
 
 <div class="highlight"><pre><span></span><code><span class="mi">1</span>
 <span class="mi">5</span>
@@ -4447,7 +4421,7 @@
 </code></pre></div>
 
 </div>
-<details class="- tip"><summary>Créer une liste de taille inconnue</summary><p>Il suffit ce commencer avec une liste vide et d'accumuler les eléments voulus.</p>
+<details class="tip" open="open"><summary>Créer une liste de taille inconnue</summary><p>Il suffit de commencer avec une liste vide et d'accumuler les eléments voulus.</p>
 <div class="highlight"><pre><span></span><code><span class="n">une_liste</span><span class="o">=</span> <span class="p">[</span><span class="mi">102</span><span class="p">,</span> <span class="mi">104</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">104</span><span class="p">,</span> <span class="mi">99</span><span class="p">]</span>
 <span class="n">liste</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">une_liste</span><span class="p">)):</span>

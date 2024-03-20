@@ -576,20 +576,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/Tout/Tout/" class="md-nav__link">
-        Dérivation et tangente : techniques de base
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Pre_requis/Fonctions/Fct_cube/" class="md-nav__link">
         Fct cube
       </a>
@@ -4412,49 +4398,47 @@
 <li>accéder à une tranche depuis le dernier caractère : <code>mot[len(mot)-3:len(mot)]</code> correspond aux 3 derniers caractères. Ainsi, <code>mot[len(mot)-3:len(mot)]</code> correspond à <code>r !</code>. On peut aussi écrire <code>``mot[-3:]</code></li>
 <li>accéder à toute la chaîne sauf les derniers : <code>mot[0:len(mot)-5]</code> correspond à toute la chaîne <strong>sauf</strong> les 5 derniers caractères. Ainsi, <code>mot[0:len(mot) - 5]</code> correspond à <code>Bonj</code>. On peut aussi écrire <code>mot[:-5]</code></li>
 </ul>
+<p><div class="py_mk_ide"  data-max="∞"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_f5d2be77c509247bea9409dee64eee9ce6b8df2e" class="comment">###</span><div class="line_v"><div id="editor_f5d2be77c509247bea9409dee64eee9ce6b8df2e"></div></div><div id="term_editor_f5d2be77c509247bea9409dee64eee9ce6b8df2e"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_f5d2be77c509247bea9409dee64eee9ce6b8df2e","_v")'>            <img src="../../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_f5d2be77c509247bea9409dee64eee9ce6b8df2e","Python_base_code/str_01")'>            <img src="../../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_f5d2be77c509247bea9409dee64eee9ce6b8df2e').click()" >            <img src="../../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_f5d2be77c509247bea9409dee64eee9ce6b8df2e" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_f5d2be77c509247bea9409dee64eee9ce6b8df2e")'>            <img src="../../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_f5d2be77c509247bea9409dee64eee9ce6b8df2e")'>            <img src="../../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_f5d2be77c509247bea9409dee64eee9ce6b8df2e" class="py_mk_hide">mot = "Bonjour !"bksl-nlprint(len(mot)) # affiche 9bksl-nlprint(mot[2]) # affiche nbksl-nlprint(mot[len(mot)-1]) # affiche !bksl-nlprint(mot[-1]) # affiche !bksl-nlprint(mot[2:5]) # affiche njobksl-nlprint(mot[0:5]) # affiche Bonjobksl-nlprint(mot[:5]) # affiche Bonjobksl-nlprint(mot[len(mot)-3:len(mot)]) # affiche r !bksl-nlprint(mot[-3:]) # affiche r !bksl-nlprint(mot[0:len(mot)-5]) # affiche Bonjbksl-nlprint(mot[:-5]) # affiche Bonjbksl-nlbksl-nl</span><span id="corr_content_editor_f5d2be77c509247bea9409dee64eee9ce6b8df2e" class="py_mk_hide" data-strudel=""></span><span class="Py_eff">
+--8&lt;--- "my_theme_customizations/pyodide-mkdocs/start_REM.md"</span></p>
 </div>
-<p>En résumé:</p>
-<div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour !&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">))</span> <span class="c1"># affiche 9</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># affiche n</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># affiche !</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># affiche !</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche njo</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche Bonjo</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche Bonjo</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)])</span> <span class="c1"># affiche r !</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:])</span> <span class="c1"># affiche r !</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche Bonj</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[:</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># affiche Bonj</span>
-</code></pre></div>
-
+<p><span class="Py_eff">
+    --8&lt;--- "docs/Cours/Première NSI/Python/Les bases/Python_base_code/str_01_REM.md"</span><span class="Py_eff">
+    --8&lt;--- "my_theme_customizations/pyodide-mkdocs/end_REM.md"</span></p>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
 <p>Le nombre de caractères <strong>ne correspond pas</strong> au dernier indice ! En effet, le dernier indice est toujours <code>len(...) - 1</code>.</p>
 </div>
 <h2 id="concatenation_et_repetition">Concaténation et répétition<a class="headerlink" href="#concatenation_et_repetition" title="Permanent link"></a></h2>
-<div class="admonition tip">
-<p class="admonition-title">A connaître</p>
 <p>Dans tout ce qui suit, on utilise l'exemple suivant :</p>
 <div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour !&quot;</span>
 <span class="n">mot_suiv</span> <span class="o">=</span> <span class="s2">&quot;Tout le monde !&quot;</span>
 </code></pre></div>
 
-<ul>
-<li>La <span class = "Gras" id = "concat">concaténation</span> consiste à coller plusieurs chaines de caractères. Cela s'effectue à l'aide du symbole <code>+</code>. Ainsi, <code>mot + " " + mot_suiv</code> correspond à <code>Bonjour ! Tout le monde !</code></li>
-<li>Pour <span class = "Gras" id = "repet_str">répéter une chaine</span>: <code>mot*2</code> correspond à <code>'Bonjour !Bonjour !'</code> et <code>"a"*5</code> correpsond à <code>aaaaa</code></li>
-</ul>
+<div class="admonition info">
+<p class="admonition-title">Concaténation</p>
+<p>La <span class = "Gras" id = "concat">concaténation</span> consiste à coller plusieurs chaines de caractères. Cela s'effectue à l'aide du symbole <code>+</code>. Ainsi, <code>mot + " " + mot_suiv</code> correspond à <code>Bonjour ! Tout le monde !</code></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Répétition</p>
+<p>Pour <span class = "Gras" id = "repet_str">répéter une chaine</span>: <code>mot*2</code> correspond à <code>'Bonjour !Bonjour !'</code> et <code>"a"*5</code> correpsond à <code>aaaaa</code></p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
 <p>Il faut avoir uniquement des <code>str</code> pour une concaténation ! Par exemple <del class="critic"> <code>"Bonjour</code>+1000 </del> déclenche une erreur : <code>TypeError: can only concatenate str (not "int") to str</code></p>
 </div>
-<details class="- tip"><summary>Transtypage</summary><p>Il est possible de transformer presque tous les type en <code>str</code> en utilisant la fonction <code>str</code> !</p>
+<div class="admonition info">
+<p class="admonition-title">Transtypage</p>
+<p>Il est possible de transformer presque tous les types en <code>str</code> en utilisant la fonction <code>str</code> ! C'est un <span class = "Gras" id = "cast">transtypage</span>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Bonjour &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="c1"># Affiche Bonjour 1000</span>
 </code></pre></div>
 
-</details>
+<p><div class="py_mk_ide"  data-max="∞"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_cf6b3db6b8826087d3a433b3f8827f6f3d2f5035" class="comment">###</span><div class="line_v"><div id="editor_cf6b3db6b8826087d3a433b3f8827f6f3d2f5035"></div></div><div id="term_editor_cf6b3db6b8826087d3a433b3f8827f6f3d2f5035"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_cf6b3db6b8826087d3a433b3f8827f6f3d2f5035","_v")'>            <img src="../../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_cf6b3db6b8826087d3a433b3f8827f6f3d2f5035","Python_base_code/str_02")'>            <img src="../../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_cf6b3db6b8826087d3a433b3f8827f6f3d2f5035').click()" >            <img src="../../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_cf6b3db6b8826087d3a433b3f8827f6f3d2f5035" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_cf6b3db6b8826087d3a433b3f8827f6f3d2f5035")'>            <img src="../../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_cf6b3db6b8826087d3a433b3f8827f6f3d2f5035")'>            <img src="../../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_cf6b3db6b8826087d3a433b3f8827f6f3d2f5035" class="py_mk_hide">mot = "Bonjour !"bksl-nlmotpy-undsuiv = "Tout le monde !"bksl-nlmot = "Bonjour " + str(1000)bksl-nlprint(mot) # Affiche Bonjour 1000bksl-nl# mot = "Bonjour " + 1000 bksl-nl# declenche une erreur !bksl-nl bksl-nl</span><span id="corr_content_editor_cf6b3db6b8826087d3a433b3f8827f6f3d2f5035" class="py_mk_hide" data-strudel=""></span><span class="Py_eff">
+--8&lt;--- "my_theme_customizations/pyodide-mkdocs/start_REM.md"</span></p>
+</div>
+<p><span class="Py_eff">
+    --8&lt;--- "docs/Cours/Première NSI/Python/Les bases/Python_base_code/str_02_REM.md"</span><span class="Py_eff">
+    --8&lt;--- "my_theme_customizations/pyodide-mkdocs/end_REM.md"</span></p>
 <h2 id="manipulation_des_chaines_de_caracteres">Manipulation des chaînes de caractères<a class="headerlink" href="#manipulation_des_chaines_de_caracteres" title="Permanent link"></a></h2>
 <h3 id="parcourir_une_chaine_de_caracteres">Parcourir une chaîne de caractères<a class="headerlink" href="#parcourir_une_chaine_de_caracteres" title="Permanent link"></a></h3>
 <div class="admonition info">
@@ -4561,7 +4545,7 @@
 </code></pre></div>
 
 </div>
-<details class="- tip"><summary>Ajouter une chaîne à la fin</summary><p>Il est inutile d'utiliser des tranches ! Il suffit de <a href="#concat">concaténer</a> à droite.</p>
+<details class="- tip"><summary>Ajouter une chaîne à la fin</summary><p>Pour ajouter un chaîne à la fin d'une autre chaîne, il est inutile d'utiliser des tranches ! Il suffit de <a href="#concat">concaténer</a> à droite.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
 <span class="n">mot2</span> <span class="o">=</span> <span class="s2">&quot; world !&quot;</span>
 <span class="n">mot3</span> <span class="o">=</span> <span class="n">mot</span> <span class="o">+</span> <span class="n">mot2</span>
@@ -4569,7 +4553,7 @@
 </code></pre></div>
 
 </details>
-<details class="- tip"><summary>Ajouter une chaîne au début</summary><p>Il est inutile d'utiliser des tranches ! Il suffit de <a href="#concat">concaténer</a> à gauche.</p>
+<details class="- tip"><summary>Ajouter une chaîne au début</summary><p>Pour ajouter un chaîne au début d'une autre chaîne, il est inutile d'utiliser des tranches ! Il suffit de <a href="#concat">concaténer</a> à gauche.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;Jedi&quot;</span>
 <span class="n">mot2</span> <span class="o">=</span> <span class="s2">&quot;Maitre &quot;</span>
 <span class="n">mot3</span> <span class="o">=</span> <span class="n">mot2</span> <span class="o">+</span> <span class="n">mot</span>
@@ -4616,7 +4600,7 @@
 <li>la tranche commençant <strong>après</strong> le caractère à remplacer</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;chebal&quot;</span>
-<span class="n">mot2</span> <span class="o">=</span> <span class="n">mot</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;v&quot;</span> <span class="o">+</span> <span class="n">mot</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span> <span class="c1"># voyez la différence avec l&#39;insertion de la méthode précédente</span>
+<span class="n">mot2</span> <span class="o">=</span> <span class="n">mot</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;v&quot;</span> <span class="o">+</span> <span class="n">mot</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span> <span class="c1"># voyez la différence des indices avec l&#39;insertion de la méthode précédente</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">mot2</span><span class="p">)</span> <span class="c1"># affiche cheval !</span>
 </code></pre></div>
 
@@ -4628,7 +4612,7 @@
 <div class="highlight"><pre><span></span><code><span class="n">mot_cache</span><span class="o">=</span><span class="s2">&quot;SeehccraeCt&quot;</span>
 <span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot_cache</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">idx</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># On ne prend ques les indices pairs</span>
+    <span class="k">if</span> <span class="n">idx</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># On ne prend que les indices pairs</span>
         <span class="n">mot</span> <span class="o">=</span> <span class="n">mot</span> <span class="o">+</span> <span class="n">mot_cache</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>  <span class="c1"># On accumule les caractères à la fin (à droite)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="c1"># affiche Secret</span>
 </code></pre></div>
@@ -4646,7 +4630,7 @@
 </details>
 <h2 id="diverses_methodes_autour_des_str">Diverses méthodes autour des str<a class="headerlink" href="#diverses_methodes_autour_des_str" title="Permanent link"></a></h2>
 <div class="admonition - tip">
-<p class="admonition-title">A apprendre en faisant les exercices</p>
+<p class="admonition-title">A retenir en faisant les exercices</p>
 <ul>
 <li><code>''</code> ou <code>""</code> (sans espace) : la chaîne vide.</li>
 <li>les caractères spéciaux : <code>\n</code> pour le retour à la ligne, <code>\t</code> pour une tabulation</li>

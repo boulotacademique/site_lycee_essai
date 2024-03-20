@@ -576,20 +576,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/Tout/Tout/" class="md-nav__link">
-        Dérivation et tangente : techniques de base
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Pre_requis/Fonctions/Fct_cube/" class="md-nav__link">
         Fct cube
       </a>
@@ -857,8 +843,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#if" class="md-nav__link">
-    if
+  <a href="#test_conditionnel_if" class="md-nav__link">
+    Test conditionnel if
   </a>
   
 </li>
@@ -873,6 +859,13 @@
         <li class="md-nav__item">
   <a href="#les_conditions" class="md-nav__link">
     Les conditions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operations_sur_les_booleens" class="md-nav__link">
+    Opérations sur les booléens
   </a>
   
 </li>
@@ -4184,8 +4177,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#if" class="md-nav__link">
-    if
+  <a href="#test_conditionnel_if" class="md-nav__link">
+    Test conditionnel if
   </a>
   
 </li>
@@ -4200,6 +4193,13 @@
         <li class="md-nav__item">
   <a href="#les_conditions" class="md-nav__link">
     Les conditions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operations_sur_les_booleens" class="md-nav__link">
+    Opérations sur les booléens
   </a>
   
 </li>
@@ -4226,7 +4226,7 @@
 
 
 <h1 id="if_elif">if, elif<a class="headerlink" href="#if_elif" title="Permanent link"></a></h1>
-<h2 id="if">if<a class="headerlink" href="#if" title="Permanent link"></a></h2>
+<h2 id="test_conditionnel_if">Test conditionnel if<a class="headerlink" href="#test_conditionnel_if" title="Permanent link"></a></h2>
 <div class="admonition info">
 <p class="admonition-title">A retenir</p>
 <p>La boucle <code>if</code> exécute certaines instructions si une condition (c'est un propriété qui est soit vraie soit fausse) est réalisée et d'autres sinon.</p>
@@ -4260,8 +4260,8 @@
 <div class="highlight"><pre><span></span><code><span class="k">elif</span> <span class="o">...</span> <span class="p">:</span>
 </code></pre></div>
 
-<details class="- example"><summary>Exemple à bien comprendre</summary><p><div class = "Cote_demi"><div class = "Center_txt">Programme 1</div></p>
-<div class="highlight"><pre><span></span><code><span class="n">un_nb</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Choisir un entier entre 0 et 99 (compris) &quot;</span><span class="p">))</span>
+<details class="example" open="open"><summary>Exemple à bien comprendre</summary><p><div class = "Cote_demi"><div class = "Center_txt">Programme 1</div></p>
+<div class="highlight"><pre><span></span><code><span class="n">un_nb</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Choisir un entier entre 0 et 99 (inclus) &quot;</span><span class="p">))</span>
 <span class="k">if</span> <span class="n">un_nb</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jeton bleu&quot;</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">un_nb</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="p">:</span>
@@ -4274,7 +4274,7 @@
 
 <p></div>
 <div class = "Cote_demi"><div class = "Center_txt">Programme 2</div></p>
-<div class="highlight"><pre><span></span><code><span class="n">un_nb</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Choisir un entier entre 0 et 99 (compris) &quot;</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><span class="n">un_nb</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Choisir un entier entre 0 et 99 (inclus) &quot;</span><span class="p">))</span>
 <span class="k">if</span> <span class="n">un_nb</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jeton bleu&quot;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">un_nb</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="p">:</span>
@@ -4304,6 +4304,20 @@
 </li>
 </ol>
 </details>
+<div class="py_mk_ide"  data-max="∞"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_360e7a25e733cbbf11c426c27acb0392e56735bc" class="comment">###</span><div class="line_v"><div id="editor_360e7a25e733cbbf11c426c27acb0392e56735bc"></div></div><div id="term_editor_360e7a25e733cbbf11c426c27acb0392e56735bc"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_360e7a25e733cbbf11c426c27acb0392e56735bc","_v")'>            <img src="../../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_360e7a25e733cbbf11c426c27acb0392e56735bc","Python_base_code/if_elif_01")'>            <img src="../../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_360e7a25e733cbbf11c426c27acb0392e56735bc').click()" >            <img src="../../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_360e7a25e733cbbf11c426c27acb0392e56735bc" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_360e7a25e733cbbf11c426c27acb0392e56735bc")'>            <img src="../../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_360e7a25e733cbbf11c426c27acb0392e56735bc")'>            <img src="../../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+
+<p><span id="content_editor_360e7a25e733cbbf11c426c27acb0392e56735bc" class="py_mk_hide">unpy-undnb = 18bksl-nlif unpy-undnb &lt;= 20:bksl-nl    print("Jeton bleu")bksl-nlif unpy-undnb &lt;= 50:bksl-nl    print("Jeton vert")bksl-nlif unpy-undnb &lt;= 75:bksl-nl    print("Jeton rouge")bksl-nlelse:bksl-nl    print("Jeton jaune")bksl-nlbksl-nl</span><span id="corr_content_editor_360e7a25e733cbbf11c426c27acb0392e56735bc" class="py_mk_hide" data-strudel=""></span><span class="Py_eff">
+--8&lt;--- "my_theme_customizations/pyodide-mkdocs/start_REM.md"</span>
+<span class="Py_eff">
+--8&lt;--- "docs/Cours/Première NSI/Python/Les bases/Python_base_code/if_elif_01_REM.md"</span><span class="Py_eff">
+--8&lt;--- "my_theme_customizations/pyodide-mkdocs/end_REM.md"</span></p>
+<div class="py_mk_ide"  data-max="∞"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_ca9744469896df36229591abaaefdf44de9b4567" class="comment">###</span><div class="line_v"><div id="editor_ca9744469896df36229591abaaefdf44de9b4567"></div></div><div id="term_editor_ca9744469896df36229591abaaefdf44de9b4567"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_ca9744469896df36229591abaaefdf44de9b4567","_v")'>            <img src="../../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_ca9744469896df36229591abaaefdf44de9b4567","Python_base_code/if_elif_02")'>            <img src="../../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_ca9744469896df36229591abaaefdf44de9b4567').click()" >            <img src="../../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_ca9744469896df36229591abaaefdf44de9b4567" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_ca9744469896df36229591abaaefdf44de9b4567")'>            <img src="../../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_ca9744469896df36229591abaaefdf44de9b4567")'>            <img src="../../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+
+<p><span id="content_editor_ca9744469896df36229591abaaefdf44de9b4567" class="py_mk_hide">unpy-undnb = 18bksl-nlif unpy-undnb &lt;= 20:bksl-nl    print("Jeton bleu")bksl-nlelif unpy-undnb &lt;= 50:bksl-nl    print("Jeton vert")bksl-nlelif unpy-undnb &lt;= 75:bksl-nl    print("Jeton rouge")bksl-nlelse:bksl-nl    print("Jeton jaune")bksl-nlbksl-nl</span><span id="corr_content_editor_ca9744469896df36229591abaaefdf44de9b4567" class="py_mk_hide" data-strudel=""></span><span class="Py_eff">
+--8&lt;--- "my_theme_customizations/pyodide-mkdocs/start_REM.md"</span>
+<span class="Py_eff">
+--8&lt;--- "docs/Cours/Première NSI/Python/Les bases/Python_base_code/if_elif_02_REM.md"</span><span class="Py_eff">
+--8&lt;--- "my_theme_customizations/pyodide-mkdocs/end_REM.md"</span></p>
 <h2 id="les_conditions">Les conditions<a class="headerlink" href="#les_conditions" title="Permanent link"></a></h2>
 <div class="admonition info">
 <p class="admonition-title">A retenir</p>
@@ -4382,6 +4396,46 @@
 </div>
 
 </details>
+<h2 id="operations_sur_les_booleens">Opérations sur les booléens<a class="headerlink" href="#operations_sur_les_booleens" title="Permanent link"></a></h2>
+<div class="admonition info">
+<p class="admonition-title">L'opération OR</p>
+<p>Si <code>un_bool_01</code> et <code>un_bool_02</code> sont deux variables de type booléens, alors <code>un_bool_01 or un_bool_02</code> :</p>
+<ul>
+<li>renvoie <code>True</code> si <span class = "Gras">au moins</span> l'un des deux booléens vaut <code>True</code> </li>
+<li>et renvoie <code>False</code> si <span class = "Gras"> les deux </span> booléens valent <code>False</code></li>
+</ul>
+<p>Cette opération correspond au &laquo; ou non exclusif &raquo; du langage courant.</p>
+</div>
+<details class="- tip"><summary>Avec plus de deux termes</summary><p><code>b1 or b2 or b3 or ... or bn</code> :</p>
+<ul>
+<li>renvoie <code>True</code> si <span class = "Gras">au moins</span> l'un des booléens vaut <code>True</code> </li>
+<li>et renvoie <code>False</code> si <span class = "Gras"> TOUS LES </span> booléens valent <code>False</code></li>
+</ul>
+</details>
+<div class="admonition info">
+<p class="admonition-title">L'opération AND</p>
+<p>Si <code>un_bool_01</code> et <code>un_bool_02</code> sont deux variables de type booléens, alors <code>un_bool_01 and un_bool_02</code> :</p>
+<ul>
+<li>renvoie <code>True</code> si <span class = "Gras"> les deux </span> booléens valent <code>True</code> </li>
+<li>et renvoie <code>False</code> si <span class = "Gras"> au moins </span> l'un des deux booléens vaut <code>False</code></li>
+</ul>
+<p>Cette opération correspond au &laquo; et &raquo; du langage courant.</p>
+</div>
+<details class="- tip"><summary>Avec plus de deux termes</summary><p><code>b1 and b2 and b3 and ... and bn</code> :</p>
+<ul>
+<li>renvoie <code>True</code> si <span class = "Gras">TOUS LES</span> booléens valent <code>True</code> </li>
+<li>et renvoie <code>False</code> si <span class = "Gras">au moins </span> l'un des booléens vaut <code>False</code></li>
+</ul>
+</details>
+<div class="admonition info">
+<p class="admonition-title">L'opération NOT</p>
+<p>Si <code>un_bool_01</code>est une variable de type booléen, alors <code>not(un_bool_01)</code> :</p>
+<ul>
+<li>renvoie <code>True</code> si le booléen vaut <code>False</code> </li>
+<li>et renvoie <code>False</code> si le booléen vaut <code>True</code> </li>
+</ul>
+<p>Cette opération correspond à la négation du langage courant.</p>
+</div>
 
 
 

@@ -576,20 +576,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Derivation_et_convexite/Tout/Tout/" class="md-nav__link">
-        Dérivation et tangente : techniques de base
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../../Terminale%20g%C3%A9n%C3%A9rale/Pre_requis/Fonctions/Fct_cube/" class="md-nav__link">
         Fct cube
       </a>
@@ -4298,7 +4284,7 @@
 </code></pre></div>
 
 </div>
-<details class="- tip"><summary>Ajouter une liste à la fin</summary><p>Il est inutile d'utiliser des tranches ! Il suffit de <a href="#concat">concaténer</a> à droite.</p>
+<details class="tip" open="open"><summary>Ajouter une liste à la fin</summary><p>Il est inutile d'utiliser des tranches ! Il suffit de <a href="#concat">concaténer</a> à droite.</p>
 <div class="highlight"><pre><span></span><code><span class="n">liste_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
 <span class="n">a_inserer</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">150</span><span class="p">]</span> <span class="c1"># ATTENTION il faut une liste ! Même pour un élément !</span>
 <span class="n">liste_a</span> <span class="o">=</span> <span class="n">liste_a</span> <span class="o">+</span> <span class="n">a_inserer</span>
@@ -4310,7 +4296,7 @@
 <p class="admonition-title">Ajouter <strong>un</strong> élément à la fin d'une liste : append</p>
 <p>Pour ajouter un élément à la fin, il est préférable d'utiliser <code>liste_a.append(100)</code> !</p>
 </div>
-<details class="- tip"><summary>Ajouter une liste au début</summary><p>Cela revient à ajouter une liste à la fin, non ?</p>
+<details class="tip" open="open"><summary>Ajouter une liste au début</summary><p>Cela revient à ajouter une liste à la fin, non ?</p>
 <div class="highlight"><pre><span></span><code><span class="n">liste_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
 <span class="n">debut</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">150</span><span class="p">]</span> <span class="c1"># ATTENTION il faut une liste ! Même pour un élément !</span>
 <span class="n">liste_a</span> <span class="o">=</span> <span class="n">debut</span> <span class="o">+</span> <span class="n">liste_a</span>
@@ -4318,7 +4304,7 @@
 </code></pre></div>
 
 </details>
-<details class="- danger"><summary>Les listes sont des mutables !</summary><p>En tant que <a href="AFAIRE">mutable</a>, une affectation <code>liste_a =</code> doit être utilisée en connaissance de cause, en particulier dans des <a href="AFAIRE">fonctions</a> ! Il est souvent préférable d'utiliser une boucle <code>for</code> et la méthode <code>append</code> !</p>
+<details class="danger" open="open"><summary>Les listes sont des mutables !</summary><p>En tant que <a href="AFAIRE">mutable</a>, une affectation <code>liste_a =</code> doit être utilisée en connaissance de cause, en particulier dans des <a href="AFAIRE">fonctions</a> ! Il est souvent préférable d'utiliser une boucle <code>for</code> et la méthode <code>append</code> !</p>
 <div class="highlight"><pre><span></span><code><span class="n">liste_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
 <span class="n">a_inserer</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">150</span><span class="p">]</span> <span class="c1"># ATTENTION il faut une liste ! Même pour un élément !</span>
 <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a_inserer</span><span class="p">)):</span>
