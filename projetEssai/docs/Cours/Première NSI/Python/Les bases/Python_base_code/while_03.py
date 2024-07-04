@@ -1,5 +1,5 @@
+mot = "Bonjour"
 idx = 0
-L=[5,3,4,-1,4,6]
-while idx < len(L) and L[idx] >=0 :
+while idx < len(mot) and mot[idx] != "o":
     idx = idx + 1
 print(idx)

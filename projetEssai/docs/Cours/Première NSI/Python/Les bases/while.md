@@ -1,4 +1,4 @@
-# La boucle while
+# Python<br>La boucle while
 
 ## Le principe
 
@@ -41,38 +41,61 @@
     <div class = "Cote_tiers"><div class = "Center_txt">A éviter</div>
 
     ``` python
-    L=[5,3,4,-1,4,6]
+    mot = "Bonjour"
+    rep = len(mot)
+    trouve = False
+    for idx in range(len(mot)):
+        if not(trouve) and mot[idx] == "o":
+            trouve = True
+            rep = idx
+    print(rep)
+    ```
+    <!-- L=[5,3,4,-1,4,6]
     rep = len(L)
     trouve = False
     for idx in range(len(L)):
         if not(trouve) and L[idx] < 0 :
             trouve = True
             rep = idx
-    print(rep)
-    ```
+    print(rep)-->
 
     </div>
     <div class = "Cote_tiers"><div class = "Center_txt">Mieux !</div>
 
     ``` python
-    L=[5,3,4,-1,4,6]
-    for idx in range(len(L)):
-        if L[idx] < 0 :
+    mot = "Bonjour"
+    for idx in range(len(mot)):
+        if mot[idx] == "o":
             break
     print(idx)
     ```
+
+    <!-- L=[5,3,4,-1,4,6]
+    for idx in range(len(L)):
+        if L[idx] < 0 :
+            break
+    print(idx) -->
 
     </div>
     <div class = "Cote_tiers"><div class = "Center_txt">A préférer</div>
 
     ``` python
+    mot = "Bonjour"
     idx = 0
+    while idx < len(mot) and mot[idx] != "o":
+        idx = idx + 1
+    print(idx)    
+    ```
+
+    <!-- idx = 0
     L=[5,3,4,-1,4,6]
     while idx < len(L) and L[idx] >=0 :
         idx = idx + 1
-    print(idx)
-    ```
+    print(idx)-->
+
     </div>
+
+    Les trois programmes précédents font la même chose : afficher l'indice du premier `"o"` si il y en a un et le nombre de caractères sinon.
 
 {{ IDEv('Python_base_code/while_01', MAX = 1000) }}
 
@@ -113,5 +136,5 @@
         prenom = input("Son prénom ? ")
         print("Bonjour, " + prenom)
         reponse = input("Avez-vous un frere ou une soeur ? Y ou N ")
-    # Ici reponse vaut "N"
+    # Ici reponse ne vaut pas "Y"
     ```

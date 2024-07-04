@@ -1,4 +1,4 @@
-# La boucle for
+# Python<br>La boucle for
 
 !!! info "A retenir"
 
@@ -99,7 +99,7 @@
 
     Alors que dans le second, une telle modification est beaucoup plus difficile à effectuer (et totalement inappropriée) !
 
-???- example "Exercice"
+???- question "Exercice"
 
     Ecrire un programme qui demande à l'utilisateur un nombre de lignes et qui écrit X sur le nombre de lignes recquis.
 
@@ -116,17 +116,19 @@
     ```
     </div>
 
-    ???- done "Réponse"
+<!--    ???- done "Réponse"
 
         ```python
         nb_ligne = int(input("Nombre de lignes ? "))
         for co in range(nb_ligne):
             print("X")
         ```
+-->
 
-???- example "Exercice"
+???- question "Exercice"
 
-    Ecrire un programme qui demande à l'utilisateur un nombre de lignes et qui dessine un triangle plein de X sur le nombre de lignes recquis.
+    Ecrire un programme qui demande à l'utilisateur un nombre de lignes et qui dessine un triangle plein de X sur le nombre de lignes recquis.  
+    On utilisera le fait que, pour obtenir `XXX`, on peut taper `"X"*3` ou `"X"*i` avec `i` qui vaut 3.
 
     Par exemple, sur 5 lignes : on a :
 
@@ -143,17 +145,19 @@
 
     </div>
 
-    ???- done "Réponse"
+<!--    ???- done "Réponse"
 
         ```python
         nb_ligne = int(input("Nombre de lignes ? "))
         for co in range(nb_ligne):
             print("X"*(co+1))
         ```
+-->
 
-???- example "Exercice"
+???- question "Exercice"
 
-    Ecrire un programme qui demande à l'utilisateur un nombre de lignes et qui dessine un triangle inversé plein de X sur le nombre de lignes recquis.
+    Ecrire un programme qui demande à l'utilisateur un nombre de lignes et qui dessine un triangle inversé plein de X sur le nombre de lignes recquis.  
+    On utilisera le fait que, pour obtenir `XXX`, on peut taper `"X"*3` ou `"X"*i` avec `i` qui vaut 3.
 
     Par exemple, sur 5 lignes : on a :
 
@@ -168,15 +172,16 @@
     ```
     </div>
 
-    ???- done "Réponse"
+<!--    ???- done "Réponse"
 
         ```python
         nb_ligne = int(input("Nombre de lignes ? "))
         for co in range(nb_ligne):
             print("X"*(nb_ligne - co))
         ```
+-->
 
-???- example "Exercice plus difficile"
+???- question "Exercice plus difficile"
 
     Ecrire un programme qui demande à l'utilisateur un nombre de lignes et qui dessine un sapin plein de A sur le nombre de lignes recquis.
 
@@ -194,11 +199,11 @@
 
     </div>
 
-    ???- done "Réponse"
+<!--    ???- done "Réponse"
 
         ```python
         nb_ligne = int(input("Nombre de lignes ? "))
         for co in range(nb_ligne):
             print(" "*(nb_ligne - (co+1)) + "^"*(2*co+1) + " "*(nb_ligne - (co+1)))
         ```
-
+-->

@@ -63,17 +63,27 @@
 	h1{
 		font-size:2rem !important;
 		color:rgb(255, 255, 255) !important;
-		background-color: #4051b5;/*#8bc34b;*/
+		background-color: #546d78;/*#4051b5;*/ /*#8bc34b*/
 		border: 5px ridge black ;/*#79aa42;*/
 		border-radius:10px;
 		text-align:center;
 		font-weight:bold;
 	}
 
+	.Chap_title
+	{
+		display: none;
+	}
+
+	.Small_caps
+	{
+		font-variant: small-caps;
+	}
+
 	h2{
 		font-size:1.5rem!important;
-		color:rgb(255, 230, 120)!important;
-		background-image:linear-gradient(to right, #4051b5 , rgb(110, 211, 255)); /*#8bc34b , white);*/
+		color:rgb(255, 255, 255)!important;
+		background-image:linear-gradient(to right, #546d78 , white ); /*#8bc34b , white); rgb(110, 211, 255)*/
 		/*background-color:#42bef6;*/
 		border: 1px ridge blue ;/*#79aa42;*/
 		border-radius:10px;
@@ -118,6 +128,10 @@
 		text-align: right;
 	}
 
+	li{
+		text-align: left;
+	}
+
 	.Encadre{
 		border : 1px solid black;
 		padding: 0.2em;
@@ -127,6 +141,12 @@
 		margin-right : auto;
 		margin-left : 35%;
 		border : 1px solid black;
+	}
+
+	.Center2_lien {
+		margin-right : auto;
+		margin-left : 35%;
+		/*border : 1px solid black;*/
 	}
 
 	.Center_seul {
@@ -248,12 +268,12 @@
 	}
 
 	.AvecBordure{
-		border : 1px solid black;
+		border : 3px solid black;
 		border-collapse : collapse;
 		margin : auto;
 	}
 
-	.AvecBordure td{
+	.AvecBordure td, .AvecBordure th{
 		border : 1px solid black;
 		min-width : 10%;
 		text-align : center;
@@ -264,6 +284,11 @@
 		border-left: 1px solid black;
 	}
 
+	.Table_bd{
+	border-collapse: collapse;
+	border : 2px solid rgb(140 140 140);
+	}
+
 	.Td_table{
 		display: inline-block;
 		border: 1px solid black;
@@ -271,6 +296,11 @@
 
 	.Tr_table{
 		border: 2px dotted red;
+	}
+
+	th, td {
+		border: 1px solid rgb(160 160 160);
+		padding: 10pt;
 	}
 
 	.Gras{

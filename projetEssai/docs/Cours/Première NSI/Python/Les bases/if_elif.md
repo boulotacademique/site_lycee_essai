@@ -1,4 +1,4 @@
-# if, elif
+# Python<br>if, elif
 
 ## Test conditionnel if
 
@@ -186,8 +186,8 @@ elif ... :
 
     Si ```un_bool_01``` et ```un_bool_02``` sont deux variables de type booléens, alors ```un_bool_01 or un_bool_02``` :
 
-    - renvoie ```True``` si <span class = "Gras">au moins</span> l'un des deux booléens vaut ```True``` 
-    - et renvoie ```False``` si <span class = "Gras"> les deux </span> booléens valent ```False```
+    - renvoie ```True``` si <span class = "Gras">au moins</span> l'un des deux booléens (```un_bool_01```, ```un_bool_02```) vaut ```True``` 
+    - et renvoie ```False``` si <span class = "Gras"> les deux </span> booléens (```un_bool_01```, ```un_bool_02```) valent ```False```
 
     Cette opération correspond au &laquo; ou non exclusif &raquo; du langage courant.
 
@@ -195,15 +195,15 @@ elif ... :
 
     ```b1 or b2 or b3 or ... or bn``` :
 
-    - renvoie ```True``` si <span class = "Gras">au moins</span> l'un des booléens vaut ```True``` 
-    - et renvoie ```False``` si <span class = "Gras"> TOUS LES </span> booléens valent ```False```
+    - renvoie ```True``` si <span class = "Gras">au moins</span> l'un des booléens (```b1, b2, b3, ..., bn```) vaut ```True``` 
+    - et renvoie ```False``` si <span class = "Gras"> TOUS LES </span> booléens (```b1, b2, b3, ..., bn```) valent ```False```
 
 !!! info "L'opération AND"
 
     Si ```un_bool_01``` et ```un_bool_02``` sont deux variables de type booléens, alors ```un_bool_01 and un_bool_02``` :
 
-    - renvoie ```True``` si <span class = "Gras"> les deux </span> booléens valent ```True``` 
-    - et renvoie ```False``` si <span class = "Gras"> au moins </span> l'un des deux booléens vaut ```False```
+    - renvoie ```True``` si <span class = "Gras"> les deux </span> booléens (```un_bool_01```, ```un_bool_02```) valent ```True``` 
+    - et renvoie ```False``` si <span class = "Gras"> au moins </span> l'un des deux booléens (```un_bool_01```, ```un_bool_02```) vaut ```False```
 
     Cette opération correspond au &laquo; et &raquo; du langage courant.
 
@@ -211,14 +211,14 @@ elif ... :
 
     ```b1 and b2 and b3 and ... and bn``` :
 
-    - renvoie ```True``` si <span class = "Gras">TOUS LES</span> booléens valent ```True``` 
-    - et renvoie ```False``` si <span class = "Gras">au moins </span> l'un des booléens vaut ```False```
+    - renvoie ```True``` si <span class = "Gras">TOUS LES</span> booléens (```b1, b2, b3, ..., bn```) valent ```True``` 
+    - et renvoie ```False``` si <span class = "Gras">au moins </span> l'un des booléens (```b1, b2, b3, ..., bn```) vaut ```False```
 
 !!! info "L'opération NOT"
 
-    Si ```un_bool_01```est une variable de type booléen, alors ```not(un_bool_01)``` :
+    Si ```un_bool_01``` est une variable de type booléen, alors ```not(un_bool_01)``` :
 
-    - renvoie ```True``` si le booléen vaut ```False``` 
-    - et renvoie ```False``` si le booléen vaut ```True``` 
+    - renvoie ```True``` si le booléen (```un_bool_01```) vaut ```False``` 
+    - et renvoie ```False``` si le booléen (```un_bool_01```) vaut ```True``` 
 
     Cette opération correspond à la négation du langage courant.

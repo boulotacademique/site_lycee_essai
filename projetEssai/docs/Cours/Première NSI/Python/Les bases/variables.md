@@ -1,15 +1,15 @@
-# Les variables et les opérations
+# Python<br>Les variables et les opérations
 
 ## Les variables
 
 !!! info "Un premier point de vue"
     Vous avez vu en seconde qu'une variable pouvait être vue comme une boîte avec une étiquette et un contenu.
 
-    [![affecter une variable](../Image/affect-var5.png){.Center_lien .Vignette}](../Image/affect-var5.png)
+    [![affecter une variable](../Image/affect-var5.png){.Center_lien .Vignette .Im_retaille30}](../Image/affect-var5.png)
 
-    [![affecter une variable](../Image/var5.png){.Center_lien .Vignette}](../Image/var5.png)
+    [![affecter une variable](../Image/var5.png){.Center_lien .Vignette .Im_retaille30}](../Image/var5.png)
 
-    Cette image n'est valable que pour des contenus &laquo; simples &raquo; : les nombres, les chaînes de caractères.
+    Cette image n'est valable que pour des contenus &laquo; simples &raquo; : les nombres, les chaînes de caractères, les booléens.
 
 !!! warning "De bonnes pratiques"
     
@@ -18,7 +18,7 @@
 
 !!! info "Utilisation"
     - Pour affecter une valeur à une variable, on utilise ```=```. Par exemple, ```x = 2``` ou ```firstname = "Anakin"```.
-    - Pour afficher le contenu d'une variable, on utilise ```print()``` (mais pas de ```" "```). Par exemple, ```print(x)```.
+    - Pour afficher le contenu d'une variable, on utilise ```print(...)``` (mais pas de ```" "```). Par exemple, ```print(x)```.
     - Pour afficher du texte et le contenu d'une variable,on peut utiliser la virgule ```print("Je m'appelle",firstname)``` ou utiliser [la concaténation](.\str.md#concat) de chaînes de caractères ```print("Je m'appelle " + str(firstname)) ```
 
 {{ IDEv('Python_base_code/variables_01', MAX = 1000) }}
@@ -69,6 +69,8 @@
     - les dictionnaires : ```dict```
     - les tuples : ```tuple```
 
+    Enfin, il existe un type particulier `NoneType` et `None` est l'unique valeur du type `NoneType`. Elle représente l'absence de valeur.
+
 
 ## Les opérations
 
@@ -114,6 +116,8 @@ En python, il est possible d'effectuer les opérations mathématiques usuelles a
     - test de la non égalité : ```a != b``` (A ne pas faire avec [des flottants](AFAIRE))
     - test d'inégailté strict : ```a > b``` ou ```a < b```
     - test d'inégailté large : ```a >= b``` ou ```a <= b```
+    - test pour savoir si c'est `None` : `elt is None`
+    - test pour savoir si ce n'est pas `None` : `elt is not None`
     - test de type : ```isinstance(a , int)```, ```isinstance(a , float)```
 
 ### Opérations sur d'autres types

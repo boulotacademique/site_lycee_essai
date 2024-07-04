@@ -1,20 +1,20 @@
-# Les listes
+# Python<br>Les listes
 
 ## Définition
 
 !!! info "A retenir"
 
-    Une <span id="liste">**liste**</span> (ou du moins ce qui sera [appelée liste pour l'instant](AFAIRE)) est une structure de donnée _très importante_ !
+    Une <span id="liste">**liste**</span> (ou du moins ce qui sera [appelée liste pour l'instant](AFAIRE)) est une structure de donnée _très utilisée_ !
 
-    C'est une séquence ou une suite (donc l'ordre compte) d'éléments (par forcément distincts) notée entre des crochets.
+    Comme un tableau, c'est une séquence ou une suite (donc l'ordre compte) d'éléments (par forcément distincts) notée entre des crochets.
 
     ```python
     L = [2, 3, 4, "bonjour", True]
     ```
 
-    A l'instar des chaînes de caractères, les éléments d'une liste sont repérés par des indices, qui commencent à 0!
+    A l'instar des tableaux, les éléments d'une liste sont repérés par des indices, qui commencent à 0!
 	
-	<div class = "Center_seul" style="width:80%;">
+	<div class = "Center_txt">
 	
 	|liste :|[|2|,|3|,|4|,|"bonjour"|,|True|]|
 	|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -22,7 +22,7 @@
 
 	</div>
 
-!!! tip "Des méthodes communes aux list et aux str ..."
+!!! tip "Des méthodes communes aux listes (ou aux tableaux) et aux str ..."
 
     On retrouve des méthodes communes à celle des ```str``` !
 
@@ -47,15 +47,48 @@
 
 ## Méthodes spécifiques aux listes
 
-!!! warning "... et celles spécifiques aux list"
+!!! warning "... et celles spécifiques aux listes"
 
-    Les listes sont des [mutables](AFAIRE) ! Elles possèdent donc des méthodes spécifiques qui modifie directement (en place dit-on) la liste en question :
+    Les listes sont des [mutables](AFAIRE) ! Elles possèdent donc des méthodes spécifiques qui modifient directement (en place dit-on) la liste en question :
 
     - modifier un élément en connaissant son indice : ```liste_a[2] = 300```
-    - ajouter un élément à la fin : ```liste_a.append(-25)```
-
+    - ajouter un élément à la fin : ```liste_a.append(-25)``` C'est LA différence entre les listes et les tableaux.
 
 {{ IDE('Python_base_code/list_02', MAX = 1000) }}
+
+???+ danger "Les listes sont des mutables !"
+
+    En tant que [mutable](AFAIRE), une affectation ```liste_a =``` doit être utilisée en connaissance de cause, en particulier dans des [fonctions](AFAIRE) ! L'impact sur la liste n'est pas la même que l'utilisation de la méthode ```append``` !
+
+## Déclaration d'une liste par compréhension
+
+!!! tip "Méthode à connaitre"
+    Il est possible de créer une liste en décrivant ses éléments à l'aide d'une boucle ```for``` et d'une expression (ou d'une fonction) : on dit que la liste a été créee **par compréhension**.
+
+Voyons cela sur un exemple :
+
+<div class="Cote_demi">
+
+<div class="Center_txt"> Créer une liste classiquement </div>
+
+```python
+liste_carre = []
+for i in range(10):
+    liste_carre.append(i**2)
+```
+
+</div>
+
+<div class="Cote_demi">
+
+<div class="Center_txt"> Créer une liste par compréhension </div>
+
+```python
+liste_carre = [i**2 for i in range(10) ]
+```
+</div>
+
+
 
 ## Manipulation des listes
 
@@ -63,7 +96,7 @@
 
 !!! info "Parcourir une liste avec des indices"
 
-    Pour récupérer les éléments d'une listes les uns après les autres **avec les indices**, il faut utiliser une boucle ```for```, la fonction ```range``` et la longueur de la chaîne.
+    Pour récupérer les éléments d'une listes les uns après les autres **avec les indices**, il faut utiliser une boucle ```for```, la fonction ```range``` et la longueur de la liste.
 
 	```python
 	liste_a = [1,5,2,6,4,7,8]
@@ -128,21 +161,25 @@ for idx in range(len(liste_a)):
 
 !!! info "Créer une liste de taille connue"
 
-    Grâce à la répétition, il est possible de créer une liste avec le nombre d'élément voulu. Puis on modifie ces éléments
+    C'est en fait un tableau !
     
-    Par exemple pour créer une liste contenant les 5 premiers carrés
+    ???- info "Rappel"
     
-    ```python
-    # liste avec 5 zéros:
-    liste_carre = [0]*5
-    for i in range(5):
-        liste_carre[i] = i**2
-    print(liste_carre) # affiche [0,1,4,9,16]
-    ```
+        Ainsi, grâce à la répétition, il est possible de créer une liste avec le nombre d'élément voulu. Puis on modifie ces éléments.
+    
+        Par exemple pour créer une liste contenant les 5 premiers carrés
+    
+        ```python
+        # liste avec 5 zéros:
+        liste_carre = [0]*5
+        for i in range(5):
+            liste_carre[i] = i**2
+        print(liste_carre) # affiche [0,1,4,9,16]
+        ```
 
 ???+ tip "Créer une liste de taille inconnue"
 
-    Il suffit de commencer avec une liste vide et d'accumuler les eléments voulus.
+    Il suffit de commencer avec une liste vide et d'accumuler les eléments voulus grâce à la méthode `append`.
 
     ```python
     une_liste= [102, 104, 97, 97, 100, 97, 98, 99, 104, 99]
@@ -160,13 +197,4 @@ for idx in range(len(liste_a)):
     - ```[ ]``` : la liste vide. ```L=[ ]``` permet de créer une liste à laquelle il sera possible d'ajouter des éléments
     - ```4 in L``` : retourne ```True``` si 4 est dans ``` L```, ```False``` sinon.
     - ```L.index(x)``` : retourne l'indice de l'élément ```x``` (si il est dans ```L```, sinon il y a un message d'erreur)
-    - ```L.count(x)``` : retourne le nombre d'occurrences  de l'élément ```x``` (si il est dans la liste ```L```)
     - ```L1 == L2``` : retourne ```True``` si ```L1``` et ```L2``` sont identiques, ```False``` sinon.
-    - ```for elt in L :``` : parcourt la liste ```L```
-    - ```A = L``` : copie [**par référence**](AFAIRE) la liste ```L```
-
-
-
-<!--## Exercices
-
-???- question "Exercice"-->

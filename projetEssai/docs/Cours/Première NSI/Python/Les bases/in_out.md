@@ -1,4 +1,4 @@
-# Les méthodes de bases : Entrèe/sortie
+# Python<br>Interaction : Entrèe/sortie
 
 ## Une sortie : print
 
@@ -36,8 +36,9 @@ Il est préférable d'utiliser une chaine de caractère dans un ```print```. Pou
 
 	Si nécessaire, il faut le <span class = "Gras" id = "cast_ent">transtyper (*cast* en anglais)</span>, par exemple, avec les fonctions :
 	
-	- ```int``` pour avoir un entier
-	- ```float``` pour avoir un réel
+	- ```int``` pour avoir un entier ;
+	- ```float``` pour avoir un réel ;
+	- (pour rappel ) `str` pour avoir une chaine de caractères.
 
 	```python
 	age = input("Votre age ? ") # age est du type str
@@ -55,7 +56,7 @@ Il est préférable d'utiliser une chaine de caractère dans un ```print```. Pou
 
 	Demander à l'utilisateur son année de naissance et l'année en cours. Calculer et afficher alors son age.
 
-	???- success "Réponse"
+<!--	???- success "Réponse"
 
 
 		```python
@@ -64,4 +65,4 @@ Il est préférable d'utiliser une chaine de caractère dans un ```print```. Pou
 		age = annee - annee_nais
 		print(age)
 		```
-
+-->

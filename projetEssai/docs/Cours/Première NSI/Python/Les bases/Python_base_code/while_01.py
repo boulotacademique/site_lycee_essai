@@ -1,8 +1,8 @@
-L=[5,3,4,-1,4,6]
-rep = len(L)
+mot = "Bonjour"
+rep = len(mot)
 trouve = False
-for idx in range(len(L)):
-    if not(trouve) and L[idx] < 0 :
+for idx in range(len(mot)):
+    if not(trouve) and mot[idx] == "o":
         trouve = True
         rep = idx
 print(rep)

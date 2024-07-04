@@ -1,4 +1,4 @@
-# Les chaînes de caractères : str
+# Python<br>Les chaînes de caractères : str
 
 ## Les indices
 
@@ -152,11 +152,41 @@ for idx in range(len(mot)):
 
 !!! warning "Attention"
 
-    Une chaîne de caractères (type ```str```) est un [**non mutable**](AFAIRE) (ou **immuable**). Il est donc impossible de faire, par exemple, {-- ```mot[2] = "r"``` --} !!
+    Une chaîne de caractères (type ```str```) est un [**non mutable**](AFAIRE) (ou **immuable**). Il est donc impossible de modifier facilement un caractère, en faisant par exemple {-- ```mot[2] = "r"``` --} !!
+
+<!--Pour modifier une chaîne de caractères, il est possible d'utiliser les tranches.--> 
+
+Lire et bien travailler les exemples suivants afin de bien les comprendre.
+
+### Créer une chaîne
+
+!!! note "Créer une chaîne de caractères"
+
+    Il suffit de commencer avec une chaîne vide ```""``` et d'accumuler les chaînes de caractères voulues.
+
+    ```python
+    mot_cache="SeehccraeCt"
+    mot = ""
+    for idx in range(len(mot_cache)):
+        if idx%2 == 0: # On ne prend que les indices pairs
+            mot = mot + mot_cache[idx]	# On accumule les caractères à la fin (à droite)
+    print(mot) # affiche Secret
+    ```
+
+???- tip "Accumuler au début"
+
+    Il est possible d'accumuler au début (à gauche)
+
+    ```python
+    mot_cache="SeehccraeCt"
+    mot = ""
+    for idx in range(len(mot_cache)):
+        if idx%2 == 1: # On ne prend ques les indices impairs
+            mot = mot_cache[idx] + mot	# On accumule les caractères au début (à gauche)
+    print(mot) # affiche Cache
+    ```
 
 ### Insérer une chaîne
-
-Pour modifier une chaîne de caractères, il est possible d'utiliser les tranches. <!--Lire et bien travailler les exemples suivants afin de bien les comprendre.-->
 
 !!! note "Insérer une chaîne"
 
@@ -170,13 +200,29 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 
     </div>
 
-    Il faut [concaténer](#concat) les chaînes suivantes :
+    Il faut [concaténer](#concat) les caractères :
     
-    - la chaîne dont les indices commencent à 0 et sont **strictement inférieur à 3** (Faite attention à ce dernier point !!!)
-    - la chaîne que l'on souhaite insérer
-    - la chaîne dont les indices vont de l'indice 3 jusqu'au dernier
-    
+    - dont les indices commencent à 0 et sont **strictement inférieur à 3** (Faite attention à ce dernier point !!!)
+    - que l'on souhaite insérer
+    - dont les indices vont de l'indice 3 jusqu'au dernier  
+    ```python
+    mot = "Bon !"
+    a_inserer = "bon"
+    mot_rep = ""
+    for idx in range(3):
+        mot_rep = mot_rep + mot[idx]
+    for idx in range(len(a_inserer)):
+        mot_rep = mot_rep + a_inserer[idx]
+    for idx in range(3, len(mot)):
+        mot_rep = mot_rep + mot[idx]
+    print(mot_rep_) # affiche Bonbon !
+    ```
 
+    Remarque : il sera possible de faire la même chose avec une boucle `while` !
+
+???- tip "Avec les tranches"
+    On peut aussi utiliser les tranches !
+    
     ```python
     mot = "Bon !"
     a_inserer = "bon"
@@ -220,11 +266,20 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
 
     </div>
 
-    Il faut alors [concaténer](#concat) les chaînes suivantes :
+    Un exemple :
+    ```python
+    mot = "chebal"
+    mot_rep = ""
+    for idx in range(len(mot)):
+        if idx == 3:
+            mot_rep = mot_rep + "v"
+        else:
+            mot_rep = mot_rep + mot[idx]
+    print(mot_rep) # affiche cheval !
+    ```
 
-    - la tranche du début jusqu'au caractère à remplacer
-    - le caractère de remplacement
-    - la tranche commençant **après** le caractère à remplacer
+???- tip "Avec les tranches"
+    On peut aussi utiliser les tranches !
 
     ```python
     mot = "chebal"
@@ -232,33 +287,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
     print(mot2) # affiche cheval !
     ```
 
-### Créer une chaîne
 
-!!! note "Créer une chaîne de caractères"
-
-    Il suffit de commencer avec une chaîne vide ```""``` et d'accumuler les chaînes de caractères voulues.
-
-    ```python
-    mot_cache="SeehccraeCt"
-    mot = ""
-    for idx in range(len(mot_cache)):
-        if idx%2 == 0: # On ne prend que les indices pairs
-            mot = mot + mot_cache[idx]	# On accumule les caractères à la fin (à droite)
-    print(mot) # affiche Secret
-    ```
-
-???- tip "Accumuler au début"
-
-    Il est possible d'accumuler au début (à gauche)
-
-    ```python
-    mot_cache="SeehccraeCt"
-    mot = ""
-    for idx in range(len(mot_cache)):
-        if idx%2 == 1: # On ne prend ques les indices impairs
-            mot = mot_cache[idx] + mot	# On accumule les caractères au début (à gauche)
-    print(mot) # affiche Cache
-    ```
 
 ## Diverses méthodes autour des str
 
@@ -271,6 +300,123 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
     - ```C.find(x)```: retourne l'indice de l'élément ```x``` (si il est dans ```C```, sinon il retourne -1)
     - ```C.count(x)``` : retourne le nombre d’occurrences  de l'élément ```x```. 
     - ```C1 == C2``` : retourne ```True``` si ```C1``` et ```C2``` sont identiques, ```False``` sinon. \textbf{Attention à la casse (majuscule, minuscule) !}
+
+## Les `str` sont des non mutables
+
+!!! note "A retenir"
+
+    Une chaine de caractère est immuable (ou non mutable ou immutable). Elle ne peut être modifiée qu'avec un code de la forme :
+
+    ```python
+    ch="un mot"
+    ch=ch+" !"
+    print(ch)
+    ```
+
+    Des opérations de modifications comme ```ch[2]='z'``` ( ou ```ch.append('!')``` méthode pour les listes) provoqueront des erreurs.
+
+!!! abstract "Copie par valeur"
+
+    Ainsi, pour un non mutable, après avoir créé une copie, les modifications de la copie **n'impactent pas** l'original ! *Cela peut paraitre naturel, mais ce n'est pas le cas de toutes les structures.*
+
+    ```python
+    mot = "Bonjour"
+    print(mot) # Affiche "Bonjour"
+    cp_mot = mot
+    cp_mot = cp_mot + " à tous !"
+    print(mot) # Affiche "Bonjour"
+    print(cp_mot) # Affiche "Bonjour à tous !"
+    ```
+
+    {{ IDEv() }}  
+
+???- note "Remarque"
+
+    Voici un code (les éléments seront vus plus tard). Comme les listes sont mutables, *certaines méthodes* pour modifier une copie **impactent l'original** !
+
+    ```python
+    liste1 = [1,2,3,4]
+    print(liste1) # Affiche [1,2,3,4]
+    cp_liste1 = liste1
+    cp_liste1.append(100)
+    print(liste1) # Affiche [1,2,3,4,100]
+    print(cp_liste1) # Affiche [1,2,3,4,100]
+    ```
+
+    {{ IDEv() }}  
+
+!!! note "A retenir : conséquence avec les fonctions"
+
+    Ainsi, si une chaine de caractères (et plus généralement un non mutable) est passée en argument dans un fonction, des modifications au sein de la fonction n'impacte pas le chaine de caractères passée en argument.
+
+    ```python
+    def modif_mot(mot):
+        mot = mot + ' ajout'
+        print("Dans la fonction la variable mot vaut " + mot)
+    
+    un_mot = "Hello"
+    modif_mot(un_mot)
+    print(un_mot)
+    ```
+
+    {{ IDEv() }}  
+
+???- note "Remarque"
+
+    Voici un code (les éléments seront vus plus tard). Comme les listes sont mutables, *certaines méthodes* pour modifiant la liste passée en argument d'une fonction **modifient l'original** !
+
+    ```python
+    def modif_liste(L):
+        L.append(100)
+        print("Dans la fonction la variable L vaut", L)
+
+    liste1 = [1,2,3,4]
+    print(liste1) # Affiche [1,2,3,4]
+    modif_liste(L)
+    print(liste1) # Affiche [1,2,3,4,100]
+    ```
+
+    {{ IDEv() }}  
+
+
+!!! danger "A connaitre"
+
+    Toutes les structures vues jusqu'à présent (`int`, `float`, `bool` et `str`) sont des non mutables !
+
+!!! tip "Méthode"
+
+    Un méthode pour modifier un non mutable à l'aide d'une fonction ets de tout simplement ... le renvoyer !
+
+    ```python
+    def modif_mot(mot):
+        mot = mot + ' ajout'
+        print("Dans la fonction la variable mot vaut " + mot)
+        return mot
+    
+    un_mot = "Hello"
+    un_mot = modif_mot(un_mot)
+    print(un_mot)
+    ```
+
+    {{ IDEv() }}  
+
+???- note "Remarque"
+
+    Il existe une autre méthode. Mais il faut l'éviter autant que faire ce peut. Il faut déclarer la variable en `global` (et ne plus la passer en paramètre).
+
+    ```python
+    def modif_mot():
+        global un_mot
+        un_mot = un_mot + ' ajout'
+        print("Dans la fonction la variable mot vaut " + mot)
+    
+    un_mot = "Hello"
+    modif_mot(un_mot)
+    print(un_mot)
+    ```
+
+    {{ IDEv() }}  
+
 
 ## Exercice à maitriser
 
@@ -299,6 +445,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
     print(alphabet) # affiche ABCEFGHIJKLMNOPQRSTUVWXYZ
     ```
 
+<!--
     ???- done "Réponse"
 
         ```python
@@ -306,7 +453,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
         alphabet = melange[4:9] + melange[14:20] + melange[9:12] + melange[-2:] + melange[:4] + melange[12:14] + melange[20:24]
         print(alphabet) # affiche ABCEFGHIJKLMNOPQRSTUVWXYZ
         ```
-
+-->
 
 ???- question "Exercice"
 
@@ -325,7 +472,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
         3. qui teste le résultat précédent : c'est-à-dire qui renvoie ```'True'``` si le code a bien trouvé le mot ```revolution``` (```False``` sinon)
         4. en utilisant des tranches de la chaîne de caractères \verb```mots```, affecter à la variable ```modif``` la chaîne de caractère ```"informatique revolution La"```.
 
-
+<!--
     ???- done "Réponse"
 
         ```python
@@ -351,6 +498,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
         modif = mots[14:] + mots[2:14] + mots[:2]
         print(modif)
         ```
+-->
 
 ???- question "Exercice"
 
@@ -360,16 +508,17 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
     
     ```Le coût total est de 229 euros.```
 
+<!--
     ???- done "Réponse"
 
         ```python
         nbPlace=int(input("Nombre de place ? "))
         nbReduit=int(input("Nombre de tarif réduit ? "))
         cout=nbReduit*18+(nbPlace-nbReduit)*25
-        print("Le coût total est de",cout,"euros")
+        print("Le coût total est de", cout, "euros")
         print("Le coût total est de "+str(cout)+" euros")
-        print("Le coût total est de {} euros".format(cout))
         ```
+-->
 
 ???- question "Exercice"
 
@@ -384,7 +533,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
     # A COMPLETER
     ```
 
-
+<!--
     ???- done "Réponse"
 
         ```python
@@ -403,6 +552,7 @@ Pour modifier une chaîne de caractères, il est possible d'utiliser les tranche
                 compt = compt + 1
         print(compt)
         ```
+-->
 
 [^1]: Steve Jobs
     

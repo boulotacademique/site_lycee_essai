@@ -2,7 +2,7 @@ site_name: Maths et NSI
 site_author: Lycée
 site_url: https://boulotacademique.github.io/site_lycee_essai/
 
-repo_url: https://github.com/boulotacademique/site_lycee_essai
+#repo_url: https://github.com/boulotacademique/site_lycee_essai
 #edit_uri: projetEssai/docs
 
 docs_dir : docs
@@ -47,11 +47,12 @@ theme:
     #     accent: 'amber'
     palette:
       - scheme: default
+        primary: 'blue grey' #'light green'
         toggle:
           icon: material/weather-sunny
           name: Basculer en mode sombre
       - scheme: slate
-        #primary: 'light green'
+        primary: 'light green'
         #accent: amber
         toggle:
           icon: material/weather-night
@@ -138,6 +139,7 @@ markdown_extensions:
         permalink: '' #'🔗'
         baselevel: 1
         separator: "_"
+    #- mkdocs_tex2svg
 
 plugins:
     - search
@@ -156,7 +158,7 @@ nav:
         - "Cours/Première NSI/Codage/Au programme/Le son/c01.md"
         - "Cours/Première NSI/Codage/Au programme/Les images/c01.md"
         - "Cours/Première STI2D/c01.md"
-        - "Cours/Première générale/c01.md"
+        - "Cours/Première générale/Index_prem_gen.md"
         - "Cours/Seconde/c01.md"
         - "Cours/Terminale STI2D/c01.md"
         - "Cours/Terminale générale/Derivation_et_convexite/01_Fonction_derivable.md"
@@ -171,38 +173,104 @@ nav:
     #- Seconde: "Cours/Seconde/c01.md"
     - Première NSI: 
         - Présentation: "Cours/Première NSI/Présentation/c01.md"
-        - Python:
-            - Les bases:  
-                - "Bien écrire en python": "Cours/Première NSI/Python/Les bases/ortho.md"
-                - "Variables, opérations" : "Cours/Première NSI/Python/Les bases/variables.md"
-                - "print/input": "Cours/Première NSI/Python/Les bases/in_out.md"                
-                - "Chaine de caractères": "Cours/Première NSI/Python/Les bases/str.md"
-                - "La boucle for" : "Cours/Première NSI/Python/Les bases/for.md"
-                - "if, elif et les conditions" : "Cours/Première NSI/Python/Les bases/if_elif.md"
-                - "La boucle while" : "Cours/Première NSI/Python/Les bases/while.md"
-                - "Les listes (I)" : "Cours/Première NSI/Python/Les bases/list.md"
-                - "Les fonctions" : "Cours/Première NSI/Python/Les bases/fct.md"
-            - Les structures:
-                - "Les listes (II)" : "Cours/Première NSI/Python/Structures/list02.md"
-                - "Les matrices" : "Cours/Première NSI/Python/Structures/matrice.md"
-                - "Les dictionnaires" : "Cours/Première NSI/Python/Structures/dico.md"
+        - Python:  
+            - "Bien écrire en python": "Cours/Première NSI/Python/Les bases/ortho.md"
+            - "Variables, opérations" : "Cours/Première NSI/Python/Les bases/variables.md"
+            - "La boucle for" : "Cours/Première NSI/Python/Les bases/for.md"
+            - Activité 01 : "Cours/Première NSI/Python/Les bases/Act_01.md"
+            - "Les fonctions et les n-uplets" : "Cours/Première NSI/Python/Les bases/fct.md"
+            - "Les bibliothèques" : "Cours/Première NSI/Python/Les bases/biblio.md"
+            - Activité 02 : "Cours/Première NSI/Python/Les bases/Act_02.md"
+            - Activité 03 : "Cours/Première NSI/Python/Les bases/Act_03.md"
+            - "print/input": "Cours/Première NSI/Python/Les bases/in_out.md"
+            - "if, elif et les conditions" : "Cours/Première NSI/Python/Les bases/if_elif.md"
+            - "Chaine de caractères": "Cours/Première NSI/Python/Les bases/str.md"
+            - Activité 04 : "Cours/Première NSI/Python/Les bases/Act_04.md"
+            - TP 01: "Cours/Première NSI/Python/Les bases/TP_01.md"
+            - TP 02: "Cours/Première NSI/Python/Les bases/TP_02.md"
+            - "La boucle while" : "Cours/Première NSI/Python/Les bases/while.md"
+            - Activité 04b : "Cours/Première NSI/Python/Les bases/Act_04b.md"
+            - TP 03: "Cours/Première NSI/Python/Les bases/TP_03.md"
+            - "Les tableaux" : "Cours/Première NSI/Python/Les bases/tableau.md"
+            - Activité 05 : "Cours/Première NSI/Python/Les bases/Act_05.md"
+            - TP 04: "Cours/Première NSI/Python/Les bases/TP_04.md"
+            - "Les listes" : "Cours/Première NSI/Python/Les bases/list.md"
+            - Activité 06 : "Cours/Première NSI/Python/Les bases/Act_06.md"
+            # - "Les fonctions" : "Cours/Première NSI/Python/Les bases/fct.md"
+            # - "Les listes (II)" : "Cours/Première NSI/Python/Les bases/list02.md"
+            - "Les matrices" : "Cours/Première NSI/Python/Les bases/matrice.md"
+            - Activité 07 : "Cours/Première NSI/Python/Les bases/Act_07.md"
+            - "Les tris et dichotomie" : "Cours/Première NSI/Python/Les bases/tris.md"
+            - Activité 08 : "Cours/Première NSI/Python/Les bases/Act_08.md"
+            - "Les mutables": "Cours/Première NSI/Python/Les bases/mutable.md"
+            - Activité 09 : "Cours/Première NSI/Python/Les bases/Act_09.md"
+            - TP 05: "Cours/Première NSI/Python/Les bases/TP_05.md"
+            - "Les dictionnaires" : "Cours/Première NSI/Python/Les bases/dico.md"
+            - Activité 10 : "Cours/Première NSI/Python/Les bases/Act_10.md"
+            - "Les fichiers": "Cours/Première NSI/Python/Les bases/fichiers.md"
+            - Activité 11 : "Cours/Première NSI/Python/Les bases/Act_11.md"
+            - "Le codage des images": "Cours/Première NSI/Python/Les bases/codage_image.md"
+            - Activité 12 : "Cours/Première NSI/Python/Les bases/Act_12.md"
+            - knn : "Cours/Première NSI/Python/Les bases/knn.md"
+            - Activité 13 : "Cours/Première NSI/Python/Les bases/Act_13.md"
+            - Algorithme glouton : "Cours/Première NSI/Python/Les bases/Algo_glouton.md"
+            - Activité 14 : "Cours/Première NSI/Python/Les bases/Act_14.md"
         - Codage :
-            - Les bases :
-                - "Codage d'entier positif": "Cours/Première NSI/Codage/Les bases/Binaire/01_codage_entier.md"
-                - "Codage d'entier négatif": "Cours/Première NSI/Codage/Les bases/Binaire/02_codage_negatif.md"
-                - "Codage en hexadécimal": "Cours/Première NSI/Codage/Les bases/Hexadécimal/03_hexadécimal.md"
-                - "Codage des caractères : ASCII" : "Cours/Première NSI/Codage/Les bases/Les_caracteres/04_caract_ASCII.md"
-                - "Codage des caractères et python" : "Cours/Première NSI/Codage/Les bases/Les_caracteres/05_iso-8859-1.md"
-                - "Codage des réels" : "Cours/Première NSI/Codage/Les bases/Les flottants/01_manip_reel.md"
-            - Au programme:
-                - "Codage des caractères : ISO-8859-15" : "Cours/Première NSI/Codage/Au programme/Les_caracteres_suite/06_iso-8859-15.md"
-                - "Codage des caractères : UTF-8" : "Cours/Première NSI/Codage/Au programme/Les_caracteres_suite/07_UTF8.md" 
-                - "Codage des réels (suite)" :  "Cours/Première NSI/Codage/Au programme/Les flottants_suite/02_flottant.md"
+            - "Codage d'entier positif": "Cours/Première NSI/Codage/01_codage_entier.md"
+            - "Codage d'entier négatif": "Cours/Première NSI/Codage/02_codage_negatif.md"
+            - "Codage en hexadécimal": "Cours/Première NSI/Codage/03_hexadécimal.md"
+            - "Codage des caractères : ASCII" : "Cours/Première NSI/Codage/04_caract_ASCII.md"
+            - "Codage des caractères et python" : "Cours/Première NSI/Codage/05_iso-8859-1.md"
+            - "Codage des réels" : "Cours/Première NSI/Codage/01_manip_reel.md"
+            - "Codage des caractères : ISO-8859-15" : "Cours/Première NSI/Codage/06_iso-8859-15.md"
+            - "Codage des caractères : UTF-8" : "Cours/Première NSI/Codage/07_UTF8.md" 
+            - "Codage des réels (suite)" :  "Cours/Première NSI/Codage/02_flottant.md"
+        - L'ordinateur:
+            - Les éléments : "Cours/Première NSI/Fct_ordinateur/processeur.md"
 
 ## ISO-8859-15 (Facultatif)
     #- Première STI2D: "Cours/Première STI2D/c01.md"
     #- Terminale STI2D: "Cours/Terminale STI2D/c01.md"
-    #- Première générale: "Cours/Première générale/c01.md"
+    - Première générale (Ancien): 
+        - Accueil 1GEN: "Cours/Première générale/Index_prem_gen.md"
+        - Fonction de référence:
+            - Rappel : "Cours/Première générale/Fct_ref/Rappel.md"
+            - Valeur absolue: "Cours/Première générale/Fct_ref/valeur_absolue.md"
+        - Second degré: 
+            - Trinôme: "Cours/Première générale/Second_degre/trinome.md"
+            - Courbe: "Cours/Première générale/Second_degre/courbe.md"
+            - Equation: "Cours/Première générale/Second_degre/Equation.md"
+            - Signe: "Cours/Première générale/Second_degre/signe.md"
+            - Somme: "Cours/Première générale/Second_degre/Somme_pdt.md"
+        - Suite:
+            - Définition: "Cours/Première générale/Suite/definition.md"
+            - Sens de variations : "Cours/Première générale/Suite/variations.md"
+            - Suites de référence : "Cours/Première générale/Suite/Suite_reference.md"
+        - Dérivation:
+            - Découverte: "Cours/Première générale/Derivation/decouverte.md"
+            - Nombre dérivé: "Cours/Première générale/Derivation/nb_derive.md"
+            - Fonction dérivée: "Cours/Première générale/Derivation/fct_derivee.md"
+            - Application de la dérivation: "Cours/Première générale/Derivation/app_derivation.md"
+        - Statistiques:
+            - Rappel: "Cours/Première générale/Statistique/stat_rappel.md"
+            - Variance: "Cours/Première générale/Statistique/variance.md"
+        - Trigonométrie:
+            - Radian: "Cours/Première générale/Trigonometrie/radian.md"
+            - Angle orienté: "Cours/Première générale/Trigonometrie/Angle_oriente.md"
+            - Cosinus et sinus: "Cours/Première générale/Trigonometrie/cos_sin.md"
+        - Vecteurs:
+            - Colinéarité: "Cours/Première générale/Vecteurs/colinearite.md"
+            - Equation de droite: "Cours/Première générale/Vecteurs/eq_droite.md"
+            - Opération: "Cours/Première générale/Vecteurs/op_vect.md"
+        - Produit scalaire:
+            - Définition et formule: "Cours/Première générale/Pdt_scal/def_formule.md"
+            - Applications du produit scalaire: "Cours/Première générale/Pdt_scal/Application.md"
+        - Probabilité:
+            - Variable aléatoire: "Cours/Première générale/Probabilité/Variable_alea.md"
+            - Espérance, variance: "Cours/Première générale/Probabilité/Esp_var.md"
+        - Pour aller plus loin:
+            - Polynômes : "Cours/Première générale/Vers la suite/polynome.md"
+            - Opérations sur les fonctions: "Cours/Première générale/Vers la suite/operations_fcts.md"
     - Terminale générale:
         - Accueil TGEN: "Cours/Terminale générale/index_term_G.md"
         - Pour préparer sa terminale: 
@@ -218,121 +286,97 @@ nav:
             - Produit scalaire: "Cours/Terminale générale/Pre_requis/Pdt_scal/pdt_scal.md"
             - Equation cartésienne: "Cours/Terminale générale/Pre_requis/Eq_cart/Eq_cart.md"
         - Dérivation, convexité, primitive:
-            - "Dérivation : les bases":
-                - Dérivation et tangente: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/01_deriv_base_tgte.md"
-                - Dérivation et formule: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/02_deriv_base_formule.md"
-                - Utilisation de la dérivée: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/03_deriv_utilis.md"
-                - Composée de fonctions: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/04_deriv_composee.md"
-                - Convexité: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/05_Convexite.md"
-                - Primitive: "Cours/Terminale générale/Derivation_et_convexite/Dérivation - les bases/06_primitive.md"
-            - "Dérivation : au programme":
-                - "A retenir": "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/Deriv_A_retenir.md"
-                - Nombre dérivé: "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/Nbre_dérivé.md"
-                - Convexité et inégalités: "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/conv_ineg.md"
-                - Démonstration au programme: "Cours/Terminale générale/Derivation_et_convexite/Dérivation_au_prog/dem_prog.md"
-            - "Dérivation : vers le supérieur": "Cours/Terminale générale/Derivation_et_convexite/Dérivation_en_plus/Dérivation_best.md"
+            - Nombre dérivé: "Cours/Terminale générale/Derivation_et_convexite/Nbre_dérivé.md"
+            - Dérivation et tangente: "Cours/Terminale générale/Derivation_et_convexite/01_deriv_base_tgte.md"
+            - Dérivation et formule: "Cours/Terminale générale/Derivation_et_convexite/02_deriv_base_formule.md"
+            - Utilisation de la dérivée: "Cours/Terminale générale/Derivation_et_convexite/03_deriv_utilis.md"
+            - Composée de fonctions: "Cours/Terminale générale/Derivation_et_convexite/04_deriv_composee.md"
+            - Convexité: "Cours/Terminale générale/Derivation_et_convexite/05_Convexite.md"
+            - Primitive: "Cours/Terminale générale/Derivation_et_convexite/06_primitive.md"
+            - Convexité et inégalités: "Cours/Terminale générale/Derivation_et_convexite/conv_ineg.md"
+            - "A retenir": "Cours/Terminale générale/Derivation_et_convexite/Derivation_A_retenir.md"
         - "Suite et récurrence":
-            - "Suites : les bases":
-                - Rappel sur les suites: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/01_Rappels_sur_les_suites.md"
-                - Suites et python: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/02_Suites_et_python.md"
-                - Suites et sens de variations: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/03_Suite_et_sens_de_variations.md"
-                - Suites arithmétiques: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/04_Suites_aritmetiques.md"
-                - Suites géométriques: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/05_Suites_geometrique.md"
-                - Raisonnement par récurrence: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/06_Raisonnement_par_recurrence.md"
-                - Suite majorée, minorée, bornée: "Cours/Terminale générale/Suites_et_recurrence/Suites_bases/07_majoree_minoree_bornee.md"
-            - "Suites : au programme":
-                - "A retenir": "Cours/Terminale générale/Suites_et_recurrence/Suites_prog/SuiteRec_A_retenir.md"
-        - "Dénombrement : Combinaison":
-            - "Dénombrement les bases": 
-                - "Arrangement" : "Cours/Terminale générale/Combinaison/Ensemble_base/02_denom.md"
-                - "Combinaison" : "Cours/Terminale générale/Combinaison/Ensemble_base/03_combi.md"
-            - "Dénombrement : Au programme":
-                - "Démonstration au programme": "Cours/Terminale générale/Ensemble/Ensemble_prog/Dem_prog.md"
+            - Rappel sur les suites: "Cours/Terminale générale/Suites_et_recurrence/01_Rappels_sur_les_suites.md"
+            - Suites et python: "Cours/Terminale générale/Suites_et_recurrence/02_Suites_et_python.md"
+            - Suites et sens de variations: "Cours/Terminale générale/Suites_et_recurrence/03_Suite_et_sens_de_variations.md"
+            - Suites arithmétiques: "Cours/Terminale générale/Suites_et_recurrence/04_Suites_aritmetiques.md"
+            - Suites géométriques: "Cours/Terminale générale/Suites_et_recurrence/05_Suites_geometrique.md"
+            - Raisonnement par récurrence: "Cours/Terminale générale/Suites_et_recurrence/06_Raisonnement_par_recurrence.md"
+            - Suite majorée, minorée, bornée: "Cours/Terminale générale/Suites_et_recurrence/07_majoree_minoree_bornee.md"
+            - "A retenir": "Cours/Terminale générale/Suites_et_recurrence/SuiteRec_A_retenir.md"
+        - "Ensemble et Dénombrement":
+            - "Ensemble" : "Cours/Terminale générale/Ensemble/01_ensemble.md"
+            #- "Dénombrement" : "Cours/Terminale générale/Ensemble/02_denom.md"
+            - "Arrangement" : "Cours/Terminale générale/Ensemble/02_denom.md"
+            - "Combinaison" : "Cours/Terminale générale/Ensemble/03_combi.md"
+            - "A retenir" : "Cours/Terminale générale/Ensemble/Ensemble_a_retenir.md"
         - Limite de suite:
-            - "Limite de suites : les bases":
-                - Limite d'une suite: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/01_Limite_d_une_suite.md"
-                - Limite de la suite q^n: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/02_Limite_de_la_suite_qn.md"
-                - Limite et opérations: "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/03_Theoremes_d_operation.md"
-                - Limite et comparaison : "Cours/Terminale générale/Limite_de_suite/Limite_suite_base/04_th_comp.md"
-            - "Limite de suites : au programme": 
-                - A retenir: "Cours/Terminale générale/Limite_de_suite/lim_suite_prog/lim_suite_A_retenir.md"
-                - "Démonstrations au programme": "Cours/Terminale générale/Limite_de_suite/lim_suite_prog/lim_suite_dem_prog.md"
-            - "Limite de suites : vers le supérieur": "Cours/Terminale générale/Limite_de_suite/Limite_de_suite_en_plus/limite_suite_best.md"
+            - Limite d'une suite: "Cours/Terminale générale/Limite_de_suite/01_Limite_d_une_suite.md"
+            - Limite de la suite q^n: "Cours/Terminale générale/Limite_de_suite/02_Limite_de_la_suite_qn.md"
+            - Limite et opérations: "Cours/Terminale générale/Limite_de_suite/03_Theoremes_d_operation.md"
+            - Limite et inégalités : "Cours/Terminale générale/Limite_de_suite/04_th_comp.md"
+            - A retenir: "Cours/Terminale générale/Limite_de_suite/lim_suite_A_retenir.md"
+            - "Vers la suite": "Cours/Terminale générale/Limite_de_suite/limite_suite_best.md"
         - Vecteur de l'espace:
-            - "Vecteur : les bases":
-                - Perspective cavalière: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/01_persp_cav.md"
-                - Droite et plan: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/02_dte_et_plan.md"
-                - Vecteur de l'espace: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/03_Vect_esp.md"
-                - Repère de l'espace: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/04_rep_esp.md"
-                - Equation paramétrique d'une droite: "Cours/Terminale générale/Vecteur_esp/vect_esp_base/05_Eq_param.md"
-            - "Vecteur : au programme":
-                - "A retenir" : "Cours/Terminale générale/Vecteur_esp/vect_esp_prog/vect_esp_A_Retenir.md"
+            - Perspective cavalière: "Cours/Terminale générale/Vecteur_esp/01_persp_cav.md"
+            - Droite et plan: "Cours/Terminale générale/Vecteur_esp/02_dte_et_plan.md"
+            - Vecteur de l'espace: "Cours/Terminale générale/Vecteur_esp/03_Vect_esp.md"
+            - Repère de l'espace: "Cours/Terminale générale/Vecteur_esp/04_rep_esp.md"
+            - Equation paramétrique d'une droite: "Cours/Terminale générale/Vecteur_esp/05_Eq_param.md"
+            - "A retenir" : "Cours/Terminale générale/Vecteur_esp/vect_esp_A_Retenir.md"
         - Limite de fonction:
-            - "Limite de fct : les bases":
-                - "Limite vers l'infini": "Cours/Terminale générale/Limite_fct/limite_fct_base/01_lim_fct_infinie.md"
-                - "Limite au voisinage d'un réel": "Cours/Terminale générale/Limite_fct/limite_fct_base/02_lim_fct_reel.md"
-                - "Limite et opérations": "Cours/Terminale générale/Limite_fct/limite_fct_base/03_lim_fct_op.md"
-                - "Limite et comparaison": "Cours/Terminale générale/Limite_fct/limite_fct_base/04_lim_fct_comp.md"
-            - "Limite de fct : au programme": 
-                - A retenir: "Cours/Terminale générale/Limite_fct/limite_fct_prog/lim_fct_A_Retenir.md"
-                - "Démonstration au programme" : "Cours/Terminale générale/Limite_fct/limite_fct_prog/lim_fct_dem.md" 
+            - "Limite vers l'infini": "Cours/Terminale générale/Limite_fct/01_lim_fct_infinie.md"
+            - "Limite au voisinage d'un réel": "Cours/Terminale générale/Limite_fct/02_lim_fct_reel.md"
+            - "Limite et opérations": "Cours/Terminale générale/Limite_fct/03_lim_fct_op.md"
+            - "Limite et comparaison": "Cours/Terminale générale/Limite_fct/04_lim_fct_comp.md"
+            - A retenir: "Cours/Terminale générale/Limite_fct/lim_fct_A_Retenir.md"
         - Loi binomiale:
-            - "Probabilité : les bases": 
-                - Rappel: "Cours/Terminale générale/Loi_binomiale/binom_bases/01_binom_rappel.md"
-                - Succession d'épreuves: "Cours/Terminale générale/Loi_binomiale/binom_bases/02_succ_ep_ind.md"
-                - Loi binomiale: "Cours/Terminale générale/Loi_binomiale/binom_bases/03_loi_binom.md"
-            - "Probabilités : au programme": 
-                - A retenir: "Cours/Terminale générale/Loi_binomiale/binom_prog/binom_A_Retenir.md"
-                - Démonstration au programme: "Cours/Terminale générale/Loi_binomiale/binom_prog/binom_dem_prog.md"
+            - Rappel: "Cours/Terminale générale/Loi_binomiale/01_binom_rappel.md"
+            - Succession d'épreuves: "Cours/Terminale générale/Loi_binomiale/02_succ_ep_ind.md"
+            - Loi binomiale: "Cours/Terminale générale/Loi_binomiale/03_loi_binom.md"
+            - A retenir: "Cours/Terminale générale/Loi_binomiale/binom_A_Retenir.md"
         - Continuité:
-            - "Continuité : les bases":
-                - Fonction continue: "Cours/Terminale générale/Continuite/Continuite_base/01_cont_fct.md"
-                - Théorème des valeurs intermédiaires: "Cours/Terminale générale/Continuite/Continuite_base/02_TVI.md"
-            - "Continuité : au programme":
-                - A retenir: "Cours/Terminale générale/Continuite/Continuite_prog/Continuite_A_Retenir.md"
+            - Fonction continue: "Cours/Terminale générale/Continuite/01_cont_fct.md"
+            - Théorème des valeurs intermédiaires: "Cours/Terminale générale/Continuite/02_TVI.md"
+            - Méthode pour une solution approchée: "Cours/Terminale générale/Continuite/Resol_app.md"
+            - A retenir: "Cours/Terminale générale/Continuite/Continuite_A_Retenir.md"
         - Logarithme népérien:
-            - "Log népérien : les bases": 
-                - "La fonction ln": "Cours/Terminale générale/Log/Log_base/01_fct_ln.md"
-                - "Etude de la fonction": "Cours/Terminale générale/Log/Log_base/02_etude_fct.md"
-            - "Log népérien : au programme" : 
-                - A retenir: "Cours/Terminale générale/Log/Log_prog/Log_A_Retenir.md"
+            - "La fonction ln": "Cours/Terminale générale/Log/01_fct_ln.md"
+            - "Etude de la fonction": "Cours/Terminale générale/Log/02_etude_fct.md"
+            - A retenir: "Cours/Terminale générale/Log/Log_A_Retenir.md"
         - Orthogonalité dans l'espace:
-            - "Orthogonalité : les bases":
-                - "Rappel : produit scalaire dans le plan": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/01_Rappel_pdt_scal_plan.md"
-                - "Espace et produit scalaire": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/02_pdt_scal_esp.md"
-                - "Vecteur normal": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/03_vect_normal.md"
-                - "Equation cartésienne, distance": "Cours/Terminale générale/Esp_ortho/Esp_ortho_base/04_eq_cart_plan.md"
-            - "Orthogonalité : au programme":
-                - A retenir: "Cours/Terminale générale/Esp_ortho/Esp_ortho_prog/Esp_ortho_A_Retenir.md"
-                - "Plan médiateur": "Cours/Terminale générale/Esp_ortho/Esp_ortho_prog/Plan_med.md"
+            - "Rappel : produit scalaire dans le plan": "Cours/Terminale générale/Esp_ortho/01_Rappel_pdt_scal_plan.md"
+            - "Espace et produit scalaire": "Cours/Terminale générale/Esp_ortho/02_pdt_scal_esp.md"
+            - "Vecteur normal": "Cours/Terminale générale/Esp_ortho/03_vect_normal.md"
+            - "Equation cartésienne, distance": "Cours/Terminale générale/Esp_ortho/04_eq_cart_plan.md"
+            - "Plan médiateur": "Cours/Terminale générale/Esp_ortho/Plan_med.md"
+            - A retenir: "Cours/Terminale générale/Esp_ortho/Esp_ortho_A_Retenir.md"
         - Equation différentielle:
-            - "Eq diff : les bases":
-                - "Définition" : "Cours/Terminale générale/Eq_diff/Eq_diff_base/01_Def.md"
-                - Eq. diff. premier ordre: "Cours/Terminale générale/Eq_diff/Eq_diff_base/02_ED1.md"
+            - "Définition" : "Cours/Terminale générale/Eq_diff/01_Def.md"
+            - Eq. diff. premier ordre: "Cours/Terminale générale/Eq_diff/02_ED1.md"
             - "Eq diff : au programme":
                 - "Démonstration au programme": "Cours/Terminale générale/Eq_diff/Eq_diff_prog/Dem_prog.md"
-        - Ensemble:
-            - "Ensemble : les bases": 
-                - Ensemble: "Cours/Terminale générale/Ensemble/Ensemble_base/01_ensemble.md"
-                #- Dénombrement: "Cours/Terminale générale/Ensemble/Ensemble_base/02_denom.md"
+        #- Ensemble:
+        #    - "Ensemble : les bases": 
+        #        - Ensemble: "Cours/Terminale générale/Ensemble/01_ensemble.md"
+        #        #- Dénombrement: "Cours/Terminale générale/Ensemble/02_denom.md"
         - Calcul intégral:
-            - "Intégrale : les bases":
-                - "Fonctions positives" : "Cours/Terminale générale/Calcul_integral/Cal_int_base/01_fct_pos.md"
-                - "Fonctions positives et primitives": "Cours/Terminale générale/Calcul_integral/Cal_int_base/02_fct_pos_prim.md"
-                - "Fonctions quelconques" : "Cours/Terminale générale/Calcul_integral/Cal_int_base/03_fct_qcq.md"
-                - "Intégration par parties": "Cours/Terminale générale/Calcul_integral/Cal_int_base/04_int_pp.md"
-                - "Calcul d'aire": "Cours/Terminale générale/Calcul_integral/Cal_int_base/05_calc_aire.md" 
+            - "Fonctions positives" : "Cours/Terminale générale/Calcul_integral/01_fct_pos.md"
+            - "Fonctions positives et primitives": "Cours/Terminale générale/Calcul_integral/02_fct_pos_prim.md"
+            - "Fonctions quelconques" : "Cours/Terminale générale/Calcul_integral/03_fct_qcq.md"
+            - "Intégration par parties": "Cours/Terminale générale/Calcul_integral/04_int_pp.md"
+            - "Calcul d'aire": "Cours/Terminale générale/Calcul_integral/05_calc_aire.md" 
+            - "A retenir": "Cours/Terminale générale/Calcul_integral/Cal_int_A_retenir.md" 
             - "Intégrale : au programme":
                 - "Démonstration au programme" : "Cours/Terminale générale/Calcul_integral/Cal_int_prog/Dem_prog.md"
         - Somme de variable aléatoire:
-            - "Variable aléatoire : les bases":
-                - "Tout le cours": "Cours/Terminale générale/Somme_VAR/VAR_base/01_var.md"
+            - "Tout le cours": "Cours/Terminale générale/Somme_VAR/01_var.md"
         - Fonction trigonomértique:
-            - "Fct trigo : les bases":
-                - "Tout le cours": "Cours/Terminale générale/Fct_trigo/Fct_trigo_base/01_trigo.md"
+            - "Tout le cours": "Cours/Terminale générale/Fct_trigo/01_trigo.md"
+            - "A retenir": "Cours/Terminale générale/Fct_trigo/Fct_trigo_A_retenir.md"
         - Loi des grands nombres:
-            - "Lois des grands nombres : les bases":
-                - "Tout le cours": "Cours/Terminale générale/Loi_gds_nombres/Gds_nbres_bases/01_gds_nbres.md"
+            - "Tout le cours": "Cours/Terminale générale/Loi_gds_nombres/01_gds_nbres.md"
+            - "A retenir": "Cours/Terminale générale/Loi_gds_nombres/Gds_nbres_A_retenir.md"
     - BTS CPI 2ème année: 
         - Accueil: "Cours/BTS_CPI_2/Index_CPI2.md"
         - "Equation différentielle I": "Cours/BTS_CPI_2/ED_I/Eq_diff_01.md"
@@ -342,4 +386,5 @@ nav:
             #- "Labo de math/Liaison_lycee_sup/supérieur.md"
             - "Des méthodes pour réussir dans le supérieur" :
                 - "Autour des polynômes" : "Labo de math/Liaison_lycee_sup/Polynomes.md"
+                - Dérivation: "Cours/Terminale générale/Vers_la_suite/Dérivation_best.md"
         #- "essai slide" : "Labo de math/Liaison_lycee_sup/essai_slide.md"
