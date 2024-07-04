@@ -1,0 +1,36 @@
+Définition
+!!! info "Définition"
+
+Théorème
+!!! abstract "Théorème"
+
+Exemple
+???- example "Exemple"
+
+Attention
+!!! warning "Attention"
+
+Méthode
+!!! tip "Méthode"
+
+Solution
+???- done "Solution" (ou ???- success "Solution")
+
+Démonstration
+???- done "Démonstration" 
+
+Exercice
+???- question "Exercice"
+
+Important
+!!! danger "A connaitre"
+
+Remarque
+!!! note "Remarque"
+
+Rappel
+???- tip "Rappel"
+
+[![A compléter](./Image/Im07.png){.Center_lien }](./Image/Im07.png)
+
+{{ IDE('Python_base_code/suite_somme') }}  

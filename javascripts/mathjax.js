@@ -24,6 +24,7 @@ window.MathJax = {
       Syst : ['\\left\\{ \\begin{array}{rcl} #1\\\\ #2 \\end{array} \\right.', 2],
       dlim : ['\\displaystyle{\\lim_{#1 \\to #2}}',2],
       Pb : '{\\mathbb{P}}',
+      no : '\\displaystyle{\\text{n}^{\\circ}}',
       comb : ['\\left(\\begin{array}{c}#1\\\\#2\\end{array}\\right)',2],
       dvec : ['\\overrightarrow{#1}',1],
       vv : ['\\overrightarrow{#1}',1],
@@ -33,7 +34,8 @@ window.MathJax = {
       mc : ['\\mathcal{#1}',1],
       coordVecEsp: ['\\left(\\begin{array}{c} #1 \\\\ #2 \\\\ #3\\end{array}\\right)',3],
       coordVec: ['\\left(\\begin{array}{c} #1 \\\\ #2 \\end{array}\\right)',2],
-      vectCoEsp : ['\\vect{#1}=\\coordVecEsp{#2}{#3}{#4}',4],
+      vectCoEsp : ['\\vect{#1}=\\coordVecEsp{#2}{#3}{#4}',4],      
+      vecCo : ['\\vec{#1}=\\coordVec{#2}{#3}',3],
       vectCo : ['\\vect{#1}=\\coordVec{#2}{#3}',3],
       covec : ['\\coordVec{#1}{#2}',2],
       Lim: ['\\displaystyle{\\left. \\begin{array}{lcl} #1 \\\\ #2 \\\\ \\end{array} \\right\\} }',2],
@@ -46,6 +48,9 @@ window.MathJax = {
       cm: '{\\text{ cm}}',
       Coor: ['\\displaystyle{\\left( #1 ; #2 \\right) }',2],
       Oj: ['\\left(O; \\vec{j} \\right)'],
+      angleVec: ['\\widehat{\\left( \\vect{#1} ; \\vect{#2} \\right)}',2],
+      angleVect: ['\\widehat{\\left( \\vect{#1} ; \\vect{#2} \\right)}',2],
+      anglev: ['\\widehat{\\left( \\vect{#1} ; \\vect{#2} \\right)}',2],
      }
    },
    options: {

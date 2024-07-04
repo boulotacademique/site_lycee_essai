@@ -94,29 +94,34 @@
         color:black!important;
         background-color:white!important;
         border: 1px solid black;
-        border-radius: 0px;
+        border-radius: 5px;
         text-align:center;
         font-weight:bold;
-        width:30%;
-        margin-left: 35%!important;
+        width:50%;
+        margin-left: 25%!important;
     }
     
     h2{
         font-size:15pt!important;
         color:black!important;
         background-color:white;
-        border: 1px dashed #aaa;
-        border-radius:3pt;
+        /*border-bottom: 1px dashed #aaa;
+        border-radius:3pt;*/
         text-align:left;
         width:50%;
         margin-left: 0%!important;
+        text-decoration-line: underline;
+        text-decoration-style: double;
     }
 
     h3{
         font-size:13pt!important;
         width:50%;
-        border-bottom: 1px dotted black;
+        /*border-bottom: 1px dotted black;*/
+        text-decoration-line: underline;
+        text-decoration-style: wavy;
     }
+    
 
     .Code_cache{
         display : block;
@@ -127,6 +132,10 @@
     }
 
     .solution{
+        display: none!important;
+    }
+
+    .success, .py_mk_ide, .Py_eff{
         display: none!important;
     }
 	
