@@ -25,7 +25,7 @@
     Ainsi, `tracer_polygone(12,100)` permet d'obtenir :  
     [![Tracer polygone](../Image/poligone_01.png){.Center_lien }](../Image/poligone_01.png)  
     3. Ecrire une fonction qui permet de tracer une spirale. Voici la signature de cette fonction :  
-    `fonction tracer_spirale(nb_etape : int, pas : int; angle) : None`  
+    `fonction tracer_spirale(nb_etape : int, pas : int, angle : int) : None`  
     Ainsi, `tracer_spirale(100,2,72)` permet d'obtenir :  
     [![Tracer spirale](../Image/spirale_01.png){.Center_lien }](../Image/spirale_01.png)  
 
@@ -76,7 +76,7 @@
     1. On souhaite maintenant tracer un cercle en connaissant son centre, son rayon et sa couleur **et dessiner un + au niveau de son centre**. Ecrire une fonction qui fait cela. Pensez à utiliser la fonction `tracer_plus`.
     Signature `fonction cercle_centre_plus(x_centre : int, y_centre : int, rayon : int, coul : str)`  
     Ainsi, `cercle_centre(200,100,150)` donne  
-    [![Tracer cercle](../Image/cercle_02.png){.Center_lien }](../Image/cercle_02.png)
+    [![Tracer cercle](../Image/cercle_04.png){.Center_lien }](../Image/cercle_04.png)
     2. Après avoir tourner la tortue de 90$^{\circ}$, tracer un cercle de centre `(200,100)` et de rayon `150`. Que remarquez-vous ?
     3. Il faut donc modifier les fonctions `cercle_centre` et `cercle_centre_plus`. En effet, avant de commencer à tracer le cercle, il faut impérativement positionner la tortue dans la &laquo; direction de départ classique &raquo;. Faites-le.
 

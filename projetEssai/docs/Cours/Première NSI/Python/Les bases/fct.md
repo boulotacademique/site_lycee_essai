@@ -58,8 +58,8 @@ On parle de modularité !
 
     Par exemple, les fonctions précédentes ont pour signature:
 
-    - ```Fonction moyenne(nb1 : int, nb2 : int, nb3 : int) : float```
-    - ```Fonction annee_nais(age : int, annee_en_cours : int) : int```
+    - ```Fonction moyenne(nb1 : int, nb2 : int, nb3 : int) -> float```
+    - ```Fonction annee_nais(age : int, annee_en_cours : int) -> int```
 
 ## Les n-uplets
 
@@ -90,16 +90,16 @@ On parle de modularité !
     Alors que pour les non mutables, il n'est pas possible de faire `uplet[indice]=2`. Cela déclenche une erreur !  
     Les n-uplets sont donc classés en deux catégories : **les mutables** et **les non mutables**. 
 
-\subsection{Les n-uplets dans Python}
+### Les n-uplets dans Python
 
 !!! tip "Les différents n-uplets"
-    Sous Python, nous travaillerons principalement avec trois types de n-uplets :
+    Sous Python, nous travaillerons principalement avec trois types de n-uplets (type ```list```, ```tuple```, ```str```) :
 
-    - les tableaux, qui sont de mutables
-    - les listes, qui sont mutables
-    - les listes de listes (ou matrice), qui sont des mutables
-    - les tuples  qui sont des listes non mutables
-    - les chaînes de caractères qui sont non mutables
+    - les tableaux, qui sont de mutables (type ```list```)
+    - les listes, qui sont mutables (type ```list```)
+    - les listes de listes (ou matrice), qui sont des mutables (type ```list```)
+    - les tuples  qui sont des listes non mutables (type ```tuple```)
+    - les chaînes de caractères qui sont non mutables (type ```str```)
 
     Il y a plusieurs méthodes (ou fonctions) communes aux n-uplets mutables et non mutables. 
 

@@ -76,7 +76,7 @@
     '0'
     ```
 
-??? question "Exercice - 3 (EP 24-16-01)"
+!!! question "Exercice - 3 (EP 24-16-01)"
 
     Écrire une fonction `ecriture_binaire_entier_positif` qui prend en paramètre un
     entier positif `n` et renvoie une une chaine de caractère correspondant à l‘écriture binaire de `n`.

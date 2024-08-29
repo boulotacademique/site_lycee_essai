@@ -4567,44 +4567,57 @@ Programmer une fonction <code>correspond</code> qui :</p>
 </code></pre></div>
 
 </div>
-<p>!!! question "Exercice (EP 24-35-02)
-    Un mot palindrome peut se lire de la même façon de gauche à droite ou de droite à gauche : <em>kayak</em>, <em>radar</em>, et <em>non</em> sont des mots palindromes.<br />
-    De même certains nombres ont des écritures décimales qui sont des palindromes : 33, 121, 345543.</p>
-<div class="highlight"><pre><span></span><code>L’objectif de cet exercice est d’obtenir un programme Python permettant de tester si un nombre est un nombre palindrome.
+<div class="admonition question">
+<p class="admonition-title">Exercice (EP 24-35-02)</p>
+<p>Un mot palindrome peut se lire de la même façon de gauche à droite ou de droite à gauche : <em>kayak</em>, <em>radar</em>, et <em>non</em> sont des mots palindromes.<br />
+De même certains nombres ont des écritures décimales qui sont des palindromes : 33, 121, 345543.</p>
+<p>L’objectif de cet exercice est d’obtenir un programme Python permettant de tester si un nombre est un nombre palindrome.</p>
+<p>Pour remplir cette tâche, on vous demande de compléter le code des trois fonctions ci-dessous qui s’appuient les unes sur les autres :</p>
+<ul>
+<li><code>inverse_chaine</code> : qui renvoie une chaîne de caractères inversée ;</li>
+<li><code>est_palindrome</code> : qui teste si une chaîne de caractères est un palindrome ;</li>
+<li><code>est_nbre_palindrome</code> : qui teste si un nombre est un palindrome.</li>
+</ul>
+<p>Compléter le code des trois fonctions ci-dessous.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">inverse_chaine</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Retourne la chaine inversée&#39;&#39;&#39;</span>
+    <span class="n">resultat</span> <span class="o">=</span> <span class="o">...</span> 
+    <span class="k">for</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="n">chaine</span><span class="p">:</span>
+        <span class="n">resultat</span> <span class="o">=</span> <span class="o">...</span> 
+    <span class="k">return</span> <span class="n">resultat</span>
 
-Pour remplir cette tâche, on vous demande de compléter le code des trois fonctions ci-dessous qui s’appuient les unes sur les autres :
+<span class="k">def</span> <span class="nf">est_palindrome</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie un booléen indiquant si la chaine ch</span>
+<span class="sd">    est un palindrome&#39;&#39;&#39;</span>
+    <span class="n">inverse</span> <span class="o">=</span> <span class="n">inverse_chaine</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
+    <span class="k">return</span> <span class="o">...</span> 
 
-- `inverse_chaine` : qui renvoie une chaîne de caractères inversée ;
-- `est_palindrome` : qui teste si une chaîne de caractères est un palindrome ;
-- `est_nbre_palindrome` : qui teste si un nombre est un palindrome.
+<span class="k">def</span> <span class="nf">est_nbre_palindrome</span><span class="p">(</span><span class="n">nbre</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie un booléen indiquant si le nombre nbre </span>
+<span class="sd">    est un palindrome&#39;&#39;&#39;</span>
+    <span class="n">chaine</span> <span class="o">=</span> <span class="o">...</span> 
+    <span class="k">return</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
-Compléter le code des trois fonctions ci-dessous.
-
-```python linenums=&#39;1&#39;
-def inverse_chaine(chaine):
-    &#39;&#39;&#39;Retourne la chaine inversée&#39;&#39;&#39;
-    resultat = ... 
-    for caractere in chaine:
-        resultat = ... 
-    return resultat
-
-def est_palindrome(chaine):
-    &#39;&#39;&#39;Renvoie un booléen indiquant si la chaine ch
-    est un palindrome&#39;&#39;&#39;
-    inverse = inverse_chaine(chaine)
-    return ... 
-
-def est_nbre_palindrome(nbre):
-    &#39;&#39;&#39;Renvoie un booléen indiquant si le nombre nbre 
-    est un palindrome&#39;&#39;&#39;
-    chaine = ... 
-    return est_palindrome(chaine)
-```
-
-Exemples :
-
-```
-&gt;&gt;&gt; inverse_chaine(&#39;bac&#39;)
+<p>Exemples :</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; inverse_chaine(&#39;bac&#39;)
 &#39;cab&#39;
 &gt;&gt;&gt; est_palindrome(&#39;NSI&#39;)
 False
@@ -4614,9 +4627,9 @@ True
 False
 &gt;&gt;&gt; est_nbre_palindrome(213312)
 True
-```
 </code></pre></div>
 
+</div>
 <div class="admonition question">
 <p class="admonition-title">Exercice - 6 (EP 24-36-01)</p>
 <p>Écrire une fonction <code>occurrences(caractere, chaine)</code> qui prend en paramètres <code>caractere</code>, une chaîne de caractère de longueur 1, et <code>chaine</code>, une chaîne de caractères.<br />
@@ -4680,47 +4693,59 @@ La fonction <code>cesar</code> prend en paramètres une chaîne de caractères <
 </code></pre></div>
 
 </div>
-<p>!!! question "Exercice - 8 (EP 24-48-02)</p>
-<div class="highlight"><pre><span></span><code>On considère dans cet exercice la suite de nombre suivante : 1, 11, 21, 1211, 111221, ...
-
-Cette suite est construite ainsi : pour passer d’une valeur à la suivante, on la lit et on l’écrit sous la forme d’un nombre. Ainsi, pour 1211 :
-
-- on lit *un 1, un 2, deux 1* ;
-- on écrit donc en nombre *1 1, 1 2, 2 1* ;
-- puis on concatène *111221*.
-
-Compléter la fonction `nombre_suivant` qui prend en entrée un nombre sous forme de
+<div class="admonition question">
+<p class="admonition-title">Exercice - 8 (EP 24-48-02)</p>
+<p>On considère dans cet exercice la suite de nombre suivante : 1, 11, 21, 1211, 111221, ...</p>
+<p>Cette suite est construite ainsi : pour passer d’une valeur à la suivante, on la lit et on l’écrit sous la forme d’un nombre. Ainsi, pour 1211 :</p>
+<ul>
+<li>on lit <em>un 1, un 2, deux 1</em> ;</li>
+<li>on écrit donc en nombre <em>1 1, 1 2, 2 1</em> ;</li>
+<li>puis on concatène <em>111221</em>.</li>
+</ul>
+<p>Compléter la fonction <code>nombre_suivant</code> qui prend en entrée un nombre sous forme de
 chaine de caractères et qui renvoie le nombre suivant par ce procédé, encore sous forme de
-chaîne de caractères.
+chaîne de caractères.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">nombre_suivant</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie le nombre suivant de celui representé par s</span>
+<span class="sd">    en appliquant le procédé de lecture.&#39;&#39;&#39;</span>
+    <span class="n">resultat</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">chiffre</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">compte</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> 
+        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">chiffre</span><span class="p">:</span>
+            <span class="n">compte</span> <span class="o">=</span> <span class="o">...</span> 
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">resultat</span> <span class="o">+=</span> <span class="o">...</span> <span class="o">+</span> <span class="o">...</span> 
+            <span class="n">chiffre</span> <span class="o">=</span> <span class="o">...</span> 
+            <span class="o">...</span>
+    <span class="n">lecture_</span><span class="o">...</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="o">...</span> 
+    <span class="n">resultat</span> <span class="o">+=</span> <span class="n">lecture_chiffre</span>
+    <span class="k">return</span> <span class="n">resultat</span>
+</code></pre></div></td></tr></table></div>
 
-```python linenums=&#39;1&#39;
-def nombre_suivant(s):
-    &#39;&#39;&#39;Renvoie le nombre suivant de celui representé par s
-    en appliquant le procédé de lecture.&#39;&#39;&#39;
-    resultat = &#39;&#39;
-    chiffre = s[0]
-    compte = 1
-    for i in range(...): 
-        if s[i] == chiffre:
-            compte = ... 
-        else:
-            resultat += ... + ... 
-            chiffre = ... 
-            ...
-    lecture_... = ... + ... 
-    resultat += lecture_chiffre
-    return resultat
-```
-
-Exemples :
-
-```python
-&gt;&gt;&gt; nombre_suivant(&#39;1211&#39;)
-&#39;111221&#39;
-&gt;&gt;&gt; nombre_suivant(&#39;311&#39;)
-&#39;1321&#39;
-```
+<p>Exemples :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nombre_suivant</span><span class="p">(</span><span class="s1">&#39;1211&#39;</span><span class="p">)</span>
+<span class="s1">&#39;111221&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">nombre_suivant</span><span class="p">(</span><span class="s1">&#39;311&#39;</span><span class="p">)</span>
+<span class="s1">&#39;1321&#39;</span>
 </code></pre></div>
+
+</div>
 
 
 

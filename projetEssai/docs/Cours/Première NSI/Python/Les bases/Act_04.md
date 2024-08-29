@@ -202,7 +202,8 @@ La bibliothèque ```random``` permet d'exploiter l'aléatoire. En particulier, `
     "euqitamrofni"
     ```
 
-!!! question "Exercice (EP 24-35-02)
+!!! question "Exercice (EP 24-35-02)"
+
     Un mot palindrome peut se lire de la même façon de gauche à droite ou de droite à gauche : *kayak*, *radar*, et *non* sont des mots palindromes.  
     De même certains nombres ont des écritures décimales qui sont des palindromes : 33, 121, 345543.
 
@@ -307,7 +308,7 @@ La bibliothèque ```random``` permet d'exploiter l'aléatoire. En particulier, `
     'BONJOUR A TOUS. VIVE LA MATIERE NSI !'
     ```
 
-!!! question "Exercice - 8 (EP 24-48-02)
+!!! question "Exercice - 8 (EP 24-48-02)"
 
     On considère dans cet exercice la suite de nombre suivante : 1, 11, 21, 1211, 111221, ...
 
