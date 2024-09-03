@@ -20,6 +20,9 @@
 	* $f$ est dérivable sur $I$ signifie que $f$ est dérivable en tout $x$ de $I$.
 	* La fonction dérivée de $f$  notée $f'$ est la fonction qui, à tout $x$ de I associe le nombre $f'(x)$ .
 
+
+<iframe class = "Im_cache" src="https://www.geogebra.org/classic/jqmhwka5?embed" width="100%" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px; text-align : center;" frameborder="0"></iframe>
+
 ???- example "Exemple"
 	Etudier la dérivabilité en 2 de la fonction $f:x\mapsto x^2+2$.
 	

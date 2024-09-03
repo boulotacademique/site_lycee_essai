@@ -7,6 +7,10 @@
 	y = f'(a)(x-a) + f(a)
 	\]
 
+
+<iframe class = "Im_cache" src="https://www.geogebra.org/classic/jqmhwka5?embed" width="100%" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px; text-align : center;" frameborder="0"></iframe>
+
+
 ???- example "Exemple"
 	Soit $f(x) = x^2+3x-5$. 
 	

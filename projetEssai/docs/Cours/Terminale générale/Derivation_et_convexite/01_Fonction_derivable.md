@@ -20,6 +20,7 @@
 	* $f$ est dérivable sur $I$ signifie que $f$ est dérivable en tout $x$ de $I$.
 	* La fonction dérivée de $f$  notée $f'$ est la fonction qui, à tout $x$ de I associe le nombre $f'(x)$ .
 
+
 ???+ example "Exemple"
 	Etudier la dérivabilité en 2 de la fonction $f:x\mapsto x^2+2$.
 	

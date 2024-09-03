@@ -417,6 +417,21 @@ Lire et bien travailler les exemples suivants afin de bien les comprendre.
 
     {{ IDEv() }}  
 
+## Majuscules et minuscules : gestion
+
+!!! tip "Méthode"
+
+    Soit ```mot``` une variable contenant une chaine de caractères. Alors :
+
+    - mot.upper() renvoie la chaine ```mot``` où tous les caractères sont en majuscule (ATTENTION : cela ne modifie pas la variable ```mot```) ;
+    - mot.lower() renvoie la chaine ```mot``` où tous les caractères sont en minuscule (ATTENTION : cela ne modifie pas la variable ```mot```) ;
+
+## Caractères et table de codage
+
+!!! tip "Méthode"
+
+    - Si ```c``` est un caractère, alors ```ord(c)``` renvoie l'entier associé à ce caractère (dans la table de codage)
+    - Si ```nb``` est un compris entre 0 et 255 (compris), alors ```chr(nb)``` renvoie le caractère associé à cet entier (dans la table de codage)
 
 ## Exercice à maitriser
 
@@ -556,4 +571,5 @@ Lire et bien travailler les exemples suivants afin de bien les comprendre.
 
 [^1]: Steve Jobs
     
+
 

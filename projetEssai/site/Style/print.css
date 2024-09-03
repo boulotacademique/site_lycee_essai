@@ -139,6 +139,17 @@
         display: none!important;
     }
 	
+    .Center_ss_bd, .Center_txt
+    {
+        width : 60%!important;
+    }
+	
+    .Center_txt
+    {
+        width : 60%!important;
+        text-align: center;
+    }
+
     /* Pour cacher les réponses */
     .done{
         display: none!important;

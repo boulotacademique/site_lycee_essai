@@ -162,6 +162,7 @@
 
 	.Center_txt {
 		text-align: center!important;
+		min-width : 20%;
 	}
 
 	.Center_lien{

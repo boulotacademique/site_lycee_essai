@@ -4369,7 +4369,7 @@
 
 
 <h1 id="pythonutilisation_des_chaines_de_caracteres">Python<br>Utilisation des chaînes de caractères<a class="headerlink" href="#pythonutilisation_des_chaines_de_caracteres" title="Permanent link"></a></h1>
-<div class="admonition bug">
+<div class="admonition danger">
 <p class="admonition-title">Objectif</p>
 <ul>
 <li>Utiliser des fonctions</li>
@@ -4386,7 +4386,7 @@
 <p class="admonition-title">Exercice - 1</p>
 <ol>
 <li>Ecrire la fonction <code>repete_ch</code> qui prend en argument une chaine <code>ch</code> et un entier <code>nb</code> et qui retourne une chaine contenant <code>ch</code> répétée <code>nb</code> fois.<br />
-Signature <code>fonction repet_ch(ch : str, nb : int) : str</code><br />
+Signature <code>fonction repet_ch(ch : str, nb : int) -&gt; str</code><br />
 Ainsi, par exemple, <code>repete_ch('Hello',5)</code> renvoie <code>HelloHelloHelloHelloHello</code>.</li>
 <li>Utiliser la fonction <code>repete_ch</code> et une boucle pour écrire :<br />
 <div class="highlight"><pre><span></span><code><span class="n">ron</span>
@@ -4397,7 +4397,7 @@ Ainsi, par exemple, <code>repete_ch('Hello',5)</code> renvoie <code>HelloHelloHe
 <span class="n">ronronronronronron</span>
 </code></pre></div></li>
 <li>Ecrire la fonction <code>ecrit_pyr</code> qui utilise la fonction <code>repete_ch</code> et qui fait comme l'exemple précédent.<br />
-Voici sa signature <code>fonction ecrit_pyr(ch : str, nb_lig : int) : rien</code>.<br />
+Voici sa signature <code>fonction ecrit_pyr(ch : str, nb_lig : int) -&gt; None</code>.<br />
 Cette fonction ne retourne rien, car nous allons utiliser des <code>print</code>.<br />
 Ne pas oublier le commentaire.<br />
 L'essayer avec des chaines différentes et des nombres de lignes différents.</li>
@@ -4407,7 +4407,7 @@ L'essayer avec des chaines différentes et des nombres de lignes différents.</l
 <p class="admonition-title">Exercice - 2</p>
 <ol>
 <li>Ecrire une fonction qui supprime, dans une chaine de caractères, toutes les occurrences d'un caractère précis.<br />
-Signature : <code>Fonction enlever_car(mot : str, car : str) : str</code><br />
+Signature : <code>Fonction enlever_car(mot : str, car : str) -&gt; str</code><br />
 Exemple :
 <div class="highlight"><pre><span></span><code><span class="n">un_mot</span><span class="o">=</span><span class="s2">&quot;Bonjour a tous !&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">enlever_car</span><span class="p">(</span><span class="n">un_mot</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">))</span>
@@ -4416,7 +4416,7 @@ affiche
 <div class="highlight"><pre><span></span><code><span class="n">Bnjur</span> <span class="n">a</span> <span class="n">tus</span> <span class="err">!</span>
 </code></pre></div></li>
 <li>Il faut écrire une fonction qui remplace, dans une chaine de caractères, toutes les occurrences d'un caractère précis par un caractère ou  une chaine de caractères.<br />
-Signature : <code>Fonction remplace_car(mot : str, car_a_enl : str, car_de_rempl : str) : str</code><br />
+Signature : <code>Fonction remplace_car(mot : str, car_a_enl : str, car_de_rempl : str) -&gt; str</code><br />
 Exemple :
 <div class="highlight"><pre><span></span><code><span class="n">un_mot</span><span class="o">=</span><span class="s2">&quot;Bonjour a tous !&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">remplace_car</span><span class="p">(</span><span class="n">un_mot</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;ananas&#39;</span><span class="p">))</span>
@@ -4430,19 +4430,23 @@ affiche
 <div class="admonition question">
 <p class="admonition-title">Exercice - 3</p>
 <ol>
-<li>Ecrire une fonction qui prend en argument une chaine et qui retourne la chaine dans l'ordre inverse.
+<li>
+<p>Ecrire une fonction qui prend en argument une chaine et qui retourne la chaine dans l'ordre inverse.
 Signature <code>fonction retourne_mot(mot : str) -&gt; str</code><br />
 Par exemple,<br />
 <div class="highlight"><pre><span></span><code><span class="n">un_mot</span><span class="o">=</span><span class="s2">&quot;Bonjour a tous !&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">retourne_mot</span><span class="p">(</span><span class="n">un_mot</span><span class="p">))</span>
 </code></pre></div>
-affiche <code>! suot a ruojnoB</code>  </li>
-<li>Ecrire une fonction qui prend en argument une chaine de caractère et qui retourne <code>True</code> si il s'agit d'un palindrome (c'est à dire une chaine qui peut se lire de droite à gauche ou de gauche à droite, sans tenir compte des accents, des espaces ou des majuscules).<br />
-Signature <code>fonction est_palindrome(mot : str) : bool</code><br />
+affiche <code>! suot a ruojnoB</code>  </p>
+</li>
+<li>
+<p>Ecrire une fonction qui prend en argument une chaine de caractère et qui retourne <code>True</code> si il s'agit d'un palindrome (ici les chaines seront composées de lettres minuscules sans accent ni espace !).<br />
+Signature <code>fonction est_palindrome(mot : str) -&gt; bool</code><br />
 Par exemple,<br />
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">est_palindrome</span><span class="p">(</span><span class="s1">&#39;KAYAK&#39;</span><span class="p">))</span> <span class="c1"># Affiche `True`</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">est_palindrome</span><span class="p">(</span><span class="s1">&#39;Bonjour&#39;</span><span class="p">))</span> <span class="c1"># Affiche `False`</span>
-</code></pre></div></li>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">est_palindrome</span><span class="p">(</span><span class="s1">&#39;kayak&#39;</span><span class="p">))</span> <span class="c1"># Affiche `True`</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">est_palindrome</span><span class="p">(</span><span class="s1">&#39;bonjour&#39;</span><span class="p">))</span> <span class="c1"># Affiche `False`</span>
+</code></pre></div></p>
+</li>
 </ol>
 <p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000003" class="comment">###</span><div class="line" id="editor_00000003"></div><div id="term_editor_00000003"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000003","")'>            <img src="../../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000003","")'>            <img src="../../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000003').click()" >            <img src="../../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000003" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000003")'>            <img src="../../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000003")'>            <img src="../../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000003" class="py_mk_hide"></span><span id="corr_content_editor_00000003" class="py_mk_hide" data-strudel=""></span>  </p>
 </div>

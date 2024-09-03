@@ -74,8 +74,8 @@
 !!! question "Exercice - 4"
     
     1. On souhaite maintenant tracer un cercle en connaissant son centre, son rayon et sa couleur **et dessiner un + au niveau de son centre**. Ecrire une fonction qui fait cela. Pensez à utiliser la fonction `tracer_plus`.
-    Signature `fonction cercle_centre_plus(x_centre : int, y_centre : int, rayon : int, coul : str)`  
-    Ainsi, `cercle_centre(200,100,150)` donne  
+    Signature `fonction cercle_centre_plus(x_centre : int, y_centre : int, rayon : int, coul : str, long_-_trait : int)`  
+    Ainsi, `cercle_centre(200,100,150, 'green', 10)` donne  
     [![Tracer cercle](../Image/cercle_04.png){.Center_lien }](../Image/cercle_04.png)
     2. Après avoir tourner la tortue de 90$^{\circ}$, tracer un cercle de centre `(200,100)` et de rayon `150`. Que remarquez-vous ?
     3. Il faut donc modifier les fonctions `cercle_centre` et `cercle_centre_plus`. En effet, avant de commencer à tracer le cercle, il faut impérativement positionner la tortue dans la &laquo; direction de départ classique &raquo;. Faites-le.

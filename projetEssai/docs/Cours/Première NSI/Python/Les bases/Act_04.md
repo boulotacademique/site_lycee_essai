@@ -1,6 +1,6 @@
 # Python<br>Utilisation des chaînes de caractères
 
-!!! bug "Objectif"
+!!! danger "Objectif"
     
     - Utiliser des fonctions
     - Manipuler des chaines de caractères
@@ -15,7 +15,7 @@
 !!! question "Exercice - 1"
 
     1. Ecrire la fonction ```repete_ch``` qui prend en argument une chaine ```ch``` et un entier ```nb``` et qui retourne une chaine contenant ```ch``` répétée ```nb``` fois.  
-    Signature `fonction repet_ch(ch : str, nb : int) : str`  
+    Signature `fonction repet_ch(ch : str, nb : int) -> str`  
     Ainsi, par exemple, `repete_ch('Hello',5)` renvoie `HelloHelloHelloHelloHello`.
     2. Utiliser la fonction ```repete_ch``` et une boucle pour écrire :  
     ```python
@@ -27,7 +27,7 @@
     ronronronronronron
     ```  
     3. Ecrire la fonction ```ecrit_pyr``` qui utilise la fonction ```repete_ch``` et qui fait comme l'exemple précédent.  
-    Voici sa signature `fonction ecrit_pyr(ch : str, nb_lig : int) : rien`.  
+    Voici sa signature `fonction ecrit_pyr(ch : str, nb_lig : int) -> None`.  
     Cette fonction ne retourne rien, car nous allons utiliser des ```print```.  
     Ne pas oublier le commentaire.  
     L'essayer avec des chaines différentes et des nombres de lignes différents.
@@ -35,7 +35,7 @@
 !!! question "Exercice - 2"
 
     1. Ecrire une fonction qui supprime, dans une chaine de caractères, toutes les occurrences d'un caractère précis.  
-    Signature : `Fonction enlever_car(mot : str, car : str) : str`  
+    Signature : `Fonction enlever_car(mot : str, car : str) -> str`  
     Exemple :
     ```python
     un_mot="Bonjour a tous !"
@@ -46,7 +46,7 @@
     Bnjur a tus !
     ```  
     2. Il faut écrire une fonction qui remplace, dans une chaine de caractères, toutes les occurrences d'un caractère précis par un caractère ou  une chaine de caractères.  
-    Signature : `Fonction remplace_car(mot : str, car_a_enl : str, car_de_rempl : str) : str`  
+    Signature : `Fonction remplace_car(mot : str, car_a_enl : str, car_de_rempl : str) -> str`  
     Exemple :
     ```python
     un_mot="Bonjour a tous !"
@@ -69,13 +69,14 @@
     print(retourne_mot(un_mot))
     ```  
     affiche `! suot a ruojnoB`  
-    2. Ecrire une fonction qui prend en argument une chaine de caractère et qui retourne ```True``` si il s'agit d'un palindrome (c'est à dire une chaine qui peut se lire de droite à gauche ou de gauche à droite, sans tenir compte des accents, des espaces ou des majuscules).  
-    Signature `fonction est_palindrome(mot : str) : bool`  
+
+    2. Ecrire une fonction qui prend en argument une chaine de caractère et qui retourne ```True``` si il s'agit d'un palindrome (ici les chaines seront composées de lettres minuscules sans accent ni espace !).  
+    Signature `fonction est_palindrome(mot : str) -> bool`  
     Par exemple,  
     ```python
-    print(est_palindrome('KAYAK')) # Affiche `True`
-    print(est_palindrome('Bonjour')) # Affiche `False`
-    ```  
+    print(est_palindrome('kayak')) # Affiche `True`
+    print(est_palindrome('bonjour')) # Affiche `False`
+    ```
 
     {{ IDE() }}  
 
